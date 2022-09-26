@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['iaimodule_0',['IAIModule',['../interface_i_a_i_module.html',1,'']]],
-  ['ibcstdevice_1',['IBcstDevice',['../interface_i_bcst_device.html',1,'']]],
-  ['ibcstmodule_2',['IBcstModule',['../interface_i_bcst_module.html',1,'']]],
-  ['isystemmodule_3',['ISystemModule',['../interface_i_system_module.html',1,'']]],
-  ['iwebdevice_4',['IWebDevice',['../interface_i_web_device.html',1,'']]],
-  ['iwifisystemnodule_5',['IWifiSystemNodule',['../interface_i_wifi_system_nodule.html',1,'']]]
+  ['example_20codes',['Example codes',['../example.html',1,'']]],
+  ['example_20ai_20on_20demand_20once',['example AI on demand once',['../example__a_i_on_demand_once.html',1,'']]],
+  ['example_20find_20all_20device',['example find all device',['../example_find_all_devices.html',1,'']]],
+  ['example_20get_20device_20info',['example get device info',['../example_get_device_info.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['broadcaster_0',['Broadcaster',['../class_broadcaster.html',1,'']]]
+  ['broadcaster',['Broadcaster',['../class_broadcaster.html',1,'']]]
 ];
