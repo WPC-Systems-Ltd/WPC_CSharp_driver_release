@@ -1,8 +1,8 @@
 var interface_i_system_module =
 [
-    [ "Sys_getDriverInfo", "interface_i_system_module.html#a715203b42787178c15b0a851413d0680", null ],
+    [ "Sys_getDriverInfo", "interface_i_system_module.html#a2e70745f9481c0e5dee1e07a6f8038d9", null ],
     [ "Sys_getGateway", "interface_i_system_module.html#af92343764838b825944400fb97429dba", null ],
-    [ "Sys_getIPAddrAndSubmask", "interface_i_system_module.html#a5d39e8ba6ac4312b368c008ed057d362", null ],
+    [ "Sys_getIPAddrAndSubmask", "interface_i_system_module.html#a4231cf36d33d0b7fcd1de8f3023065b1", null ],
     [ "Sys_getMACAddr", "interface_i_system_module.html#a7ea3ba6cd90b4258295f8d13e1e149e4", null ],
     [ "Sys_getRTC", "interface_i_system_module.html#a14ba57939b9347227650f6bf706263e1", null ],
     [ "Sys_getSerialNumber", "interface_i_system_module.html#aa1c42b6d124012481b438409ce62f4e6", null ],
