@@ -107,12 +107,14 @@ $(document).ready(function(){initNavTree('class_wifi_d_a_q_e3_a.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab4f0a51758a8823a8110757f3ba2c4a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab4f0a51758a8823a8110757f3ba2c4a9">WifiDAQE3A</a> ()</td></tr>
+<tr class="separator:ab4f0a51758a8823a8110757f3ba2c4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0919d2d35b2d7ec6f4ced81564af3ffd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a0919d2d35b2d7ec6f4ced81564af3ffd">getDriverVersion</a> ()</td></tr>
 <tr class="separator:a0919d2d35b2d7ec6f4ced81564af3ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4504931ff6bfca9e14a3e9733d683d57"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a4504931ff6bfca9e14a3e9733d683d57">getDriverName</a> ()</td></tr>
 <tr class="separator:a4504931ff6bfca9e14a3e9733d683d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae495d6971003f13345791c6868c66eeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ae495d6971003f13345791c6868c66eeb">connect</a> (string IP)</td></tr>
-<tr class="separator:ae495d6971003f13345791c6868c66eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c1cb2989fcd6ccc45e8f05c9a59313"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a37c1cb2989fcd6ccc45e8f05c9a59313">connect</a> (string ip_addr)</td></tr>
+<tr class="separator:a37c1cb2989fcd6ccc45e8f05c9a59313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05cd0d93e5aa89b15f5ed15579091be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab05cd0d93e5aa89b15f5ed15579091be">disconnect</a> ()</td></tr>
 <tr class="separator:ab05cd0d93e5aa89b15f5ed15579091be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa2dfb4e4b372c002935da6ece72b60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#abfa2dfb4e4b372c002935da6ece72b60">close</a> ()</td></tr>
@@ -167,7 +169,37 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a312def22f0c7ca23be050af117b2d3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a469621f6ba3920becf54726e14fc9a12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a469621f6ba3920becf54726e14fc9a12">AI_clearBufferStatus</a> (int port)</td></tr>
 <tr class="separator:a469621f6ba3920becf54726e14fc9a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d6e3f2f50173cdf657de6cffc8744f"><td class="memItemLeft" align="right" valign="top">List&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a22d6e3f2f50173cdf657de6cffc8744f">AI_readOnDemand</a> (int port)</td></tr>
+<tr class="separator:a22d6e3f2f50173cdf657de6cffc8744f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52bab4e799eb8794bd39f25dafa47f07"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; float &gt; &gt;?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a52bab4e799eb8794bd39f25dafa47f07">AI_readStreaming</a> (int port, int num_of_samples, int delay)</td></tr>
+<tr class="separator:a52bab4e799eb8794bd39f25dafa47f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab4f0a51758a8823a8110757f3ba2c4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f0a51758a8823a8110757f3ba2c4a9">&#9670;&nbsp;</a></span>WifiDAQE3A()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WifiDAQE3A.WifiDAQE3A </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a469621f6ba3920becf54726e14fc9a12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a469621f6ba3920becf54726e14fc9a12">&#9670;&nbsp;</a></span>AI_clearBufferStatus()</h2>
@@ -302,6 +334,92 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>List of buffer zero times, buffer full times, buffer remain and buffer max values. </dd></dl>
+
+</div>
+</div>
+<a id="a22d6e3f2f50173cdf657de6cffc8744f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d6e3f2f50173cdf657de6cffc8744f">&#9670;&nbsp;</a></span>AI_readOnDemand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;float&gt; WifiDAQE3A.AI_readOnDemand </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read one sample from AI port. This is use in "on demand" mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of float value measured from channels. </dd></dl>
+
+</div>
+</div>
+<a id="a52bab4e799eb8794bd39f25dafa47f07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52bab4e799eb8794bd39f25dafa47f07">&#9670;&nbsp;</a></span>AI_readStreaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;List&lt;float&gt; &gt;? WifiDAQE3A.AI_readStreaming </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_of_samples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read multiple samples from AI port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">num_of_samples</td><td>Amount of data to get from the function call.</td></tr>
+    <tr><td class="paramname">delay</td><td>Time delay (milisecond) before getting data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of list of float. AI data where each element of <code>sample_list</code> is a sample. A sample is a list of values measured from different channels. </dd></dl>
 
 </div>
 </div>
@@ -534,8 +652,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae495d6971003f13345791c6868c66eeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae495d6971003f13345791c6868c66eeb">&#9670;&nbsp;</a></span>connect()</h2>
+<a id="a37c1cb2989fcd6ccc45e8f05c9a59313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c1cb2989fcd6ccc45e8f05c9a59313">&#9670;&nbsp;</a></span>connect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,7 +665,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool WifiDAQE3A.connect </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>IP</em></td><td>)</td>
+          <td class="paramname"><em>ip_addr</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

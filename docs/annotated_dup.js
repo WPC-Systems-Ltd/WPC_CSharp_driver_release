@@ -1,6 +1,5 @@
 var annotated_dup =
 [
-    [ "Broadcaster", "class_broadcaster.html", "class_broadcaster" ],
     [ "IAIModule", "interface_i_a_i_module.html", "interface_i_a_i_module" ],
     [ "IBcstDevice", "interface_i_bcst_device.html", "interface_i_bcst_device" ],
     [ "IBcstModule", "interface_i_bcst_module.html", "interface_i_bcst_module" ],

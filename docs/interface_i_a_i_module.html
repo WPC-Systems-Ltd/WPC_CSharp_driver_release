@@ -134,10 +134,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a096b8bfd1c8dd42377c0519468dfb88c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_i_module.html#a096b8bfd1c8dd42377c0519468dfb88c">AI_clearBufferStatus</a> (int port)</td></tr>
 <tr class="memdesc:a096b8bfd1c8dd42377c0519468dfb88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear AI buffer counter of remote device.  <a href="#a096b8bfd1c8dd42377c0519468dfb88c">More...</a><br /></td></tr>
 <tr class="separator:a096b8bfd1c8dd42377c0519468dfb88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a612ea093de34f195f7b28d412e0645a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_i_module.html#a612ea093de34f195f7b28d412e0645a0">AI_readStreaming</a> (int port)</td></tr>
-<tr class="separator:a612ea093de34f195f7b28d412e0645a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a519c2a3cbd6b02da813645fba08a0314"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_i_module.html#a519c2a3cbd6b02da813645fba08a0314">AI_readOnDemand</a> (int port)</td></tr>
-<tr class="separator:a519c2a3cbd6b02da813645fba08a0314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369996c6363c390ff73e5b70974e1c6d"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; float &gt; &gt;?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_i_module.html#a369996c6363c390ff73e5b70974e1c6d">AI_readStreaming</a> (int port, int num_of_samples, int delay)</td></tr>
+<tr class="memdesc:a369996c6363c390ff73e5b70974e1c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read multiple samples from AI port.  <a href="#a369996c6363c390ff73e5b70974e1c6d">More...</a><br /></td></tr>
+<tr class="separator:a369996c6363c390ff73e5b70974e1c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad09a77ecc6943d81c872dbdd3f853ef2"><td class="memItemLeft" align="right" valign="top">List&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_i_module.html#ad09a77ecc6943d81c872dbdd3f853ef2">AI_readOnDemand</a> (int port)</td></tr>
+<tr class="memdesc:ad09a77ecc6943d81c872dbdd3f853ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read one sample from AI port. This is use in "on demand" mode.  <a href="#ad09a77ecc6943d81c872dbdd3f853ef2">More...</a><br /></td></tr>
+<tr class="separator:ad09a77ecc6943d81c872dbdd3f853ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a096b8bfd1c8dd42377c0519468dfb88c"></a>
@@ -248,14 +250,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a519c2a3cbd6b02da813645fba08a0314"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a519c2a3cbd6b02da813645fba08a0314">&#9670;&nbsp;</a></span>AI_readOnDemand()</h2>
+<a id="ad09a77ecc6943d81c872dbdd3f853ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09a77ecc6943d81c872dbdd3f853ef2">&#9670;&nbsp;</a></span>AI_readOnDemand()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int IAIModule.AI_readOnDemand </td>
+          <td class="memname">List&lt;float&gt; IAIModule.AI_readOnDemand </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em></td><td>)</td>
@@ -264,23 +266,59 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Read one sample from AI port. This is use in "on demand" mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of float value measured from channels. </dd></dl>
+
 </div>
 </div>
-<a id="a612ea093de34f195f7b28d412e0645a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a612ea093de34f195f7b28d412e0645a0">&#9670;&nbsp;</a></span>AI_readStreaming()</h2>
+<a id="a369996c6363c390ff73e5b70974e1c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369996c6363c390ff73e5b70974e1c6d">&#9670;&nbsp;</a></span>AI_readStreaming()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int IAIModule.AI_readStreaming </td>
+          <td class="memname">List&lt;List&lt;float&gt; &gt;? IAIModule.AI_readStreaming </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_of_samples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Read multiple samples from AI port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">num_of_samples</td><td>Amount of data to get from the function call.</td></tr>
+    <tr><td class="paramname">delay</td><td>Time delay (milisecond) before getting data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of list of float. AI data where each element of <code>sample_list</code> is a sample. A sample is a list of values measured from different channels. </dd></dl>
 
 </div>
 </div>

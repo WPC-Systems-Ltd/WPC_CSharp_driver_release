@@ -30,12 +30,7 @@ var NAVTREE =
       [ "Driver Version", "index.html#autotoc_md2", null ],
       [ "Products", "index.html#autotoc_md3", null ]
     ] ],
-    [ "example get device info", "example_get_device_info.html", null ],
-    [ "Example codes", "example.html", [
-      [ "System", "example.html#examplesection1", null ]
-    ] ],
-    [ "example AI on demand once", "example__a_i_on_demand_once.html", null ],
-    [ "example find all device", "example_find_all_devices.html", null ],
+    [ "Example codes", "example.html", "example" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
