@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-  
 class example_AI_N_samples_once
 {
     static void Main1()
