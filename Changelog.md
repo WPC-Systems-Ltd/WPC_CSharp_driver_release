@@ -5,7 +5,8 @@ WPC CSharp driver release changelog
 v0.0.3 Date: 2022/09/26, Developer: Chunglee_people
 ----------------------------------------------------
 ### Added
-- Add Console-AI example code `example_AI_N_samples_once` & `example_AI_on_demand_once`
+- Add Console-AI example code `example_AI_N_samples_once` & `example_AI_on_demand_once` 
+& `example_AI_on_demand_in_loop`
 
 ### Changed
 - Change WPC C# Version from 0.0.2 to 0.0.3
