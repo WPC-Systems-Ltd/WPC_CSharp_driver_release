@@ -1,14 +1,19 @@
 var searchData=
 [
-  ['ai_5fclearbufferstatus',['AI_clearBufferStatus',['../interface_i_a_i_module.html#a096b8bfd1c8dd42377c0519468dfb88c',1,'IAIModule.AI_clearBufferStatus()'],['../class_wifi_d_a_q_e3_a.html#a469621f6ba3920becf54726e14fc9a12',1,'WifiDAQE3A.AI_clearBufferStatus()']]],
-  ['ai_5fclose',['AI_close',['../interface_i_a_i_module.html#ad6ad377c6cdbf60a651cc826368f9694',1,'IAIModule.AI_close()'],['../class_wifi_d_a_q_e3_a.html#a6be453511524c8d7496279fed70296fb',1,'WifiDAQE3A.AI_close()']]],
-  ['ai_5fopen',['AI_open',['../interface_i_a_i_module.html#a7f057043e67777cdb8c07f4c7c94ae5c',1,'IAIModule.AI_open()'],['../class_wifi_d_a_q_e3_a.html#a1b978481245321576644e7ef8b172838',1,'WifiDAQE3A.AI_open()']]],
-  ['ai_5freadbufferstatus',['AI_readBufferStatus',['../interface_i_a_i_module.html#a0d7c07793f890d2de65dbf81676e5b85',1,'IAIModule.AI_readBufferStatus()'],['../class_wifi_d_a_q_e3_a.html#a312def22f0c7ca23be050af117b2d3bb',1,'WifiDAQE3A.AI_readBufferStatus()']]],
-  ['ai_5freadondemand',['AI_readOnDemand',['../interface_i_a_i_module.html#ad09a77ecc6943d81c872dbdd3f853ef2',1,'IAIModule.AI_readOnDemand()'],['../class_wifi_d_a_q_e3_a.html#a22d6e3f2f50173cdf657de6cffc8744f',1,'WifiDAQE3A.AI_readOnDemand()']]],
-  ['ai_5freadstreaming',['AI_readStreaming',['../interface_i_a_i_module.html#a369996c6363c390ff73e5b70974e1c6d',1,'IAIModule.AI_readStreaming()'],['../class_wifi_d_a_q_e3_a.html#a52bab4e799eb8794bd39f25dafa47f07',1,'WifiDAQE3A.AI_readStreaming()']]],
-  ['ai_5fsetmode',['AI_setMode',['../interface_i_a_i_module.html#a3cbb3be266e903ed018f1beb1975f83d',1,'IAIModule.AI_setMode()'],['../class_wifi_d_a_q_e3_a.html#a93f8413ebb3f13eda770569e115982df',1,'WifiDAQE3A.AI_setMode()']]],
-  ['ai_5fsetnumsamples',['AI_setNumSamples',['../interface_i_a_i_module.html#af55984fd81f1a7c3cac6475ec17810d6',1,'IAIModule.AI_setNumSamples()'],['../class_wifi_d_a_q_e3_a.html#aa3bbd11245f26c931f23fa08b9265bde',1,'WifiDAQE3A.AI_setNumSamples()']]],
-  ['ai_5fsetsamplingrate',['AI_setSamplingRate',['../interface_i_a_i_module.html#a53d2243ca4dd55c1b649427761e3597b',1,'IAIModule.AI_setSamplingRate()'],['../class_wifi_d_a_q_e3_a.html#a6d91cafff4777b1c0838dbe28e56c442',1,'WifiDAQE3A.AI_setSamplingRate()']]],
-  ['ai_5fstart',['AI_start',['../interface_i_a_i_module.html#a235244829329f0ea154cb39fa98dd8d8',1,'IAIModule.AI_start()'],['../class_wifi_d_a_q_e3_a.html#a0c386b9f1e7ff432b82f7cab51bb53b2',1,'WifiDAQE3A.AI_start()']]],
-  ['ai_5fstop',['AI_stop',['../interface_i_a_i_module.html#afda247af9e6b6da325e54aa9a1a48ddb',1,'IAIModule.AI_stop()'],['../class_wifi_d_a_q_e3_a.html#a61768ad96bacdc9309e2e0f3b8653d4b',1,'WifiDAQE3A.AI_stop()']]]
+  ['ai_5fclearbufferstatus',['AI_clearBufferStatus',['../interface_i_a_i_module.html#a27f29832e48430833a16c205ab033072',1,'IAIModule.AI_clearBufferStatus()'],['../class_wifi_d_a_q_e3_a.html#a935acd77c5bcbeff630a1abbcf11d0c5',1,'WifiDAQE3A.AI_clearBufferStatus()']]],
+  ['ai_5fclose',['AI_close',['../interface_i_a_i_module.html#a2b098fd3f35c2c337373b9565c7e2cc7',1,'IAIModule.AI_close()'],['../class_wifi_d_a_q_e3_a.html#a0df63860021c80b5d4ee13f5aef8d349',1,'WifiDAQE3A.AI_close()']]],
+  ['ai_5fopen',['AI_open',['../interface_i_a_i_module.html#ac76c9752058924b841b15972b5e6381c',1,'IAIModule.AI_open()'],['../class_wifi_d_a_q_e3_a.html#a1c2e895c6b9f9bfcfbcc3e8fb22475cc',1,'WifiDAQE3A.AI_open()']]],
+  ['ai_5freadbufferstatus',['AI_readBufferStatus',['../interface_i_a_i_module.html#a0ef021d4c874cb79bfbfe5047e3389b7',1,'IAIModule.AI_readBufferStatus()'],['../class_wifi_d_a_q_e3_a.html#a15a7ad827275d49a0dfe6d5b632e2bdf',1,'WifiDAQE3A.AI_readBufferStatus()']]],
+  ['ai_5freadondemand',['AI_readOnDemand',['../interface_i_a_i_module.html#a39eb68c2603bd082a4a8f60722bc3ba6',1,'IAIModule.AI_readOnDemand()'],['../class_wifi_d_a_q_e3_a.html#a3fa1717ed7e12b5847f7147c6977c71d',1,'WifiDAQE3A.AI_readOnDemand()']]],
+  ['ai_5freadstreaming',['AI_readStreaming',['../interface_i_a_i_module.html#ab25815306b2996a02a08f164358fcaec',1,'IAIModule.AI_readStreaming()'],['../class_wifi_d_a_q_e3_a.html#adb05bb97aa5eee4792e33bda865f2a82',1,'WifiDAQE3A.AI_readStreaming()']]],
+  ['ai_5fsetmode',['AI_setMode',['../interface_i_a_i_module.html#a3c41b111bab12d964d90eeba3a38b720',1,'IAIModule.AI_setMode()'],['../class_wifi_d_a_q_e3_a.html#a6fb117997bc06eaec7ab243797457a79',1,'WifiDAQE3A.AI_setMode()']]],
+  ['ai_5fsetnumsamples',['AI_setNumSamples',['../interface_i_a_i_module.html#ae617d200fdb8ca8dab97f9a3a3d344f2',1,'IAIModule.AI_setNumSamples()'],['../class_wifi_d_a_q_e3_a.html#a27996c736ab95b98d64c01aeece40199',1,'WifiDAQE3A.AI_setNumSamples()']]],
+  ['ai_5fsetsamplingrate',['AI_setSamplingRate',['../interface_i_a_i_module.html#a9220bf3826bb7ba3e7bc7e34792f6c6f',1,'IAIModule.AI_setSamplingRate()'],['../class_wifi_d_a_q_e3_a.html#a840a2d496402df479a0bb371f0337999',1,'WifiDAQE3A.AI_setSamplingRate()']]],
+  ['ai_5fstart',['AI_start',['../interface_i_a_i_module.html#ae43f9a85c881d75c09ad5a369f4b04a1',1,'IAIModule.AI_start()'],['../class_wifi_d_a_q_e3_a.html#a03a151cc0a484cbd53febaa5962aef71',1,'WifiDAQE3A.AI_start()']]],
+  ['ai_5fstop',['AI_stop',['../interface_i_a_i_module.html#a179bee454eca23b375ac5250426d80f3',1,'IAIModule.AI_stop()'],['../class_wifi_d_a_q_e3_a.html#a7a2eebdc12ef15c15392c4b0976865a6',1,'WifiDAQE3A.AI_stop()']]],
+  ['ao_5fclose',['AO_close',['../interface_i_a_o_module.html#a9ce3136aee7f5caa2b57e7bbef132818',1,'IAOModule']]],
+  ['ao_5fgetvalues',['AO_getValues',['../interface_i_a_o_module.html#ad1da941e666c2edff7dff24888d0815f',1,'IAOModule']]],
+  ['ao_5fopen',['AO_open',['../interface_i_a_o_module.html#aeea08092293f08d21b18361329fcb3e7',1,'IAOModule']]],
+  ['ao_5fwriteallchannels',['AO_writeAllChannels',['../interface_i_a_o_module.html#a6882e8df36fae88eb237dc9f1f6bf303',1,'IAOModule']]],
+  ['ao_5fwriteonechannel',['AO_writeOneChannel',['../interface_i_a_o_module.html#a103e694adfb6938ba7aef8233b0a3eb7',1,'IAOModule']]]
 ];

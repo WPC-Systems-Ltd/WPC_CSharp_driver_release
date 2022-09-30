@@ -9,5 +9,5 @@ var searchData=
   ['sys_5freboot',['Sys_reboot',['../interface_i_system_module.html#a46dd95539aaa207abbf6598263c8e98d',1,'ISystemModule.Sys_reboot()'],['../class_wifi_d_a_q_e3_a.html#a832e12e4b9e93602d33e65f178df6b4b',1,'WifiDAQE3A.Sys_reboot()']]],
   ['sys_5frebootonbootloader',['Sys_rebootOnBootloader',['../interface_i_system_module.html#a2b0cd25b2aa2bc353a3b2837c9e0616b',1,'ISystemModule.Sys_rebootOnBootloader()'],['../class_wifi_d_a_q_e3_a.html#abf14297641128d3757f5ddc04d90fed3',1,'WifiDAQE3A.Sys_rebootOnBootloader()']]],
   ['sys_5fsetipaddrandsubmask',['Sys_setIPAddrAndSubmask',['../interface_i_system_module.html#ad10cf33a24d117795273ea22f3b63428',1,'ISystemModule.Sys_setIPAddrAndSubmask()'],['../class_wifi_d_a_q_e3_a.html#a36c85f5b56a4e80c2f170356be6b4519',1,'WifiDAQE3A.Sys_setIPAddrAndSubmask()']]],
-  ['sys_5fsetrtc',['Sys_setRTC',['../interface_i_system_module.html#aa455d7f8ddf38891169fb218235ff8f1',1,'ISystemModule.Sys_setRTC()'],['../class_wifi_d_a_q_e3_a.html#a0b9d33513ffa3842b7423fc75edcda65',1,'WifiDAQE3A.Sys_setRTC()']]]
+  ['sys_5fsetrtc',['Sys_setRTC',['../interface_i_system_module.html#aa455d7f8ddf38891169fb218235ff8f1',1,'ISystemModule.Sys_setRTC()'],['../class_wifi_d_a_q_e3_a.html#aa2a59c7438aae233582ac582b47be2e7',1,'WifiDAQE3A.Sys_setRTC()']]]
 ];
