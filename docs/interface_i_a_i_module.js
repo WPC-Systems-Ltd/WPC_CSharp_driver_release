@@ -1,14 +1,14 @@
 var interface_i_a_i_module =
 [
-    [ "AI_clearBufferStatus", "interface_i_a_i_module.html#a096b8bfd1c8dd42377c0519468dfb88c", null ],
-    [ "AI_close", "interface_i_a_i_module.html#ad6ad377c6cdbf60a651cc826368f9694", null ],
-    [ "AI_open", "interface_i_a_i_module.html#a7f057043e67777cdb8c07f4c7c94ae5c", null ],
-    [ "AI_readBufferStatus", "interface_i_a_i_module.html#a0d7c07793f890d2de65dbf81676e5b85", null ],
-    [ "AI_readOnDemand", "interface_i_a_i_module.html#a519c2a3cbd6b02da813645fba08a0314", null ],
-    [ "AI_readStreaming", "interface_i_a_i_module.html#a612ea093de34f195f7b28d412e0645a0", null ],
-    [ "AI_setMode", "interface_i_a_i_module.html#a3cbb3be266e903ed018f1beb1975f83d", null ],
-    [ "AI_setNumSamples", "interface_i_a_i_module.html#af55984fd81f1a7c3cac6475ec17810d6", null ],
-    [ "AI_setSamplingRate", "interface_i_a_i_module.html#a53d2243ca4dd55c1b649427761e3597b", null ],
-    [ "AI_start", "interface_i_a_i_module.html#a235244829329f0ea154cb39fa98dd8d8", null ],
-    [ "AI_stop", "interface_i_a_i_module.html#afda247af9e6b6da325e54aa9a1a48ddb", null ]
+    [ "AI_clearBufferStatus", "interface_i_a_i_module.html#a27f29832e48430833a16c205ab033072", null ],
+    [ "AI_close", "interface_i_a_i_module.html#a2b098fd3f35c2c337373b9565c7e2cc7", null ],
+    [ "AI_open", "interface_i_a_i_module.html#ac76c9752058924b841b15972b5e6381c", null ],
+    [ "AI_readBufferStatus", "interface_i_a_i_module.html#a0ef021d4c874cb79bfbfe5047e3389b7", null ],
+    [ "AI_readOnDemand", "interface_i_a_i_module.html#a39eb68c2603bd082a4a8f60722bc3ba6", null ],
+    [ "AI_readStreaming", "interface_i_a_i_module.html#ab25815306b2996a02a08f164358fcaec", null ],
+    [ "AI_setMode", "interface_i_a_i_module.html#a3c41b111bab12d964d90eeba3a38b720", null ],
+    [ "AI_setNumSamples", "interface_i_a_i_module.html#ae617d200fdb8ca8dab97f9a3a3d344f2", null ],
+    [ "AI_setSamplingRate", "interface_i_a_i_module.html#a9220bf3826bb7ba3e7bc7e34792f6c6f", null ],
+    [ "AI_start", "interface_i_a_i_module.html#ae43f9a85c881d75c09ad5a369f4b04a1", null ],
+    [ "AI_stop", "interface_i_a_i_module.html#a179bee454eca23b375ac5250426d80f3", null ]
 ];

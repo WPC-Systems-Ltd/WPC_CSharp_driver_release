@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WPC_CSharp_driver_release": {
+      "commandName": "Project"
+    },
+    "設定檔 1": {
+      "commandName": "Project"
+    }
+  }
+}
