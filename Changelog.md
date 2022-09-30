@@ -11,10 +11,6 @@ v0.0.3 Date: 2022/09/26, Developer: Chunglee_people
 ### Changed
 - Change WPC C# Version from 0.0.2 to 0.0.3
 
-### Fixed
-### Removed
-
-
 v0.0.2 Date: 2022/09/26, Developer: Chunglee_people
 ---------------------------------------------------
 
