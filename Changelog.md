@@ -1,8 +1,13 @@
 WPC CSharp driver release changelog
 ===================================
 
-v0.0.3 Date: 2022/09/30, Developer: Chunglee_people
+v0.0.4 Date: 2022/10/05, Developer: Chunglee_people
+### Added
+- Add Console-DO example code `example_DIO_loopback_pins` & `example_DIO_loopback_port` 
+& `example_AI_on_demand_in_loop`
 
+### Changed
+- Change WPC C# Version from 0.0.3 to 0.0.4
 
 
 v0.0.3 Date: 2022/09/30, Developer: Chunglee_people
