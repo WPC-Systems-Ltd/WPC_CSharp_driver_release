@@ -25,7 +25,7 @@ class example_AI_N_samples_once
         {
             //  Parameters setting
             int status;
-            int port = 1;
+            byte port = 1;
             int mode = 1; // 0 : On demand, 1 : N-samples, 2 : Continuous.
             float sampling_rate = 1000;
             uint samples = 5;

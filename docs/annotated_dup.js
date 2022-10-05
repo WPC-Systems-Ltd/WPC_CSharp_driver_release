@@ -1,5 +1,8 @@
 var annotated_dup =
 [
+    [ "Broadcaster", "class_broadcaster.html", "class_broadcaster" ],
+    [ "EthanA", "class_ethan_a.html", "class_ethan_a" ],
+    [ "EthanD", "class_ethan_d.html", "class_ethan_d" ],
     [ "IAIModule", "interface_i_a_i_module.html", "interface_i_a_i_module" ],
     [ "IAOModule", "interface_i_a_o_module.html", "interface_i_a_o_module" ],
     [ "IBcstDevice", "interface_i_bcst_device.html", "interface_i_bcst_device" ],

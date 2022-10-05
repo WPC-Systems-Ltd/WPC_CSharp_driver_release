@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 class example_AI_on_demand_once_in_loop
 { 
-    static void loop_func(WifiDAQE3A handle, int port, int delay , int timeout =3) 
+    static void loop_func(WifiDAQE3A handle, byte port, int delay , int timeout =3) 
     {
         int t = 0;
         while (t < timeout) 
@@ -27,7 +27,7 @@ class example_AI_on_demand_once_in_loop
         Console.WriteLine("loop_func end");
     }
 
-    static void Main()
+    static void Main0()
     {
         Console.WriteLine("Start example code...");
 
@@ -45,7 +45,7 @@ class example_AI_on_demand_once_in_loop
         {
             // Parameters setting
             int status;
-            int port = 1;
+            byte port = 1;
             int mode = 0;
              
             // Get firmware model & version

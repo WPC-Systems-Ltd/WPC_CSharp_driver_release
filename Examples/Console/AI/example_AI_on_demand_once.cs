@@ -25,7 +25,7 @@ class example_AI_on_demand_once
         {
             // Parameters setting
             int status;
-            int port = 1;
+            byte port = 1;
             int mode = 0;
 
             // Get firmware model & version

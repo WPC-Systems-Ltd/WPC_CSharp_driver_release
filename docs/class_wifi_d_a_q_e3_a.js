@@ -32,5 +32,7 @@ var class_wifi_d_a_q_e3_a =
     [ "Wifi_readAccleration", "class_wifi_d_a_q_e3_a.html#a41762c50066af7a5efe2d28d75e727b7", null ],
     [ "Wifi_readBattery", "class_wifi_d_a_q_e3_a.html#a5da1a5ab1268dccaed8bdb46fc5fb5e8", null ],
     [ "Wifi_readRSSI", "class_wifi_d_a_q_e3_a.html#adf88e5c0bd51b045be911ccaf5929b4c", null ],
-    [ "Wifi_readThermo", "class_wifi_d_a_q_e3_a.html#a4416e268e99af5b1b2cf64f4aea8166f", null ]
+    [ "Wifi_readThermo", "class_wifi_d_a_q_e3_a.html#a4416e268e99af5b1b2cf64f4aea8166f", null ],
+    [ "AI_max_rate", "class_wifi_d_a_q_e3_a.html#a1a2808e03d0b9633ee7a917fac6b091c", null ],
+    [ "AI_ratio", "class_wifi_d_a_q_e3_a.html#a1d7b09acd9ef0ed86aad6d91f571bb2e", null ]
 ];
