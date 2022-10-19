@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+ 
 
-class example_AI_N_samples_once
+public class example_AI_N_samples_once
 {
-    static void Main1()
+    static public void Main()
     {
-        Console.WriteLine("Start example code...");
-
         // Create device handle
         WifiDAQE3A dev = new WifiDAQE3A();
 
@@ -17,20 +16,22 @@ class example_AI_N_samples_once
         Console.WriteLine($"{dev.getDriverName()} - Version {dev.getDriverVersion()}");
 
         // Connect to network device
-
-        dev.connect("192.168.5.79");
-
-        // Perform DAQ basic information 
         try
         {
-            //  Parameters setting
+            dev.connect("192.168.5.79");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+
+        }
+        // Execute
+        try
+        {
+            // Parameters setting
             int status;
             byte port = 1;
-            int mode = 1; // 0 : On demand, 1 : N-samples, 2 : Continuous.
-            float sampling_rate = 1000;
             uint samples = 5;
-            int read_points = 5;
-            int delay = 5;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -41,39 +42,27 @@ class example_AI_N_samples_once
             status = dev.AI_open(port);
             Console.WriteLine($"AI_open status: {status}");
 
-            // Set AI port to 1 and acquisition mode to N-samples mode (1)
-            status = dev.AI_setMode(port, mode);
+            // Set AI port to 1 and acquisition mode to on demand mode (1)
+            status = dev.AI_setMode(port, 1);
             Console.WriteLine($"AI_setMode status: {status}");
-
-            // Set AI port to 1 and sampling rate to 1k(Hz)
-            status = dev.AI_setSamplingRate(port, sampling_rate);
-            Console.WriteLine($"AI_setSamplingRate status: {status}");
 
             // Set AI port to 1 and # of samples to 5 (pts)
             status = dev.AI_setNumSamples(port, samples);
             Console.WriteLine($"AI_setNumSamples status: {status}");
 
-            // Set AI port to 1 and start acquisition
+
             status = dev.AI_start(port);
             Console.WriteLine($"AI_start status: {status}");
 
-            // Wait amount of time (ms)
-            Thread.Sleep(1000);
+            Thread.Sleep(100);
 
-            // Set AI port to 1 and get 5 points 
-            List<List<float>>? data_list = dev.AI_readStreaming(port, read_points, delay);
+            // Set AI port to 0 and get 50 points 
+            List<List<float>>? streaming_list = dev.AI_readStreaming(port, 5, 10);
 
-            if (data_list != null)
+            foreach (List<float> CH in streaming_list)
             {
-                foreach (List<float> CH in data_list)
-                {
-                    // Read acquisition data 50 points 
-                    Console.WriteLine($"data : {CH[0]}, {CH[1]}, {CH[2]}, {CH[3]}, {CH[4]}, {CH[5]}, {CH[6]}, {CH[7]}");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Null");
+                // Read acquisition data 50 points 
+                Console.WriteLine($"data : {CH[0]}, {CH[1]}, {CH[2]}, {CH[3]}, {CH[4]}, {CH[5]}, {CH[6]}, {CH[7]}");
             }
 
             // Close port 1
@@ -93,7 +82,4 @@ class example_AI_N_samples_once
 
         Console.WriteLine("End example code...");
     }
-} 
- 
-
-
+}

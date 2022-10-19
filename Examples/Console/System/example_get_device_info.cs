@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 class example_get_device_info
 {
-    static void Main1()
+    static public void Main()
     {
         Console.WriteLine("Start example code...");
 

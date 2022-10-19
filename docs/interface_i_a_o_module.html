@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.4</span>
+   &#160;<span id="projectnumber">0.0.5</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -107,25 +107,25 @@ $(document).ready(function(){initNavTree('interface_i_a_o_module.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeea08092293f08d21b18361329fcb3e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#aeea08092293f08d21b18361329fcb3e7">AO_open</a> (byte port)</td></tr>
-<tr class="memdesc:aeea08092293f08d21b18361329fcb3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open AO port on WPC DAQ device.  <a href="#aeea08092293f08d21b18361329fcb3e7">More...</a><br /></td></tr>
-<tr class="separator:aeea08092293f08d21b18361329fcb3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a103e694adfb6938ba7aef8233b0a3eb7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#a103e694adfb6938ba7aef8233b0a3eb7">AO_writeOneChannel</a> (byte port, byte channel, float AO_value)</td></tr>
-<tr class="memdesc:a103e694adfb6938ba7aef8233b0a3eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write AO voltage to specific channel.  <a href="#a103e694adfb6938ba7aef8233b0a3eb7">More...</a><br /></td></tr>
-<tr class="separator:a103e694adfb6938ba7aef8233b0a3eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6882e8df36fae88eb237dc9f1f6bf303"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#a6882e8df36fae88eb237dc9f1f6bf303">AO_writeAllChannels</a> (byte port, List&lt; float &gt; AO_value)</td></tr>
-<tr class="memdesc:a6882e8df36fae88eb237dc9f1f6bf303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write AO voltage to whole port.  <a href="#a6882e8df36fae88eb237dc9f1f6bf303">More...</a><br /></td></tr>
-<tr class="separator:a6882e8df36fae88eb237dc9f1f6bf303"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1da941e666c2edff7dff24888d0815f"><td class="memItemLeft" align="right" valign="top">List&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#ad1da941e666c2edff7dff24888d0815f">AO_getValues</a> (byte port)</td></tr>
-<tr class="memdesc:ad1da941e666c2edff7dff24888d0815f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get AO current output.  <a href="#ad1da941e666c2edff7dff24888d0815f">More...</a><br /></td></tr>
-<tr class="separator:ad1da941e666c2edff7dff24888d0815f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ce3136aee7f5caa2b57e7bbef132818"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#a9ce3136aee7f5caa2b57e7bbef132818">AO_close</a> (byte port)</td></tr>
-<tr class="memdesc:a9ce3136aee7f5caa2b57e7bbef132818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close AO port on WPC DAQ device.  <a href="#a9ce3136aee7f5caa2b57e7bbef132818">More...</a><br /></td></tr>
-<tr class="separator:a9ce3136aee7f5caa2b57e7bbef132818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f3ddedd4d0ac31bd8f95c97aacaa065"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#a3f3ddedd4d0ac31bd8f95c97aacaa065">AO_open</a> (byte port, int timeout=100)</td></tr>
+<tr class="memdesc:a3f3ddedd4d0ac31bd8f95c97aacaa065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open AO port on WPC DAQ device.  <a href="#a3f3ddedd4d0ac31bd8f95c97aacaa065">More...</a><br /></td></tr>
+<tr class="separator:a3f3ddedd4d0ac31bd8f95c97aacaa065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d45dd2c42ef5083fa2b9353593e6684"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#a4d45dd2c42ef5083fa2b9353593e6684">AO_writeOneChannel</a> (byte port, byte channel, float AO_value, int timeout=100)</td></tr>
+<tr class="memdesc:a4d45dd2c42ef5083fa2b9353593e6684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write AO voltage to specific channel.  <a href="#a4d45dd2c42ef5083fa2b9353593e6684">More...</a><br /></td></tr>
+<tr class="separator:a4d45dd2c42ef5083fa2b9353593e6684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d994eb3308b75a1d883237019178b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#ab0d994eb3308b75a1d883237019178b6">AO_writeAllChannels</a> (byte port, List&lt; float &gt; AO_value, int timeout=100)</td></tr>
+<tr class="memdesc:ab0d994eb3308b75a1d883237019178b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write AO voltage to whole port.  <a href="#ab0d994eb3308b75a1d883237019178b6">More...</a><br /></td></tr>
+<tr class="separator:ab0d994eb3308b75a1d883237019178b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbc9f52a72354974a5a8519142290c4"><td class="memItemLeft" align="right" valign="top">List&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#a8cbc9f52a72354974a5a8519142290c4">AO_getValues</a> (byte port, int timeout=100)</td></tr>
+<tr class="memdesc:a8cbc9f52a72354974a5a8519142290c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get AO current output.  <a href="#a8cbc9f52a72354974a5a8519142290c4">More...</a><br /></td></tr>
+<tr class="separator:a8cbc9f52a72354974a5a8519142290c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f336f633df5f698abc5176de4f78de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_a_o_module.html#a98f336f633df5f698abc5176de4f78de">AO_close</a> (byte port, int timeout=100)</td></tr>
+<tr class="memdesc:a98f336f633df5f698abc5176de4f78de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close AO port on WPC DAQ device.  <a href="#a98f336f633df5f698abc5176de4f78de">More...</a><br /></td></tr>
+<tr class="separator:a98f336f633df5f698abc5176de4f78de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9ce3136aee7f5caa2b57e7bbef132818"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ce3136aee7f5caa2b57e7bbef132818">&#9670;&nbsp;</a></span>AO_close()</h2>
+<a id="a98f336f633df5f698abc5176de4f78de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f336f633df5f698abc5176de4f78de">&#9670;&nbsp;</a></span>AO_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,8 +134,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">int IAOModule.AO_close </td>
           <td>(</td>
           <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -144,6 +154,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>
 </dl>
@@ -151,8 +162,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad1da941e666c2edff7dff24888d0815f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1da941e666c2edff7dff24888d0815f">&#9670;&nbsp;</a></span>AO_getValues()</h2>
+<a id="a8cbc9f52a72354974a5a8519142290c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cbc9f52a72354974a5a8519142290c4">&#9670;&nbsp;</a></span>AO_getValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,8 +172,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">List&lt;float&gt; IAOModule.AO_getValues </td>
           <td>(</td>
           <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -171,6 +192,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>
 </dl>
@@ -178,8 +200,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aeea08092293f08d21b18361329fcb3e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeea08092293f08d21b18361329fcb3e7">&#9670;&nbsp;</a></span>AO_open()</h2>
+<a id="a3f3ddedd4d0ac31bd8f95c97aacaa065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f3ddedd4d0ac31bd8f95c97aacaa065">&#9670;&nbsp;</a></span>AO_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,8 +210,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">int IAOModule.AO_open </td>
           <td>(</td>
           <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -198,6 +230,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>
 </dl>
@@ -205,8 +238,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6882e8df36fae88eb237dc9f1f6bf303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6882e8df36fae88eb237dc9f1f6bf303">&#9670;&nbsp;</a></span>AO_writeAllChannels()</h2>
+<a id="ab0d994eb3308b75a1d883237019178b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d994eb3308b75a1d883237019178b6">&#9670;&nbsp;</a></span>AO_writeAllChannels()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +254,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">List&lt; float &gt;&#160;</td>
-          <td class="paramname"><em>AO_value</em>&#160;</td>
+          <td class="paramname"><em>AO_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -236,6 +275,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
     <tr><td class="paramname">AO_value</td><td>For 8 channels,[ch0, ch1,.....ch7], Unit : (V)</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>
 </dl>
@@ -243,8 +283,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a103e694adfb6938ba7aef8233b0a3eb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a103e694adfb6938ba7aef8233b0a3eb7">&#9670;&nbsp;</a></span>AO_writeOneChannel()</h2>
+<a id="a4d45dd2c42ef5083fa2b9353593e6684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d45dd2c42ef5083fa2b9353593e6684">&#9670;&nbsp;</a></span>AO_writeOneChannel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +305,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>AO_value</em>&#160;</td>
+          <td class="paramname"><em>AO_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -281,6 +327,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
     <tr><td class="paramname">channel</td><td>AO channel (0~7).</td></tr>
     <tr><td class="paramname">AO_value</td><td>0~5, Unit: (V)</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>
 </dl>

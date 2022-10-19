@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 class example_DIO_loopback_port
 {
-    static public void Main0()
+    static public void Main()
     {
         // Create device handle
         EthanD dev = new EthanD();

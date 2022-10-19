@@ -1,6 +1,23 @@
 var searchData=
 [
-  ['moduleai',['moduleAI',['../class_ethan_a.html#a4c62ffad6feb107aade6fae6adade4f2',1,'EthanA']]],
-  ['moduledio',['moduleDIO',['../class_ethan_d.html#a18d98446efb0c9fdea84507b62074829',1,'EthanD']]],
-  ['modulesys',['moduleSys',['../class_ethan_a.html#a5328a3fdc8148af8793c1aba4e9d2e12',1,'EthanA.moduleSys()'],['../class_ethan_d.html#afea6830d6c898b7735a81f64ecdac4bd',1,'EthanD.moduleSys()']]]
+  ['spi_5fclose',['SPI_close',['../interface_i_s_p_i_module.html#a18750572db915ba7872581344a082c46',1,'ISPIModule']]],
+  ['spi_5fopen',['SPI_open',['../interface_i_s_p_i_module.html#ab1ea1ad23153e7b19a7002715b2b47a1',1,'ISPIModule']]],
+  ['spi_5fread',['SPI_read',['../interface_i_s_p_i_module.html#a3bd433c62253a252dd5f50e6515a812b',1,'ISPIModule']]],
+  ['spi_5freadandwrite',['SPI_readAndWrite',['../interface_i_s_p_i_module.html#aa91c114288229a0c3b67e4317a1c18ff',1,'ISPIModule']]],
+  ['spi_5freset',['SPI_reset',['../interface_i_s_p_i_module.html#ae20c38faecf6935177dd6f6a5cd64e0e',1,'ISPIModule']]],
+  ['spi_5fsetdatasize',['SPI_setDataSize',['../interface_i_s_p_i_module.html#afc6a919ed6a2a25e429ecf67423c08ec',1,'ISPIModule']]],
+  ['spi_5fsetfirstbit',['SPI_setFirstBit',['../interface_i_s_p_i_module.html#a7d2b698c446687733ff5c8ce19c72e57',1,'ISPIModule']]],
+  ['spi_5fsetmode',['SPI_setMode',['../interface_i_s_p_i_module.html#a3c17dd90845e139f83adc5014a4899c7',1,'ISPIModule']]],
+  ['spi_5fsetprescaler',['SPI_setPrescaler',['../interface_i_s_p_i_module.html#ac8f0751bbdc3e3392ac235b8c26cb52a',1,'ISPIModule']]],
+  ['spi_5fwrite',['SPI_write',['../interface_i_s_p_i_module.html#aaa51e9a947506040a88ff8c15f3c4077',1,'ISPIModule']]],
+  ['sys_5fgetdriverinfo',['Sys_getDriverInfo',['../interface_i_system_module.html#a623d4a92f5b29810e08de70975a29a70',1,'ISystemModule.Sys_getDriverInfo()'],['../class_wifi_d_a_q_e3_a.html#a8a0df8f29f7c9dae887027ba94efc57d',1,'WifiDAQE3A.Sys_getDriverInfo()']]],
+  ['sys_5fgetgateway',['Sys_getGateway',['../interface_i_system_module.html#ad83e3f49a57d626c412be06afa1e2153',1,'ISystemModule.Sys_getGateway()'],['../class_wifi_d_a_q_e3_a.html#a6d35a825af39ac9ca27fecfdb33872fb',1,'WifiDAQE3A.Sys_getGateway()']]],
+  ['sys_5fgetipaddrandsubmask',['Sys_getIPAddrAndSubmask',['../interface_i_system_module.html#a5e68599717671698905e4208222105a7',1,'ISystemModule.Sys_getIPAddrAndSubmask()'],['../class_wifi_d_a_q_e3_a.html#a4d5e0eea4bbe0b546bf5f746dbde2234',1,'WifiDAQE3A.Sys_getIPAddrAndSubmask()']]],
+  ['sys_5fgetmacaddr',['Sys_getMACAddr',['../interface_i_system_module.html#a1f03dfe5fb5fa98a2cf27c504dc3fe9d',1,'ISystemModule.Sys_getMACAddr()'],['../class_wifi_d_a_q_e3_a.html#a8782715a43c3d9348a461d9081ff1dbb',1,'WifiDAQE3A.Sys_getMACAddr()']]],
+  ['sys_5fgetrtc',['Sys_getRTC',['../interface_i_system_module.html#aa2d62835ed55327f4bb4b623b519d662',1,'ISystemModule.Sys_getRTC()'],['../class_wifi_d_a_q_e3_a.html#a8905dcacb8fd7522a1e012467a5a3981',1,'WifiDAQE3A.Sys_getRTC()']]],
+  ['sys_5fgetserialnumber',['Sys_getSerialNumber',['../interface_i_system_module.html#a8bda509ff8fc04d7702e42ccdd5b1559',1,'ISystemModule.Sys_getSerialNumber()'],['../class_wifi_d_a_q_e3_a.html#a3743e208f6b532151eaabd451de965b6',1,'WifiDAQE3A.Sys_getSerialNumber()']]],
+  ['sys_5freboot',['Sys_reboot',['../interface_i_system_module.html#a905a42aee9ca98dfaf1f67cd930e0889',1,'ISystemModule.Sys_reboot()'],['../class_wifi_d_a_q_e3_a.html#a6186fbd8c636d182a4e9bf0722f19c09',1,'WifiDAQE3A.Sys_reboot()']]],
+  ['sys_5frebootonbootloader',['Sys_rebootOnBootloader',['../interface_i_system_module.html#add2d2b31d0d68367ddca80652fc3cc63',1,'ISystemModule.Sys_rebootOnBootloader()'],['../class_wifi_d_a_q_e3_a.html#aff4dad8931793fb1c7e2c865120f3276',1,'WifiDAQE3A.Sys_rebootOnBootloader()']]],
+  ['sys_5fsetipaddrandsubmask',['Sys_setIPAddrAndSubmask',['../interface_i_system_module.html#aa40d09113de83cca07df8eb4c02113c6',1,'ISystemModule.Sys_setIPAddrAndSubmask()'],['../class_wifi_d_a_q_e3_a.html#a275d754adcf70fbb8679961c9363d262',1,'WifiDAQE3A.Sys_setIPAddrAndSubmask()']]],
+  ['sys_5fsetrtc',['Sys_setRTC',['../interface_i_system_module.html#ad967fe6791a2061bf06033cb6966fe4f',1,'ISystemModule.Sys_setRTC()'],['../class_wifi_d_a_q_e3_a.html#af81e77028f3c8be90ed8617f7326ae83',1,'WifiDAQE3A.Sys_setRTC()']]]
 ];

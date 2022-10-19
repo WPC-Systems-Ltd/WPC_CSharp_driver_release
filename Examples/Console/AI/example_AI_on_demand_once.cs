@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class example_AI_on_demand_once
+public class example_AI_on_demand_once
 {
-    static void Main1()
+    static public void Main()
     {
         Console.WriteLine("Start example code...");
 
@@ -17,7 +17,6 @@ class example_AI_on_demand_once
         Console.WriteLine($"{dev.getDriverName()} - Version {dev.getDriverVersion()}");
 
         // Connect to network device
-
         dev.connect("192.168.5.79");
 
         // Perform DAQ basic information 
@@ -26,7 +25,6 @@ class example_AI_on_demand_once
             // Parameters setting
             int status;
             byte port = 1;
-            int mode = 0;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -38,7 +36,7 @@ class example_AI_on_demand_once
             Console.WriteLine($"AI_open status: {status}");
 
             // Set AI port to 1 and acquisition mode to on demand mode (0)
-            status = dev.AI_setMode(port, mode);
+            status = dev.AI_setMode(port, 0);
             Console.WriteLine($"AI_setMode status: {status}");
 
             // Set AI port to 1 and data acquisition
@@ -48,12 +46,13 @@ class example_AI_on_demand_once
             // Close port 1
             status = dev.AI_close(port);
             Console.WriteLine($"AI_close status: {status}");
-
         }
+
         catch (Exception ex)
         {
             Console.WriteLine(ex);
         }
+
         // Disconnect network device
         dev.disconnect();
 

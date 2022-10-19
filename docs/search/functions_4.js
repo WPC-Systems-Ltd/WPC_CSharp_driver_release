@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ethana',['EthanA',['../class_ethan_a.html#a3cd69048d5b368a5ddfbadafcdcc1a1a',1,'EthanA']]],
-  ['ethand',['EthanD',['../class_ethan_d.html#a5a206ccb683eb71704925f494575f8f0',1,'EthanD']]]
+  ['getdrivername',['getDriverName',['../class_wifi_d_a_q_e3_a.html#a4504931ff6bfca9e14a3e9733d683d57',1,'WifiDAQE3A']]],
+  ['getdriverversion',['getDriverVersion',['../class_wifi_d_a_q_e3_a.html#a0919d2d35b2d7ec6f4ced81564af3ffd',1,'WifiDAQE3A']]]
 ];

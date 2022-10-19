@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 class example_find_all_devices
 {
-    static void Main1()
+    static public void Main()
     {
         Console.WriteLine("Start example code...");
 
@@ -30,6 +30,7 @@ class example_find_all_devices
         try
         {
             List<List<string>> device_list = dev.Bcst_getDeviceInfo();
+            Console.WriteLine($"device_list.Count(): {device_list.Count()}");
             if (device_list.Count() > 0)
             {
                 foreach (List<string> device in device_list)
@@ -51,4 +52,3 @@ class example_find_all_devices
         Console.WriteLine("End example code...");
     }
 }
- 

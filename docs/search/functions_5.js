@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['getdrivername',['getDriverName',['../class_broadcaster.html#a992b2cddf50fe379ac7c7430dae619d5',1,'Broadcaster.getDriverName()'],['../class_ethan_a.html#a378ee3f0c0919b5f2d197faef17d611f',1,'EthanA.getDriverName()'],['../class_ethan_d.html#adc86a654cc9ddd609d582d644f683c8e',1,'EthanD.getDriverName()'],['../class_wifi_d_a_q_e3_a.html#a4504931ff6bfca9e14a3e9733d683d57',1,'WifiDAQE3A.getDriverName()']]],
-  ['getdriverversion',['getDriverVersion',['../class_broadcaster.html#a89661f17ccddf3052f2496b221c5e509',1,'Broadcaster.getDriverVersion()'],['../class_ethan_a.html#a6bd7d164cbde028f3599c60a2e1bb320',1,'EthanA.getDriverVersion()'],['../class_ethan_d.html#a3fa380ac2ff3a93ccca1ea201b1418f5',1,'EthanD.getDriverVersion()'],['../class_wifi_d_a_q_e3_a.html#a0919d2d35b2d7ec6f4ced81564af3ffd',1,'WifiDAQE3A.getDriverVersion()']]]
+  ['i2c_5fclose',['I2C_close',['../interface_i_i2_c_module.html#a30598f9f162476700d4db83c1c67aa25',1,'II2CModule']]],
+  ['i2c_5fopen',['I2C_open',['../interface_i_i2_c_module.html#ae1ab34e00ebc6251fbb198166425fa31',1,'II2CModule']]],
+  ['i2c_5fread',['I2C_read',['../interface_i_i2_c_module.html#aaeb47c3325d922239692874595fad35e',1,'II2CModule']]],
+  ['i2c_5freset',['I2C_reset',['../interface_i_i2_c_module.html#a6c0c9c2e5b1c8d46ff8f5471291f09ce',1,'II2CModule']]],
+  ['i2c_5fsetaddresssize',['I2C_setAddressSize',['../interface_i_i2_c_module.html#a25159747b1a568079af5ff9fc2f80dfa',1,'II2CModule']]],
+  ['i2c_5fsetclockrate',['I2C_setClockRate',['../interface_i_i2_c_module.html#abc3fa5dbc5972018244e977a1e547c9a',1,'II2CModule']]],
+  ['i2c_5fwrite',['I2C_write',['../interface_i_i2_c_module.html#acfe0eda0ecd44072d3a41b93921f77fd',1,'II2CModule']]]
 ];

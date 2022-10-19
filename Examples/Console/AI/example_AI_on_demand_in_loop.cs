@@ -5,14 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-// Question 
-    // 1. Multiple main in one project
-    // 2. Static function and thread?
-    // 3. Doxygen
-    // 4. Add .cs file into doxygen
-    // 5. WifiDAQE3A replace with all type  
 
-class example_AI_on_demand_once_in_loop
+class example_AI_on_demand_in_loop
 { 
     static void loop_func(WifiDAQE3A handle, byte port, int delay , int timeout =3) 
     {
@@ -27,7 +21,7 @@ class example_AI_on_demand_once_in_loop
         Console.WriteLine("loop_func end");
     }
 
-    static void Main0()
+    static public void Main()
     {
         Console.WriteLine("Start example code...");
 
@@ -46,7 +40,7 @@ class example_AI_on_demand_once_in_loop
             // Parameters setting
             int status;
             byte port = 1;
-            int mode = 0;
+            byte mode = 0;
              
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -61,12 +55,9 @@ class example_AI_on_demand_once_in_loop
             status = dev.AI_setMode(port, mode);
             Console.WriteLine($"AI_setMode status: {status}");
             
-            //Thread ai_thread = new Thread(() => loop_func(dev, port, 1, 3));
-            //ai_thread.Start();
-
+           
             loop_func(dev, port, 1, 3);
-            
-
+             
             // Close port 1
             status = dev.AI_close(port);
             Console.WriteLine($"AI_close status: {status}");
