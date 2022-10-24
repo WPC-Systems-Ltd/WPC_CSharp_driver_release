@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -104,13 +104,13 @@ $(document).ready(function(){initNavTree('interface_i_i2_c_module.html','');});
 
 <p>This is the complete list of members for <a class="el" href="interface_i_i2_c_module.html">II2CModule</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_i2_c_module.html#a30598f9f162476700d4db83c1c67aa25">I2C_close</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_i2_c_module.html#ae1ab34e00ebc6251fbb198166425fa31">I2C_open</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_i2_c_module.html#aaeb47c3325d922239692874595fad35e">I2C_read</a>(byte port, byte read_address, byte bytes_to_read, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_i2_c_module.html#a6c0c9c2e5b1c8d46ff8f5471291f09ce">I2C_reset</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_i2_c_module.html#a25159747b1a568079af5ff9fc2f80dfa">I2C_setAddressSize</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_i2_c_module.html#abc3fa5dbc5972018244e977a1e547c9a">I2C_setClockRate</a>(byte port, uint frequency, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_i2_c_module.html#acfe0eda0ecd44072d3a41b93921f77fd">I2C_write</a>(byte port, byte write_address, byte[] write_data, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_i2_c_module.html#acc8c5727721388475bcbf898bd63226d">I2C_close</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_i2_c_module.html#a731286ee9f539f60a95632d9bd8722f4">I2C_open</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_i2_c_module.html#ab915a35237010d2eb2e0e66746ea42e2">I2C_read</a>(int port, int read_address, int num_bytes, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_i2_c_module.html#ad634a19777f7aa058cbdec760fe701f5">I2C_reset</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_i2_c_module.html#a998345e05bc9866e72ef9c6d2235cdfc">I2C_setAddressSize</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_i2_c_module.html#a3b1f31c549c80c6640bf11acacc5721d">I2C_setClockRate</a>(int port, int frequency, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_i2_c_module.html#ac0c7c6bffc57c92b74d93a1ec7473f8c">I2C_write</a>(int port, int write_address, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_i2_c_module.html">II2CModule</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

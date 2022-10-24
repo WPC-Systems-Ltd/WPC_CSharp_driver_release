@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['getdrivername',['getDriverName',['../class_wifi_d_a_q_e3_a.html#a4504931ff6bfca9e14a3e9733d683d57',1,'WifiDAQE3A']]],
-  ['getdriverversion',['getDriverVersion',['../class_wifi_d_a_q_e3_a.html#a0919d2d35b2d7ec6f4ced81564af3ffd',1,'WifiDAQE3A']]]
+  ['i2c_5fclose',['I2C_close',['../interface_i_i2_c_module.html#acc8c5727721388475bcbf898bd63226d',1,'II2CModule']]],
+  ['i2c_5fopen',['I2C_open',['../interface_i_i2_c_module.html#a731286ee9f539f60a95632d9bd8722f4',1,'II2CModule']]],
+  ['i2c_5fread',['I2C_read',['../interface_i_i2_c_module.html#ab915a35237010d2eb2e0e66746ea42e2',1,'II2CModule']]],
+  ['i2c_5freset',['I2C_reset',['../interface_i_i2_c_module.html#ad634a19777f7aa058cbdec760fe701f5',1,'II2CModule']]],
+  ['i2c_5fsetaddresssize',['I2C_setAddressSize',['../interface_i_i2_c_module.html#a998345e05bc9866e72ef9c6d2235cdfc',1,'II2CModule']]],
+  ['i2c_5fsetclockrate',['I2C_setClockRate',['../interface_i_i2_c_module.html#a3b1f31c549c80c6640bf11acacc5721d',1,'II2CModule']]],
+  ['i2c_5fwrite',['I2C_write',['../interface_i_i2_c_module.html#ac0c7c6bffc57c92b74d93a1ec7473f8c',1,'II2CModule']]]
 ];

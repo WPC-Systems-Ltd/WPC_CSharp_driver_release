@@ -14,7 +14,7 @@ public class example_AI_on_demand_once
         WifiDAQE3A dev = new WifiDAQE3A();
 
         // Get C# driver version
-        Console.WriteLine($"{dev.getDriverName()} - Version {dev.getDriverVersion()}");
+        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Connect to network device
         dev.connect("192.168.5.79");
@@ -40,8 +40,8 @@ public class example_AI_on_demand_once
             Console.WriteLine($"AI_setMode status: {status}");
 
             // Set AI port to 1 and data acquisition
-            List<float> ch = dev.AI_readOnDemand(port);
-            Console.WriteLine($"data: {ch[0]}, {ch[1]}, {ch[2]}, {ch[3]}, {ch[4]}, {ch[5]}, {ch[6]}, {ch[7]}");
+            List<double> sample = dev.AI_readOnDemand(port);
+            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
 
             // Close port 1
             status = dev.AI_close(port);

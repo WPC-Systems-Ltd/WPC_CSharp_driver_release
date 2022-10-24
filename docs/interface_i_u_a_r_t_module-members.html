@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -104,16 +104,16 @@ $(document).ready(function(){initNavTree('interface_i_u_a_r_t_module.html','');}
 
 <p>This is the complete list of members for <a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#ac17bf8f456b2a7492ce8091557ca508b">UART_close</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a2ef2cabffc435b2c79961b616789d448">UART_open</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a53ea1b85a9427deff0f55fb18efa089a">UART_read</a>(byte port, int bytes_to_read, int delay=5)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a99baab119033c4591f6adcd527e9c2ff">UART_reset</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a130ade29f260d95f9fa65f818304b216">UART_setBaudRate</a>(byte port, uint baud_rate, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a04e7379b50a75132943b2a5d8cef831b">UART_setDataBit</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a23094fbf6506c84fa3111827be88d8d6">UART_setNumStopBit</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#aa1f13772dabb8b004e059abca1831030">UART_setParity</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a00a51c9ba2330e0cc63de4717af1b4bf">UART_stopReading</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a4dca3b181711b07dc9d60b6c0bafddfd">UART_write</a>(byte port, string write_data, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a5373258903c955150fa16c8cf398cb6a">UART_close</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#adf2079eca751724147202bd09131af3b">UART_open</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a96c19ff2d8a0c2daa2e23050dbc71388">UART_read</a>(int port, int num_bytes, int delay=5)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#aa37a1be4aa8250bcda93a6e00ab7694b">UART_reset</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a796c753a2008538ac827ecebbed5739f">UART_setBaudRate</a>(int port, int baud_rate, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a2bc8c1225be917dad102816be4b7bd27">UART_setDataBit</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#aee21ac51f936fb51123dea9e95918a6a">UART_setNumStopBit</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a1a06f2a297683a479c9eb3b308944bb3">UART_setParity</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#a68686962464ae9fac867b89dad7bd5ba">UART_stopReading</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html#ae7ee06da43771ae360e54bdd1943a0d7">UART_write</a>(int port, string data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_u_a_r_t_module.html">IUARTModule</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -13,7 +13,7 @@ public class example_AI_N_samples_once
         WifiDAQE3A dev = new WifiDAQE3A();
 
         // Get C# driver version
-        Console.WriteLine($"{dev.getDriverName()} - Version {dev.getDriverVersion()}");
+        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Connect to network device
         try
@@ -31,7 +31,7 @@ public class example_AI_N_samples_once
             // Parameters setting
             int status;
             byte port = 1;
-            uint samples = 5;
+            int samples = 10;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -57,12 +57,12 @@ public class example_AI_N_samples_once
             Thread.Sleep(100);
 
             // Set AI port to 0 and get 50 points 
-            List<List<float>>? streaming_list = dev.AI_readStreaming(port, 5, 10);
+            List<List<double>> streaming_list = dev.AI_readStreaming(port, samples, 10);
 
-            foreach (List<float> CH in streaming_list)
+            foreach (List<double> sample in streaming_list)
             {
                 // Read acquisition data 50 points 
-                Console.WriteLine($"data : {CH[0]}, {CH[1]}, {CH[2]}, {CH[3]}, {CH[4]}, {CH[5]}, {CH[6]}, {CH[7]}");
+                Console.WriteLine($"data : {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
             }
 
             // Close port 1

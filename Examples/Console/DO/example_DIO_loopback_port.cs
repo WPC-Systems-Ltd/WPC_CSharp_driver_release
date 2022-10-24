@@ -12,7 +12,7 @@ class example_DIO_loopback_port
         EthanD dev = new EthanD();
 
         // Get C# driver version
-        Console.WriteLine($"{dev.getDriverName()} - Version {dev.getDriverVersion()}");
+        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Connect to network device
         try
@@ -42,7 +42,7 @@ class example_DIO_loopback_port
             Console.WriteLine($"DO_openPort status: {status}");
 
             // Set pin0, pin1 and pin2 to high, others to low
-            status = dev.DO_writePort(port_DO, new List<byte> { 0, 0, 0, 0, 0, 1, 1, 1 });
+            status = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 0, 0, 1, 1, 1 });
             Console.WriteLine($"DO_writePort status: {status}");
 
             // Open all pins in port 1 with digital input

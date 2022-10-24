@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['uart_5fclose',['UART_close',['../interface_i_u_a_r_t_module.html#ac17bf8f456b2a7492ce8091557ca508b',1,'IUARTModule']]],
-  ['uart_5fopen',['UART_open',['../interface_i_u_a_r_t_module.html#a2ef2cabffc435b2c79961b616789d448',1,'IUARTModule']]],
-  ['uart_5fread',['UART_read',['../interface_i_u_a_r_t_module.html#a53ea1b85a9427deff0f55fb18efa089a',1,'IUARTModule']]],
-  ['uart_5freset',['UART_reset',['../interface_i_u_a_r_t_module.html#a99baab119033c4591f6adcd527e9c2ff',1,'IUARTModule']]],
-  ['uart_5fsetbaudrate',['UART_setBaudRate',['../interface_i_u_a_r_t_module.html#a130ade29f260d95f9fa65f818304b216',1,'IUARTModule']]],
-  ['uart_5fsetdatabit',['UART_setDataBit',['../interface_i_u_a_r_t_module.html#a04e7379b50a75132943b2a5d8cef831b',1,'IUARTModule']]],
-  ['uart_5fsetnumstopbit',['UART_setNumStopBit',['../interface_i_u_a_r_t_module.html#a23094fbf6506c84fa3111827be88d8d6',1,'IUARTModule']]],
-  ['uart_5fsetparity',['UART_setParity',['../interface_i_u_a_r_t_module.html#aa1f13772dabb8b004e059abca1831030',1,'IUARTModule']]],
-  ['uart_5fstopreading',['UART_stopReading',['../interface_i_u_a_r_t_module.html#a00a51c9ba2330e0cc63de4717af1b4bf',1,'IUARTModule']]],
-  ['uart_5fwrite',['UART_write',['../interface_i_u_a_r_t_module.html#a4dca3b181711b07dc9d60b6c0bafddfd',1,'IUARTModule']]]
+  ['wifi_5fgetwifibandwidth',['Wifi_getWifiBandwidth',['../interface_i_wifi_module.html#aba42cfe419644f49c841dd18a45fca9b',1,'IWifiModule.Wifi_getWifiBandwidth()'],['../class_wifi_d_a_q_e3_a.html#a0bbd24d461cd82b04a18cb0c899cd1f8',1,'WifiDAQE3A.Wifi_getWifiBandwidth()']]],
+  ['wifi_5fgetwificonfiguration',['Wifi_getWifiConfiguration',['../interface_i_wifi_module.html#a25f772a88c70f1d6d7e804e142d82aaf',1,'IWifiModule.Wifi_getWifiConfiguration()'],['../class_wifi_d_a_q_e3_a.html#a18abf3b53c3d865a3f3edd652fb1f490',1,'WifiDAQE3A.Wifi_getWifiConfiguration()']]],
+  ['wifi_5freadaccleration',['Wifi_readAccleration',['../interface_i_system_analog_module.html#a149bffed1171e8c57971f3f27e630413',1,'ISystemAnalogModule.Wifi_readAccleration()'],['../class_wifi_d_a_q_e3_a.html#aa2c80eb2faf72f8a780bf176b1d6c635',1,'WifiDAQE3A.Wifi_readAccleration()']]],
+  ['wifi_5freadbattery',['Wifi_readBattery',['../interface_i_system_analog_module.html#abe02a7cc9be83041e460d98d57865b7d',1,'ISystemAnalogModule.Wifi_readBattery()'],['../class_wifi_d_a_q_e3_a.html#ab84cde6d7e1a52f81aecae0878743dbd',1,'WifiDAQE3A.Wifi_readBattery()']]],
+  ['wifi_5freadrssi',['Wifi_readRSSI',['../interface_i_wifi_module.html#a81fcd843f15d7310aa95d5efe37b9c08',1,'IWifiModule.Wifi_readRSSI()'],['../class_wifi_d_a_q_e3_a.html#a2f577c9bb401c0cd311e1944a939be6f',1,'WifiDAQE3A.Wifi_readRSSI()']]],
+  ['wifi_5freadthermo',['Wifi_readThermo',['../interface_i_system_analog_module.html#ac2c44665348c51aba512c1c813445347',1,'ISystemAnalogModule.Wifi_readThermo()'],['../class_wifi_d_a_q_e3_a.html#af3cec0dec8b04891773ea6fc5a5a23b7',1,'WifiDAQE3A.Wifi_readThermo()']]],
+  ['wifidaqe3a',['WifiDAQE3A',['../class_wifi_d_a_q_e3_a.html#ab4f0a51758a8823a8110757f3ba2c4a9',1,'WifiDAQE3A']]]
 ];

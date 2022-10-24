@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -104,15 +104,15 @@ $(document).ready(function(){initNavTree('interface_i_c_a_n_module.html','');});
 
 <p>This is the complete list of members for <a class="el" href="interface_i_c_a_n_module.html">ICANModule</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a1d7e1ab9f7700dcb592e01408cd9427a">CAN_close</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#ac66b89dafcb4cbb35e38ed463325a6ae">CAN_open</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#aaa12a15055418358a7913822a6345efe">CAN_read</a>(byte port, byte frame, int delay=5)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#aa38b26f8e5a7a5a5081ac27821116fc8">CAN_setRXFilteringOn</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a21e096b66ed5c291f6fa5c2a57350834">CAN_setRXFilterOrMask</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#aed4d3db4b5dffa6b9ace8d3ee93f4679">CAN_setSpeed</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a4119a179b8b87422f231c4443aebb30a">CAN_start</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a598a8519c76a4278a0a7e8c38a48ac07">CAN_stop</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a9241e443c6a0c28185de8cad39a098e2">CAN_write</a>(byte port, int id, List&lt; byte &gt; value, byte CAN_type, byte CAN_length, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#af10fbfe8fddd0c2f20a323f48c97e4d4">CAN_close</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a85c04db62adb07eed996170a7d8a98dd">CAN_open</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a57d22ca1c6086c7880f63c83b3da11c9">CAN_read</a>(int port, int num_frames, int delay=5)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a36f8ea3bd9823f9fc182f9a90bbf5e99">CAN_setRXFilteringOn</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a9c6b0d20cf74bfa78c19e8ace1ac40fa">CAN_setRXFilterOrMask</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a64c6b7489881c92f72194762d1a207e0">CAN_setSpeed</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#aad70790775582278605e181b55f76fad">CAN_start</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a13cc7494ce855e6cd8e2243e3d9077b6">CAN_stop</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_c_a_n_module.html#a356c055b90bf470fa15f461ef0d1c99b">CAN_write</a>(int port, int id, List&lt; byte &gt; value, int can_type, int can_length, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_c_a_n_module.html">ICANModule</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

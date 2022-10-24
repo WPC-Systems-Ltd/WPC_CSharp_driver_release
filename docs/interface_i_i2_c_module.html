@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -107,31 +107,31 @@ $(document).ready(function(){initNavTree('interface_i_i2_c_module.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae1ab34e00ebc6251fbb198166425fa31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#ae1ab34e00ebc6251fbb198166425fa31">I2C_open</a> (byte port, int timeout=100)</td></tr>
-<tr class="memdesc:ae1ab34e00ebc6251fbb198166425fa31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open I2C port on WPC DAQ device.  <a href="#ae1ab34e00ebc6251fbb198166425fa31">More...</a><br /></td></tr>
-<tr class="separator:ae1ab34e00ebc6251fbb198166425fa31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30598f9f162476700d4db83c1c67aa25"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#a30598f9f162476700d4db83c1c67aa25">I2C_close</a> (byte port, int timeout=100)</td></tr>
-<tr class="memdesc:a30598f9f162476700d4db83c1c67aa25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close I2C port on WPC DAQ device.  <a href="#a30598f9f162476700d4db83c1c67aa25">More...</a><br /></td></tr>
-<tr class="separator:a30598f9f162476700d4db83c1c67aa25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaeb47c3325d922239692874595fad35e"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#aaeb47c3325d922239692874595fad35e">I2C_read</a> (byte port, byte read_address, byte bytes_to_read, int timeout=100)</td></tr>
-<tr class="memdesc:aaeb47c3325d922239692874595fad35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from read address.  <a href="#aaeb47c3325d922239692874595fad35e">More...</a><br /></td></tr>
-<tr class="separator:aaeb47c3325d922239692874595fad35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfe0eda0ecd44072d3a41b93921f77fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#acfe0eda0ecd44072d3a41b93921f77fd">I2C_write</a> (byte port, byte write_address, byte[] write_data, int timeout=100)</td></tr>
-<tr class="memdesc:acfe0eda0ecd44072d3a41b93921f77fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to write address.  <a href="#acfe0eda0ecd44072d3a41b93921f77fd">More...</a><br /></td></tr>
-<tr class="separator:acfe0eda0ecd44072d3a41b93921f77fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c0c9c2e5b1c8d46ff8f5471291f09ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#a6c0c9c2e5b1c8d46ff8f5471291f09ce">I2C_reset</a> (byte port, int timeout=100)</td></tr>
-<tr class="memdesc:a6c0c9c2e5b1c8d46ff8f5471291f09ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset I2C to default settings.  <a href="#a6c0c9c2e5b1c8d46ff8f5471291f09ce">More...</a><br /></td></tr>
-<tr class="separator:a6c0c9c2e5b1c8d46ff8f5471291f09ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc3fa5dbc5972018244e977a1e547c9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#abc3fa5dbc5972018244e977a1e547c9a">I2C_setClockRate</a> (byte port, uint frequency, int timeout=100)</td></tr>
-<tr class="memdesc:abc3fa5dbc5972018244e977a1e547c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency mode of the desired communication clock.  <a href="#abc3fa5dbc5972018244e977a1e547c9a">More...</a><br /></td></tr>
-<tr class="separator:abc3fa5dbc5972018244e977a1e547c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25159747b1a568079af5ff9fc2f80dfa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#a25159747b1a568079af5ff9fc2f80dfa">I2C_setAddressSize</a> (byte port, byte mode, int timeout=100)</td></tr>
-<tr class="memdesc:a25159747b1a568079af5ff9fc2f80dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency mode of the desired communication clock.  <a href="#a25159747b1a568079af5ff9fc2f80dfa">More...</a><br /></td></tr>
-<tr class="separator:a25159747b1a568079af5ff9fc2f80dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731286ee9f539f60a95632d9bd8722f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#a731286ee9f539f60a95632d9bd8722f4">I2C_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a731286ee9f539f60a95632d9bd8722f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open I2C port on WPC DAQ device.  <a href="#a731286ee9f539f60a95632d9bd8722f4">More...</a><br /></td></tr>
+<tr class="separator:a731286ee9f539f60a95632d9bd8722f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc8c5727721388475bcbf898bd63226d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#acc8c5727721388475bcbf898bd63226d">I2C_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:acc8c5727721388475bcbf898bd63226d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close I2C port on WPC DAQ device.  <a href="#acc8c5727721388475bcbf898bd63226d">More...</a><br /></td></tr>
+<tr class="separator:acc8c5727721388475bcbf898bd63226d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab915a35237010d2eb2e0e66746ea42e2"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#ab915a35237010d2eb2e0e66746ea42e2">I2C_read</a> (int port, int read_address, int num_bytes, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:ab915a35237010d2eb2e0e66746ea42e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from read address.  <a href="#ab915a35237010d2eb2e0e66746ea42e2">More...</a><br /></td></tr>
+<tr class="separator:ab915a35237010d2eb2e0e66746ea42e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c7c6bffc57c92b74d93a1ec7473f8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#ac0c7c6bffc57c92b74d93a1ec7473f8c">I2C_write</a> (int port, int write_address, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:ac0c7c6bffc57c92b74d93a1ec7473f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to write address.  <a href="#ac0c7c6bffc57c92b74d93a1ec7473f8c">More...</a><br /></td></tr>
+<tr class="separator:ac0c7c6bffc57c92b74d93a1ec7473f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad634a19777f7aa058cbdec760fe701f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#ad634a19777f7aa058cbdec760fe701f5">I2C_reset</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:ad634a19777f7aa058cbdec760fe701f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset I2C to default settings.  <a href="#ad634a19777f7aa058cbdec760fe701f5">More...</a><br /></td></tr>
+<tr class="separator:ad634a19777f7aa058cbdec760fe701f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1f31c549c80c6640bf11acacc5721d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#a3b1f31c549c80c6640bf11acacc5721d">I2C_setClockRate</a> (int port, int frequency, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a3b1f31c549c80c6640bf11acacc5721d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency mode of the desired communication clock.  <a href="#a3b1f31c549c80c6640bf11acacc5721d">More...</a><br /></td></tr>
+<tr class="separator:a3b1f31c549c80c6640bf11acacc5721d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998345e05bc9866e72ef9c6d2235cdfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_i2_c_module.html#a998345e05bc9866e72ef9c6d2235cdfc">I2C_setAddressSize</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a998345e05bc9866e72ef9c6d2235cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency mode of the desired communication clock.  <a href="#a998345e05bc9866e72ef9c6d2235cdfc">More...</a><br /></td></tr>
+<tr class="separator:a998345e05bc9866e72ef9c6d2235cdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a30598f9f162476700d4db83c1c67aa25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30598f9f162476700d4db83c1c67aa25">&#9670;&nbsp;</a></span>I2C_close()</h2>
+<a id="acc8c5727721388475bcbf898bd63226d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc8c5727721388475bcbf898bd63226d">&#9670;&nbsp;</a></span>I2C_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,14 +139,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int II2CModule.I2C_close </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -168,8 +168,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae1ab34e00ebc6251fbb198166425fa31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1ab34e00ebc6251fbb198166425fa31">&#9670;&nbsp;</a></span>I2C_open()</h2>
+<a id="a731286ee9f539f60a95632d9bd8722f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731286ee9f539f60a95632d9bd8722f4">&#9670;&nbsp;</a></span>I2C_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,14 +177,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int II2CModule.I2C_open </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -206,8 +206,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaeb47c3325d922239692874595fad35e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaeb47c3325d922239692874595fad35e">&#9670;&nbsp;</a></span>I2C_read()</h2>
+<a id="ab915a35237010d2eb2e0e66746ea42e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab915a35237010d2eb2e0e66746ea42e2">&#9670;&nbsp;</a></span>I2C_read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,26 +215,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">List&lt;byte&gt; II2CModule.I2C_read </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>read_address</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>bytes_to_read</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_bytes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -249,7 +249,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
     <tr><td class="paramname">read_address</td><td>7-bit slave address of the device to request bytes from.</td></tr>
-    <tr><td class="paramname">bytes_to_read</td><td>The number of bytes to receive.</td></tr>
+    <tr><td class="paramname">num_bytes</td><td>The number of bytes to receive.</td></tr>
     <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>
@@ -258,8 +258,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6c0c9c2e5b1c8d46ff8f5471291f09ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c0c9c2e5b1c8d46ff8f5471291f09ce">&#9670;&nbsp;</a></span>I2C_reset()</h2>
+<a id="ad634a19777f7aa058cbdec760fe701f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad634a19777f7aa058cbdec760fe701f5">&#9670;&nbsp;</a></span>I2C_reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,14 +267,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int II2CModule.I2C_reset </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -296,8 +296,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a25159747b1a568079af5ff9fc2f80dfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25159747b1a568079af5ff9fc2f80dfa">&#9670;&nbsp;</a></span>I2C_setAddressSize()</h2>
+<a id="a998345e05bc9866e72ef9c6d2235cdfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998345e05bc9866e72ef9c6d2235cdfc">&#9670;&nbsp;</a></span>I2C_setAddressSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,20 +305,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int II2CModule.I2C_setAddressSize </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>mode</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -341,8 +341,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abc3fa5dbc5972018244e977a1e547c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc3fa5dbc5972018244e977a1e547c9a">&#9670;&nbsp;</a></span>I2C_setClockRate()</h2>
+<a id="a3b1f31c549c80c6640bf11acacc5721d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1f31c549c80c6640bf11acacc5721d">&#9670;&nbsp;</a></span>I2C_setClockRate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,20 +350,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int II2CModule.I2C_setClockRate </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>frequency</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -386,8 +386,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acfe0eda0ecd44072d3a41b93921f77fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfe0eda0ecd44072d3a41b93921f77fd">&#9670;&nbsp;</a></span>I2C_write()</h2>
+<a id="ac0c7c6bffc57c92b74d93a1ec7473f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0c7c6bffc57c92b74d93a1ec7473f8c">&#9670;&nbsp;</a></span>I2C_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,26 +395,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int II2CModule.I2C_write </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>write_address</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">byte []&#160;</td>
-          <td class="paramname"><em>write_data</em>, </td>
+          <td class="paramtype">List&lt; byte &gt;&#160;</td>
+          <td class="paramname"><em>data_to_write</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -429,7 +429,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
     <tr><td class="paramname">write_address</td><td>7-bit slave address of the device to send bytes.</td></tr>
-    <tr><td class="paramname">write_data</td><td>Data to be transferred.</td></tr>
+    <tr><td class="paramname">data</td><td>Data to be transferred.</td></tr>
     <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>

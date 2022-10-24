@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -104,16 +104,16 @@ $(document).ready(function(){initNavTree('interface_i_s_p_i_module.html','');});
 
 <p>This is the complete list of members for <a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a18750572db915ba7872581344a082c46">SPI_close</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#ab1ea1ad23153e7b19a7002715b2b47a1">SPI_open</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a3bd433c62253a252dd5f50e6515a812b">SPI_read</a>(byte port, byte bytes_to_read, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#aa91c114288229a0c3b67e4317a1c18ff">SPI_readAndWrite</a>(byte port, byte[] write_data, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#ae20c38faecf6935177dd6f6a5cd64e0e">SPI_reset</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#afc6a919ed6a2a25e429ecf67423c08ec">SPI_setDataSize</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a7d2b698c446687733ff5c8ce19c72e57">SPI_setFirstBit</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a3c17dd90845e139f83adc5014a4899c7">SPI_setMode</a>(byte port, byte mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#ac8f0751bbdc3e3392ac235b8c26cb52a">SPI_setPrescaler</a>(byte port, int prescaler, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#aaa51e9a947506040a88ff8c15f3c4077">SPI_write</a>(byte port, byte[] write_data, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a3db167071ae58ec9769e84877ce4cdd0">SPI_close</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a62f6f984aabd724a1f8504a6448e202e">SPI_open</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a635081d88629e0772899ecb9578a5362">SPI_read</a>(int port, int num_bytes, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a764f5e8765d940a4e350de84233d410c">SPI_readAndWrite</a>(int port, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a94e34bdb3086494793eeabbc35079c94">SPI_reset</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a25e6fbe7abe4c2b498e521ef0576be97">SPI_setDataSize</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a6c2e43693274f965c01d00a02650eded">SPI_setFirstBit</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a33b660716367ab3ca1a7c736df7ce397">SPI_setMode</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#a2bab163a5e439d2ca9d7b7821d5974d3">SPI_setPrescaler</a>(int port, int prescaler, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_s_p_i_module.html#acb6e4dd73261508f1a58c3fddb85e743">SPI_write</a>(int port, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_s_p_i_module.html">ISPIModule</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -14,7 +14,7 @@ class example_get_device_info
         WifiDAQE3A dev = new WifiDAQE3A();
 
         // Get C# driver version
-        Console.WriteLine($"{dev.getDriverName()} - Version {dev.getDriverVersion()}");
+        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Connect to network device
         try

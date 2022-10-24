@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -125,18 +125,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:add2d2b31d0d68367ddca80652fc3cc63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_system_module.html#add2d2b31d0d68367ddca80652fc3cc63">Sys_rebootOnBootloader</a> (int timeout=100)</td></tr>
 <tr class="memdesc:add2d2b31d0d68367ddca80652fc3cc63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reboot on bootloader from the connected WPC device.  <a href="#add2d2b31d0d68367ddca80652fc3cc63">More...</a><br /></td></tr>
 <tr class="separator:add2d2b31d0d68367ddca80652fc3cc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e68599717671698905e4208222105a7"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_system_module.html#a5e68599717671698905e4208222105a7">Sys_getIPAddrAndSubmask</a> (int timeout=100)</td></tr>
-<tr class="memdesc:a5e68599717671698905e4208222105a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get IP address and subnet mask from the connected web device.  <a href="#a5e68599717671698905e4208222105a7">More...</a><br /></td></tr>
-<tr class="separator:a5e68599717671698905e4208222105a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa40d09113de83cca07df8eb4c02113c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_system_module.html#aa40d09113de83cca07df8eb4c02113c6">Sys_setIPAddrAndSubmask</a> (string ip_addr, string subnet_mask, int timeout=100)</td></tr>
-<tr class="memdesc:aa40d09113de83cca07df8eb4c02113c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set IP address and subnet mask to the connected web device.  <a href="#aa40d09113de83cca07df8eb4c02113c6">More...</a><br /></td></tr>
-<tr class="separator:aa40d09113de83cca07df8eb4c02113c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f03dfe5fb5fa98a2cf27c504dc3fe9d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_system_module.html#a1f03dfe5fb5fa98a2cf27c504dc3fe9d">Sys_getMACAddr</a> (int timeout=100)</td></tr>
-<tr class="memdesc:a1f03dfe5fb5fa98a2cf27c504dc3fe9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MAC address from the connected web device.  <a href="#a1f03dfe5fb5fa98a2cf27c504dc3fe9d">More...</a><br /></td></tr>
-<tr class="separator:a1f03dfe5fb5fa98a2cf27c504dc3fe9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad83e3f49a57d626c412be06afa1e2153"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_system_module.html#ad83e3f49a57d626c412be06afa1e2153">Sys_getGateway</a> (int timeout=100)</td></tr>
-<tr class="memdesc:ad83e3f49a57d626c412be06afa1e2153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get geteway from the connected web device.  <a href="#ad83e3f49a57d626c412be06afa1e2153">More...</a><br /></td></tr>
-<tr class="separator:ad83e3f49a57d626c412be06afa1e2153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a623d4a92f5b29810e08de70975a29a70"></a>
@@ -163,87 +151,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
-
-</div>
-</div>
-<a id="ad83e3f49a57d626c412be06afa1e2153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad83e3f49a57d626c412be06afa1e2153">&#9670;&nbsp;</a></span>Sys_getGateway()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string ISystemModule.Sys_getGateway </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get geteway from the connected web device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Network gateway. </dd></dl>
-
-</div>
-</div>
-<a id="a5e68599717671698905e4208222105a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e68599717671698905e4208222105a7">&#9670;&nbsp;</a></span>Sys_getIPAddrAndSubmask()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;string&gt; ISystemModule.Sys_getIPAddrAndSubmask </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get IP address and subnet mask from the connected web device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>List of IP address and subnet mask. </dd></dl>
-
-</div>
-</div>
-<a id="a1f03dfe5fb5fa98a2cf27c504dc3fe9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f03dfe5fb5fa98a2cf27c504dc3fe9d">&#9670;&nbsp;</a></span>Sys_getMACAddr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string ISystemModule.Sys_getMACAddr </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get MAC address from the connected web device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>MAC address. </dd></dl>
 
 </div>
 </div>
@@ -347,51 +254,6 @@ Public Member Functions</h2></td></tr>
 <p>Reboot on bootloader from the connected WPC device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="aa40d09113de83cca07df8eb4c02113c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa40d09113de83cca07df8eb4c02113c6">&#9670;&nbsp;</a></span>Sys_setIPAddrAndSubmask()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ISystemModule.Sys_setIPAddrAndSubmask </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>ip_addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>subnet_mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set IP address and subnet mask to the connected web device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
-    <tr><td class="paramname">subnet_mask</td><td>Subnet mask.</td></tr>
     <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>

@@ -12,7 +12,7 @@ class example_DIO_loopback_pins
         EthanD dev = new EthanD();
 
         // Get C# driver version
-        Console.WriteLine($"{dev.getDriverName()} - Version {dev.getDriverVersion()}");
+        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Connect to network device
         try
@@ -32,8 +32,8 @@ class example_DIO_loopback_pins
             byte port_DO = 0; // For DO
             byte port_DI = 1; // For DI
 
-            List<byte> DO_pins = new List<byte> { 0, 1, 3, 4 };
-            List<byte> DI_pins = new List<byte> { 0, 1, 3, 4 };
+            List<int> DO_pins = new List<int> { 0, 1, 3, 4 };
+            List<int> DI_pins = new List<int> { 0, 1, 3, 4 };
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -45,7 +45,7 @@ class example_DIO_loopback_pins
             Console.WriteLine($"DO_openPins status: {status}");
 
             // Set pin0, pin1 and pin3 to high, others to low in port 0
-            status = dev.DO_writePins(port_DO, DO_pins, new List<byte> { 1, 1, 1, 0 });
+            status = dev.DO_writePins(port_DO, DO_pins, new List<int> { 1, 1, 1, 0 });
             Console.WriteLine($"DO_writePins status: {status}");
 
             // Open pin0, pin1, pin3 and pin4 in port 1 with digital output

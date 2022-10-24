@@ -12,10 +12,10 @@ class example_AI_on_demand_in_loop
     {
         int t = 0;
         while (t < timeout) 
-        {  
-            // Set AI port to 1 and acquisition mode to on demand mode (0)
-            List<float> ch = handle.AI_readOnDemand(port);
-            Console.WriteLine($"data: {ch[0]}, {ch[1]}, {ch[2]}, {ch[3]}, {ch[4]}, {ch[5]}, {ch[6]}, {ch[7]},");
+        {
+            // Data acquisition
+            List<double> sample = handle.AI_readOnDemand(port);
+            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
             t += delay; 
         }
         Console.WriteLine("loop_func end");
@@ -29,7 +29,7 @@ class example_AI_on_demand_in_loop
         WifiDAQE3A dev = new WifiDAQE3A();
 
         // Get C# driver version
-        Console.WriteLine($"{dev.getDriverName()} - Version {dev.getDriverVersion()}");
+        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Connect to network device
         dev.connect("192.168.5.79");

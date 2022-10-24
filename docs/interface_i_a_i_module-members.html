@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -104,17 +104,17 @@ $(document).ready(function(){initNavTree('interface_i_a_i_module.html','');});
 
 <p>This is the complete list of members for <a class="el" href="interface_i_a_i_module.html">IAIModule</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a2cbbbab7e78990204b8e4e9feb4cf26c">AI_clearBufferStatus</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#a90c4acc74d088da22498e8b214b13c4f">AI_close</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a08cdc2b3153ef80aa661d27ee5bec867">AI_open</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#a1f7cff497dde9a5b05897be77df7b9a9">AI_readBufferStatus</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a6885e9a2af2555594836bfd1aafbf3c0">AI_readOnDemand</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#ab25815306b2996a02a08f164358fcaec">AI_readStreaming</a>(byte port, int num_of_samples, int delay)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a07d9806aecd13a65245bba04c595c537">AI_setMode</a>(byte port, int mode, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#ad3bdc9e297a761ccad4254fec38cd2c6">AI_setNumSamples</a>(byte port, uint sample_points, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#ae22890a53a4dad4a2e1beb6a77abbfb4">AI_setSamplingRate</a>(byte port, float sampling_rate, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#ae65fbeff5da27379ed5e6cad1ad83274">AI_start</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a16fe8564d89580d000aed2d6aeb3dfda">AI_stop</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a73be157de50174a37f0f7be84b87d279">AI_clearBufferStatus</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#a67c35e7933a2ac0470747cfdab6aaf01">AI_close</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a18d43e720352cc5e42a3872c98e83e49">AI_open</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#a062289c656185423ff95116470959bb5">AI_readBufferStatus</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#aad229b6d5002dc9c5d6d3c33df7bec28">AI_readOnDemand</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#a7c9f04209297ad0c3ec3b45b93d5e5e9">AI_readStreaming</a>(int port, int num_samples, int delay)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a79774615c0f354a93981449c539fa0b9">AI_setMode</a>(int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#af137cd724d3383bdce6c3621f0e13c46">AI_setNumSamples</a>(int port, int sample_points, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#a0cb5badd36c86fda38d7c89acf7a9efb">AI_setSamplingRate</a>(int port, double sampling_rate, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_a_i_module.html#a65db912e023d3b5e028603933ed3b9af">AI_start</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_i_module.html#ae541ff781ef4e966c4bff614c9c828a2">AI_stop</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_i_module.html">IAIModule</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

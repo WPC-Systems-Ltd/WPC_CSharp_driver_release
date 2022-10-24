@@ -1,23 +1,4 @@
 var searchData=
 [
-  ['i2c_5fclose',['I2C_close',['../interface_i_i2_c_module.html#a30598f9f162476700d4db83c1c67aa25',1,'II2CModule']]],
-  ['i2c_5fopen',['I2C_open',['../interface_i_i2_c_module.html#ae1ab34e00ebc6251fbb198166425fa31',1,'II2CModule']]],
-  ['i2c_5fread',['I2C_read',['../interface_i_i2_c_module.html#aaeb47c3325d922239692874595fad35e',1,'II2CModule']]],
-  ['i2c_5freset',['I2C_reset',['../interface_i_i2_c_module.html#a6c0c9c2e5b1c8d46ff8f5471291f09ce',1,'II2CModule']]],
-  ['i2c_5fsetaddresssize',['I2C_setAddressSize',['../interface_i_i2_c_module.html#a25159747b1a568079af5ff9fc2f80dfa',1,'II2CModule']]],
-  ['i2c_5fsetclockrate',['I2C_setClockRate',['../interface_i_i2_c_module.html#abc3fa5dbc5972018244e977a1e547c9a',1,'II2CModule']]],
-  ['i2c_5fwrite',['I2C_write',['../interface_i_i2_c_module.html#acfe0eda0ecd44072d3a41b93921f77fd',1,'II2CModule']]],
-  ['iaimodule',['IAIModule',['../interface_i_a_i_module.html',1,'']]],
-  ['iaomodule',['IAOModule',['../interface_i_a_o_module.html',1,'']]],
-  ['ibcstdevice',['IBcstDevice',['../interface_i_bcst_device.html',1,'']]],
-  ['ibcstmodule',['IBcstModule',['../interface_i_bcst_module.html',1,'']]],
-  ['icanmodule',['ICANModule',['../interface_i_c_a_n_module.html',1,'']]],
-  ['idiomodule',['IDIOModule',['../interface_i_d_i_o_module.html',1,'']]],
-  ['ii2cmodule',['II2CModule',['../interface_i_i2_c_module.html',1,'']]],
-  ['ispimodule',['ISPIModule',['../interface_i_s_p_i_module.html',1,'']]],
-  ['isystemmodule',['ISystemModule',['../interface_i_system_module.html',1,'']]],
-  ['ithermomodule',['IThermoModule',['../interface_i_thermo_module.html',1,'']]],
-  ['iuartmodule',['IUARTModule',['../interface_i_u_a_r_t_module.html',1,'']]],
-  ['iwebdevice',['IWebDevice',['../interface_i_web_device.html',1,'']]],
-  ['iwifisystemnodule',['IWifiSystemNodule',['../interface_i_wifi_system_nodule.html',1,'']]]
+  ['net_5fmodule',['net_module',['../class_wifi_d_a_q_e3_a.html#ade50754567e388729d176316214e806e',1,'WifiDAQE3A']]]
 ];

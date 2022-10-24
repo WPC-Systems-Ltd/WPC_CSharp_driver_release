@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('interface_i_a_o_module.html','');});
 
 <p>This is the complete list of members for <a class="el" href="interface_i_a_o_module.html">IAOModule</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_o_module.html#a98f336f633df5f698abc5176de4f78de">AO_close</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_a_o_module.html#a8cbc9f52a72354974a5a8519142290c4">AO_getValues</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_o_module.html#a3f3ddedd4d0ac31bd8f95c97aacaa065">AO_open</a>(byte port, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="interface_i_a_o_module.html#ab0d994eb3308b75a1d883237019178b6">AO_writeAllChannels</a>(byte port, List&lt; float &gt; AO_value, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_o_module.html#a4d45dd2c42ef5083fa2b9353593e6684">AO_writeOneChannel</a>(byte port, byte channel, float AO_value, int timeout=100)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_o_module.html#a3791d8143dd521dc20ee8951921a3819">AO_close</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_a_o_module.html#a0a7164a722e61f5dc676c4a61e5a2f7f">AO_getValues</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_o_module.html#a0850046a34596cd17196b1940fb0efb0">AO_open</a>(int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="interface_i_a_o_module.html#a0393e2891fad0d6dca75d29ae9004e43">AO_writeAllChannels</a>(int port, List&lt; double &gt; AO_value, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="interface_i_a_o_module.html#aaf525d954d507664fc7d97eb1f32ca3a">AO_writeOneChannel</a>(int port, int channel, double AO_value, int timeout=PacketConstants.PACKET_TIMEOUT)</td><td class="entry"><a class="el" href="interface_i_a_o_module.html">IAOModule</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.0.8</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -110,10 +110,6 @@ $(document).ready(function(){initNavTree('class_wifi_d_a_q_e3_a.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4f0a51758a8823a8110757f3ba2c4a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab4f0a51758a8823a8110757f3ba2c4a9">WifiDAQE3A</a> ()</td></tr>
 <tr class="separator:ab4f0a51758a8823a8110757f3ba2c4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0919d2d35b2d7ec6f4ced81564af3ffd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a0919d2d35b2d7ec6f4ced81564af3ffd">getDriverVersion</a> ()</td></tr>
-<tr class="separator:a0919d2d35b2d7ec6f4ced81564af3ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4504931ff6bfca9e14a3e9733d683d57"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a4504931ff6bfca9e14a3e9733d683d57">getDriverName</a> ()</td></tr>
-<tr class="separator:a4504931ff6bfca9e14a3e9733d683d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37c1cb2989fcd6ccc45e8f05c9a59313"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a37c1cb2989fcd6ccc45e8f05c9a59313">connect</a> (string ip_addr)</td></tr>
 <tr class="separator:a37c1cb2989fcd6ccc45e8f05c9a59313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05cd0d93e5aa89b15f5ed15579091be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab05cd0d93e5aa89b15f5ed15579091be">disconnect</a> ()</td></tr>
@@ -124,63 +120,77 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8a0df8f29f7c9dae887027ba94efc57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8905dcacb8fd7522a1e012467a5a3981"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a8905dcacb8fd7522a1e012467a5a3981">Sys_getRTC</a> (int timeout=100)</td></tr>
 <tr class="separator:a8905dcacb8fd7522a1e012467a5a3981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af81e77028f3c8be90ed8617f7326ae83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#af81e77028f3c8be90ed8617f7326ae83">Sys_setRTC</a> (int year, byte month, byte day, byte hour, byte minute, byte second, int timeout=100)</td></tr>
-<tr class="separator:af81e77028f3c8be90ed8617f7326ae83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9362a148b5ea39ce71448b72d9e31ae0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a9362a148b5ea39ce71448b72d9e31ae0">Sys_setRTC</a> (int year, byte month, byte day, byte hour, byte minute, byte second, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a9362a148b5ea39ce71448b72d9e31ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3743e208f6b532151eaabd451de965b6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a3743e208f6b532151eaabd451de965b6">Sys_getSerialNumber</a> (int timeout=100)</td></tr>
 <tr class="separator:a3743e208f6b532151eaabd451de965b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6186fbd8c636d182a4e9bf0722f19c09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a6186fbd8c636d182a4e9bf0722f19c09">Sys_reboot</a> (int timeout=100)</td></tr>
 <tr class="separator:a6186fbd8c636d182a4e9bf0722f19c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff4dad8931793fb1c7e2c865120f3276"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aff4dad8931793fb1c7e2c865120f3276">Sys_rebootOnBootloader</a> (int timeout=100)</td></tr>
 <tr class="separator:aff4dad8931793fb1c7e2c865120f3276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d5e0eea4bbe0b546bf5f746dbde2234"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a4d5e0eea4bbe0b546bf5f746dbde2234">Sys_getIPAddrAndSubmask</a> (int timeout=100)</td></tr>
-<tr class="separator:a4d5e0eea4bbe0b546bf5f746dbde2234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a275d754adcf70fbb8679961c9363d262"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a275d754adcf70fbb8679961c9363d262">Sys_setIPAddrAndSubmask</a> (string ip_addr, string subnet_mask, int timeout=100)</td></tr>
-<tr class="separator:a275d754adcf70fbb8679961c9363d262"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8782715a43c3d9348a461d9081ff1dbb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a8782715a43c3d9348a461d9081ff1dbb">Sys_getMACAddr</a> (int timeout=100)</td></tr>
-<tr class="separator:a8782715a43c3d9348a461d9081ff1dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d35a825af39ac9ca27fecfdb33872fb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a6d35a825af39ac9ca27fecfdb33872fb">Sys_getGateway</a> (int timeout=100)</td></tr>
-<tr class="separator:a6d35a825af39ac9ca27fecfdb33872fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f577c9bb401c0cd311e1944a939be6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a2f577c9bb401c0cd311e1944a939be6f">Wifi_readRSSI</a> (int timeout=100)</td></tr>
-<tr class="separator:a2f577c9bb401c0cd311e1944a939be6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab84cde6d7e1a52f81aecae0878743dbd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab84cde6d7e1a52f81aecae0878743dbd">Wifi_readBattery</a> (int timeout=100)</td></tr>
 <tr class="separator:ab84cde6d7e1a52f81aecae0878743dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3cec0dec8b04891773ea6fc5a5a23b7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#af3cec0dec8b04891773ea6fc5a5a23b7">Wifi_readThermo</a> (int timeout=100)</td></tr>
 <tr class="separator:af3cec0dec8b04891773ea6fc5a5a23b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2c80eb2faf72f8a780bf176b1d6c635"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aa2c80eb2faf72f8a780bf176b1d6c635">Wifi_readAccleration</a> (int timeout=100)</td></tr>
 <tr class="separator:aa2c80eb2faf72f8a780bf176b1d6c635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5e0eea4bbe0b546bf5f746dbde2234"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a4d5e0eea4bbe0b546bf5f746dbde2234">Sys_getIPAddrAndSubmask</a> (int timeout=100)</td></tr>
+<tr class="separator:a4d5e0eea4bbe0b546bf5f746dbde2234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b6f04e1e176e66ee9c58e1ef7cd0b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a55b6f04e1e176e66ee9c58e1ef7cd0b4">Sys_setIPAddrAndSubmask</a> (string ip_addr, string subnet_mask, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a55b6f04e1e176e66ee9c58e1ef7cd0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8782715a43c3d9348a461d9081ff1dbb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a8782715a43c3d9348a461d9081ff1dbb">Sys_getMACAddr</a> (int timeout=100)</td></tr>
+<tr class="separator:a8782715a43c3d9348a461d9081ff1dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d35a825af39ac9ca27fecfdb33872fb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a6d35a825af39ac9ca27fecfdb33872fb">Sys_getGateway</a> (int timeout=100)</td></tr>
+<tr class="separator:a6d35a825af39ac9ca27fecfdb33872fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f577c9bb401c0cd311e1944a939be6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a2f577c9bb401c0cd311e1944a939be6f">Wifi_readRSSI</a> (int timeout=100)</td></tr>
+<tr class="separator:a2f577c9bb401c0cd311e1944a939be6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18abf3b53c3d865a3f3edd652fb1f490"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a18abf3b53c3d865a3f3edd652fb1f490">Wifi_getWifiConfiguration</a> (int timeout=100)</td></tr>
 <tr class="separator:a18abf3b53c3d865a3f3edd652fb1f490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bbd24d461cd82b04a18cb0c899cd1f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a0bbd24d461cd82b04a18cb0c899cd1f8">Wifi_getWifiBandwidth</a> (int timeout=100)</td></tr>
 <tr class="separator:a0bbd24d461cd82b04a18cb0c899cd1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab810045b28b7db2bb097774ede2779f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab810045b28b7db2bb097774ede2779f7">AI_open</a> (byte port, int timeout=100)</td></tr>
-<tr class="separator:ab810045b28b7db2bb097774ede2779f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a30aff8b76f2f44303e47b53bb0217"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a52a30aff8b76f2f44303e47b53bb0217">AI_close</a> (byte port, int timeout=100)</td></tr>
-<tr class="separator:a52a30aff8b76f2f44303e47b53bb0217"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69f4bba5c3d0bd80f608ca23a9e0b2d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a69f4bba5c3d0bd80f608ca23a9e0b2d8">AI_setSamplingRate</a> (byte port, float sampling_rate, int timeout=100)</td></tr>
-<tr class="separator:a69f4bba5c3d0bd80f608ca23a9e0b2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba846a0f5a3acd31487096c5d7fda86f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aba846a0f5a3acd31487096c5d7fda86f">AI_setMode</a> (byte port, byte mode, int timeout=100)</td></tr>
-<tr class="separator:aba846a0f5a3acd31487096c5d7fda86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad49ef7c4a0e126743b17762a96153b71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ad49ef7c4a0e126743b17762a96153b71">AI_setNumSamples</a> (byte port, uint sample_points, int timeout=100)</td></tr>
-<tr class="separator:ad49ef7c4a0e126743b17762a96153b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae646e633be4fb75b28806dd176fab13e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ae646e633be4fb75b28806dd176fab13e">AI_start</a> (byte port, int timeout=100)</td></tr>
-<tr class="separator:ae646e633be4fb75b28806dd176fab13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef22ffe935cfac7128d7bb2946d2e618"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aef22ffe935cfac7128d7bb2946d2e618">AI_stop</a> (byte port, int timeout=100)</td></tr>
-<tr class="separator:aef22ffe935cfac7128d7bb2946d2e618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9921e9f00866218938f28a9681cacc6e"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a9921e9f00866218938f28a9681cacc6e">AI_readBufferStatus</a> (byte port, int timeout=100)</td></tr>
-<tr class="separator:a9921e9f00866218938f28a9681cacc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ff83c1157da072fa5af978583992d19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a7ff83c1157da072fa5af978583992d19">AI_clearBufferStatus</a> (byte port, int timeout=100)</td></tr>
-<tr class="separator:a7ff83c1157da072fa5af978583992d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c359e99ff6a83b581665454d588426"><td class="memItemLeft" align="right" valign="top">List&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ad3c359e99ff6a83b581665454d588426">AI_readOnDemand</a> (byte port, int timeout=100)</td></tr>
-<tr class="separator:ad3c359e99ff6a83b581665454d588426"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb05bb97aa5eee4792e33bda865f2a82"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; float &gt; &gt;?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#adb05bb97aa5eee4792e33bda865f2a82">AI_readStreaming</a> (byte port, int num_of_samples, int delay)</td></tr>
-<tr class="separator:adb05bb97aa5eee4792e33bda865f2a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01df0c0d906cf15525b75de59f9b135"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ae01df0c0d906cf15525b75de59f9b135">AI_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:ae01df0c0d906cf15525b75de59f9b135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4ab79881a818af187ab4b54abe2ba7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aad4ab79881a818af187ab4b54abe2ba7">AI_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:aad4ab79881a818af187ab4b54abe2ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce1b8b058138216f9e9544e9926a0a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a6ce1b8b058138216f9e9544e9926a0a2">AI_setSamplingRate</a> (int port, double sampling_rate, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a6ce1b8b058138216f9e9544e9926a0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3e29f951ef3318f662afb853645582"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a0d3e29f951ef3318f662afb853645582">AI_setMode</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a0d3e29f951ef3318f662afb853645582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c682d51f06062c54ad32c60009c8fe1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a5c682d51f06062c54ad32c60009c8fe1">AI_setNumSamples</a> (int port, int sample_points, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a5c682d51f06062c54ad32c60009c8fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac022896d5481e14b21f379420f1b52a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ac022896d5481e14b21f379420f1b52a6">AI_start</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:ac022896d5481e14b21f379420f1b52a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1084e7b85d38118b58955db46e79c860"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a1084e7b85d38118b58955db46e79c860">AI_stop</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a1084e7b85d38118b58955db46e79c860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965bd644f6fd47774de3e7b64e42526c"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a965bd644f6fd47774de3e7b64e42526c">AI_readBufferStatus</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a965bd644f6fd47774de3e7b64e42526c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404c272ca133bf42332f10abb939d7a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a404c272ca133bf42332f10abb939d7a0">AI_clearBufferStatus</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a404c272ca133bf42332f10abb939d7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accdeb055a2673b573c372fac222575c0"><td class="memItemLeft" align="right" valign="top">List&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#accdeb055a2673b573c372fac222575c0">AI_readOnDemand</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:accdeb055a2673b573c372fac222575c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809badbf5ab8f0c5bbcf1972eac1e65d"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a809badbf5ab8f0c5bbcf1972eac1e65d">AI_readStreaming</a> (int port, int num_of_samples, int delay)</td></tr>
+<tr class="separator:a809badbf5ab8f0c5bbcf1972eac1e65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1a2808e03d0b9633ee7a917fac6b091c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a1a2808e03d0b9633ee7a917fac6b091c">AI_max_rate</a> = 10000</td></tr>
-<tr class="separator:a1a2808e03d0b9633ee7a917fac6b091c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d7b09acd9ef0ed86aad6d91f571bb2e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a1d7b09acd9ef0ed86aad6d91f571bb2e">AI_ratio</a> = (float)10.0 / (float)65535.0</td></tr>
-<tr class="separator:a1d7b09acd9ef0ed86aad6d91f571bb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46bd6efd8412a867f6ebdb1ad57826d0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a46bd6efd8412a867f6ebdb1ad57826d0">ai_max_rate</a> = 10000</td></tr>
+<tr class="separator:a46bd6efd8412a867f6ebdb1ad57826d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96f2985b4750410539f9f359c2b71d5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab96f2985b4750410539f9f359c2b71d5">ai_ratio</a> = (float)(10.0 / 65536.0)</td></tr>
+<tr class="separator:ab96f2985b4750410539f9f359c2b71d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d40524a673b59812f5d85e0fcc0fbbe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a7d40524a673b59812f5d85e0fcc0fbbe">ai_variable</a> = true</td></tr>
+<tr class="separator:a7d40524a673b59812f5d85e0fcc0fbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef9a72cdb48f748756e68cd3975b1941"><td class="memItemLeft" align="right" valign="top">WifiDevice&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aef9a72cdb48f748756e68cd3975b1941">wifi_device</a></td></tr>
+<tr class="separator:aef9a72cdb48f748756e68cd3975b1941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0706b93644999653048195e72d25319"><td class="memItemLeft" align="right" valign="top">SystemModule&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab0706b93644999653048195e72d25319">sys_module</a></td></tr>
+<tr class="separator:ab0706b93644999653048195e72d25319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d3d0b57ca9782be045de2b14d7feab"><td class="memItemLeft" align="right" valign="top">SystemAnalogModule&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a57d3d0b57ca9782be045de2b14d7feab">sysanl_module</a></td></tr>
+<tr class="separator:a57d3d0b57ca9782be045de2b14d7feab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade50754567e388729d176316214e806e"><td class="memItemLeft" align="right" valign="top">NetworkModule&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ade50754567e388729d176316214e806e">net_module</a></td></tr>
+<tr class="separator:ade50754567e388729d176316214e806e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9a296d60661ee7638a746a55072412"><td class="memItemLeft" align="right" valign="top">WifiModule&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a1a9a296d60661ee7638a746a55072412">wifi_module</a></td></tr>
+<tr class="separator:a1a9a296d60661ee7638a746a55072412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e917b6bba9025d17b900696c94e268e"><td class="memItemLeft" align="right" valign="top">AIModule&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a2e917b6bba9025d17b900696c94e268e">ai_module</a></td></tr>
+<tr class="separator:a2e917b6bba9025d17b900696c94e268e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab4f0a51758a8823a8110757f3ba2c4a9"></a>
@@ -209,8 +219,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7ff83c1157da072fa5af978583992d19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ff83c1157da072fa5af978583992d19">&#9670;&nbsp;</a></span>AI_clearBufferStatus()</h2>
+<a id="a404c272ca133bf42332f10abb939d7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404c272ca133bf42332f10abb939d7a0">&#9670;&nbsp;</a></span>AI_clearBufferStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,14 +231,14 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int WifiDAQE3A.AI_clearBufferStatus </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -254,8 +264,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a52a30aff8b76f2f44303e47b53bb0217"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52a30aff8b76f2f44303e47b53bb0217">&#9670;&nbsp;</a></span>AI_close()</h2>
+<a id="aad4ab79881a818af187ab4b54abe2ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4ab79881a818af187ab4b54abe2ba7">&#9670;&nbsp;</a></span>AI_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,14 +276,14 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int WifiDAQE3A.AI_close </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -299,8 +309,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab810045b28b7db2bb097774ede2779f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab810045b28b7db2bb097774ede2779f7">&#9670;&nbsp;</a></span>AI_open()</h2>
+<a id="ae01df0c0d906cf15525b75de59f9b135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae01df0c0d906cf15525b75de59f9b135">&#9670;&nbsp;</a></span>AI_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,14 +321,14 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int WifiDAQE3A.AI_open </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -344,8 +354,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9921e9f00866218938f28a9681cacc6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9921e9f00866218938f28a9681cacc6e">&#9670;&nbsp;</a></span>AI_readBufferStatus()</h2>
+<a id="a965bd644f6fd47774de3e7b64e42526c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965bd644f6fd47774de3e7b64e42526c">&#9670;&nbsp;</a></span>AI_readBufferStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,14 +366,14 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">List&lt;int&gt; WifiDAQE3A.AI_readBufferStatus </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -389,8 +399,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad3c359e99ff6a83b581665454d588426"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3c359e99ff6a83b581665454d588426">&#9670;&nbsp;</a></span>AI_readOnDemand()</h2>
+<a id="accdeb055a2673b573c372fac222575c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accdeb055a2673b573c372fac222575c0">&#9670;&nbsp;</a></span>AI_readOnDemand()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,16 +409,16 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;float&gt; WifiDAQE3A.AI_readOnDemand </td>
+          <td class="memname">List&lt;double&gt; WifiDAQE3A.AI_readOnDemand </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -434,8 +444,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="adb05bb97aa5eee4792e33bda865f2a82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb05bb97aa5eee4792e33bda865f2a82">&#9670;&nbsp;</a></span>AI_readStreaming()</h2>
+<a id="a809badbf5ab8f0c5bbcf1972eac1e65d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809badbf5ab8f0c5bbcf1972eac1e65d">&#9670;&nbsp;</a></span>AI_readStreaming()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -444,9 +454,9 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;List&lt;float&gt; &gt;? WifiDAQE3A.AI_readStreaming </td>
+          <td class="memname">List&lt;List&lt;double&gt; &gt; WifiDAQE3A.AI_readStreaming </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
@@ -477,7 +487,7 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
-    <tr><td class="paramname">num_of_samples</td><td>Amount of data to get from the function call.</td></tr>
+    <tr><td class="paramname">num_samples</td><td>Amount of data to get from the function call.</td></tr>
     <tr><td class="paramname">delay</td><td>Time delay (milisecond) before getting data.</td></tr>
   </table>
   </dd>
@@ -486,8 +496,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aba846a0f5a3acd31487096c5d7fda86f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba846a0f5a3acd31487096c5d7fda86f">&#9670;&nbsp;</a></span>AI_setMode()</h2>
+<a id="a0d3e29f951ef3318f662afb853645582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3e29f951ef3318f662afb853645582">&#9670;&nbsp;</a></span>AI_setMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -498,20 +508,20 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int WifiDAQE3A.AI_setMode </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>mode</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -538,8 +548,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad49ef7c4a0e126743b17762a96153b71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad49ef7c4a0e126743b17762a96153b71">&#9670;&nbsp;</a></span>AI_setNumSamples()</h2>
+<a id="a5c682d51f06062c54ad32c60009c8fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c682d51f06062c54ad32c60009c8fe1">&#9670;&nbsp;</a></span>AI_setNumSamples()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -550,20 +560,20 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int WifiDAQE3A.AI_setNumSamples </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>sample_points</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -590,8 +600,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a69f4bba5c3d0bd80f608ca23a9e0b2d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69f4bba5c3d0bd80f608ca23a9e0b2d8">&#9670;&nbsp;</a></span>AI_setSamplingRate()</h2>
+<a id="a6ce1b8b058138216f9e9544e9926a0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ce1b8b058138216f9e9544e9926a0a2">&#9670;&nbsp;</a></span>AI_setSamplingRate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -602,20 +612,20 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int WifiDAQE3A.AI_setSamplingRate </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>sampling_rate</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -642,8 +652,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae646e633be4fb75b28806dd176fab13e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae646e633be4fb75b28806dd176fab13e">&#9670;&nbsp;</a></span>AI_start()</h2>
+<a id="ac022896d5481e14b21f379420f1b52a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac022896d5481e14b21f379420f1b52a6">&#9670;&nbsp;</a></span>AI_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -654,14 +664,14 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int WifiDAQE3A.AI_start </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -687,8 +697,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aef22ffe935cfac7128d7bb2946d2e618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef22ffe935cfac7128d7bb2946d2e618">&#9670;&nbsp;</a></span>AI_stop()</h2>
+<a id="a1084e7b85d38118b58955db46e79c860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1084e7b85d38118b58955db46e79c860">&#9670;&nbsp;</a></span>AI_stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -699,14 +709,14 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int WifiDAQE3A.AI_stop </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -754,7 +764,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Close web device handle. </p>
+<p>Close network device handle. </p>
 
 </div>
 </div>
@@ -781,7 +791,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Connect to web device. </p>
+<p>Connect to network device. </p>
 <p>IP network address.</p>
 <dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
 
@@ -809,7 +819,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Disconnect web device. </p>
+<p>Disconnect network device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">IP</td><td>IP network address.</td></tr>
@@ -817,56 +827,6 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Disconnection status.</dd></dl>
-
-</div>
-</div>
-<a id="a4504931ff6bfca9e14a3e9733d683d57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4504931ff6bfca9e14a3e9733d683d57">&#9670;&nbsp;</a></span>getDriverName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string WifiDAQE3A.getDriverName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0919d2d35b2d7ec6f4ced81564af3ffd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0919d2d35b2d7ec6f4ced81564af3ffd">&#9670;&nbsp;</a></span>getDriverVersion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string WifiDAQE3A.getDriverVersion </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -927,14 +887,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get geteway from the connected web device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Network gateway. </dd></dl>
 
 </div>
 </div>
@@ -961,14 +913,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get IP address and subnet mask from the connected web device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>List of IP address and subnet mask. </dd></dl>
 
 </div>
 </div>
@@ -995,14 +939,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get MAC address from the connected web device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>MAC address. </dd></dl>
 
 </div>
 </div>
@@ -1142,8 +1078,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a275d754adcf70fbb8679961c9363d262"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a275d754adcf70fbb8679961c9363d262">&#9670;&nbsp;</a></span>Sys_setIPAddrAndSubmask()</h2>
+<a id="a55b6f04e1e176e66ee9c58e1ef7cd0b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b6f04e1e176e66ee9c58e1ef7cd0b4">&#9670;&nbsp;</a></span>Sys_setIPAddrAndSubmask()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1167,7 +1103,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1181,21 +1117,11 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set IP address and subnet mask to the connected web device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
-    <tr><td class="paramname">subnet_mask</td><td>Subnet mask.</td></tr>
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
-<a id="af81e77028f3c8be90ed8617f7326ae83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af81e77028f3c8be90ed8617f7326ae83">&#9670;&nbsp;</a></span>Sys_setRTC()</h2>
+<a id="a9362a148b5ea39ce71448b72d9e31ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9362a148b5ea39ce71448b72d9e31ae0">&#9670;&nbsp;</a></span>Sys_setRTC()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1243,7 +1169,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1471,32 +1397,138 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get temperature from thermal sensor if the Wifi device has one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Temperature in Celsius. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1a2808e03d0b9633ee7a917fac6b091c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a2808e03d0b9633ee7a917fac6b091c">&#9670;&nbsp;</a></span>AI_max_rate</h2>
+<a id="a46bd6efd8412a867f6ebdb1ad57826d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46bd6efd8412a867f6ebdb1ad57826d0">&#9670;&nbsp;</a></span>ai_max_rate</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float WifiDAQE3A.AI_max_rate = 10000</td>
+          <td class="memname">float WifiDAQE3A.ai_max_rate = 10000</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1d7b09acd9ef0ed86aad6d91f571bb2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d7b09acd9ef0ed86aad6d91f571bb2e">&#9670;&nbsp;</a></span>AI_ratio</h2>
+<a id="a2e917b6bba9025d17b900696c94e268e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e917b6bba9025d17b900696c94e268e">&#9670;&nbsp;</a></span>ai_module</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float WifiDAQE3A.AI_ratio = (float)10.0 / (float)65535.0</td>
+          <td class="memname">AIModule WifiDAQE3A.ai_module</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab96f2985b4750410539f9f359c2b71d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96f2985b4750410539f9f359c2b71d5">&#9670;&nbsp;</a></span>ai_ratio</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WifiDAQE3A.ai_ratio = (float)(10.0 / 65536.0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d40524a673b59812f5d85e0fcc0fbbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d40524a673b59812f5d85e0fcc0fbbe">&#9670;&nbsp;</a></span>ai_variable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WifiDAQE3A.ai_variable = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade50754567e388729d176316214e806e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade50754567e388729d176316214e806e">&#9670;&nbsp;</a></span>net_module</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NetworkModule WifiDAQE3A.net_module</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0706b93644999653048195e72d25319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0706b93644999653048195e72d25319">&#9670;&nbsp;</a></span>sys_module</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemModule WifiDAQE3A.sys_module</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57d3d0b57ca9782be045de2b14d7feab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d3d0b57ca9782be045de2b14d7feab">&#9670;&nbsp;</a></span>sysanl_module</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemAnalogModule WifiDAQE3A.sysanl_module</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef9a72cdb48f748756e68cd3975b1941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef9a72cdb48f748756e68cd3975b1941">&#9670;&nbsp;</a></span>wifi_device</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WifiDevice WifiDAQE3A.wifi_device</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a9a296d60661ee7638a746a55072412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9a296d60661ee7638a746a55072412">&#9670;&nbsp;</a></span>wifi_module</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WifiModule WifiDAQE3A.wifi_module</td>
         </tr>
       </table>
 </div><div class="memdoc">

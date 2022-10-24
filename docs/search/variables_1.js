@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deviceeth',['deviceEth',['../class_ethan_a.html#a43950349ccc31194af2c00a48cce57eb',1,'EthanA.deviceEth()'],['../class_ethan_d.html#ad91bc113dff50e11918cc4fb7995fd76',1,'EthanD.deviceEth()']]]
+  ['net_5fmodule',['net_module',['../class_wifi_d_a_q_e3_a.html#ade50754567e388729d176316214e806e',1,'WifiDAQE3A']]]
 ];

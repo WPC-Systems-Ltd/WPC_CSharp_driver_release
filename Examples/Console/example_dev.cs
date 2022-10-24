@@ -31,37 +31,37 @@ public class WPC_example_code
         switch (input_number)
         {
             case 10:
-                Console.WriteLine("You input 10, run example_AI_N_samples_once.cs");
+                Console.WriteLine("Get 10, run example_AI_N_samples_once.cs");
                 Console.WriteLine("");
                 example_AI_N_samples_once.Main();
                 break;
             case 11:
-                Console.WriteLine("You input 11, run example_AI_on_demand_in_loop.cs");
+                Console.WriteLine("Get 11, run example_AI_on_demand_in_loop.cs");
                 Console.WriteLine("");
                 example_AI_on_demand_in_loop.Main();
                 break;
             case 12:
-                Console.WriteLine("You input 12, run example_AI_on_demand_once.cs");
+                Console.WriteLine("Get 12, run example_AI_on_demand_once.cs");
                 Console.WriteLine("");
                 example_AI_on_demand_once.Main();
                 break;
             case 20:
-                Console.WriteLine("You choose 20, run example_DIO_loopback_pins.cs");
+                Console.WriteLine("Get 20, run example_DIO_loopback_pins.cs");
                 Console.WriteLine("");
                 example_DIO_loopback_pins.Main();
                 break;
             case 21:
-                Console.WriteLine("You choose 21, run example_DIO_loopback_port.cs");
+                Console.WriteLine("Get 21, run example_DIO_loopback_port.cs");
                 Console.WriteLine("");
                 example_DIO_loopback_port.Main();
                 break;
             case 30:
-                Console.WriteLine("You choose 30, run example_get_device_info.cs");
+                Console.WriteLine("Get 30, run example_get_device_info.cs");
                 Console.WriteLine("");
                 example_get_device_info.Main();
                 break;
             case 31:
-                Console.WriteLine("You choose 31, run example_find_all_devices.cs");
+                Console.WriteLine("Get 31, run example_find_all_devices.cs");
                 Console.WriteLine("");
                 example_find_all_devices.Main();
                 break;
