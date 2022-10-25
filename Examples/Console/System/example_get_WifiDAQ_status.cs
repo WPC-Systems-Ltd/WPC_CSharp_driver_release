@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class example_get_device_info
+class example_get_WifiDAQ_status
 {
     static public void Main()
     {
@@ -35,20 +35,20 @@ class example_get_device_info
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
 
-            // Get serial number & RTC Time
-            string serial_num = dev.Sys_getSerialNumber();
-            string RTC = dev.Sys_getRTC();
-            Console.WriteLine($"Serial number: {serial_num}"); 
-            Console.WriteLine($"RTC data time: {RTC}");
-             
-            // Get IP & submask
-            List<string> info = dev.Sys_getIPAddrAndSubmask();
-            Console.WriteLine($"IP: {info[0]}");
-            Console.WriteLine($"Submask: {info[1]}");
+            // Get RSSI, battery and thermo
 
-            // Get MAC
-            string mac = dev.Sys_getMACAddr();
-            Console.WriteLine($"MAC: {mac}");
+            int data1 = dev.Wifi_readRSSI();
+
+            int data2 = dev.Wifi_readBattery();
+
+            float data3 = dev.Wifi_readThermo();
+
+            Console.WriteLine($"RSSI: {data1} dBm");
+
+            Console.WriteLine($"Battery: {data2} mV");
+
+            Console.WriteLine($"Thermo: {data3} °C"); 
+ 
         }
         catch (Exception ex)
         {

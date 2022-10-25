@@ -10,11 +10,11 @@ class example_find_all_devices
     {
         Console.WriteLine("Start example code...");
 
-        // Create device handle
-        DeviceFinder dev = new DeviceFinder();
-
         // Get C# driver version
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+
+        // Create device handle
+        DeviceFinder dev = new DeviceFinder();
 
         // Connect to network device
         try

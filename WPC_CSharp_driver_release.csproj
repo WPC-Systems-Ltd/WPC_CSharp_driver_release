@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="hidlibrary" Version="3.3.40" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="WPC_CSharp_driver_source">
       <HintPath>WPC_CSharp_driver_source.dll</HintPath>
     </Reference>

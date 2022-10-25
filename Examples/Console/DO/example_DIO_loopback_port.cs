@@ -8,22 +8,17 @@ class example_DIO_loopback_port
 {
     static public void Main()
     {
-        // Create device handle
-        EthanD dev = new EthanD();
+        Console.WriteLine("Start example code...");
 
         // Get C# driver version
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
-        // Connect to network device
-        try
-        {
-            dev.connect("192.168.1.110");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex);
+        // Create device handle
+        USBDAQF1AD dev = new USBDAQF1AD();
 
-        }
+        // Connect to USB device
+        dev.connect("21JA1245");
+
         // Execute
         try
         {
@@ -42,7 +37,7 @@ class example_DIO_loopback_port
             Console.WriteLine($"DO_openPort status: {status}");
 
             // Set pin0, pin1 and pin2 to high, others to low
-            status = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 0, 0, 1, 1, 1 });
+            status = dev.DO_writePort(port_DO, new List<int> { 1, 0, 1, 0, 0, 0, 0, 0 });
             Console.WriteLine($"DO_writePort status: {status}");
 
             // Open all pins in port 1 with digital input
@@ -51,7 +46,7 @@ class example_DIO_loopback_port
             
             // Read all pins state in port 1
             List<int> pin_s = dev.DI_readPort(port_DI);
-            Console.WriteLine($"DI_readPort: {pin_s[0]},{pin_s[1]},{pin_s[2]},{pin_s[3]},{pin_s[4]},{pin_s[5]},{pin_s[6]},{pin_s[7]}");
+            Console.WriteLine($"DI_readPort: {pin_s[0]},{pin_s[1]},{pin_s[2]},{pin_s[3]},{pin_s[4]},{pin_s[5]}");
 
             // Close all pins in port 0 with digital output
             status = dev.DO_closePort(port_DO);

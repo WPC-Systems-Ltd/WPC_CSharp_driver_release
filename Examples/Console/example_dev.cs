@@ -15,6 +15,9 @@ public class WPC_example_code
         Console.WriteLine("example_AI_N_samples_once, please input 10");
         Console.WriteLine("example_AI_on_demand_in_loop, please input 11");
         Console.WriteLine("example_AI_on_demand_once, please input 12");
+        Console.WriteLine("example_AI_continuous, please input 13");
+        Console.WriteLine("example_AI_N_samples_in_loop, please input 14");
+        
         Console.WriteLine("");
         Console.WriteLine("For DO");
         Console.WriteLine("example_DIO_loopback_pins, please input 20");
@@ -23,6 +26,7 @@ public class WPC_example_code
         Console.WriteLine("For System");
         Console.WriteLine("example_get_device_info, please input 30");
         Console.WriteLine("example_find_all_devices, please input 31");
+        Console.WriteLine("example_get_WifiDAQ_status, please input 32");
         Console.WriteLine("");
         Console.WriteLine("Input number:  ");
 
@@ -45,6 +49,18 @@ public class WPC_example_code
                 Console.WriteLine("");
                 example_AI_on_demand_once.Main();
                 break;
+            case 13:
+                Console.WriteLine("Get 13, run example_AI_continuous.cs");
+                Console.WriteLine("");
+                example_AI_continuous.Main();
+                break;
+            case 14:
+                Console.WriteLine("Get 14, run example_AI_N_samples_in_loop.cs");
+                Console.WriteLine("");
+                example_AI_N_samples_in_loop.Main();
+                break;
+                 
+                
             case 20:
                 Console.WriteLine("Get 20, run example_DIO_loopback_pins.cs");
                 Console.WriteLine("");
@@ -65,6 +81,12 @@ public class WPC_example_code
                 Console.WriteLine("");
                 example_find_all_devices.Main();
                 break;
+            case 32:
+                Console.WriteLine("Get 32, run example_get_WifiDAQ_status.cs");
+                Console.WriteLine("");
+                example_get_WifiDAQ_status.Main();
+                break;
+
             default:
                 Console.WriteLine("Wrong index, we will use example_find_all_devices example code");
                 Console.WriteLine("");
