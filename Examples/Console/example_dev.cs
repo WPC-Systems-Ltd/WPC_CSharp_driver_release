@@ -22,6 +22,9 @@ public class WPC_example_code
         Console.WriteLine("For DO");
         Console.WriteLine("example_DIO_loopback_pins, please input 20");
         Console.WriteLine("example_DIO_loopback_port, please input 21");
+        Console.WriteLine("example_DO_blinky_pins, please input 22");
+        Console.WriteLine("example_DO_blinky_port, please input 23");
+        
         Console.WriteLine("");
         Console.WriteLine("For System");
         Console.WriteLine("example_get_device_info, please input 30");
@@ -71,6 +74,19 @@ public class WPC_example_code
                 Console.WriteLine("");
                 example_DIO_loopback_port.Main();
                 break;
+
+            case 22:
+                Console.WriteLine("Get 22, run example_DO_blinky_pins.cs");
+                Console.WriteLine("");
+                example_DO_blinky_pins.Main();
+                break;
+
+            case 23:
+                Console.WriteLine("Get 23, run example_DO_blinky_port.cs");
+                Console.WriteLine("");
+                example_DO_blinky_port.Main();
+                break;
+
             case 30:
                 Console.WriteLine("Get 30, run example_get_device_info.cs");
                 Console.WriteLine("");
