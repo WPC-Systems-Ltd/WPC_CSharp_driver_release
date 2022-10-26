@@ -4,6 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// DIO - example_DO_blinky_port.cs
+/// This example demonstrates how to write DO high or low in port from WPC-USB-DAQ-F1-AD.
+/// 
+/// First, it shows how to open DO in port.
+/// Second, each loop has different voltage output so it will look like blinking. 
+/// Last, close DO in port.
+/// 
+/// For other examples please check:
+///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// See README.md file to get detailed usage of this example.
+/// 
+/// Copyright(c) 2022 WPC Systems Ltd.
+/// All rights reserved.
+/// </summary>
+
+
 class example_DO_blinky_port
 {
     static public void Main()
@@ -26,38 +43,47 @@ class example_DO_blinky_port
         {
             // Parameters setting
             int status;
-            byte port_DO = 0; // For DO
-  
+            int port_DO = 0; 
+            List<int> DO_odd_state = new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 };
+            List<int> DO_even_state = new List<int> { 1, 0, 1, 0, 1, 0, 1, 0 };
+            
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open pin0, pin1, pin3 and pin4 in port 0 with digital output
+            // Open all pins in port 0 and set it to digital output.
             status = dev.DO_openPort(port_DO);
             Console.WriteLine($"DO_openPins status: {status}");
 
-            for (int i = 0; i < 160; i++)
+            // Toggle digital state for 30 times. Each times delay for 0.1 second
+            for (int i = 0; i < 30; i++)
             {
-                List<byte> u8_list = WPC_utilities.convertU16ToStateList((ushort)(i % 16));
-                List<int> i32_list = WPC_utilities.convertU8ToI32InList(u8_list);
-                status = dev.DO_writePort(port_DO, i32_list);
-                Console.WriteLine($"DO_writePort status: {status}");
-                Thread.Sleep(5);
-            }
-          
-            Thread.Sleep(1000);
+                if (i % 2 == 0)
+                {
+                    status = dev.DO_writePort(port_DO, DO_even_state);
+                }
+                else
+                {
+                    status = dev.DO_writePort(port_DO, DO_odd_state);
+                }
 
-            // Close pin0, pin1, pin3 and pin4 in port 0 with digital input 
+                Console.WriteLine($"DO_writePort status: {status}");
+                Thread.Sleep(100);// delay [ms]
+            }
+
+            // Wait for 1 sec
+            Thread.Sleep(1000); // delay [ms]
+
+            // Close all pins in port 0 with digital output
             status = dev.DO_closePort(port_DO);
             Console.WriteLine($"DO_closePort status: {status}");
-
-        
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex);
         }
+
         // Disconnect network device
         dev.disconnect();
 

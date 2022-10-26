@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 
 /// <summary>
-/// AI - example_AI_on_demand_once.cs
+/// AO - example_AO_write_all_channels.cs
 /// 
-/// This example demonstrates how to get AI data in on demand mode.
-/// Also, it gets AI data in once with 8 channels from WPC-USB-DAQ-F1-AD.
+/// This example demonstrates how to write AO in all channels from WPC-USB-DAQ-F1-AOD.
 /// 
-/// First, it shows how to open AI port.
-/// Second, read AI ondemand data.
-/// Last, close AI port.
+/// First, it shows how to open AO in port.
+/// Second, write all digital signals
+/// Last, close AO in port.
 /// 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
@@ -24,7 +23,8 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary>
 
-public class example_AI_on_demand_once
+
+class example_AO_write_all_channels
 {
     static public void Main()
     {
@@ -34,40 +34,38 @@ public class example_AI_on_demand_once
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        USBDAQF1AD dev = new USBDAQF1AD();
+        USBDAQF1AOD dev = new USBDAQF1AOD();
 
         // Connect to USB device
-        dev.connect("21JA1245");
+        dev.connect("21JA1439");
 
-        // Perform DAQ basic information 
+        // Execute
         try
         {
             // Parameters setting
             int status;
-            byte port = 0;
+            int port = 0;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open AI port to 0
-            status = dev.AI_open(port);
-            Console.WriteLine($"AI_open status: {status}");
+            // Open AO port0
+            status = dev.AO_open(port);
+            Console.WriteLine($"AO_open status: {status}");
 
-            // Set AI port to 0 and acquisition mode to on demand
-            status = dev.AI_setMode(port, WPC.AI_MODE_ON_DEMAND);
-            Console.WriteLine($"AI_setMode status: {status}");
+            // Set AO port to 0 and write data simultaneously
+            List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
+            status = dev.AO_writeAllChannels(port, AO_values);
+            Console.WriteLine($"AO_writeAllChannels status: {status}");
 
-            // Set AI port to 0 and data acquisition
-            List<double> sample = dev.AI_readOnDemand(port);
+            // Wait for 1 sec
+            Thread.Sleep(1000); // delay [ms]
 
-            // Read acquisition data
-            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
-
-            // Close AI port to 0
-            status = dev.AI_close(port);
-            Console.WriteLine($"AI_close status: {status}");
+            // Close AO port0
+            status = dev.AO_close(port);
+            Console.WriteLine($"AO_close status: {status}");
         }
         catch (Exception ex)
         {

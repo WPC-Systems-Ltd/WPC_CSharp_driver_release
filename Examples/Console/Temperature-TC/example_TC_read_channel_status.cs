@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 /// <summary>
-/// AI - example_AI_on_demand_once.cs
+/// Temperature - TC - example_RC_read_channel_status.cs
 /// 
-/// This example demonstrates how to get AI data in on demand mode.
-/// Also, it gets AI data in once with 8 channels from WPC-USB-DAQ-F1-AD.
+/// This example demonstrates how to get status from WPC-USB-DAQ-F1-TD.
 /// 
-/// First, it shows how to open AI port.
-/// Second, read AI ondemand data.
-/// Last, close AI port.
+/// First, it shows how to open thermal port
+/// Second, get status from channel 0 and channel 1
+/// Last, close thermal port.
 /// 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
@@ -24,50 +22,57 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary>
 
-public class example_AI_on_demand_once
+
+class example_TC_read_channel_status
 {
     static public void Main()
     {
+
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        USBDAQF1AD dev = new USBDAQF1AD();
+        USBDAQF1TD dev = new USBDAQF1TD();
 
         // Connect to USB device
-        dev.connect("21JA1245");
+        dev.connect("21JA1239");
 
-        // Perform DAQ basic information 
+
+        // Execute
         try
         {
             // Parameters setting
             int status;
-            byte port = 0;
+            int port = 1;
+            int channel_0 = 0;
+            int channel_1 = 1;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open AI port to 0
-            status = dev.AI_open(port);
-            Console.WriteLine($"AI_open status: {status}");
+            // Open thermo port1
+            status = dev.Thermal_open(port);
+            Console.WriteLine($"Thermal_open status: {status}");
 
-            // Set AI port to 0 and acquisition mode to on demand
-            status = dev.AI_setMode(port, WPC.AI_MODE_ON_DEMAND);
-            Console.WriteLine($"AI_setMode status: {status}");
 
-            // Set AI port to 0 and data acquisition
-            List<double> sample = dev.AI_readOnDemand(port);
+            // Set thermo port to 1 and get status in channel 0 
+            status = dev.Thermal_getStatus(port, channel_0);
+            Console.WriteLine($"Thermal_getStatus in chaannel 0: {status}");
 
-            // Read acquisition data
-            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+            // Wait for 0.1 sec
+            Thread.Sleep(100); // delay [ms]
 
-            // Close AI port to 0
-            status = dev.AI_close(port);
-            Console.WriteLine($"AI_close status: {status}");
+            // Set thermo port to 1 and get status in channel 1 
+            status = dev.Thermal_getStatus(port, channel_1);
+            Console.WriteLine($"Thermal_getStatus in chaannel 1: {status}");
+
+            // Close thermo port1
+            status = dev.Thermal_close(port);
+            Console.WriteLine($"Thermal_close status: {status}");
         }
         catch (Exception ex)
         {

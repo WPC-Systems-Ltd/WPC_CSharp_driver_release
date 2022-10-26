@@ -4,6 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// System - example_get_device_info.cs
+/// 
+/// This example demonstrates how to get hardware & network information from WPC-Wifi-DAQ-E3-A.
+/// 
+/// First, get hardware information such as firmware model & version & serial number.
+/// Last, get network information such as IP & submask & mac.
+/// 
+/// For other examples please check:
+///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// See README.md file to get detailed usage of this example.
+/// 
+/// Copyright(c) 2022 WPC Systems Ltd.
+/// All rights reserved.
+/// </summary>
+
+
 class example_get_device_info
 {
     static public void Main()

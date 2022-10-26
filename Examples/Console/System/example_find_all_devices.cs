@@ -4,6 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// System - example_find_all_devices.cs 
+/// 
+/// This example demonstrates how to find all available Wifi or ethernet device. 
+/// 
+/// For other examples please check:
+///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// 
+/// See README.md file to get detailed usage of this example.
+/// 
+/// Copyright(c) 2022 WPC Systems Ltd.
+/// All rights reserved.
+/// </summary>
+
+
 class example_find_all_devices
 {
     static public void Main()

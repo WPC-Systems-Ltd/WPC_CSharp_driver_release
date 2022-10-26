@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 /// <summary>
-/// AI - example_AI_on_demand_once.cs
+/// Temperature - RTD - example_RTD_read_channel_data.cs
 /// 
-/// This example demonstrates how to get AI data in on demand mode.
-/// Also, it gets AI data in once with 8 channels from WPC-USB-DAQ-F1-AD.
+/// This example demonstrates how to read RTD data in two channels from WPC-USB-DAQ-F1-RD.
 /// 
-/// First, it shows how to open AI port.
-/// Second, read AI ondemand data.
-/// Last, close AI port.
+/// First, it shows how to open thermal port
+/// Second, read channel 0 and channel 1 RTD data
+/// Last, close thermal port.
 /// 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
@@ -24,50 +22,57 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary>
 
-public class example_AI_on_demand_once
+
+class example_RTD_read_channel_data
 {
     static public void Main()
     {
+
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        USBDAQF1AD dev = new USBDAQF1AD();
+        USBDAQF1RD dev = new USBDAQF1RD();
 
         // Connect to USB device
-        dev.connect("21JA1245");
+        dev.connect("21JA1385");
 
-        // Perform DAQ basic information 
+
+        // Execute
         try
         {
             // Parameters setting
             int status;
-            byte port = 0;
+            float data;
+            int port = 1;
+            int channel_0 = 0;
+            int channel_1 = 1;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open AI port to 0
-            status = dev.AI_open(port);
-            Console.WriteLine($"AI_open status: {status}");
+            // Open RTD port1
+            status = dev.Thermal_open(port);
+            Console.WriteLine($"Thermal_open status: {status}");
 
-            // Set AI port to 0 and acquisition mode to on demand
-            status = dev.AI_setMode(port, WPC.AI_MODE_ON_DEMAND);
-            Console.WriteLine($"AI_setMode status: {status}");
+            // Wait for 0.1 sec
+            Thread.Sleep(100); // delay [ms]
 
-            // Set AI port to 0 and data acquisition
-            List<double> sample = dev.AI_readOnDemand(port);
+            // Set RTD port to 1 and read RTD in channel 0
+            data = dev.Thermal_readSensor(port, channel_0);
+            Console.WriteLine($"Read channel 0 data: {data} °C ");
 
-            // Read acquisition data
-            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+            // Set RTD port to 1 and read RTD in channel 1
+            data = dev.Thermal_readSensor(port, channel_1);
+            Console.WriteLine($"Read channel 1 data: {data} °C ");
 
-            // Close AI port to 0
-            status = dev.AI_close(port);
-            Console.WriteLine($"AI_close status: {status}");
+            // Close RTD port1
+            status = dev.Thermal_close(port);
+            Console.WriteLine($"Thermal_close status: {status}");
         }
         catch (Exception ex)
         {

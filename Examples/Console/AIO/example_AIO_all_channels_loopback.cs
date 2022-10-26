@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 /// <summary>
-/// AI - example_AI_N_samples_once.cs
+/// AIO - example_AIO_all_channels_loopback.cs
 /// 
-/// This example demonstrates how to get AI data in N samples mode.
-/// Also, it gets AI data in once with 8 channels from WPC-USB-DAQ-F1-AD.
+/// This example demonstrates how to write AIO loopback in all channels from WPC-USB-DAQ-F1-AOD.
+/// Use AO pins to send signals and use AI pins to receive signals on single device also called "loopback".
 /// 
-/// First, it shows how to open AI port and configure AI parameters.
-/// Second, read AI streaming data .
-/// Last, close AI port.
+/// First, it shows how to open AO and AI in port.
+/// Second, write all digital signals to AO and read AI ondemand data.
+/// Last, close AO and AI in port.
 /// 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
@@ -23,30 +24,29 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary>
 
-public class example_AI_N_samples_once
+
+class example_AIO_all_channels_loopback
 {
     static public void Main()
     {
-
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        USBDAQF1AD dev = new USBDAQF1AD();
+        USBDAQF1AOD dev = new USBDAQF1AOD();
 
         // Connect to USB device
-        dev.connect("21JA1245");
-         
+        dev.connect("21JA1439");
+
         // Execute
         try
         {
             // Parameters setting
             int status;
             int port = 0;
-            int samples = 50;
-            float sampling_rate = 1000;
+            List<double> sample;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -57,37 +57,40 @@ public class example_AI_N_samples_once
             status = dev.AI_open(port);
             Console.WriteLine($"AI_open status: {status}");
 
-            // Set AI port to 0 and acquisition mode to N-sample mode
-            status = dev.AI_setMode(port, WPC.AI_MODE_N_SAMPLE);
-            Console.WriteLine($"AI_setMode status: {status}");
+            // Open AO port0
+            status = dev.AO_open(port);
+            Console.WriteLine($"AO_open status: {status}");
 
-            // Set AI port to 0 and # of samples to 5 (pts)
-            status = dev.AI_setNumSamples(port, samples);
-            Console.WriteLine($"AI_setNumSamples status: {status}");
+            // Set AI port to 0 and data acquisition
+            sample = dev.AI_readOnDemand(port);
 
-            // Set AI port to 0 and sampling rate to 1k (Hz)
-            status = dev.AI_setSamplingRate(port, sampling_rate);
-            Console.WriteLine($"AI_setSamplingRate status: {status}");
-
-            // Set AI port to 0 and start acquisition
-            status = dev.AI_start(port);
-            Console.WriteLine($"AI_start status: {status}");
+            // Read acquisition data
+            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
+            // Set AO port to 0 and write data simultaneously
+            List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
+            status = dev.AO_writeAllChannels(port, AO_values);
+            Console.WriteLine($"AO_writeAllChannels status: {status}");
+
             // Set AI port to 0 and data acquisition
-            List<List<double>> streaming_list = dev.AI_readStreaming(port, samples, 10);
+            sample = dev.AI_readOnDemand(port);
 
             // Read acquisition data
-            foreach (List<double> sample in streaming_list)
-            {
-                Console.WriteLine($"data : {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
-            }
+            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+
+            // Wait for 1 sec
+            Thread.Sleep(1000); // delay [ms]
 
             // Close AI port to 0
             status = dev.AI_close(port);
             Console.WriteLine($"AI_close status: {status}");
+
+            // Close AO port0
+            status = dev.AO_close(port);
+            Console.WriteLine($"AO_close status: {status}");
         }
         catch (Exception ex)
         {
