@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.8</span>
+   &#160;<span id="projectnumber">0.0.9</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -107,19 +107,22 @@ $(document).ready(function(){initNavTree('interface_i_broadcast_module.html','')
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a92534cf4571b1331876166a3d8e4b102"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_broadcast_module.html#a92534cf4571b1331876166a3d8e4b102">Bcst_getDeviceInfo</a> ()</td></tr>
-<tr class="memdesc:a92534cf4571b1331876166a3d8e4b102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get device information with broadcast mode.  <a href="#a92534cf4571b1331876166a3d8e4b102">More...</a><br /></td></tr>
-<tr class="separator:a92534cf4571b1331876166a3d8e4b102"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d39031a927fa9c7ed8d1f115e391092"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_broadcast_module.html#a9d39031a927fa9c7ed8d1f115e391092">Bcst_checkMACAndSetIP</a> (string ip_addr, string mac_addr, string subnet_mask)</td></tr>
-<tr class="memdesc:a9d39031a927fa9c7ed8d1f115e391092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set IP with broadcast mode.  <a href="#a9d39031a927fa9c7ed8d1f115e391092">More...</a><br /></td></tr>
-<tr class="separator:a9d39031a927fa9c7ed8d1f115e391092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a963cf7d1a4066455cc1e9eb620ce230c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_broadcast_module.html#a963cf7d1a4066455cc1e9eb620ce230c">Bcst_checkMACAndReboot</a> (string mac_addr)</td></tr>
-<tr class="memdesc:a963cf7d1a4066455cc1e9eb620ce230c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reboot device with broadcast mode.  <a href="#a963cf7d1a4066455cc1e9eb620ce230c">More...</a><br /></td></tr>
-<tr class="separator:a963cf7d1a4066455cc1e9eb620ce230c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e788c8efe5f20719547ceb3e15624a9"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_broadcast_module.html#a4e788c8efe5f20719547ceb3e15624a9">Bcst_enumerateUSBDevices</a> ()</td></tr>
+<tr class="memdesc:a4e788c8efe5f20719547ceb3e15624a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all USB devices  <a href="#a4e788c8efe5f20719547ceb3e15624a9">More...</a><br /></td></tr>
+<tr class="separator:a4e788c8efe5f20719547ceb3e15624a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e3160eaf4980f3b5812791f189f050"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_broadcast_module.html#ad5e3160eaf4980f3b5812791f189f050">Bcst_enumerateNetworkDevices</a> (int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:ad5e3160eaf4980f3b5812791f189f050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get device information with broadcast mode.  <a href="#ad5e3160eaf4980f3b5812791f189f050">More...</a><br /></td></tr>
+<tr class="separator:ad5e3160eaf4980f3b5812791f189f050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97653d056d5d1720b2b5e35d24c7d221"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_broadcast_module.html#a97653d056d5d1720b2b5e35d24c7d221">Bcst_checkMACAndSetIP</a> (string ip_addr, string mac_addr, string subnet_mask, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a97653d056d5d1720b2b5e35d24c7d221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set IP with broadcast mode.  <a href="#a97653d056d5d1720b2b5e35d24c7d221">More...</a><br /></td></tr>
+<tr class="separator:a97653d056d5d1720b2b5e35d24c7d221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01e6981f123638786dabe00a69ba011"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_broadcast_module.html#ab01e6981f123638786dabe00a69ba011">Bcst_checkMACAndReboot</a> (string mac_addr, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:ab01e6981f123638786dabe00a69ba011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reboot device with broadcast mode.  <a href="#ab01e6981f123638786dabe00a69ba011">More...</a><br /></td></tr>
+<tr class="separator:ab01e6981f123638786dabe00a69ba011"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a963cf7d1a4066455cc1e9eb620ce230c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a963cf7d1a4066455cc1e9eb620ce230c">&#9670;&nbsp;</a></span>Bcst_checkMACAndReboot()</h2>
+<a id="ab01e6981f123638786dabe00a69ba011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01e6981f123638786dabe00a69ba011">&#9670;&nbsp;</a></span>Bcst_checkMACAndReboot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,8 +131,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">int IBroadcastModule.Bcst_checkMACAndReboot </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>mac_addr</em></td><td>)</td>
+          <td class="paramname"><em>mac_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -145,8 +158,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d39031a927fa9c7ed8d1f115e391092"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d39031a927fa9c7ed8d1f115e391092">&#9670;&nbsp;</a></span>Bcst_checkMACAndSetIP()</h2>
+<a id="a97653d056d5d1720b2b5e35d24c7d221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97653d056d5d1720b2b5e35d24c7d221">&#9670;&nbsp;</a></span>Bcst_checkMACAndSetIP()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +180,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>subnet_mask</em>&#160;</td>
+          <td class="paramname"><em>subnet_mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -190,16 +209,17 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a92534cf4571b1331876166a3d8e4b102"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92534cf4571b1331876166a3d8e4b102">&#9670;&nbsp;</a></span>Bcst_getDeviceInfo()</h2>
+<a id="ad5e3160eaf4980f3b5812791f189f050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e3160eaf4980f3b5812791f189f050">&#9670;&nbsp;</a></span>Bcst_enumerateNetworkDevices()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;List&lt;string&gt; &gt; IBroadcastModule.Bcst_getDeviceInfo </td>
+          <td class="memname">List&lt;List&lt;string&gt; &gt; IBroadcastModule.Bcst_enumerateNetworkDevices </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -207,6 +227,26 @@ Public Member Functions</h2></td></tr>
 
 <p>Get device information with broadcast mode. </p>
 <dl class="section return"><dt>Returns</dt><dd>List of list of IP address, subnet mask, MAC address and firmware model. </dd></dl>
+
+</div>
+</div>
+<a id="a4e788c8efe5f20719547ceb3e15624a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e788c8efe5f20719547ceb3e15624a9">&#9670;&nbsp;</a></span>Bcst_enumerateUSBDevices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;List&lt;string&gt; &gt; IBroadcastModule.Bcst_enumerateUSBDevices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get all USB devices </p>
+<dl class="section return"><dt>Returns</dt><dd>List of list of serial number &amp; product name. </dd></dl>
 
 </div>
 </div>

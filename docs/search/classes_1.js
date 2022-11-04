@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['wifidaqe3a',['WifiDAQE3A',['../class_wifi_d_a_q_e3_a.html',1,'']]]
+  ['ethana',['EthanA',['../class_ethan_a.html',1,'']]],
+  ['ethand',['EthanD',['../class_ethan_d.html',1,'']]]
 ];

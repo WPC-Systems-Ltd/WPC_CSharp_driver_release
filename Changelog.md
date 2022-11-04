@@ -7,6 +7,7 @@ v0.0.5 Date: 2022/10/19, Developer: Chunglee_people
 ### Added
 - Add example_dev with portal
 - Add Console-AI example code `example_AI_on_demand_in_loop`
+- Add example_AI_continuous.cs example_AI_N_samples_in_loop.cs example_get_WifiDAQ_status.cs
 
 ### Changed
 - Change WPC C# Version from 0.0.4 to 0.0.5

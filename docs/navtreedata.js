@@ -25,19 +25,30 @@ var NAVTREE =
 [
   [ "WPC CSharp driver", "index.html", [
     [ "WPC CSharp Driver Programming Guide", "index.html", [
-      [ "Overview", "index.html#autotoc_md0", null ],
-      [ "Examples", "index.html#autotoc_md1", null ],
-      [ "Driver Version", "index.html#autotoc_md2", null ],
-      [ "Products", "index.html#autotoc_md3", null ]
+      [ "Overview", "index.html#autotoc_md2", null ],
+      [ "Products", "index.html#autotoc_md3", null ],
+      [ "I/O Function Table", "index.html#autotoc_md4", null ]
     ] ],
-    [ "Example codes", "example.html", "example" ],
+    [ "Error Code Table", "autotoc_md0.html", null ],
+    [ "I/O Function Table", "autotoc_md1.html", null ],
+    [ "SPI Setting Table", "setting_s_p_i.html", [
+      [ "SPI Clock", "setting_s_p_i.html#settingSPIsection1", null ],
+      [ "SPI Mode", "setting_s_p_i.html#settingSPIsection2", null ],
+      [ "SPI Data Size", "setting_s_p_i.html#settingSPIsection3", null ],
+      [ "SPI Endianness", "setting_s_p_i.html#settingSPIsection4", null ]
+    ] ],
+    [ "This is Subsystem1 title", "subsystem1.html", [
+      [ "This is section1 title", "subsystem1.html#subsystem1section1", null ],
+      [ "This is section2 title", "subsystem1.html#subsystem1section2", [
+        [ "This is sub section1 title", "subsystem1.html#subsystem1subsection1", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ]
       ] ]
     ] ]
   ] ]
@@ -45,7 +56,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"class_u_s_b_d_a_q_f1_r_d.html#a0dc43d2720d5c127af4dd471342b7621"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

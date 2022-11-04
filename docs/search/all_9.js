@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['uart_5fclose',['UART_close',['../interface_i_u_a_r_t_module.html#a5373258903c955150fa16c8cf398cb6a',1,'IUARTModule']]],
-  ['uart_5fopen',['UART_open',['../interface_i_u_a_r_t_module.html#adf2079eca751724147202bd09131af3b',1,'IUARTModule']]],
-  ['uart_5fread',['UART_read',['../interface_i_u_a_r_t_module.html#a96c19ff2d8a0c2daa2e23050dbc71388',1,'IUARTModule']]],
-  ['uart_5freset',['UART_reset',['../interface_i_u_a_r_t_module.html#aa37a1be4aa8250bcda93a6e00ab7694b',1,'IUARTModule']]],
-  ['uart_5fsetbaudrate',['UART_setBaudRate',['../interface_i_u_a_r_t_module.html#a796c753a2008538ac827ecebbed5739f',1,'IUARTModule']]],
-  ['uart_5fsetdatabit',['UART_setDataBit',['../interface_i_u_a_r_t_module.html#a2bc8c1225be917dad102816be4b7bd27',1,'IUARTModule']]],
-  ['uart_5fsetnumstopbit',['UART_setNumStopBit',['../interface_i_u_a_r_t_module.html#aee21ac51f936fb51123dea9e95918a6a',1,'IUARTModule']]],
-  ['uart_5fsetparity',['UART_setParity',['../interface_i_u_a_r_t_module.html#a1a06f2a297683a479c9eb3b308944bb3',1,'IUARTModule']]],
-  ['uart_5fstopreading',['UART_stopReading',['../interface_i_u_a_r_t_module.html#a68686962464ae9fac867b89dad7bd5ba',1,'IUARTModule']]],
-  ['uart_5fwrite',['UART_write',['../interface_i_u_a_r_t_module.html#ae7ee06da43771ae360e54bdd1943a0d7',1,'IUARTModule']]]
+  ['wpc_20csharp_20driver_20programming_20guide',['WPC CSharp Driver Programming Guide',['../index.html',1,'']]],
+  ['wifi_5fgetwifibandwidth',['Wifi_getWifiBandwidth',['../class_wifi_d_a_q_e3_a.html#a0bbd24d461cd82b04a18cb0c899cd1f8',1,'WifiDAQE3A']]],
+  ['wifi_5fgetwificonfiguration',['Wifi_getWifiConfiguration',['../class_wifi_d_a_q_e3_a.html#a18abf3b53c3d865a3f3edd652fb1f490',1,'WifiDAQE3A']]],
+  ['wifi_5freadaccleration',['Wifi_readAccleration',['../class_wifi_d_a_q_e3_a.html#aa2c80eb2faf72f8a780bf176b1d6c635',1,'WifiDAQE3A']]],
+  ['wifi_5freadbattery',['Wifi_readBattery',['../class_wifi_d_a_q_e3_a.html#ab84cde6d7e1a52f81aecae0878743dbd',1,'WifiDAQE3A']]],
+  ['wifi_5freadrssi',['Wifi_readRSSI',['../class_wifi_d_a_q_e3_a.html#a2f577c9bb401c0cd311e1944a939be6f',1,'WifiDAQE3A']]],
+  ['wifi_5freadthermo',['Wifi_readThermo',['../class_wifi_d_a_q_e3_a.html#af3cec0dec8b04891773ea6fc5a5a23b7',1,'WifiDAQE3A']]],
+  ['wifi_5fsetwifibandwidth',['Wifi_setWifiBandwidth',['../class_wifi_d_a_q_e3_a.html#a2fb072383732aacea86c755e2ba32934',1,'WifiDAQE3A']]],
+  ['wifidaqe3a',['WifiDAQE3A',['../class_wifi_d_a_q_e3_a.html',1,'']]]
 ];

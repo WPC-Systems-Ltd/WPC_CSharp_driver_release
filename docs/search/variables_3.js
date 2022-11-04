@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['wifi_5fdevice',['wifi_device',['../class_wifi_d_a_q_e3_a.html#aef9a72cdb48f748756e68cd3975b1941',1,'WifiDAQE3A']]],
-  ['wifi_5fmodule',['wifi_module',['../class_wifi_d_a_q_e3_a.html#a1a9a296d60661ee7638a746a55072412',1,'WifiDAQE3A']]]
+  ['eth_5fdevice',['eth_device',['../class_ethan_a.html#a784cf4a8432bab7e56d98ada55ba0809',1,'EthanA.eth_device()'],['../class_ethan_d.html#a7672f794edf2ba9c595a341686dcd748',1,'EthanD.eth_device()']]]
 ];

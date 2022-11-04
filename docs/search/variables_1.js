@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['net_5fmodule',['net_module',['../class_wifi_d_a_q_e3_a.html#ade50754567e388729d176316214e806e',1,'WifiDAQE3A']]]
+  ['can_5fmodule',['can_module',['../class_u_s_b_d_a_q_f1_c_d.html#a6b45f30f984bf2f0900e14849761059a',1,'USBDAQF1CD']]]
 ];

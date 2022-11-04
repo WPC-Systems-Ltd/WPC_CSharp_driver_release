@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sys_5fmodule',['sys_module',['../class_wifi_d_a_q_e3_a.html#ab0706b93644999653048195e72d25319',1,'WifiDAQE3A']]],
-  ['sysanl_5fmodule',['sysanl_module',['../class_wifi_d_a_q_e3_a.html#a57d3d0b57ca9782be045de2b14d7feab',1,'WifiDAQE3A']]]
+  ['dio_5fmodule',['dio_module',['../class_ethan_d.html#a8cee3bcb20d2e9fed1f927006328d212',1,'EthanD.dio_module()'],['../class_u_s_b_d_a_q_f1_a_d.html#afbbcaf3fd2b00515e85dd1c0b4eb4805',1,'USBDAQF1AD.dio_module()'],['../class_u_s_b_d_a_q_f1_a_o_d.html#a5c990dad1be7d7ae371128a4b171e9e3',1,'USBDAQF1AOD.dio_module()'],['../class_u_s_b_d_a_q_f1_c_d.html#a7f2803700d4ec1b76a076005870a3eee',1,'USBDAQF1CD.dio_module()'],['../class_u_s_b_d_a_q_f1_d.html#a91e307a2b6adc6f282fe73357e83b61a',1,'USBDAQF1D.dio_module()'],['../class_u_s_b_d_a_q_f1_d_s_n_k.html#aafbcfed31449b437565ef8df121eaed7',1,'USBDAQF1DSNK.dio_module()'],['../class_u_s_b_d_a_q_f1_r_d.html#ae307b8653ff69c30757b5cf0df0e5b2e',1,'USBDAQF1RD.dio_module()'],['../class_u_s_b_d_a_q_f1_t_d.html#a46cb8696e96c93b3dc8441c7723d8805',1,'USBDAQF1TD.dio_module()']]]
 ];

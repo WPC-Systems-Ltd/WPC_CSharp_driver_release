@@ -1,6 +1,7 @@
 var interface_i_broadcast_module =
 [
-    [ "Bcst_checkMACAndReboot", "interface_i_broadcast_module.html#a963cf7d1a4066455cc1e9eb620ce230c", null ],
-    [ "Bcst_checkMACAndSetIP", "interface_i_broadcast_module.html#a9d39031a927fa9c7ed8d1f115e391092", null ],
-    [ "Bcst_getDeviceInfo", "interface_i_broadcast_module.html#a92534cf4571b1331876166a3d8e4b102", null ]
+    [ "Bcst_checkMACAndReboot", "interface_i_broadcast_module.html#ab01e6981f123638786dabe00a69ba011", null ],
+    [ "Bcst_checkMACAndSetIP", "interface_i_broadcast_module.html#a97653d056d5d1720b2b5e35d24c7d221", null ],
+    [ "Bcst_enumerateNetworkDevices", "interface_i_broadcast_module.html#ad5e3160eaf4980f3b5812791f189f050", null ],
+    [ "Bcst_enumerateUSBDevices", "interface_i_broadcast_module.html#a4e788c8efe5f20719547ceb3e15624a9", null ]
 ];

@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.8</span>
+   &#160;<span id="projectnumber">0.0.9</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -101,31 +101,75 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">WPC CSharp Driver Programming Guide </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md2"></a>
 Overview</h1>
-<p>WPC CSharp driver contains Application programming interfaces, APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.</p>
-<p>For more products information, please visit <a href="http://www.wpc.com.tw/">WPC-Systems-Ltd</a> official website.</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Examples</h1>
-<p>For getting started with console and GUI examples which are implemented by our driver APIs, please go check GitHub Examples.</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Driver Version</h1>
-<p>The latest version 0.0.5 was released in October 19, 2022.</p>
-<p>For the latest development, archived versions and code repository, please visit GitHub source code.</p>
+<p><b>WPC CSharp driver</b> contains APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.</p>
+<p>Some API functions in the package may not compatible with earlier versions of WPC DAQ firmware. To update device firmware to the latest version, please use WPC Device Manager and <a href="https://drive.google.com/file/d/1Uj6r65KhNxvuApiqrMkZp-NWyq-Eek-k/view">LabVIEW Run-time engine</a>. You can download WPC Device Manager by <a href="https://github.com/WPC-Systems-Ltd/WPC_Python_driver_release/releases/tag/v1.0.2">latest release</a> or visit <a href="http://www.wpc.com.tw/36039260092584721462-daq1.html">WPC Systems Ltd. official website</a>.</p>
+<blockquote class="doxtable">
+<p><b>Note</b></p>
+<p>Make sure the latest version of firmware is up to date with your products. </p>
+</blockquote>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"></th><th class="markdownTableHeadLeft">Link   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">WPC official site  </td><td class="markdownTableBodyLeft"><a href="http://www.wpc.com.tw/">http://www.wpc.com.tw/</a>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">User guide  </td><td class="markdownTableBodyLeft"><a href="https://wpc-systems-ltd.github.io/WPC_Python_driver_release/">https://wpc-systems-ltd.github.io/WPC_Python_driver_release/</a>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Example code  </td><td class="markdownTableBodyLeft"><a href="https://github.com/WPC-Systems-Ltd/WPC_Python_driver_release/tree/main/Examples">https://github.com/WPC-Systems-Ltd/WPC_Python_driver_release/tree/main/Examples</a>   </td></tr>
+</table>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Products</h1>
-<ul>
-<li>WPC-USB-DAQ-D</li>
-<li>WPC-USB-DAQ-AD</li>
-<li>WPC-USB-DAQ-D-SNK</li>
-<li>WPC-USB-DAQ-TD</li>
-<li>WPC-USB-DAQ-RD</li>
-<li>WPC-USB-DAQ-CD</li>
-<li>WPC-USB-DAQ-AOD</li>
-<li>WPC-Ethan-D</li>
-<li>WPC-Ethan-A</li>
-<li>WPC-WIFI-DAQ-E3-A </li>
+<p>Ethernet based DAQ card</p><ul>
+<li>Ethan-A</li>
+<li>Ethan-D</li>
 </ul>
+<p>USB interface DAQ card</p><ul>
+<li>USB-DAQ-F1-D (Digital)</li>
+<li>USB-DAQ-F1-DSNK (24V Digital)</li>
+<li>USB-DAQ-F1-AD (Digital + AI)</li>
+<li>USB-DAQ-F1-TD (Digital + Thermocouple)</li>
+<li>USB-DAQ-F1-RD (Digital + RTD)</li>
+<li>USB-DAQ-F1-CD (Digital + CAN)</li>
+<li>USB-DAQ-F1-AOD (Digital + AI + AO)</li>
+</ul>
+<p>Wifi based DAQ card</p><ul>
+<li>Wifi-DAQ-E3-A</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+I/O Function Table</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Model  </th><th class="markdownTableHeadCenter">AI  </th><th class="markdownTableHeadCenter">AO  </th><th class="markdownTableHeadCenter">DI  </th><th class="markdownTableHeadCenter">DO  </th><th class="markdownTableHeadCenter">CAN  </th><th class="markdownTableHeadCenter">UART  </th><th class="markdownTableHeadCenter">SPI  </th><th class="markdownTableHeadCenter">I2C  </th><th class="markdownTableHeadCenter">RTD  </th><th class="markdownTableHeadCenter">Thermocouple   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Ethan-A  </td><td class="markdownTableBodyCenter">0  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Ethan-D  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">1  </td><td class="markdownTableBodyCenter">0  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">USB-DAQ-F1-D  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">USB-DAQ-F1-DSNK  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">0, 1  </td><td class="markdownTableBodyCenter">2, 3  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">USB-DAQ-F1-AD  </td><td class="markdownTableBodyCenter">0  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">2  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">USB-DAQ-F1-TD  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">2  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">1   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">USB-DAQ-F1-RD  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">2  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">1  </td><td class="markdownTableBodyCenter">-   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">USB-DAQ-F1-CD  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">1  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">2  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">USB-DAQ-F1-AOD  </td><td class="markdownTableBodyCenter">0  </td><td class="markdownTableBodyCenter">0  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">0, 1, 2, 3  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">1, 2  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Wifi-DAQ-E3-A  </td><td class="markdownTableBodyCenter">1  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter">-   </td></tr>
+</table>
+<p>Take <code>USB-DAQ-F1-AOD</code> for example:</p><ul>
+<li>Port 0 is available for <code>AI</code></li>
+<li>Port 2 is available for <code>DI</code></li>
+<li>Ports 0 &amp; 1 are available for <code>DO</code></li>
+<li>Port 2 is available for <code>UART</code></li>
+</ul>
+<p><b>WPC Python driver release</b> is licensed under an MIT-style license see <a href="https://github.com/WPC-Systems-Ltd/WPC_Python_driver_release/blob/main/LICENSE">LICENSE</a>. Other incorporated projects may be licensed under different licenses. All licenses allow for non-commercial and commercial use. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

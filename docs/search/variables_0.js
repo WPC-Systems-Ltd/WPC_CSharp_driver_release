@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['ai_5fmax_5frate',['ai_max_rate',['../class_wifi_d_a_q_e3_a.html#a46bd6efd8412a867f6ebdb1ad57826d0',1,'WifiDAQE3A']]],
-  ['ai_5fmodule',['ai_module',['../class_wifi_d_a_q_e3_a.html#a2e917b6bba9025d17b900696c94e268e',1,'WifiDAQE3A']]],
-  ['ai_5fratio',['ai_ratio',['../class_wifi_d_a_q_e3_a.html#ab96f2985b4750410539f9f359c2b71d5',1,'WifiDAQE3A']]],
-  ['ai_5fvariable',['ai_variable',['../class_wifi_d_a_q_e3_a.html#a7d40524a673b59812f5d85e0fcc0fbbe',1,'WifiDAQE3A']]]
+  ['ai_5fmax_5frate',['ai_max_rate',['../class_ethan_a.html#a141585d5d52ac5c617f410b829c2084e',1,'EthanA.ai_max_rate()'],['../class_u_s_b_d_a_q_f1_a_d.html#a20ca56a07efab59b8ef501f924e26afc',1,'USBDAQF1AD.ai_max_rate()'],['../class_u_s_b_d_a_q_f1_a_o_d.html#a7c13a233a864a011f0948b27960acecf',1,'USBDAQF1AOD.ai_max_rate()'],['../class_wifi_d_a_q_e3_a.html#a46bd6efd8412a867f6ebdb1ad57826d0',1,'WifiDAQE3A.ai_max_rate()']]],
+  ['ai_5fmodule',['ai_module',['../class_ethan_a.html#a6f8e049a6eb2b357607f149ffee17f54',1,'EthanA.ai_module()'],['../class_u_s_b_d_a_q_f1_a_d.html#af18f92f34a1d7092fddb9c58210fc6c2',1,'USBDAQF1AD.ai_module()'],['../class_u_s_b_d_a_q_f1_a_o_d.html#a41c6b14e295e73df9a4928cb925b9997',1,'USBDAQF1AOD.ai_module()'],['../class_wifi_d_a_q_e3_a.html#a2e917b6bba9025d17b900696c94e268e',1,'WifiDAQE3A.ai_module()']]],
+  ['ai_5fratio',['ai_ratio',['../class_ethan_a.html#a25d72360ae725ec0915ec7bb96400f8f',1,'EthanA.ai_ratio()'],['../class_u_s_b_d_a_q_f1_a_d.html#acf3715e41c687d306bf854b259563ca5',1,'USBDAQF1AD.ai_ratio()'],['../class_u_s_b_d_a_q_f1_a_o_d.html#af1a48950de50bb76df7d4fe3855be44b',1,'USBDAQF1AOD.ai_ratio()'],['../class_wifi_d_a_q_e3_a.html#ab96f2985b4750410539f9f359c2b71d5',1,'WifiDAQE3A.ai_ratio()']]],
+  ['ai_5fvariable',['ai_variable',['../class_ethan_a.html#abe3b47a7d9c2e58174db768fd3a0de27',1,'EthanA.ai_variable()'],['../class_u_s_b_d_a_q_f1_a_d.html#a11b80a683076876107a56eaf8f4b862f',1,'USBDAQF1AD.ai_variable()'],['../class_u_s_b_d_a_q_f1_a_o_d.html#ac1324a4e860d12c11f8fda7f5ba91866',1,'USBDAQF1AOD.ai_variable()'],['../class_wifi_d_a_q_e3_a.html#a7d40524a673b59812f5d85e0fcc0fbbe',1,'WifiDAQE3A.ai_variable()']]],
+  ['ao_5fmodule',['ao_module',['../class_u_s_b_d_a_q_f1_a_o_d.html#adaa933bf17c2936ea5dbe8a4a159282c',1,'USBDAQF1AOD']]]
 ];

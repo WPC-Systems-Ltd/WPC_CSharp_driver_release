@@ -1,26 +1,4 @@
 var searchData=
 [
-  ['i2c_5fclose',['I2C_close',['../interface_i_i2_c_module.html#acc8c5727721388475bcbf898bd63226d',1,'II2CModule']]],
-  ['i2c_5fopen',['I2C_open',['../interface_i_i2_c_module.html#a731286ee9f539f60a95632d9bd8722f4',1,'II2CModule']]],
-  ['i2c_5fread',['I2C_read',['../interface_i_i2_c_module.html#ab915a35237010d2eb2e0e66746ea42e2',1,'II2CModule']]],
-  ['i2c_5freset',['I2C_reset',['../interface_i_i2_c_module.html#ad634a19777f7aa058cbdec760fe701f5',1,'II2CModule']]],
-  ['i2c_5fsetaddresssize',['I2C_setAddressSize',['../interface_i_i2_c_module.html#a998345e05bc9866e72ef9c6d2235cdfc',1,'II2CModule']]],
-  ['i2c_5fsetclockrate',['I2C_setClockRate',['../interface_i_i2_c_module.html#a3b1f31c549c80c6640bf11acacc5721d',1,'II2CModule']]],
-  ['i2c_5fwrite',['I2C_write',['../interface_i_i2_c_module.html#ac0c7c6bffc57c92b74d93a1ec7473f8c',1,'II2CModule']]],
-  ['iaimodule',['IAIModule',['../interface_i_a_i_module.html',1,'']]],
-  ['iaomodule',['IAOModule',['../interface_i_a_o_module.html',1,'']]],
-  ['ibroadcastdevice',['IBroadcastDevice',['../interface_i_broadcast_device.html',1,'']]],
-  ['ibroadcastmodule',['IBroadcastModule',['../interface_i_broadcast_module.html',1,'']]],
-  ['icanmodule',['ICANModule',['../interface_i_c_a_n_module.html',1,'']]],
-  ['idiomodule',['IDIOModule',['../interface_i_d_i_o_module.html',1,'']]],
-  ['ii2cmodule',['II2CModule',['../interface_i_i2_c_module.html',1,'']]],
-  ['inetworkdevice',['INetworkDevice',['../interface_i_network_device.html',1,'']]],
-  ['inetworkmodule',['INetworkModule',['../interface_i_network_module.html',1,'']]],
-  ['ispimodule',['ISPIModule',['../interface_i_s_p_i_module.html',1,'']]],
-  ['isystemanalogmodule',['ISystemAnalogModule',['../interface_i_system_analog_module.html',1,'']]],
-  ['isystemmodule',['ISystemModule',['../interface_i_system_module.html',1,'']]],
-  ['ithermalmodule',['IThermalModule',['../interface_i_thermal_module.html',1,'']]],
-  ['ithermocouplemodule',['IThermocoupleModule',['../interface_i_thermocouple_module.html',1,'']]],
-  ['iuartmodule',['IUARTModule',['../interface_i_u_a_r_t_module.html',1,'']]],
-  ['iwifimodule',['IWifiModule',['../interface_i_wifi_module.html',1,'']]]
+  ['i_2fo_20function_20table',['I/O Function Table',['../autotoc_md1.html',1,'']]]
 ];

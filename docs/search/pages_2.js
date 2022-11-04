@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wpc_20csharp_20driver_20programming_20guide_0',['WPC CSharp Driver Programming Guide',['../index.html',1,'']]]
+  ['spi_20setting_20table',['SPI Setting Table',['../setting_s_p_i.html',1,'']]]
 ];

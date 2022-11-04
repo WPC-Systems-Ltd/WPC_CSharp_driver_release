@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['bcst_5fcheckmacandreboot',['Bcst_checkMACAndReboot',['../interface_i_broadcast_module.html#a963cf7d1a4066455cc1e9eb620ce230c',1,'IBroadcastModule']]],
-  ['bcst_5fcheckmacandsetip',['Bcst_checkMACAndSetIP',['../interface_i_broadcast_module.html#a9d39031a927fa9c7ed8d1f115e391092',1,'IBroadcastModule']]],
-  ['bcst_5fgetdeviceinfo',['Bcst_getDeviceInfo',['../interface_i_broadcast_module.html#a92534cf4571b1331876166a3d8e4b102',1,'IBroadcastModule']]]
+  ['bcst_5fcheckmacandreboot',['Bcst_checkMACAndReboot',['../class_device_finder.html#a6eeaba354139752dae86a46c2a8e260e',1,'DeviceFinder']]],
+  ['bcst_5fcheckmacandsetip',['Bcst_checkMACAndSetIP',['../class_device_finder.html#aa47616ded81ca97c73115ac1ba92a4c1',1,'DeviceFinder']]],
+  ['bcst_5fenumeratenetworkdevices',['Bcst_enumerateNetworkDevices',['../class_device_finder.html#a7571f7418a2aa3f7ce20b13ad1857fb8',1,'DeviceFinder']]],
+  ['bcst_5fenumerateusbdevices',['Bcst_enumerateUSBDevices',['../class_device_finder.html#adcb169920a450c4415eeb74ce74f9897',1,'DeviceFinder']]]
 ];
