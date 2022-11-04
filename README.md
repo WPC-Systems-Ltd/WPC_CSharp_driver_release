@@ -1,17 +1,22 @@
 ## Overview
 
-**WPC CSharp driver** contains APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.
+**WPC CSharp driver** contains APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.  
 
-Please note, some API functions in the `pywpc` package may not compatible with earlier versions of WPC DAQ firmware. Make sure the latest version of firmware is up to date with your products. To update device firmware to the latest version, please use WPC Device Manager and [LabVIEW Run-time engine](https://drive.google.com/file/d/1Uj6r65KhNxvuApiqrMkZp-NWyq-Eek-k/view).
-You can download WPC Device Manager by [WPC Systems Ltd. official website](http://www.wpc.com.tw/36039260092584721462-daq1.html).
+Some API functions in the package may not compatible with earlier versions of WPC DAQ firmware. To update device firmware to the latest version, please use WPC Device Manager and [LabVIEW Run-time engine](https://drive.google.com/file/d/1Uj6r65KhNxvuApiqrMkZp-NWyq-Eek-k/view).
+You can download WPC Device Manager by visiting [WPC Systems Ltd. official website](http://www.wpc.com.tw/36039260092584721462-daq1.html).
 
-|                   |                 Link                                                                    |
-|:------------------|:----------------------------------------------------------------------------------------|
-| WPC official site | http://www.wpc.com.tw/                                                                  |
-| User guide        | https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/                            |
-| Example code      | https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples/Console |
+> **Note**  
+> Make sure the latest version of firmware is up to date with your products. 
+ 
 
-## Products
+|                   |                 Link                                                            |
+|:------------------|:--------------------------------------------------------------------------------|
+| WPC official site | http://www.wpc.com.tw/                                                          |
+| User guide        | https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/                    |
+| Example code      | https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples |
+
+ 
+# Products
 
 Ethernet based DAQ card
 - Ethan-A
@@ -29,7 +34,7 @@ USB interface DAQ card
 Wifi based DAQ card
 - Wifi-DAQ-E3-A
 
-## Port function table
+# I/O Function Table
 
 | Model           | AI  | AO | DI         | DO         | CAN | UART | SPI | I2C  | RTD | Thermocouple |
 |:----------------|:---:|:--:|:----------:|:----------:|:---:|:----:|:---:|:----:|:---:|:------------:|
@@ -50,8 +55,7 @@ Take `USB-DAQ-F1-AOD` for example:
 - Ports 0 & 1 are available for `DO`
 - Port 2 is available for `UART`
 
-## License
 
-**WPC CSharp driver** is licensed under an MIT-style license see
-[LICENSE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/LICENSE). Other incorporated projects may be licensed under different licenses. All
-licenses allow for non-commercial and commercial use.
+**WPC Python driver release** is licensed under an MIT-style license see
+[LICENSE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/LICENSE). Other incorporated projects may be licensed under different licenses.
+All licenses allow for non-commercial and commercial use.

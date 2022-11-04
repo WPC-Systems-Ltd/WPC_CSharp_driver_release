@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['this_20is_20subsystem1_20title',['This is Subsystem1 title',['../subsystem1.html',1,'']]],
   ['thermal_5fclose',['Thermal_close',['../class_u_s_b_d_a_q_f1_r_d.html#abf138e864267fb2505758e075349b333',1,'USBDAQF1RD.Thermal_close()'],['../class_u_s_b_d_a_q_f1_t_d.html#a5c33bbd40aa7ddc1416044913acc8a04',1,'USBDAQF1TD.Thermal_close()']]],
   ['thermal_5fgetstatus',['Thermal_getStatus',['../class_u_s_b_d_a_q_f1_r_d.html#ad923a496de69057c7d7606ba8651bbed',1,'USBDAQF1RD.Thermal_getStatus()'],['../class_u_s_b_d_a_q_f1_t_d.html#a7b32a20afb7134747518b914662a6f28',1,'USBDAQF1TD.Thermal_getStatus()']]],
   ['thermal_5fopen',['Thermal_open',['../class_u_s_b_d_a_q_f1_r_d.html#a0141e4976990cf40f79d975c8a2311a6',1,'USBDAQF1RD.Thermal_open()'],['../class_u_s_b_d_a_q_f1_t_d.html#af69cb702a822d3c8c9cdc1bc6e819945',1,'USBDAQF1TD.Thermal_open()']]],

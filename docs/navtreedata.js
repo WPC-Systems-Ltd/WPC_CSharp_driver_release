@@ -37,12 +37,6 @@ var NAVTREE =
       [ "SPI Data Size", "setting_s_p_i.html#settingSPIsection3", null ],
       [ "SPI Endianness", "setting_s_p_i.html#settingSPIsection4", null ]
     ] ],
-    [ "This is Subsystem1 title", "subsystem1.html", [
-      [ "This is section1 title", "subsystem1.html#subsystem1section1", null ],
-      [ "This is section2 title", "subsystem1.html#subsystem1section2", [
-        [ "This is sub section1 title", "subsystem1.html#subsystem1subsection1", null ]
-      ] ]
-    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
