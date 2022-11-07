@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 
 /// <summary>
-/// AO - example_AO_write_one_channel.cs
+/// @example AO_write_one_channel.cs
 /// 
-/// This example demonstrates how to write AO in specific channels from WPC-USB-DAQ-F1-AOD.
+/// This example demonstrates how to write AO in specific channels from USBDAQF1AOD.
 /// 
 /// First, it shows how to open AO in port.
+/// 
 /// Second, write digital signals in specific channels.
+/// 
 /// Last, close AO in port.
 /// 
 /// For other examples please check:
-/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
@@ -23,8 +25,7 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary>
 
-
-class example_AO_write_one_channel
+class WPC_AO_write_one_channel
 {
     static public void Main()
     {
@@ -51,30 +52,30 @@ class example_AO_write_one_channel
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open AO port0
+            // Open AO port
             status = dev.AO_open(port);
             Console.WriteLine($"AO_open status: {status}");
 
-            //Set AO port to 0 and write data 1.5(V) in channel 4
+            //Set AO port and write data 1.5(V) in channel 4
             status = dev.AO_writeOneChannel(port, 4, 1.5);
             Console.WriteLine($"AO_writeOneChanne status: {status}");
 
-            //Set AO port to 0 and write data 2.5(V) in channel 5
+            //Set AO port and write data 2.5(V) in channel 5
             status = dev.AO_writeOneChannel(port, 5, 2.5);
             Console.WriteLine($"AO_writeOneChanne status: {status}");
 
-            //Set AO port to 0 and write data 3.5(V) in channel 6
+            //Set AO port and write data 3.5(V) in channel 6
             status = dev.AO_writeOneChannel(port, 6, 3.5);
             Console.WriteLine($"AO_writeOneChanne status: {status}");
 
-            //Set AO port to 0 and write data 4.5(V) in channel 7
+            //Set AO port and write data 4.5(V) in channel 7
             status = dev.AO_writeOneChannel(port, 7, 4.5);
             Console.WriteLine($"AO_writeOneChanne status: {status}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
-            // Close AO port0
+            // Close AO port
             status = dev.AO_close(port);
             Console.WriteLine($"AO_close status: {status}");
         }
@@ -83,7 +84,7 @@ class example_AO_write_one_channel
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

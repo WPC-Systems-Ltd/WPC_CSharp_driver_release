@@ -5,25 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// Temperature - RTD - example_RTD_read_channel_status.cs
+/// @example TC_read_channel_status.cs
 /// 
-/// This example demonstrates how to get status in two channels from WPC-USB-DAQ-F1-RD.
+/// This example demonstrates how to get status from USBDAQF1TD.
 /// 
 /// First, it shows how to open thermal port
+/// 
 /// Second, get status from channel 0 and channel 1
+/// 
 /// Last, close thermal port.
 /// 
 /// For other examples please check:
-/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary>
-
-
-class example_RTD_read_channel_status
+/// </summary> 
+class WPC_TC_read_channel_status
 {
     static public void Main()
     {
@@ -34,10 +34,11 @@ class example_RTD_read_channel_status
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        USBDAQF1RD dev = new USBDAQF1RD();
+        USBDAQF1TD dev = new USBDAQF1TD();
 
         // Connect to USB device
-        dev.connect("21JA1385");
+        dev.connect("21JA1239");
+
 
         // Execute
         try
@@ -53,22 +54,23 @@ class example_RTD_read_channel_status
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open RTD port1
+            // Open thermo port
             status = dev.Thermal_open(port);
             Console.WriteLine($"Thermal_open status: {status}");
+
+
+            // Set thermo port and get status in channel 0 
+            status = dev.Thermal_getStatus(port, channel_0);
+            Console.WriteLine($"Thermal_getStatus in chaannel 0: {status}");
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
-            // Set RTD port to 1 and get status in channel 0
-            status = dev.Thermal_getStatus(port, channel_0);
-            Console.WriteLine($"Thermal_getStatus in chaannel 0: {status}");
-
-            // Set RTD port to 1 and get status in channel 1
+            // Set thermo port and get status in channel 1 
             status = dev.Thermal_getStatus(port, channel_1);
             Console.WriteLine($"Thermal_getStatus in chaannel 1: {status}");
 
-            // Close RTD port1
+            // Close thermo port
             status = dev.Thermal_close(port);
             Console.WriteLine($"Thermal_close status: {status}");
         }
@@ -77,7 +79,7 @@ class example_RTD_read_channel_status
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

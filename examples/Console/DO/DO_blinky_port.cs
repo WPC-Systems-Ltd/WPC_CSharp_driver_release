@@ -5,23 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// DIO - example_DO_blinky_port.cs
-/// This example demonstrates how to write DO high or low in port from WPC-USB-DAQ-F1-AD.
+/// @example DO_blinky_port.cs
+/// 
+/// This example demonstrates how to write DO high or low in port from USBDAQF1AD.
 /// 
 /// First, it shows how to open DO in port.
+/// 
 /// Second, each loop has different voltage output so it will look like blinking. 
+/// 
 /// Last, close DO in port.
 /// 
 /// For other examples please check:
-///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
 /// </summary>
 
-
-class example_DO_blinky_port
+class WPC_DO_blinky_port
 {
     static public void Main()
     {
@@ -34,7 +36,7 @@ class example_DO_blinky_port
         // Create device handle
         USBDAQF1AD dev = new USBDAQF1AD();
 
-        // Connect to USB device
+        // Connect to device
         dev.connect("21JA1245");
          
 
@@ -84,7 +86,7 @@ class example_DO_blinky_port
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

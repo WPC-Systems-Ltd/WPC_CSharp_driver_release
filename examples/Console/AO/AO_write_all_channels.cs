@@ -6,25 +6,26 @@ using System.Threading.Tasks;
 
 
 /// <summary>
-/// AO - example_AO_write_all_channels.cs
+/// @example AO_write_all_channels.cs
 /// 
-/// This example demonstrates how to write AO in all channels from WPC-USB-DAQ-F1-AOD.
+/// This example demonstrates how to write AO in all channels from USBDAQF1AOD.
 /// 
 /// First, it shows how to open AO in port.
+/// 
 /// Second, write all digital signals
+/// 
 /// Last, close AO in port.
 /// 
 /// For other examples please check:
-/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary>
+/// </summary> 
 
-
-class example_AO_write_all_channels
+class WPC_AO_write_all_channels
 {
     static public void Main()
     {
@@ -51,11 +52,11 @@ class example_AO_write_all_channels
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open AO port0
+            // Open AO port
             status = dev.AO_open(port);
             Console.WriteLine($"AO_open status: {status}");
 
-            // Set AO port to 0 and write data simultaneously
+            // Set AO port and write data simultaneously
             List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
             status = dev.AO_writeAllChannels(port, AO_values);
             Console.WriteLine($"AO_writeAllChannels status: {status}");
@@ -63,7 +64,7 @@ class example_AO_write_all_channels
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
-            // Close AO port0
+            // Close AO port
             status = dev.AO_close(port);
             Console.WriteLine($"AO_close status: {status}");
         }
@@ -72,7 +73,7 @@ class example_AO_write_all_channels
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

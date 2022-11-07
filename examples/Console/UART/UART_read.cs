@@ -5,25 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// UART - example_UART_read.cs
+/// @example UART_read.cs
 ///
-/// This example demonstrates how to read data from another device with UART interface from WPC-USB-DAQ-F1-TD.
+/// This example demonstrates how to read data from another device with UART interface from USBDAQF1TD.
 /// 
 /// First, it shows how to open UART port and configure UART parameters.
+/// 
 /// Second, read bytes from another device.
+/// 
 /// Last, close UART port.
 /// 
 /// For other examples please check:
-/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary>
-
-
-class example_UART_read
+/// </summary> 
+class WPC_UART_read
 {
     static public void Main()
     {
@@ -36,7 +36,7 @@ class example_UART_read
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
 
-        // Connect to USB device
+        // Connect to device
         dev.connect("21JA1239");
 
         // Execute
@@ -52,34 +52,34 @@ class example_UART_read
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open UART port2
+            // Open UART port
             status = dev.UART_open(UART_port);
             Console.WriteLine($"UART_open status: {status}");
 
-            // Set UART port to 2 and set baudrate to 9600
+            // Set UART port and set baudrate to 9600
             status = dev.UART_setBaudRate(UART_port, baudrate);
             Console.WriteLine($"UART_setBaudRate status: {status}");
 
-            // Set UART port to 2 and set data bit to 8-bit data
+            // Set UART port and set data bit to 8-bit data
             status = dev.UART_setDataBit(UART_port, WPC.UART_DATA_SIZE_8_BITS);
             Console.WriteLine($"UART_setDataBit status: {status}");
 
-            // Set UART port to 2 and set parity to None
+            // Set UART port and set parity to None
             status = dev.UART_setParity(UART_port, WPC.UART_PARITY_NONE);
             Console.WriteLine($"UART_setParity status: {status}");
 
-            // Set UART port to 2 and set stop bit to to 1 bit
+            // Set UART port and set stop bit to to 1 bit
             status = dev.UART_setNumStopBit(UART_port, WPC.UART_STOP_BIT_1);
             Console.WriteLine($"UART_setNumStopBit status: {status}");
 
             // Wait for 10 sec
             Thread.Sleep(10000); // delay [ms]
 
-            // Set UART port to 2 and read 20 bytes
+            // Set UART port and read 20 bytes
             List<byte> data  = dev.UART_read(UART_port, 20);
             WPC_utilities.printByteList(data);
  
-            // Close UART port2
+            // Close UART port
             status = dev.UART_close(UART_port);
             Console.WriteLine($"UART_close status: {status}");
 
@@ -89,7 +89,7 @@ class example_UART_read
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

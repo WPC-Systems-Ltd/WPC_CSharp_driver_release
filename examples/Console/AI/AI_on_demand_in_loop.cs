@@ -5,17 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// AI - example_AI_on_demand_in_loop.cs
+/// @example AI_on_demand_in_loop.cs
 /// 
 /// This example demonstrates how to get AI data in on demand mode.
-/// Also, it uses loop to get AI data with 3 seconds timeout with 8 channels from WPC-USB-DAQ-F1-AD.
+/// 
+/// Also, it uses loop to get AI data with 3 seconds timeout with 8 channels from USBDAQF1AOD.
 /// 
 /// First, it shows how to open AI port and configure AI parameters.
+/// 
 /// Second, read AI ondemand data.
+/// 
 /// Last, close AI port.
 /// 
 /// For other examples please check:
-/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
@@ -23,9 +26,9 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary>
 
-class example_AI_on_demand_in_loop
+class WPC_AI_on_demand_in_loop
 { 
-    static void loop_func(USBDAQF1AD handle, int port, int delay , int timeout =3) 
+    static void loop_func(USBDAQF1AOD handle, int port, int delay , int timeout =3) 
     {
         int t = 0;
         while (t < timeout) 
@@ -52,10 +55,10 @@ class example_AI_on_demand_in_loop
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        USBDAQF1AD dev = new USBDAQF1AD();
+        USBDAQF1AOD dev = new USBDAQF1AOD();
 
-        // Connect to USB device
-        dev.connect("21JA1245");
+        // Connect to device
+        dev.connect("21JA1439");
 
         // Perform DAQ basic information 
         try
@@ -69,18 +72,18 @@ class example_AI_on_demand_in_loop
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open AI port to 0
+            // Open AI port
             status = dev.AI_open(port);
             Console.WriteLine($"AI_open status: {status}");
 
-            // Set AI port to 0 and acquisition mode to on demand
+            // Set AI port and acquisition mode to on demand
             status = dev.AI_setMode(port, WPC.AI_MODE_ON_DEMAND);
             Console.WriteLine($"AI_setMode status: {status}");
 
             // Start loop
             loop_func(dev, port, 1, 3);
 
-            // Close AI port to 0
+            // Close AI port
             status = dev.AI_close(port);
             Console.WriteLine($"AI_close status: {status}");
         }
@@ -89,7 +92,7 @@ class example_AI_on_demand_in_loop
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

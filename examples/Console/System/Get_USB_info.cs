@@ -5,23 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// System - example_get_device_info.cs
+/// @example Get_USB_info.cs
 /// 
-/// This example demonstrates how to get hardware & network information from WPC-Wifi-DAQ-E3-A.
+/// This example demonstrates how to get hardware information from USBDAQF1TD.
 /// 
-/// First, get hardware information such as firmware model & version & serial number.
-/// Last, get network information such as IP & submask & mac.
+/// First, get hardware information such as firmware model & version.
+/// 
+/// Last, get serial number and RTC.
 /// 
 /// For other examples please check:
-///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
+///  
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary>
-
-
-class example_get_device_info
+/// </summary> 
+/// 
+class WPC_get_USB_info
 {
     static public void Main()
     {
@@ -31,12 +32,12 @@ class example_get_device_info
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        WifiDAQE3A dev = new WifiDAQE3A();
+        USBDAQF1TD dev = new USBDAQF1TD();
 
-        // Connect to network device
+        // Connect to device
         try
         {
-            dev.connect("192.168.5.79");
+            dev.connect("21JA1239");
         }
         catch (Exception ex)
         {
@@ -51,28 +52,21 @@ class example_get_device_info
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-
-            // Get serial number & RTC Time
+            // Get serial number 
             string serial_num = dev.Sys_getSerialNumber();
-            string RTC = dev.Sys_getRTC();
-            Console.WriteLine($"Serial number: {serial_num}"); 
-            Console.WriteLine($"RTC data time: {RTC}");
-             
-            // Get IP & submask
-            List<string> info = dev.Sys_getIPAddrAndSubmask();
-            Console.WriteLine($"IP: {info[0]}");
-            Console.WriteLine($"Submask: {info[1]}");
+            Console.WriteLine($"Serial number: {serial_num}");
 
-            // Get MAC
-            string mac = dev.Sys_getMACAddr();
-            Console.WriteLine($"MAC: {mac}");
+            // Get RTC Time
+            string RTC = dev.Sys_getRTC(); 
+            Console.WriteLine($"RTC data time: {RTC}");
+ 
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

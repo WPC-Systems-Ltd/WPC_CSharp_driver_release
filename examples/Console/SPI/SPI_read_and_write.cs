@@ -5,24 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// SPI - example_SPI_read_and_write.cs
+/// @example SPI_read_and_write.cs
 /// 
-/// This example demonstrates how to communicate with USB-DAQ-F1-TD (master) and 25LC640(slave) with SPI interface.
+/// This example demonstrates how to communicate with USBDAQF1TD (master) and 25LC640(slave) with SPI interface.
 /// 
 /// First, it shows how to open SPI port & DIO pins and configure SPI parameters.
+/// 
 /// Second, write some bytes with address into EEPROM (25LC640). We have to make sure that bytes written in address is correct however read address from EEPROM (25LC640).
+/// 
 /// Last, close SPI port & DIO pins
 /// 
 /// For other examples please check:
-///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
+///  
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary>
-
-
-class example_SPI_read_and_write
+/// </summary> 
+class WPC_SPI_read_and_write
 {
     static public void Main()
     {
@@ -35,7 +36,7 @@ class example_SPI_read_and_write
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
 
-        // Connect to USB device
+        // Connect to device
         dev.connect("21JA1239");
 
 
@@ -66,7 +67,7 @@ class example_SPI_read_and_write
             status = dev.DO_openPins(DO_port, new List<int> { DO_pin });
             Console.WriteLine($"DO_openPins status: {status}");
 
-            // Open SPI port2
+            // Open SPI port
             status = dev.SPI_open(SPI_port);
             Console.WriteLine($"SPI_open status: {status}");
 
@@ -78,19 +79,19 @@ class example_SPI_read_and_write
             Set SPI parameter
             */
 
-            // Set SPI port to 2 and set datasize to 8-bits data
+            // Set SPI port and set datasize to 8-bits data
             status = dev.SPI_setDataSize(SPI_port, WPC.SPI_DATA_SIZE_8_BITS);
             Console.WriteLine($"SPI_setDataSize status: {status}");
 
-            // Set SPI port to 2 and set first_bit to MSB first
+            // Set SPI port and set first_bit to MSB first
             status = dev.SPI_setFirstBit(SPI_port, WPC.SPI_FIRST_BIT_MSB);
             Console.WriteLine($"SPI_setFirstBit status: {status}");
 
-            // Set SPI port to 2 and set prescaler to 64
+            // Set SPI port and set prescaler to 64
             status = dev.SPI_setPrescaler(SPI_port, WPC.SPI_PRESCALER_64);
             Console.WriteLine($"SPI_setPrescaler status: {status}");
 
-            // Set SPI port to 2 and set CPOL and CPHA to mode 0 
+            // Set SPI port and set CPOL and CPHA to mode 0 
             status = dev.SPI_setMode(SPI_port, WPC.SPI_MODE_0);
             Console.WriteLine($"SPI_setMode status: {status}");
 
@@ -149,7 +150,7 @@ class example_SPI_read_and_write
             Close DO pins and SPI port
             */
 
-            // Close SPI port2
+            // Close SPI port
             status = dev.SPI_close(SPI_port);
             Console.WriteLine($"SPI_close status: {status}");
 
@@ -163,7 +164,7 @@ class example_SPI_read_and_write
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

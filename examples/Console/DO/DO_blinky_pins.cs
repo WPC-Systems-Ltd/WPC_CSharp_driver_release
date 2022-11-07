@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 
 /// <summary>
-/// DIO - example_DO_blinky_pins.cs
+/// @example DO_blinky_pins.cs
 /// 
-/// This example demonstrates how to write DO high or low in pins from WPC-USB-DAQ-F1-AD.
+/// This example demonstrates how to write DO high or low in pins from USBDAQF1AD.
 /// 
 /// First, it shows how to open DO in pins.
+/// 
 /// Second, each loop has different voltage output so it will look like blinking. 
+/// 
 /// Last, close DO in pins.
 /// 
 /// For other examples please check:
-/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
@@ -23,7 +25,7 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary>
 
-class example_DO_blinky_pins
+class WPC_DO_blinky_pins
 {
     static public void Main()
     {
@@ -36,7 +38,7 @@ class example_DO_blinky_pins
         // Create device handle
         USBDAQF1AD dev = new USBDAQF1AD();
 
-        // Connect to USB device
+        // Connect to device
         dev.connect("21JA1245");
          
 
@@ -88,7 +90,7 @@ class example_DO_blinky_pins
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

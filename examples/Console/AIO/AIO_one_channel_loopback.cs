@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 
 /// <summary>
-/// AIO - example_AIO_all_channels_loopback.cs
+/// @example AIO_one_channel_loopback.cs
+///
+/// This example demonstrates how to write AIO loopback in specific channel from USBDAQF1AOD.
 /// 
-/// This example demonstrates how to write AIO loopback in all channels from WPC-USB-DAQ-F1-AOD.
 /// Use AO pins to send signals and use AI pins to receive signals on single device also called "loopback".
 /// 
 /// First, it shows how to open AO and AI in port.
-/// Second, write all digital signals to AO and read AI ondemand data.
+/// 
+/// Second, write digital signals to AO in specific channel and read AI ondemand data.
+/// 
 /// Last, close AO and AI in port.
 /// 
 /// For other examples please check:
-/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
@@ -24,8 +27,7 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary>
 
-
-class example_AIO_all_channels_loopback
+class WPC_AIO_one_channel_loopback
 {
     static public void Main()
     {
@@ -37,7 +39,7 @@ class example_AIO_all_channels_loopback
         // Create device handle
         USBDAQF1AOD dev = new USBDAQF1AOD();
 
-        // Connect to USB device
+        // Connect to device
         dev.connect("21JA1439");
 
         // Execute
@@ -53,15 +55,15 @@ class example_AIO_all_channels_loopback
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open AI port to 0
+            // Open AI port
             status = dev.AI_open(port);
             Console.WriteLine($"AI_open status: {status}");
 
-            // Open AO port0
+            // Open AO port
             status = dev.AO_open(port);
             Console.WriteLine($"AO_open status: {status}");
 
-            // Set AI port to 0 and data acquisition
+            // Set AI port and data acquisition
             sample = dev.AI_readOnDemand(port);
 
             // Read acquisition data
@@ -70,12 +72,23 @@ class example_AIO_all_channels_loopback
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
-            // Set AO port to 0 and write data simultaneously
-            List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
-            status = dev.AO_writeAllChannels(port, AO_values);
-            Console.WriteLine($"AO_writeAllChannels status: {status}");
+            //Set AO port and write data 1.5(V) in channel 4
+            status = dev.AO_writeOneChannel(port, 4, 1.5);
+            Console.WriteLine($"AO_writeOneChanne status: {status}");
 
-            // Set AI port to 0 and data acquisition
+            //Set AO port and write data 2.5(V) in channel 5
+            status = dev.AO_writeOneChannel(port, 5, 2.5);
+            Console.WriteLine($"AO_writeOneChanne status: {status}");
+
+            //Set AO port and write data 3.5(V) in channel 6
+            status = dev.AO_writeOneChannel(port, 6, 3.5);
+            Console.WriteLine($"AO_writeOneChanne status: {status}");
+
+            //Set AO port and write data 4.5(V) in channel 7
+            status = dev.AO_writeOneChannel(port, 7, 4.5);
+            Console.WriteLine($"AO_writeOneChanne status: {status}");
+
+            // Set AI port and data acquisition
             sample = dev.AI_readOnDemand(port);
 
             // Read acquisition data
@@ -84,11 +97,11 @@ class example_AIO_all_channels_loopback
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
-            // Close AI port to 0
+            // Close AI port
             status = dev.AI_close(port);
             Console.WriteLine($"AI_close status: {status}");
 
-            // Close AO port0
+            // Close AO port
             status = dev.AO_close(port);
             Console.WriteLine($"AO_close status: {status}");
         }
@@ -97,7 +110,7 @@ class example_AIO_all_channels_loopback
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

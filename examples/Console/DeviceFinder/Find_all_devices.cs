@@ -5,21 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// System - example_find_all_devices.cs 
+/// @example Find_all_devices.cs 
 /// 
-/// This example demonstrates how to find all available Wifi or ethernet device. 
+/// This example demonstrates how to find all available USB and ethernet devices.
 /// 
 /// For other examples please check:
-///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary>
+/// </summary> 
 
-
-class example_find_all_devices
+class WPC_find_all_devices
 {
     static public void Main()
     {
@@ -31,7 +30,7 @@ class example_find_all_devices
         // Create device handle
         DeviceFinder dev = new DeviceFinder();
 
-        // Connect to network device
+        // Connect to device
         try
         {
             dev.connect();
@@ -44,21 +43,33 @@ class example_find_all_devices
         // Perform device information 
         try
         {
-            List<List<string>> device_list = dev.Bcst_getDeviceInfo();
-            Console.WriteLine($"device_list.Count(): {device_list.Count()}");
-            if (device_list.Count() > 0)
+            List<List<string>> usb_list = dev.Bcst_enumerateUSBDevices();
+            foreach (List<string> usb in usb_list)
             {
-                foreach (List<string> device in device_list)
+                foreach (string s in usb)
                 {
-                    Console.WriteLine($"IP: {device[0]}, Subnet: {device[1]}, MAC: {device[2]}, Firmware version: {device[3]}");
+                    Console.Write(s);
+                    Console.Write("  ");
                 }
+                Console.WriteLine();
+            }
+
+            List<List<string>> net_list = dev.Bcst_enumerateNetworkDevices(2000);
+            foreach (List<string> net in net_list)
+            {
+                foreach (string s in net)
+                {
+                    Console.Write(s);
+                    Console.Write("  ");
+                }
+                Console.WriteLine();
             }
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex);
         }
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

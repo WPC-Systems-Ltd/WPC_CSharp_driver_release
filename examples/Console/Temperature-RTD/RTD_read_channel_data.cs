@@ -5,25 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// Temperature - TC - example_TC_read_channel_data.cs
-
-/// This example demonstrates how to read thermocouple from WPC-USB-DAQ-F1-TD.
-
-/// First, it shows how to open thermal port and configure thermal parameters.
-/// Second, read channel 1 thermocouple data.
+/// @example RTD_read_channel_data.cs
+/// 
+/// This example demonstrates how to read RTD data in two channels from USBDAQF1RD.
+/// 
+/// First, it shows how to open thermal port
+/// 
+/// Second, read channel 0 and channel 1 RTD data
+/// 
 /// Last, close thermal port.
-
+/// 
 /// For other examples please check:
-/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary>
+/// </summary> 
 
-
-class example_TC_read_channel_data
+class WPC_RTD_read_channel_data
 {
     static public void Main()
     {
@@ -34,10 +35,10 @@ class example_TC_read_channel_data
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        USBDAQF1TD dev = new USBDAQF1TD();
+        USBDAQF1RD dev = new USBDAQF1RD();
 
         // Connect to USB device
-        dev.connect("21JA1239");
+        dev.connect("21JA1385");
 
 
         // Execute
@@ -45,47 +46,41 @@ class example_TC_read_channel_data
         {
             // Parameters setting
             int status;
+            float data;
             int port = 1;
-            int channel = 1;
+            int channel_0 = 0;
+            int channel_1 = 1;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open thermo port1
+            // Open RTD port
             status = dev.Thermal_open(port);
             Console.WriteLine($"Thermal_open status: {status}");
 
-            // Set thermo port to 1 and set K type in channel 1 
-            status = dev.Thermal_setOverSampling(port, channel, WPC.THERMAL_OVERSAMPLING_NONE);
-            Console.WriteLine($"Thermal_setOverSampling status: {status}");
-
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
-            // Set thermo port to 1 and set K type in channel 1 
-            status = dev.Thermal_setType(port, channel, WPC.THERMAL_COUPLE_TYPE_K);
-            Console.WriteLine($"Thermal_setType status: {status}");
+            // Set RTD port and read RTD in channel 0
+            data = dev.Thermal_readSensor(port, channel_0);
+            Console.WriteLine($"Read channel 0 data: {data} °C ");
 
-            // Wait for 0.1 sec
-            Thread.Sleep(100); // delay [ms]
-
-            // Set thermo port to 1 and read thermo in channel 1
-            float data = dev.Thermal_readSensor(port, channel);
+            // Set RTD port and read RTD in channel 1
+            data = dev.Thermal_readSensor(port, channel_1);
             Console.WriteLine($"Read channel 1 data: {data} °C ");
 
-            // Close thermo port1
+            // Close RTD port
             status = dev.Thermal_close(port);
             Console.WriteLine($"Thermal_close status: {status}");
-
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

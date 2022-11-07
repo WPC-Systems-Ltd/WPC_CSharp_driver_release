@@ -6,24 +6,28 @@ using System.Threading.Tasks;
 
 
 /// <summary>
-/// DIO - example_DIO_loopback_port.cs
+/// @example DIO_loopback_port.cs
 /// 
-/// This example demonstrates how to write DIO loopback in port from WPC-USB-DAQ-F1-AD.
+/// This example demonstrates how to write DIO loopback in port from USBDAQF1AD.
+/// 
 /// Use DO pins to send signals and use DI pins to receive signals on single device also called "loopback".
 /// 
 /// First, it shows how to open DO and DI in port.
+/// 
 /// Second, write DO in port and read DI in port
+/// 
 /// Last, close DO and DI in port.
 /// 
 /// For other examples please check:
-///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Examples
+///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
+///  
 /// See README.md file to get detailed usage of this example.
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
 /// </summary>
 
-class example_DIO_loopback_port
+class WPC_DIO_loopback_port
 {
     static public void Main()
     {
@@ -35,7 +39,7 @@ class example_DIO_loopback_port
         // Create device handle
         USBDAQF1AD dev = new USBDAQF1AD();
 
-        // Connect to USB device
+        // Connect to device
         dev.connect("21JA1245");
 
         // Execute
@@ -81,7 +85,7 @@ class example_DIO_loopback_port
             Console.WriteLine(ex);
         }
 
-        // Disconnect network device
+        // Disconnect device
         dev.disconnect();
 
         // Release device handle

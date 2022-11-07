@@ -71,145 +71,144 @@ public class WPC_example_code
             case 10:
                 Console.WriteLine("Get 10, run example_AI_N_samples_once.cs");
                 Console.WriteLine("");
-                example_AI_N_samples_once.Main();
+                WPC_AI_N_samples_once.Main();
                 break;
 
             case 11:
                 Console.WriteLine("Get 11, run example_AI_on_demand_in_loop.cs");
-                Console.WriteLine("");
-                example_AI_on_demand_in_loop.Main();
+                WPC_AI_on_demand_in_loop.Main();
                 break;
 
             case 12:
                 Console.WriteLine("Get 12, run example_AI_on_demand_once.cs");
                 Console.WriteLine("");
-                example_AI_on_demand_once.Main();
+                WPC_AI_on_demand_once.Main();
                 break;
 
             case 13:
                 Console.WriteLine("Get 13, run example_AI_continuous.cs");
                 Console.WriteLine("");
-                example_AI_continuous.Main();
+                WPC_AI_continuous.Main();
                 break;
 
             case 14:
                 Console.WriteLine("Get 14, run example_AI_N_samples_in_loop.cs");
                 Console.WriteLine("");
-                example_AI_N_samples_in_loop.Main();
+                WPC_AI_N_samples_in_loop.Main();
                 break;
 
             case 20:
                 Console.WriteLine("Get 20, run example_AIO_all_channels_loopback.cs");
                 Console.WriteLine("");
-                example_AIO_all_channels_loopback.Main();
+                WPC_AIO_all_channels_loopback.Main();
                 break;
 
             case 21:
                 Console.WriteLine("Get 21, run example_AIO_one_channel_loopback.cs");
                 Console.WriteLine("");
-                example_AIO_one_channel_loopback.Main();
+                WPC_AIO_one_channel_loopback.Main();
                 break;
 
             case 30:
                 Console.WriteLine("Get 30, run example_AO_write_all_channels.cs");
                 Console.WriteLine("");
-                example_AO_write_all_channels.Main();
+                WPC_AO_write_all_channels.Main();
                 break;
 
             case 31:
                 Console.WriteLine("Get 31, run example_AO_write_one_channel.cs");
                 Console.WriteLine("");
-                example_AO_write_one_channel.Main();
+                WPC_AO_write_one_channel.Main();
                 break;
 
             case 40:
                 Console.WriteLine("Get 40, run example_DIO_loopback_pins.cs");
                 Console.WriteLine("");
-                example_DIO_loopback_pins.Main();
+                WPC_DIO_loopback_pins.Main();
                 break;
 
             case 41:
                 Console.WriteLine("Get 41, run example_DIO_loopback_port.cs");
                 Console.WriteLine("");
-                example_DIO_loopback_port.Main();
+                WPC_DIO_loopback_port.Main();
                 break;
 
             case 42:
                 Console.WriteLine("Get 42, run example_DO_blinky_pins.cs");
                 Console.WriteLine("");
-                example_DO_blinky_pins.Main();
+                WPC_DO_blinky_pins.Main();
                 break;
 
             case 43:
                 Console.WriteLine("Get 43, run example_DO_blinky_port.cs");
                 Console.WriteLine("");
-                example_DO_blinky_port.Main();
+                WPC_DO_blinky_port.Main();
                 break;
 
             case 50:
                 Console.WriteLine("Get 50, run example_get_device_info.cs");
                 Console.WriteLine("");
-                example_get_device_info.Main();
+                WPC_get_device_info.Main();
                 break;
 
             case 51:
                 Console.WriteLine("Get 51, run example_find_all_devices.cs");
                 Console.WriteLine("");
-                example_find_all_devices.Main();
+                WPC_find_all_devices.Main();
                 break;
 
             case 52:
                 Console.WriteLine("Get 52, run example_get_WifiDAQ_status.cs");
                 Console.WriteLine("");
-                example_get_WifiDAQ_status.Main();
+                WPC_get_WifiDAQ_status.Main();
                 break;
 
             case 60:
                 Console.WriteLine("Get 60, run example_TC_read_channel_data.cs");
                 Console.WriteLine("");
-                example_TC_read_channel_data.Main();
+                WPC_TC_read_channel_data.Main();
                 break;
 
             case 61:
                 Console.WriteLine("Get 61, run example_TC_read_channel_status.cs");
                 Console.WriteLine("");
-                example_UART_write.Main();
+                WPC_UART_write.Main();
                 break;
 
             case 70:
                 Console.WriteLine("Get 70, run example_RTD_read_channel_data.cs");
                 Console.WriteLine("");
-                example_RTD_read_channel_data.Main();
+                WPC_RTD_read_channel_data.Main();
                 break;
 
             case 71:
                 Console.WriteLine("Get 71, run example_RTD_read_channel_status.cs");
                 Console.WriteLine("");
-                example_RTD_read_channel_status.Main();
+                WPC_RTD_read_channel_status.Main();
                 break;
 
             case 80:
                 Console.WriteLine("Get 80, run example_I2C_write_read.cs");
                 Console.WriteLine("");
-                example_I2C_write_read.Main();
+                WPC_I2C_write_read.Main();
                 break;
 
             case 90:
                 Console.WriteLine("Get 90, run example_SPI_read_and_write.cs");
                 Console.WriteLine("");
-                example_SPI_read_and_write.Main();
+                WPC_SPI_read_and_write.Main();
                 break;
 
             case 91:
                 Console.WriteLine("Get 91, run example_SPI_write.cs");
                 Console.WriteLine("");
-                example_SPI_write.Main();
+                WPC_SPI_write.Main();
                 break;
 
             default:
                 Console.WriteLine("Wrong index, we will use example_find_all_devices example code");
                 Console.WriteLine("");
-                example_SPI_read_and_write.Main();
+                WPC_find_all_devices.Main();
                 break;
         }
   
