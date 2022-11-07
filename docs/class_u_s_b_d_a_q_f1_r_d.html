@@ -38,6 +38,7 @@
    <div id="projectname">WPC CSharp driver
    &#160;<span id="projectnumber">0.0.9</span>
    </div>
+   <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -99,7 +100,6 @@ $(document).ready(function(){initNavTree('class_u_s_b_d_a_q_f1_r_d.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_u_s_b_d_a_q_f1_r_d-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">USBDAQF1RD Class Reference</div>  </div>
@@ -108,6 +108,9 @@ $(document).ready(function(){initNavTree('class_u_s_b_d_a_q_f1_r_d.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2a15c0b540c77f473f604798a300a279"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a2a15c0b540c77f473f604798a300a279">USBDAQF1RD</a> ()</td></tr>
+<tr class="memdesc:a2a15c0b540c77f473f604798a300a279"><td class="mdescLeft">&#160;</td><td class="mdescRight">This device has 2ch thermocouple input which support PT-100 or PT-1000 and 21ch 3.3V DIO/I2C/SPI.  <a href="#a2a15c0b540c77f473f604798a300a279">More...</a><br /></td></tr>
+<tr class="separator:a2a15c0b540c77f473f604798a300a279"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20dd5063455af3e41e899d954f64a054"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a20dd5063455af3e41e899d954f64a054">connect</a> (string serial_number)</td></tr>
 <tr class="separator:a20dd5063455af3e41e899d954f64a054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0d4a119d155eab351cc827dad6537b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#aa0d4a119d155eab351cc827dad6537b0">disconnect</a> ()</td></tr>
@@ -158,6 +161,60 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5c1e92a3c9d4dafa0b579ad3d1b74bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae241e3fec4123139fed8cef8adc9ccb3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#ae241e3fec4123139fed8cef8adc9ccb3">DO_closePins</a> (int port, List&lt; int &gt; pin_index, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:ae241e3fec4123139fed8cef8adc9ccb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad13ddd1bac70c03470297b0e23ef1e5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#ad13ddd1bac70c03470297b0e23ef1e5c">UART_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:ad13ddd1bac70c03470297b0e23ef1e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6831f3b725c86e93b9437ba0f90ccb43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a6831f3b725c86e93b9437ba0f90ccb43">UART_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a6831f3b725c86e93b9437ba0f90ccb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1236829f291d1354b129753d67ec722"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#ac1236829f291d1354b129753d67ec722">UART_read</a> (int port, int num_bytes, int delay=5)</td></tr>
+<tr class="separator:ac1236829f291d1354b129753d67ec722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b9c5a54e356c0688776e3501a15855"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a13b9c5a54e356c0688776e3501a15855">UART_write</a> (int port, string data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a13b9c5a54e356c0688776e3501a15855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a132f86069442d226c791f1ebdb9293f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a132f86069442d226c791f1ebdb9293f4">UART_reset</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a132f86069442d226c791f1ebdb9293f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32e7aa5c4afa71ae461ba4febadf1ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#ae32e7aa5c4afa71ae461ba4febadf1ca">UART_setBaudRate</a> (int port, int baud_rate, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:ae32e7aa5c4afa71ae461ba4febadf1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393a11721630a8f24ae4c28e53ec2bfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a393a11721630a8f24ae4c28e53ec2bfc">UART_setDataBit</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a393a11721630a8f24ae4c28e53ec2bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1dbbab0c6c1df0a1b73a7c9993c70ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#ae1dbbab0c6c1df0a1b73a7c9993c70ab">UART_setParity</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:ae1dbbab0c6c1df0a1b73a7c9993c70ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c5f841ef1b44aeecc0a262384701e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a00c5f841ef1b44aeecc0a262384701e2">UART_setNumStopBit</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a00c5f841ef1b44aeecc0a262384701e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b62709e3691be541e967347ca36739"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a21b62709e3691be541e967347ca36739">UART_stopReading</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a21b62709e3691be541e967347ca36739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08930350b0f9ae483452aa0aa2520d4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a08930350b0f9ae483452aa0aa2520d4e">I2C_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a08930350b0f9ae483452aa0aa2520d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9f8f490a308b3530c57bd4008bd90d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#abf9f8f490a308b3530c57bd4008bd90d">I2C_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:abf9f8f490a308b3530c57bd4008bd90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbdbddfe923493c40e2e1d409a8bfd8"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a5bbdbddfe923493c40e2e1d409a8bfd8">I2C_read</a> (int port, int read_address, int num_bytes, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a5bbdbddfe923493c40e2e1d409a8bfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd5d61d12e93c59cd9d9ccd50e612296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#acd5d61d12e93c59cd9d9ccd50e612296">I2C_write</a> (int port, int write_address, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:acd5d61d12e93c59cd9d9ccd50e612296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1600123c74df08ade53a3721745ffaae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a1600123c74df08ade53a3721745ffaae">I2C_reset</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a1600123c74df08ade53a3721745ffaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff6844463316aef78ea63b7eecd3122"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#abff6844463316aef78ea63b7eecd3122">I2C_setClockRate</a> (int port, int frequency, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:abff6844463316aef78ea63b7eecd3122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd5cad7fb81ac435cb3bb91dd0314af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a2fd5cad7fb81ac435cb3bb91dd0314af">I2C_setAddressSize</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a2fd5cad7fb81ac435cb3bb91dd0314af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed0f2b3fb7407106970be7970c1be0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a5ed0f2b3fb7407106970be7970c1be0f">SPI_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a5ed0f2b3fb7407106970be7970c1be0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a75e34b9412d55e5455b7c71c52e33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a83a75e34b9412d55e5455b7c71c52e33">SPI_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a83a75e34b9412d55e5455b7c71c52e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d22642e43cc05a9f03386163b442bfb"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a2d22642e43cc05a9f03386163b442bfb">SPI_read</a> (int port, int num_bytes, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a2d22642e43cc05a9f03386163b442bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a314c5d7fc7314adadf24e5dd4e6d557b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a314c5d7fc7314adadf24e5dd4e6d557b">SPI_write</a> (int port, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a314c5d7fc7314adadf24e5dd4e6d557b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aac3887223bfe8ea02b65a827ec34dd"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a0aac3887223bfe8ea02b65a827ec34dd">SPI_readAndWrite</a> (int port, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a0aac3887223bfe8ea02b65a827ec34dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1baf32076c0b0aed4e2d8e8ad131775"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#af1baf32076c0b0aed4e2d8e8ad131775">SPI_reset</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:af1baf32076c0b0aed4e2d8e8ad131775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2c29e01be07c3df098d51679e16448"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#aed2c29e01be07c3df098d51679e16448">SPI_setDataSize</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:aed2c29e01be07c3df098d51679e16448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1a00d29fbbee58bcdad88c15401f43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#aeb1a00d29fbbee58bcdad88c15401f43">SPI_setFirstBit</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:aeb1a00d29fbbee58bcdad88c15401f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b67829efe51a9fe5c3114c684aeb84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a61b67829efe51a9fe5c3114c684aeb84">SPI_setPrescaler</a> (int port, int prescaler, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a61b67829efe51a9fe5c3114c684aeb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d401ad45ed84c8c3862ccc203b5d78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#ad5d401ad45ed84c8c3862ccc203b5d78">SPI_setMode</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:ad5d401ad45ed84c8c3862ccc203b5d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0141e4976990cf40f79d975c8a2311a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a0141e4976990cf40f79d975c8a2311a6">Thermal_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a0141e4976990cf40f79d975c8a2311a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf138e864267fb2505758e075349b333"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#abf138e864267fb2505758e075349b333">Thermal_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
@@ -168,34 +225,38 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad923a496de69057c7d7606ba8651bbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35e8fe6b35e13ddd3bce25149450fe8e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_r_d.html#a35e8fe6b35e13ddd3bce25149450fe8e">Thermal_readSensor</a> (int port, int channel, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a35e8fe6b35e13ddd3bce25149450fe8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ad7aa7fff033af60c094e0d121d570602"><td class="memItemLeft" align="right" valign="top"><a id="ad7aa7fff033af60c094e0d121d570602"></a>
-NetworkModule&#160;</td><td class="memItemRight" valign="bottom"><b>net_module</b></td></tr>
-<tr class="separator:ad7aa7fff033af60c094e0d121d570602"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9472652f4fec4573f4a0cd3ec12b4f57"><td class="memItemLeft" align="right" valign="top"><a id="a9472652f4fec4573f4a0cd3ec12b4f57"></a>
-SystemModule&#160;</td><td class="memItemRight" valign="bottom"><b>sys_module</b></td></tr>
-<tr class="separator:a9472652f4fec4573f4a0cd3ec12b4f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7f853ca1cb1fbba254dea91a2d249a1"><td class="memItemLeft" align="right" valign="top"><a id="ac7f853ca1cb1fbba254dea91a2d249a1"></a>
-UARTModule&#160;</td><td class="memItemRight" valign="bottom"><b>uart_module</b></td></tr>
-<tr class="separator:ac7f853ca1cb1fbba254dea91a2d249a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac0d0fef927bcfa804b9340f7993c9aa"><td class="memItemLeft" align="right" valign="top"><a id="aac0d0fef927bcfa804b9340f7993c9aa"></a>
-I2CModule&#160;</td><td class="memItemRight" valign="bottom"><b>i2c_module</b></td></tr>
-<tr class="separator:aac0d0fef927bcfa804b9340f7993c9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc0125a53f30aa63615560f79446a9ee"><td class="memItemLeft" align="right" valign="top"><a id="afc0125a53f30aa63615560f79446a9ee"></a>
-SPIModule&#160;</td><td class="memItemRight" valign="bottom"><b>spi_module</b></td></tr>
-<tr class="separator:afc0125a53f30aa63615560f79446a9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae307b8653ff69c30757b5cf0df0e5b2e"><td class="memItemLeft" align="right" valign="top"><a id="ae307b8653ff69c30757b5cf0df0e5b2e"></a>
-DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></td></tr>
-<tr class="separator:ae307b8653ff69c30757b5cf0df0e5b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e28462d0448b25d8048c51ad75d7e60"><td class="memItemLeft" align="right" valign="top"><a id="a2e28462d0448b25d8048c51ad75d7e60"></a>
-ThermalModule&#160;</td><td class="memItemRight" valign="bottom"><b>thermal_module</b></td></tr>
-<tr class="separator:a2e28462d0448b25d8048c51ad75d7e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2603d651350668fa932e410d4557bc16"><td class="memItemLeft" align="right" valign="top"><a id="a2603d651350668fa932e410d4557bc16"></a>
-USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></td></tr>
-<tr class="separator:a2603d651350668fa932e410d4557bc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_data_8cs-example.html#_a2">RTD_read_channel_data.cs</a>, and <a class="el" href="_r_t_d_read_channel_status_8cs-example.html#_a2">RTD_read_channel_status.cs</a>.</dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2a15c0b540c77f473f604798a300a279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a15c0b540c77f473f604798a300a279">&#9670;&nbsp;</a></span>USBDAQF1RD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">USBDAQF1RD.USBDAQF1RD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This device has 2ch thermocouple input which support PT-100 or PT-1000 and 21ch 3.3V DIO/I2C/SPI. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a189259818b4d62c3e9ca86c6ff24a061"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a189259818b4d62c3e9ca86c6ff24a061">&#9670;&nbsp;</a></span>close()</h2>
@@ -219,6 +280,9 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close device handle. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_data_8cs-example.html#a9">RTD_read_channel_data.cs</a>, and <a class="el" href="_r_t_d_read_channel_status_8cs-example.html#a9">RTD_read_channel_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -245,6 +309,16 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Connect to USB device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serial_number</td><td>From WPC DAQ device.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_data_8cs-example.html#a3">RTD_read_channel_data.cs</a>, and <a class="el" href="_r_t_d_read_channel_status_8cs-example.html#a3">RTD_read_channel_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -287,6 +361,16 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close specific pin to digital intput. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to close. For example, you want to close pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -323,6 +407,15 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close all pins in specific port with digital input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -365,6 +458,16 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open specific pin to digital intput. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to set to digital intput. For example, you want to open pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -401,6 +504,15 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open all pins in specific port with digital input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -443,6 +555,16 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Read digital pin state in specific pin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to read. For example, you want to read pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of pin state. </dd></dl>
 
 </div>
 </div>
@@ -504,6 +626,10 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Disconnect from USB device. </p>
+<dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_data_8cs-example.html#a8">RTD_read_channel_data.cs</a>, and <a class="el" href="_r_t_d_read_channel_status_8cs-example.html#a8">RTD_read_channel_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -546,6 +672,16 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close specific pin with digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to close. For example, you want to close pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -582,6 +718,15 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close all pins in specific port with digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -624,6 +769,16 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open specific pin to digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to set to digital output. For example, you want to open pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -660,6 +815,15 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open all pins in specific port with digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -708,6 +872,17 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open specific pin to digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to set. For example, you want to open pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">value</td><td>Pin number you want to set high(1) or low(0). For example, set pin 0 and pin 1 to high, and pin 5 to low. value = [1,1,0]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -750,6 +925,872 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Write all pins state in specific port with digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">value</td><td>Pin number you want to set digital high(1) or low(0). For example, you want to write pin 0 and pin 2 to high, others to low. [0,0,0,0,0,1,0,1] in LSB. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="abf9f8f490a308b3530c57bd4008bd90d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9f8f490a308b3530c57bd4008bd90d">&#9670;&nbsp;</a></span>I2C_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.I2C_close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Close I2C port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a08930350b0f9ae483452aa0aa2520d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08930350b0f9ae483452aa0aa2520d4e">&#9670;&nbsp;</a></span>I2C_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.I2C_open </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Open I2C port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a5bbdbddfe923493c40e2e1d409a8bfd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbdbddfe923493c40e2e1d409a8bfd8">&#9670;&nbsp;</a></span>I2C_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;byte&gt; USBDAQF1RD.I2C_read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>read_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read data from read address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">read_address</td><td>7-bit slave address of the device to request bytes from.</td></tr>
+    <tr><td class="paramname">num_bytes</td><td>The number of bytes to receive.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a1600123c74df08ade53a3721745ffaae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1600123c74df08ade53a3721745ffaae">&#9670;&nbsp;</a></span>I2C_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.I2C_reset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reset I2C to default settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a2fd5cad7fb81ac435cb3bb91dd0314af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd5cad7fb81ac435cb3bb91dd0314af">&#9670;&nbsp;</a></span>I2C_setAddressSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.I2C_setAddressSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the frequency mode of the desired communication clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>Please refer I2C_Address_Size in WPC_basic.cs</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="abff6844463316aef78ea63b7eecd3122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abff6844463316aef78ea63b7eecd3122">&#9670;&nbsp;</a></span>I2C_setClockRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.I2C_setClockRate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the frequency mode of the desired communication clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">frequency</td><td>Please refer I2C_Frequency in WPC_basic.cs</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="acd5d61d12e93c59cd9d9ccd50e612296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd5d61d12e93c59cd9d9ccd50e612296">&#9670;&nbsp;</a></span>I2C_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.I2C_write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>write_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; byte &gt;&#160;</td>
+          <td class="paramname"><em>data_to_write</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write data to write address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">write_address</td><td>7-bit slave address of the device to send bytes.</td></tr>
+    <tr><td class="paramname">data_to_write</td><td>Data to be transferred.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a83a75e34b9412d55e5455b7c71c52e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a75e34b9412d55e5455b7c71c52e33">&#9670;&nbsp;</a></span>SPI_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.SPI_close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Close SPI port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a5ed0f2b3fb7407106970be7970c1be0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed0f2b3fb7407106970be7970c1be0f">&#9670;&nbsp;</a></span>SPI_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.SPI_open </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Open SPI port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a2d22642e43cc05a9f03386163b442bfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d22642e43cc05a9f03386163b442bfb">&#9670;&nbsp;</a></span>SPI_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;byte&gt; USBDAQF1RD.SPI_read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read data from SPI port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">num_bytes</td><td>The number of bytes to receive.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The received data. </dd></dl>
+
+</div>
+</div>
+<a id="a0aac3887223bfe8ea02b65a827ec34dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aac3887223bfe8ea02b65a827ec34dd">&#9670;&nbsp;</a></span>SPI_readAndWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;byte&gt; USBDAQF1RD.SPI_readAndWrite </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; byte &gt;&#160;</td>
+          <td class="paramname"><em>data_to_write</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write and read data simultaneously to SPI port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">data_to_write</td><td>Data to be transferred.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The received data. </dd></dl>
+
+</div>
+</div>
+<a id="af1baf32076c0b0aed4e2d8e8ad131775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1baf32076c0b0aed4e2d8e8ad131775">&#9670;&nbsp;</a></span>SPI_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.SPI_reset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reset SPI to default settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="aed2c29e01be07c3df098d51679e16448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed2c29e01be07c3df098d51679e16448">&#9670;&nbsp;</a></span>SPI_setDataSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.SPI_setDataSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set data frame format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>Please refer SPI_Data_Size in WPC_basic.cs </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="aeb1a00d29fbbee58bcdad88c15401f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1a00d29fbbee58bcdad88c15401f43">&#9670;&nbsp;</a></span>SPI_setFirstBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.SPI_setFirstBit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set LSB first or MSB first. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>Please refer SPI_First_Bit in WPC_basic.cs </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ad5d401ad45ed84c8c3862ccc203b5d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d401ad45ed84c8c3862ccc203b5d78">&#9670;&nbsp;</a></span>SPI_setMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.SPI_setMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set clock phase and clock polarity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>Please refer SPI_Mode in WPC_basic.cs </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a61b67829efe51a9fe5c3114c684aeb84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b67829efe51a9fe5c3114c684aeb84">&#9670;&nbsp;</a></span>SPI_setPrescaler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.SPI_setPrescaler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prescaler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the maximum speed of SPI communication. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">prescaler</td><td>Please refer SPI_Prescaler in WPC_basic.cs </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a314c5d7fc7314adadf24e5dd4e6d557b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a314c5d7fc7314adadf24e5dd4e6d557b">&#9670;&nbsp;</a></span>SPI_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.SPI_write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; byte &gt;&#160;</td>
+          <td class="paramname"><em>data_to_write</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write data to SPI port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">data_to_write</td><td>Data to be transferred.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -776,6 +1817,16 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get device firmware information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_data_8cs-example.html#a4">RTD_read_channel_data.cs</a>, and <a class="el" href="_r_t_d_read_channel_status_8cs-example.html#a4">RTD_read_channel_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -802,6 +1853,14 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get geteway from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Network gateway. </dd></dl>
 
 </div>
 </div>
@@ -828,6 +1887,14 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get IP address and subnet mask from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of IP address and subnet mask. </dd></dl>
 
 </div>
 </div>
@@ -854,6 +1921,14 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get MAC address from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>MAC address. </dd></dl>
 
 </div>
 </div>
@@ -880,6 +1955,14 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Date and time represented by "A-B-C, D:E:F". </dd></dl>
 
 </div>
 </div>
@@ -906,6 +1989,14 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get serial number from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Serial number represented by string of 8 characters. </dd></dl>
 
 </div>
 </div>
@@ -932,6 +2023,14 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Reboot from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -958,6 +2057,14 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Reboot on bootloader from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1000,6 +2107,16 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set IP address and subnet mask to the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
+    <tr><td class="paramname">subnet_mask</td><td>Subnet mask.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1066,6 +2183,20 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>year (CE).</td></tr>
+    <tr><td class="paramname">month</td><td>month (1~12).</td></tr>
+    <tr><td class="paramname">day</td><td>day (1~31).</td></tr>
+    <tr><td class="paramname">hour</td><td>hour (24-hour clock) (0~23).(CE).</td></tr>
+    <tr><td class="paramname">minute</td><td>minute (0~59).</td></tr>
+    <tr><td class="paramname">second</td><td>second (0~59).</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1102,6 +2233,17 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close thermocouple or RTD port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_data_8cs-example.html#a7">RTD_read_channel_data.cs</a>, and <a class="el" href="_r_t_d_read_channel_status_8cs-example.html#a7">RTD_read_channel_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1144,6 +2286,18 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get thermocouple or RTD status from specific channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">channel</td><td>Please refer Thermal_Channel in WPC_basic.cs</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_status_8cs-example.html#a6">RTD_read_channel_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1180,6 +2334,17 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open thermocouple or RTD port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_data_8cs-example.html#a5">RTD_read_channel_data.cs</a>, and <a class="el" href="_r_t_d_read_channel_status_8cs-example.html#a5">RTD_read_channel_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1222,6 +2387,20 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Read thermocouple or RTD sensor temperature from specific channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">channel</td><td>Please refer Thermal_Channel in WPC_basic.cs</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><p class="startdd">0 if success, error otherwise. &lt;/returns</p>
+<p class="enddd"></p>
+</dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_r_t_d_read_channel_data_8cs-example.html#a6">RTD_read_channel_data.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1270,6 +2449,509 @@ USBDevice&#160;</td><td class="memItemRight" valign="bottom"><b>usb_device</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set thermocouple type on specific thermocouple or RTD channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">channel</td><td>Please refer Thermal_Channel in WPC_basic.cs</td></tr>
+    <tr><td class="paramname">thermal_type</td><td>Please refer Thermal_Filter in WPC_basic.cs</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a6831f3b725c86e93b9437ba0f90ccb43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6831f3b725c86e93b9437ba0f90ccb43">&#9670;&nbsp;</a></span>UART_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Close UART port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ad13ddd1bac70c03470297b0e23ef1e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad13ddd1bac70c03470297b0e23ef1e5c">&#9670;&nbsp;</a></span>UART_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_open </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Open UART port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ac1236829f291d1354b129753d67ec722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1236829f291d1354b129753d67ec722">&#9670;&nbsp;</a></span>UART_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;byte&gt; USBDAQF1RD.UART_read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delay</em> = <code>5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read data from UART port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">num_bytes</td><td>The number of bytes to receive.</td></tr>
+    <tr><td class="paramname">delay</td><td>Time delay before getting data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The list of UART received data. </dd></dl>
+
+</div>
+</div>
+<a id="a132f86069442d226c791f1ebdb9293f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132f86069442d226c791f1ebdb9293f4">&#9670;&nbsp;</a></span>UART_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_reset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reset UART to default settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ae32e7aa5c4afa71ae461ba4febadf1ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32e7aa5c4afa71ae461ba4febadf1ca">&#9670;&nbsp;</a></span>UART_setBaudRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_setBaudRate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>baud_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the data rate in bits per second. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">baud_rate</td><td>In bits per second (baud).</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a393a11721630a8f24ae4c28e53ec2bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a393a11721630a8f24ae4c28e53ec2bfc">&#9670;&nbsp;</a></span>UART_setDataBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_setDataBit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set data size in mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>Please refer UART_Data_Size in WPC_basic.cs </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a00c5f841ef1b44aeecc0a262384701e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c5f841ef1b44aeecc0a262384701e2">&#9670;&nbsp;</a></span>UART_setNumStopBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_setNumStopBit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set number of stop bits in mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>Please refer UART_Stop_Bit in WPC_basic.cs</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ae1dbbab0c6c1df0a1b73a7c9993c70ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1dbbab0c6c1df0a1b73a7c9993c70ab">&#9670;&nbsp;</a></span>UART_setParity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_setParity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set parity in mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>Please refer UART_Parity in WPC_basic.cs</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a21b62709e3691be541e967347ca36739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b62709e3691be541e967347ca36739">&#9670;&nbsp;</a></span>UART_stopReading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_stopReading </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stop reading a stream via UART. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a13b9c5a54e356c0688776e3501a15855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b9c5a54e356c0688776e3501a15855">&#9670;&nbsp;</a></span>UART_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1RD.UART_write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>data_to_write</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write data to UART port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">data_to_write</td><td>Data to be transferred.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>

@@ -1,10 +1,8 @@
 var class_ethan_a =
 [
     [ "EthanA", "class_ethan_a.html#a3cd69048d5b368a5ddfbadafcdcc1a1a", null ],
-    [ "AI_clearBufferStatus", "class_ethan_a.html#a6471d3b1fb9fe02ee759d94b682fc8f8", null ],
     [ "AI_close", "class_ethan_a.html#a5df8d27db8a9697f219beda53cc57d56", null ],
     [ "AI_open", "class_ethan_a.html#ab08349f743dee520f1f0e158a9aaba3c", null ],
-    [ "AI_readBufferStatus", "class_ethan_a.html#a45a571dcd47ba44798eb621da585f38a", null ],
     [ "AI_readOnDemand", "class_ethan_a.html#a6df1edbdb6a01adf1539d26972e04296", null ],
     [ "AI_readStreaming", "class_ethan_a.html#a1c0d62ab263ecda048ff68fdaa1593a4", null ],
     [ "AI_setMode", "class_ethan_a.html#a0af08dd890870120ea82fac88fc36fd4", null ],
@@ -24,12 +22,5 @@ var class_ethan_a =
     [ "Sys_reboot", "class_ethan_a.html#acab25a5c727c80dab014860c80478171", null ],
     [ "Sys_rebootOnBootloader", "class_ethan_a.html#a563bfdfc6b892c4a9e4ed90f432af0ed", null ],
     [ "Sys_setIPAddrAndSubmask", "class_ethan_a.html#ad0c83fc77f1724ad0f2e624cace9055d", null ],
-    [ "Sys_setRTC", "class_ethan_a.html#af516afbe323a6b66bbbe5974cc44a327", null ],
-    [ "ai_max_rate", "class_ethan_a.html#a141585d5d52ac5c617f410b829c2084e", null ],
-    [ "ai_module", "class_ethan_a.html#a6f8e049a6eb2b357607f149ffee17f54", null ],
-    [ "ai_ratio", "class_ethan_a.html#a25d72360ae725ec0915ec7bb96400f8f", null ],
-    [ "ai_variable", "class_ethan_a.html#abe3b47a7d9c2e58174db768fd3a0de27", null ],
-    [ "eth_device", "class_ethan_a.html#a784cf4a8432bab7e56d98ada55ba0809", null ],
-    [ "net_module", "class_ethan_a.html#ad1351e6dfe708da01be1d039e312fd76", null ],
-    [ "sys_module", "class_ethan_a.html#aaf3d811e6aa61b1a3882430e63920678", null ]
+    [ "Sys_setRTC", "class_ethan_a.html#af516afbe323a6b66bbbe5974cc44a327", null ]
 ];

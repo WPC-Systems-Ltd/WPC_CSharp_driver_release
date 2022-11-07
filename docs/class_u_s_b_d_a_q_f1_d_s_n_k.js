@@ -21,8 +21,5 @@ var class_u_s_b_d_a_q_f1_d_s_n_k =
     [ "Sys_getSerialNumber", "class_u_s_b_d_a_q_f1_d_s_n_k.html#a1fba7096520757d2356368a6774e93b9", null ],
     [ "Sys_reboot", "class_u_s_b_d_a_q_f1_d_s_n_k.html#a2c0f38e3629d36d5bcb0470aa8deb4de", null ],
     [ "Sys_rebootOnBootloader", "class_u_s_b_d_a_q_f1_d_s_n_k.html#a6ad07bc5334bb6cf532cdca3d85d7094", null ],
-    [ "Sys_setRTC", "class_u_s_b_d_a_q_f1_d_s_n_k.html#a76e58005a6cda228af66d6518ca44dae", null ],
-    [ "dio_module", "class_u_s_b_d_a_q_f1_d_s_n_k.html#aafbcfed31449b437565ef8df121eaed7", null ],
-    [ "sys_module", "class_u_s_b_d_a_q_f1_d_s_n_k.html#ac6ef618a44abcb76f78ab3552dde92c4", null ],
-    [ "usb_device", "class_u_s_b_d_a_q_f1_d_s_n_k.html#aecf711f08942e6dd993af148c76be43d", null ]
+    [ "Sys_setRTC", "class_u_s_b_d_a_q_f1_d_s_n_k.html#a76e58005a6cda228af66d6518ca44dae", null ]
 ];

@@ -22,7 +22,6 @@ var class_wifi_d_a_q_e3_a =
     [ "Sys_getRTC", "class_wifi_d_a_q_e3_a.html#a8905dcacb8fd7522a1e012467a5a3981", null ],
     [ "Sys_getSerialNumber", "class_wifi_d_a_q_e3_a.html#a3743e208f6b532151eaabd451de965b6", null ],
     [ "Sys_reboot", "class_wifi_d_a_q_e3_a.html#a6186fbd8c636d182a4e9bf0722f19c09", null ],
-    [ "Sys_rebootOnBootloader", "class_wifi_d_a_q_e3_a.html#aff4dad8931793fb1c7e2c865120f3276", null ],
     [ "Sys_setIPAddrAndSubmask", "class_wifi_d_a_q_e3_a.html#a55b6f04e1e176e66ee9c58e1ef7cd0b4", null ],
     [ "Sys_setRTC", "class_wifi_d_a_q_e3_a.html#a9362a148b5ea39ce71448b72d9e31ae0", null ],
     [ "Wifi_getWifiBandwidth", "class_wifi_d_a_q_e3_a.html#a0bbd24d461cd82b04a18cb0c899cd1f8", null ],
@@ -30,15 +29,5 @@ var class_wifi_d_a_q_e3_a =
     [ "Wifi_readAccleration", "class_wifi_d_a_q_e3_a.html#aa2c80eb2faf72f8a780bf176b1d6c635", null ],
     [ "Wifi_readBattery", "class_wifi_d_a_q_e3_a.html#ab84cde6d7e1a52f81aecae0878743dbd", null ],
     [ "Wifi_readRSSI", "class_wifi_d_a_q_e3_a.html#a2f577c9bb401c0cd311e1944a939be6f", null ],
-    [ "Wifi_readThermo", "class_wifi_d_a_q_e3_a.html#af3cec0dec8b04891773ea6fc5a5a23b7", null ],
-    [ "Wifi_setWifiBandwidth", "class_wifi_d_a_q_e3_a.html#a2fb072383732aacea86c755e2ba32934", null ],
-    [ "ai_max_rate", "class_wifi_d_a_q_e3_a.html#a46bd6efd8412a867f6ebdb1ad57826d0", null ],
-    [ "ai_module", "class_wifi_d_a_q_e3_a.html#a2e917b6bba9025d17b900696c94e268e", null ],
-    [ "ai_ratio", "class_wifi_d_a_q_e3_a.html#ab96f2985b4750410539f9f359c2b71d5", null ],
-    [ "ai_variable", "class_wifi_d_a_q_e3_a.html#a7d40524a673b59812f5d85e0fcc0fbbe", null ],
-    [ "net_module", "class_wifi_d_a_q_e3_a.html#ade50754567e388729d176316214e806e", null ],
-    [ "sys_module", "class_wifi_d_a_q_e3_a.html#ab0706b93644999653048195e72d25319", null ],
-    [ "sysanl_module", "class_wifi_d_a_q_e3_a.html#a57d3d0b57ca9782be045de2b14d7feab", null ],
-    [ "wifi_device", "class_wifi_d_a_q_e3_a.html#aef9a72cdb48f748756e68cd3975b1941", null ],
-    [ "wifi_module", "class_wifi_d_a_q_e3_a.html#a1a9a296d60661ee7638a746a55072412", null ]
+    [ "Wifi_readThermo", "class_wifi_d_a_q_e3_a.html#af3cec0dec8b04891773ea6fc5a5a23b7", null ]
 ];

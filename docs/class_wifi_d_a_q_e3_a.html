@@ -38,6 +38,7 @@
    <div id="projectname">WPC CSharp driver
    &#160;<span id="projectnumber">0.0.9</span>
    </div>
+   <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -99,7 +100,6 @@ $(document).ready(function(){initNavTree('class_wifi_d_a_q_e3_a.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_wifi_d_a_q_e3_a-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">WifiDAQE3A Class Reference</div>  </div>
@@ -108,11 +108,17 @@ $(document).ready(function(){initNavTree('class_wifi_d_a_q_e3_a.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab4f0a51758a8823a8110757f3ba2c4a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab4f0a51758a8823a8110757f3ba2c4a9">WifiDAQE3A</a> ()</td></tr>
+<tr class="memdesc:ab4f0a51758a8823a8110757f3ba2c4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This device has 8ch 16-bit +/-10V analog input. Max sampling rate is 10KHz.  <a href="#ab4f0a51758a8823a8110757f3ba2c4a9">More...</a><br /></td></tr>
+<tr class="separator:ab4f0a51758a8823a8110757f3ba2c4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37c1cb2989fcd6ccc45e8f05c9a59313"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a37c1cb2989fcd6ccc45e8f05c9a59313">connect</a> (string ip_addr)</td></tr>
+<tr class="memdesc:a37c1cb2989fcd6ccc45e8f05c9a59313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to network device.  <a href="#a37c1cb2989fcd6ccc45e8f05c9a59313">More...</a><br /></td></tr>
 <tr class="separator:a37c1cb2989fcd6ccc45e8f05c9a59313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05cd0d93e5aa89b15f5ed15579091be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab05cd0d93e5aa89b15f5ed15579091be">disconnect</a> ()</td></tr>
+<tr class="memdesc:ab05cd0d93e5aa89b15f5ed15579091be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect network device.  <a href="#ab05cd0d93e5aa89b15f5ed15579091be">More...</a><br /></td></tr>
 <tr class="separator:ab05cd0d93e5aa89b15f5ed15579091be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa2dfb4e4b372c002935da6ece72b60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#abfa2dfb4e4b372c002935da6ece72b60">close</a> ()</td></tr>
+<tr class="memdesc:abfa2dfb4e4b372c002935da6ece72b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close network device handle.  <a href="#abfa2dfb4e4b372c002935da6ece72b60">More...</a><br /></td></tr>
 <tr class="separator:abfa2dfb4e4b372c002935da6ece72b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a0df8f29f7c9dae887027ba94efc57d"><td class="memItemLeft" align="right" valign="top">string []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a8a0df8f29f7c9dae887027ba94efc57d">Sys_getDriverInfo</a> (int timeout=100)</td></tr>
 <tr class="separator:a8a0df8f29f7c9dae887027ba94efc57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,13 +130,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3743e208f6b532151eaabd451de965b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6186fbd8c636d182a4e9bf0722f19c09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a6186fbd8c636d182a4e9bf0722f19c09">Sys_reboot</a> (int timeout=100)</td></tr>
 <tr class="separator:a6186fbd8c636d182a4e9bf0722f19c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4dad8931793fb1c7e2c865120f3276"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aff4dad8931793fb1c7e2c865120f3276">Sys_rebootOnBootloader</a> (int timeout=100)</td></tr>
-<tr class="separator:aff4dad8931793fb1c7e2c865120f3276"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab84cde6d7e1a52f81aecae0878743dbd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ab84cde6d7e1a52f81aecae0878743dbd">Wifi_readBattery</a> (int timeout=100)</td></tr>
+<tr class="memdesc:ab84cde6d7e1a52f81aecae0878743dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get volatge status of battery if the Wifi device has one.  <a href="#ab84cde6d7e1a52f81aecae0878743dbd">More...</a><br /></td></tr>
 <tr class="separator:ab84cde6d7e1a52f81aecae0878743dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3cec0dec8b04891773ea6fc5a5a23b7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#af3cec0dec8b04891773ea6fc5a5a23b7">Wifi_readThermo</a> (int timeout=100)</td></tr>
+<tr class="memdesc:af3cec0dec8b04891773ea6fc5a5a23b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get temperature from thermal sensor if the Wifi device has one.  <a href="#af3cec0dec8b04891773ea6fc5a5a23b7">More...</a><br /></td></tr>
 <tr class="separator:af3cec0dec8b04891773ea6fc5a5a23b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2c80eb2faf72f8a780bf176b1d6c635"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aa2c80eb2faf72f8a780bf176b1d6c635">Wifi_readAccleration</a> (int timeout=100)</td></tr>
+<tr class="memdesc:aa2c80eb2faf72f8a780bf176b1d6c635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get acceleration from sensor if the Wifi device has one.  <a href="#aa2c80eb2faf72f8a780bf176b1d6c635">More...</a><br /></td></tr>
 <tr class="separator:aa2c80eb2faf72f8a780bf176b1d6c635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d5e0eea4bbe0b546bf5f746dbde2234"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a4d5e0eea4bbe0b546bf5f746dbde2234">Sys_getIPAddrAndSubmask</a> (int timeout=100)</td></tr>
 <tr class="separator:a4d5e0eea4bbe0b546bf5f746dbde2234"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,13 +148,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6d35a825af39ac9ca27fecfdb33872fb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a6d35a825af39ac9ca27fecfdb33872fb">Sys_getGateway</a> (int timeout=100)</td></tr>
 <tr class="separator:a6d35a825af39ac9ca27fecfdb33872fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f577c9bb401c0cd311e1944a939be6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a2f577c9bb401c0cd311e1944a939be6f">Wifi_readRSSI</a> (int timeout=100)</td></tr>
+<tr class="memdesc:a2f577c9bb401c0cd311e1944a939be6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Wifi RSSI signal of the connected Wifi device.  <a href="#a2f577c9bb401c0cd311e1944a939be6f">More...</a><br /></td></tr>
 <tr class="separator:a2f577c9bb401c0cd311e1944a939be6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18abf3b53c3d865a3f3edd652fb1f490"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a18abf3b53c3d865a3f3edd652fb1f490">Wifi_getWifiConfiguration</a> (int timeout=100)</td></tr>
+<tr class="memdesc:a18abf3b53c3d865a3f3edd652fb1f490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Wifi reconnection times and AP stay time.  <a href="#a18abf3b53c3d865a3f3edd652fb1f490">More...</a><br /></td></tr>
 <tr class="separator:a18abf3b53c3d865a3f3edd652fb1f490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bbd24d461cd82b04a18cb0c899cd1f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a0bbd24d461cd82b04a18cb0c899cd1f8">Wifi_getWifiBandwidth</a> (int timeout=100)</td></tr>
+<tr class="memdesc:a0bbd24d461cd82b04a18cb0c899cd1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bandwidth from Wifi device.  <a href="#a0bbd24d461cd82b04a18cb0c899cd1f8">More...</a><br /></td></tr>
 <tr class="separator:a0bbd24d461cd82b04a18cb0c899cd1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fb072383732aacea86c755e2ba32934"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a2fb072383732aacea86c755e2ba32934">Wifi_setWifiBandwidth</a> (int bandwidth, int timeout=100)</td></tr>
-<tr class="separator:a2fb072383732aacea86c755e2ba32934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae01df0c0d906cf15525b75de59f9b135"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#ae01df0c0d906cf15525b75de59f9b135">AI_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:ae01df0c0d906cf15525b75de59f9b135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4ab79881a818af187ab4b54abe2ba7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#aad4ab79881a818af187ab4b54abe2ba7">AI_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
@@ -163,44 +171,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1084e7b85d38118b58955db46e79c860"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a1084e7b85d38118b58955db46e79c860">AI_stop</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a1084e7b85d38118b58955db46e79c860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965bd644f6fd47774de3e7b64e42526c"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a965bd644f6fd47774de3e7b64e42526c">AI_readBufferStatus</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a965bd644f6fd47774de3e7b64e42526c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get AI buffer status of remote device.  <a href="#a965bd644f6fd47774de3e7b64e42526c">More...</a><br /></td></tr>
 <tr class="separator:a965bd644f6fd47774de3e7b64e42526c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a404c272ca133bf42332f10abb939d7a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a404c272ca133bf42332f10abb939d7a0">AI_clearBufferStatus</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a404c272ca133bf42332f10abb939d7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear AI buffer counter of remote device.  <a href="#a404c272ca133bf42332f10abb939d7a0">More...</a><br /></td></tr>
 <tr class="separator:a404c272ca133bf42332f10abb939d7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accdeb055a2673b573c372fac222575c0"><td class="memItemLeft" align="right" valign="top">List&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#accdeb055a2673b573c372fac222575c0">AI_readOnDemand</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:accdeb055a2673b573c372fac222575c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809badbf5ab8f0c5bbcf1972eac1e65d"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wifi_d_a_q_e3_a.html#a809badbf5ab8f0c5bbcf1972eac1e65d">AI_readStreaming</a> (int port, int num_of_samples, int delay)</td></tr>
 <tr class="separator:a809badbf5ab8f0c5bbcf1972eac1e65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a46bd6efd8412a867f6ebdb1ad57826d0"><td class="memItemLeft" align="right" valign="top"><a id="a46bd6efd8412a867f6ebdb1ad57826d0"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>ai_max_rate</b> = 10000</td></tr>
-<tr class="separator:a46bd6efd8412a867f6ebdb1ad57826d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab96f2985b4750410539f9f359c2b71d5"><td class="memItemLeft" align="right" valign="top"><a id="ab96f2985b4750410539f9f359c2b71d5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>ai_ratio</b> = (float)(10.0 / 65536.0)</td></tr>
-<tr class="separator:ab96f2985b4750410539f9f359c2b71d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d40524a673b59812f5d85e0fcc0fbbe"><td class="memItemLeft" align="right" valign="top"><a id="a7d40524a673b59812f5d85e0fcc0fbbe"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ai_variable</b> = true</td></tr>
-<tr class="separator:a7d40524a673b59812f5d85e0fcc0fbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e917b6bba9025d17b900696c94e268e"><td class="memItemLeft" align="right" valign="top"><a id="a2e917b6bba9025d17b900696c94e268e"></a>
-AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td></tr>
-<tr class="separator:a2e917b6bba9025d17b900696c94e268e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade50754567e388729d176316214e806e"><td class="memItemLeft" align="right" valign="top"><a id="ade50754567e388729d176316214e806e"></a>
-NetworkModule&#160;</td><td class="memItemRight" valign="bottom"><b>net_module</b></td></tr>
-<tr class="separator:ade50754567e388729d176316214e806e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0706b93644999653048195e72d25319"><td class="memItemLeft" align="right" valign="top"><a id="ab0706b93644999653048195e72d25319"></a>
-SystemModule&#160;</td><td class="memItemRight" valign="bottom"><b>sys_module</b></td></tr>
-<tr class="separator:ab0706b93644999653048195e72d25319"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57d3d0b57ca9782be045de2b14d7feab"><td class="memItemLeft" align="right" valign="top"><a id="a57d3d0b57ca9782be045de2b14d7feab"></a>
-SystemAnalogModule&#160;</td><td class="memItemRight" valign="bottom"><b>sysanl_module</b></td></tr>
-<tr class="separator:a57d3d0b57ca9782be045de2b14d7feab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef9a72cdb48f748756e68cd3975b1941"><td class="memItemLeft" align="right" valign="top"><a id="aef9a72cdb48f748756e68cd3975b1941"></a>
-WifiDevice&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_device</b></td></tr>
-<tr class="separator:aef9a72cdb48f748756e68cd3975b1941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a9a296d60661ee7638a746a55072412"><td class="memItemLeft" align="right" valign="top"><a id="a1a9a296d60661ee7638a746a55072412"></a>
-WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b></td></tr>
-<tr class="separator:a1a9a296d60661ee7638a746a55072412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#_a2">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#_a2">Get_WifiDAQ_status.cs</a>.</dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab4f0a51758a8823a8110757f3ba2c4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f0a51758a8823a8110757f3ba2c4a9">&#9670;&nbsp;</a></span>WifiDAQE3A()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WifiDAQE3A.WifiDAQE3A </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This device has 8ch 16-bit +/-10V analog input. Max sampling rate is 10KHz. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a404c272ca133bf42332f10abb939d7a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a404c272ca133bf42332f10abb939d7a0">&#9670;&nbsp;</a></span>AI_clearBufferStatus()</h2>
@@ -235,6 +246,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Clear AI buffer counter of remote device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -271,6 +292,15 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close AI port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -353,6 +383,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
 </table>
 </div><div class="memdoc">
 
+<p>Get AI buffer status of remote device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of buffer zero times, buffer full times, buffer remain and buffer max values. </dd></dl>
+
 </div>
 </div>
 <a id="accdeb055a2673b573c372fac222575c0"></a>
@@ -388,6 +428,15 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Read one sample from AI port. This is use in "on demand" mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of float value measured from channels. </dd></dl>
 
 </div>
 </div>
@@ -430,6 +479,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Read multiple samples from AI port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">num_of_samples</td><td>Amount of data to get from the function call.</td></tr>
+    <tr><td class="paramname">delay</td><td>Time delay (milisecond) before getting data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of list of float. AI data where each element of <code>sample_list</code> is a sample. A sample is a list of values measured from different channels. </dd></dl>
 
 </div>
 </div>
@@ -472,6 +531,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configure acquisition mode setting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>0:On demand, 1:N-samples, 2:Continuous.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -514,6 +583,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configure sample points to acquisition for N-samples mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">sample_points</td><td>Number of sample points. Continuous.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -556,6 +635,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configure sampling rate to acquisition for N-samples and continuous mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">sampling_rate</td><td>AI sampling rate.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -592,6 +681,15 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Start N samples or continuous AI acquisition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -628,6 +726,15 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stop N samples or continuous AI acquisition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -653,6 +760,10 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Close network device handle. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a10">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a9">Get_WifiDAQ_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -680,6 +791,17 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
 </table>
 </div><div class="memdoc">
 
+<p>Connect to network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a3">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a3">Get_WifiDAQ_status.cs</a>.</dd>
+</dl>
+
 </div>
 </div>
 <a id="ab05cd0d93e5aa89b15f5ed15579091be"></a>
@@ -704,6 +826,11 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Disconnect network device. </p>
+<dl class="section return"><dt>Returns</dt><dd>Disconnection status.</dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a9">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a8">Get_WifiDAQ_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -730,6 +857,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get device firmware information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a4">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a4">Get_WifiDAQ_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -756,6 +893,14 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get geteway from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Network gateway. </dd></dl>
 
 </div>
 </div>
@@ -782,6 +927,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get IP address and subnet mask from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of IP address and subnet mask. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a7">Get_network_info.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -808,6 +963,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get MAC address from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>MAC address. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a8">Get_network_info.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -834,6 +999,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Date and time represented by "A-B-C, D:E:F". </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a6">Get_network_info.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -860,6 +1035,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get serial number from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Serial number represented by string of 8 characters. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a5">Get_network_info.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -886,32 +1071,14 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="aff4dad8931793fb1c7e2c865120f3276"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff4dad8931793fb1c7e2c865120f3276">&#9670;&nbsp;</a></span>Sys_rebootOnBootloader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int WifiDAQE3A.Sys_rebootOnBootloader </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Reboot from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -954,6 +1121,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set IP address and subnet mask to the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
+    <tr><td class="paramname">subnet_mask</td><td>Subnet mask.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1020,6 +1197,20 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>year (CE).</td></tr>
+    <tr><td class="paramname">month</td><td>month (1~12).</td></tr>
+    <tr><td class="paramname">day</td><td>day (1~31).</td></tr>
+    <tr><td class="paramname">hour</td><td>hour (24-hour clock) (0~23).(CE).</td></tr>
+    <tr><td class="paramname">minute</td><td>minute (0~59).</td></tr>
+    <tr><td class="paramname">second</td><td>second (0~59).</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1047,6 +1238,19 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
 </table>
 </div><div class="memdoc">
 
+<p>Get bandwidth from Wifi device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>1 : Bandwidth is HT20.</li>
+<li>2 : Bandwidth is HT40. </li>
+</ul>
+</dd></dl>
+
 </div>
 </div>
 <a id="a18abf3b53c3d865a3f3edd652fb1f490"></a>
@@ -1072,6 +1276,15 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get Wifi reconnection times and AP stay time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of Wifi connection retry times and Time of staying in AP mode in second. </dd></dl>
 
 </div>
 </div>
@@ -1099,6 +1312,15 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
 </table>
 </div><div class="memdoc">
 
+<p>Get acceleration from sensor if the Wifi device has one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of accelerations in x-, y-, and z-axis. </dd></dl>
+
 </div>
 </div>
 <a id="ab84cde6d7e1a52f81aecae0878743dbd"></a>
@@ -1124,6 +1346,17 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get volatge status of battery if the Wifi device has one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Battery level in mV. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a6">Get_WifiDAQ_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1151,6 +1384,17 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
 </table>
 </div><div class="memdoc">
 
+<p>Get Wifi RSSI signal of the connected Wifi device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>RSSI signal in dBm. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a5">Get_WifiDAQ_status.cs</a>.</dd>
+</dl>
+
 </div>
 </div>
 <a id="af3cec0dec8b04891773ea6fc5a5a23b7"></a>
@@ -1177,41 +1421,16 @@ WifiModule&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_module</b>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a2fb072383732aacea86c755e2ba32934"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fb072383732aacea86c755e2ba32934">&#9670;&nbsp;</a></span>Wifi_setWifiBandwidth()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int WifiDAQE3A.Wifi_setWifiBandwidth </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bandwidth</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Get temperature from thermal sensor if the Wifi device has one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Temperature in Celsius. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a7">Get_WifiDAQ_status.cs</a>.</dd>
+</dl>
 
 </div>
 </div>

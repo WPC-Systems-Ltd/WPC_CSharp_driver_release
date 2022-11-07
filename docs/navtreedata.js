@@ -44,14 +44,16 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ]
       ] ]
-    ] ]
+    ] ],
+    [ "Examples", "examples.html", "examples" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"class_u_s_b_d_a_q_f1_r_d.html#a0dc43d2720d5c127af4dd471342b7621"
+"_a_i__n_samples_in_loop_8cs-example.html",
+"class_u_s_b_d_a_q_f1_c_d.html#ad0cc451af331086579ebc5364762d55e",
+"class_wifi_d_a_q_e3_a.html#aad4ab79881a818af187ab4b54abe2ba7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

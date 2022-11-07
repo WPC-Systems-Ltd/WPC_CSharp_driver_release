@@ -38,6 +38,7 @@
    <div id="projectname">WPC CSharp driver
    &#160;<span id="projectnumber">0.0.9</span>
    </div>
+   <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -99,7 +100,6 @@ $(document).ready(function(){initNavTree('class_ethan_a.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_ethan_a-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">EthanA Class Reference</div>  </div>
@@ -108,6 +108,9 @@ $(document).ready(function(){initNavTree('class_ethan_a.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3cd69048d5b368a5ddfbadafcdcc1a1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_a.html#a3cd69048d5b368a5ddfbadafcdcc1a1a">EthanA</a> ()</td></tr>
+<tr class="memdesc:a3cd69048d5b368a5ddfbadafcdcc1a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This device has 8ch simultaneous voltage input. Max sampling rate is 20KHz.  <a href="#a3cd69048d5b368a5ddfbadafcdcc1a1a">More...</a><br /></td></tr>
+<tr class="separator:a3cd69048d5b368a5ddfbadafcdcc1a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49703dc9ffffbab64377999e2f8d02c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_a.html#ab49703dc9ffffbab64377999e2f8d02c">connect</a> (string serial_number)</td></tr>
 <tr class="separator:ab49703dc9ffffbab64377999e2f8d02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5678fc589edfb86a8b2c9d557ce04d62"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_a.html#a5678fc589edfb86a8b2c9d557ce04d62">disconnect</a> ()</td></tr>
@@ -148,42 +151,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae8ab3e1e1ba8d21744d226efdb016b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab15b2e4815728b39d3d33037e08d1127"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_a.html#ab15b2e4815728b39d3d33037e08d1127">AI_stop</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:ab15b2e4815728b39d3d33037e08d1127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45a571dcd47ba44798eb621da585f38a"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_a.html#a45a571dcd47ba44798eb621da585f38a">AI_readBufferStatus</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
-<tr class="separator:a45a571dcd47ba44798eb621da585f38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6471d3b1fb9fe02ee759d94b682fc8f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_a.html#a6471d3b1fb9fe02ee759d94b682fc8f8">AI_clearBufferStatus</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
-<tr class="separator:a6471d3b1fb9fe02ee759d94b682fc8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6df1edbdb6a01adf1539d26972e04296"><td class="memItemLeft" align="right" valign="top">List&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_a.html#a6df1edbdb6a01adf1539d26972e04296">AI_readOnDemand</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a6df1edbdb6a01adf1539d26972e04296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c0d62ab263ecda048ff68fdaa1593a4"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_a.html#a1c0d62ab263ecda048ff68fdaa1593a4">AI_readStreaming</a> (int port, int num_of_samples, int delay)</td></tr>
 <tr class="separator:a1c0d62ab263ecda048ff68fdaa1593a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a141585d5d52ac5c617f410b829c2084e"><td class="memItemLeft" align="right" valign="top"><a id="a141585d5d52ac5c617f410b829c2084e"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>ai_max_rate</b> = 20000</td></tr>
-<tr class="separator:a141585d5d52ac5c617f410b829c2084e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d72360ae725ec0915ec7bb96400f8f"><td class="memItemLeft" align="right" valign="top"><a id="a25d72360ae725ec0915ec7bb96400f8f"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>ai_ratio</b> = (float)(20.0 / 65536.0)</td></tr>
-<tr class="separator:a25d72360ae725ec0915ec7bb96400f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3b47a7d9c2e58174db768fd3a0de27"><td class="memItemLeft" align="right" valign="top"><a id="abe3b47a7d9c2e58174db768fd3a0de27"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ai_variable</b> = false</td></tr>
-<tr class="separator:abe3b47a7d9c2e58174db768fd3a0de27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a784cf4a8432bab7e56d98ada55ba0809"><td class="memItemLeft" align="right" valign="top"><a id="a784cf4a8432bab7e56d98ada55ba0809"></a>
-ETHDevice&#160;</td><td class="memItemRight" valign="bottom"><b>eth_device</b></td></tr>
-<tr class="separator:a784cf4a8432bab7e56d98ada55ba0809"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf3d811e6aa61b1a3882430e63920678"><td class="memItemLeft" align="right" valign="top"><a id="aaf3d811e6aa61b1a3882430e63920678"></a>
-SystemModule&#160;</td><td class="memItemRight" valign="bottom"><b>sys_module</b></td></tr>
-<tr class="separator:aaf3d811e6aa61b1a3882430e63920678"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1351e6dfe708da01be1d039e312fd76"><td class="memItemLeft" align="right" valign="top"><a id="ad1351e6dfe708da01be1d039e312fd76"></a>
-NetworkModule&#160;</td><td class="memItemRight" valign="bottom"><b>net_module</b></td></tr>
-<tr class="separator:ad1351e6dfe708da01be1d039e312fd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f8e049a6eb2b357607f149ffee17f54"><td class="memItemLeft" align="right" valign="top"><a id="a6f8e049a6eb2b357607f149ffee17f54"></a>
-AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td></tr>
-<tr class="separator:a6f8e049a6eb2b357607f149ffee17f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6471d3b1fb9fe02ee759d94b682fc8f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6471d3b1fb9fe02ee759d94b682fc8f8">&#9670;&nbsp;</a></span>AI_clearBufferStatus()</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3cd69048d5b368a5ddfbadafcdcc1a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd69048d5b368a5ddfbadafcdcc1a1a">&#9670;&nbsp;</a></span>EthanA()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,21 +167,10 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int EthanA.AI_clearBufferStatus </td>
+          <td class="memname">EthanA.EthanA </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -216,8 +180,11 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
 </table>
 </div><div class="memdoc">
 
+<p>This device has 8ch simultaneous voltage input. Max sampling rate is 20KHz. </p>
+
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5df8d27db8a9697f219beda53cc57d56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5df8d27db8a9697f219beda53cc57d56">&#9670;&nbsp;</a></span>AI_close()</h2>
 
@@ -251,6 +218,15 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close AI port on WPC DAQ device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -299,42 +275,6 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
 
 </div>
 </div>
-<a id="a45a571dcd47ba44798eb621da585f38a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45a571dcd47ba44798eb621da585f38a">&#9670;&nbsp;</a></span>AI_readBufferStatus()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;int&gt; EthanA.AI_readBufferStatus </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6df1edbdb6a01adf1539d26972e04296"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6df1edbdb6a01adf1539d26972e04296">&#9670;&nbsp;</a></span>AI_readOnDemand()</h2>
 
@@ -368,6 +308,15 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Read one sample from AI port. This is use in "on demand" mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of float value measured from channels. </dd></dl>
 
 </div>
 </div>
@@ -410,6 +359,16 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Read multiple samples from AI port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">num_of_samples</td><td>Amount of data to get from the function call.</td></tr>
+    <tr><td class="paramname">delay</td><td>Time delay (milisecond) before getting data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of list of float. AI data where each element of <code>sample_list</code> is a sample. A sample is a list of values measured from different channels. </dd></dl>
 
 </div>
 </div>
@@ -452,6 +411,16 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configure acquisition mode setting. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">mode</td><td>0:On demand, 1:N-samples, 2:Continuous.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -494,6 +463,16 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configure sample points to acquisition for N-samples mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">sample_points</td><td>Number of sample points. Continuous.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -536,6 +515,16 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configure sampling rate to acquisition for N-samples and continuous mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">sampling_rate</td><td>AI sampling rate.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -572,6 +561,15 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Start N samples or continuous AI acquisition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -608,6 +606,15 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stop N samples or continuous AI acquisition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -633,6 +640,7 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close network device handle. </p>
 
 </div>
 </div>
@@ -659,6 +667,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Connect to network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
 
 </div>
 </div>
@@ -684,6 +700,8 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Disconnect network device. </p>
+<dl class="section return"><dt>Returns</dt><dd>Disconnection status.</dd></dl>
 
 </div>
 </div>
@@ -710,6 +728,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get device firmware information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
 
 </div>
 </div>
@@ -736,6 +762,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get geteway from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Network gateway. </dd></dl>
 
 </div>
 </div>
@@ -762,6 +796,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get IP address and subnet mask from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of IP address and subnet mask. </dd></dl>
 
 </div>
 </div>
@@ -788,6 +830,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get MAC address from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>MAC address. </dd></dl>
 
 </div>
 </div>
@@ -814,6 +864,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Date and time represented by "A-B-C, D:E:F". </dd></dl>
 
 </div>
 </div>
@@ -840,6 +898,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get serial number from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Serial number represented by string of 8 characters. </dd></dl>
 
 </div>
 </div>
@@ -866,6 +932,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Reboot from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -892,6 +966,14 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Reboot on bootloader from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -934,6 +1016,16 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set IP address and subnet mask to the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
+    <tr><td class="paramname">subnet_mask</td><td>Subnet mask.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1000,6 +1092,20 @@ AIModule&#160;</td><td class="memItemRight" valign="bottom"><b>ai_module</b></td
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>year (CE).</td></tr>
+    <tr><td class="paramname">month</td><td>month (1~12).</td></tr>
+    <tr><td class="paramname">day</td><td>day (1~31).</td></tr>
+    <tr><td class="paramname">hour</td><td>hour (24-hour clock) (0~23).(CE).</td></tr>
+    <tr><td class="paramname">minute</td><td>minute (0~59).</td></tr>
+    <tr><td class="paramname">second</td><td>second (0~59).</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>

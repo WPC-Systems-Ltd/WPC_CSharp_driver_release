@@ -38,6 +38,7 @@
    <div id="projectname">WPC CSharp driver
    &#160;<span id="projectnumber">0.0.9</span>
    </div>
+   <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -99,7 +100,6 @@ $(document).ready(function(){initNavTree('class_ethan_d.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_ethan_d-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">EthanD Class Reference</div>  </div>
@@ -108,6 +108,9 @@ $(document).ready(function(){initNavTree('class_ethan_d.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5a206ccb683eb71704925f494575f8f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_d.html#a5a206ccb683eb71704925f494575f8f0">EthanD</a> ()</td></tr>
+<tr class="memdesc:a5a206ccb683eb71704925f494575f8f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This device has 8ch 24V digital input &amp; 6ch 24V digital output.  <a href="#a5a206ccb683eb71704925f494575f8f0">More...</a><br /></td></tr>
+<tr class="separator:a5a206ccb683eb71704925f494575f8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1909126385d7bd89ce67ae1428fe51a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_d.html#a1909126385d7bd89ce67ae1428fe51a9">connect</a> (string ip_addr)</td></tr>
 <tr class="separator:a1909126385d7bd89ce67ae1428fe51a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab61873b9af81e49bf128a152c4f9fa59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_d.html#ab61873b9af81e49bf128a152c4f9fa59">disconnect</a> ()</td></tr>
@@ -158,22 +161,35 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:add1d554c958470a471c1f973dae1ca9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17aa1dfac97a129be088ab8a4ee517f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ethan_d.html#a17aa1dfac97a129be088ab8a4ee517f2">DO_closePins</a> (int port, List&lt; int &gt; pin_index, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a17aa1dfac97a129be088ab8a4ee517f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a7672f794edf2ba9c595a341686dcd748"><td class="memItemLeft" align="right" valign="top"><a id="a7672f794edf2ba9c595a341686dcd748"></a>
-ETHDevice&#160;</td><td class="memItemRight" valign="bottom"><b>eth_device</b></td></tr>
-<tr class="separator:a7672f794edf2ba9c595a341686dcd748"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5fdd8964f99c5f9d5b70f760afa64b2"><td class="memItemLeft" align="right" valign="top"><a id="af5fdd8964f99c5f9d5b70f760afa64b2"></a>
-SystemModule&#160;</td><td class="memItemRight" valign="bottom"><b>sys_module</b></td></tr>
-<tr class="separator:af5fdd8964f99c5f9d5b70f760afa64b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d4056537f75595cb3ecccf6060d6bf"><td class="memItemLeft" align="right" valign="top"><a id="ad9d4056537f75595cb3ecccf6060d6bf"></a>
-NetworkModule&#160;</td><td class="memItemRight" valign="bottom"><b>net_module</b></td></tr>
-<tr class="separator:ad9d4056537f75595cb3ecccf6060d6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cee3bcb20d2e9fed1f927006328d212"><td class="memItemLeft" align="right" valign="top"><a id="a8cee3bcb20d2e9fed1f927006328d212"></a>
-DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></td></tr>
-<tr class="separator:a8cee3bcb20d2e9fed1f927006328d212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5a206ccb683eb71704925f494575f8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a206ccb683eb71704925f494575f8f0">&#9670;&nbsp;</a></span>EthanD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EthanD.EthanD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This device has 8ch 24V digital input &amp; 6ch 24V digital output. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a01bfb1e30cca238e6abfd77cbc1c58c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01bfb1e30cca238e6abfd77cbc1c58c5">&#9670;&nbsp;</a></span>close()</h2>
@@ -197,6 +213,7 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close network device handle. </p>
 
 </div>
 </div>
@@ -223,6 +240,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Connect to network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
 
 </div>
 </div>
@@ -265,6 +290,16 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close specific pin to digital intput. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to close. For example, you want to close pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -301,6 +336,15 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close all pins in specific port with digital input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -343,6 +387,16 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open specific pin to digital intput. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to set to digital intput. For example, you want to open pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -379,6 +433,15 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open all pins in specific port with digital input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -421,6 +484,16 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Read digital pin state in specific pin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to read. For example, you want to read pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of pin state. </dd></dl>
 
 </div>
 </div>
@@ -482,6 +555,8 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Disconnect network device. </p>
+<dl class="section return"><dt>Returns</dt><dd>Disconnection status.</dd></dl>
 
 </div>
 </div>
@@ -524,6 +599,16 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close specific pin with digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to close. For example, you want to close pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -560,6 +645,15 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Close all pins in specific port with digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -602,6 +696,16 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open specific pin to digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to set to digital output. For example, you want to open pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -638,6 +742,15 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open all pins in specific port with digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -686,6 +799,17 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Open specific pin to digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">pin_index</td><td>Pin number you want to set. For example, you want to open pin 0, pin 1 and pin 5. pin_index = [0,1,5]. </td></tr>
+    <tr><td class="paramname">value</td><td>Pin number you want to set high(1) or low(0). For example, set pin 0 and pin 1 to high, and pin 5 to low. value = [1,1,0]. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -728,6 +852,16 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Write all pins state in specific port with digital output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
+    <tr><td class="paramname">value</td><td>Pin number you want to set digital high(1) or low(0). For example, you want to write pin 0 and pin 2 to high, others to low. [0,0,0,0,0,1,0,1] in LSB. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -754,6 +888,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get device firmware information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
 
 </div>
 </div>
@@ -780,6 +922,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get geteway from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Network gateway. </dd></dl>
 
 </div>
 </div>
@@ -806,6 +956,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get IP address and subnet mask from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of IP address and subnet mask. </dd></dl>
 
 </div>
 </div>
@@ -832,6 +990,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get MAC address from the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>MAC address. </dd></dl>
 
 </div>
 </div>
@@ -858,6 +1024,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Date and time represented by "A-B-C, D:E:F". </dd></dl>
 
 </div>
 </div>
@@ -884,6 +1058,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get serial number from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Serial number represented by string of 8 characters. </dd></dl>
 
 </div>
 </div>
@@ -910,6 +1092,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Reboot from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -936,6 +1126,14 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Reboot on bootloader from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -978,6 +1176,16 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set IP address and subnet mask to the connected network device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
+    <tr><td class="paramname">subnet_mask</td><td>Subnet mask.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1044,6 +1252,20 @@ DIOModule&#160;</td><td class="memItemRight" valign="bottom"><b>dio_module</b></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>year (CE).</td></tr>
+    <tr><td class="paramname">month</td><td>month (1~12).</td></tr>
+    <tr><td class="paramname">day</td><td>day (1~31).</td></tr>
+    <tr><td class="paramname">hour</td><td>hour (24-hour clock) (0~23).(CE).</td></tr>
+    <tr><td class="paramname">minute</td><td>minute (0~59).</td></tr>
+    <tr><td class="paramname">second</td><td>second (0~59).</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>

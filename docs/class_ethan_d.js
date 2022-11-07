@@ -25,9 +25,5 @@ var class_ethan_d =
     [ "Sys_reboot", "class_ethan_d.html#a6b4afedf0359ad2f8a158fd5a42c82dc", null ],
     [ "Sys_rebootOnBootloader", "class_ethan_d.html#a42b282a6b06e8fe9e1200e5679d49028", null ],
     [ "Sys_setIPAddrAndSubmask", "class_ethan_d.html#a5e1cea08b9bf1fab7f0afa90f639231f", null ],
-    [ "Sys_setRTC", "class_ethan_d.html#a7cb1f6a85a731dbe7aa1f89366f59e6d", null ],
-    [ "dio_module", "class_ethan_d.html#a8cee3bcb20d2e9fed1f927006328d212", null ],
-    [ "eth_device", "class_ethan_d.html#a7672f794edf2ba9c595a341686dcd748", null ],
-    [ "net_module", "class_ethan_d.html#ad9d4056537f75595cb3ecccf6060d6bf", null ],
-    [ "sys_module", "class_ethan_d.html#af5fdd8964f99c5f9d5b70f760afa64b2", null ]
+    [ "Sys_setRTC", "class_ethan_d.html#a7cb1f6a85a731dbe7aa1f89366f59e6d", null ]
 ];

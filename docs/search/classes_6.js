@@ -1,26 +1,5 @@
 var searchData=
 [
-  ['i2caddresssizenotvailderror',['I2CAddressSizeNotVaildError',['../class_i2_c_address_size_not_vaild_error.html',1,'']]],
-  ['i2cclocknotsupporterror',['I2CClockNotSupportError',['../class_i2_c_clock_not_support_error.html',1,'']]],
-  ['i2cmodule',['I2CModule',['../class_i2_c_module.html',1,'']]],
-  ['i2cportnotavaliableerror',['I2CPortNotAvaliableError',['../class_i2_c_port_not_avaliable_error.html',1,'']]],
-  ['iaimodule',['IAIModule',['../interface_i_a_i_module.html',1,'']]],
-  ['iaomodule',['IAOModule',['../interface_i_a_o_module.html',1,'']]],
-  ['ibroadcastdevice',['IBroadcastDevice',['../interface_i_broadcast_device.html',1,'']]],
-  ['ibroadcastmodule',['IBroadcastModule',['../interface_i_broadcast_module.html',1,'']]],
-  ['icanmodule',['ICANModule',['../interface_i_c_a_n_module.html',1,'']]],
-  ['idiomodule',['IDIOModule',['../interface_i_d_i_o_module.html',1,'']]],
-  ['ii2cmodule',['II2CModule',['../interface_i_i2_c_module.html',1,'']]],
-  ['inetworkdevice',['INetworkDevice',['../interface_i_network_device.html',1,'']]],
-  ['inetworkmodule',['INetworkModule',['../interface_i_network_module.html',1,'']]],
-  ['inputdatanotinrangeerror',['InputDataNotInRangeError',['../class_input_data_not_in_range_error.html',1,'']]],
-  ['inputtypenotconsisitenterror',['InputTypeNotConsisitentError',['../class_input_type_not_consisitent_error.html',1,'']]],
-  ['inputtypenotcorrecterror',['InputTypeNotCorrectError',['../class_input_type_not_correct_error.html',1,'']]],
-  ['ispimodule',['ISPIModule',['../interface_i_s_p_i_module.html',1,'']]],
-  ['isystemanalogmodule',['ISystemAnalogModule',['../interface_i_system_analog_module.html',1,'']]],
-  ['isystemmodule',['ISystemModule',['../interface_i_system_module.html',1,'']]],
-  ['ithermalmodule',['IThermalModule',['../interface_i_thermal_module.html',1,'']]],
-  ['ithermocouplemodule',['IThermocoupleModule',['../interface_i_thermocouple_module.html',1,'']]],
-  ['iuartmodule',['IUARTModule',['../interface_i_u_a_r_t_module.html',1,'']]],
-  ['iwifimodule',['IWifiModule',['../interface_i_wifi_module.html',1,'']]]
+  ['rtd_5fread_5fchannel_5fdata',['RTD_read_channel_data',['../class_r_t_d__read__channel__data.html',1,'']]],
+  ['rtd_5fread_5fchannel_5fstatus',['RTD_read_channel_status',['../class_r_t_d__read__channel__status.html',1,'']]]
 ];

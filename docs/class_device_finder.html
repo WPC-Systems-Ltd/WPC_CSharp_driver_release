@@ -38,6 +38,7 @@
    <div id="projectname">WPC CSharp driver
    &#160;<span id="projectnumber">0.0.9</span>
    </div>
+   <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -107,21 +108,59 @@ $(document).ready(function(){initNavTree('class_device_finder.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aeef53582e04039a6aa8fa80bd60ca7a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#aeef53582e04039a6aa8fa80bd60ca7a6">DeviceFinder</a> ()</td></tr>
+<tr class="separator:aeef53582e04039a6aa8fa80bd60ca7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40cf4c5d2fcca2f12d2c172ec8dd1f4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#a40cf4c5d2fcca2f12d2c172ec8dd1f4b">connect</a> ()</td></tr>
+<tr class="memdesc:a40cf4c5d2fcca2f12d2c172ec8dd1f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to broadcast device.  <a href="#a40cf4c5d2fcca2f12d2c172ec8dd1f4b">More...</a><br /></td></tr>
 <tr class="separator:a40cf4c5d2fcca2f12d2c172ec8dd1f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a027b484fb6c67b4ec0bf2efd58e2ed99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#a027b484fb6c67b4ec0bf2efd58e2ed99">disconnect</a> ()</td></tr>
+<tr class="memdesc:a027b484fb6c67b4ec0bf2efd58e2ed99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disonnect broadcast device.  <a href="#a027b484fb6c67b4ec0bf2efd58e2ed99">More...</a><br /></td></tr>
 <tr class="separator:a027b484fb6c67b4ec0bf2efd58e2ed99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb72e70d150fa3bbeea1a5f8270df1a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#adb72e70d150fa3bbeea1a5f8270df1a1">close</a> ()</td></tr>
+<tr class="memdesc:adb72e70d150fa3bbeea1a5f8270df1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close broadcast device handle.  <a href="#adb72e70d150fa3bbeea1a5f8270df1a1">More...</a><br /></td></tr>
 <tr class="separator:adb72e70d150fa3bbeea1a5f8270df1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcb169920a450c4415eeb74ce74f9897"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#adcb169920a450c4415eeb74ce74f9897">Bcst_enumerateUSBDevices</a> ()</td></tr>
+<tr class="memdesc:adcb169920a450c4415eeb74ce74f9897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all USB devices  <a href="#adcb169920a450c4415eeb74ce74f9897">More...</a><br /></td></tr>
 <tr class="separator:adcb169920a450c4415eeb74ce74f9897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7571f7418a2aa3f7ce20b13ad1857fb8"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#a7571f7418a2aa3f7ce20b13ad1857fb8">Bcst_enumerateNetworkDevices</a> (int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a7571f7418a2aa3f7ce20b13ad1857fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get device information with broadcast mode.  <a href="#a7571f7418a2aa3f7ce20b13ad1857fb8">More...</a><br /></td></tr>
 <tr class="separator:a7571f7418a2aa3f7ce20b13ad1857fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa47616ded81ca97c73115ac1ba92a4c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#aa47616ded81ca97c73115ac1ba92a4c1">Bcst_checkMACAndSetIP</a> (string ip_addr, string mac_addr, string subnet_mask)</td></tr>
+<tr class="memdesc:aa47616ded81ca97c73115ac1ba92a4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set IP with broadcast mode.  <a href="#aa47616ded81ca97c73115ac1ba92a4c1">More...</a><br /></td></tr>
 <tr class="separator:aa47616ded81ca97c73115ac1ba92a4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eeaba354139752dae86a46c2a8e260e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#a6eeaba354139752dae86a46c2a8e260e">Bcst_checkMACAndReboot</a> (string mac_addr)</td></tr>
+<tr class="memdesc:a6eeaba354139752dae86a46c2a8e260e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reboot device with broadcast mode.  <a href="#a6eeaba354139752dae86a46c2a8e260e">More...</a><br /></td></tr>
 <tr class="separator:a6eeaba354139752dae86a46c2a8e260e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#_a2">Find_all_devices.cs</a>.</dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aeef53582e04039a6aa8fa80bd60ca7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef53582e04039a6aa8fa80bd60ca7a6">&#9670;&nbsp;</a></span>DeviceFinder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DeviceFinder.DeviceFinder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6eeaba354139752dae86a46c2a8e260e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6eeaba354139752dae86a46c2a8e260e">&#9670;&nbsp;</a></span>Bcst_checkMACAndReboot()</h2>
@@ -146,6 +185,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reboot device with broadcast mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mac_addr</td><td>MAC address.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
 
 </div>
 </div>
@@ -189,6 +237,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Set IP with broadcast mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
+    <tr><td class="paramname">mac_addr</td><td>MAC address.</td></tr>
+    <tr><td class="paramname">subnet_mask</td><td>Subnet mask.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
 </div>
 </div>
 <a id="a7571f7418a2aa3f7ce20b13ad1857fb8"></a>
@@ -215,6 +274,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get device information with broadcast mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of list of IP address, subnet mask, MAC address and firmware model. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a5">Find_all_devices.cs</a>.</dd>
+</dl>
+
 </div>
 </div>
 <a id="adcb169920a450c4415eeb74ce74f9897"></a>
@@ -239,6 +303,11 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get all USB devices </p>
+<dl class="section return"><dt>Returns</dt><dd>List of list of serial number &amp; product name. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a4">Find_all_devices.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -265,6 +334,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Close broadcast device handle. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a7">Find_all_devices.cs</a>.</dd>
+</dl>
+
 </div>
 </div>
 <a id="a40cf4c5d2fcca2f12d2c172ec8dd1f4b"></a>
@@ -290,6 +363,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Connect to broadcast device. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a3">Find_all_devices.cs</a>.</dd>
+</dl>
+
 </div>
 </div>
 <a id="a027b484fb6c67b4ec0bf2efd58e2ed99"></a>
@@ -314,6 +392,11 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Disonnect broadcast device. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a6">Find_all_devices.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
