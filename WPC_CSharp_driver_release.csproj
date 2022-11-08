@@ -5,7 +5,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>WPC_example_code</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="hidlibrary" Version="3.3.40" />
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="WPC_CSharp_driver_source">

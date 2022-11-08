@@ -1,5 +1,6 @@
 var class_broadcaster =
 [
+    [ "Broadcaster", "class_broadcaster.html#a55c3d8b144b23eba3eb9b46a8473d7b1", null ],
     [ "Bcst_checkMACAndReboot", "class_broadcaster.html#aa68dff5dd4e6ad264fa59617c9843bf7", null ],
     [ "Bcst_checkMACAndSetIP", "class_broadcaster.html#a4ba5ad7a161bfb510e110eb32cd670c7", null ],
     [ "Bcst_getDeviceInfo", "class_broadcaster.html#aaa408c091b7b8a718e8fbef05159a959", null ],
