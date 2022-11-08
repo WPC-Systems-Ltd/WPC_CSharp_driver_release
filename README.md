@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 **WPC CSharp driver** contains APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.  
 
@@ -12,11 +12,12 @@ You can download WPC Device Manager by visiting [WPC Systems Ltd. official websi
 |                   |                 Link                                                            |
 |:------------------|:--------------------------------------------------------------------------------|
 | WPC official site | http://www.wpc.com.tw/                                                          |
+| GitHub			| https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release                                                       |
 | User guide        | https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/                    |
 | Example code      | https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples |
 
  
-# Products
+## Products
 
 Ethernet based DAQ card
 - Ethan-A
@@ -34,7 +35,7 @@ USB interface DAQ card
 Wifi based DAQ card
 - Wifi-DAQ-E3-A
 
-# I/O Function Table
+## I/O Function Table
 
 | Model           | AI  | AO | DI         | DO         | CAN | UART | SPI | I2C  | RTD | Thermocouple |
 |:----------------|:---:|:--:|:----------:|:----------:|:---:|:----:|:---:|:----:|:---:|:------------:|
