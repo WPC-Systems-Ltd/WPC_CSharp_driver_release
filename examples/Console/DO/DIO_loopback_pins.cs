@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 /// <summary>
 /// @example DIO_loopback_pins.cs
 /// 
@@ -27,6 +26,7 @@ using System.Threading.Tasks;
 /// All rights reserved.
 /// </summary> 
 /// 
+
 class WPC_DIO_loopback_pins
 {
     static public void Main()

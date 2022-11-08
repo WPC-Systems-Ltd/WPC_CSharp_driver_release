@@ -1,6 +1,8 @@
 var hierarchy =
 [
     [ "CANFrame", "class_c_a_n_frame.html", null ],
+    [ "SeeSharpTools.JY.ThreadSafeQueue.CircularQueue< byte >", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html", null ],
+    [ "SeeSharpTools.JY.ThreadSafeQueue.CircularQueue< double >", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html", null ],
     [ "Client", "class_client.html", [
       [ "NetworkClient", "class_network_client.html", [
         [ "TCPClient", "class_t_c_p_client.html", null ],
@@ -88,22 +90,15 @@ var hierarchy =
         [ "USBConnectionError", "class_u_s_b_connection_error.html", null ]
       ] ]
     ] ],
-    [ "IAIModule", "interface_i_a_i_module.html", null ],
-    [ "IAOModule", "interface_i_a_o_module.html", null ],
-    [ "IBroadcastDevice", "interface_i_broadcast_device.html", null ],
-    [ "IBroadcastModule", "interface_i_broadcast_module.html", null ],
-    [ "ICANModule", "interface_i_c_a_n_module.html", null ],
-    [ "IDIOModule", "interface_i_d_i_o_module.html", null ],
-    [ "II2CModule", "interface_i_i2_c_module.html", null ],
-    [ "INetworkDevice", "interface_i_network_device.html", null ],
-    [ "INetworkModule", "interface_i_network_module.html", null ],
-    [ "ISPIModule", "interface_i_s_p_i_module.html", null ],
-    [ "ISystemAnalogModule", "interface_i_system_analog_module.html", null ],
-    [ "ISystemModule", "interface_i_system_module.html", null ],
-    [ "IThermalModule", "interface_i_thermal_module.html", null ],
-    [ "IThermocoupleModule", "interface_i_thermocouple_module.html", null ],
-    [ "IUARTModule", "interface_i_u_a_r_t_module.html", null ],
-    [ "IWifiModule", "interface_i_wifi_module.html", null ],
+    [ "SeeSharpTools.JY.ThreadSafeQueue.Common.i18n.I18nLocalWrapper", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_common_1_1i18n_1_1_i18n_local_wrapper.html", null ],
+    [ "IDisposable", null, [
+      [ "SeeSharpTools.JY.ThreadSafeQueue.CircularQueue< TDataType >", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html", null ],
+      [ "SeeSharpTools.JY.ThreadSafeQueue.Common.i18n.I18nEntity", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_common_1_1i18n_1_1_i18n_entity.html", null ],
+      [ "SeeSharpTools.JY.ThreadSafeQueue.ThreadSafeQueue", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_thread_safe_queue.html", null ]
+    ] ],
+    [ "IList", null, [
+      [ "SeeSharpTools.JY.ThreadSafeQueue.CircularQueue< TDataType >", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html", null ]
+    ] ],
     [ "Packet", "class_packet.html", [
       [ "AIModule", "class_a_i_module.html", null ],
       [ "AOModule", "class_a_o_module.html", null ],
@@ -120,6 +115,10 @@ var hierarchy =
       [ "UARTModule", "class_u_a_r_t_module.html", null ],
       [ "WifiModule", "class_wifi_module.html", null ]
     ] ],
+    [ "SeeSharpTools.JY.ThreadSafeQueue.Common.ParallelHandler< TDataType >", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_common_1_1_parallel_handler.html", null ],
+    [ "Queue", null, [
+      [ "SeeSharpTools.JY.ThreadSafeQueue.ThreadSafeQueue", "class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_thread_safe_queue.html", null ]
+    ] ],
     [ "USBDAQF1AD", "class_u_s_b_d_a_q_f1_a_d.html", null ],
     [ "USBDAQF1AOD", "class_u_s_b_d_a_q_f1_a_o_d.html", null ],
     [ "USBDAQF1CD", "class_u_s_b_d_a_q_f1_c_d.html", null ],
@@ -127,5 +126,32 @@ var hierarchy =
     [ "USBDAQF1DSNK", "class_u_s_b_d_a_q_f1_d_s_n_k.html", null ],
     [ "USBDAQF1RD", "class_u_s_b_d_a_q_f1_r_d.html", null ],
     [ "USBDAQF1TD", "class_u_s_b_d_a_q_f1_t_d.html", null ],
-    [ "WifiDAQE3A", "class_wifi_d_a_q_e3_a.html", null ]
+    [ "WifiDAQE3A", "class_wifi_d_a_q_e3_a.html", null ],
+    [ "WPC_AI_continuous", "class_w_p_c___a_i__continuous.html", null ],
+    [ "WPC_AI_N_samples_in_loop", "class_w_p_c___a_i___n__samples__in__loop.html", null ],
+    [ "WPC_AI_N_samples_once", "class_w_p_c___a_i___n__samples__once.html", null ],
+    [ "WPC_AI_on_demand_in_loop", "class_w_p_c___a_i__on__demand__in__loop.html", null ],
+    [ "WPC_AI_on_demand_once", "class_w_p_c___a_i__on__demand__once.html", null ],
+    [ "WPC_AIO_all_channels_loopback", "class_w_p_c___a_i_o__all__channels__loopback.html", null ],
+    [ "WPC_AIO_one_channel_loopback", "class_w_p_c___a_i_o__one__channel__loopback.html", null ],
+    [ "WPC_AO_write_all_channels", "class_w_p_c___a_o__write__all__channels.html", null ],
+    [ "WPC_AO_write_one_channel", "class_w_p_c___a_o__write__one__channel.html", null ],
+    [ "WPC_DIO_loopback_pins", "class_w_p_c___d_i_o__loopback__pins.html", null ],
+    [ "WPC_DIO_loopback_port", "class_w_p_c___d_i_o__loopback__port.html", null ],
+    [ "WPC_DO_blinky_pins", "class_w_p_c___d_o__blinky__pins.html", null ],
+    [ "WPC_DO_blinky_port", "class_w_p_c___d_o__blinky__port.html", null ],
+    [ "WPC_find_all_devices", "class_w_p_c__find__all__devices.html", null ],
+    [ "WPC_get_network_info", "class_w_p_c__get__network__info.html", null ],
+    [ "WPC_get_USB_info", "class_w_p_c__get___u_s_b__info.html", null ],
+    [ "WPC_get_WifiDAQ_status", "class_w_p_c__get___wifi_d_a_q__status.html", null ],
+    [ "WPC_I2C_write_read", "class_w_p_c___i2_c__write__read.html", null ],
+    [ "WPC_RTD_read_channel_data", "class_w_p_c___r_t_d__read__channel__data.html", null ],
+    [ "WPC_RTD_read_channel_status", "class_w_p_c___r_t_d__read__channel__status.html", null ],
+    [ "WPC_SPI_read_and_write", "class_w_p_c___s_p_i__read__and__write.html", null ],
+    [ "WPC_SPI_write", "class_w_p_c___s_p_i__write.html", null ],
+    [ "WPC_TC_read_channel_data", "class_w_p_c___t_c__read__channel__data.html", null ],
+    [ "WPC_TC_read_channel_status", "class_w_p_c___t_c__read__channel__status.html", null ],
+    [ "WPC_teseter", "class_w_p_c__teseter.html", null ],
+    [ "WPC_UART_read", "class_w_p_c___u_a_r_t__read.html", null ],
+    [ "WPC_UART_write", "class_w_p_c___u_a_r_t__write.html", null ]
 ];

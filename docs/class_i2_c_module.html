@@ -38,6 +38,7 @@
    <div id="projectname">WPC CSharp driver
    &#160;<span id="projectnumber">0.0.9</span>
    </div>
+   <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -110,85 +111,395 @@ $(document).ready(function(){initNavTree('class_i2_c_module.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aea13aeac641b43614c4936c692a87778"><td class="memItemLeft" align="right" valign="top"><a id="aea13aeac641b43614c4936c692a87778"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>I2CModule</b> (Dictionary&lt; byte, List&lt;(byte, byte)&gt;&gt; i2c_dict)</td></tr>
+<tr class="memitem:aea13aeac641b43614c4936c692a87778"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#aea13aeac641b43614c4936c692a87778">I2CModule</a> (Dictionary&lt; byte, List&lt;(byte, byte)&gt;&gt; <a class="el" href="class_i2_c_module.html#a3204985bb7a2759b11534d07fd14626f">i2c_dict</a>)</td></tr>
 <tr class="separator:aea13aeac641b43614c4936c692a87778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a119e4e2e1b5323d75e8d09d7c377f0a1"><td class="memItemLeft" align="right" valign="top"><a id="a119e4e2e1b5323d75e8d09d7c377f0a1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_open</b> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a119e4e2e1b5323d75e8d09d7c377f0a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#a119e4e2e1b5323d75e8d09d7c377f0a1">I2C_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a119e4e2e1b5323d75e8d09d7c377f0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70f2abc871931612c06f5ce5331855ed"><td class="memItemLeft" align="right" valign="top"><a id="a70f2abc871931612c06f5ce5331855ed"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_close</b> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a70f2abc871931612c06f5ce5331855ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#a70f2abc871931612c06f5ce5331855ed">I2C_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a70f2abc871931612c06f5ce5331855ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc5bb25c9cff7267498700da486397cd"><td class="memItemLeft" align="right" valign="top"><a id="afc5bb25c9cff7267498700da486397cd"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_read</b> (int port, int read_address, int num_bytes, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:afc5bb25c9cff7267498700da486397cd"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#afc5bb25c9cff7267498700da486397cd">I2C_read</a> (int port, int read_address, int num_bytes, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:afc5bb25c9cff7267498700da486397cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a314e7dd7aa7d996fb5ca51e21b5b5e03"><td class="memItemLeft" align="right" valign="top"><a id="a314e7dd7aa7d996fb5ca51e21b5b5e03"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_write</b> (int port, int write_address, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a314e7dd7aa7d996fb5ca51e21b5b5e03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#a314e7dd7aa7d996fb5ca51e21b5b5e03">I2C_write</a> (int port, int write_address, List&lt; byte &gt; data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a314e7dd7aa7d996fb5ca51e21b5b5e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46a63242aef537de9f5c40efdc49c38"><td class="memItemLeft" align="right" valign="top"><a id="ae46a63242aef537de9f5c40efdc49c38"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_reset</b> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:ae46a63242aef537de9f5c40efdc49c38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#ae46a63242aef537de9f5c40efdc49c38">I2C_reset</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:ae46a63242aef537de9f5c40efdc49c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3617bfb797d91929f831625f371f6e39"><td class="memItemLeft" align="right" valign="top"><a id="a3617bfb797d91929f831625f371f6e39"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_setClockRate</b> (int port, int frequency, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a3617bfb797d91929f831625f371f6e39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#a3617bfb797d91929f831625f371f6e39">I2C_setClockRate</a> (int port, int frequency, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a3617bfb797d91929f831625f371f6e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e75197c5756a6ba4d12a9f1cf746da4"><td class="memItemLeft" align="right" valign="top"><a id="a6e75197c5756a6ba4d12a9f1cf746da4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_setAddressSize</b> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a6e75197c5756a6ba4d12a9f1cf746da4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#a6e75197c5756a6ba4d12a9f1cf746da4">I2C_setAddressSize</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a6e75197c5756a6ba4d12a9f1cf746da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_packet"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_packet')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_packet.html">Packet</a></td></tr>
-<tr class="memitem:ace8eeefb98353e154d54c6a93ff4d0d3 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="ace8eeefb98353e154d54c6a93ff4d0d3"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReplyFromPool</b> (byte cmd, int timeout=PacketConstants.RETRY_TIMEOUT)</td></tr>
+<tr class="memitem:a281651350a412374f055e1f80efd2891 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a281651350a412374f055e1f80efd2891">Packet</a> ()</td></tr>
+<tr class="separator:a281651350a412374f055e1f80efd2891 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8eeefb98353e154d54c6a93ff4d0d3 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#ace8eeefb98353e154d54c6a93ff4d0d3">getReplyFromPool</a> (byte cmd, int timeout=PacketConstants.RETRY_TIMEOUT)</td></tr>
 <tr class="separator:ace8eeefb98353e154d54c6a93ff4d0d3 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e709955a67149859e5a0d9c6f3ca309 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a6e709955a67149859e5a0d9c6f3ca309"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getStreamingFromPool</b> (CircularQueue&lt; byte &gt; queue, int num_values, int delay)</td></tr>
+<tr class="memitem:a6e709955a67149859e5a0d9c6f3ca309 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a6e709955a67149859e5a0d9c6f3ca309">getStreamingFromPool</a> (<a class="el" href="class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html">CircularQueue</a>&lt; byte &gt; queue, int num_values, int delay)</td></tr>
 <tr class="separator:a6e709955a67149859e5a0d9c6f3ca309 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fffe838872f8c9f01232af5b9c0aed7 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a1fffe838872f8c9f01232af5b9c0aed7"></a>
-List&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getStreamingFromPool</b> (CircularQueue&lt; double &gt; queue, int num_values, int delay)</td></tr>
+<tr class="memitem:a1fffe838872f8c9f01232af5b9c0aed7 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a1fffe838872f8c9f01232af5b9c0aed7">getStreamingFromPool</a> (<a class="el" href="class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html">CircularQueue</a>&lt; double &gt; queue, int num_values, int delay)</td></tr>
 <tr class="separator:a1fffe838872f8c9f01232af5b9c0aed7 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c32555d7c3d0d0839f2c3d019c7ca55 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a6c32555d7c3d0d0839f2c3d019c7ca55"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>echoPacket</b> (byte cmd, List&lt; byte &gt; data_out, int timeout=PacketConstants.RETRY_TIMEOUT)</td></tr>
+<tr class="memitem:a6c32555d7c3d0d0839f2c3d019c7ca55 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a6c32555d7c3d0d0839f2c3d019c7ca55">echoPacket</a> (byte cmd, List&lt; byte &gt; data_out, int timeout=PacketConstants.RETRY_TIMEOUT)</td></tr>
 <tr class="separator:a6c32555d7c3d0d0839f2c3d019c7ca55 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83569d602cb14658b35630e2c39d6cdb inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a83569d602cb14658b35630e2c39d6cdb"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>echoPacketWithRetry</b> (byte cmd, List&lt; byte &gt; data_out, int num_retries=PacketConstants.NUM_OF_RETRIES, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a83569d602cb14658b35630e2c39d6cdb inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a83569d602cb14658b35630e2c39d6cdb">echoPacketWithRetry</a> (byte cmd, List&lt; byte &gt; data_out, int num_retries=PacketConstants.NUM_OF_RETRIES, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a83569d602cb14658b35630e2c39d6cdb inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a778e28398b83c71c74620fffc9364ab2 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a778e28398b83c71c74620fffc9364ab2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendPacketWithoutReply</b> (byte cmd, List&lt; byte &gt; data_out)</td></tr>
+<tr class="memitem:a778e28398b83c71c74620fffc9364ab2 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a778e28398b83c71c74620fffc9364ab2">sendPacketWithoutReply</a> (byte cmd, List&lt; byte &gt; data_out)</td></tr>
 <tr class="separator:a778e28398b83c71c74620fffc9364ab2 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4858728c434d6ad29d6d385a955195d inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="ab4858728c434d6ad29d6d385a955195d"></a>
-HashSet&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>broadcastPacket</b> (byte cmd, List&lt; byte &gt; data_out, int delay)</td></tr>
+<tr class="memitem:ab4858728c434d6ad29d6d385a955195d inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">HashSet&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#ab4858728c434d6ad29d6d385a955195d">broadcastPacket</a> (byte cmd, List&lt; byte &gt; data_out, int delay)</td></tr>
 <tr class="separator:ab4858728c434d6ad29d6d385a955195d inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a010c34725923fc911957f0352e0e5b43 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a010c34725923fc911957f0352e0e5b43"></a>
-List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getAllUSBDevices</b> ()</td></tr>
+<tr class="memitem:a010c34725923fc911957f0352e0e5b43 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a010c34725923fc911957f0352e0e5b43">getAllUSBDevices</a> ()</td></tr>
 <tr class="separator:a010c34725923fc911957f0352e0e5b43 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2bb1a3c0efebe3e95db21ffa716b426 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="ab2bb1a3c0efebe3e95db21ffa716b426"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>preparePacket</b> (int cmd, List&lt; byte &gt; data_out)</td></tr>
+<tr class="memitem:ab2bb1a3c0efebe3e95db21ffa716b426 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#ab2bb1a3c0efebe3e95db21ffa716b426">preparePacket</a> (int cmd, List&lt; byte &gt; data_out)</td></tr>
 <tr class="separator:ab2bb1a3c0efebe3e95db21ffa716b426 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3204985bb7a2759b11534d07fd14626f"><td class="memItemLeft" align="right" valign="top"><a id="a3204985bb7a2759b11534d07fd14626f"></a>
-Dictionary&lt; byte, List&lt;(byte, byte)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>i2c_dict</b> = new Dictionary&lt;byte, List&lt;(byte, byte)&gt;&gt;()</td></tr>
+<tr class="memitem:a3204985bb7a2759b11534d07fd14626f"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; byte, List&lt;(byte, byte)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i2_c_module.html#a3204985bb7a2759b11534d07fd14626f">i2c_dict</a> = new Dictionary&lt;byte, List&lt;(byte, byte)&gt;&gt;()</td></tr>
 <tr class="separator:a3204985bb7a2759b11534d07fd14626f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_packet"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_packet')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_packet.html">Packet</a></td></tr>
-<tr class="memitem:a193006f33a5eccebc52ef8dd95edff49 inherit pub_attribs_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a193006f33a5eccebc52ef8dd95edff49"></a>
-Dictionary&lt; int, List&lt; byte &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_pool_echo</b> = null</td></tr>
+<tr class="memitem:a193006f33a5eccebc52ef8dd95edff49 inherit pub_attribs_class_packet"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, List&lt; byte &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a193006f33a5eccebc52ef8dd95edff49">data_pool_echo</a> = null</td></tr>
 <tr class="separator:a193006f33a5eccebc52ef8dd95edff49 inherit pub_attribs_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35570dfbe9dbe4fd087c07c5fa18da0a inherit pub_attribs_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a35570dfbe9dbe4fd087c07c5fa18da0a"></a>
-Dictionary&lt; int, HashSet&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_pool_bcst</b> = new Dictionary&lt;int, HashSet&lt;string&gt;&gt;()</td></tr>
+<tr class="memitem:a35570dfbe9dbe4fd087c07c5fa18da0a inherit pub_attribs_class_packet"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, HashSet&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a35570dfbe9dbe4fd087c07c5fa18da0a">data_pool_bcst</a> = new Dictionary&lt;int, HashSet&lt;string&gt;&gt;()</td></tr>
 <tr class="separator:a35570dfbe9dbe4fd087c07c5fa18da0a inherit pub_attribs_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_class_packet"><td colspan="2" onclick="javascript:toggleInherit('properties_class_packet')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_packet.html">Packet</a></td></tr>
-<tr class="memitem:a192c63ac9122870a6936bd523337c6b2 inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a192c63ac9122870a6936bd523337c6b2"></a>
-<a class="el" href="class_t_c_p_client.html">TCPClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>client_tcp</b> = null<code> [get, set]</code></td></tr>
+<tr class="memitem:a192c63ac9122870a6936bd523337c6b2 inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_c_p_client.html">TCPClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a192c63ac9122870a6936bd523337c6b2">client_tcp</a> = null<code> [get, set]</code></td></tr>
 <tr class="separator:a192c63ac9122870a6936bd523337c6b2 inherit properties_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a697c14aabdb6ab9c026e9c113074d25b inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a697c14aabdb6ab9c026e9c113074d25b"></a>
-<a class="el" href="class_u_d_p_client.html">UDPClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>client_udp</b> = null<code> [get, set]</code></td></tr>
+<tr class="memitem:a697c14aabdb6ab9c026e9c113074d25b inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_d_p_client.html">UDPClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a697c14aabdb6ab9c026e9c113074d25b">client_udp</a> = null<code> [get, set]</code></td></tr>
 <tr class="separator:a697c14aabdb6ab9c026e9c113074d25b inherit properties_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256499109d99568c4b0456916b213ca1 inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a256499109d99568c4b0456916b213ca1"></a>
-<a class="el" href="class_u_s_b_client.html">USBClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>client_usb</b> = null<code> [get, set]</code></td></tr>
+<tr class="memitem:a256499109d99568c4b0456916b213ca1 inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_s_b_client.html">USBClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a256499109d99568c4b0456916b213ca1">client_usb</a> = null<code> [get, set]</code></td></tr>
 <tr class="separator:a256499109d99568c4b0456916b213ca1 inherit properties_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aea13aeac641b43614c4936c692a87778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea13aeac641b43614c4936c692a87778">&#9670;&nbsp;</a></span>I2CModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2CModule.I2CModule </td>
+          <td>(</td>
+          <td class="paramtype">Dictionary&lt; byte, List&lt;(byte, byte)&gt;&gt;&#160;</td>
+          <td class="paramname"><em>i2c_dict</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a70f2abc871931612c06f5ce5331855ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f2abc871931612c06f5ce5331855ed">&#9670;&nbsp;</a></span>I2C_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int I2CModule.I2C_close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a119e4e2e1b5323d75e8d09d7c377f0a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a119e4e2e1b5323d75e8d09d7c377f0a1">&#9670;&nbsp;</a></span>I2C_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int I2CModule.I2C_open </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc5bb25c9cff7267498700da486397cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5bb25c9cff7267498700da486397cd">&#9670;&nbsp;</a></span>I2C_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;byte&gt; I2CModule.I2C_read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>read_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae46a63242aef537de9f5c40efdc49c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46a63242aef537de9f5c40efdc49c38">&#9670;&nbsp;</a></span>I2C_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int I2CModule.I2C_reset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e75197c5756a6ba4d12a9f1cf746da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e75197c5756a6ba4d12a9f1cf746da4">&#9670;&nbsp;</a></span>I2C_setAddressSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int I2CModule.I2C_setAddressSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3617bfb797d91929f831625f371f6e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3617bfb797d91929f831625f371f6e39">&#9670;&nbsp;</a></span>I2C_setClockRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int I2CModule.I2C_setClockRate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a314e7dd7aa7d996fb5ca51e21b5b5e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a314e7dd7aa7d996fb5ca51e21b5b5e03">&#9670;&nbsp;</a></span>I2C_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int I2CModule.I2C_write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>write_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; byte &gt;&#160;</td>
+          <td class="paramname"><em>data_to_write</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3204985bb7a2759b11534d07fd14626f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3204985bb7a2759b11534d07fd14626f">&#9670;&nbsp;</a></span>i2c_dict</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;byte, List&lt;(byte, byte)&gt; &gt; I2CModule.i2c_dict = new Dictionary&lt;byte, List&lt;(byte, byte)&gt;&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

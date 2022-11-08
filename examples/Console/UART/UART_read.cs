@@ -22,7 +22,8 @@ using System.Threading.Tasks;
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary> 
+/// </summary>
+
 class WPC_UART_read
 {
     static public void Main()

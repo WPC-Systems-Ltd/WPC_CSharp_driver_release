@@ -38,6 +38,7 @@
    <div id="projectname">WPC CSharp driver
    &#160;<span id="projectnumber">0.0.9</span>
    </div>
+   <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -110,100 +111,541 @@ $(document).ready(function(){initNavTree('class_u_a_r_t_module.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a608ad46964462ca7b72aa7dd2cd8fbd9"><td class="memItemLeft" align="right" valign="top"><a id="a608ad46964462ca7b72aa7dd2cd8fbd9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UARTModule</b> (Dictionary&lt; byte, List&lt;(byte, byte)&gt;&gt; uart_dict)</td></tr>
+<tr class="memitem:a608ad46964462ca7b72aa7dd2cd8fbd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a608ad46964462ca7b72aa7dd2cd8fbd9">UARTModule</a> (Dictionary&lt; byte, List&lt;(byte, byte)&gt;&gt; <a class="el" href="class_u_a_r_t_module.html#aba28bbf73de1e7f806f5c5f17bf2988a">uart_dict</a>)</td></tr>
 <tr class="separator:a608ad46964462ca7b72aa7dd2cd8fbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c747a69fc4480f383e6a126bbbefc5d"><td class="memItemLeft" align="right" valign="top"><a id="a4c747a69fc4480f383e6a126bbbefc5d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_open</b> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a4c747a69fc4480f383e6a126bbbefc5d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a4c747a69fc4480f383e6a126bbbefc5d">UART_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a4c747a69fc4480f383e6a126bbbefc5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17af10b9cd89cdf8f9b46d1599d2f930"><td class="memItemLeft" align="right" valign="top"><a id="a17af10b9cd89cdf8f9b46d1599d2f930"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_close</b> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a17af10b9cd89cdf8f9b46d1599d2f930"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a17af10b9cd89cdf8f9b46d1599d2f930">UART_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a17af10b9cd89cdf8f9b46d1599d2f930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7de3f9af64bcc04d0a3f4450c4fbe0d0"><td class="memItemLeft" align="right" valign="top"><a id="a7de3f9af64bcc04d0a3f4450c4fbe0d0"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>UART_read</b> (int port, int num_bytes, int delay=5)</td></tr>
+<tr class="memitem:a7de3f9af64bcc04d0a3f4450c4fbe0d0"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a7de3f9af64bcc04d0a3f4450c4fbe0d0">UART_read</a> (int port, int num_bytes, int delay=5)</td></tr>
 <tr class="separator:a7de3f9af64bcc04d0a3f4450c4fbe0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2df2365c2a1dcad98a4f01e39910567"><td class="memItemLeft" align="right" valign="top"><a id="ab2df2365c2a1dcad98a4f01e39910567"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_write</b> (int port, string data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:ab2df2365c2a1dcad98a4f01e39910567"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#ab2df2365c2a1dcad98a4f01e39910567">UART_write</a> (int port, string data_to_write, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:ab2df2365c2a1dcad98a4f01e39910567"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9560608218df38e85abf07d4e84c7299"><td class="memItemLeft" align="right" valign="top"><a id="a9560608218df38e85abf07d4e84c7299"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_reset</b> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a9560608218df38e85abf07d4e84c7299"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a9560608218df38e85abf07d4e84c7299">UART_reset</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a9560608218df38e85abf07d4e84c7299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac23159ec5c3e59d8465703db670a064c"><td class="memItemLeft" align="right" valign="top"><a id="ac23159ec5c3e59d8465703db670a064c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_setBaudRate</b> (int port, int baud_rate, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:ac23159ec5c3e59d8465703db670a064c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#ac23159ec5c3e59d8465703db670a064c">UART_setBaudRate</a> (int port, int baud_rate, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:ac23159ec5c3e59d8465703db670a064c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05272d56de34104f90594c20ebf19061"><td class="memItemLeft" align="right" valign="top"><a id="a05272d56de34104f90594c20ebf19061"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_setDataBit</b> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a05272d56de34104f90594c20ebf19061"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a05272d56de34104f90594c20ebf19061">UART_setDataBit</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a05272d56de34104f90594c20ebf19061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8881ce6ace189825e6a9d6730ac2867"><td class="memItemLeft" align="right" valign="top"><a id="ad8881ce6ace189825e6a9d6730ac2867"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_setParity</b> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:ad8881ce6ace189825e6a9d6730ac2867"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#ad8881ce6ace189825e6a9d6730ac2867">UART_setParity</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:ad8881ce6ace189825e6a9d6730ac2867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a334d56020b39988cc3772c50fd3256e2"><td class="memItemLeft" align="right" valign="top"><a id="a334d56020b39988cc3772c50fd3256e2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_setNumStopBit</b> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a334d56020b39988cc3772c50fd3256e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a334d56020b39988cc3772c50fd3256e2">UART_setNumStopBit</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a334d56020b39988cc3772c50fd3256e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f7690b8d74edc448c607d592154d15"><td class="memItemLeft" align="right" valign="top"><a id="a63f7690b8d74edc448c607d592154d15"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>UART_stopReading</b> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a63f7690b8d74edc448c607d592154d15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a63f7690b8d74edc448c607d592154d15">UART_stopReading</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a63f7690b8d74edc448c607d592154d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_packet"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_packet')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_packet.html">Packet</a></td></tr>
-<tr class="memitem:ace8eeefb98353e154d54c6a93ff4d0d3 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="ace8eeefb98353e154d54c6a93ff4d0d3"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReplyFromPool</b> (byte cmd, int timeout=PacketConstants.RETRY_TIMEOUT)</td></tr>
+<tr class="memitem:a281651350a412374f055e1f80efd2891 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a281651350a412374f055e1f80efd2891">Packet</a> ()</td></tr>
+<tr class="separator:a281651350a412374f055e1f80efd2891 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8eeefb98353e154d54c6a93ff4d0d3 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#ace8eeefb98353e154d54c6a93ff4d0d3">getReplyFromPool</a> (byte cmd, int timeout=PacketConstants.RETRY_TIMEOUT)</td></tr>
 <tr class="separator:ace8eeefb98353e154d54c6a93ff4d0d3 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e709955a67149859e5a0d9c6f3ca309 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a6e709955a67149859e5a0d9c6f3ca309"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getStreamingFromPool</b> (CircularQueue&lt; byte &gt; queue, int num_values, int delay)</td></tr>
+<tr class="memitem:a6e709955a67149859e5a0d9c6f3ca309 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a6e709955a67149859e5a0d9c6f3ca309">getStreamingFromPool</a> (<a class="el" href="class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html">CircularQueue</a>&lt; byte &gt; queue, int num_values, int delay)</td></tr>
 <tr class="separator:a6e709955a67149859e5a0d9c6f3ca309 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fffe838872f8c9f01232af5b9c0aed7 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a1fffe838872f8c9f01232af5b9c0aed7"></a>
-List&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getStreamingFromPool</b> (CircularQueue&lt; double &gt; queue, int num_values, int delay)</td></tr>
+<tr class="memitem:a1fffe838872f8c9f01232af5b9c0aed7 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a1fffe838872f8c9f01232af5b9c0aed7">getStreamingFromPool</a> (<a class="el" href="class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html">CircularQueue</a>&lt; double &gt; queue, int num_values, int delay)</td></tr>
 <tr class="separator:a1fffe838872f8c9f01232af5b9c0aed7 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c32555d7c3d0d0839f2c3d019c7ca55 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a6c32555d7c3d0d0839f2c3d019c7ca55"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>echoPacket</b> (byte cmd, List&lt; byte &gt; data_out, int timeout=PacketConstants.RETRY_TIMEOUT)</td></tr>
+<tr class="memitem:a6c32555d7c3d0d0839f2c3d019c7ca55 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a6c32555d7c3d0d0839f2c3d019c7ca55">echoPacket</a> (byte cmd, List&lt; byte &gt; data_out, int timeout=PacketConstants.RETRY_TIMEOUT)</td></tr>
 <tr class="separator:a6c32555d7c3d0d0839f2c3d019c7ca55 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83569d602cb14658b35630e2c39d6cdb inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a83569d602cb14658b35630e2c39d6cdb"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>echoPacketWithRetry</b> (byte cmd, List&lt; byte &gt; data_out, int num_retries=PacketConstants.NUM_OF_RETRIES, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memitem:a83569d602cb14658b35630e2c39d6cdb inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a83569d602cb14658b35630e2c39d6cdb">echoPacketWithRetry</a> (byte cmd, List&lt; byte &gt; data_out, int num_retries=PacketConstants.NUM_OF_RETRIES, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a83569d602cb14658b35630e2c39d6cdb inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a778e28398b83c71c74620fffc9364ab2 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a778e28398b83c71c74620fffc9364ab2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendPacketWithoutReply</b> (byte cmd, List&lt; byte &gt; data_out)</td></tr>
+<tr class="memitem:a778e28398b83c71c74620fffc9364ab2 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a778e28398b83c71c74620fffc9364ab2">sendPacketWithoutReply</a> (byte cmd, List&lt; byte &gt; data_out)</td></tr>
 <tr class="separator:a778e28398b83c71c74620fffc9364ab2 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4858728c434d6ad29d6d385a955195d inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="ab4858728c434d6ad29d6d385a955195d"></a>
-HashSet&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>broadcastPacket</b> (byte cmd, List&lt; byte &gt; data_out, int delay)</td></tr>
+<tr class="memitem:ab4858728c434d6ad29d6d385a955195d inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">HashSet&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#ab4858728c434d6ad29d6d385a955195d">broadcastPacket</a> (byte cmd, List&lt; byte &gt; data_out, int delay)</td></tr>
 <tr class="separator:ab4858728c434d6ad29d6d385a955195d inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a010c34725923fc911957f0352e0e5b43 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a010c34725923fc911957f0352e0e5b43"></a>
-List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getAllUSBDevices</b> ()</td></tr>
+<tr class="memitem:a010c34725923fc911957f0352e0e5b43 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; List&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a010c34725923fc911957f0352e0e5b43">getAllUSBDevices</a> ()</td></tr>
 <tr class="separator:a010c34725923fc911957f0352e0e5b43 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2bb1a3c0efebe3e95db21ffa716b426 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="ab2bb1a3c0efebe3e95db21ffa716b426"></a>
-List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>preparePacket</b> (int cmd, List&lt; byte &gt; data_out)</td></tr>
+<tr class="memitem:ab2bb1a3c0efebe3e95db21ffa716b426 inherit pub_methods_class_packet"><td class="memItemLeft" align="right" valign="top">List&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#ab2bb1a3c0efebe3e95db21ffa716b426">preparePacket</a> (int cmd, List&lt; byte &gt; data_out)</td></tr>
 <tr class="separator:ab2bb1a3c0efebe3e95db21ffa716b426 inherit pub_methods_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aba28bbf73de1e7f806f5c5f17bf2988a"><td class="memItemLeft" align="right" valign="top"><a id="aba28bbf73de1e7f806f5c5f17bf2988a"></a>
-Dictionary&lt; byte, List&lt;(byte, byte)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>uart_dict</b> = new Dictionary&lt;byte, List&lt;(byte, byte)&gt;&gt;()</td></tr>
+<tr class="memitem:aba28bbf73de1e7f806f5c5f17bf2988a"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; byte, List&lt;(byte, byte)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#aba28bbf73de1e7f806f5c5f17bf2988a">uart_dict</a> = new Dictionary&lt;byte, List&lt;(byte, byte)&gt;&gt;()</td></tr>
 <tr class="separator:aba28bbf73de1e7f806f5c5f17bf2988a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8afacccb01dc8c949fd207c228a571e0"><td class="memItemLeft" align="right" valign="top"><a id="a8afacccb01dc8c949fd207c228a571e0"></a>
-CircularQueue&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>uart_p1_data_queue</b></td></tr>
+<tr class="memitem:a8afacccb01dc8c949fd207c228a571e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html">CircularQueue</a>&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#a8afacccb01dc8c949fd207c228a571e0">uart_p1_data_queue</a></td></tr>
 <tr class="separator:a8afacccb01dc8c949fd207c228a571e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd5c0f2fe50f9969d008f1b1c8656c56"><td class="memItemLeft" align="right" valign="top"><a id="abd5c0f2fe50f9969d008f1b1c8656c56"></a>
-CircularQueue&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>uart_p2_data_queue</b></td></tr>
+<tr class="memitem:abd5c0f2fe50f9969d008f1b1c8656c56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html">CircularQueue</a>&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_module.html#abd5c0f2fe50f9969d008f1b1c8656c56">uart_p2_data_queue</a></td></tr>
 <tr class="separator:abd5c0f2fe50f9969d008f1b1c8656c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_packet"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_packet')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_packet.html">Packet</a></td></tr>
-<tr class="memitem:a193006f33a5eccebc52ef8dd95edff49 inherit pub_attribs_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a193006f33a5eccebc52ef8dd95edff49"></a>
-Dictionary&lt; int, List&lt; byte &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_pool_echo</b> = null</td></tr>
+<tr class="memitem:a193006f33a5eccebc52ef8dd95edff49 inherit pub_attribs_class_packet"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, List&lt; byte &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a193006f33a5eccebc52ef8dd95edff49">data_pool_echo</a> = null</td></tr>
 <tr class="separator:a193006f33a5eccebc52ef8dd95edff49 inherit pub_attribs_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35570dfbe9dbe4fd087c07c5fa18da0a inherit pub_attribs_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a35570dfbe9dbe4fd087c07c5fa18da0a"></a>
-Dictionary&lt; int, HashSet&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_pool_bcst</b> = new Dictionary&lt;int, HashSet&lt;string&gt;&gt;()</td></tr>
+<tr class="memitem:a35570dfbe9dbe4fd087c07c5fa18da0a inherit pub_attribs_class_packet"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, HashSet&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a35570dfbe9dbe4fd087c07c5fa18da0a">data_pool_bcst</a> = new Dictionary&lt;int, HashSet&lt;string&gt;&gt;()</td></tr>
 <tr class="separator:a35570dfbe9dbe4fd087c07c5fa18da0a inherit pub_attribs_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_class_packet"><td colspan="2" onclick="javascript:toggleInherit('properties_class_packet')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_packet.html">Packet</a></td></tr>
-<tr class="memitem:a192c63ac9122870a6936bd523337c6b2 inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a192c63ac9122870a6936bd523337c6b2"></a>
-<a class="el" href="class_t_c_p_client.html">TCPClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>client_tcp</b> = null<code> [get, set]</code></td></tr>
+<tr class="memitem:a192c63ac9122870a6936bd523337c6b2 inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_c_p_client.html">TCPClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a192c63ac9122870a6936bd523337c6b2">client_tcp</a> = null<code> [get, set]</code></td></tr>
 <tr class="separator:a192c63ac9122870a6936bd523337c6b2 inherit properties_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a697c14aabdb6ab9c026e9c113074d25b inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a697c14aabdb6ab9c026e9c113074d25b"></a>
-<a class="el" href="class_u_d_p_client.html">UDPClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>client_udp</b> = null<code> [get, set]</code></td></tr>
+<tr class="memitem:a697c14aabdb6ab9c026e9c113074d25b inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_d_p_client.html">UDPClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a697c14aabdb6ab9c026e9c113074d25b">client_udp</a> = null<code> [get, set]</code></td></tr>
 <tr class="separator:a697c14aabdb6ab9c026e9c113074d25b inherit properties_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256499109d99568c4b0456916b213ca1 inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a id="a256499109d99568c4b0456916b213ca1"></a>
-<a class="el" href="class_u_s_b_client.html">USBClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>client_usb</b> = null<code> [get, set]</code></td></tr>
+<tr class="memitem:a256499109d99568c4b0456916b213ca1 inherit properties_class_packet"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_s_b_client.html">USBClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_packet.html#a256499109d99568c4b0456916b213ca1">client_usb</a> = null<code> [get, set]</code></td></tr>
 <tr class="separator:a256499109d99568c4b0456916b213ca1 inherit properties_class_packet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a608ad46964462ca7b72aa7dd2cd8fbd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a608ad46964462ca7b72aa7dd2cd8fbd9">&#9670;&nbsp;</a></span>UARTModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UARTModule.UARTModule </td>
+          <td>(</td>
+          <td class="paramtype">Dictionary&lt; byte, List&lt;(byte, byte)&gt;&gt;&#160;</td>
+          <td class="paramname"><em>uart_dict</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a17af10b9cd89cdf8f9b46d1599d2f930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17af10b9cd89cdf8f9b46d1599d2f930">&#9670;&nbsp;</a></span>UART_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c747a69fc4480f383e6a126bbbefc5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c747a69fc4480f383e6a126bbbefc5d">&#9670;&nbsp;</a></span>UART_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_open </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7de3f9af64bcc04d0a3f4450c4fbe0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de3f9af64bcc04d0a3f4450c4fbe0d0">&#9670;&nbsp;</a></span>UART_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;byte&gt; UARTModule.UART_read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delay</em> = <code>5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9560608218df38e85abf07d4e84c7299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9560608218df38e85abf07d4e84c7299">&#9670;&nbsp;</a></span>UART_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_reset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac23159ec5c3e59d8465703db670a064c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23159ec5c3e59d8465703db670a064c">&#9670;&nbsp;</a></span>UART_setBaudRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_setBaudRate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>baud_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05272d56de34104f90594c20ebf19061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05272d56de34104f90594c20ebf19061">&#9670;&nbsp;</a></span>UART_setDataBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_setDataBit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a334d56020b39988cc3772c50fd3256e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334d56020b39988cc3772c50fd3256e2">&#9670;&nbsp;</a></span>UART_setNumStopBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_setNumStopBit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8881ce6ace189825e6a9d6730ac2867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8881ce6ace189825e6a9d6730ac2867">&#9670;&nbsp;</a></span>UART_setParity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_setParity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63f7690b8d74edc448c607d592154d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f7690b8d74edc448c607d592154d15">&#9670;&nbsp;</a></span>UART_stopReading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_stopReading </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2df2365c2a1dcad98a4f01e39910567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2df2365c2a1dcad98a4f01e39910567">&#9670;&nbsp;</a></span>UART_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UARTModule.UART_write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>data_to_write</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aba28bbf73de1e7f806f5c5f17bf2988a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba28bbf73de1e7f806f5c5f17bf2988a">&#9670;&nbsp;</a></span>uart_dict</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;byte, List&lt;(byte, byte)&gt; &gt; UARTModule.uart_dict = new Dictionary&lt;byte, List&lt;(byte, byte)&gt;&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8afacccb01dc8c949fd207c228a571e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8afacccb01dc8c949fd207c228a571e0">&#9670;&nbsp;</a></span>uart_p1_data_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html">CircularQueue</a>&lt;byte&gt; UARTModule.uart_p1_data_queue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd5c0f2fe50f9969d008f1b1c8656c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd5c0f2fe50f9969d008f1b1c8656c56">&#9670;&nbsp;</a></span>uart_p2_data_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html">CircularQueue</a>&lt;byte&gt; UARTModule.uart_p2_data_queue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

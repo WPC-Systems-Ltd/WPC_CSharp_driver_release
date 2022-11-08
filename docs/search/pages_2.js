@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spi_20setting_20table',['SPI Setting Table',['../setting_s_p_i.html',1,'']]]
+  ['i_2fo_20function_20table',['I/O Function Table',['../autotoc_md1.html',1,'']]]
 ];

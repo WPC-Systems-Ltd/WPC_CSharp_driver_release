@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
 /// </summary> 
-/// 
+
 class WPC_get_USB_info
 {
     static public void Main()

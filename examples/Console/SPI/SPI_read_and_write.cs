@@ -22,7 +22,8 @@ using System.Threading.Tasks;
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary> 
+/// </summary>
+
 class WPC_SPI_read_and_write
 {
     static public void Main()

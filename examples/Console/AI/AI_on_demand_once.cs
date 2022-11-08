@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 /// <summary>
 /// @example AI_on_demand_once.cs
 /// 

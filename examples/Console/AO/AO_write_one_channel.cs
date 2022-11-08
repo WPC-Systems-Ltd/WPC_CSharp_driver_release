@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 /// <summary>
 /// @example AO_write_one_channel.cs
 /// 

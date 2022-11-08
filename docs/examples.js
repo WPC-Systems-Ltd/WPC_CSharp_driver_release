@@ -9,6 +9,8 @@ var examples =
     [ "AIO_one_channel_loopback.cs", "_a_i_o_one_channel_loopback_8cs-example.html", null ],
     [ "AO_write_all_channels.cs", "_a_o_write_all_channels_8cs-example.html", null ],
     [ "AO_write_one_channel.cs", "_a_o_write_one_channel_8cs-example.html", null ],
+    [ "CAN_read.cs", "_c_a_n_read_8cs-example.html", null ],
+    [ "CAN_write.cs", "_c_a_n_write_8cs-example.html", null ],
     [ "DIO_loopback_pins.cs", "_d_i_o_loopback_pins_8cs-example.html", null ],
     [ "DIO_loopback_port.cs", "_d_i_o_loopback_port_8cs-example.html", null ],
     [ "DO_blinky_pins.cs", "_d_o_blinky_pins_8cs-example.html", null ],

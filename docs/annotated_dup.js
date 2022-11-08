@@ -20,6 +20,8 @@ var annotated_dup =
     [ "WPC_AIO_one_channel_loopback", "class_w_p_c___a_i_o__one__channel__loopback.html", null ],
     [ "WPC_AO_write_all_channels", "class_w_p_c___a_o__write__all__channels.html", null ],
     [ "WPC_AO_write_one_channel", "class_w_p_c___a_o__write__one__channel.html", null ],
+    [ "WPC_CAN_read", "class_w_p_c___c_a_n__read.html", null ],
+    [ "WPC_CAN_write", "class_w_p_c___c_a_n__write.html", null ],
     [ "WPC_DIO_loopback_pins", "class_w_p_c___d_i_o__loopback__pins.html", null ],
     [ "WPC_DIO_loopback_port", "class_w_p_c___d_i_o__loopback__port.html", null ],
     [ "WPC_DO_blinky_pins", "class_w_p_c___d_o__blinky__pins.html", null ],

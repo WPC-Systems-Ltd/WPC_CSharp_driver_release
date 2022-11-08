@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.9</span>
+   &#160;<span id="projectnumber">0.0.10</span>
    </div>
    <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
@@ -129,14 +129,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a394e29269ec1e581e439968d5b6c69e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac85ba4f62c1be4f546be3dbcb281d59f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#ac85ba4f62c1be4f546be3dbcb281d59f">Sys_rebootOnBootloader</a> (int timeout=100)</td></tr>
 <tr class="separator:ac85ba4f62c1be4f546be3dbcb281d59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac593e4d218789aae835c39994c125930"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#ac593e4d218789aae835c39994c125930">Sys_getIPAddrAndSubmask</a> (int timeout=100)</td></tr>
-<tr class="separator:ac593e4d218789aae835c39994c125930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc3228b4d279d2c3402c15bb52c3f858"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#adc3228b4d279d2c3402c15bb52c3f858">Sys_setIPAddrAndSubmask</a> (string ip_addr, string subnet_mask, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
-<tr class="separator:adc3228b4d279d2c3402c15bb52c3f858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f316fbc606d480d8b33daf6ae5b614"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#a99f316fbc606d480d8b33daf6ae5b614">Sys_getMACAddr</a> (int timeout=100)</td></tr>
-<tr class="separator:a99f316fbc606d480d8b33daf6ae5b614"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dd8addc0f47a0ff524bbf635b97bd6b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#a6dd8addc0f47a0ff524bbf635b97bd6b">Sys_getGateway</a> (int timeout=100)</td></tr>
-<tr class="separator:a6dd8addc0f47a0ff524bbf635b97bd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a949b9e9d24f8d754adf220f153811a45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#a949b9e9d24f8d754adf220f153811a45">DI_openPort</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a949b9e9d24f8d754adf220f153811a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7c8b2b3668791769efb2f0a8da886ab"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#ac7c8b2b3668791769efb2f0a8da886ab">DI_readPort</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
@@ -1870,108 +1862,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6dd8addc0f47a0ff524bbf635b97bd6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dd8addc0f47a0ff524bbf635b97bd6b">&#9670;&nbsp;</a></span>Sys_getGateway()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string USBDAQF1TD.Sys_getGateway </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get geteway from the connected network device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Network gateway. </dd></dl>
-
-</div>
-</div>
-<a id="ac593e4d218789aae835c39994c125930"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac593e4d218789aae835c39994c125930">&#9670;&nbsp;</a></span>Sys_getIPAddrAndSubmask()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;string&gt; USBDAQF1TD.Sys_getIPAddrAndSubmask </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get IP address and subnet mask from the connected network device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>List of IP address and subnet mask. </dd></dl>
-
-</div>
-</div>
-<a id="a99f316fbc606d480d8b33daf6ae5b614"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99f316fbc606d480d8b33daf6ae5b614">&#9670;&nbsp;</a></span>Sys_getMACAddr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string USBDAQF1TD.Sys_getMACAddr </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get MAC address from the connected network device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>MAC address. </dd></dl>
-
-</div>
-</div>
 <a id="a43ca705f2b03cfffa4c9f2096669f1e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43ca705f2b03cfffa4c9f2096669f1e3">&#9670;&nbsp;</a></span>Sys_getRTC()</h2>
 
@@ -2104,58 +1994,6 @@ Public Member Functions</h2></td></tr>
 <p>Reboot on bootloader from the connected WPC device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="adc3228b4d279d2c3402c15bb52c3f858"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc3228b4d279d2c3402c15bb52c3f858">&#9670;&nbsp;</a></span>Sys_setIPAddrAndSubmask()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int USBDAQF1TD.Sys_setIPAddrAndSubmask </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>ip_addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>subnet_mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Set IP address and subnet mask to the connected network device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ip_addr</td><td>IP network address.</td></tr>
-    <tr><td class="paramname">subnet_mask</td><td>Subnet mask.</td></tr>
     <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>

@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['thermal_5fclose',['Thermal_close',['../class_u_s_b_d_a_q_f1_r_d.html#abf138e864267fb2505758e075349b333',1,'USBDAQF1RD.Thermal_close()'],['../class_u_s_b_d_a_q_f1_t_d.html#a5c33bbd40aa7ddc1416044913acc8a04',1,'USBDAQF1TD.Thermal_close()']]],
-  ['thermal_5fgetstatus',['Thermal_getStatus',['../class_u_s_b_d_a_q_f1_r_d.html#ad923a496de69057c7d7606ba8651bbed',1,'USBDAQF1RD.Thermal_getStatus()'],['../class_u_s_b_d_a_q_f1_t_d.html#a7b32a20afb7134747518b914662a6f28',1,'USBDAQF1TD.Thermal_getStatus()']]],
-  ['thermal_5fopen',['Thermal_open',['../class_u_s_b_d_a_q_f1_r_d.html#a0141e4976990cf40f79d975c8a2311a6',1,'USBDAQF1RD.Thermal_open()'],['../class_u_s_b_d_a_q_f1_t_d.html#af69cb702a822d3c8c9cdc1bc6e819945',1,'USBDAQF1TD.Thermal_open()']]],
-  ['thermal_5freadsensor',['Thermal_readSensor',['../class_u_s_b_d_a_q_f1_r_d.html#a35e8fe6b35e13ddd3bce25149450fe8e',1,'USBDAQF1RD.Thermal_readSensor()'],['../class_u_s_b_d_a_q_f1_t_d.html#a7e8009ec11a2aef2091101aa14b5f131',1,'USBDAQF1TD.Thermal_readSensor()']]],
-  ['thermal_5fsetoversampling',['Thermal_setOverSampling',['../class_u_s_b_d_a_q_f1_t_d.html#a5e8181f36e89a35f7576db76db74ec7c',1,'USBDAQF1TD']]],
-  ['thermal_5fsettype',['Thermal_setType',['../class_u_s_b_d_a_q_f1_r_d.html#a4ddc7d35d28e1792b08601484bd6d908',1,'USBDAQF1RD.Thermal_setType()'],['../class_u_s_b_d_a_q_f1_t_d.html#add378405399039346e298ecc935a445a',1,'USBDAQF1TD.Thermal_setType()']]]
+  ['packet',['Packet',['../class_packet.html',1,'Packet'],['../class_packet.html#a281651350a412374f055e1f80efd2891',1,'Packet.Packet()']]],
+  ['packettimeouterror',['PacketTimeoutError',['../class_packet_timeout_error.html',1,'PacketTimeoutError'],['../class_packet_timeout_error.html#a7285fe841ad340d1b6a32c9a4a506f1f',1,'PacketTimeoutError.PacketTimeoutError()']]],
+  ['parallelhandler',['ParallelHandler',['../class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_common_1_1_parallel_handler.html',1,'SeeSharpTools.JY.ThreadSafeQueue.Common.ParallelHandler&lt; TDataType &gt;'],['../class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_common_1_1_parallel_handler.html#a6c5e0682673b6f3211b5c7c774c35bef',1,'SeeSharpTools.JY.ThreadSafeQueue.Common.ParallelHandler.ParallelHandler()']]],
+  ['pinsnotexisterror',['PinsNotExistError',['../class_pins_not_exist_error.html',1,'PinsNotExistError'],['../class_pins_not_exist_error.html#abf1187248a5a353b6ab69c83d16eed73',1,'PinsNotExistError.PinsNotExistError()']]],
+  ['pinsvaluenotdefineerror',['PinsValueNotDefineError',['../class_pins_value_not_define_error.html',1,'PinsValueNotDefineError'],['../class_pins_value_not_define_error.html#ad411ce6dd9b46c2b4fa157406acac722',1,'PinsValueNotDefineError.PinsValueNotDefineError()']]],
+  ['preparepacket',['preparePacket',['../class_packet.html#ab2bb1a3c0efebe3e95db21ffa716b426',1,'Packet']]],
+  ['propertyreadtimeout',['PropertyReadTimeout',['../class_see_sharp_tools_1_1_j_y_1_1_thread_safe_queue_1_1_circular_queue.html#ac13d781a97bf447384fc72c211122227',1,'SeeSharpTools::JY::ThreadSafeQueue::CircularQueue']]],
+  ['puttodatapool',['putToDataPool',['../class_device.html#ad98944cb98c70bef9fbdc8ab7da344d0',1,'Device']]]
 ];

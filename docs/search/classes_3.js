@@ -10,6 +10,8 @@ var searchData=
   ['wpc_5faio_5fone_5fchannel_5floopback',['WPC_AIO_one_channel_loopback',['../class_w_p_c___a_i_o__one__channel__loopback.html',1,'']]],
   ['wpc_5fao_5fwrite_5fall_5fchannels',['WPC_AO_write_all_channels',['../class_w_p_c___a_o__write__all__channels.html',1,'']]],
   ['wpc_5fao_5fwrite_5fone_5fchannel',['WPC_AO_write_one_channel',['../class_w_p_c___a_o__write__one__channel.html',1,'']]],
+  ['wpc_5fcan_5fread',['WPC_CAN_read',['../class_w_p_c___c_a_n__read.html',1,'']]],
+  ['wpc_5fcan_5fwrite',['WPC_CAN_write',['../class_w_p_c___c_a_n__write.html',1,'']]],
   ['wpc_5fdio_5floopback_5fpins',['WPC_DIO_loopback_pins',['../class_w_p_c___d_i_o__loopback__pins.html',1,'']]],
   ['wpc_5fdio_5floopback_5fport',['WPC_DIO_loopback_port',['../class_w_p_c___d_i_o__loopback__port.html',1,'']]],
   ['wpc_5fdo_5fblinky_5fpins',['WPC_DO_blinky_pins',['../class_w_p_c___d_o__blinky__pins.html',1,'']]],

@@ -38,6 +38,7 @@
    <div id="projectname">WPC CSharp driver
    &#160;<span id="projectnumber">0.0.9</span>
    </div>
+   <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -103,7 +104,7 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <div class="contents">
 <div class="textblock"><ul>
 <li>In white board</li>
-<li>Thermal: <code>ThermocoupleModule</code> to inherit from <code>ThermalModule</code></li>
+<li>Thermal: <code><a class="el" href="class_thermocouple_module.html">ThermocoupleModule</a></code> to inherit from <code><a class="el" href="class_thermal_module.html">ThermalModule</a></code></li>
 <li>To synchronize between Python &amp; C#:<ul>
 <li>Error codes &amp; messages</li>
 <li>Package delay parameters</li>
@@ -115,7 +116,7 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <ul>
 <li>Complete remaining product</li>
 <li>DIO: zero-padding in read API</li>
-<li>Device: <code>putToDataPool</code></li>
+<li><a class="el" href="class_device.html">Device</a>: <code>putToDataPool</code></li>
 <li>Bcst: <code>Bcst_enumerateUSBDevices</code></li>
 <li>Bcst: ignore broadcast reply with <code>s_to_c = 0</code></li>
 </ul>
@@ -139,13 +140,13 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <ul>
 <li>Add firmware error class and its code and description</li>
 <li>Add <code>checkFirmwareError</code> in all API</li>
-<li>Add <code>WPCError</code> to inherit <code>Exception</code>, then all error class inherit <code>WPCerror</code></li>
+<li>Add <code><a class="el" href="class_w_p_c_error.html">WPCError</a></code> to inherit <code>Exception</code>, then all error class inherit <code>WPCerror</code></li>
 <li>Add USB send return status</li>
 <li>USB client</li>
 </ul>
 <ul>
 <li>Fix ai_dict in <a class="el" href="class_wifi_d_a_q_e3_a.html">WifiDAQE3A</a></li>
-<li>Bug of missing <code>client_usb</code> in Packet class</li>
+<li>Bug of missing <code>client_usb</code> in <a class="el" href="class_packet.html">Packet</a> class</li>
 <li>Bug of data.GetRange</li>
 </ul>
 <ul>
@@ -158,8 +159,8 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <li>Interface: added <code>INetworkModule</code> (separated from <code>ISystemModule</code>)</li>
 <li>Interface: added <code>ISystemAnalogModule</code> (separated from <code>IWifiModule</code>)</li>
 <li>Interface: added <code>IThermocoupleModule</code></li>
-<li>Sys: added <code>NetworkModule</code> (separated from <code>SystemModule</code>)</li>
-<li>Sys: added <code>SystemAnalogModule</code> (separated from <code>WifiModule</code>)</li>
+<li>Sys: added <code><a class="el" href="class_network_module.html">NetworkModule</a></code> (separated from <code><a class="el" href="class_system_module.html">SystemModule</a></code>)</li>
+<li>Sys: added <code><a class="el" href="class_system_analog_module.html">SystemAnalogModule</a></code> (separated from <code><a class="el" href="class_wifi_module.html">WifiModule</a></code>)</li>
 <li>AI: option of using variable command or not in argument</li>
 <li>All: regions for all files</li>
 </ul>
@@ -171,17 +172,17 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <li>DIO: improved implementations to cases where the number of pins &gt; 8</li>
 <li>DIO: reversed pin state order in lists</li>
 <li>Thermal: made <code>Thermal_setNoiseFilter</code> &amp; <code>Thermal_setJunctionOn</code> private</li>
-<li>CAN: rewrote <code>CANFrame</code></li>
+<li>CAN: rewrote <code><a class="el" href="class_c_a_n_frame.html">CANFrame</a></code></li>
 <li>Renaming:<ul>
 <li><code>Broadcaster</code> =&gt; <code><a class="el" href="class_device_finder.html">DeviceFinder</a></code></li>
 <li><code>IBcstDevice</code> =&gt; <code>IBroadcastDevice</code></li>
 <li><code>IBcstModule</code> =&gt; <code>IBroadcastModule</code></li>
 <li><code>IWebDevice</code> =&gt; <code>INetworkDevice</code></li>
-<li><code>WifiSystemModule</code> =&gt; <code>WifiModule</code></li>
-<li><code>WebDevice</code> =&gt; <code>NetworkDevice</code></li>
-<li><code>WebClient</code> =&gt; <code>NetworkClient</code></li>
-<li><code>WebConnectionError</code> =&gt; <code>NetConnectionError</code></li>
-<li><code>WebConnectionLost</code> =&gt; <code>NetConnectionLost</code></li>
+<li><code>WifiSystemModule</code> =&gt; <code><a class="el" href="class_wifi_module.html">WifiModule</a></code></li>
+<li><code>WebDevice</code> =&gt; <code><a class="el" href="class_network_device.html">NetworkDevice</a></code></li>
+<li><code>WebClient</code> =&gt; <code><a class="el" href="class_network_client.html">NetworkClient</a></code></li>
+<li><code>WebConnectionError</code> =&gt; <code><a class="el" href="class_net_connection_error.html">NetConnectionError</a></code></li>
+<li><code>WebConnectionLost</code> =&gt; <code><a class="el" href="class_net_connection_lost.html">NetConnectionLost</a></code></li>
 </ul>
 </li>
 </ul>
@@ -198,7 +199,7 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <li>All: changed <code>Console.WriteLine(ex)</code> to <code>Console.WriteLine(ex.Message)</code></li>
 <li>All: parsed &amp; applied WPC naming convention</li>
 <li>Util: changed type of byte sequence from array to list in conversion functions</li>
-<li>Client: changed type of byte sequence from array to list in send/recv functions</li>
+<li><a class="el" href="class_client.html">Client</a>: changed type of byte sequence from array to list in send/recv functions</li>
 <li>Pkt: changed type of byte sequence from array to list in packet functions</li>
 <li>Pkt: renamed <code>noechoPacket</code> to <code>sendPacketWithoutReply</code></li>
 <li>CAN: changed return type from array to list in <code>writeCANID</code></li>
@@ -231,14 +232,14 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <li>Add DI_dict and DO_dict in <a class="el" href="class_ethan_d.html">EthanD</a> when initialize</li>
 <li>Add <code>checkDOPort</code> &amp; <code>checkDIPort</code> &amp; <code>checkDIPortAndPin</code> &amp; <code>checkDOPortAndPin</code> in DIO module</li>
 <li>Add <code>checkAIPort</code> in AI module</li>
-<li>Add <code>DIPortNotAvaliableError</code> &amp; <code>DOPortNotAvaliableError</code> &amp; <code>PinsNotExistError</code> &amp; <code>AIPortNotAvaliableError</code> &amp; <code>UARTDataBitNotSupport</code></li>
+<li>Add <code><a class="el" href="class_d_i_port_not_avaliable_error.html">DIPortNotAvaliableError</a></code> &amp; <code><a class="el" href="class_d_o_port_not_avaliable_error.html">DOPortNotAvaliableError</a></code> &amp; <code><a class="el" href="class_pins_not_exist_error.html">PinsNotExistError</a></code> &amp; <code><a class="el" href="class_a_i_port_not_avaliable_error.html">AIPortNotAvaliableError</a></code> &amp; <code>UARTDataBitNotSupport</code></li>
 <li>Add <code>checkNull</code> in WPC_utilities.cs</li>
 </ul>
 <ul>
 <li>Fix getReplyFromPool retrun data. If no data received, it will reurn {255,255,255,255,255,255,255,255}</li>
 </ul>
 <ul>
-<li>Add WifiDevice</li>
+<li>Add <a class="el" href="class_wifi_device.html">WifiDevice</a></li>
 <li>Add <code>AI_readOnDemand</code> &amp; <code>AI_readStreaming</code> &amp; <code>AIStreamThread</code> in AI module.</li>
 <li>Add timeout mechanism in <code>getReplyFromPool</code></li>
 <li>Add <code>AI_free</code> when device close</li>
@@ -260,7 +261,7 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <li>Add <code>JY_Queue</code> resource</li>
 <li>Add <code>splitPacket</code> &amp; <code>checkCommandType</code> in device class</li>
 <li>Add <code>getReplyFromPool</code> &amp; <code>broadcastPacket_UDP</code> in packets class</li>
-<li>Add <code>Sys_setRTC</code> &amp; <code>Sys_setRTC</code> &amp; <code>Sys_getSerialNumber</code> &amp; <code>Sys_reboot</code> &amp; <code>Sys_rebootOnBootloader</code> in SystemModule class</li>
+<li>Add <code>Sys_setRTC</code> &amp; <code>Sys_setRTC</code> &amp; <code>Sys_getSerialNumber</code> &amp; <code>Sys_reboot</code> &amp; <code>Sys_rebootOnBootloader</code> in <a class="el" href="class_system_module.html">SystemModule</a> class</li>
 <li>Add <code>Bcst_getDeviceInfo</code> &amp; <code>Bcst_checkMACAndSetIP</code> &amp; <code>Bcst_checkMACAndReboot</code> in BcstModule class</li>
 <li>Add <code>convertU8ListToStr</code> &amp; <code>convertIPAddrTo4U8</code> &amp; <code>convertMACAddrTo6U8</code> in WPC_utilities class</li>
 <li>Add <code>STREAMING_CMD_LIST</code> &amp; <code>BROADCAST_CMD_LIST</code> in WPC_command class</li>
@@ -268,7 +269,7 @@ $(document).ready(function(){initNavTree('md__changelog.html','');});
 <li>Add <code>Broadcaster</code> &amp; <code>BcstDevice</code> class</li>
 <li>Add <code>IBcstDevice</code> &amp; <code>IBcstModule</code> &amp; <code>IWifiSystemModule</code> Interface</li>
 <li>Add WPC_config class to define PKG and version</li>
-<li>Add <code>AIModule</code></li>
+<li>Add <code><a class="el" href="class_a_i_module.html">AIModule</a></code></li>
 </ul>
 <ul>
 <li>Fix <code>recvpacket</code> return value in WPC_TCPClient</li>

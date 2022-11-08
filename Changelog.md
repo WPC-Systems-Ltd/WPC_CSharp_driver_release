@@ -1,5 +1,13 @@
 WPC CSharp driver release changelog
 ===================================
+ 
+v0.0.10 Date: 2022/11/08, Developer: Chunglee_people
+----------------------------------------------------
+
+### Added
+- Decorate doxygen with example code
+- Add `examples` folder which contains module example code
+- Add Reference folder which contains Datasheet & Manuals & Pinouts & Products & WPC_error_code.csv
 
 v0.0.5 Date: 2022/10/19, Developer: Chunglee_people
 ----------------------------------------------------

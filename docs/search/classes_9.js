@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['uart_5fread',['UART_read',['../class_u_a_r_t__read.html',1,'']]],
-  ['uart_5fwrite',['UART_write',['../class_u_a_r_t__write.html',1,'']]],
-  ['usbdaqf1ad',['USBDAQF1AD',['../class_u_s_b_d_a_q_f1_a_d.html',1,'']]],
-  ['usbdaqf1aod',['USBDAQF1AOD',['../class_u_s_b_d_a_q_f1_a_o_d.html',1,'']]],
-  ['usbdaqf1cd',['USBDAQF1CD',['../class_u_s_b_d_a_q_f1_c_d.html',1,'']]],
-  ['usbdaqf1d',['USBDAQF1D',['../class_u_s_b_d_a_q_f1_d.html',1,'']]],
-  ['usbdaqf1dsnk',['USBDAQF1DSNK',['../class_u_s_b_d_a_q_f1_d_s_n_k.html',1,'']]],
-  ['usbdaqf1rd',['USBDAQF1RD',['../class_u_s_b_d_a_q_f1_r_d.html',1,'']]],
-  ['usbdaqf1td',['USBDAQF1TD',['../class_u_s_b_d_a_q_f1_t_d.html',1,'']]]
+  ['spidatalengthexceedmaxerror',['SPIDataLengthExceedMAXError',['../class_s_p_i_data_length_exceed_m_a_x_error.html',1,'']]],
+  ['spidatasizenotvailderror',['SPIDataSizeNotVaildError',['../class_s_p_i_data_size_not_vaild_error.html',1,'']]],
+  ['spifirstbitnotvailderror',['SPIFirstBitNotVaildError',['../class_s_p_i_first_bit_not_vaild_error.html',1,'']]],
+  ['spimodenotvailderror',['SPIModeNotVaildError',['../class_s_p_i_mode_not_vaild_error.html',1,'']]],
+  ['spimodule',['SPIModule',['../class_s_p_i_module.html',1,'']]],
+  ['spiportnotavaliableerror',['SPIPortNotAvaliableError',['../class_s_p_i_port_not_avaliable_error.html',1,'']]],
+  ['spiprescalernotvailderror',['SPIPrescalerNotVaildError',['../class_s_p_i_prescaler_not_vaild_error.html',1,'']]],
+  ['systemanalogmodule',['SystemAnalogModule',['../class_system_analog_module.html',1,'']]],
+  ['systemmodule',['SystemModule',['../class_system_module.html',1,'']]]
 ];

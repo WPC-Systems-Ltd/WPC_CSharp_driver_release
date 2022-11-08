@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.9</span>
+   &#160;<span id="projectnumber">0.0.10</span>
    </div>
    <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
@@ -111,6 +111,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3b4906ea0576a7a8d2241ee8ae7c68d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#af3b4906ea0576a7a8d2241ee8ae7c68d">USBDAQF1CD</a> ()</td></tr>
 <tr class="memdesc:af3b4906ea0576a7a8d2241ee8ae7c68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This device has 20ch 3.3V DIO/I2C/SPI.  <a href="#af3b4906ea0576a7a8d2241ee8ae7c68d">More...</a><br /></td></tr>
 <tr class="separator:af3b4906ea0576a7a8d2241ee8ae7c68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44999251b2316e847808e4aa602136ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a44999251b2316e847808e4aa602136ad">connect</a> (string serial_number)</td></tr>
+<tr class="separator:a44999251b2316e847808e4aa602136ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d09b6b265af1386b71bb37a7fffb521"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a9d09b6b265af1386b71bb37a7fffb521">disconnect</a> ()</td></tr>
+<tr class="separator:a9d09b6b265af1386b71bb37a7fffb521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71c79dac979b8c859d27b08f0fec8ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#ac71c79dac979b8c859d27b08f0fec8ce">close</a> ()</td></tr>
+<tr class="separator:ac71c79dac979b8c859d27b08f0fec8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62d28ba77dca0d21cca64ba06a26140"><td class="memItemLeft" align="right" valign="top">string []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#ae62d28ba77dca0d21cca64ba06a26140">Sys_getDriverInfo</a> (int timeout=100)</td></tr>
+<tr class="separator:ae62d28ba77dca0d21cca64ba06a26140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0743d1c4a5dcc7b4eeaab2f90c33a2ea"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a0743d1c4a5dcc7b4eeaab2f90c33a2ea">Sys_getRTC</a> (int timeout=100)</td></tr>
+<tr class="separator:a0743d1c4a5dcc7b4eeaab2f90c33a2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ebbbee3fde7521fbf24450715e2f5fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a8ebbbee3fde7521fbf24450715e2f5fa">Sys_setRTC</a> (int year, byte month, byte day, byte hour, byte minute, byte second, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="separator:a8ebbbee3fde7521fbf24450715e2f5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc8028664f3bd8cb2028fe7ddfe7b3c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a9bc8028664f3bd8cb2028fe7ddfe7b3c">Sys_getSerialNumber</a> (int timeout=100)</td></tr>
+<tr class="separator:a9bc8028664f3bd8cb2028fe7ddfe7b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81c236ebe07b524b6f3b6c17dfa8654"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#ae81c236ebe07b524b6f3b6c17dfa8654">Sys_reboot</a> (int timeout=100)</td></tr>
+<tr class="separator:ae81c236ebe07b524b6f3b6c17dfa8654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17613f00187056c38799b64e5020c7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#ac17613f00187056c38799b64e5020c7e">Sys_rebootOnBootloader</a> (int timeout=100)</td></tr>
+<tr class="separator:ac17613f00187056c38799b64e5020c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f9c5bd00e9d80155ef59fcedae07e99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a9f9c5bd00e9d80155ef59fcedae07e99">DI_openPort</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="separator:a9f9c5bd00e9d80155ef59fcedae07e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad835c369bc0d1383aef91b352bf4a576"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#ad835c369bc0d1383aef91b352bf4a576">DI_readPort</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
@@ -216,24 +234,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b47ced0d8c9c392c61b39ff83fb99dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a6b47ced0d8c9c392c61b39ff83fb99dc">SPI_setMode</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="memdesc:a6b47ced0d8c9c392c61b39ff83fb99dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set clock phase and clock polarity.  <a href="#a6b47ced0d8c9c392c61b39ff83fb99dc">More...</a><br /></td></tr>
 <tr class="separator:a6b47ced0d8c9c392c61b39ff83fb99dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2574255f00d541ed5009d6e27a1b8a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#aa2574255f00d541ed5009d6e27a1b8a6">CAN_open</a> (byte port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
-<tr class="memdesc:aa2574255f00d541ed5009d6e27a1b8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open CAN port on WPC DAQ device.  <a href="#aa2574255f00d541ed5009d6e27a1b8a6">More...</a><br /></td></tr>
-<tr class="separator:aa2574255f00d541ed5009d6e27a1b8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeccb4cea6b04f74b28c7a4dd2431295a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#aeccb4cea6b04f74b28c7a4dd2431295a">CAN_close</a> (byte port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
-<tr class="memdesc:aeccb4cea6b04f74b28c7a4dd2431295a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close I2C port on WPC DAQ device.  <a href="#aeccb4cea6b04f74b28c7a4dd2431295a">More...</a><br /></td></tr>
-<tr class="separator:aeccb4cea6b04f74b28c7a4dd2431295a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c4e96fc16072396dc9aee00ecbd6336"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a7c4e96fc16072396dc9aee00ecbd6336">CAN_stop</a> (byte port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
-<tr class="memdesc:a7c4e96fc16072396dc9aee00ecbd6336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop CAN communication.  <a href="#a7c4e96fc16072396dc9aee00ecbd6336">More...</a><br /></td></tr>
-<tr class="separator:a7c4e96fc16072396dc9aee00ecbd6336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f2f3d2c40453d8eae3505f08a4e7843"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a0f2f3d2c40453d8eae3505f08a4e7843">CAN_write</a> (byte port, int id, List&lt; byte &gt; data, int can_type, int can_length, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
-<tr class="memdesc:a0f2f3d2c40453d8eae3505f08a4e7843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency mode of the desired communication clock.  <a href="#a0f2f3d2c40453d8eae3505f08a4e7843">More...</a><br /></td></tr>
-<tr class="separator:a0f2f3d2c40453d8eae3505f08a4e7843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94cdaf1b4e3ddfecc608af8ae48e6248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a94cdaf1b4e3ddfecc608af8ae48e6248">CAN_open</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a94cdaf1b4e3ddfecc608af8ae48e6248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open CAN port on WPC DAQ device.  <a href="#a94cdaf1b4e3ddfecc608af8ae48e6248">More...</a><br /></td></tr>
+<tr class="separator:a94cdaf1b4e3ddfecc608af8ae48e6248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5478a3f770052681b3d0b777d2364db3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a5478a3f770052681b3d0b777d2364db3">CAN_close</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a5478a3f770052681b3d0b777d2364db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close I2C port on WPC DAQ device.  <a href="#a5478a3f770052681b3d0b777d2364db3">More...</a><br /></td></tr>
+<tr class="separator:a5478a3f770052681b3d0b777d2364db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507ead8af1269638d7392a5bc684c425"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a507ead8af1269638d7392a5bc684c425">CAN_stop</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a507ead8af1269638d7392a5bc684c425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop CAN communication.  <a href="#a507ead8af1269638d7392a5bc684c425">More...</a><br /></td></tr>
+<tr class="separator:a507ead8af1269638d7392a5bc684c425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd765b86f75f5e9a733751eedecdc97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a5fd765b86f75f5e9a733751eedecdc97">CAN_write</a> (int port, int id, List&lt; byte &gt; data, int can_type, int can_length, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a5fd765b86f75f5e9a733751eedecdc97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the frequency mode of the desired communication clock.  <a href="#a5fd765b86f75f5e9a733751eedecdc97">More...</a><br /></td></tr>
+<tr class="separator:a5fd765b86f75f5e9a733751eedecdc97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ee046b096d3d60977fc9544d38ca17f"><td class="memItemLeft" align="right" valign="top">List&lt; CANFrame &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a3ee046b096d3d60977fc9544d38ca17f">CAN_read</a> (int port, int num_frames, int delay=5)</td></tr>
 <tr class="memdesc:a3ee046b096d3d60977fc9544d38ca17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from CAN port.  <a href="#a3ee046b096d3d60977fc9544d38ca17f">More...</a><br /></td></tr>
 <tr class="separator:a3ee046b096d3d60977fc9544d38ca17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50b0025d36444929c9ee04576f6f2c1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a50b0025d36444929c9ee04576f6f2c1f">CAN_start</a> (byte port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
-<tr class="memdesc:a50b0025d36444929c9ee04576f6f2c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start CAN communication.  <a href="#a50b0025d36444929c9ee04576f6f2c1f">More...</a><br /></td></tr>
-<tr class="separator:a50b0025d36444929c9ee04576f6f2c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3c61a074e6abb43921851cb052b633"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a5f3c61a074e6abb43921851cb052b633">CAN_start</a> (int port, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
+<tr class="memdesc:a5f3c61a074e6abb43921851cb052b633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start CAN communication.  <a href="#a5f3c61a074e6abb43921851cb052b633">More...</a><br /></td></tr>
+<tr class="separator:a5f3c61a074e6abb43921851cb052b633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c30ebf5e3d930e2106d35725607c9eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_c_d.html#a3c30ebf5e3d930e2106d35725607c9eb">CAN_setSpeed</a> (int port, int mode, int timeout=PacketConstants.PACKET_TIMEOUT)</td></tr>
 <tr class="memdesc:a3c30ebf5e3d930e2106d35725607c9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set CAN speed in mode.  <a href="#a3c30ebf5e3d930e2106d35725607c9eb">More...</a><br /></td></tr>
 <tr class="separator:a3c30ebf5e3d930e2106d35725607c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,7 +262,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a26b0152522b8a451ee3e6f2961e71a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set CAN RX filter status.  <a href="#a26b0152522b8a451ee3e6f2961e71a67">More...</a><br /></td></tr>
 <tr class="separator:a26b0152522b8a451ee3e6f2961e71a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#_a2">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#_a2">CAN_write.cs</a>.</dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af3b4906ea0576a7a8d2241ee8ae7c68d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3b4906ea0576a7a8d2241ee8ae7c68d">&#9670;&nbsp;</a></span>USBDAQF1CD()</h2>
 
@@ -273,8 +294,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aeccb4cea6b04f74b28c7a4dd2431295a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeccb4cea6b04f74b28c7a4dd2431295a">&#9670;&nbsp;</a></span>CAN_close()</h2>
+<a id="a5478a3f770052681b3d0b777d2364db3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5478a3f770052681b3d0b777d2364db3">&#9670;&nbsp;</a></span>CAN_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,7 +306,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int USBDAQF1CD.CAN_close </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
@@ -316,11 +337,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a10">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a10">CAN_write.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="aa2574255f00d541ed5009d6e27a1b8a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2574255f00d541ed5009d6e27a1b8a6">&#9670;&nbsp;</a></span>CAN_open()</h2>
+<a id="a94cdaf1b4e3ddfecc608af8ae48e6248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94cdaf1b4e3ddfecc608af8ae48e6248">&#9670;&nbsp;</a></span>CAN_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +354,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int USBDAQF1CD.CAN_open </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
@@ -362,6 +385,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a5">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a5">CAN_write.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -415,6 +440,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a8">CAN_read.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -574,11 +601,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a6">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a6">CAN_write.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a50b0025d36444929c9ee04576f6f2c1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50b0025d36444929c9ee04576f6f2c1f">&#9670;&nbsp;</a></span>CAN_start()</h2>
+<a id="a5f3c61a074e6abb43921851cb052b633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3c61a074e6abb43921851cb052b633">&#9670;&nbsp;</a></span>CAN_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -589,7 +618,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int USBDAQF1CD.CAN_start </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
@@ -620,11 +649,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a7">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a7">CAN_write.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a7c4e96fc16072396dc9aee00ecbd6336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c4e96fc16072396dc9aee00ecbd6336">&#9670;&nbsp;</a></span>CAN_stop()</h2>
+<a id="a507ead8af1269638d7392a5bc684c425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507ead8af1269638d7392a5bc684c425">&#9670;&nbsp;</a></span>CAN_stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -635,7 +666,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int USBDAQF1CD.CAN_stop </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
@@ -666,11 +697,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a9">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a9">CAN_write.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a0f2f3d2c40453d8eae3505f08a4e7843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f2f3d2c40453d8eae3505f08a4e7843">&#9670;&nbsp;</a></span>CAN_write()</h2>
+<a id="a5fd765b86f75f5e9a733751eedecdc97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd765b86f75f5e9a733751eedecdc97">&#9670;&nbsp;</a></span>CAN_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -681,7 +714,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int USBDAQF1CD.CAN_write </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>port</em>, </td>
         </tr>
         <tr>
@@ -740,6 +773,72 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_write_8cs-example.html#a8">CAN_write.cs</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ac71c79dac979b8c859d27b08f0fec8ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71c79dac979b8c859d27b08f0fec8ce">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USBDAQF1CD.close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Close device handle. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a12">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a12">CAN_write.cs</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a44999251b2316e847808e4aa602136ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44999251b2316e847808e4aa602136ad">&#9670;&nbsp;</a></span>connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool USBDAQF1CD.connect </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>serial_number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Connect to USB device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serial_number</td><td>From WPC DAQ device.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a3">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a3">CAN_write.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1022,6 +1121,35 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d09b6b265af1386b71bb37a7fffb521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d09b6b265af1386b71bb37a7fffb521">&#9670;&nbsp;</a></span>disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool USBDAQF1CD.disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect from USB device. </p>
+<dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a11">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a11">CAN_write.cs</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -2195,6 +2323,258 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">port</td><td>Available port number depends on WPC DAQ device.</td></tr>
     <tr><td class="paramname">data_to_write</td><td>Data to be transferred.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ae62d28ba77dca0d21cca64ba06a26140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62d28ba77dca0d21cca64ba06a26140">&#9670;&nbsp;</a></span>Sys_getDriverInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] USBDAQF1CD.Sys_getDriverInfo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get device firmware information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_c_a_n_read_8cs-example.html#a4">CAN_read.cs</a>, and <a class="el" href="_c_a_n_write_8cs-example.html#a4">CAN_write.cs</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a0743d1c4a5dcc7b4eeaab2f90c33a2ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0743d1c4a5dcc7b4eeaab2f90c33a2ea">&#9670;&nbsp;</a></span>Sys_getRTC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string USBDAQF1CD.Sys_getRTC </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Date and time represented by "A-B-C, D:E:F". </dd></dl>
+
+</div>
+</div>
+<a id="a9bc8028664f3bd8cb2028fe7ddfe7b3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc8028664f3bd8cb2028fe7ddfe7b3c">&#9670;&nbsp;</a></span>Sys_getSerialNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string USBDAQF1CD.Sys_getSerialNumber </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get serial number from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Serial number represented by string of 8 characters. </dd></dl>
+
+</div>
+</div>
+<a id="ae81c236ebe07b524b6f3b6c17dfa8654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81c236ebe07b524b6f3b6c17dfa8654">&#9670;&nbsp;</a></span>Sys_reboot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1CD.Sys_reboot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reboot from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ac17613f00187056c38799b64e5020c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17613f00187056c38799b64e5020c7e">&#9670;&nbsp;</a></span>Sys_rebootOnBootloader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1CD.Sys_rebootOnBootloader </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reboot on bootloader from the connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a8ebbbee3fde7521fbf24450715e2f5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ebbbee3fde7521fbf24450715e2f5fa">&#9670;&nbsp;</a></span>Sys_setRTC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int USBDAQF1CD.Sys_setRTC </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>day</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>minute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>second</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>PacketConstants.PACKET_TIMEOUT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set date and time to connected WPC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>year (CE).</td></tr>
+    <tr><td class="paramname">month</td><td>month (1~12).</td></tr>
+    <tr><td class="paramname">day</td><td>day (1~31).</td></tr>
+    <tr><td class="paramname">hour</td><td>hour (24-hour clock) (0~23).(CE).</td></tr>
+    <tr><td class="paramname">minute</td><td>minute (0~59).</td></tr>
+    <tr><td class="paramname">second</td><td>second (0~59).</td></tr>
     <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
   </table>
   </dd>

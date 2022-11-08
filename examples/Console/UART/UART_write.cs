@@ -22,7 +22,8 @@ using System.Threading.Tasks;
 /// 
 /// Copyright(c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary> 
+/// </summary>
+
 class WPC_UART_write
 {
     static public void Main()
@@ -68,7 +69,7 @@ class WPC_UART_write
             status = dev.UART_setParity(UART_port, WPC.UART_PARITY_NONE);
             Console.WriteLine($"UART_setParity status: {status}");
 
-            // Set UART port and set stop bit to to 1 bit
+            // Set UART port and set stop bit to 1 bit
             status = dev.UART_setNumStopBit(UART_port, WPC.UART_STOP_BIT_1);
             Console.WriteLine($"UART_setNumStopBit status: {status}");
 

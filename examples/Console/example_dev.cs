@@ -38,9 +38,10 @@ public class WPC_example_code
         
         Console.WriteLine("");
         Console.WriteLine("For System");
-        Console.WriteLine("example_get_device_info, please input 50");
-        Console.WriteLine("example_find_all_devices, please input 51");
-        Console.WriteLine("example_get_WifiDAQ_status, please input 52");
+        Console.WriteLine("example_get_network_info, please input 50");
+        Console.WriteLine("example_get_USB_info, please input 51");
+        Console.WriteLine("example_find_all_devices, please input 52");
+        Console.WriteLine("example_get_WifiDAQ_status, please input 53");
  
         Console.WriteLine("");
         Console.WriteLine("For Temperature-TC");
@@ -60,6 +61,16 @@ public class WPC_example_code
         Console.WriteLine("For SPI");
         Console.WriteLine("example_SPI_read_and_write, please input 90");
         Console.WriteLine("example_SPI_write, please input 91");
+
+        Console.WriteLine("");
+        Console.WriteLine("For UART");
+        Console.WriteLine("example_UART_read, please input 100");
+        Console.WriteLine("example_UART_write, please input 101");
+
+        Console.WriteLine("");
+        Console.WriteLine("For CAN");
+        Console.WriteLine("example_CAN_read, please input 110");
+        Console.WriteLine("example_CAN_write, please input 111");
 
         Console.WriteLine("");
         Console.WriteLine("Input number:  ");
@@ -146,19 +157,25 @@ public class WPC_example_code
                 break;
 
             case 50:
-                Console.WriteLine("Get 50, run example_get_device_info.cs");
+                Console.WriteLine("Get 50, run example_get_network_info.cs");
                 Console.WriteLine("");
-                WPC_get_device_info.Main();
+                WPC_get_network_info.Main();
                 break;
 
             case 51:
-                Console.WriteLine("Get 51, run example_find_all_devices.cs");
+                Console.WriteLine("Get 51, run example_get_USB_info.cs");
+                Console.WriteLine("");
+                WPC_get_USB_info.Main();
+                break;
+
+            case 52:
+                Console.WriteLine("Get 52, run example_find_all_devices.cs");
                 Console.WriteLine("");
                 WPC_find_all_devices.Main();
                 break;
 
-            case 52:
-                Console.WriteLine("Get 52, run example_get_WifiDAQ_status.cs");
+            case 53:
+                Console.WriteLine("Get 53, run example_get_WifiDAQ_status.cs");
                 Console.WriteLine("");
                 WPC_get_WifiDAQ_status.Main();
                 break;
@@ -205,6 +222,29 @@ public class WPC_example_code
                 WPC_SPI_write.Main();
                 break;
 
+            case 100:
+                Console.WriteLine("Get 100, run example_UART_read.cs");
+                Console.WriteLine("");
+                WPC_UART_read.Main();
+                break;
+
+            case 101:
+                Console.WriteLine("Get 101, run example_UART_write.cs");
+                Console.WriteLine("");
+                WPC_UART_write.Main();
+                break;
+
+            case 110:
+                Console.WriteLine("Get 110, run example_CAN_read.cs");
+                Console.WriteLine(""); 
+                WPC_CAN_read.Main();
+
+                break;
+            case 111:
+                Console.WriteLine("Get 111, run example_CAN_write.cs");
+                Console.WriteLine("");
+                WPC_CAN_write.Main();
+                break;
             default:
                 Console.WriteLine("Wrong index, we will use example_find_all_devices example code");
                 Console.WriteLine("");
