@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.11</span>
    </div>
    <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
@@ -105,11 +105,13 @@ $(document).ready(function(){initNavTree('class_u_s_b_d_a_q_f1_a_o_d.html','');}
 <div class="title">USBDAQF1AOD Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This device has 16ch 3.3V DIO/I2C/SPI &amp; 8ch AI &amp; 8ch AO. Max sampling rate is 16KHz.  
+ <a href="class_u_s_b_d_a_q_f1_a_o_d.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a71292860378c54482ccf81434131a44f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_a_o_d.html#a71292860378c54482ccf81434131a44f">USBDAQF1AOD</a> ()</td></tr>
-<tr class="memdesc:a71292860378c54482ccf81434131a44f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This device has 16ch 3.3V DIO/I2C/SPI &amp; 8ch AI &amp; 8ch AO. Max sampling rate is 16KHz.  <a href="#a71292860378c54482ccf81434131a44f">More...</a><br /></td></tr>
 <tr class="separator:a71292860378c54482ccf81434131a44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0e1abd87d51854b1f4d667aa401abb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_a_o_d.html#aa0e1abd87d51854b1f4d667aa401abb7">connect</a> (string serial_number)</td></tr>
 <tr class="memdesc:aa0e1abd87d51854b1f4d667aa401abb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to USB device.  <a href="#aa0e1abd87d51854b1f4d667aa401abb7">More...</a><br /></td></tr>
@@ -264,7 +266,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7aade6c27f45426b0c05a519369cda6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#_a1">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#_a1">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#_a2">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#_a1">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#_a2">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#_a2">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#_a2">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#_a2">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#_a2">AO_write_one_channel.cs</a>.</dd>
+<div class="textblock"><p>This device has 16ch 3.3V DIO/I2C/SPI &amp; 8ch AI &amp; 8ch AO. Max sampling rate is 16KHz. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#_a0">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#_a0">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#_a0">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#_a0">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#_a0">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#_a0">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#_a0">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#_a0">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#_a0">AO_write_one_channel.cs</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a71292860378c54482ccf81434131a44f"></a>
@@ -290,7 +293,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This device has 16ch 3.3V DIO/I2C/SPI &amp; 8ch AI &amp; 8ch AO. Max sampling rate is 16KHz. </p>
+<p></p>
+<div class="image">
+<img src="pinout-USBDAQF1AOD.JPG" alt="pinout-USBDAQF1AOD.JPG" width="50%"/>
+</div>
+<p> This device has 16ch 3.3V DIO/I2C/SPI &amp; 8ch AI &amp; 8ch AO. Max sampling rate is 16KHz. </p>
 
 </div>
 </div>
@@ -338,7 +345,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a10">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a11">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a11">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a8">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a8">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a9">AIO_all_channels_loopback.cs</a>, and <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a9">AIO_one_channel_loopback.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a8">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a9">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a9">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a6">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a6">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a7">AIO_all_channels_loopback.cs</a>, and <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a7">AIO_one_channel_loopback.cs</a>.</dd>
 </dl>
 
 </div>
@@ -386,7 +393,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a6">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a6">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a5">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a6">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a5">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a5">AIO_all_channels_loopback.cs</a>, and <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a5">AIO_one_channel_loopback.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a4">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a4">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a3">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a4">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a3">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a3">AIO_all_channels_loopback.cs</a>, and <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a3">AIO_one_channel_loopback.cs</a>.</dd>
 </dl>
 
 </div>
@@ -434,7 +441,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>List of float value measured from channels. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a2">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a7">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a7">AIO_all_channels_loopback.cs</a>, and <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a7">AIO_one_channel_loopback.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a1">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a5">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a5">AIO_all_channels_loopback.cs</a>, and <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a5">AIO_one_channel_loopback.cs</a>.</dd>
 </dl>
 
 </div>
@@ -489,7 +496,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>List of list of float. AI data where each element of <code>sample_list</code> is a sample. A sample is a list of values measured from different channels. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a2">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a2">AI_N_samples_in_loop.cs</a>, and <a class="el" href="_a_i__n_samples_once_8cs-example.html#a10">AI_N_samples_once.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a1">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a1">AI_N_samples_in_loop.cs</a>, and <a class="el" href="_a_i__n_samples_once_8cs-example.html#a8">AI_N_samples_once.cs</a>.</dd>
 </dl>
 
 </div>
@@ -544,7 +551,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a7">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a7">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a6">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a7">AI_on_demand_in_loop.cs</a>, and <a class="el" href="_a_i_on_demand_once_8cs-example.html#a6">AI_on_demand_once.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a5">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a5">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a4">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a5">AI_on_demand_in_loop.cs</a>, and <a class="el" href="_a_i_on_demand_once_8cs-example.html#a4">AI_on_demand_once.cs</a>.</dd>
 </dl>
 
 </div>
@@ -599,7 +606,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a9">AI_N_samples_in_loop.cs</a>, and <a class="el" href="_a_i__n_samples_once_8cs-example.html#a7">AI_N_samples_once.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a7">AI_N_samples_in_loop.cs</a>, and <a class="el" href="_a_i__n_samples_once_8cs-example.html#a5">AI_N_samples_once.cs</a>.</dd>
 </dl>
 
 </div>
@@ -654,7 +661,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a8">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a8">AI_N_samples_in_loop.cs</a>, and <a class="el" href="_a_i__n_samples_once_8cs-example.html#a8">AI_N_samples_once.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a6">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a6">AI_N_samples_in_loop.cs</a>, and <a class="el" href="_a_i__n_samples_once_8cs-example.html#a6">AI_N_samples_once.cs</a>.</dd>
 </dl>
 
 </div>
@@ -702,7 +709,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a9">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a10">AI_N_samples_in_loop.cs</a>, and <a class="el" href="_a_i__n_samples_once_8cs-example.html#a9">AI_N_samples_once.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a7">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a8">AI_N_samples_in_loop.cs</a>, and <a class="el" href="_a_i__n_samples_once_8cs-example.html#a7">AI_N_samples_once.cs</a>.</dd>
 </dl>
 
 </div>
@@ -796,7 +803,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a10">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a10">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a7">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a7">AO_write_one_channel.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a8">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a8">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a5">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a5">AO_write_one_channel.cs</a>.</dd>
 </dl>
 
 </div>
@@ -890,7 +897,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a6">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a6">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a5">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a5">AO_write_one_channel.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a4">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a4">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a3">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a3">AO_write_one_channel.cs</a>.</dd>
 </dl>
 
 </div>
@@ -945,7 +952,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a8">AIO_all_channels_loopback.cs</a>, and <a class="el" href="_a_o_write_all_channels_8cs-example.html#a6">AO_write_all_channels.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a6">AIO_all_channels_loopback.cs</a>, and <a class="el" href="_a_o_write_all_channels_8cs-example.html#a4">AO_write_all_channels.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1007,7 +1014,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a8">AIO_one_channel_loopback.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a6">AO_write_one_channel.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a6">AIO_one_channel_loopback.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a4">AO_write_one_channel.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1036,7 +1043,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close device handle. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a12">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a13">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a13">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a10">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a10">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a12">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a12">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a9">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a9">AO_write_one_channel.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a10">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a11">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a11">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a8">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a8">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a10">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a10">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a7">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a7">AO_write_one_channel.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1073,7 +1080,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a4">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a4">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a3">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a4">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a3">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a3">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a3">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a3">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a3">AO_write_one_channel.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a2">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a2">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a1">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a2">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a1">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a1">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a1">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a1">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a1">AO_write_one_channel.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1400,7 +1407,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Disconnect from USB device. </p>
 <dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a11">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a12">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a12">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a9">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a9">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a11">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a11">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a8">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a8">AO_write_one_channel.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a9">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a10">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a10">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a7">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a7">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a9">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a9">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a6">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a6">AO_write_one_channel.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2105,7 +2112,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a5">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a5">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a4">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a5">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a4">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a4">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a4">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a4">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a4">AO_write_one_channel.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_a_i_continuous_8cs-example.html#a3">AI_continuous.cs</a>, <a class="el" href="_a_i__n_samples_in_loop_8cs-example.html#a3">AI_N_samples_in_loop.cs</a>, <a class="el" href="_a_i__n_samples_once_8cs-example.html#a2">AI_N_samples_once.cs</a>, <a class="el" href="_a_i_on_demand_in_loop_8cs-example.html#a3">AI_on_demand_in_loop.cs</a>, <a class="el" href="_a_i_on_demand_once_8cs-example.html#a2">AI_on_demand_once.cs</a>, <a class="el" href="_a_i_o_all_channels_loopback_8cs-example.html#a2">AIO_all_channels_loopback.cs</a>, <a class="el" href="_a_i_o_one_channel_loopback_8cs-example.html#a2">AIO_one_channel_loopback.cs</a>, <a class="el" href="_a_o_write_all_channels_8cs-example.html#a2">AO_write_all_channels.cs</a>, and <a class="el" href="_a_o_write_one_channel_8cs-example.html#a2">AO_write_one_channel.cs</a>.</dd>
 </dl>
 
 </div>
