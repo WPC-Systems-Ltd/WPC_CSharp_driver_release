@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.5</span>
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -107,28 +107,28 @@ $(document).ready(function(){initNavTree('interface_i_wifi_system_nodule.html','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a60851ef36557e2dd6ecf79fd25669b00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a60851ef36557e2dd6ecf79fd25669b00">Wifi_readRSSI</a> ()</td></tr>
-<tr class="memdesc:a60851ef36557e2dd6ecf79fd25669b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Wifi RSSI signal of the connected Wifi device.  <a href="#a60851ef36557e2dd6ecf79fd25669b00">More...</a><br /></td></tr>
-<tr class="separator:a60851ef36557e2dd6ecf79fd25669b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a510920d0ffaab1db8e2991b83b19519a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a510920d0ffaab1db8e2991b83b19519a">Wifi_readBattery</a> ()</td></tr>
-<tr class="memdesc:a510920d0ffaab1db8e2991b83b19519a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get volatge status of battery if the Wifi device has one.  <a href="#a510920d0ffaab1db8e2991b83b19519a">More...</a><br /></td></tr>
-<tr class="separator:a510920d0ffaab1db8e2991b83b19519a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa019399c9f86faf7920f0dca0226746d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#aa019399c9f86faf7920f0dca0226746d">Wifi_readThermo</a> ()</td></tr>
-<tr class="memdesc:aa019399c9f86faf7920f0dca0226746d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get temperature from thermal sensor if the Wifi device has one.  <a href="#aa019399c9f86faf7920f0dca0226746d">More...</a><br /></td></tr>
-<tr class="separator:aa019399c9f86faf7920f0dca0226746d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62a5ede70ffb7614e0eb8cd9d61191e2"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a62a5ede70ffb7614e0eb8cd9d61191e2">Wifi_readAccleration</a> ()</td></tr>
-<tr class="memdesc:a62a5ede70ffb7614e0eb8cd9d61191e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get acceleration from sensor if the Wifi device has one.  <a href="#a62a5ede70ffb7614e0eb8cd9d61191e2">More...</a><br /></td></tr>
-<tr class="separator:a62a5ede70ffb7614e0eb8cd9d61191e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0e710631de89782bee6015cc72a0fa"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a4a0e710631de89782bee6015cc72a0fa">Wifi_getWifiConfiguration</a> ()</td></tr>
-<tr class="memdesc:a4a0e710631de89782bee6015cc72a0fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Wifi reconnection times and AP stay time.  <a href="#a4a0e710631de89782bee6015cc72a0fa">More...</a><br /></td></tr>
-<tr class="separator:a4a0e710631de89782bee6015cc72a0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47064fa59bf33d073af760b1af3f9680"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a47064fa59bf33d073af760b1af3f9680">Wifi_getWifiBandwidth</a> ()</td></tr>
-<tr class="memdesc:a47064fa59bf33d073af760b1af3f9680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bandwidth from Wifi device.  <a href="#a47064fa59bf33d073af760b1af3f9680">More...</a><br /></td></tr>
-<tr class="separator:a47064fa59bf33d073af760b1af3f9680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691546c7e226482a325ac4804a0386fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a691546c7e226482a325ac4804a0386fe">Wifi_readRSSI</a> (int timeout=100)</td></tr>
+<tr class="memdesc:a691546c7e226482a325ac4804a0386fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Wifi RSSI signal of the connected Wifi device.  <a href="#a691546c7e226482a325ac4804a0386fe">More...</a><br /></td></tr>
+<tr class="separator:a691546c7e226482a325ac4804a0386fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b3caab79237eb17de0769ac4dfa262"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a77b3caab79237eb17de0769ac4dfa262">Wifi_readBattery</a> (int timeout=100)</td></tr>
+<tr class="memdesc:a77b3caab79237eb17de0769ac4dfa262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get volatge status of battery if the Wifi device has one.  <a href="#a77b3caab79237eb17de0769ac4dfa262">More...</a><br /></td></tr>
+<tr class="separator:a77b3caab79237eb17de0769ac4dfa262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031b036e04e619523d1c2f0a2a6675ec"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a031b036e04e619523d1c2f0a2a6675ec">Wifi_readThermo</a> (int timeout=100)</td></tr>
+<tr class="memdesc:a031b036e04e619523d1c2f0a2a6675ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get temperature from thermal sensor if the Wifi device has one.  <a href="#a031b036e04e619523d1c2f0a2a6675ec">More...</a><br /></td></tr>
+<tr class="separator:a031b036e04e619523d1c2f0a2a6675ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326dcc62a15e4984035ea974063850bb"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a326dcc62a15e4984035ea974063850bb">Wifi_readAccleration</a> (int timeout=100)</td></tr>
+<tr class="memdesc:a326dcc62a15e4984035ea974063850bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get acceleration from sensor if the Wifi device has one.  <a href="#a326dcc62a15e4984035ea974063850bb">More...</a><br /></td></tr>
+<tr class="separator:a326dcc62a15e4984035ea974063850bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2275b4ee5612fa7b6b051b112a4db11f"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#a2275b4ee5612fa7b6b051b112a4db11f">Wifi_getWifiConfiguration</a> (int timeout=100)</td></tr>
+<tr class="memdesc:a2275b4ee5612fa7b6b051b112a4db11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Wifi reconnection times and AP stay time.  <a href="#a2275b4ee5612fa7b6b051b112a4db11f">More...</a><br /></td></tr>
+<tr class="separator:a2275b4ee5612fa7b6b051b112a4db11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc5b022885853386448b5b4a902e5d1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_wifi_system_nodule.html#adc5b022885853386448b5b4a902e5d1e">Wifi_getWifiBandwidth</a> (int timeout=100)</td></tr>
+<tr class="memdesc:adc5b022885853386448b5b4a902e5d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bandwidth from Wifi device.  <a href="#adc5b022885853386448b5b4a902e5d1e">More...</a><br /></td></tr>
+<tr class="separator:adc5b022885853386448b5b4a902e5d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a47064fa59bf33d073af760b1af3f9680"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47064fa59bf33d073af760b1af3f9680">&#9670;&nbsp;</a></span>Wifi_getWifiBandwidth()</h2>
+<a id="adc5b022885853386448b5b4a902e5d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc5b022885853386448b5b4a902e5d1e">&#9670;&nbsp;</a></span>Wifi_getWifiBandwidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,13 +136,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int IWifiSystemNodule.Wifi_getWifiBandwidth </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Get bandwidth from Wifi device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>1 : Bandwidth is HT20.</li>
 <li>2 : Bandwidth is HT40. </li>
@@ -151,8 +158,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4a0e710631de89782bee6015cc72a0fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a0e710631de89782bee6015cc72a0fa">&#9670;&nbsp;</a></span>Wifi_getWifiConfiguration()</h2>
+<a id="a2275b4ee5612fa7b6b051b112a4db11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2275b4ee5612fa7b6b051b112a4db11f">&#9670;&nbsp;</a></span>Wifi_getWifiConfiguration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,19 +167,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">List&lt;int&gt; IWifiSystemNodule.Wifi_getWifiConfiguration </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Get Wifi reconnection times and AP stay time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>List of Wifi connection retry times and Time of staying in AP mode in second. </dd></dl>
 
 </div>
 </div>
-<a id="a62a5ede70ffb7614e0eb8cd9d61191e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62a5ede70ffb7614e0eb8cd9d61191e2">&#9670;&nbsp;</a></span>Wifi_readAccleration()</h2>
+<a id="a326dcc62a15e4984035ea974063850bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326dcc62a15e4984035ea974063850bb">&#9670;&nbsp;</a></span>Wifi_readAccleration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,19 +194,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">List&lt;int&gt; IWifiSystemNodule.Wifi_readAccleration </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Get acceleration from sensor if the Wifi device has one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>List of accelerations in x-, y-, and z-axis. </dd></dl>
 
 </div>
 </div>
-<a id="a510920d0ffaab1db8e2991b83b19519a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a510920d0ffaab1db8e2991b83b19519a">&#9670;&nbsp;</a></span>Wifi_readBattery()</h2>
+<a id="a77b3caab79237eb17de0769ac4dfa262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b3caab79237eb17de0769ac4dfa262">&#9670;&nbsp;</a></span>Wifi_readBattery()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,19 +221,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int IWifiSystemNodule.Wifi_readBattery </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Get volatge status of battery if the Wifi device has one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>Battery level in mV. </dd></dl>
 
 </div>
 </div>
-<a id="a60851ef36557e2dd6ecf79fd25669b00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60851ef36557e2dd6ecf79fd25669b00">&#9670;&nbsp;</a></span>Wifi_readRSSI()</h2>
+<a id="a691546c7e226482a325ac4804a0386fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691546c7e226482a325ac4804a0386fe">&#9670;&nbsp;</a></span>Wifi_readRSSI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,19 +248,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int IWifiSystemNodule.Wifi_readRSSI </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Get Wifi RSSI signal of the connected Wifi device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>RSSI signal in dBm. </dd></dl>
 
 </div>
 </div>
-<a id="aa019399c9f86faf7920f0dca0226746d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa019399c9f86faf7920f0dca0226746d">&#9670;&nbsp;</a></span>Wifi_readThermo()</h2>
+<a id="a031b036e04e619523d1c2f0a2a6675ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031b036e04e619523d1c2f0a2a6675ec">&#9670;&nbsp;</a></span>Wifi_readThermo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,13 +275,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">float IWifiSystemNodule.Wifi_readThermo </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>100</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Get temperature from thermal sensor if the Wifi device has one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Specify an additional waiting time to set or get data.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>Temperature in Celsius. </dd></dl>
 
 </div>
