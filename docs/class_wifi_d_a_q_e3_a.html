@@ -1,6 +1,8 @@
+<!-- HTML header for doxygen 1.8.15-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link rel="shortcut icon" href="WPC_trademark.jpg" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
@@ -20,12 +22,8 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -36,25 +34,10 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.10.1</span>
+   &#160;<span id="projectnumber">0.0.10.2</span>
    </div>
    <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -66,6 +49,16 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -185,7 +178,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This device has 8ch 16-bit +/-10V analog input. Max sampling rate is 10KHz. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#_a0">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#_a0">Get_WifiDAQ_status.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#_a0">Get_WifiDAQ_status.cs</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab4f0a51758a8823a8110757f3ba2c4a9"></a>
@@ -769,7 +762,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close network device handle. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a8">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a7">Get_WifiDAQ_status.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a7">Get_WifiDAQ_status.cs</a>.</dd>
 </dl>
 
 </div>
@@ -806,7 +799,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a1">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a1">Get_WifiDAQ_status.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a1">Get_WifiDAQ_status.cs</a>.</dd>
 </dl>
 
 </div>
@@ -836,7 +829,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Disconnect network device. </p>
 <dl class="section return"><dt>Returns</dt><dd>Disconnection status.</dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a7">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a6">Get_WifiDAQ_status.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a6">Get_WifiDAQ_status.cs</a>.</dd>
 </dl>
 
 </div>
@@ -872,7 +865,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a2">Get_network_info.cs</a>, and <a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a2">Get_WifiDAQ_status.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__wifi_d_a_q_status_8cs-example.html#a2">Get_WifiDAQ_status.cs</a>.</dd>
 </dl>
 
 </div>
@@ -942,8 +935,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>List of IP address and subnet mask. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a5">Get_network_info.cs</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -978,8 +969,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>MAC address. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a6">Get_network_info.cs</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1014,8 +1003,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Date and time represented by "A-B-C, D:E:F". </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a4">Get_network_info.cs</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1050,8 +1037,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Serial number represented by string of 8 characters. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get_network_info_8cs-example.html#a3">Get_network_info.cs</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1447,7 +1432,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_wifi_d_a_q_e3_a.html">WifiDAQE3A</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Wed Nov 9 2022 16:32:26 for WPC CSharp driver by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

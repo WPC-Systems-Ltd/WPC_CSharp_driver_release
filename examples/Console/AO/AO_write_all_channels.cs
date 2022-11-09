@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright(c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
 /// </summary> 
 
@@ -56,7 +56,7 @@ class WPC_AO_write_all_channels
             Console.WriteLine($"AO_open status: {status}");
 
             // Set AO port and write data simultaneously
-            List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
+            List<double> AO_values = new List<double> { 3, 1, 2, 3, 4, 5, 4, 3 };
             status = dev.AO_writeAllChannels(port, AO_values);
             Console.WriteLine($"AO_writeAllChannels status: {status}");
 

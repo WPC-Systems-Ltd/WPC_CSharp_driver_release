@@ -1,0 +1,26 @@
+var class_ethan_a =
+[
+    [ "EthanA", "df/dbf/class_ethan_a.html#a3cd69048d5b368a5ddfbadafcdcc1a1a", null ],
+    [ "AI_close", "df/dbf/class_ethan_a.html#a5df8d27db8a9697f219beda53cc57d56", null ],
+    [ "AI_open", "df/dbf/class_ethan_a.html#ab08349f743dee520f1f0e158a9aaba3c", null ],
+    [ "AI_readOnDemand", "df/dbf/class_ethan_a.html#a6df1edbdb6a01adf1539d26972e04296", null ],
+    [ "AI_readStreaming", "df/dbf/class_ethan_a.html#a1c0d62ab263ecda048ff68fdaa1593a4", null ],
+    [ "AI_setMode", "df/dbf/class_ethan_a.html#a0af08dd890870120ea82fac88fc36fd4", null ],
+    [ "AI_setNumSamples", "df/dbf/class_ethan_a.html#a1613a73dfc504a5b9778173df33bf77d", null ],
+    [ "AI_setSamplingRate", "df/dbf/class_ethan_a.html#a5b8f3ec2ef6cff2bddec7ee8fef2a32f", null ],
+    [ "AI_start", "df/dbf/class_ethan_a.html#ae8ab3e1e1ba8d21744d226efdb016b04", null ],
+    [ "AI_stop", "df/dbf/class_ethan_a.html#ab15b2e4815728b39d3d33037e08d1127", null ],
+    [ "close", "df/dbf/class_ethan_a.html#ae008503959ef9dd40cb45b5735ca5cae", null ],
+    [ "connect", "df/dbf/class_ethan_a.html#ab49703dc9ffffbab64377999e2f8d02c", null ],
+    [ "disconnect", "df/dbf/class_ethan_a.html#a5678fc589edfb86a8b2c9d557ce04d62", null ],
+    [ "Sys_getDriverInfo", "df/dbf/class_ethan_a.html#a3e9d554aa52c0c85e3d7f47c78fdc21f", null ],
+    [ "Sys_getGateway", "df/dbf/class_ethan_a.html#a052204792ebbbb68af484f7cf97d1ac5", null ],
+    [ "Sys_getIPAddrAndSubmask", "df/dbf/class_ethan_a.html#ad6650112d22e4b8345aef9f73d736533", null ],
+    [ "Sys_getMACAddr", "df/dbf/class_ethan_a.html#aacbbf39591780504f35ad5db3892d63d", null ],
+    [ "Sys_getRTC", "df/dbf/class_ethan_a.html#ae87acda729662e12985d57c6708f302b", null ],
+    [ "Sys_getSerialNumber", "df/dbf/class_ethan_a.html#a4e6abf7b80d386d259fc2f5758f04997", null ],
+    [ "Sys_reboot", "df/dbf/class_ethan_a.html#acab25a5c727c80dab014860c80478171", null ],
+    [ "Sys_rebootOnBootloader", "df/dbf/class_ethan_a.html#a563bfdfc6b892c4a9e4ed90f432af0ed", null ],
+    [ "Sys_setIPAddrAndSubmask", "df/dbf/class_ethan_a.html#ad0c83fc77f1724ad0f2e624cace9055d", null ],
+    [ "Sys_setRTC", "df/dbf/class_ethan_a.html#af516afbe323a6b66bbbe5974cc44a327", null ]
+];

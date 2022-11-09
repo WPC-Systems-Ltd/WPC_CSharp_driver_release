@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "abcdegipstuw",
   1: "deuw",
   2: "abcdeistuw",
-  3: "egips"
+  3: "egps"
 };
 
 var indexSectionNames =

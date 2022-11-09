@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
- 
+
 /// <summary>
-/// @example Get_WifiDAQ_status.cs
+/// @example Get_network_info.cs
 /// 
-/// This example demonstrates how to get basic information from WifiDAQE3A such as RSSI & battery & thermo.
+/// This example demonstrates how to get hardware & network information from EthanA.
+/// 
+/// First, get hardware information such as firmware model & version.
+/// 
+/// Last, get network information such as IP & submask & MAC.
 /// 
 /// For other examples please check:
 ///  https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 ///  
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright(c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-/// </summary>
+/// </summary> 
 
-class WPC_get_WifiDAQ_status
+class WPC_get_network_info
 {
     static public void Main()
     {
@@ -28,12 +32,12 @@ class WPC_get_WifiDAQ_status
         Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
 
         // Create device handle
-        WifiDAQE3A dev = new WifiDAQE3A();
+        EthanA dev = new EthanA();
 
         // Connect to device
         try
         {
-            dev.connect("192.168.5.79");
+            dev.connect("192.168.1.110");
         }
         catch (Exception ex)
         {
@@ -49,20 +53,20 @@ class WPC_get_WifiDAQ_status
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
 
-            // Get RSSI, battery and thermo
+            // Get serial number & RTC Time
+            string serial_num = dev.Sys_getSerialNumber();
+            string RTC = dev.Sys_getRTC();
+            Console.WriteLine($"Serial number: {serial_num}"); 
+            Console.WriteLine($"RTC data time: {RTC}");
+             
+            // Get IP & submask
+            List<string> info = dev.Sys_getIPAddrAndSubmask();
+            Console.WriteLine($"IP: {info[0]}");
+            Console.WriteLine($"Submask: {info[1]}");
 
-            int data1 = dev.Wifi_readRSSI();
-
-            int data2 = dev.Wifi_readBattery();
-
-            float data3 = dev.Wifi_readThermo();
-
-            Console.WriteLine($"RSSI: {data1} dBm");
-
-            Console.WriteLine($"Battery: {data2} mV");
-
-            Console.WriteLine($"Thermo: {data3} °C"); 
- 
+            // Get MAC
+            string mac = dev.Sys_getMACAddr();
+            Console.WriteLine($"MAC: {mac}");
         }
         catch (Exception ex)
         {

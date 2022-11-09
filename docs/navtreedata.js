@@ -30,14 +30,13 @@ var NAVTREE =
       [ "I/O Function Table", "index.html#autotoc_md2", null ],
       [ "License", "index.html#autotoc_md3", null ]
     ] ],
-    [ "Error Code Table", "errorcode.html", null ],
-    [ "I/O Function Table", "functiotable.html", null ],
-    [ "Products Feature", "product.html", null ],
-    [ "SPI Setting Table", "setting_s_p_i.html", [
-      [ "SPI Clock", "setting_s_p_i.html#settingSPIsection1", null ],
-      [ "SPI Mode", "setting_s_p_i.html#settingSPIsection2", null ],
-      [ "SPI Data Size", "setting_s_p_i.html#settingSPIsection3", null ],
-      [ "SPI Endianness", "setting_s_p_i.html#settingSPIsection4", null ]
+    [ "Products Feature", "feature_product.html", null ],
+    [ "Error Code Table", "table_errorcode.html", null ],
+    [ "SPI Setting Table", "table_setting_s_p_i.html", [
+      [ "SPI Clock", "table_setting_s_p_i.html#settingSPIsection1", null ],
+      [ "SPI Mode", "table_setting_s_p_i.html#settingSPIsection2", null ],
+      [ "SPI Data Size", "table_setting_s_p_i.html#settingSPIsection3", null ],
+      [ "SPI Endianness", "table_setting_s_p_i.html#settingSPIsection4", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
