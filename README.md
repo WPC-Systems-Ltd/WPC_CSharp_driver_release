@@ -58,6 +58,6 @@ Take `USB-DAQ-F1-AOD` for example:
 
 ## License
 
-**WPC Python driver release** is licensed under an MIT-style license see
+**WPC CSharp driver release** is licensed under an MIT-style license see
 [LICENSE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/LICENSE). Other incorporated projects may be licensed under different licenses.
 All licenses allow for non-commercial and commercial use.

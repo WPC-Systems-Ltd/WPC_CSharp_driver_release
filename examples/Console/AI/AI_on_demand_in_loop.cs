@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 /// 
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright(c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
 /// </summary>
 
@@ -79,6 +79,10 @@ class WPC_AI_on_demand_in_loop
             // Set AI port and acquisition mode to on demand
             status = dev.AI_setMode(port, WPC.AI_MODE_ON_DEMAND);
             Console.WriteLine($"AI_setMode status: {status}");
+
+            // Data acquisition
+            List<double> sample = dev.AI_readOnDemand(port);
+
 
             // Start loop
             loop_func(dev, port, 1, 3);

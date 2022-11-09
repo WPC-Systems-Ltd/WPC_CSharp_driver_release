@@ -1,6 +1,8 @@
+<!-- HTML header for doxygen 1.8.15-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link rel="shortcut icon" href="WPC_trademark.jpg" type="image/x-icon" />
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
@@ -20,12 +22,8 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -36,25 +34,10 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.10.1</span>
+   &#160;<span id="projectnumber">0.0.10.2</span>
    </div>
    <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -66,6 +49,16 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -109,13 +102,13 @@ $(document).ready(function(){initNavTree('_d_i_o_loopback_port_8cs-example.html'
 <p>Last, close DO and DI in port.</p>
 <p>For other examples please check: <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples">https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples</a></p>
 <p>See README.md file to get detailed usage of this example.</p>
-<p>Copyright(c) 2022 WPC Systems Ltd. All rights reserved. </p>
+<p>Copyright (c) 2022 WPC Systems Ltd. All rights reserved. </p>
 <div class="fragment"><div class="line"><span class="keyword">using</span> System;</div><div class="line"><span class="keyword">using</span> System.Collections.Generic;</div><div class="line"><span class="keyword">using</span> System.Linq;</div><div class="line"><span class="keyword">using</span> System.Text;</div><div class="line"><span class="keyword">using</span> System.Threading.Tasks;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">class </span>WPC_DIO_loopback_port</div><div class="line">{</div><div class="line">    <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">void</span> Main()</div><div class="line">    {</div><div class="line">        Console.WriteLine(<span class="stringliteral">&quot;Start example code...&quot;</span>);</div><div class="line"></div><div class="line">        <span class="comment">// Get C# driver version</span></div><div class="line">        Console.WriteLine($<span class="stringliteral">&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;</span>);</div><div class="line"></div><div class="line">        <span class="comment">// Create device handle</span></div><div class="line">        <a name="_a0"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html">USBDAQF1AD</a> dev = <span class="keyword">new</span> <a class="code" href="class_u_s_b_d_a_q_f1_a_d.html">USBDAQF1AD</a>();</div><div class="line"></div><div class="line">        <span class="comment">// Connect to device</span></div><div class="line">        dev.<a name="a1"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#ad039662c7eca5195950207f513d54490">connect</a>(<span class="stringliteral">&quot;21JA1245&quot;</span>);</div><div class="line"></div><div class="line">        <span class="comment">// Execute</span></div><div class="line">        <span class="keywordflow">try</span></div><div class="line">        {</div><div class="line">            <span class="comment">// Parameters setting</span></div><div class="line">            <span class="keywordtype">int</span> status;</div><div class="line">            <span class="keywordtype">int</span> port_DO = 0;</div><div class="line">            <span class="keywordtype">int</span> port_DI = 1; </div><div class="line"></div><div class="line">            <span class="comment">// Get firmware model &amp; version</span></div><div class="line">            <span class="keywordtype">string</span>[] driver_info = dev.<a name="a2"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#a5fd143413d0e4198ac51ac994eff180f">Sys_getDriverInfo</a>();</div><div class="line">            Console.WriteLine($<span class="stringliteral">&quot;Model name: {driver_info[0]}&quot;</span>);</div><div class="line">            Console.WriteLine($<span class="stringliteral">&quot;Firmware version: {driver_info.Last()}&quot;</span>);</div><div class="line"></div><div class="line">            <span class="comment">// Open all pins in port 0 with digital output </span></div><div class="line">            status = dev.<a name="a3"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#a54acf803db4604d788a998ee0283f1dc">DO_openPort</a>(port_DO);</div><div class="line">            Console.WriteLine($<span class="stringliteral">&quot;DO_openPort status: {status}&quot;</span>);</div><div class="line"></div><div class="line">            <span class="comment">// Open all pins in port 1 with digital input</span></div><div class="line">            status = dev.<a name="a4"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#a6e62260bc7dca8fc3ae2cce314b290b2">DI_openPort</a>(port_DI);</div><div class="line">            Console.WriteLine($<span class="stringliteral">&quot;DI_openPort status: {status}&quot;</span>);</div><div class="line"></div><div class="line">            <span class="comment">// Set pin0, pin1 and pin2 to high, others to low</span></div><div class="line">            status = dev.<a name="a5"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#a1a51c589c0f449e7de986531d603a13c">DO_writePort</a>(port_DO, <span class="keyword">new</span> List&lt;int&gt; { 1, 1, 1, 0, 0, 0, 0, 0 });</div><div class="line">            Console.WriteLine($<span class="stringliteral">&quot;DO_writePort status: {status}&quot;</span>);</div><div class="line"></div><div class="line">            <span class="comment">// Read all pins state in port 1</span></div><div class="line">            List&lt;int&gt; pin_s = dev.<a name="a6"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#a5aa06d5a59aa1df08a90d4b11307e07b">DI_readPort</a>(port_DI);</div><div class="line">            Console.WriteLine($<span class="stringliteral">&quot;DI_readPort: {pin_s[0]},{pin_s[1]},{pin_s[2]},{pin_s[3]},{pin_s[4]},{pin_s[5]}&quot;</span>);</div><div class="line"></div><div class="line">            <span class="comment">// Close all pins in port 0 with digital output</span></div><div class="line">            status = dev.<a name="a7"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#a4706ef800abd6d261cda63f1b6b699f1">DO_closePort</a>(port_DO);</div><div class="line">            Console.WriteLine($<span class="stringliteral">&quot;DO_closePort status: {status}&quot;</span>);</div><div class="line"></div><div class="line">            <span class="comment">// Close all pins in port 1 with digital input</span></div><div class="line">            status = dev.<a name="a8"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#a1156ddaacb9ad9a887edbdd3f880cdc7">DI_closePort</a>(port_DI);</div><div class="line">            Console.WriteLine($<span class="stringliteral">&quot;DI_closePort status: {status}&quot;</span>);</div><div class="line"></div><div class="line">        }</div><div class="line">        <span class="keywordflow">catch</span> (Exception ex)</div><div class="line">        {</div><div class="line">            Console.WriteLine(ex);</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="comment">// Disconnect device</span></div><div class="line">        dev.<a name="a9"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#acbf8bc1791c7250878363a7305fb7eb8">disconnect</a>();</div><div class="line"></div><div class="line">        <span class="comment">// Release device handle</span></div><div class="line">        dev.<a name="a10"></a><a class="code" href="class_u_s_b_d_a_q_f1_a_d.html#ae57bf038628cc69c41eabdb7f0e483c6">close</a>();</div><div class="line"></div><div class="line">        Console.WriteLine(<span class="stringliteral">&quot;End example code...&quot;</span>);</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"></div></div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Wed Nov 9 2022 17:41:16 for WPC CSharp driver by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>
