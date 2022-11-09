@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.10.1</span>
    </div>
    <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
@@ -105,11 +105,12 @@ $(document).ready(function(){initNavTree('class_device_finder.html','');});
 <div class="title">DeviceFinder Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Find USB and ethernet device  
+ <a href="class_device_finder.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeef53582e04039a6aa8fa80bd60ca7a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#aeef53582e04039a6aa8fa80bd60ca7a6">DeviceFinder</a> ()</td></tr>
-<tr class="separator:aeef53582e04039a6aa8fa80bd60ca7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40cf4c5d2fcca2f12d2c172ec8dd1f4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_finder.html#a40cf4c5d2fcca2f12d2c172ec8dd1f4b">connect</a> ()</td></tr>
 <tr class="memdesc:a40cf4c5d2fcca2f12d2c172ec8dd1f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to broadcast device.  <a href="#a40cf4c5d2fcca2f12d2c172ec8dd1f4b">More...</a><br /></td></tr>
 <tr class="separator:a40cf4c5d2fcca2f12d2c172ec8dd1f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,35 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6eeaba354139752dae86a46c2a8e260e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#_a2">Find_all_devices.cs</a>.</dd>
+<div class="textblock"><p>Find USB and ethernet device </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#_a0">Find_all_devices.cs</a>.</dd>
 </dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aeef53582e04039a6aa8fa80bd60ca7a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeef53582e04039a6aa8fa80bd60ca7a6">&#9670;&nbsp;</a></span>DeviceFinder()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DeviceFinder.DeviceFinder </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6eeaba354139752dae86a46c2a8e260e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6eeaba354139752dae86a46c2a8e260e">&#9670;&nbsp;</a></span>Bcst_checkMACAndReboot()</h2>
 
@@ -276,7 +252,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get all ethernet devices </p>
 <dl class="section return"><dt>Returns</dt><dd>List of list of IP address, subnet mask, MAC address and firmware model. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a5">Find_all_devices.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a3">Find_all_devices.cs</a>.</dd>
 </dl>
 
 </div>
@@ -306,7 +282,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get all USB devices </p>
 <dl class="section return"><dt>Returns</dt><dd>List of list of serial number &amp; product name. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a4">Find_all_devices.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a2">Find_all_devices.cs</a>.</dd>
 </dl>
 
 </div>
@@ -335,7 +311,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close broadcast device handle. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a7">Find_all_devices.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a5">Find_all_devices.cs</a>.</dd>
 </dl>
 
 </div>
@@ -365,7 +341,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Connect to broadcast device. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a3">Find_all_devices.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a1">Find_all_devices.cs</a>.</dd>
 </dl>
 
 </div>
@@ -395,7 +371,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Disonnect broadcast device. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a6">Find_all_devices.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_find_all_devices_8cs-example.html#a4">Find_all_devices.cs</a>.</dd>
 </dl>
 
 </div>

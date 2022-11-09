@@ -56,6 +56,7 @@ Take `USB-DAQ-F1-AOD` for example:
 - Ports 0 & 1 are available for `DO`
 - Port 2 is available for `UART`
 
+## License
 
 **WPC Python driver release** is licensed under an MIT-style license see
 [LICENSE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/LICENSE). Other incorporated projects may be licensed under different licenses.
