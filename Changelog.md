@@ -7,7 +7,7 @@ v0.0.10.1 Date: 2022/11/09, Developer: Chunglee_people
 ------------------------------------------------------
 
 ### Added
-- Add.nojekyll file
+- Add .nojekyll file
 - Add `Products Feature` in documentation
 
 v0.0.10 Date: 2022/11/08, Developer: Chunglee_people
