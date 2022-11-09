@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['products_20feature',['Products Feature',['../product.html',1,'']]]
+  ['spi_20setting_20table',['SPI Setting Table',['../table_setting_s_p_i.html',1,'']]]
 ];

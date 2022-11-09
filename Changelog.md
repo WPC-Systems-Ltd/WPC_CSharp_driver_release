@@ -1,7 +1,15 @@
 WPC CSharp driver release changelog
 ===================================
  
+v0.0.10.2 Date: 2022/11/09, Developer: Chunglee_people
+------------------------------------------------------
 
+### Added
+- Add `custom` folder which contains DoxygenLayout.xml, headerFile and customdoxygen.css 
+- Add layout file `DoxygenLayout.xml` which used for changing doxygen naviagation (top link bar) title
+- Add HTML_HEADER `headerFile` to set a favicon
+- Add HTML_EXTRA_STYLESHEET `customdoxygen.css` to set example code font
+- Add HTML_TIMESTAMP which will show generaion doxygen file time
  
 v0.0.10.1 Date: 2022/11/09, Developer: Chunglee_people
 ------------------------------------------------------
