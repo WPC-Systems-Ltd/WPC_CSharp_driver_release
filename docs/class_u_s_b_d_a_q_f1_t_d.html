@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="WPC_trademark.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WPC CSharp driver
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.10.1</span>
    </div>
    <div id="projectbrief">WPC C# driver APIs, the easiest way to Control &amp; Data Acquisition (DAQ)</div>
   </td>
@@ -105,11 +105,13 @@ $(document).ready(function(){initNavTree('class_u_s_b_d_a_q_f1_t_d.html','');});
 <div class="title">USBDAQF1TD Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This device has 2ch thermocouple input and 21ch 3.3V DIO/I2C/SPI.  
+ <a href="class_u_s_b_d_a_q_f1_t_d.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af8e0f1eb4f579e29d2b1b870817114d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#af8e0f1eb4f579e29d2b1b870817114d5">USBDAQF1TD</a> ()</td></tr>
-<tr class="memdesc:af8e0f1eb4f579e29d2b1b870817114d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This device has 2ch thermocouple input and 21ch 3.3V DIO/I2C/SPI.  <a href="#af8e0f1eb4f579e29d2b1b870817114d5">More...</a><br /></td></tr>
 <tr class="separator:af8e0f1eb4f579e29d2b1b870817114d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3287d013ce2f690a6b6fb28f1b0c288"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_s_b_d_a_q_f1_t_d.html#af3287d013ce2f690a6b6fb28f1b0c288">connect</a> (string serial_number)</td></tr>
 <tr class="separator:af3287d013ce2f690a6b6fb28f1b0c288"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,7 +229,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5e8181f36e89a35f7576db76db74ec7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#_a2">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#_a2">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#_a2">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#_a2">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#_a2">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#_a2">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#_a2">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#_a2">UART_write.cs</a>.</dd>
+<div class="textblock"><p>This device has 2ch thermocouple input and 21ch 3.3V DIO/I2C/SPI. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#_a0">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#_a0">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#_a0">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#_a0">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#_a0">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#_a0">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#_a0">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#_a0">UART_write.cs</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af8e0f1eb4f579e29d2b1b870817114d5"></a>
@@ -253,7 +256,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This device has 2ch thermocouple input and 21ch 3.3V DIO/I2C/SPI. </p>
+<p></p>
+<div class="image">
+<img src="pinout-USBDAQF1TD.JPG" alt="pinout-USBDAQF1TD.JPG" width="50%"/>
+</div>
+<p> This device has 2ch thermocouple input and 21ch 3.3V DIO/I2C/SPI. </p>
 
 </div>
 </div>
@@ -281,7 +288,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Close device handle. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a8">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#a11">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#a17">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#a16">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#a11">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#a9">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#a13">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a13">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a6">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#a9">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#a15">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#a14">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#a9">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#a7">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#a11">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a11">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -317,7 +324,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a3">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#a3">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#a3">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#a3">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#a3">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#a3">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#a3">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a3">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a1">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#a1">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#a1">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#a1">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#a1">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#a1">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#a1">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a1">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -628,7 +635,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Disconnect from USB device. </p>
 <dl class="section return"><dt>Returns</dt><dd>Connection status. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a7">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#a10">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#a16">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#a15">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#a10">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#a8">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#a12">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a12">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a5">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#a8">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#a14">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#a13">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#a8">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#a6">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#a10">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a10">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -682,7 +689,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a15">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a14">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a13">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a12">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -781,7 +788,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a5">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a5">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a3">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a3">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -887,7 +894,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a7">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a7">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a5">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a5">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -986,7 +993,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a9">I2C_write_read.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a7">I2C_write_read.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1033,7 +1040,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a5">I2C_write_read.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a3">I2C_write_read.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1094,7 +1101,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a8">I2C_write_read.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a6">I2C_write_read.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1245,7 +1252,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a6">I2C_write_read.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a4">I2C_write_read.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1306,7 +1313,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a7">I2C_write_read.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_i2_c_write_read_8cs-example.html#a5">I2C_write_read.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1353,7 +1360,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a14">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a13">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a12">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a11">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1400,7 +1407,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a6">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a6">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a4">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a4">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1506,7 +1513,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The received data. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a13">SPI_read_and_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a11">SPI_read_and_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1605,7 +1612,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a8">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a8">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a6">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a6">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1659,7 +1666,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a9">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a9">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a7">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a7">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1713,7 +1720,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a11">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a11">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a9">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a9">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1767,7 +1774,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a10">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a10">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a8">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a8">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1821,7 +1828,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a12">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a12">SPI_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_s_p_i_read_and_write_8cs-example.html#a10">SPI_read_and_write.cs</a>, and <a class="el" href="_s_p_i_write_8cs-example.html#a10">SPI_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1857,7 +1864,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Model name, Mode and Firmware version. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a4">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#a4">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#a4">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#a4">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#a4">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#a4">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#a4">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a4">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a2">Get_USB_info.cs</a>, <a class="el" href="_i2_c_write_read_8cs-example.html#a2">I2C_write_read.cs</a>, <a class="el" href="_s_p_i_read_and_write_8cs-example.html#a2">SPI_read_and_write.cs</a>, <a class="el" href="_s_p_i_write_8cs-example.html#a2">SPI_write.cs</a>, <a class="el" href="_t_c_read_channel_data_8cs-example.html#a2">TC_read_channel_data.cs</a>, <a class="el" href="_t_c_read_channel_status_8cs-example.html#a2">TC_read_channel_status.cs</a>, <a class="el" href="_u_a_r_t_read_8cs-example.html#a2">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a2">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1893,7 +1900,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Date and time represented by "A-B-C, D:E:F". </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a6">Get_USB_info.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a4">Get_USB_info.cs</a>.</dd>
 </dl>
 
 </div>
@@ -1929,7 +1936,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Serial number represented by string of 8 characters. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a5">Get_USB_info.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_get__u_s_b_info_8cs-example.html#a3">Get_USB_info.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2125,7 +2132,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a9">TC_read_channel_data.cs</a>, and <a class="el" href="_t_c_read_channel_status_8cs-example.html#a7">TC_read_channel_status.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a7">TC_read_channel_data.cs</a>, and <a class="el" href="_t_c_read_channel_status_8cs-example.html#a5">TC_read_channel_status.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2180,7 +2187,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_status_8cs-example.html#a6">TC_read_channel_status.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_status_8cs-example.html#a4">TC_read_channel_status.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2228,7 +2235,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a5">TC_read_channel_data.cs</a>, and <a class="el" href="_t_c_read_channel_status_8cs-example.html#a5">TC_read_channel_status.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a3">TC_read_channel_data.cs</a>, and <a class="el" href="_t_c_read_channel_status_8cs-example.html#a3">TC_read_channel_status.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2283,7 +2290,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. &lt;/returns </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a8">TC_read_channel_data.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a6">TC_read_channel_data.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2345,7 +2352,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a6">TC_read_channel_data.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a4">TC_read_channel_data.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2407,7 +2414,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a7">TC_read_channel_data.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_t_c_read_channel_data_8cs-example.html#a5">TC_read_channel_data.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2454,7 +2461,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a11">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a11">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a9">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a9">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2501,7 +2508,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a5">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a5">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a3">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a3">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2555,7 +2562,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The list of UART received data. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a10">UART_read.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a8">UART_read.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2654,7 +2661,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a6">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a6">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a4">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a4">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2708,7 +2715,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a7">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a7">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a5">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a5">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2762,7 +2769,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a9">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a9">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a7">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a7">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2816,7 +2823,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a8">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a8">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_read_8cs-example.html#a6">UART_read.cs</a>, and <a class="el" href="_u_a_r_t_write_8cs-example.html#a6">UART_write.cs</a>.</dd>
 </dl>
 
 </div>
@@ -2915,7 +2922,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success, error otherwise. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_write_8cs-example.html#a10">UART_write.cs</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_u_a_r_t_write_8cs-example.html#a8">UART_write.cs</a>.</dd>
 </dl>
 
 </div>

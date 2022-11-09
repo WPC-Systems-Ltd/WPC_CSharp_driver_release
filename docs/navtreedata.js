@@ -25,12 +25,14 @@ var NAVTREE =
 [
   [ "WPC CSharp driver", "index.html", [
     [ "Getting Started", "index.html", [
-      [ "Overview", "index.html#autotoc_md2", null ],
-      [ "Products", "index.html#autotoc_md3", null ],
-      [ "I/O Function Table", "index.html#autotoc_md4", null ]
+      [ "Overview", "index.html#autotoc_md0", null ],
+      [ "Products", "index.html#autotoc_md1", null ],
+      [ "I/O Function Table", "index.html#autotoc_md2", null ],
+      [ "License", "index.html#autotoc_md3", null ]
     ] ],
-    [ "Error Code Table", "autotoc_md0.html", null ],
-    [ "I/O Function Table", "autotoc_md1.html", null ],
+    [ "Error Code Table", "errorcode.html", null ],
+    [ "I/O Function Table", "functiotable.html", null ],
+    [ "Products Feature", "product.html", null ],
     [ "SPI Setting Table", "setting_s_p_i.html", [
       [ "SPI Clock", "setting_s_p_i.html#settingSPIsection1", null ],
       [ "SPI Mode", "setting_s_p_i.html#settingSPIsection2", null ],
@@ -52,8 +54,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_i__n_samples_in_loop_8cs-example.html",
-"class_u_s_b_d_a_q_f1_c_d.html#aac0eb7257fa536e7f1b7ad37f00d7d67",
-"class_wifi_d_a_q_e3_a.html#a6ce1b8b058138216f9e9544e9926a0a2"
+"class_u_s_b_d_a_q_f1_c_d.html#ab5715077838ea57d15a1d6bb30b9f235",
+"functions_func_d.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
