@@ -38,7 +38,7 @@ class USBDAQF1RD_DO_blinky_pins
         {
             // Parameters setting
             int status;
-            int port = 0
+            int port = 0;
             List<int> DO_pins = new List<int> { 0, 1, 2, 3 };
             List<int> DO_odd_state = new List<int> { 0, 1, 0, 1 };
             List<int> DO_even_state = new List<int> { 1, 0, 1, 0 };

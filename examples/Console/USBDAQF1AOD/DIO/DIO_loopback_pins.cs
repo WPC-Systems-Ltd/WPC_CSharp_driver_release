@@ -63,8 +63,7 @@ class USBDAQF1AOD_DIO_loopback_pins
 
             // Read pin5, pin6 and pin7 state
             List<int> pin_s = dev.DI_readPins(port, DI_pins);
-            Console.WriteLine($"DI_readPins: {pin_s[0]}, {pin_s[1]}, {pin_s[2]}}");
-
+            Console.WriteLine($"DI_readPins: {pin_s[0]}, {pin_s[1]}, {pin_s[2]}");
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
