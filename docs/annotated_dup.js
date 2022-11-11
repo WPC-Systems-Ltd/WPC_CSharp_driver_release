@@ -10,5 +10,6 @@ var annotated_dup =
     [ "USBDAQF1DSNK", "class_u_s_b_d_a_q_f1_d_s_n_k.html", "class_u_s_b_d_a_q_f1_d_s_n_k" ],
     [ "USBDAQF1RD", "class_u_s_b_d_a_q_f1_r_d.html", "class_u_s_b_d_a_q_f1_r_d" ],
     [ "USBDAQF1TD", "class_u_s_b_d_a_q_f1_t_d.html", "class_u_s_b_d_a_q_f1_t_d" ],
-    [ "WifiDAQE3A", "class_wifi_d_a_q_e3_a.html", "class_wifi_d_a_q_e3_a" ]
+    [ "WifiDAQE3A", "class_wifi_d_a_q_e3_a.html", "class_wifi_d_a_q_e3_a" ],
+    [ "WifiDAQE3A_get_WifiDAQ_status", "class_wifi_d_a_q_e3_a__get___wifi_d_a_q__status.html", null ]
 ];

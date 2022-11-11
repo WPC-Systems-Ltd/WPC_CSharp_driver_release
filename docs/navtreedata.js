@@ -54,7 +54,7 @@ var NAVTREEINDEX =
 [
 "_a_i__n_samples_in_loop_8cs-example.html",
 "class_u_s_b_d_a_q_f1_c_d.html#ab5715077838ea57d15a1d6bb30b9f235",
-"functions_func_d.html"
+"functions_func_c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

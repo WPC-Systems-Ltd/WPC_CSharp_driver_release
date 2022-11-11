@@ -6,5 +6,6 @@ var searchData=
   ['wifi_5freadbattery',['Wifi_readBattery',['../class_wifi_d_a_q_e3_a.html#ab84cde6d7e1a52f81aecae0878743dbd',1,'WifiDAQE3A']]],
   ['wifi_5freadrssi',['Wifi_readRSSI',['../class_wifi_d_a_q_e3_a.html#a2f577c9bb401c0cd311e1944a939be6f',1,'WifiDAQE3A']]],
   ['wifi_5freadthermo',['Wifi_readThermo',['../class_wifi_d_a_q_e3_a.html#af3cec0dec8b04891773ea6fc5a5a23b7',1,'WifiDAQE3A']]],
-  ['wifidaqe3a',['WifiDAQE3A',['../class_wifi_d_a_q_e3_a.html',1,'WifiDAQE3A'],['../class_wifi_d_a_q_e3_a.html#ab4f0a51758a8823a8110757f3ba2c4a9',1,'WifiDAQE3A.WifiDAQE3A()']]]
+  ['wifidaqe3a',['WifiDAQE3A',['../class_wifi_d_a_q_e3_a.html',1,'WifiDAQE3A'],['../class_wifi_d_a_q_e3_a.html#ab4f0a51758a8823a8110757f3ba2c4a9',1,'WifiDAQE3A.WifiDAQE3A()']]],
+  ['wifidaqe3a_5fget_5fwifidaq_5fstatus',['WifiDAQE3A_get_WifiDAQ_status',['../class_wifi_d_a_q_e3_a__get___wifi_d_a_q__status.html',1,'']]]
 ];
