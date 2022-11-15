@@ -28,7 +28,7 @@ Then, we take `USBDAQF1CD` for example.
 | -----------------|:-----:|:----:|:----:|
 | USBDAQF1CD       | UART2 | P1.2 | P1.3 |
 
-<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Reference/Pinouts/pinout-USBDAQF1CD.JPG" alt="drawing" width="600"/>
+<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-USBDAQF1CD.JPG" alt="drawing" width="600"/>
 
 ## UART interfacing SOP 
 

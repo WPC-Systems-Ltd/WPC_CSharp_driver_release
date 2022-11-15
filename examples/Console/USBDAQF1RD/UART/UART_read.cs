@@ -1,5 +1,5 @@
 /// <summary>
-/// @example UART_read.cs
+/// UART_read.cs
 ///
 /// This example demonstrates how to read data from another device with UART interface from USBDAQF1RD.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class USBDAQF1RD_UART_read
 {

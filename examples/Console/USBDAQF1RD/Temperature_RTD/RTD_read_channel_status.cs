@@ -1,5 +1,5 @@
 /// <summary>
-/// @example RTD_read_channel_status.cs
+/// RTD_read_channel_status.cs
 /// 
 /// This example demonstrates how to get status in two channels from USBDAQF1RD.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary> 
+
+using WPC_Product;
 
 class USBDAQF1RD_RTD_read_channel_status
 {

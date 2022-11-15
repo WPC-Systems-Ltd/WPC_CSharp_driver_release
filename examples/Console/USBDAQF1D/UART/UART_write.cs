@@ -1,5 +1,5 @@
 /// <summary>
-/// @example UART_write.cs
+/// UART_write.cs
 ///
 /// This example demonstrates how to write data to another device with UART interface from USBDAQF1D.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class USBDAQF1D_UART_write
 {

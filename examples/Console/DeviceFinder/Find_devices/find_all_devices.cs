@@ -1,5 +1,5 @@
 /// <summary>
-/// @example Find_all_devices.cs 
+/// Find_all_devices.cs 
 /// 
 /// This example demonstrates how to find all available USB and ethernet devices.
 /// 
@@ -11,6 +11,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class DeviceFinder_find_all_devices
 {

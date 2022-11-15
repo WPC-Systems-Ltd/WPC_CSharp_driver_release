@@ -21,7 +21,7 @@ Then, we take WifiDAQE3A for example.
 
 ### WifiDAQE3A
 
-<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Reference/Pinouts/pinout-WifiDAQE3A.JPG" alt="drawing" width="600"/>
+<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-WifiDAQE3A.JPG" alt="drawing" width="600"/>
 
 ## AI interfacing SOP
 

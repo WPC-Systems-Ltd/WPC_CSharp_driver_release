@@ -1,5 +1,5 @@
 /// <summary>
-/// @example TC_read_channel_data.cs
+/// TC_read_channel_data.cs
 /// 
 /// This example demonstrates how to read thermocouple from USBDAQF1TD.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary> 
+
+using WPC_Product;
 
 class USBDAQF1TD_TC_read_channel_data
 {
