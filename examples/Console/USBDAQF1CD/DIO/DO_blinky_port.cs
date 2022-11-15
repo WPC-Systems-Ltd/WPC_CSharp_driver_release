@@ -1,5 +1,5 @@
 /// <summary>
-/// @example DO_blinky_port.cs
+/// DO_blinky_port.cs
 /// 
 /// This example demonstrates how to write DO high or low in port from USBDAQF1CD.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class USBDAQF1CD_DO_blinky_port
 {

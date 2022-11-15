@@ -28,7 +28,7 @@ For more information, please refer to datasheet of the [24C08C EEPROM](https://g
 
 **Note:** External pull-up resistors (3.3 kΩ) are required for SDA/SCL pin.
 
-<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Reference/Pinouts/pinout-USBDAQF1TD.JPG" alt="drawing" width="600"/>
+<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-USBDAQF1TD.JPG" alt="drawing" width="600"/>
 
 
 ### EEPROM 24C08C (I2C Slave)

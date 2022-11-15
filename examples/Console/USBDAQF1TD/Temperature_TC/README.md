@@ -20,7 +20,7 @@ Then, we take `USBDAQF1TD` for example.
 
 ### USBDAQF1TD
 
-<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Reference/Pinouts/pinout-USBDAQF1TD.JPG" alt="drawing" width="600"/>
+<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-USBDAQF1TD.JPG" alt="drawing" width="600"/>
 
 ## Thermocouple interfacing SOP 
 

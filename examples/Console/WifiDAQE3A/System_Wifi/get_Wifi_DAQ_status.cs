@@ -1,5 +1,5 @@
 /// <summary>
-/// @example Get_WifiDAQ_status.cs
+/// Get_WifiDAQ_status.cs
 /// 
 /// This example demonstrates how to get basic information from WifiDAQE3A such as RSSI & battery & thermo.
 /// 
@@ -11,6 +11,8 @@
 /// All rights reserved.
 ///  
 /// </summary>>
+
+using WPC_Product;
 
 class WifiDAQE3A_get_WifiDAQ_status
 {

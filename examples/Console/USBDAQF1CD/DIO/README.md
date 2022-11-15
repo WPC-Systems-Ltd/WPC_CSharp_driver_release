@@ -20,7 +20,7 @@ Then, we take `USBDAQF1CD` for example.
 
 ### USBDAQF1CD
 
-<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/Reference/Pinouts/pinout-USBDAQF1CD.JPG" alt="drawing" width="600"/>
+<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-USBDAQF1CD.JPG" alt="drawing" width="600"/>
 
 ## DIO interfacing SOP 
 

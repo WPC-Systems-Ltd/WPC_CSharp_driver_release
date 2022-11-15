@@ -1,5 +1,5 @@
 /// <summary>
-/// @example DIO_loopback_port.cs
+/// DIO_loopback_port.cs
 /// 
 /// This example demonstrates how to write DIO loopback in port from USBDAQF1AOD.
 /// 
@@ -19,6 +19,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class USBDAQF1AOD_DIO_loopback_port
 {
