@@ -1,6 +1,15 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.0.12 Date: 2022/11/15, Developer: Chunglee_people 
+---------------------------------------------------- 
+
+### Added
+- doxcfx_project
+
+### Removed
+- Doxygen relative files
+- Doxyfile
 
 v0.0.11 Date: 2022/11/11, Developer: Chunglee_people
 ------------------------------------------------------
