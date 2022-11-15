@@ -1,5 +1,5 @@
 /// <summary>
-/// @example AI_N_samples_once.cs
+/// AI_N_samples_once.cs
 /// 
 /// This example demonstrates how to get AI data in once in N sample mode from EthanA.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class EthanA_AI_N_samples_once
 {

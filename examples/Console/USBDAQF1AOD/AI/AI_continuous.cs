@@ -1,5 +1,5 @@
 /// <summary>
-/// @example AI_continuous.cs
+/// AI_continuous.cs
 ///
 /// This example demonstrates how to get AI data with loop in continuous mode from USBDAQF1AOD.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class USBDAQF1AOD_AI_continuous
 {

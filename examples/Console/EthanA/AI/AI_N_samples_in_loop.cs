@@ -1,5 +1,5 @@
 /// <summary>
-/// @example AI_N_samples_in_loop.cs
+/// AI_N_samples_in_loop.cs
 /// 
 /// This example demonstrates how to get AI data with loop in N samples mode from EthanA.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class EthanA_AI_N_samples_in_loop
 {

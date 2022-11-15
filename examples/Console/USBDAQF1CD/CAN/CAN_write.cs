@@ -1,6 +1,6 @@
 
 /// <summary>
-/// @example CAN_write.cs
+/// CAN_write.cs
 /// 
 /// This example demonstrates how to write data to another device with CAN interface from USBDAQF1CD.
 /// 
@@ -18,6 +18,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class USBDAQF1CD_CAN_write
 {

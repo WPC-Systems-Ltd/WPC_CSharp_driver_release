@@ -1,5 +1,5 @@
 /// <summary>
-/// @example AIO_all_channels_loopback.cs 
+/// AIO_all_channels_loopback.cs 
 /// 
 /// This example demonstrates how to write AIO loopback in all channels from USBDAQF1AOD.
 /// 
@@ -20,6 +20,7 @@
 ///  
 /// </summary>
 
+using WPC_Product;
 
 class USBDAQF1AOD_AIO_all_channels_loopback
 {

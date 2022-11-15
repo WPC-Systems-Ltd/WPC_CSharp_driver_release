@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> | WPC_CSharp_driver </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content=" | WPC_CSharp_driver ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../images/WPC_favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/WPC_logo.jpg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">AO_write_all_channels.cs</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">AO_write_one_channel.cs</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="lang-csharp" name="CS">/// &lt;summary&gt;
+/// AO_write_all_channels.cs
+/// 
+/// This example demonstrates how to write AO in all channels from USBDAQF1AOD.
+/// 
+/// First, it shows how to open AO in port.
+/// 
+/// Second, write all digital signals
+/// 
+/// Last, close AO in port.
+/// 
+/// For other examples please check:
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
+/// See README.md file to get detailed usage of this example.
+/// 
+/// Copyright (c) 2022 WPC Systems Ltd.
+/// All rights reserved.
+///  
+/// &lt;/summary&gt;
+
+using WPC_Product;
+
+class USBDAQF1AOD_AO_write_all_channels
+{
+    static public void Main()
+    {
+        Console.WriteLine(&quot;Start example code...&quot;);
+
+        // Get C# driver version
+        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+
+        // Create device handle
+        USBDAQF1AOD dev = new USBDAQF1AOD();
+
+        // Connect to device
+        dev.connect(&quot;21JA1439&quot;);
+
+        // Execute
+        try
+        {
+            // Parameters setting
+            int status;
+            int port = 0;
+
+            // Get firmware model &amp; version
+            string[] driver_info = dev.Sys_getDriverInfo();
+            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
+            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
+
+            // Open AO port
+            status = dev.AO_open(port);
+            Console.WriteLine($&quot;AO_open status: {status}&quot;);
+
+            // Set AO port and write data simultaneously
+            List&lt;double&gt; AO_values = new List&lt;double&gt; { 3, 1, 2, 3, 4, 5, 4, 3 };
+            status = dev.AO_writeAllChannels(port, AO_values);
+            Console.WriteLine($&quot;AO_writeAllChannels status: {status}&quot;);
+
+            // Wait for 1 sec
+            Thread.Sleep(1000); // delay [ms]
+
+            // Close AO port
+            status = dev.AO_close(port);
+            Console.WriteLine($&quot;AO_close status: {status}&quot;);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+        // Disconnect device
+        dev.disconnect();
+
+        // Release device handle
+        dev.close();
+
+        Console.WriteLine(&quot;End example code...&quot;);
+    }
+}
+</code></pre></section>
+<section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-csharp" name="CS">/// &lt;summary&gt;
+/// AO_write_one_channel.cs
+/// 
+/// This example demonstrates how to write AO in specific channels from USBDAQF1AOD.
+/// 
+/// First, it shows how to open AO in port.
+/// 
+/// Second, write digital signals in specific channels.
+/// 
+/// Last, close AO in port.
+/// 
+/// For other examples please check:
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
+/// See README.md file to get detailed usage of this example.
+/// 
+/// Copyright (c) 2022 WPC Systems Ltd.
+/// All rights reserved.
+///  
+/// &lt;/summary&gt;
+
+using WPC_Product;
+
+class USBDAQF1AOD_AO_write_one_channel
+{
+    static public void Main()
+    {
+        Console.WriteLine(&quot;Start example code...&quot;);
+
+        // Get C# driver version
+        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+
+        // Create device handle
+        USBDAQF1AOD dev = new USBDAQF1AOD();
+
+        // Connect to device
+        dev.connect(&quot;21JA1439&quot;);
+
+        // Execute
+        try
+        {
+            // Parameters setting
+            int status;
+            int port = 0;
+
+            // Get firmware model &amp; version
+            string[] driver_info = dev.Sys_getDriverInfo();
+            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
+            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
+
+            // Open AO port
+            status = dev.AO_open(port);
+            Console.WriteLine($&quot;AO_open status: {status}&quot;);
+
+            // Set AO port and write data 1.5(V) in channel 4
+            status = dev.AO_writeOneChannel(port, 4, 1.5);
+            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+
+            // Set AO port and write data 2.5(V) in channel 5
+            status = dev.AO_writeOneChannel(port, 5, 2.5);
+            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+
+            // Set AO port and write data 3.5(V) in channel 6
+            status = dev.AO_writeOneChannel(port, 6, 3.5);
+            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+
+            // Set AO port and write data 4.5(V) in channel 7
+            status = dev.AO_writeOneChannel(port, 7, 4.5);
+            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+
+            // Wait for 1 sec
+            Thread.Sleep(1000); // delay [ms]
+
+            // Close AO port
+            status = dev.AO_close(port);
+            Console.WriteLine($&quot;AO_close status: {status}&quot;);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+        // Disconnect device
+        dev.disconnect();
+
+        // Release device handle
+        dev.close();
+
+        Console.WriteLine(&quot;End example code...&quot;);
+    }
+}
+</code></pre></section>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/master/docfx_project/articles/example_md/USBDAQF1AOD/USBDAQF1AOD_AO.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             Copyright (c) 2022 WPC Systems Ltd.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

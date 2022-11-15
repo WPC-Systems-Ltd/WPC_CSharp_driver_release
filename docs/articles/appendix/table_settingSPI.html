@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SPI Setting Table | WPC_CSharp_driver </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SPI Setting Table | WPC_CSharp_driver ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../images/WPC_favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/WPC_logo.jpg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="spi-setting-table">SPI Setting Table</h1>
+
+<h2 id="spi-clock">SPI Clock</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Prescaler</th>
+<th style="text-align: left;">SPI1 frequency</th>
+<th style="text-align: left;">SPI2 frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Peripheral clock</td>
+<td style="text-align: left;">f_PCLK2 = 72 MHz</td>
+<td style="text-align: left;">f_PCLK1 = 36 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">36 MHz</td>
+<td style="text-align: left;">18 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">18 MHz</td>
+<td style="text-align: left;">9 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">9 MHz</td>
+<td style="text-align: left;">4.5 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">4.5 MHz</td>
+<td style="text-align: left;">2.25 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">2.25 MHz</td>
+<td style="text-align: left;">1.125 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">64</td>
+<td style="text-align: left;">1.125 MHz</td>
+<td style="text-align: left;">562.5 kHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">128</td>
+<td style="text-align: left;">562.5 kHz</td>
+<td style="text-align: left;">281.25 kHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">256</td>
+<td style="text-align: left;">281.25 kHz</td>
+<td style="text-align: left;">140.625 kHz</td>
+</tr>
+</tbody>
+</table>
+<h2 id="spi-mode">SPI Mode</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">CPOL</th>
+<th style="text-align: left;">CPHA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mode 0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mode 1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mode 2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mode 3</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="spi-data-size">SPI Data Size</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Data size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>8 bits</td>
+</tr>
+<tr>
+<td>1</td>
+<td>16 bits</td>
+</tr>
+</tbody>
+</table>
+<h2 id="spi-endianness">SPI Endianness</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Endianness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>MSB first (big-endian)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>LSB first (little-endian)</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/master/docfx_project/articles/appendix/table_settingSPI.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             Copyright (c) 2022 WPC Systems Ltd.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

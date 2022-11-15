@@ -1,5 +1,5 @@
 /// <summary>
-/// @example DO_blinky_pins.cs
+/// DO_blinky_pins.cs
 /// 
 /// This example demonstrates how to write DO high or low in pins from USBDAQF1AOD.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class USBDAQF1AOD_DO_blinky_pins
 {

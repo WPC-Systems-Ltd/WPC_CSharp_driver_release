@@ -1,5 +1,5 @@
 /// <summary>
-/// @example AO_write_all_channels.cs
+/// AO_write_all_channels.cs
 /// 
 /// This example demonstrates how to write AO in all channels from USBDAQF1AOD.
 /// 
@@ -17,6 +17,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class USBDAQF1AOD_AO_write_all_channels
 {

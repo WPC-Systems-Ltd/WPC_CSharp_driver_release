@@ -1,5 +1,5 @@
 /// <summary>
-/// @example Get_network_info.cs
+/// Get_network_info.cs
 /// 
 /// This example demonstrates how to get hardware & network information from EthanD.
 /// 
@@ -15,6 +15,8 @@
 /// All rights reserved.
 ///  
 /// </summary>
+
+using WPC_Product;
 
 class EthanD_get_network_info
 {
