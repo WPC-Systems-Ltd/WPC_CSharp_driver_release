@@ -1,6 +1,9 @@
 WPC CSharp driver release changelog
 ===================================
 
+### Added
+- portal example code
+
 v0.0.12 Date: 2022/11/15, Developer: Chunglee_people 
 ---------------------------------------------------- 
 
