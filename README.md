@@ -8,8 +8,10 @@ Some API functions in the package may not compatible with earlier versions of WP
 You can download WPC Device Manager by visiting [WPC Systems Ltd. official website](http://www.wpc.com.tw/36039260092584721462-daq1.html).
 
 [![nuget](https://img.shields.io/nuget/v/cswpc)](https://www.nuget.org/packages/cswpc)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://img.shields.io/nuget/dt/cswpc?color=%20)](https://www.nuget.org/packages/cswpc)
 [![NET](https://img.shields.io/badge/.NET-6.0-blue.svg)](https://dotnet.microsoft.com/en-us/)
+[![Documentation](https://img.shields.io/badge/docs-website-purple.svg)](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > [!Note]
 > Make sure the latest version of firmware is up to date with your products. 
@@ -41,17 +43,19 @@ dotnet add package cswpc
 **Easy, fast, and just works!**
 
 ```csharp
-
 using WPC.Product;
 
 // Get C# driver name
-Console.WriteLine($"{Constant.PKG_NAME});
+Console.WriteLine($"{Constant.PKG_NAME}");
 
-// Get C# driver version
+// Get C# driver full name and version
 Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
-// Get C# handle list 
-Console.WriteLine($"{Constant.HANDLE_LIST} - Version {Constant.VERSION}"); 
+// Get C# handle list  
+foreach (var item in Constant.HANDLE_LIST) 
+{
+  Console.WriteLine($"{item}");  
+} 
 ```
 
 # Products
