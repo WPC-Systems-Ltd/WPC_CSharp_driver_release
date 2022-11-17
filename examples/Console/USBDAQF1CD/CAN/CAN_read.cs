@@ -19,6 +19,7 @@
 /// </summary>
 
 using WPC.Product;
+using WPC.Module;
 
 class USBDAQF1CD_CAN_read
 {

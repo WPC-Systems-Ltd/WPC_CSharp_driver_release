@@ -1,6 +1,6 @@
 # Overview
 
-**WPC CSharp driver** supports .Net 6.0 with compatibility and completeness.
+**WPC CSharp driver**, also known as cswpc, supports .NET 6.0 with compatibility and completeness.
 
 It contains APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.
 
@@ -9,6 +9,7 @@ You can download WPC Device Manager by visiting [WPC Systems Ltd. official websi
 
 [![nuget](https://img.shields.io/nuget/v/cswpc)](https://www.nuget.org/packages/cswpc)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![NET](https://img.shields.io/badge/.NET-6.0-blue.svg)](https://dotnet.microsoft.com/en-us/)
 
 > [!Note]
 > Make sure the latest version of firmware is up to date with your products. 
@@ -33,6 +34,24 @@ or with dotnet cli:
 
 ```
 dotnet add package cswpc
+```
+
+# Quick Start
+
+**Easy, fast, and just works!**
+
+```csharp
+
+using WPC.Product;
+
+// Get C# driver name
+Console.WriteLine($"{Constant.PKG_NAME});
+
+// Get C# driver version
+Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+
+// Get C# handle list 
+Console.WriteLine($"{Constant.HANDLE_LIST} - Version {Constant.VERSION}"); 
 ```
 
 # Products

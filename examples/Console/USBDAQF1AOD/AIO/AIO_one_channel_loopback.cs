@@ -20,7 +20,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1AOD_AIO_one_channel_loopback
 {
