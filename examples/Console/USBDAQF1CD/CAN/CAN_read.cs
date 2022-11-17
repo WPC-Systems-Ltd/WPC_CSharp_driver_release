@@ -18,7 +18,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1CD_CAN_read
 {
@@ -27,7 +27,7 @@ class USBDAQF1CD_CAN_read
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -52,7 +52,7 @@ class USBDAQF1CD_CAN_read
             Console.WriteLine($"CAN_open status: {status}");
 
             // Set CAN port and set speed to 125K
-            status = dev.CAN_setSpeed(port, WPC.CAN_SPEED_125K);
+            status = dev.CAN_setSpeed(port, Constant.CAN_SPEED_125K);
             Console.WriteLine($"CAN_setSpeed status: {status}");
 
             // Set CAN port and start CAN

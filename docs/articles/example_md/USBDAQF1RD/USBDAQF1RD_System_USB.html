@@ -93,7 +93,7 @@
 ///  
 /// &lt;/summary&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1RD_get_USB_info
 {
@@ -102,7 +102,7 @@ class USBDAQF1RD_get_USB_info
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1RD dev = new USBDAQF1RD();

@@ -18,7 +18,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1AOD_I2C_write_read
 {
@@ -27,7 +27,7 @@ class USBDAQF1AOD_I2C_write_read
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1AOD dev = new USBDAQF1AOD();
@@ -55,7 +55,7 @@ class USBDAQF1AOD_I2C_write_read
             Console.WriteLine($"I2C_open status: {status}");
 
             // Set I2C port and set clock rate to standard mode
-            status = dev.I2C_setClockRate(port, WPC.I2C_SPEED_STANDARD);
+            status = dev.I2C_setClockRate(port, Constant.I2C_SPEED_STANDARD);
             Console.WriteLine($"I2C_setClockRate status: {status}");
 
             // Write WREN byte

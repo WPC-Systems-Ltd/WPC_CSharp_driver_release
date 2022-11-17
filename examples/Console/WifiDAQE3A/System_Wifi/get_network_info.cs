@@ -16,7 +16,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class WifiDAQE3A_get_network_info
 {
@@ -25,7 +25,7 @@ class WifiDAQE3A_get_network_info
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         WifiDAQE3A dev = new WifiDAQE3A();

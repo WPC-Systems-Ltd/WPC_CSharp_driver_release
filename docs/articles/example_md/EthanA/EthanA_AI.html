@@ -107,7 +107,7 @@
 ///  
 /// &lt;/summary&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class EthanA_AI_continuous
 {
@@ -138,7 +138,7 @@ class EthanA_AI_continuous
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -164,7 +164,7 @@ class EthanA_AI_continuous
             Console.WriteLine($&quot;AI_open status: {status}&quot;);
 
             // Set AI port and acquisition mode to continuous
-            status = dev.AI_setMode(port, WPC.AI_MODE_CONTINOUS);
+            status = dev.AI_setMode(port, Constant.AI_MODE_CONTINOUS);
             Console.WriteLine($&quot;AI_setMode status: {status}&quot;);
 
             // Set AI port and sampling rate to 1k (Hz)
@@ -221,7 +221,7 @@ class EthanA_AI_continuous
 ///  
 /// &lt;/summary&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class EthanA_AI_N_samples_in_loop
 {
@@ -252,7 +252,7 @@ class EthanA_AI_N_samples_in_loop
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -279,7 +279,7 @@ class EthanA_AI_N_samples_in_loop
             Console.WriteLine($&quot;AI_open status: {status}&quot;);
 
             // Set AI port and acquisition mode to continuous
-            status = dev.AI_setMode(port, WPC.AI_MODE_CONTINOUS);
+            status = dev.AI_setMode(port, Constant.AI_MODE_CONTINOUS);
             Console.WriteLine($&quot;AI_setMode status: {status}&quot;);
 
             // Set AI port and sampling rate to 1k (Hz)
@@ -340,7 +340,7 @@ class EthanA_AI_N_samples_in_loop
 ///  
 /// &lt;/summary&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class EthanA_AI_N_samples_once
 {
@@ -350,7 +350,7 @@ class EthanA_AI_N_samples_once
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -377,7 +377,7 @@ class EthanA_AI_N_samples_once
             Console.WriteLine($&quot;AI_open status: {status}&quot;);
 
             // Set AI port and acquisition mode to N-sample mode
-            status = dev.AI_setMode(port, WPC.AI_MODE_N_SAMPLE);
+            status = dev.AI_setMode(port, Constant.AI_MODE_N_SAMPLE);
             Console.WriteLine($&quot;AI_setMode status: {status}&quot;);
 
             // Set AI port and # of samples to 5 (pts)
@@ -444,7 +444,7 @@ class EthanA_AI_N_samples_once
 ///  
 /// &lt;/summary&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class EthanA_AI_on_demand_in_loop
 { 
@@ -472,7 +472,7 @@ class EthanA_AI_on_demand_in_loop
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -497,7 +497,7 @@ class EthanA_AI_on_demand_in_loop
             Console.WriteLine($&quot;AI_open status: {status}&quot;);
 
             // Set AI port and acquisition mode to on demand
-            status = dev.AI_setMode(port, WPC.AI_MODE_ON_DEMAND);
+            status = dev.AI_setMode(port, Constant.AI_MODE_ON_DEMAND);
             Console.WriteLine($&quot;AI_setMode status: {status}&quot;);
 
             // Data acquisition
@@ -546,7 +546,7 @@ class EthanA_AI_on_demand_in_loop
 ///  
 /// &lt;/summary&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class EthanA_AI_on_demand_once
 {
@@ -555,7 +555,7 @@ class EthanA_AI_on_demand_once
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -580,7 +580,7 @@ class EthanA_AI_on_demand_once
             Console.WriteLine($&quot;AI_open status: {status}&quot;);
 
             // Set AI port and acquisition mode to on demand
-            status = dev.AI_setMode(port, WPC.AI_MODE_ON_DEMAND);
+            status = dev.AI_setMode(port, Constant.AI_MODE_ON_DEMAND);
             Console.WriteLine($&quot;AI_setMode status: {status}&quot;);
 
             // Set AI port and data acquisition

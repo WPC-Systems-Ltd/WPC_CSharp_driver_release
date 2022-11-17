@@ -18,7 +18,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1CD_UART_read
 {
@@ -27,7 +27,7 @@ class USBDAQF1CD_UART_read
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -57,15 +57,15 @@ class USBDAQF1CD_UART_read
             Console.WriteLine($"UART_setBaudRate status: {status}");
 
             // Set UART port and set data bit to 8-bit data
-            status = dev.UART_setDataBit(port, WPC.UART_DATA_SIZE_8_BITS);
+            status = dev.UART_setDataBit(port, Constant.UART_DATA_SIZE_8_BITS);
             Console.WriteLine($"UART_setDataBit status: {status}");
 
             // Set UART port and set parity to None
-            status = dev.UART_setParity(port, WPC.UART_PARITY_NONE);
+            status = dev.UART_setParity(port, Constant.UART_PARITY_NONE);
             Console.WriteLine($"UART_setParity status: {status}");
 
             // Set UART port and set stop bit to to 1 bit
-            status = dev.UART_setNumStopBit(port, WPC.UART_STOP_BIT_1);
+            status = dev.UART_setNumStopBit(port, Constant.UART_STOP_BIT_1);
             Console.WriteLine($"UART_setNumStopBit status: {status}");
 
             // Wait for 10 sec

@@ -98,7 +98,7 @@
 ///  
 /// &lt;/summary&gt; 
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1TD_TC_read_channel_data
 {
@@ -107,7 +107,7 @@ class USBDAQF1TD_TC_read_channel_data
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -133,14 +133,14 @@ class USBDAQF1TD_TC_read_channel_data
             Console.WriteLine($&quot;Thermal_open status: {status}&quot;);
 
             // Set thermo port and set K type in channel 1 
-            status = dev.Thermal_setOverSampling(port, channel, WPC.THERMAL_OVERSAMPLING_NONE);
+            status = dev.Thermal_setOverSampling(port, channel, Constant.THERMAL_OVERSAMPLING_NONE);
             Console.WriteLine($&quot;Thermal_setOverSampling status: {status}&quot;);
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set thermo port and set K type in channel 1 
-            status = dev.Thermal_setType(port, channel, WPC.THERMAL_COUPLE_TYPE_K);
+            status = dev.Thermal_setType(port, channel, Constant.THERMAL_COUPLE_TYPE_K);
             Console.WriteLine($&quot;Thermal_setType status: {status}&quot;);
 
             // Wait for 0.1 sec
@@ -191,7 +191,7 @@ class USBDAQF1TD_TC_read_channel_data
 ///  
 /// &lt;/summary&gt;&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1TD_TC_read_channel_status
 {
@@ -200,7 +200,7 @@ class USBDAQF1TD_TC_read_channel_status
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
