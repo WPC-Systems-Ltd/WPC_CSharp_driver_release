@@ -18,7 +18,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1AD_AI_continuous
 {
@@ -49,7 +49,7 @@ class USBDAQF1AD_AI_continuous
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1AD dev = new USBDAQF1AD();
@@ -75,7 +75,7 @@ class USBDAQF1AD_AI_continuous
             Console.WriteLine($"AI_open status: {status}");
 
             // Set AI port and acquisition mode to continuous
-            status = dev.AI_setMode(port, WPC.AI_MODE_CONTINOUS);
+            status = dev.AI_setMode(port, Constant.AI_MODE_CONTINOUS);
             Console.WriteLine($"AI_setMode status: {status}");
 
             // Set AI port and sampling rate to 1k (Hz)

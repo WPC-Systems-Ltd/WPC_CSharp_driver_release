@@ -18,7 +18,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1AD_DO_blinky_pins
 {
@@ -27,7 +27,7 @@ class USBDAQF1AD_DO_blinky_pins
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1AD dev = new USBDAQF1AD();

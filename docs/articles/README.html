@@ -69,9 +69,15 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="overview">Overview</h1>
 
-<p><strong>WPC CSharp driver</strong> contains APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.</p>
+<p><strong>WPC CSharp driver</strong>, also known as cswpc, supports .NET 6.0 with compatibility and completeness.</p>
+<p>It contains APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.</p>
 <p>Some API functions in the package may not compatible with earlier versions of WPC DAQ firmware. To update device firmware to the latest version, please use WPC Device Manager and <a href="https://drive.google.com/file/d/1Uj6r65KhNxvuApiqrMkZp-NWyq-Eek-k/view">LabVIEW Run-time engine</a>.
 You can download WPC Device Manager by visiting <a href="http://www.wpc.com.tw/36039260092584721462-daq1.html">WPC Systems Ltd. official website</a>.</p>
+<p><a href="https://www.nuget.org/packages/cswpc"><img src="https://img.shields.io/nuget/v/cswpc" alt="nuget"></a>
+<a href="https://www.nuget.org/packages/cswpc"><img src="https://img.shields.io/nuget/dt/cswpc?color=%20" alt="Downloads"></a>
+<a href="https://dotnet.microsoft.com/en-us/"><img src="https://img.shields.io/badge/.NET-6.0-blue.svg" alt="NET"></a>
+<a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/"><img src="https://img.shields.io/badge/docs-website-purple.svg" alt="Documentation"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Make sure the latest version of firmware is up to date with your products.</p>
@@ -102,6 +108,29 @@ You can download WPC Device Manager by visiting <a href="http://www.wpc.com.tw/3
 </tr>
 </tbody>
 </table>
+<h1 id="install-toolkit">Install toolkit</h1>
+<p>This can be done either manually or through the <a href="https://www.nuget.org/packages/cswpc">NuGet package</a></p>
+<pre><code>PM&gt; NuGet\Install-Package cswpc
+</code></pre>
+<p>or with dotnet cli:</p>
+<pre><code>dotnet add package cswpc
+</code></pre>
+<h1 id="quick-start">Quick Start</h1>
+<p><strong>Easy, fast, and just works!</strong></p>
+<pre><code class="lang-csharp">using WPC.Product;
+
+// Get C# driver name
+Console.WriteLine($&quot;{Constant.PKG_NAME}&quot;);
+
+// Get C# driver full name and version
+Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+
+// Get C# handle list  
+foreach (var item in Constant.HANDLE_LIST) 
+{
+  Console.WriteLine($&quot;{item}&quot;);  
+} 
+</code></pre>
 <h1 id="products">Products</h1>
 <p>Ethernet based DAQ card</p>
 <ul>
@@ -280,7 +309,7 @@ You can download WPC Device Manager by visiting <a href="http://www.wpc.com.tw/3
 <li>Port 2 is available for <code>UART</code></li>
 </ul>
 <h1 id="license">License</h1>
-<p><strong>WPC Csharp driver release</strong> is licensed under an MIT-style license see
+<p><strong>WPC CSharp driver release</strong> is licensed under an MIT-style license see
 <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/LICENSE">LICENSE</a>. Other incorporated projects may be licensed under different licenses.
 All licenses allow for non-commercial and commercial use.</p>
 </article>
@@ -288,13 +317,6 @@ All licenses allow for non-commercial and commercial use.</p>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/master/docfx_project/articles/README.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In This Article</h5>
                 <div></div>

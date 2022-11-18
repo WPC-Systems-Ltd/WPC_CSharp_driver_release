@@ -18,7 +18,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class EthanA_AI_N_samples_once
 {
@@ -28,7 +28,7 @@ class EthanA_AI_N_samples_once
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -55,7 +55,7 @@ class EthanA_AI_N_samples_once
             Console.WriteLine($"AI_open status: {status}");
 
             // Set AI port and acquisition mode to N-sample mode
-            status = dev.AI_setMode(port, WPC.AI_MODE_N_SAMPLE);
+            status = dev.AI_setMode(port, Constant.AI_MODE_N_SAMPLE);
             Console.WriteLine($"AI_setMode status: {status}");
 
             // Set AI port and # of samples to 5 (pts)

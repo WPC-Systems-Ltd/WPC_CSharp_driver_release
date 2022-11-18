@@ -18,7 +18,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class WifiDAQE3A_AI_on_demand_in_loop
 { 
@@ -46,7 +46,7 @@ class WifiDAQE3A_AI_on_demand_in_loop
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         WifiDAQE3A dev = new WifiDAQE3A();
@@ -71,7 +71,7 @@ class WifiDAQE3A_AI_on_demand_in_loop
             Console.WriteLine($"AI_open status: {status}");
 
             // Set AI port and acquisition mode to on demand
-            status = dev.AI_setMode(port, WPC.AI_MODE_ON_DEMAND);
+            status = dev.AI_setMode(port, Constant.AI_MODE_ON_DEMAND);
             Console.WriteLine($"AI_setMode status: {status}");
 
             // Data acquisition

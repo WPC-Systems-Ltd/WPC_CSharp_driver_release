@@ -18,7 +18,7 @@
 ///  
 /// </summary> 
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1TD_TC_read_channel_data
 {
@@ -27,7 +27,7 @@ class USBDAQF1TD_TC_read_channel_data
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -53,14 +53,14 @@ class USBDAQF1TD_TC_read_channel_data
             Console.WriteLine($"Thermal_open status: {status}");
 
             // Set thermo port and set K type in channel 1 
-            status = dev.Thermal_setOverSampling(port, channel, WPC.THERMAL_OVERSAMPLING_NONE);
+            status = dev.Thermal_setOverSampling(port, channel, Constant.THERMAL_OVERSAMPLING_NONE);
             Console.WriteLine($"Thermal_setOverSampling status: {status}");
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set thermo port and set K type in channel 1 
-            status = dev.Thermal_setType(port, channel, WPC.THERMAL_COUPLE_TYPE_K);
+            status = dev.Thermal_setType(port, channel, Constant.THERMAL_COUPLE_TYPE_K);
             Console.WriteLine($"Thermal_setType status: {status}");
 
             // Wait for 0.1 sec
