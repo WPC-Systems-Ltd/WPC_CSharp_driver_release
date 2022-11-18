@@ -1,6 +1,17 @@
 WPC CSharp driver release changelog
 ===================================
 
+### Added
+- portal example code
+
+v0.0.13 Date: 2022/11/17, Developer: Chunglee_people 
+---------------------------------------------------- 
+
+### Added
+- *.* linguist-language=C# .gitattributes
+- Add nuget 
+- Decorate docfx
+
 v0.0.12 Date: 2022/11/15, Developer: Chunglee_people 
 ---------------------------------------------------- 
 

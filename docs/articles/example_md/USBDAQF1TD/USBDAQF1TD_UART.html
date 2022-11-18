@@ -98,7 +98,7 @@
 ///  
 /// &lt;/summary&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1TD_UART_read
 {
@@ -107,7 +107,7 @@ class USBDAQF1TD_UART_read
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -137,15 +137,15 @@ class USBDAQF1TD_UART_read
             Console.WriteLine($&quot;UART_setBaudRate status: {status}&quot;);
 
             // Set UART port and set data bit to 8-bit data
-            status = dev.UART_setDataBit(port, WPC.UART_DATA_SIZE_8_BITS);
+            status = dev.UART_setDataBit(port, Constant.UART_DATA_SIZE_8_BITS);
             Console.WriteLine($&quot;UART_setDataBit status: {status}&quot;);
 
             // Set UART port and set parity to None
-            status = dev.UART_setParity(port, WPC.UART_PARITY_NONE);
+            status = dev.UART_setParity(port, Constant.UART_PARITY_NONE);
             Console.WriteLine($&quot;UART_setParity status: {status}&quot;);
 
             // Set UART port and set stop bit to to 1 bit
-            status = dev.UART_setNumStopBit(port, WPC.UART_STOP_BIT_1);
+            status = dev.UART_setNumStopBit(port, Constant.UART_STOP_BIT_1);
             Console.WriteLine($&quot;UART_setNumStopBit status: {status}&quot;);
 
             // Wait for 10 sec
@@ -195,7 +195,7 @@ class USBDAQF1TD_UART_read
 ///  
 /// &lt;/summary&gt;
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1TD_UART_write
 {
@@ -204,7 +204,7 @@ class USBDAQF1TD_UART_write
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}&quot;);
+        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -234,15 +234,15 @@ class USBDAQF1TD_UART_write
             Console.WriteLine($&quot;UART_setBaudRate status: {status}&quot;);
 
             // Set UART port and set data bit to 8-bit data
-            status = dev.UART_setDataBit(port, WPC.UART_DATA_SIZE_8_BITS);
+            status = dev.UART_setDataBit(port, Constant.UART_DATA_SIZE_8_BITS);
             Console.WriteLine($&quot;UART_setDataBit status: {status}&quot;);
 
             // Set UART port and set parity to None
-            status = dev.UART_setParity(port, WPC.UART_PARITY_NONE);
+            status = dev.UART_setParity(port, Constant.UART_PARITY_NONE);
             Console.WriteLine($&quot;UART_setParity status: {status}&quot;);
 
             // Set UART port and set stop bit to 1 bit
-            status = dev.UART_setNumStopBit(port, WPC.UART_STOP_BIT_1);
+            status = dev.UART_setNumStopBit(port, Constant.UART_STOP_BIT_1);
             Console.WriteLine($&quot;UART_setNumStopBit status: {status}&quot;);
 
             // Set UART port and and write &quot;chunglee people&quot; to device
@@ -278,13 +278,6 @@ class USBDAQF1TD_UART_write
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/master/docfx_project/articles/example_md/USBDAQF1TD/USBDAQF1TD_UART.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In This Article</h5>
                 <div></div>

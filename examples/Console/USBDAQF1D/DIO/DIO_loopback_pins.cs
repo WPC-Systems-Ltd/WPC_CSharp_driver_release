@@ -20,7 +20,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1D_DIO_loopback_pins
 {
@@ -29,7 +29,7 @@ class USBDAQF1D_DIO_loopback_pins
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1D dev = new USBDAQF1D();

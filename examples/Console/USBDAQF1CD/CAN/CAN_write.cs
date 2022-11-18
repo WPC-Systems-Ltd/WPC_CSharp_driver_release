@@ -19,7 +19,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1CD_CAN_write
 {
@@ -28,7 +28,7 @@ class USBDAQF1CD_CAN_write
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -53,7 +53,7 @@ class USBDAQF1CD_CAN_write
             Console.WriteLine($"CAN_open status: {status}");
 
             // Set CAN port and set speed to 125K
-            status = dev.CAN_setSpeed(port, WPC.CAN_SPEED_125K);
+            status = dev.CAN_setSpeed(port, Constant.CAN_SPEED_125K);
             Console.WriteLine($"CAN_setSpeed status: {status}");
 
             // Set CAN port and start CAN
@@ -61,14 +61,14 @@ class USBDAQF1CD_CAN_write
             Console.WriteLine($"CAN_start status: {status}");
 
             // ID: 10, data with 8 bytes, Standard & Data 
-            status = dev.CAN_write(port, 10, new List<byte> { 33, 22, 11, 88, 77, 55, 66, 22 }, WPC.CAN_FRAME_TYPE_DATA, WPC.CAN_ID_STANDARD);
+            status = dev.CAN_write(port, 10, new List<byte> { 33, 22, 11, 88, 77, 55, 66, 22 }, Constant.CAN_FRAME_TYPE_DATA, Constant.CAN_ID_STANDARD);
             Console.WriteLine($"CAN_write status: {status}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms] 
 
             // ID: 20, data with 8 bytes, Standard & Data 
-            status = dev.CAN_write(port, 20, new List<byte> { 1, 2, 3 }, WPC.CAN_FRAME_TYPE_DATA, WPC.CAN_ID_STANDARD);
+            status = dev.CAN_write(port, 20, new List<byte> { 1, 2, 3 }, Constant.CAN_FRAME_TYPE_DATA, Constant.CAN_ID_STANDARD);
             Console.WriteLine($"CAN_write status: {status}");
 
             // Stop CAN

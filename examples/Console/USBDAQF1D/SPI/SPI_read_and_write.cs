@@ -18,7 +18,7 @@
 ///  
 /// </summary>
 
-using WPC_Product;
+using WPC.Product;
 
 class USBDAQF1D_SPI_read_and_write
 {
@@ -27,7 +27,7 @@ class USBDAQF1D_SPI_read_and_write
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{WPC.PKG_FULL_NAME} - Version {WPC.VERSION}");
+        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
         // Create device handle
         USBDAQF1D dev = new USBDAQF1D();
@@ -74,19 +74,19 @@ class USBDAQF1D_SPI_read_and_write
             */
 
             // Set SPI port and set datasize to 8-bits data
-            status = dev.SPI_setDataSize(port, WPC.SPI_DATA_SIZE_8_BITS);
+            status = dev.SPI_setDataSize(port, Constant.SPI_DATA_SIZE_8_BITS);
             Console.WriteLine($"SPI_setDataSize status: {status}");
 
             // Set SPI port and set first_bit to MSB first
-            status = dev.SPI_setFirstBit(port, WPC.SPI_FIRST_BIT_MSB);
+            status = dev.SPI_setFirstBit(port, Constant.SPI_FIRST_BIT_MSB);
             Console.WriteLine($"SPI_setFirstBit status: {status}");
 
             // Set SPI port and set prescaler to 64
-            status = dev.SPI_setPrescaler(port, WPC.SPI_PRESCALER_64);
+            status = dev.SPI_setPrescaler(port, Constant.SPI_PRESCALER_64);
             Console.WriteLine($"SPI_setPrescaler status: {status}");
 
             // Set SPI port and set CPOL and CPHA to mode 0 
-            status = dev.SPI_setMode(port, WPC.SPI_MODE_0);
+            status = dev.SPI_setMode(port, Constant.SPI_MODE_0);
             Console.WriteLine($"SPI_setMode status: {status}");
 
             /* 
