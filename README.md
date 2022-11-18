@@ -97,6 +97,10 @@ Take `USB-DAQ-F1-AOD` for example:
 - Ports 0 & 1 are available for `DO`
 - Port 2 is available for `UART`
 
+# References
+- [How to install Visual Studio](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-install-Visual-Studio)
+- [How to start up new project with cswpc](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-start-up-new-project-with-cswpc)
+
 # License
 
 **WPC CSharp driver release** is licensed under an MIT-style license see
