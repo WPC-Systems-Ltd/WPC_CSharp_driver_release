@@ -44,9 +44,7 @@ class EthanO_AO_waveform_generation
             int status; 
             int port = 0; 
             List<int> AO_pins_enabled = new List<int> { 0, 0, 0, 0, 0, 0, 1, 1 };
-            int mode = 2;
-            double sampling_rate = 1000;
-            int form_mode = 2;
+            double sampling_rate = 1000; 
             double amplitude = 1;
             double offset = 0.5;
             double period_0 = 0.2;
@@ -66,11 +64,11 @@ class EthanO_AO_waveform_generation
             Console.WriteLine($"AO_setEnableChannels status: {status}");
 
             // Set AO form in channel 0
-            status = dev.AO_setForm(port, 0, form_mode);
+            status = dev.AO_setForm(port, 0, Constant.AO_FORM_TRIANGULAR);
             Console.WriteLine($"AO_setForm_async in channel 0 status : {status}");
 
             // Set AO form in channel 1
-            status = dev.AO_setForm(port, 1, form_mode);
+            status = dev.AO_setForm(port, 1, Constant.AO_FORM_TRIANGULAR);
             Console.WriteLine($"AO_setForm_async in channel 1 status : {status}");
 
             // Set Channel 0 form parameters
@@ -82,7 +80,7 @@ class EthanO_AO_waveform_generation
             Console.WriteLine($"AO_setFormParam in channel 1 status : {status}");
 
             // Set AO port and generation mode
-            status = dev.AO_setMode(port, mode);
+            status = dev.AO_setMode(port, Constant.AO_MODE_CONTINOUS);
             Console.WriteLine($"AO_setMode status : {status}");
 
             // Set AO port and sampling rate to 1k (Hz)
