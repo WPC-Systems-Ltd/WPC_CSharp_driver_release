@@ -132,6 +132,55 @@
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Module_IAOModule_AO_closeStreaming_" data-uid="WPC.Module.IAOModule.AO_closeStreaming*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_closeStreaming_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_closeStreaming(System.Int32,System.Int32)">AO_closeStreaming(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Close AO streaming functionality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AO_closeStreaming(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>0 if success, error otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Module_IAOModule_AO_getValues_" data-uid="WPC.Module.IAOModule.AO_getValues*"></a>
   <h4 id="WPC_Module_IAOModule_AO_getValues_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_getValues(System.Int32,System.Int32)">AO_getValues(Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Get AO current output.</p>
@@ -189,6 +238,458 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">int AO_open(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>0 if success, error otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IAOModule_AO_openStreaming_" data-uid="WPC.Module.IAOModule.AO_openStreaming*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_openStreaming_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_openStreaming(System.Int32,System.Int32)">AO_openStreaming(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Open AO streaming functionality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;int&gt; AO_openStreaming(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>List of information about AO mode and sampling rate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IAOModule_AO_setEnableChannels_" data-uid="WPC.Module.IAOModule.AO_setEnableChannels*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_setEnableChannels_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IAOModule.AO_setEnableChannels(System.Int32,List{System.Int32},System.Int32)">AO_setEnableChannels(Int32, List&lt;Int32&gt;, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set AO enabled channels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AO_setEnableChannels(int port, List&lt;int&gt; enabled, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>Enable pins.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>0 if success, error otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IAOModule_AO_setForm_" data-uid="WPC.Module.IAOModule.AO_setForm*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_setForm_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setForm(System.Int32,System.Int32,System.Int32,System.Int32)">AO_setForm(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set AO waveform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AO_setForm(int port, int channel, int form, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>Channel index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">form</span></td>
+        <td><p>0:Retangular, 1:Triangular, 2:Sine.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>0 if success, error otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IAOModule_AO_setFormParam_" data-uid="WPC.Module.IAOModule.AO_setFormParam*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_setFormParam_System_Int32_System_Int32_System_Double_System_Double_System_Double_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setFormParam(System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Int32)">AO_setFormParam(Int32, Int32, Double, Double, Double, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set AO waveform parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AO_setFormParam(int port, int channel, double amplitude, double offset, double period, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>Channel index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">amplitude</span></td>
+        <td><p>Amplitude.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">period</span></td>
+        <td><p>Period.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>0 if success, error otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IAOModule_AO_setMode_" data-uid="WPC.Module.IAOModule.AO_setMode*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_setMode_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setMode(System.Int32,System.Int32,System.Int32)">AO_setMode(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set AO generation mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AO_setMode(int port, int mode, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>0:On demand, 1:N-samples, 2:Continuous.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>0 if success, error otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IAOModule_AO_setNumSamples_" data-uid="WPC.Module.IAOModule.AO_setNumSamples*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_setNumSamples_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setNumSamples(System.Int32,System.Int32,System.Int32)">AO_setNumSamples(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set AO number of samples.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AO_setNumSamples(int port, int sample_points, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">sample_points</span></td>
+        <td><p>Number of sample points.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>0 if success, error otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IAOModule_AO_setSamplingRate_" data-uid="WPC.Module.IAOModule.AO_setSamplingRate*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_setSamplingRate_System_Int32_System_Double_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setSamplingRate(System.Int32,System.Double,System.Int32)">AO_setSamplingRate(Int32, Double, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set AO sampling rate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AO_setSamplingRate(int port, double sampling_rate, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Available port number depends on WPC DAQ device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">sampling_rate</span></td>
+        <td><p>AO sampling rate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>0 if success, error otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IAOModule_AO_startStreaming_" data-uid="WPC.Module.IAOModule.AO_startStreaming*"></a>
+  <h4 id="WPC_Module_IAOModule_AO_startStreaming_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_startStreaming(System.Int32,System.Int32)">AO_startStreaming(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Start AO streaming.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AO_startStreaming(int port, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,7 +868,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-             Copyright (c) 2022 WPC Systems Ltd.
+            <span> © 2022 WPC Systems Ltd. All right reserved.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Technical support: <a href='' wu@wpc.com.tw''="">wu@wpc.com.tw</a></span>
             
           </div>
         </div>
