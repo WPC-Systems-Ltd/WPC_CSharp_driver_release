@@ -63,6 +63,8 @@ foreach (var item in Constant.HANDLE_LIST)
 Ethernet based DAQ card
 - Ethan-A
 - Ethan-D
+- Ethan-L
+- Ethan-O
 
 USB interface DAQ card
 - USB-DAQ-F1-D (Digital)
@@ -82,6 +84,8 @@ Wifi based DAQ card
 |:----------------|:---:|:--:|:----------:|:----------:|:---:|:----:|:---:|:----:|:---:|:------------:|
 | Ethan-A         | 0   | -  | -          | -          |-    |-     |-    |-     | -   |-             |
 | Ethan-D         | -   | -  | 1          | 0          |-    |-     |-    |-     | -   |-             |
+| Ethan-L         | -   | -  | 1          | 0          |-    |-     |-    |-     | -   |-             |
+| Ethan-O         | -   | 0  | -          | -          |-    |-     |-    |-     | -   |-             |
 | USB-DAQ-F1-D    | -   | -  | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |1, 2 | 1, 2 | -   |-             |
 | USB-DAQ-F1-DSNK | -   | -  | 0, 1       | 2, 3       |-    |-     |-    |-     | -   |-             |
 | USB-DAQ-F1-AD   | 0   | -  | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |2    | 1, 2 | -   |-             |
@@ -96,7 +100,13 @@ Take `USB-DAQ-F1-AOD` for example:
 - Port 2 is available for `DI`
 - Ports 0 & 1 are available for `DO`
 - Port 2 is available for `UART`
-
+ 
+# References 
+- [User manual - WPC CSharp driver](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/)
+- [How to install Visual Studio IDE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-install-Visual-Studio-IDE)
+- [How to start up a new project with cswpc package](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-start-up-a-new-project-with-cswpc-package)
+- [How to build your own C# codes into EXE files](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-build-your-own-C%23-codes-into-EXE-files)
+ 
 # License
 
 **WPC CSharp driver release** is licensed under an MIT-style license see

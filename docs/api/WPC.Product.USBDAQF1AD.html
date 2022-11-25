@@ -384,7 +384,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;List&lt;double&gt;&gt; AI_readStreaming(int port, int num_of_samples, int delay)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;List&lt;double&gt;&gt; AI_readStreaming(int port, int num_samples, int delay)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -404,8 +404,9 @@
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">num_of_samples</span></td>
-        <td></td>
+        <td><span class="parametername">num_samples</span></td>
+        <td><p>Amount of data to get from the function call.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
@@ -3192,18 +3193,51 @@ For example, you want to write pin 0 and pin 2 to high, others to low.
         </div>
       </div>
       
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-             Copyright (c) 2022 WPC Systems Ltd.
-            
-          </div>
-        </div>
-      </footer>
+      <head>
+      <style>
+      a:link, i {
+        color: black;
+      }
+       
+      </style>
+      </head>
+      
+      <body>
+          <footer>
+            <div class="grad-bottom"></div>
+              <div class="footer">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <span class="footer-heading"><strong>WPC Systems Ltd.</strong></span><br><br> 
+                                  TEL1: +886-2-8262-4431<br> 
+                                  TEL2: +886-2-8262-7673<br> 
+                                  FAX: +886-2-8262-4609<br>
+                          </div>
+      
+                          <div class="col-sm-4">
+                              <span class="footer-heading"><strong>Support</strong></span> <br><br>
+                                  Technical support : <a href="mailto: wu@wpc.com.tw">wu@wpc.com.tw</a><br>
+                                  Sales support : <a href="mailto: hltsai@wpc.com.tw">hltsai@wpc.com.tw</a><br>  
+                          </div>
+      
+                          <div class="col-sm-4">
+                              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+                              <span class="footer-heading"></span>
+                                  <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release"><i class="fab fa-github" style='font-size:40px'></i></a> 
+                                  &emsp;
+                                  <a href="https://www.youtube.com/channel/UCUVb34hMdoXQ0kaN-r0TKZA/videos"><i class="fab fa-youtube" style='font-size:40px; color:red'></i></a> 
+                                  &emsp;
+                                  <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
+                                  <br><br> 
+                                  <p>Copyright © 2022 WPC Systems Ltd. All right reserved.</p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+          </footer>
+      </body>
+      
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>

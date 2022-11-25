@@ -54,8 +54,8 @@ class USBDAQF1AOD_DO_blinky_pins
             status = dev.DO_openPins(port, DO_pins);
             Console.WriteLine($"DO_openPins status: {status}");
 
-            // Toggle digital state for 30 times. Each times delay for 0.1 second 
-            for (int i = 0; i < 30; i++)
+            // Toggle digital state for 10 times. Each times delay for 0.1 second 
+            for (int i = 0; i < 10; i++)
             {
                 if (i%2 == 0)
                 {

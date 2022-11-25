@@ -1,8 +1,19 @@
 WPC CSharp driver release changelog
 ===================================
 
+
+
+v0.1.0 Date: 2022/11/24, Developer: Chunglee_people 
+---------------------------------------------------- 
+
 ### Added
 - portal example code
+- Add Datalogger example code
+- Add product `EthanL` & `EthanO` 
+- Add `AO_waveform_generation.cs` example code
+
+### Changed
+- Update `WPC_DAQ_Devices_User_Manual` from r19 to r20
 
 v0.0.13 Date: 2022/11/17, Developer: Chunglee_people 
 ---------------------------------------------------- 
