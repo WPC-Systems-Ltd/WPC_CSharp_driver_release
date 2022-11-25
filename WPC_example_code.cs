@@ -20,6 +20,8 @@ public class WPC_example_code
         Console.WriteLine("USBDAQF1RD, please input 8");
         Console.WriteLine("USBDAQF1TD, please input 9");
         Console.WriteLine("WifiDAQE3A, please input 10");
+        Console.WriteLine("EthanL, please input 11");
+        Console.WriteLine("EthanO, please input 12");
     }
     #endregion
 
@@ -97,6 +99,7 @@ public class WPC_example_code
         Console.WriteLine("-------");
         Console.WriteLine("Run AO_write_all_channels.cs, please input 17");
         Console.WriteLine("Run AO_write_one_channel.cs, please input 18");
+        Console.WriteLine("Run AO_waveform_generation.cs, please input 19");
     }
     #endregion
 
@@ -278,6 +281,18 @@ public class WPC_example_code
                 Console.WriteLine("Get 10, show WifiDAQE3A series example code");
                 showSysWifiMessage(); 
                 showAIMessage();
+                break;
+
+            case 11:
+                Console.WriteLine("Get 11, show EthanL series example code");
+                showSysETHMessage();
+                showDIOMessage();
+                break;
+
+            case 12:
+                Console.WriteLine("Get 12, show EthanO series example code");
+                showSysETHMessage();
+                showAOMessage();
                 break;
             default:
                 break; 
@@ -477,6 +492,9 @@ public class WPC_example_code
                         break;
                     case 18:
                         USBDAQF1AOD_AO_write_one_channel.Main();
+                        break;
+                    case 19:
+                        USBDAQF1AOD_AO_waveform_generation.Main();
                         break;
                     #endregion
 
@@ -818,6 +836,59 @@ public class WPC_example_code
                 }
                 break;
 
+            case 11:
+                switch (example_code)
+                {
+                    #region EthanL_Sys
+                    case 1:
+                        EthanL_get_network_info.Main();
+                        break;
+                    #endregion
+
+                    #region EthanL_DIO
+                    case 20:
+                        EthanL_DIO_loopback_pins.Main();
+                        break;
+                    case 21:
+                        EthanL_DIO_loopback_port.Main();
+                        break;
+                    case 22:
+                        EthanL_DO_blinky_pins.Main();
+                        break;
+                    case 23:
+                        EthanL_DO_blinky_port.Main();
+                        break;
+                    #endregion 
+                    default:
+                        break;
+                }
+                break;
+
+            case 12:
+                switch (example_code)
+                {
+                    #region EthanO_Sys
+                    case 1:
+                        EthanO_get_network_info.Main();
+                        break;
+                    #endregion
+
+                    #region EthanO_AO
+                    case 17:
+                        EthanO_AO_write_all_channels.Main();
+                        break;
+                    case 18:
+                        EthanO_AO_write_one_channel.Main();
+                        break;
+                    case 19:
+                        EthanO_AO_waveform_generation.Main();
+                        break;
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
             default:
                 break;
         }  
