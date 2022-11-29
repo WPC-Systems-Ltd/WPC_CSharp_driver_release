@@ -647,11 +647,10 @@ class EthanA_DataLogger_AI_continuous
             foreach (List&lt;double&gt; sample in streaming_list)
             {
                 // Read acquisition data
-                var data = $&quot;{sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}&quot;;
-                Console.WriteLine($&quot;{data}&quot;);
+                Console.WriteLine($&quot;{sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}&quot;);
 
-                // Write data into CSV 
-                handle2.Logger_writeValue(data); 
+                // Write data into CSV
+                handle2.Logger_writeList(sample); 
             }
 
             // Wait for 0.01 sec

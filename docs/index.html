@@ -1,142 +1,367 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Welcome to WPC CSharp driver homepage. | WPC_CSharp_driver </title>
+    <title>WPC CSharp driver</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Welcome to WPC CSharp driver homepage. | WPC_CSharp_driver ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
+    <meta name="title" content="WPC CSharp driver">
+
     <link rel="shortcut icon" href="images/WPC_favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
     <link rel="stylesheet" href="styles/docfx.css">
     <link rel="stylesheet" href="styles/main.css">
     <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="index.html">
-                <img id="logo" class="svg" src="images/WPC_logo.jpg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h2 id="welcome-to-wpc-csharp-driver-homepage">Welcome to WPC CSharp driver homepage.</h2>
+    <meta property="docfx:rel" content="">
 
-<h4 id="wpc-c-driver-support-product-list-below">WPC C# driver support product list below</h4>
-<ul>
-<li><p><strong>Ethernet DAQ</strong> : EthanA, EthanD, EthanL and EthanO.</p>
-</li>
-<li><p><strong>USB DAQ</strong>: USBDAQF1AD, USBDAQF1AOD, USBDAQF1CD, USBDAQF1D, USBDAQF1DSNK, USBDAQF1RD and USBDAQF1TD.</p>
-</li>
-<li><p><strong>Wifi DAQ</strong> : WifiDAQE3A.</p>
-</li>
-</ul>
-<p>We also support <a href="https://github.com/WPC-Systems-Ltd/WPC_Python_driver_release">Python</a> and <a href="http://www.wpc.com.tw/36039260092584721462-daq1.html">LabVIEW</a> driver. If you have any questions, please go to <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release">GitHub</a> or visit <a href="http://www.wpc.com.tw/">WPC official website</a> to get more imformation.</p>
-<h3 id="--overview">- <a href="articles/README.html">OverView</a></h3>
-<h3 id="--api-documentation">- <a href="api/WPC.Device.html">API Documentation</a></h3>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
-              </nav>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://covidtaiwan.linc.tw/figures/screenshot.png" />
+    <meta property="og:description" content="The easiest way to Control & Data Acquisition (DAQ) " />
+    <meta property="og:title" content="WPC CSharp driver" />
+    <meta property="og:url" content="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/" />
+
+    <link href="https://www.newtonsoft.com/content/styles/bundle-common?v=YoV7zF4FphgGEnugNXUKWuVJ3PxlOnVhxK54pyuQwXA1" rel="stylesheet" />
+
+
+    <style>
+        a:link, i {
+            color: black;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+        <header>
+
+            <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="https://www.nuget.org/packages/cswpc" target="_blank">
+                            <img src="images/WPC_logo.jpg" alt="WPC_logo" class="center-block" />
+                        </a>
+
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <form class="navbar-form navbar-right" role="search" id="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+
+        </header>
+        <style type="text/css">
+            footer {
+                position: relative;
+            }
+        </style>
+        <div class="modal fade" id="download-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body slim-dialog">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="page-header">Install with NuGet (recommended)</h4>
+                        <a href="https://www.nuget.org/packages/cswpc" target="_blank">
+                            <img src="https://www.newtonsoft.com/Content/Images/nuget-logo.png" alt="NuGet" class="center-block" />
+                        </a>
+                        <br />
+
+                        <div class="nuget-badge">
+                            PM&gt; NuGet\Install-Package cswpc
+                        </div>
+
+
+                        <br /><br />
+                        <h4 class="page-header">Direct Download</h4>
+                        <p>
+                            ZIP file containing assemblies and source code:
+                            <a class="btn btn-default btn-sm" href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/releases" target="_blank">
+                                <i class="fa fa-file-zip-o"></i> WPC Csharp driver
+                            </a>
+                        </p>
+                        <br />
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      
-      <head>
-      <style>
-      a:link, i {
-        color: black;
-      }
-       
-      </style>
-      </head>
-      
-      <body>
-          <footer>
-            <div class="grad-bottom"></div>
-              <div class="footer">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-sm-4">
-                              <span class="footer-heading"><strong>WPC Systems Ltd.</strong></span><br><br> 
-                                  TEL1: +886-2-8262-4431<br> 
-                                  TEL2: +886-2-8262-7673<br> 
-                                  FAX: +886-2-8262-4609<br>
-                          </div>
-      
-                          <div class="col-sm-4">
-                              <span class="footer-heading"><strong>Support</strong></span> <br><br>
-                                  Technical support : <a href="mailto: wu@wpc.com.tw">wu@wpc.com.tw</a><br>
-                                  Sales support : <a href="mailto: hltsai@wpc.com.tw">hltsai@wpc.com.tw</a><br>  
-                          </div>
-      
-                          <div class="col-sm-4">
-                              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-                              <span class="footer-heading"></span>
-                                  <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release"><i class="fab fa-github" style='font-size:40px'></i></a> 
-                                  &emsp;
-                                  <a href="https://www.youtube.com/channel/UCUVb34hMdoXQ0kaN-r0TKZA/videos"><i class="fab fa-youtube" style='font-size:40px; color:red'></i></a> 
-                                  &emsp;
-                                  <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
-                                  <br><br> 
-                                  <p>Copyright © 2022 WPC Systems Ltd. All right reserved.</p>
-                          </div>
-                      </div>
-                  </div>
+        <div>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <div class="jumbotron-content">
+                                <h2>WPC Csharp driver</h2>
+                                <p class="summary">
+                                    The easiest way to Control & Data Acquisition (DAQ)
+                                </p>
+                                <div class="buttons">
+                                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+                                    <a class="btn btn-lg btn-success" href="#" target="_blank" data-toggle="modal" data-target="#download-modal">
+                                        <i class="fa fa-download fa-lg"></i> Download
+                                    </a>
+                                    <a class="btn btn-lg btn-primary" href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release" target="_blank">
+                                        <i class="fab fa-github"></i> Source code
+                                    </a>
+                                </div>
+                                <p class="byline">
+                                    Version 0.1.1
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-8 col-md-offset-2 text-left">
+                            <div class="carousel slide" id="code-carousel" data-interval="12000">
+                                <ol class="carousel-indicators">
+                                    <li data-slide-to="0" data-target="#code-carousel" class="active"></li>
+                                    <li data-slide-to="1" data-target="#code-carousel" class=""></li>
+                                    <li data-slide-to="2" data-target="#code-carousel" class=""></li>
+                                    <li data-slide-to="3" data-target="#code-carousel" class=""></li>
+                                    <li data-slide-to="4" data-target="#code-carousel" class=""></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <pre class="sunlight-highlight-csharp code-sample">
+using WPC.Product;
+
+// Get C# driver name
+Console.WriteLine($"{Constant.PKG_NAME}");
+
+// Get C# driver full name and version
+Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+
+// Get C# handle list  
+foreach (var item in Constant.HANDLE_LIST) 
+{
+  Console.WriteLine($"{item}");  
+} 
+</pre>
+                                        <div class="carousel-caption">
+                                            Qiuck Start
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <pre class="sunlight-highlight-csharp code-sample">
+using WPC.Product;
+
+ // Create device handle
+DeviceFinder dev = new DeviceFinder();
+
+// Connect to device
+dev.connect();
+
+// Find USB list  
+List&lt;List&lt;string&gt;&gt; usb_list = dev.Bcst_enumerateUSBDevices();
+foreach (List&lt;string&gt; usb in usb_list)
+{
+    foreach (string s in usb)
+    {
+        Console.Write(s); 
+    } 
+}
+</pre>
+                                        <div class="carousel-caption">
+                                            Basic USB list example
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <pre class="sunlight-highlight-csharp code-sample">
+using WPC.Product;
+
+// Create device handle
+DeviceFinder dev = new DeviceFinder();
+
+// Connect to device
+dev.connect();
+
+// Find ethernet list    
+List&lt;List&lt;string&gt;&gt; net_list = dev.Bcst_enumerateNetworkDevices(2000)
+foreach (List&lt;string&gt; net in net_list)
+{
+    foreach (string s in net)
+    {
+        Console.Write(s); 
+    } 
+}
+</pre>
+                                        <div class="carousel-caption">
+                                            Basic ethernet finder example
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <pre class="sunlight-highlight-csharp code-sample">
+using WPC.Product;
+
+// Create device handle
+EthanA dev = new EthanA();
+
+// Connect to device
+dev.connect("192.168.1.110");
+         
+// Get IP & submask
+List &lt;string&gt; info = dev.Sys_getIPAddrAndSubmask();
+Console.WriteLine($"IP: {info[0]}, Submask: {info[1]}"); 
+
+// Disconnect device
+dev.disconnect();
+
+// Release device handle
+dev.close(); 
+</pre>
+                                        <div class="carousel-caption">
+                                            Basic ethernet example
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <pre class="sunlight-highlight-csharp code-sample">
+using WPC.Product;
+
+// Create device handle
+USBDAQF1AOD dev = new USBDAQF1AOD();
+
+// Connect to device
+dev.connect("21JA1439");
+         
+// Get RTC Time
+string RTC = dev.Sys_getRTC(); 
+Console.WriteLine($"RTC data time: {RTC}");
+
+// Disconnect device
+dev.disconnect();
+
+// Release device handle
+dev.close(); 
+</pre>
+                                        <div class="carousel-caption">
+                                            Basic USB example
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </footer>
-      </body>
-      
-    </div>
-    
-    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="styles/docfx.js"></script>
-    <script type="text/javascript" src="styles/main.js"></script>
-  </body>
+
+        </div>
+
+        <div class="container">
+            <div class="key-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <i class="glyphicon glyphicon-grain"></i>
+                            <section>
+                                <h2>Ethernet series DAQ</h2>
+                                <p class="lead">
+                                    <h4>EthanA, EthanD, EthanL, EthanO</h4>
+                                </p>
+
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="counter-key-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <i class="glyphicon glyphicon-apple"></i>
+                            <section>
+                                <h2>USB series DAQ</h2>
+                                <p class="lead">
+                                    <h4> USBDAQF1AD, USBDAQF1AOD, USBDAQF1CD<br><br> USBDAQF1D, USBDAQF1DSNK, USBDAQF1RD and USBDAQF1TD.</h4>
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="counter-key-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <i class="glyphicon glyphicon-transfer"></i>
+                            <section>
+                                <h2>Wifi series DAQ</h2>
+                                <p class="lead">
+                                    <h4>WifiDAQE3A.</h4>
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="grad-bottom"></div>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span class="footer-heading"><strong>WPC Systems Ltd.</strong></span><br><br>
+                            TEL1: +886-2-8262-4431<br>
+                            TEL2: +886-2-8262-7673<br>
+                            FAX: +886-2-8262-4609<br>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <span class="footer-heading"><strong>Support</strong></span> <br><br>
+                            Technical support : <a href="mailto: wu@wpc.com.tw">wu@wpc.com.tw</a><br>
+                            Sales support : <a href="mailto: hltsai@wpc.com.tw">hltsai@wpc.com.tw</a><br>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+                            <span class="footer-heading"></span>
+                            <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release"><i class="fab fa-github" style='font-size:40px'></i></a>
+                            &emsp;
+                            <a href="https://www.youtube.com/channel/UCUVb34hMdoXQ0kaN-r0TKZA/videos"><i class="fab fa-youtube" style='font-size:40px; color:red'></i></a>
+                            &emsp;
+                            <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a>
+                            <br><br>
+                            <p>Copyright © 2022 WPC Systems Ltd. All right reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+        <script type="text/javascript" src="styles/docfx.js"></script>
+        <script type="text/javascript" src="styles/main.js"></script>
+        <script src="https://www.newtonsoft.com/content/scripts/bundle-common?v=HCU2OzpsxUPZtdfUDbhAjW-0mGHjDQ2v-T55aDc0M0k1"></script>
+
+        <script src="https://www.newtonsoft.com/content/scripts/bundle-sunlight?v=VE1YY8oz1naF38Cyb1AYAXhdq9pFad5y8b_ZVmwu9n81"></script>
+
+
+        <script type="text/javascript">
+            var options = {
+                lineNumbers: false
+            };
+
+            Sunlight.highlightAll(options);
+        </script>
+
+        <script type="text/javascript">
+            $("#code-carousel").carousel();
+        </script>
+ 
+</body>
 </html>

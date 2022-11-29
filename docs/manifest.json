@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IDIOModule.html",
-          "hash": "38AtdvgE5EYI5Hrtc6shAKrvVg7VokSWLnD2U9LzWZw="
+          "hash": "4yzYruNS7Xo2+MrXocUyMRg3j+Cqx03OnkH3WqiYPfU="
         }
       },
       "is_incremental": true,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IDataloggerModule.html",
-          "hash": "rV4aXXqt6wptKtoxFz1DRp6XSEr68yNRwVo1Gbf7ems="
+          "hash": "1Mg4hE/o/SINELwGUwCtWrtv8u82DnZv6rQHSPOERMg="
         }
       },
       "is_incremental": true,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.Datalogger.html",
-          "hash": "RGefrTnkk19OS2shOD+/K5QOKXgAD1nnjP0HIl204qM="
+          "hash": "wghpo6/9xtfQPjXBZG3bRU9g0zRyVodiG4hqzFchZ8o="
         }
       },
       "is_incremental": true,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanD.html",
-          "hash": "PglZPqNmUKxinL8/dRA8m1V1GbjYYGNFaKfVqLENWpk="
+          "hash": "KcjG86c8tlZgPqJ17n8n5NODF4RgJfl+hgrK2BqEk3Q="
         }
       },
       "is_incremental": true,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanL.html",
-          "hash": "MAKHy0Oz7E3YXcAcer9kqlO2M910WdbEpG7LE5B/0eQ="
+          "hash": "A1kcwA6KQoGrkt8gOIIbY6BDZdz6xHOpMmcfCxEzD1A="
         }
       },
       "is_incremental": true,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AD.html",
-          "hash": "O6TEIGDUXl/u8U4c2TBAYvBQ9TqJLHGlubG1xPT0HTo="
+          "hash": "5zJ1zPw5lgECZTdcWGi3Igj6RW3kY6P9Bo9NWLKu9uk="
         }
       },
       "is_incremental": true,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AOD.html",
-          "hash": "U22/Q35J2wK11zr4WckKlA5+2udRQ/4j04icY4AJjCE="
+          "hash": "CinYY7FgrRRUSSXiey/f7795+Oahc0NiLYqfcFSs8Us="
         }
       },
       "is_incremental": true,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1CD.html",
-          "hash": "In1h4eq2Kj9E2YCnUHg/WKoGqybK19SSg8NcjWAU6Bg="
+          "hash": "WyBLK19KfzQfuN4OYsPujfbh4nRPLPNfFInkuDKskro="
         }
       },
       "is_incremental": true,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1D.html",
-          "hash": "coOYPDUOZhsADMMFLr29wKSXTuVI9HrHaISUaU7+fy4="
+          "hash": "hnLf/Jsmz7/54ue4/AUoMx19mb7NXb5zcesrfpKlEzU="
         }
       },
       "is_incremental": true,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1DSNK.html",
-          "hash": "BrSAG4cxMsrgfB64coLb8IknOG8Yl+GujpB8/FX4ObE="
+          "hash": "JokIER8oiGCOHDgxQ6BbQdqpqMsFr58lMkpLXsSJ9CQ="
         }
       },
       "is_incremental": true,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1RD.html",
-          "hash": "viiNr8L+mebak/K1j0uvKj8zsZ90PACLb+FkpBf3Tqo="
+          "hash": "pmX0PF6XZH7mq92Yyi/l7COSSxxL2ljp4YgtN2268Ao="
         }
       },
       "is_incremental": true,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1TD.html",
-          "hash": "aaDTyZb8hMx8SDSP38KcChM5FpYhnFLf+XjyaQfTxPw="
+          "hash": "kZ8/HbMlOGA+gcO197mFa+6EZIhQfTaklj1HG/PH08g="
         }
       },
       "is_incremental": true,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanA/EthanA_AI.html",
-          "hash": "vcmeAcTY2BNVUOvJkSU1P3GVWfwqQpfl9QSY6jYyCpg="
+          "hash": "BqpCGaVI/LYv6s3H4AX7DZVQhCQy1PYwqMQT86qK/Kc="
         }
       },
       "is_incremental": true,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_AI.html",
-          "hash": "dWOIqN9tBqTs6l5Z/A18ckivd33Bjizs7bmOQufBXos="
+          "hash": "waFJMaXOf0rpB8x2lL8T97W5WFYnVoMPbePKlxtd+fI="
         }
       },
       "is_incremental": true,
@@ -705,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_AI.html",
-          "hash": "VYXKXKvvkuPOw+Mi/0LTm2Cp939ritIpwgARB8QUIgo="
+          "hash": "BHmulmQxRRYtEdDQdNsi5Op761hdk2u3VGZ6pHJvOAM="
         }
       },
       "is_incremental": true,
@@ -1089,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQE3A/WifiDAQE3A_AI.html",
-          "hash": "zMhIYagwUOmK8CKbv6evch6/XkIXLl9c7pOGL/eJ1bA="
+          "hash": "ca3wrhDQC7F3v1gCNacsbmZDv/rv7XkE1QfDPHFXzGA="
         }
       },
       "is_incremental": true,
@@ -1406,18 +1406,14 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "index.md",
+      "type": "Resource",
+      "source_relative_path": "index.html",
       "output": {
-        ".html": {
-          "relative_path": "index.html",
-          "hash": "/9bHGona44+MGYdzFesOr3TrH7RDqEA7nQJsOw/wG5U="
+        "resource": {
+          "relative_path": "index.html"
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1426,7 +1422,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "JLcSNe89rnvlLxzMFuQ2g/1PBjhD/+BCbphCIfTP14U="
+          "hash": "tYOMuM+rrsWDg2a5D5WNc1bPQ4Z6QlZLO4CNO/bndcc="
         }
       },
       "is_incremental": false,
@@ -1445,8 +1441,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 56,
-          "skipped_file_count": 56
+          "total_file_count": 55,
+          "skipped_file_count": 55
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

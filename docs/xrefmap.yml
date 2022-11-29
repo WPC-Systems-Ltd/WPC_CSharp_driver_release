@@ -707,6 +707,40 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IDataloggerModule.Logger_openFile
   nameWithType: IDataloggerModule.Logger_openFile
+- uid: WPC.Module.IDataloggerModule.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Module.IDataloggerModule.html#WPC_Module_IDataloggerModule_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Module.IDataloggerModule.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Module.IDataloggerModule.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Module.IDataloggerModule.Logger_writeList(List(Of System.Double))
+  nameWithType: IDataloggerModule.Logger_writeList(List<Double>)
+  nameWithType.vb: IDataloggerModule.Logger_writeList(List(Of Double))
+- uid: WPC.Module.IDataloggerModule.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Module.IDataloggerModule.html#WPC_Module_IDataloggerModule_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Module.IDataloggerModule.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Module.IDataloggerModule.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Module.IDataloggerModule.Logger_writeList(List(Of System.Int32))
+  nameWithType: IDataloggerModule.Logger_writeList(List<Int32>)
+  nameWithType.vb: IDataloggerModule.Logger_writeList(List(Of Int32))
+- uid: WPC.Module.IDataloggerModule.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Module.IDataloggerModule.html#WPC_Module_IDataloggerModule_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Module.IDataloggerModule.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Module.IDataloggerModule.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Module.IDataloggerModule.Logger_writeList(List(Of System.Single))
+  nameWithType: IDataloggerModule.Logger_writeList(List<Single>)
+  nameWithType.vb: IDataloggerModule.Logger_writeList(List(Of Single))
+- uid: WPC.Module.IDataloggerModule.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Module.IDataloggerModule.html#WPC_Module_IDataloggerModule_Logger_writeList_
+  commentId: Overload:WPC.Module.IDataloggerModule.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Module.IDataloggerModule.Logger_writeList
+  nameWithType: IDataloggerModule.Logger_writeList
 - uid: WPC.Module.IDataloggerModule.Logger_writeValue(System.String)
   name: Logger_writeValue(String)
   href: api/WPC.Module.IDataloggerModule.html#WPC_Module_IDataloggerModule_Logger_writeValue_System_String_
@@ -871,6 +905,35 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IDIOModule.DO_openPort
   nameWithType: IDIOModule.DO_openPort
+- uid: WPC.Module.IDIOModule.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Module.IDIOModule.html#WPC_Module_IDIOModule_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Module.IDIOModule.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Module.IDIOModule.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Module.IDIOModule.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: IDIOModule.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: IDIOModule.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Module.IDIOModule.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Module.IDIOModule.html#WPC_Module_IDIOModule_DO_togglePins_
+  commentId: Overload:WPC.Module.IDIOModule.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Module.IDIOModule.DO_togglePins
+  nameWithType: IDIOModule.DO_togglePins
+- uid: WPC.Module.IDIOModule.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Module.IDIOModule.html#WPC_Module_IDIOModule_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDIOModule.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Module.IDIOModule.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: IDIOModule.DO_togglePort(Int32, Int32)
+- uid: WPC.Module.IDIOModule.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Module.IDIOModule.html#WPC_Module_IDIOModule_DO_togglePort_
+  commentId: Overload:WPC.Module.IDIOModule.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Module.IDIOModule.DO_togglePort
+  nameWithType: IDIOModule.DO_togglePort
 - uid: WPC.Module.IDIOModule.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Module.IDIOModule.html#WPC_Module_IDIOModule_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -1673,6 +1736,40 @@ references:
   isSpec: "True"
   fullName: WPC.Product.Datalogger.Logger_openFile
   nameWithType: Datalogger.Logger_openFile
+- uid: WPC.Product.Datalogger.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.Datalogger.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.Datalogger.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.Datalogger.Logger_writeList(List(Of System.Double))
+  nameWithType: Datalogger.Logger_writeList(List<Double>)
+  nameWithType.vb: Datalogger.Logger_writeList(List(Of Double))
+- uid: WPC.Product.Datalogger.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.Datalogger.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.Datalogger.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.Datalogger.Logger_writeList(List(Of System.Int32))
+  nameWithType: Datalogger.Logger_writeList(List<Int32>)
+  nameWithType.vb: Datalogger.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.Datalogger.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.Datalogger.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.Datalogger.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.Datalogger.Logger_writeList(List(Of System.Single))
+  nameWithType: Datalogger.Logger_writeList(List<Single>)
+  nameWithType.vb: Datalogger.Logger_writeList(List(Of Single))
+- uid: WPC.Product.Datalogger.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeList_
+  commentId: Overload:WPC.Product.Datalogger.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.Datalogger.Logger_writeList
+  nameWithType: Datalogger.Logger_writeList
 - uid: WPC.Product.Datalogger.Logger_writeValue(System.String)
   name: Logger_writeValue(String)
   href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeValue_System_String_
@@ -2330,6 +2427,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanD.DO_openPort
   nameWithType: EthanD.DO_openPort
+- uid: WPC.Product.EthanD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.EthanD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.EthanD.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.EthanD.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: EthanD.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: EthanD.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.EthanD.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_DO_togglePins_
+  commentId: Overload:WPC.Product.EthanD.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.DO_togglePins
+  nameWithType: EthanD.DO_togglePins
+- uid: WPC.Product.EthanD.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: EthanD.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.EthanD.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_DO_togglePort_
+  commentId: Overload:WPC.Product.EthanD.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.DO_togglePort
+  nameWithType: EthanD.DO_togglePort
 - uid: WPC.Product.EthanD.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -2695,6 +2821,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.DO_openPort
   nameWithType: EthanL.DO_openPort
+- uid: WPC.Product.EthanL.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.EthanL.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.EthanL.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.EthanL.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: EthanL.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: EthanL.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.EthanL.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_DO_togglePins_
+  commentId: Overload:WPC.Product.EthanL.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.DO_togglePins
+  nameWithType: EthanL.DO_togglePins
+- uid: WPC.Product.EthanL.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: EthanL.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.EthanL.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_DO_togglePort_
+  commentId: Overload:WPC.Product.EthanL.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.DO_togglePort
+  nameWithType: EthanL.DO_togglePort
 - uid: WPC.Product.EthanL.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -3592,6 +3747,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.DO_openPort
   nameWithType: USBDAQF1AD.DO_openPort
+- uid: WPC.Product.USBDAQF1AD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1AD.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1AD.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1AD.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1AD.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1AD.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_DO_togglePins_
+  commentId: Overload:WPC.Product.USBDAQF1AD.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.DO_togglePins
+  nameWithType: USBDAQF1AD.DO_togglePins
+- uid: WPC.Product.USBDAQF1AD.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_DO_togglePort_
+  commentId: Overload:WPC.Product.USBDAQF1AD.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.DO_togglePort
+  nameWithType: USBDAQF1AD.DO_togglePort
 - uid: WPC.Product.USBDAQF1AD.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -4596,6 +4780,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.DO_openPort
   nameWithType: USBDAQF1AOD.DO_openPort
+- uid: WPC.Product.USBDAQF1AOD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1AOD.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1AOD.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1AOD.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1AOD.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1AOD.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_DO_togglePins_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.DO_togglePins
+  nameWithType: USBDAQF1AOD.DO_togglePins
+- uid: WPC.Product.USBDAQF1AOD.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_DO_togglePort_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.DO_togglePort
+  nameWithType: USBDAQF1AOD.DO_togglePort
 - uid: WPC.Product.USBDAQF1AOD.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -5253,6 +5466,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.DO_openPort
   nameWithType: USBDAQF1CD.DO_openPort
+- uid: WPC.Product.USBDAQF1CD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1CD.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1CD.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1CD.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1CD.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1CD.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_DO_togglePins_
+  commentId: Overload:WPC.Product.USBDAQF1CD.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.DO_togglePins
+  nameWithType: USBDAQF1CD.DO_togglePins
+- uid: WPC.Product.USBDAQF1CD.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_DO_togglePort_
+  commentId: Overload:WPC.Product.USBDAQF1CD.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.DO_togglePort
+  nameWithType: USBDAQF1CD.DO_togglePort
 - uid: WPC.Product.USBDAQF1CD.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -5926,6 +6168,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.DO_openPort
   nameWithType: USBDAQF1D.DO_openPort
+- uid: WPC.Product.USBDAQF1D.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1D.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1D.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1D.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1D.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1D.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_DO_togglePins_
+  commentId: Overload:WPC.Product.USBDAQF1D.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.DO_togglePins
+  nameWithType: USBDAQF1D.DO_togglePins
+- uid: WPC.Product.USBDAQF1D.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_DO_togglePort_
+  commentId: Overload:WPC.Product.USBDAQF1D.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.DO_togglePort
+  nameWithType: USBDAQF1D.DO_togglePort
 - uid: WPC.Product.USBDAQF1D.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -6599,6 +6870,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.DO_openPort
   nameWithType: USBDAQF1DSNK.DO_openPort
+- uid: WPC.Product.USBDAQF1DSNK.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1DSNK.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1DSNK.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1DSNK.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1DSNK.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_DO_togglePins_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.DO_togglePins
+  nameWithType: USBDAQF1DSNK.DO_togglePins
+- uid: WPC.Product.USBDAQF1DSNK.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_DO_togglePort_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.DO_togglePort
+  nameWithType: USBDAQF1DSNK.DO_togglePort
 - uid: WPC.Product.USBDAQF1DSNK.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -6912,6 +7212,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.DO_openPort
   nameWithType: USBDAQF1RD.DO_openPort
+- uid: WPC.Product.USBDAQF1RD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1RD.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1RD.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1RD.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1RD.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1RD.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_DO_togglePins_
+  commentId: Overload:WPC.Product.USBDAQF1RD.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.DO_togglePins
+  nameWithType: USBDAQF1RD.DO_togglePins
+- uid: WPC.Product.USBDAQF1RD.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_DO_togglePort_
+  commentId: Overload:WPC.Product.USBDAQF1RD.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.DO_togglePort
+  nameWithType: USBDAQF1RD.DO_togglePort
 - uid: WPC.Product.USBDAQF1RD.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
@@ -7650,6 +7979,35 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.DO_openPort
   nameWithType: USBDAQF1TD.DO_openPort
+- uid: WPC.Product.USBDAQF1TD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1TD.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1TD.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1TD.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1TD.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1TD.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_DO_togglePins_
+  commentId: Overload:WPC.Product.USBDAQF1TD.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.DO_togglePins
+  nameWithType: USBDAQF1TD.DO_togglePins
+- uid: WPC.Product.USBDAQF1TD.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_DO_togglePort_
+  commentId: Overload:WPC.Product.USBDAQF1TD.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.DO_togglePort
+  nameWithType: USBDAQF1TD.DO_togglePort
 - uid: WPC.Product.USBDAQF1TD.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
   name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
