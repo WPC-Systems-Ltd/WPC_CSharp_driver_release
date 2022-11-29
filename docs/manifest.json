@@ -1407,6 +1407,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/screenshot.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "images/screenshot.JPG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "index.html",
       "output": {
         "resource": {
