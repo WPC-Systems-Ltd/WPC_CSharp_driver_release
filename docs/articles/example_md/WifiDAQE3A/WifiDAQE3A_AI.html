@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../../../index.html">
-                <img id="logo" class="svg" src="../../../images/WPC_logo.jpg" alt="">
+                <img id="logo" class="svg" src="../../../images/WPC_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -647,11 +647,10 @@ class WifiDAQE3A_DataLogger_AI_continuous
             foreach (List&lt;double&gt; sample in streaming_list)
             {
                 // Read acquisition data
-                var data = $&quot;{sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}&quot;;
-                Console.WriteLine($&quot;{data}&quot;);
+                Console.WriteLine($&quot;{sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}&quot;);
 
-                // Write data into CSV 
-                handle2.Logger_writeValue(data); 
+                // Write data into CSV
+                handle2.Logger_writeList(sample); 
             }
 
             // Wait for 0.01 sec
@@ -773,14 +772,14 @@ class WifiDAQE3A_DataLogger_AI_continuous
                   <div class="container">
                       <div class="row">
                           <div class="col-sm-4">
-                              <span class="footer-heading"><strong>WPC Systems Ltd.</strong></span><br><br> 
-                                  TEL1: +886-2-8262-4431<br> 
-                                  TEL2: +886-2-8262-7673<br> 
-                                  FAX: +886-2-8262-4609<br>
+                              <span class="footer-heading"><strong>Contact</strong></span><br> 
+                                  TEL1 : +886-2-8262-4431<br> 
+                                  TEL2 : +886-2-8262-7673<br> 
+                                  FAX : +886-2-8262-4609<br>
                           </div>
       
                           <div class="col-sm-4">
-                              <span class="footer-heading"><strong>Support</strong></span> <br><br>
+                              <span class="footer-heading"><strong>Support</strong></span> <br> 
                                   Technical support : <a href="mailto: wu@wpc.com.tw">wu@wpc.com.tw</a><br>
                                   Sales support : <a href="mailto: hltsai@wpc.com.tw">hltsai@wpc.com.tw</a><br>  
                           </div>

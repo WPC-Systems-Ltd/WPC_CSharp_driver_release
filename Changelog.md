@@ -1,7 +1,12 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.1.1 Date: 2022/12/01, Developer: Chunglee_people 
+---------------------------------------------------- 
 
+### Added
+- Release new API `DO_togglePins` and `DO_togglePort`
+- Decorate docfx mainpage
 
 v0.1.0 Date: 2022/11/24, Developer: Chunglee_people 
 ---------------------------------------------------- 
