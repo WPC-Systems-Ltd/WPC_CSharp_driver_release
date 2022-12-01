@@ -33,11 +33,10 @@ class WifiDAQE3A_DataLogger_AI_continuous
             foreach (List<double> sample in streaming_list)
             {
                 // Read acquisition data
-                var data = $"{sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}";
-                Console.WriteLine($"{data}");
+                Console.WriteLine($"{sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
 
-                // Write data into CSV 
-                handle2.Logger_writeValue(data); 
+                // Write data into CSV
+                handle2.Logger_writeList(sample); 
             }
 
             // Wait for 0.01 sec
