@@ -966,6 +966,25 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IDIOModule.DO_writePort
   nameWithType: IDIOModule.DO_writePort
+- uid: WPC.Module.IEMotionModule
+  name: IEMotionModule
+  href: api/WPC.Module.IEMotionModule.html
+  commentId: T:WPC.Module.IEMotionModule
+  fullName: WPC.Module.IEMotionModule
+  nameWithType: IEMotionModule
+- uid: WPC.Module.IEMotionModule.Motion_setLogicalPostion(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Motion_setLogicalPostion(Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IEMotionModule.html#WPC_Module_IEMotionModule_Motion_setLogicalPostion_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEMotionModule.Motion_setLogicalPostion(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IEMotionModule.Motion_setLogicalPostion(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IEMotionModule.Motion_setLogicalPostion(Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IEMotionModule.Motion_setLogicalPostion*
+  name: Motion_setLogicalPostion
+  href: api/WPC.Module.IEMotionModule.html#WPC_Module_IEMotionModule_Motion_setLogicalPostion_
+  commentId: Overload:WPC.Module.IEMotionModule.Motion_setLogicalPostion
+  isSpec: "True"
+  fullName: WPC.Module.IEMotionModule.Motion_setLogicalPostion
+  nameWithType: IEMotionModule.Motion_setLogicalPostion
 - uid: WPC.Module.II2CModule
   name: II2CModule
   href: api/WPC.Module.II2CModule.html
@@ -1893,6 +1912,220 @@ references:
   isSpec: "True"
   fullName: WPC.Product.DeviceFinder.disconnect
   nameWithType: DeviceFinder.disconnect
+- uid: WPC.Product.EMotion
+  name: EMotion
+  href: api/WPC.Product.EMotion.html
+  commentId: T:WPC.Product.EMotion
+  fullName: WPC.Product.EMotion
+  nameWithType: EMotion
+- uid: WPC.Product.EMotion.#ctor
+  name: EMotion()
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion__ctor
+  commentId: M:WPC.Product.EMotion.#ctor
+  fullName: WPC.Product.EMotion.EMotion()
+  nameWithType: EMotion.EMotion()
+- uid: WPC.Product.EMotion.#ctor*
+  name: EMotion
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion__ctor_
+  commentId: Overload:WPC.Product.EMotion.#ctor
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.EMotion
+  nameWithType: EMotion.EMotion
+- uid: WPC.Product.EMotion.close
+  name: close()
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_close
+  commentId: M:WPC.Product.EMotion.close
+  fullName: WPC.Product.EMotion.close()
+  nameWithType: EMotion.close()
+- uid: WPC.Product.EMotion.close*
+  name: close
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_close_
+  commentId: Overload:WPC.Product.EMotion.close
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.close
+  nameWithType: EMotion.close
+- uid: WPC.Product.EMotion.connect(System.String)
+  name: connect(String)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_connect_System_String_
+  commentId: M:WPC.Product.EMotion.connect(System.String)
+  fullName: WPC.Product.EMotion.connect(System.String)
+  nameWithType: EMotion.connect(String)
+- uid: WPC.Product.EMotion.connect*
+  name: connect
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_connect_
+  commentId: Overload:WPC.Product.EMotion.connect
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.connect
+  nameWithType: EMotion.connect
+- uid: WPC.Product.EMotion.disconnect
+  name: disconnect()
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_disconnect
+  commentId: M:WPC.Product.EMotion.disconnect
+  fullName: WPC.Product.EMotion.disconnect()
+  nameWithType: EMotion.disconnect()
+- uid: WPC.Product.EMotion.disconnect*
+  name: disconnect
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_disconnect_
+  commentId: Overload:WPC.Product.EMotion.disconnect
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.disconnect
+  nameWithType: EMotion.disconnect
+- uid: WPC.Product.EMotion.Motion_GetLogicalPostion(System.Int32,System.Int32,System.Int32)
+  name: Motion_GetLogicalPostion(Int32, Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_GetLogicalPostion_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Motion_GetLogicalPostion(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Motion_GetLogicalPostion(System.Int32, System.Int32, System.Int32)
+  nameWithType: EMotion.Motion_GetLogicalPostion(Int32, Int32, Int32)
+- uid: WPC.Product.EMotion.Motion_GetLogicalPostion*
+  name: Motion_GetLogicalPostion
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_GetLogicalPostion_
+  commentId: Overload:WPC.Product.EMotion.Motion_GetLogicalPostion
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Motion_GetLogicalPostion
+  nameWithType: EMotion.Motion_GetLogicalPostion
+- uid: WPC.Product.EMotion.Motion_setLogicalPostion(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Motion_setLogicalPostion(Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_setLogicalPostion_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Motion_setLogicalPostion(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Motion_setLogicalPostion(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EMotion.Motion_setLogicalPostion(Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EMotion.Motion_setLogicalPostion*
+  name: Motion_setLogicalPostion
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_setLogicalPostion_
+  commentId: Overload:WPC.Product.EMotion.Motion_setLogicalPostion
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Motion_setLogicalPostion
+  nameWithType: EMotion.Motion_setLogicalPostion
+- uid: WPC.Product.EMotion.Sys_getDriverInfo(System.Int32)
+  name: Sys_getDriverInfo(Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getDriverInfo_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_getDriverInfo(System.Int32)
+  fullName: WPC.Product.EMotion.Sys_getDriverInfo(System.Int32)
+  nameWithType: EMotion.Sys_getDriverInfo(Int32)
+- uid: WPC.Product.EMotion.Sys_getDriverInfo*
+  name: Sys_getDriverInfo
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getDriverInfo_
+  commentId: Overload:WPC.Product.EMotion.Sys_getDriverInfo
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_getDriverInfo
+  nameWithType: EMotion.Sys_getDriverInfo
+- uid: WPC.Product.EMotion.Sys_getGateway(System.Int32)
+  name: Sys_getGateway(Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getGateway_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_getGateway(System.Int32)
+  fullName: WPC.Product.EMotion.Sys_getGateway(System.Int32)
+  nameWithType: EMotion.Sys_getGateway(Int32)
+- uid: WPC.Product.EMotion.Sys_getGateway*
+  name: Sys_getGateway
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getGateway_
+  commentId: Overload:WPC.Product.EMotion.Sys_getGateway
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_getGateway
+  nameWithType: EMotion.Sys_getGateway
+- uid: WPC.Product.EMotion.Sys_getIPAddrAndSubmask(System.Int32)
+  name: Sys_getIPAddrAndSubmask(Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getIPAddrAndSubmask_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_getIPAddrAndSubmask(System.Int32)
+  fullName: WPC.Product.EMotion.Sys_getIPAddrAndSubmask(System.Int32)
+  nameWithType: EMotion.Sys_getIPAddrAndSubmask(Int32)
+- uid: WPC.Product.EMotion.Sys_getIPAddrAndSubmask*
+  name: Sys_getIPAddrAndSubmask
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EMotion.Sys_getIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_getIPAddrAndSubmask
+  nameWithType: EMotion.Sys_getIPAddrAndSubmask
+- uid: WPC.Product.EMotion.Sys_getMACAddr(System.Int32)
+  name: Sys_getMACAddr(Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getMACAddr_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_getMACAddr(System.Int32)
+  fullName: WPC.Product.EMotion.Sys_getMACAddr(System.Int32)
+  nameWithType: EMotion.Sys_getMACAddr(Int32)
+- uid: WPC.Product.EMotion.Sys_getMACAddr*
+  name: Sys_getMACAddr
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getMACAddr_
+  commentId: Overload:WPC.Product.EMotion.Sys_getMACAddr
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_getMACAddr
+  nameWithType: EMotion.Sys_getMACAddr
+- uid: WPC.Product.EMotion.Sys_getRTC(System.Int32)
+  name: Sys_getRTC(Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getRTC_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_getRTC(System.Int32)
+  fullName: WPC.Product.EMotion.Sys_getRTC(System.Int32)
+  nameWithType: EMotion.Sys_getRTC(Int32)
+- uid: WPC.Product.EMotion.Sys_getRTC*
+  name: Sys_getRTC
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getRTC_
+  commentId: Overload:WPC.Product.EMotion.Sys_getRTC
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_getRTC
+  nameWithType: EMotion.Sys_getRTC
+- uid: WPC.Product.EMotion.Sys_getSerialNumber(System.Int32)
+  name: Sys_getSerialNumber(Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getSerialNumber_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_getSerialNumber(System.Int32)
+  fullName: WPC.Product.EMotion.Sys_getSerialNumber(System.Int32)
+  nameWithType: EMotion.Sys_getSerialNumber(Int32)
+- uid: WPC.Product.EMotion.Sys_getSerialNumber*
+  name: Sys_getSerialNumber
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getSerialNumber_
+  commentId: Overload:WPC.Product.EMotion.Sys_getSerialNumber
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_getSerialNumber
+  nameWithType: EMotion.Sys_getSerialNumber
+- uid: WPC.Product.EMotion.Sys_reboot(System.Int32)
+  name: Sys_reboot(Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_reboot_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_reboot(System.Int32)
+  fullName: WPC.Product.EMotion.Sys_reboot(System.Int32)
+  nameWithType: EMotion.Sys_reboot(Int32)
+- uid: WPC.Product.EMotion.Sys_reboot*
+  name: Sys_reboot
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_reboot_
+  commentId: Overload:WPC.Product.EMotion.Sys_reboot
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_reboot
+  nameWithType: EMotion.Sys_reboot
+- uid: WPC.Product.EMotion.Sys_rebootOnBootloader(System.Int32)
+  name: Sys_rebootOnBootloader(Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_rebootOnBootloader_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_rebootOnBootloader(System.Int32)
+  fullName: WPC.Product.EMotion.Sys_rebootOnBootloader(System.Int32)
+  nameWithType: EMotion.Sys_rebootOnBootloader(Int32)
+- uid: WPC.Product.EMotion.Sys_rebootOnBootloader*
+  name: Sys_rebootOnBootloader
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_rebootOnBootloader_
+  commentId: Overload:WPC.Product.EMotion.Sys_rebootOnBootloader
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_rebootOnBootloader
+  nameWithType: EMotion.Sys_rebootOnBootloader
+- uid: WPC.Product.EMotion.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  name: Sys_setIPAddrAndSubmask(String, String, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setIPAddrAndSubmask_System_String_System_String_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setIPAddrAndSubmask(System.String, System.String, System.Int32)
+  nameWithType: EMotion.Sys_setIPAddrAndSubmask(String, String, Int32)
+- uid: WPC.Product.EMotion.Sys_setIPAddrAndSubmask*
+  name: Sys_setIPAddrAndSubmask
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EMotion.Sys_setIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setIPAddrAndSubmask
+  nameWithType: EMotion.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EMotion.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setRTC(System.Int32, System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: EMotion.Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Product.EMotion.Sys_setRTC*
+  name: Sys_setRTC
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setRTC_
+  commentId: Overload:WPC.Product.EMotion.Sys_setRTC
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setRTC
+  nameWithType: EMotion.Sys_setRTC
 - uid: WPC.Product.EthanA
   name: EthanA
   href: api/WPC.Product.EthanA.html
