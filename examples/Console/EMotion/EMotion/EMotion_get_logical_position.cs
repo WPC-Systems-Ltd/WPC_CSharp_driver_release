@@ -38,13 +38,13 @@ class EMotion_get_logical_position
 
             for (int i = 0; i < 1000; i++) 
             {   
-                status = dev.Motion_setLogicalPostion(Constant.MOTION_CONNECTOR_0, Constant.MOTION_AXIS_X, i);
+                status = dev.Motion_setLogicalPostion(Constant.EMOTION_CONNECTOR_0, Constant.EMOTION_AXIS_X, i);
                 if (status != 0)
                 {
                     Console.WriteLine($"Motion_setLogicalPostion status: {status}"); 
                 }
                 
-                int posi = dev.Motion_GetLogicalPostion(Constant.MOTION_CONNECTOR_0, Constant.MOTION_AXIS_X);
+                int posi = dev.Motion_GetLogicalPostion(Constant.EMOTION_CONNECTOR_0, Constant.EMOTION_AXIS_X);
                 Console.WriteLine($"Motion_GetLogicalP3ostion: {posi}");
             }
         }

@@ -154,19 +154,6 @@ references:
   commentId: T:WPC.Module.IAIModule
   fullName: WPC.Module.IAIModule
   nameWithType: IAIModule
-- uid: WPC.Module.IAIModule.AI_clearBufferStatus(System.Int32,System.Int32)
-  name: AI_clearBufferStatus(Int32, Int32)
-  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_clearBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IAIModule.AI_clearBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Module.IAIModule.AI_clearBufferStatus(System.Int32, System.Int32)
-  nameWithType: IAIModule.AI_clearBufferStatus(Int32, Int32)
-- uid: WPC.Module.IAIModule.AI_clearBufferStatus*
-  name: AI_clearBufferStatus
-  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_clearBufferStatus_
-  commentId: Overload:WPC.Module.IAIModule.AI_clearBufferStatus
-  isSpec: "True"
-  fullName: WPC.Module.IAIModule.AI_clearBufferStatus
-  nameWithType: IAIModule.AI_clearBufferStatus
 - uid: WPC.Module.IAIModule.AI_close(System.Int32,System.Int32)
   name: AI_close(Int32, Int32)
   href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_close_System_Int32_System_Int32_
@@ -193,19 +180,6 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IAIModule.AI_open
   nameWithType: IAIModule.AI_open
-- uid: WPC.Module.IAIModule.AI_readBufferStatus(System.Int32,System.Int32)
-  name: AI_readBufferStatus(Int32, Int32)
-  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_readBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IAIModule.AI_readBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Module.IAIModule.AI_readBufferStatus(System.Int32, System.Int32)
-  nameWithType: IAIModule.AI_readBufferStatus(Int32, Int32)
-- uid: WPC.Module.IAIModule.AI_readBufferStatus*
-  name: AI_readBufferStatus
-  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_readBufferStatus_
-  commentId: Overload:WPC.Module.IAIModule.AI_readBufferStatus
-  isSpec: "True"
-  fullName: WPC.Module.IAIModule.AI_readBufferStatus
-  nameWithType: IAIModule.AI_readBufferStatus
 - uid: WPC.Module.IAIModule.AI_readOnDemand(System.Int32,System.Int32)
   name: AI_readOnDemand(Int32, Int32)
   href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_readOnDemand_System_Int32_System_Int32_
@@ -607,12 +581,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ICANModule.CAN_setRXFilteringOn
   nameWithType: ICANModule.CAN_setRXFilteringOn
-- uid: WPC.Module.ICANModule.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32)
-  name: CAN_setRXFilterOrMask(Int32, Int32, Int32)
-  href: api/WPC.Module.ICANModule.html#WPC_Module_ICANModule_CAN_setRXFilterOrMask_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Module.ICANModule.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Module.ICANModule.CAN_setRXFilterOrMask(System.Int32, System.Int32, System.Int32)
-  nameWithType: ICANModule.CAN_setRXFilterOrMask(Int32, Int32, Int32)
+- uid: WPC.Module.ICANModule.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: CAN_setRXFilterOrMask(Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.ICANModule.html#WPC_Module_ICANModule_CAN_setRXFilterOrMask_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICANModule.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.ICANModule.CAN_setRXFilterOrMask(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: ICANModule.CAN_setRXFilterOrMask(Int32, Int32, Int32, Int32, Int32, Int32)
 - uid: WPC.Module.ICANModule.CAN_setRXFilterOrMask*
   name: CAN_setRXFilterOrMask
   href: api/WPC.Module.ICANModule.html#WPC_Module_ICANModule_CAN_setRXFilterOrMask_
@@ -966,25 +940,6 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IDIOModule.DO_writePort
   nameWithType: IDIOModule.DO_writePort
-- uid: WPC.Module.IEMotionModule
-  name: IEMotionModule
-  href: api/WPC.Module.IEMotionModule.html
-  commentId: T:WPC.Module.IEMotionModule
-  fullName: WPC.Module.IEMotionModule
-  nameWithType: IEMotionModule
-- uid: WPC.Module.IEMotionModule.Motion_setLogicalPostion(System.Int32,System.Int32,System.Int32,System.Int32)
-  name: Motion_setLogicalPostion(Int32, Int32, Int32, Int32)
-  href: api/WPC.Module.IEMotionModule.html#WPC_Module_IEMotionModule_Motion_setLogicalPostion_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IEMotionModule.Motion_setLogicalPostion(System.Int32,System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Module.IEMotionModule.Motion_setLogicalPostion(System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: IEMotionModule.Motion_setLogicalPostion(Int32, Int32, Int32, Int32)
-- uid: WPC.Module.IEMotionModule.Motion_setLogicalPostion*
-  name: Motion_setLogicalPostion
-  href: api/WPC.Module.IEMotionModule.html#WPC_Module_IEMotionModule_Motion_setLogicalPostion_
-  commentId: Overload:WPC.Module.IEMotionModule.Motion_setLogicalPostion
-  isSpec: "True"
-  fullName: WPC.Module.IEMotionModule.Motion_setLogicalPostion
-  nameWithType: IEMotionModule.Motion_setLogicalPostion
 - uid: WPC.Module.II2CModule
   name: II2CModule
   href: api/WPC.Module.II2CModule.html
@@ -1085,6 +1040,25 @@ references:
   isSpec: "True"
   fullName: WPC.Module.II2CModule.I2C_write
   nameWithType: II2CModule.I2C_write
+- uid: WPC.Module.IMotionModule
+  name: IMotionModule
+  href: api/WPC.Module.IMotionModule.html
+  commentId: T:WPC.Module.IMotionModule
+  fullName: WPC.Module.IMotionModule
+  nameWithType: IMotionModule
+- uid: WPC.Module.IMotionModule.Motion_setLogicalPostion(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Motion_setLogicalPostion(Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_setLogicalPostion_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IMotionModule.Motion_setLogicalPostion(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IMotionModule.Motion_setLogicalPostion(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IMotionModule.Motion_setLogicalPostion(Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IMotionModule.Motion_setLogicalPostion*
+  name: Motion_setLogicalPostion
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_setLogicalPostion_
+  commentId: Overload:WPC.Module.IMotionModule.Motion_setLogicalPostion
+  isSpec: "True"
+  fullName: WPC.Module.IMotionModule.Motion_setLogicalPostion
+  nameWithType: IMotionModule.Motion_setLogicalPostion
 - uid: WPC.Module.INetworkModule
   name: INetworkModule
   href: api/WPC.Module.INetworkModule.html
@@ -2145,19 +2119,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.EthanA
   nameWithType: EthanA.EthanA
-- uid: WPC.Product.EthanA.AI_clearBufferStatus(System.Int32,System.Int32)
-  name: AI_clearBufferStatus(Int32, Int32)
-  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_clearBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EthanA.AI_clearBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Product.EthanA.AI_clearBufferStatus(System.Int32, System.Int32)
-  nameWithType: EthanA.AI_clearBufferStatus(Int32, Int32)
-- uid: WPC.Product.EthanA.AI_clearBufferStatus*
-  name: AI_clearBufferStatus
-  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_clearBufferStatus_
-  commentId: Overload:WPC.Product.EthanA.AI_clearBufferStatus
-  isSpec: "True"
-  fullName: WPC.Product.EthanA.AI_clearBufferStatus
-  nameWithType: EthanA.AI_clearBufferStatus
 - uid: WPC.Product.EthanA.AI_close(System.Int32,System.Int32)
   name: AI_close(Int32, Int32)
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_close_System_Int32_System_Int32_
@@ -2184,19 +2145,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.AI_open
   nameWithType: EthanA.AI_open
-- uid: WPC.Product.EthanA.AI_readBufferStatus(System.Int32,System.Int32)
-  name: AI_readBufferStatus(Int32, Int32)
-  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_readBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EthanA.AI_readBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Product.EthanA.AI_readBufferStatus(System.Int32, System.Int32)
-  nameWithType: EthanA.AI_readBufferStatus(Int32, Int32)
-- uid: WPC.Product.EthanA.AI_readBufferStatus*
-  name: AI_readBufferStatus
-  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_readBufferStatus_
-  commentId: Overload:WPC.Product.EthanA.AI_readBufferStatus
-  isSpec: "True"
-  fullName: WPC.Product.EthanA.AI_readBufferStatus
-  nameWithType: EthanA.AI_readBufferStatus
 - uid: WPC.Product.EthanA.AI_readOnDemand(System.Int32,System.Int32)
   name: AI_readOnDemand(Int32, Int32)
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_readOnDemand_System_Int32_System_Int32_
@@ -3653,19 +3601,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.USBDAQF1AD
   nameWithType: USBDAQF1AD.USBDAQF1AD
-- uid: WPC.Product.USBDAQF1AD.AI_clearBufferStatus(System.Int32,System.Int32)
-  name: AI_clearBufferStatus(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_clearBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AD.AI_clearBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AD.AI_clearBufferStatus(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AD.AI_clearBufferStatus(Int32, Int32)
-- uid: WPC.Product.USBDAQF1AD.AI_clearBufferStatus*
-  name: AI_clearBufferStatus
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_clearBufferStatus_
-  commentId: Overload:WPC.Product.USBDAQF1AD.AI_clearBufferStatus
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AD.AI_clearBufferStatus
-  nameWithType: USBDAQF1AD.AI_clearBufferStatus
 - uid: WPC.Product.USBDAQF1AD.AI_close(System.Int32,System.Int32)
   name: AI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_close_System_Int32_System_Int32_
@@ -3692,19 +3627,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.AI_open
   nameWithType: USBDAQF1AD.AI_open
-- uid: WPC.Product.USBDAQF1AD.AI_readBufferStatus(System.Int32,System.Int32)
-  name: AI_readBufferStatus(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_readBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AD.AI_readBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AD.AI_readBufferStatus(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AD.AI_readBufferStatus(Int32, Int32)
-- uid: WPC.Product.USBDAQF1AD.AI_readBufferStatus*
-  name: AI_readBufferStatus
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_readBufferStatus_
-  commentId: Overload:WPC.Product.USBDAQF1AD.AI_readBufferStatus
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AD.AI_readBufferStatus
-  nameWithType: USBDAQF1AD.AI_readBufferStatus
 - uid: WPC.Product.USBDAQF1AD.AI_readOnDemand(System.Int32,System.Int32)
   name: AI_readOnDemand(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_readOnDemand_System_Int32_System_Int32_
@@ -4498,19 +4420,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.USBDAQF1AOD
   nameWithType: USBDAQF1AOD.USBDAQF1AOD
-- uid: WPC.Product.USBDAQF1AOD.AI_clearBufferStatus(System.Int32,System.Int32)
-  name: AI_clearBufferStatus(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_clearBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AOD.AI_clearBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AOD.AI_clearBufferStatus(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AOD.AI_clearBufferStatus(Int32, Int32)
-- uid: WPC.Product.USBDAQF1AOD.AI_clearBufferStatus*
-  name: AI_clearBufferStatus
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_clearBufferStatus_
-  commentId: Overload:WPC.Product.USBDAQF1AOD.AI_clearBufferStatus
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AOD.AI_clearBufferStatus
-  nameWithType: USBDAQF1AOD.AI_clearBufferStatus
 - uid: WPC.Product.USBDAQF1AOD.AI_close(System.Int32,System.Int32)
   name: AI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_close_System_Int32_System_Int32_
@@ -4537,19 +4446,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.AI_open
   nameWithType: USBDAQF1AOD.AI_open
-- uid: WPC.Product.USBDAQF1AOD.AI_readBufferStatus(System.Int32,System.Int32)
-  name: AI_readBufferStatus(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_readBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AOD.AI_readBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AOD.AI_readBufferStatus(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AOD.AI_readBufferStatus(Int32, Int32)
-- uid: WPC.Product.USBDAQF1AOD.AI_readBufferStatus*
-  name: AI_readBufferStatus
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_readBufferStatus_
-  commentId: Overload:WPC.Product.USBDAQF1AOD.AI_readBufferStatus
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AOD.AI_readBufferStatus
-  nameWithType: USBDAQF1AOD.AI_readBufferStatus
 - uid: WPC.Product.USBDAQF1AOD.AI_readOnDemand(System.Int32,System.Int32)
   name: AI_readOnDemand(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_readOnDemand_System_Int32_System_Int32_
@@ -5447,12 +5343,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.CAN_setRXFilteringOn
   nameWithType: USBDAQF1CD.CAN_setRXFilteringOn
-- uid: WPC.Product.USBDAQF1CD.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32)
-  name: CAN_setRXFilterOrMask(Int32, Int32, Int32)
-  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_CAN_setRXFilterOrMask_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1CD.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1CD.CAN_setRXFilterOrMask(System.Int32, System.Int32, System.Int32)
-  nameWithType: USBDAQF1CD.CAN_setRXFilterOrMask(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: CAN_setRXFilterOrMask(Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_CAN_setRXFilterOrMask_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.CAN_setRXFilterOrMask(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.CAN_setRXFilterOrMask(Int32, Int32, Int32, Int32, Int32, Int32)
 - uid: WPC.Product.USBDAQF1CD.CAN_setRXFilterOrMask*
   name: CAN_setRXFilterOrMask
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_CAN_setRXFilterOrMask_
@@ -8808,19 +8704,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.WifiDAQE3A
   nameWithType: WifiDAQE3A.WifiDAQE3A
-- uid: WPC.Product.WifiDAQE3A.AI_clearBufferStatus(System.Int32,System.Int32)
-  name: AI_clearBufferStatus(Int32, Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_clearBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.AI_clearBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.AI_clearBufferStatus(System.Int32, System.Int32)
-  nameWithType: WifiDAQE3A.AI_clearBufferStatus(Int32, Int32)
-- uid: WPC.Product.WifiDAQE3A.AI_clearBufferStatus*
-  name: AI_clearBufferStatus
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_clearBufferStatus_
-  commentId: Overload:WPC.Product.WifiDAQE3A.AI_clearBufferStatus
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.AI_clearBufferStatus
-  nameWithType: WifiDAQE3A.AI_clearBufferStatus
 - uid: WPC.Product.WifiDAQE3A.AI_close(System.Int32,System.Int32)
   name: AI_close(Int32, Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_close_System_Int32_System_Int32_
@@ -8847,19 +8730,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.AI_open
   nameWithType: WifiDAQE3A.AI_open
-- uid: WPC.Product.WifiDAQE3A.AI_readBufferStatus(System.Int32,System.Int32)
-  name: AI_readBufferStatus(Int32, Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_readBufferStatus_System_Int32_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.AI_readBufferStatus(System.Int32,System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.AI_readBufferStatus(System.Int32, System.Int32)
-  nameWithType: WifiDAQE3A.AI_readBufferStatus(Int32, Int32)
-- uid: WPC.Product.WifiDAQE3A.AI_readBufferStatus*
-  name: AI_readBufferStatus
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_readBufferStatus_
-  commentId: Overload:WPC.Product.WifiDAQE3A.AI_readBufferStatus
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.AI_readBufferStatus
-  nameWithType: WifiDAQE3A.AI_readBufferStatus
 - uid: WPC.Product.WifiDAQE3A.AI_readOnDemand(System.Int32,System.Int32)
   name: AI_readOnDemand(Int32, Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_readOnDemand_System_Int32_System_Int32_

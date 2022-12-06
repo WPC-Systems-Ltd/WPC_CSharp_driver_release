@@ -85,7 +85,7 @@
   </h3>
   <a id="WPC_Module_ICANModule_CAN_close_" data-uid="WPC.Module.ICANModule.CAN_close*"></a>
   <h4 id="WPC_Module_ICANModule_CAN_close_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_close(System.Int32,System.Int32)">CAN_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close I2C port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close CAN module on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -105,7 +105,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -127,14 +127,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ICANModule_CAN_open_" data-uid="WPC.Module.ICANModule.CAN_open*"></a>
   <h4 id="WPC_Module_ICANModule_CAN_open_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_open(System.Int32,System.Int32)">CAN_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open CAN port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open CAN module on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -154,7 +155,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -176,14 +177,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ICANModule_CAN_read_" data-uid="WPC.Module.ICANModule.CAN_read*"></a>
   <h4 id="WPC_Module_ICANModule_CAN_read_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_read(System.Int32,System.Int32,System.Int32)">CAN_read(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read data from CAN port.</p>
+  <div class="markdown level1 summary"><p>Read frames from a CAN port.<br>
+After CAN communication starts, data received by the DAQ are streamed to the PC and stocked in a queue in the WPC device handle.<br>
+Users should call this function to retrieve them from the queue.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -203,19 +207,19 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">num_frames</span></td>
-        <td><p>The number of frame to receive.</p>
+        <td><p>Number of CAN frames to get out from the queue.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">delay</span></td>
-        <td><p>Time delay before getting data.</p>
+        <td><p>Time in milliseconds to wait for the indicated amount of frames to arrive.<br>This becomes ineffective if there are already <code>num_frames</code> frames in the queue.</p>
 </td>
       </tr>
     </tbody>
@@ -231,14 +235,20 @@
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">CANFrame</span>&gt;</td>
-        <td><p>List of CANFrame</p>
+        <td><p>List of CANFrame object<br>
+List of received CAN frames.<br>
+For each element <code>frame</code> in <code>frame_list</code>, <br>
+<code>frame.id</code> gives the identifier of the frame;<br>
+<code>frame.extended_id</code> tells whether its format is extended;<br>
+<code>frame.remote</code> tells whether it is a remote frame;<br>
+<code>frame.data</code> gives the data.<br></p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ICANModule_CAN_setRXFilteringOn_" data-uid="WPC.Module.ICANModule.CAN_setRXFilteringOn*"></a>
   <h4 id="WPC_Module_ICANModule_CAN_setRXFilteringOn_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_setRXFilteringOn(System.Int32,System.Int32,System.Int32)">CAN_setRXFilteringOn(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set CAN filtering status.</p>
+  <div class="markdown level1 summary"><p>Turn filtering on/off on CAN reading.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -258,13 +268,13 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer CAN_RX in WPC_basic.cs</p>
+        <td><p>1: on, 0: off.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
@@ -286,19 +296,20 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ICANModule_CAN_setRXFilterOrMask_" data-uid="WPC.Module.ICANModule.CAN_setRXFilterOrMask*"></a>
-  <h4 id="WPC_Module_ICANModule_CAN_setRXFilterOrMask_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32)">CAN_setRXFilterOrMask(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set CAN RX filter status.</p>
+  <h4 id="WPC_Module_ICANModule_CAN_setRXFilterOrMask_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_setRXFilterOrMask(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">CAN_setRXFilterOrMask(Int32, Int32, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set filter or mask to CAN reception buffer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int CAN_setRXFilterOrMask(int port, int mode, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int CAN_setRXFilterOrMask(int port, int index, int id, int can_type, int can_length, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +324,31 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">mode</span></td>
-        <td><p>Please refer CAN_RX in WPC_basic.cs</p>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index for filter number or mask number.<br> 0-5: filter 0-5, 6: mask 0, 7: mask 1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>CAN identifier.<br> 11- or 29-bit depending on <code>extended_id</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">can_type</span></td>
+        <td><p>Whether the frame to write is a remote frame.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">can_length</span></td>
+        <td><p>Whether to use extended format for CAN identifier.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
@@ -341,14 +370,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ICANModule_CAN_setSpeed_" data-uid="WPC.Module.ICANModule.CAN_setSpeed*"></a>
   <h4 id="WPC_Module_ICANModule_CAN_setSpeed_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_setSpeed(System.Int32,System.Int32,System.Int32)">CAN_setSpeed(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set CAN speed in mode.</p>
+  <div class="markdown level1 summary"><p>Set CAN speed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -368,13 +398,13 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer CAN_speed in WPC_basic.cs</p>
+        <td><p>0: 125 kHz, 1: 250 kHz, 2: 500 kHz, 3: 1 MHz. <br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
@@ -396,14 +426,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ICANModule_CAN_start_" data-uid="WPC.Module.ICANModule.CAN_start*"></a>
   <h4 id="WPC_Module_ICANModule_CAN_start_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_start(System.Int32,System.Int32)">CAN_start(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Start CAN communication.</p>
+  <div class="markdown level1 summary"><p>Start communication on a given CAN port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -423,7 +454,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -445,14 +476,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ICANModule_CAN_stop_" data-uid="WPC.Module.ICANModule.CAN_stop*"></a>
   <h4 id="WPC_Module_ICANModule_CAN_stop_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_stop(System.Int32,System.Int32)">CAN_stop(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Stop CAN communication.</p>
+  <div class="markdown level1 summary"><p>Stop communication on a given CAN port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -472,7 +504,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -494,14 +526,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ICANModule_CAN_write_" data-uid="WPC.Module.ICANModule.CAN_write*"></a>
   <h4 id="WPC_Module_ICANModule_CAN_write_System_Int32_System_Int32_List_System_Byte__System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ICANModule.CAN_write(System.Int32,System.Int32,List{System.Byte},System.Int32,System.Int32,System.Int32)">CAN_write(Int32, Int32, List&lt;Byte&gt;, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the frequency mode of the desired communication clock.</p>
+  <div class="markdown level1 summary"><p>Write a frame to a given CAN port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -521,31 +554,31 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">id</span></td>
-        <td><p>Identifier.</p>
+        <td><p>CAN identifier.<br> 11- or 29-bit depending on <code>extended_id</code>.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">value</span></td>
-        <td><p>Data to be transferred.</p>
+        <td><p>List of data to be transferred.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">can_type</span></td>
-        <td><p>Please refer can_type in WPC_basic.cs</p>
+        <td><p>Whether the frame to write is a remote frame.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">can_length</span></td>
-        <td><p>Please refer can_length in WPC_basic.cs</p>
+        <td><p>Whether to use extended format for CAN identifier.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
@@ -567,7 +600,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>

@@ -4,15 +4,12 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/WPC.Device.IBroadcastDevice.yml",
       "output": {
         ".html": {
           "relative_path": "api/WPC.Device.IBroadcastDevice.html",
-          "hash": "hp/SNyhx5y04fYzts33psMSVKaJjJpWrJj3Nwrqv91A="
+          "hash": "rNVghc4WCrt0qEorvU8SFmU2NVElTsvjIzmgk8C4Le4="
         }
       },
       "is_incremental": true,
@@ -60,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IAIModule.html",
-          "hash": "LRxuQ3Np7jasNwfPkU9B79+pRVClYqAJ1afJg+1SecM="
+          "hash": "GGUfzwDDvL1wvF5RCdTwcK84YZRW5ZCv6ofy7l6c/hQ="
         }
       },
       "is_incremental": true,
@@ -72,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IAOModule.html",
-          "hash": "HCxQeR4H4nF4oy/ikiPo+YPIeVM5aI1DwzyFXI9OgV8="
+          "hash": "BNaCDfE36w3XIQ6coa7OfNaQGG/MP70aRpLkh1l3hGc="
         }
       },
       "is_incremental": true,
@@ -84,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IBroadcastModule.html",
-          "hash": "PDqPu7QngT02Cl87gsEhS4hHYmYqUklDla5moliNmig="
+          "hash": "Bd+g1VA42VCa6SiyA77tGnQoanJHC1dv0ocmIIx+lpM="
         }
       },
       "is_incremental": true,
@@ -96,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ICANModule.html",
-          "hash": "fP3TmHkOf5Wf0sbLFcsDdzCgHq2Bnyf7Rk27lYGtfok="
+          "hash": "vCOxUiNld9YVBV560Wx9+xGBAZCFQSBTGjK1Me5mcNQ="
         }
       },
       "is_incremental": true,
@@ -108,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IDIOModule.html",
-          "hash": "a+EOAnmvbiddSz9IolZGWpTPe61LeYX//v1ElPUpqPo="
+          "hash": "oVpx+qhrf303/u5/Z1wERWF6pRNAvSx0q8FnkHDueHc="
         }
       },
       "is_incremental": true,
@@ -128,11 +125,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WPC.Module.IEMotionModule.yml",
+      "source_relative_path": "api/WPC.Module.II2CModule.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WPC.Module.IEMotionModule.html",
-          "hash": "xf6WPvF2Xl1cDQO0IfY7We9sEnRXdwhQaBHNHMpQ8i8="
+          "relative_path": "api/WPC.Module.II2CModule.html",
+          "hash": "TWvdlM9s7HPvbcboON2G40TSJVj7MM4gns0rI6ySWrk="
         }
       },
       "is_incremental": true,
@@ -140,11 +137,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WPC.Module.II2CModule.yml",
+      "source_relative_path": "api/WPC.Module.IMotionModule.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WPC.Module.II2CModule.html",
-          "hash": "t0BTbaIlmC564isKsRVhj/yVS9BMXMBIfrAYekq/UsY="
+          "relative_path": "api/WPC.Module.IMotionModule.html",
+          "hash": "0ctzXppLgV/vpIE5b7nSxUY+VzsIxYRhFfBRZwfDDD0="
         }
       },
       "is_incremental": true,
@@ -156,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.INetworkModule.html",
-          "hash": "fwNlDNrAx0ek+x85AwgSu1X/YTlvlfZz6GqEAQ+qicY="
+          "hash": "b7ZvRhxUUFgRqLBJS9iIUPno1VJAIYtcWLBKXK5o3MI="
         }
       },
       "is_incremental": true,
@@ -180,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ISPIModule.html",
-          "hash": "rBph9vVdY9qVMH0EemYtTxvoLgOTIU7RDHA1JfISmic="
+          "hash": "Yt1A5eaLXYF8mSFFNsnU7qbgXKr/fvWU/hs4aJ4LOEc="
         }
       },
       "is_incremental": true,
@@ -204,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ISystemModule.html",
-          "hash": "JJpjBo46KnSbn/EEPqYbVPGajQuc9thPV0B8b6iWh7M="
+          "hash": "FhKZtSJJ8fVWiESJp4g+VeGf+o5KUEC0cYGiUkAl9cs="
         }
       },
       "is_incremental": true,
@@ -216,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IThermalModule.html",
-          "hash": "7qiURyk/GHLXYFf59VZhxwe5C8g9sWi5D9ppVOuGroo="
+          "hash": "dSy5hzmkdxp+C8J2nbz5TRCvgMkzRFCU5xK6CfIY/KE="
         }
       },
       "is_incremental": true,
@@ -228,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IThermocoupleModule.html",
-          "hash": "kYPAUFVPOo4LsMsv6E1xQkV9tiNP2HiRzTEIYi+UYmw="
+          "hash": "dHolicKRbg7WnRmOCSpDvAaHzqgdL1qk7n8Sk5RUHo8="
         }
       },
       "is_incremental": true,
@@ -240,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IUARTModule.html",
-          "hash": "7n0c1JrsN5Ak7wH9ppmO7dltHAvl9shdsWznNsMl7kA="
+          "hash": "SFst4nIIMS9jBV6iUmPCbxHYT2EPdyc/dlcN+ClgwaM="
         }
       },
       "is_incremental": true,
@@ -264,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.html",
-          "hash": "TnOc47Nh7htNe0sFIY1gtnbOBYeabQT/grQV2/22TkI="
+          "hash": "wdsmiaJ1Wy/FulpfegaXnWu9A7/Y2OkOOdZ32bvBhGw="
         }
       },
       "is_incremental": true,
@@ -283,15 +280,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/WPC.Product.DeviceFinder.yml",
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.DeviceFinder.html",
-          "hash": "U6IpDAPz2GDo9ia3Cm/PwSyu4fJUDUdGEkYGgSKK0Rk="
+          "hash": "KbTtzOSmx/o8xqxACEtJUz3HTjey5mCBMaXNsjoNrL4="
         }
       },
       "is_incremental": true,
@@ -315,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanA.html",
-          "hash": "OzAg1DJRLR/DYanzr7iwrvrcM4vPQyGgnuPTOfJMkRI="
+          "hash": "wDPSVxvI133TdrgqgLvjhv+22MTmM2GzWgp/HuPtmjQ="
         }
       },
       "is_incremental": true,
@@ -327,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanD.html",
-          "hash": "lNpkP4EsQjELJiZbnpb8/yhBlddSJkAk82yFoIX6Bk8="
+          "hash": "zMYX/4/f5ChqRidBEV6buY4pkfOwf9Rs2VdLU5x4/HM="
         }
       },
       "is_incremental": true,
@@ -339,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanL.html",
-          "hash": "cjnKlze3dZKKc2a1OSHFlhSrN8ZBnj5Kbl7feUOoums="
+          "hash": "8YlLRJx9KOuuyKq2kw4ohiseHGRH0mt9ToqgL56HtXY="
         }
       },
       "is_incremental": true,
@@ -351,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanO.html",
-          "hash": "+MKYFQBMytyDCyQBtv76C61gGBrRtniSUorJ4kUo+pw="
+          "hash": "cX/FIFKWkfendHlY2vy+4UZj59WoVySPmHlDEp9YQyE="
         }
       },
       "is_incremental": true,
@@ -363,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AD.html",
-          "hash": "lJuIBciDEuuaU60dFlrcWkf9jKQwTi7wqrNFvzmXOhU="
+          "hash": "iotztblNmD2iKQNNBckg1iEU0PcEh9aaODE7hwX1JI8="
         }
       },
       "is_incremental": true,
@@ -375,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AOD.html",
-          "hash": "4qbTRkSlAwuDkOEXd96EkXWn9KQq7KLqR5lQWQGrS3g="
+          "hash": "4fVhhDqq1VoNRxkjmVIIXSdlZcGMYWeSGDaWce6ATu8="
         }
       },
       "is_incremental": true,
@@ -387,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1CD.html",
-          "hash": "3iV9KEO3flVkpo6oyxurSljZRpjab+VggoXOHTCqwKk="
+          "hash": "KuqSI/Z7pZW67mX0jSRwwRnbFSsoJ2z/Wry9InY9yq0="
         }
       },
       "is_incremental": true,
@@ -399,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1D.html",
-          "hash": "t+zrINNC5n0Cf5/41IXp37XqidpoxLmp78AixPJeAbI="
+          "hash": "r2eeTO80jGrQsicqMQSiKEan1Y07vCOLv/5IKSrI05k="
         }
       },
       "is_incremental": true,
@@ -411,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1DSNK.html",
-          "hash": "aLQbpOpudZh89vDrrFF+OjiaV2qirHCOGMTogVWrM8E="
+          "hash": "PS5d27jvqZUd94504bmlvvKTzIDgFcO3d7AtVyThM5M="
         }
       },
       "is_incremental": true,
@@ -423,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1RD.html",
-          "hash": "/qd3/NCMr1drA7IxpC0rlREGwqR3uwoNbDIYSlh05Ow="
+          "hash": "Frw7vxan9fxfmj8OTw/BP01zGd9MPUylCiPZDEum6+E="
         }
       },
       "is_incremental": true,
@@ -435,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1TD.html",
-          "hash": "lI7CqWlaeqYKRYEEZuga83WFPN5XkZde3epTAT728Y0="
+          "hash": "2xSdAzKrjqaJkafQSPLbtXrdwIeYmkq8ZRsrWF4OVnU="
         }
       },
       "is_incremental": true,
@@ -447,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.WifiDAQE3A.html",
-          "hash": "Pgs7N6jA/UA5+JQoftpKO9bE9eTrVj5GUk9P9T6yRqI="
+          "hash": "zGAe0el2qohly1bAimXizd0BiGq33u4nRhzWTsRggoY="
         }
       },
       "is_incremental": true,
@@ -483,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "dkV+n9z2U0fHHEYSwlDSFzqfuqP+XumDnZ2+5JonQ0U="
+          "hash": "twjlPjAzgSp4KpI6tMCqcgEFgnO/10crMXS3N/LjnFw="
         }
       },
       "is_incremental": false,
@@ -507,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/feature_product.html",
-          "hash": "KazoUiojYJ7oF6OJxUy1R1M8ss7gBJquTgY4sRqz/Cs="
+          "hash": "O9wGEHnilCX4CYbxV3P+MiYwNDROqnJrK4MMXaoiCiU="
         }
       },
       "is_incremental": true,
@@ -519,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/pinout_product.html",
-          "hash": "amNEEOK4VnPxGcRgbthRdTztRrYZgY+4AD/ybdthYp0="
+          "hash": "1y2b5v5mtRU/EnwilJgK8m/KBblTOHo3Xwiih8oD/7M="
         }
       },
       "is_incremental": true,
@@ -531,7 +525,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_errorcode.html",
-          "hash": "PAryHMVBUkf33KyJI9FBWzBvzJzUq//745EzC0TWfuU="
+          "hash": "4Q8a6uMPmvVZpJ66vpKfMxb2HPD4S2Hj84MQm6BzIxA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/appendix/table_port.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/appendix/table_port.html",
+          "hash": "dQkKgDnEv7NpYoGCuR85g+VCJ/a5WY7WS1YlFSz6Rzo="
         }
       },
       "is_incremental": true,
@@ -543,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_setting.html",
-          "hash": "6g+5LphBxKasguCpO8zC7o/0BUyfIgyJrTsIHUVs+PI="
+          "hash": "sN128wXrBcByj10xobbWg3qrtUSNDxTBtdVStx4Oo5c="
         }
       },
       "is_incremental": true,
@@ -567,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EMotion/EMotion_EMotion.html",
-          "hash": "9esSjAGQmt9mcJGb4MSAqgqEBZmPqjPMVz6qxN+NpWU="
+          "hash": "oJYxrho9joDuNoRnCU0ZB9U9R5zo7rAuNvlANkBFuCc="
         }
       },
       "is_incremental": true,
@@ -1167,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "yxCzD4plZlhUZ0jKsjB8mJTIZyCKLTZWqjP/4q1C7Rg="
+          "hash": "rQXQ/MFBEzdHRnGiR9oXx0bMYqmQ1LZChHcOEEdlBfo="
         }
       },
       "is_incremental": false,
@@ -1230,10 +1236,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQAD.JPG",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1AD.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQAD.JPG"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1AD.jpg"
         }
       },
       "is_incremental": false,
@@ -1241,10 +1247,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQAOD.JPG",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1AOD.JPG",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQAOD.JPG"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1AOD.JPG"
         }
       },
       "is_incremental": false,
@@ -1252,10 +1258,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQCD.JPG",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1CD.JPG",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQCD.JPG"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1CD.JPG"
         }
       },
       "is_incremental": false,
@@ -1263,10 +1269,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQD.JPG",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1D.JPG",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQD.JPG"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1D.JPG"
         }
       },
       "is_incremental": false,
@@ -1274,10 +1280,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQDSNK.JPG",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1DSNK.JPG",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQDSNK.JPG"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1DSNK.JPG"
         }
       },
       "is_incremental": false,
@@ -1285,10 +1291,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQRD.JPG",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1RD.JPG",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQRD.JPG"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1RD.JPG"
         }
       },
       "is_incremental": false,
@@ -1296,10 +1302,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQTD.JPG",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1TD.JPG",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQTD.JPG"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1TD.JPG"
         }
       },
       "is_incremental": false,
@@ -1373,10 +1379,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Products/product-USBDAQAD.jpg",
+      "source_relative_path": "images/Products/product-USBDAQF1AD.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Products/product-USBDAQAD.jpg"
+          "relative_path": "images/Products/product-USBDAQF1AD.jpg"
         }
       },
       "is_incremental": false,
@@ -1384,10 +1390,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Products/product-USBDAQAOD.jpg",
+      "source_relative_path": "images/Products/product-USBDAQF1AOD.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Products/product-USBDAQAOD.jpg"
+          "relative_path": "images/Products/product-USBDAQF1AOD.jpg"
         }
       },
       "is_incremental": false,
@@ -1395,10 +1401,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Products/product-USBDAQCD.jpg",
+      "source_relative_path": "images/Products/product-USBDAQF1CD.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Products/product-USBDAQCD.jpg"
+          "relative_path": "images/Products/product-USBDAQF1CD.jpg"
         }
       },
       "is_incremental": false,
@@ -1406,10 +1412,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Products/product-USBDAQD.jpg",
+      "source_relative_path": "images/Products/product-USBDAQF1D.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Products/product-USBDAQD.jpg"
+          "relative_path": "images/Products/product-USBDAQF1D.jpg"
         }
       },
       "is_incremental": false,
@@ -1417,10 +1423,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Products/product-USBDAQDSNK.jpg",
+      "source_relative_path": "images/Products/product-USBDAQF1DSNK.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Products/product-USBDAQDSNK.jpg"
+          "relative_path": "images/Products/product-USBDAQF1DSNK.jpg"
         }
       },
       "is_incremental": false,
@@ -1428,10 +1434,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Products/product-USBDAQRD.jpg",
+      "source_relative_path": "images/Products/product-USBDAQF1RD.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Products/product-USBDAQRD.jpg"
+          "relative_path": "images/Products/product-USBDAQF1RD.jpg"
         }
       },
       "is_incremental": false,
@@ -1439,10 +1445,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Products/product-USBDAQTD.jpg",
+      "source_relative_path": "images/Products/product-USBDAQF1TD.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Products/product-USBDAQTD.jpg"
+          "relative_path": "images/Products/product-USBDAQF1TD.jpg"
         }
       },
       "is_incremental": false,
@@ -1450,10 +1456,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Products/product-WifiDAQE3A.png",
+      "source_relative_path": "images/Products/product-WIFIDAQE3A.png",
       "output": {
         "resource": {
-          "relative_path": "images/Products/product-WifiDAQE3A.png"
+          "relative_path": "images/Products/product-WIFIDAQE3A.png"
         }
       },
       "is_incremental": false,
@@ -1539,8 +1545,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 57,
-          "skipped_file_count": 57
+          "total_file_count": 58,
+          "skipped_file_count": 58
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

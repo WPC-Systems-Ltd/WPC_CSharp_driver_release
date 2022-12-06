@@ -85,7 +85,7 @@
   </h3>
   <a id="WPC_Module_IAOModule_AO_close_" data-uid="WPC.Module.IAOModule.AO_close*"></a>
   <h4 id="WPC_Module_IAOModule_AO_close_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_close(System.Int32,System.Int32)">AO_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close AO port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close AO module on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -105,7 +105,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -127,14 +127,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_closeStreaming_" data-uid="WPC.Module.IAOModule.AO_closeStreaming*"></a>
   <h4 id="WPC_Module_IAOModule_AO_closeStreaming_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_closeStreaming(System.Int32,System.Int32)">AO_closeStreaming(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close AO streaming functionality.</p>
+  <div class="markdown level1 summary"><p>Close AO signal generation functionality.<br>
+This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -154,7 +156,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -176,14 +178,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_getValues_" data-uid="WPC.Module.IAOModule.AO_getValues*"></a>
   <h4 id="WPC_Module_IAOModule_AO_getValues_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_getValues(System.Int32,System.Int32)">AO_getValues(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Get AO current output.</p>
+  <div class="markdown level1 summary"><p>Get current voltages on an AO port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -203,7 +206,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -225,14 +228,14 @@
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
-        <td><p>List of float for 8 channels.</p>
+        <td><p>List of voltages in volt where <code>value_list[i]</code> is the value of Channel i.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_open_" data-uid="WPC.Module.IAOModule.AO_open*"></a>
   <h4 id="WPC_Module_IAOModule_AO_open_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_open(System.Int32,System.Int32)">AO_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open AO port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open AO module on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -252,7 +255,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -274,14 +277,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_openStreaming_" data-uid="WPC.Module.IAOModule.AO_openStreaming*"></a>
   <h4 id="WPC_Module_IAOModule_AO_openStreaming_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_openStreaming(System.Int32,System.Int32)">AO_openStreaming(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open AO streaming functionality.</p>
+  <div class="markdown level1 summary"><p>Open AO signal generation functionality.<br>
+This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -301,7 +306,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -323,19 +328,20 @@
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>List of information about AO mode and sampling rate</p>
+        <td><p>Current AO configuration, where <code>info[0]</code> is the mode and <code>info[1]</code> is the sampling rate.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_setEnableChannels_" data-uid="WPC.Module.IAOModule.AO_setEnableChannels*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setEnableChannels_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IAOModule.AO_setEnableChannels(System.Int32,List{System.Int32},System.Int32)">AO_setEnableChannels(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AO enabled channels.</p>
+  <div class="markdown level1 summary"><p>Set which AO channels to enable.<br>
+This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int AO_setEnableChannels(int port, List&lt;int&gt; enabled, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int AO_setEnableChannels(int port, List&lt;int&gt; channel_list, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,13 +356,13 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><span class="parametername">enabled</span></td>
-        <td><p>Enable pins.</p>
+        <td><span class="parametername">channel_list</span></td>
+        <td><p>List of channels to enable.<br> The channels that are not in the lists will be disabled accordingly.</p>
 </td>
       </tr>
       <tr>
@@ -378,14 +384,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_setForm_" data-uid="WPC.Module.IAOModule.AO_setForm*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setForm_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setForm(System.Int32,System.Int32,System.Int32,System.Int32)">AO_setForm(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AO waveform.</p>
+  <div class="markdown level1 summary"><p>Set form of signal generation to an AO channel.<br>
+This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -405,7 +413,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -417,7 +425,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">form</span></td>
-        <td><p>1:Retangular, 2:Triangular, 3:Sine.</p>
+        <td><p>Form of the signal to generate.<br> 1: retangular, 2: triangular, 3: sine.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
@@ -439,14 +447,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_setFormParam_" data-uid="WPC.Module.IAOModule.AO_setFormParam*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setFormParam_System_Int32_System_Int32_System_Double_System_Double_System_Double_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setFormParam(System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Int32)">AO_setFormParam(Int32, Int32, Double, Double, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AO waveform parameters.</p>
+  <div class="markdown level1 summary"><p>Set parameters of signal generation to an AO channel.<br>
+This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -466,31 +476,31 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Channel index.</p>
+        <td><p>Channel number. <br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">amplitude</span></td>
-        <td><p>Amplitude.</p>
+        <td><p>Signal amplitude in volt.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">offset</span></td>
-        <td><p>Offset.</p>
+        <td><p>Offset of signal average in volt.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">period</span></td>
-        <td><p>Period.</p>
+        <td><p>Signal period in seconds.</p>
 </td>
       </tr>
       <tr>
@@ -512,7 +522,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
@@ -539,13 +550,13 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>0:On demand, 1:N-samples, 2:Continuous.</p>
+        <td><p>Generation mode.<br> 0: on demand, 1: N-samples, 2: continuous.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
@@ -567,19 +578,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_setNumSamples_" data-uid="WPC.Module.IAOModule.AO_setNumSamples*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setNumSamples_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setNumSamples(System.Int32,System.Int32,System.Int32)">AO_setNumSamples(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AO number of samples.</p>
+  <div class="markdown level1 summary"><p>Set number of AO samples to generate.<br>
+This parameter is only effective for the &quot;N-samples&quot; mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int AO_setNumSamples(int port, int sample_points, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int AO_setNumSamples(int port, int num_samples, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -594,13 +607,13 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">sample_points</span></td>
-        <td><p>Number of sample points.</p>
+        <td><span class="parametername">num_samples</span></td>
+        <td><p>Number of samples.<br> A sample is a list of values generated simultaneously on different channels.<br> If N channels have been enabled, then a sample is made of N values.</p>
 </td>
       </tr>
       <tr>
@@ -622,14 +635,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_setSamplingRate_" data-uid="WPC.Module.IAOModule.AO_setSamplingRate*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setSamplingRate_System_Int32_System_Double_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setSamplingRate(System.Int32,System.Double,System.Int32)">AO_setSamplingRate(Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AO sampling rate.</p>
+  <div class="markdown level1 summary"><p>Set AO sampling rate.<br>
+This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -649,13 +664,13 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">sampling_rate</span></td>
-        <td><p>AO sampling rate.</p>
+        <td><p>Sampling rate in Hz.</p>
 </td>
       </tr>
       <tr>
@@ -677,14 +692,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_startStreaming_" data-uid="WPC.Module.IAOModule.AO_startStreaming*"></a>
   <h4 id="WPC_Module_IAOModule_AO_startStreaming_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_startStreaming(System.Int32,System.Int32)">AO_startStreaming(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Start AO streaming.</p>
+  <div class="markdown level1 summary"><p>Start AO signal generation.<br>
+This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -704,7 +721,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -726,19 +743,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_writeAllChannels_" data-uid="WPC.Module.IAOModule.AO_writeAllChannels*"></a>
   <h4 id="WPC_Module_IAOModule_AO_writeAllChannels_System_Int32_List_System_Double__System_Int32_" data-uid="WPC.Module.IAOModule.AO_writeAllChannels(System.Int32,List{System.Double},System.Int32)">AO_writeAllChannels(Int32, List&lt;Double&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write AO voltage to whole port.</p>
+  <div class="markdown level1 summary"><p>Write voltages to all channels of an AO port.<br>
+This should only be used in the &quot;on demand&quot; mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int AO_writeAllChannels(int port, List&lt;double&gt; AO_value, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int AO_writeAllChannels(int port, List&lt;double&gt; value_list, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -753,13 +772,13 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
-        <td><span class="parametername">AO_value</span></td>
-        <td><p>For 8 channels,[ch0, ch1,.....ch7], Unit : (V)</p>
+        <td><span class="parametername">value_list</span></td>
+        <td><p>List of voltages in volt where <code>value_list[i]</code> is written to Channel i.</p>
 </td>
       </tr>
       <tr>
@@ -781,19 +800,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IAOModule_AO_writeOneChannel_" data-uid="WPC.Module.IAOModule.AO_writeOneChannel*"></a>
   <h4 id="WPC_Module_IAOModule_AO_writeOneChannel_System_Int32_System_Int32_System_Double_System_Int32_" data-uid="WPC.Module.IAOModule.AO_writeOneChannel(System.Int32,System.Int32,System.Double,System.Int32)">AO_writeOneChannel(Int32, Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write AO voltage to specific channel.</p>
+  <div class="markdown level1 summary"><p>Write voltage to a specific AO channel.<br>
+This should only be used in the &quot;on demand&quot; mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int AO_writeOneChannel(int port, int channel, double AO_value, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int AO_writeOneChannel(int port, int channel, double value, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -808,19 +829,19 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td><p>Available port number depends on WPC DAQ device.</p>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>AO channel (0~7).</p>
+        <td><p>Channel number.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">AO_value</span></td>
-        <td><p>0~5, Unit: (V)</p>
+        <td><span class="parametername">value</span></td>
+        <td><p>Voltage in volt.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
@@ -842,7 +863,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.</p>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
