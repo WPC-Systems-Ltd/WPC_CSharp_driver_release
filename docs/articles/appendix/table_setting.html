@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Setting Table | WPC_CSharp_driver </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Setting Table | WPC_CSharp_driver ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../images/WPC_favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/WPC_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="setting-table">Setting Table</h1>
+
+<h2 id="i2c">I2C</h2>
+<h3 id="i2c-speed">I2C speed</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">I2C_SPEED_STANDARD</td>
+<td style="text-align: left;">100000</td>
+</tr>
+<tr>
+<td style="text-align: left;">I2C_SPEED_FAST</td>
+<td style="text-align: left;">400000</td>
+</tr>
+<tr>
+<td style="text-align: left;">I2C_SPEED_FAST_PLUS</td>
+<td style="text-align: left;">1000000</td>
+</tr>
+<tr>
+<td style="text-align: left;">I2C_SPEED_HIGH_SPEED</td>
+<td style="text-align: left;">3400000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="i2c-address">I2C address</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">I2C_ADDR_SIZE_7_BITS</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">I2C_ADDR_SIZE_10_BITS</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="spi">SPI</h2>
+<h3 id="spi-clock">SPI Clock</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Prescaler</th>
+<th style="text-align: left;">SPI1 frequency</th>
+<th style="text-align: left;">SPI2 frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Peripheral clock</td>
+<td style="text-align: left;">f_PCLK2 = 72 MHz</td>
+<td style="text-align: left;">f_PCLK1 = 36 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">36 MHz</td>
+<td style="text-align: left;">18 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">18 MHz</td>
+<td style="text-align: left;">9 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">9 MHz</td>
+<td style="text-align: left;">4.5 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">4.5 MHz</td>
+<td style="text-align: left;">2.25 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">2.25 MHz</td>
+<td style="text-align: left;">1.125 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">64</td>
+<td style="text-align: left;">1.125 MHz</td>
+<td style="text-align: left;">562.5 kHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">128</td>
+<td style="text-align: left;">562.5 kHz</td>
+<td style="text-align: left;">281.25 kHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">256</td>
+<td style="text-align: left;">281.25 kHz</td>
+<td style="text-align: left;">140.625 kHz</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spi-mode">SPI Mode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPI_MODE_0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_MODE_1</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_MODE_2</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_MODE_3</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spi-data-size">SPI Data Size</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPI_DATA_SIZE_8_BITS</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_DATA_SIZE_16_BITS</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spi-first-bit">SPI First Bit</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPI_FIRST_BIT_MSB</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_FIRST_BIT_LSB</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spi-prescaler">SPI Prescaler</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPI_PRESCALER_2</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_PRESCALER_4</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_PRESCALER_8</td>
+<td style="text-align: left;">8</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_PRESCALER_16</td>
+<td style="text-align: left;">16</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_PRESCALER_32</td>
+<td style="text-align: left;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_PRESCALER_64</td>
+<td style="text-align: left;">64</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_PRESCALER_128</td>
+<td style="text-align: left;">128</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_PRESCALER_256</td>
+<td style="text-align: left;">256</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uart">UART</h2>
+<h3 id="uart-data-size">UART Data Size</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">UART_DATA_SIZE_8_BITS</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">UART_DATA_SIZE_9_BITS</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uart-parity">UART Parity</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">UART_PARITY_NONE</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">UART_PARITY_EVEN</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">UART_PARITY_ODD</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uart-stop-bit">UART Stop Bit</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">UART_STOP_BIT_1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">UART_STOP_BIT_0P5</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">UART_STOP_BIT_2</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">UART_STOP_BIT_1P5</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="can">CAN</h2>
+<h3 id="can-type">CAN Type</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CAN_FRAME_TYPE_DATA</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_FRAME_TYPE_REMOTE</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CAN_ID_STANDARD</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_ID_EXTENDED</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can-speed">CAN Speed</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CAN_SPEED_125K</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_SPEED_250K</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_SPEED_500K</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_SPEED_1M</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ai">AI</h2>
+<h3 id="ai-mode">AI Mode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AI_MODE_ON_DEMAND</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">AI_MODE_N_SAMPLE</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">AI_MODE_CONTINOUS</td>
+<td style="text-align: left;">2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ao">AO</h2>
+<h3 id="ao-mode">AO Mode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AO_MODE_ON_DEMAND</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">AO_MODE_N_SAMPLE</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">AO_MODE_CONTINOUS</td>
+<td style="text-align: left;">2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ao-form">AO Form</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AO_FORM_RETANGULAR</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">AO_FORM_TRIANGULAR</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">AO_FORM_SINE</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="thermal">Thermal</h2>
+<h3 id="thermal-channel">Thermal Channel</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">THERMAL_CHANNEL_0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_CHANNEL_1</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="thermal-type">Thermal Type</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">THERMAL_COUPLE_TYPE_B</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_COUPLE_TYPE_E</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_COUPLE_TYPE_J</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_COUPLE_TYPE_K</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_COUPLE_TYPE_N</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_COUPLE_TYPE_R</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_COUPLE_TYPE_S</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_COUPLE_TYPE_T</td>
+<td style="text-align: left;">7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="thermal-oversampling">Thermal OverSampling</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_NONE</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_2</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_4</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_8</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_16</td>
+<td style="text-align: left;">4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="motion">Motion</h2>
+<h3 id="emotion-axis">EMotion Axis</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">EMOTION_AXIS_X</td>
+<td style="text-align: left;">0x01</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMOTION_AXIS_Y</td>
+<td style="text-align: left;">0x02</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMOTION_AXIS_Z</td>
+<td style="text-align: left;">0x04</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMOTION_AXIS_U</td>
+<td style="text-align: left;">0x08</td>
+</tr>
+</tbody>
+</table>
+<h3 id="emotion-connector">EMotion Connector</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">EMOTION_CONNECTOR_0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">EMOTION_CONNECTOR_1</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <head>
+      <style>
+      a:link, i {
+        color: black;
+      }
+       
+      </style>
+      </head>
+      
+      <body>
+          <footer>
+            <div class="grad-bottom"></div>
+              <div class="footer">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <span class="footer-heading"><strong>Contact</strong></span><br> 
+                                  TEL1 : +886-2-8262-4431<br> 
+                                  TEL2 : +886-2-8262-7673<br> 
+                                  FAX : +886-2-8262-4609<br>
+                          </div>
+      
+                          <div class="col-sm-4">
+                              <span class="footer-heading"><strong>Support</strong></span> <br> 
+                                  Technical support : <a href="mailto: wu@wpc.com.tw">wu@wpc.com.tw</a><br>
+                                  Sales support : <a href="mailto: hltsai@wpc.com.tw">hltsai@wpc.com.tw</a><br>  
+                          </div>
+      
+                          <div class="col-sm-4">
+                              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+                              <span class="footer-heading"></span>
+                                  <a href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release"><i class="fab fa-github" style='font-size:40px'></i></a> 
+                                  &emsp;
+                                  <a href="https://www.youtube.com/channel/UCUVb34hMdoXQ0kaN-r0TKZA/videos"><i class="fab fa-youtube" style='font-size:40px; color:red'></i></a> 
+                                  &emsp;
+                                  <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
+                                  <br><br> 
+                                  <p>Copyright © 2022 WPC Systems Ltd. All right reserved.</p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+          </footer>
+      </body>
+      
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
