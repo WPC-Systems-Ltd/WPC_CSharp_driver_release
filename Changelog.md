@@ -1,6 +1,18 @@
 WPC CSharp driver release changelog
 ===================================
 
+
+v0.1.2 Date: 2022/12/06, Developer: Chunglee_people 
+---------------------------------------------------- 
+
+### Added
+- Add motion simple example code `EMotion_get_logical_position.cs`
+- Add I/P function table in docfx
+
+### Changed
+- Uniform USB DAQ name `F1`
+
+
 v0.1.1 Date: 2022/12/01, Developer: Chunglee_people 
 ---------------------------------------------------- 
 
