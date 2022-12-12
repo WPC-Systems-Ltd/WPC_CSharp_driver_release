@@ -1,6 +1,5 @@
-
 /// <summary>
-/// EMotion_get_logical_position.cs
+/// Motion_get_logical_position.cs
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -32,19 +31,20 @@ class EMotion_get_logical_position
         try
         {  
             int status;
+            int port = 0;
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             for (int i = 0; i < 1000; i++) 
             {   
-                status = dev.Motion_setLogicalPostion(Constant.MOTION_PORT_0, Constant.MOTION_AXIS_1, i);
+                status = dev.Motion_setLogicalPostion(port, Constant.MOTION_AXIS_1, i);
                 if (status != 0)
                 {
                     Console.WriteLine($"Motion_setLogicalPostion status: {status}"); 
                 }
                 
-                int posi = dev.Motion_GetLogicalPostion(Constant.MOTION_PORT_0, Constant.MOTION_AXIS_1);
+                int posi = dev.Motion_GetLogicalPostion(port, Constant.MOTION_AXIS_1);
                 Console.WriteLine($"Motion_GetLogicalP3ostion: {posi}");
             }
         }
