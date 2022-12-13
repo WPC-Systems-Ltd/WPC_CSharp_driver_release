@@ -16,6 +16,7 @@ v0.1.2 Date: 2022/12/06, Developer: Chunglee_people
 ### Added
 - Add motion simple example code `Motion_one_axis_move.cs`
 - Add I/O function table in docfx
+- Add Emotion product into I/O Function Table
 
 ### Changed
 - Uniform USB DAQ name `F1` 
