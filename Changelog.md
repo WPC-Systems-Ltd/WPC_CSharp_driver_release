@@ -9,6 +9,7 @@ v0.1.3 Date: 2022/12/13, Developer: Chunglee_people
 ### Added
 - WPC_MCX_H_Motion_Manual_r24.pdf
 - Add motion one axis move example code `EMotion_get_logical_position.cs`
+- Add Emotion product into I/O Function Table
 
 v0.1.2 Date: 2022/12/06, Developer: Chunglee_people 
 ---------------------------------------------------- 
@@ -16,13 +17,11 @@ v0.1.2 Date: 2022/12/06, Developer: Chunglee_people
 ### Added
 - Add motion simple example code `Motion_one_axis_move.cs`
 - Add I/O function table in docfx
-- Add Emotion product into I/O Function Table
-
+ 
 ### Changed
 - Uniform USB DAQ name `F1` 
 - Update `WPC_DAQ_Devices_User_Manual` from r20 to r22
-
-
+ 
 v0.1.1 Date: 2022/12/01, Developer: Chunglee_people 
 ---------------------------------------------------- 
 
