@@ -1,5 +1,5 @@
 /// <summary>
-/// Motion_one_axis_move.cs
+/// Motion_find_home.cs
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -12,7 +12,7 @@
 
 using WPC.Product;
 
-class EMotion_one_axis_move
+class EMotion_find_home
 {
     static public void Main()
     { 
@@ -26,13 +26,12 @@ class EMotion_one_axis_move
 
         // Connect to device
         dev.connect("192.168.1.110");
-  
+   
         try
         {   
             // Parameters setting
             int status;
             int port = 0;
-
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
@@ -40,13 +39,10 @@ class EMotion_one_axis_move
             status = dev.Motion_open(port);
             Console.WriteLine($"Motion_open status: {status}");
 
-            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_DISABLE, Constant.MOTION_REVERSE_DISABLE);
-            Console.WriteLine($"Motion_writeEnableLimit status: {status}");
+            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_ENABLE, Constant.MOTION_REVERSE_ENABLE);
+            Console.WriteLine($"Motion_writeEnableLimit status: {status}"); 
 
-            status = dev.Motion_setHomeLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_HOME_DISABLE);
-            Console.WriteLine($"Motion_writeHomeLimit status: {status}");
-
-            status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_LOW);
+            status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_HIGH);
             Console.WriteLine($"Motion_writeLimitPolarity status: {status}");
 
             status = dev.Motion_setHomePolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_HOME_POLARITY_ACTIVE_HIGH);
@@ -54,29 +50,35 @@ class EMotion_one_axis_move
              
             status = dev.Motion_configAxisModeAndDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_AXIS_DIR_CW);
             Console.WriteLine($"Motion_configAxisModeAndDirection status: {status}");
-
-            status = dev.Motion_configEncoderDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENCODER_DIR_CW);
-            Console.WriteLine($"Motion_configEncoderDirection status: {status}"); 
- 
-            status = dev.Motion_configAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($"Motion_configAxisMove status: {status}");
              
-            status = dev.Motion_configInstantLimitStopMode(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_DECELERATING);
-            Console.WriteLine($"Motion_configInstantLimitStopMode status: {status}");
-              
             status = dev.Motion_resetEncoderPosition(port, Constant.MOTION_AXIS_1);
             Console.WriteLine($"Motion_resetEncoderPosition status: {status}");
 
-            status = dev.Motion_start(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_start status: {status}");
+            status = dev.Motion_findReference(port, Constant.MOTION_AXIS_1, Constant.MOTION_FIND_HOME, Constant.MOTION_FIND_REFERENCE_DIR_REVERSE);
+            Console.WriteLine($"Motion_findReference status: {status}");
 
-            int move_status = 0; 
-            while (move_status == 0) 
+            int finding_referece = 1;
+            int found_reference = 0;
+            while (found_reference == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($"move_status status: {move_status}");
-            }
+                // read forward and reverse limit status
+                List<int> hit_status = dev.Motion_readLimitStatus(port, Constant.MOTION_AXIS_1); 
+                int forward_hit = hit_status[0];
+                int reverse_hit = hit_status[1];
+                if (forward_hit == 1) { Console.WriteLine($"Forward hit"); }
+                if (reverse_hit == 1) { Console.WriteLine($"Reverse hit"); }
 
+                // read home status
+                int home_status = dev.Motion_readHomeStatus(port, Constant.MOTION_AXIS_1);
+                if (home_status == 1) { Console.WriteLine($"Home hit"); }
+                
+                // Check finding and found status
+                List<int>  driving_status = dev.Motion_checkReference(port, Constant.MOTION_AXIS_1);
+                finding_referece = driving_status[0];
+                found_reference = driving_status[1];  
+                if (found_reference == 1) { Console.WriteLine($"Found refernce"); }
+                if (finding_referece == 1) { Console.WriteLine($"Finding refernce"); }
+            } 
             status = dev.Motion_stop(port, Constant.MOTION_STOP_TYPE_DECELERATION, Constant.MOTION_AXIS_1);
             Console.WriteLine($"Motion_stop status: {status}"); 
  

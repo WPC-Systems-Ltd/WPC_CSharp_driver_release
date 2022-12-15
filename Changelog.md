@@ -8,7 +8,7 @@ v0.1.3 Date: 2022/12/13, Developer: Chunglee_people
 
 ### Added
 - WPC_MCX_H_Motion_Manual_r24.pdf
-- Add motion one axis move example code `EMotion_get_logical_position.cs`
+- Add motion one axis move example code `Motion_get_logical_position.cs`
 - Add Emotion product into I/O Function Table
 
 v0.1.2 Date: 2022/12/06, Developer: Chunglee_people 

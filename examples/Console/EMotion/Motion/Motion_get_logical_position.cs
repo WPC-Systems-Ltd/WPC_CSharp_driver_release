@@ -26,8 +26,7 @@ class EMotion_get_logical_position
 
         // Connect to device
         dev.connect("192.168.1.110");
- 
-        // Perform DAQ basic information 
+        
         try
         {  
             int status;

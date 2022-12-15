@@ -125,18 +125,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WPC.Module.IEMotionModule.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/WPC.Module.IEMotionModule.html",
-          "hash": "d2PKlLrYjAF0ZUZCiZdXgIRrzOsN0YdvC6f8ooAuRSg="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/WPC.Module.II2CModule.yml",
       "output": {
         ".html": {
@@ -153,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IMotionModule.html",
-          "hash": "0ctzXppLgV/vpIE5b7nSxUY+VzsIxYRhFfBRZwfDDD0="
+          "hash": "2MIJ9V+gLUiiuUJEWRzaIbAm0KUw6m4+K3I9yg0rlHE="
         }
       },
       "is_incremental": true,
@@ -273,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.html",
-          "hash": "GzA8Q1yc5AfmLsVvr1uBdSR3z7K2BQC1pCQ1vQJKr9g="
+          "hash": "wdsmiaJ1Wy/FulpfegaXnWu9A7/Y2OkOOdZ32bvBhGw="
         }
       },
       "is_incremental": true,
@@ -309,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EMotion.html",
-          "hash": "UTgCRG+6sa82KiPB8fdV8BfW9GtGz87oshJQQ71wNuo="
+          "hash": "O54OKe7wGugusO/3xfxaoIg+h4bmBwkBagep6AI/w8g="
         }
       },
       "is_incremental": true,
@@ -489,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "6t4v975F34P0NvyZw3n1OEVSJDVT0mCByUbc16Ej10A="
+          "hash": "twjlPjAzgSp4KpI6tMCqcgEFgnO/10crMXS3N/LjnFw="
         }
       },
       "is_incremental": false,
@@ -561,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_setting.html",
-          "hash": "6U1jsq1+1/GEelTbGtKqyvtFD4CuknlHgBUHevgbnGE="
+          "hash": "QvJH+EHbGZTs+6wlpIdSV7cWXzkRr7PUVwQqxfd8JsE="
         }
       },
       "is_incremental": true,
@@ -581,11 +569,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/example_md/EMotion/EMotion_EMotion.md",
+      "source_relative_path": "articles/example_md/EMotion/EMotion_Motion.md",
       "output": {
         ".html": {
-          "relative_path": "articles/example_md/EMotion/EMotion_EMotion.html",
-          "hash": "SfJD22a10Usuqn8jYu7FQYdfkIXkT3ghQbobqq/erzQ="
+          "relative_path": "articles/example_md/EMotion/EMotion_Motion.html",
+          "hash": "PNvwRAa0y1u1fNKcpLVLW6QP4YfbO5ID58n63JroHsU="
         }
       },
       "is_incremental": true,
@@ -1185,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "rQXQ/MFBEzdHRnGiR9oXx0bMYqmQ1LZChHcOEEdlBfo="
+          "hash": "1G+ZMNYc2AHvYBvQheSUxtXPKPy2nSBeaBMybCu2hD4="
         }
       },
       "is_incremental": false,
@@ -1563,8 +1551,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 39,
-          "skipped_file_count": 39
+          "total_file_count": 38,
+          "skipped_file_count": 38
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
