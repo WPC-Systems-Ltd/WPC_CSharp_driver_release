@@ -46,7 +46,7 @@ class EMotion_velocity_blending
             status = dev.Motion_configAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_VELOCITY_MODE, target_position: 10000, velocity: 1000);
             Console.WriteLine($"Motion_configAxisMove status: {status}");
 
-            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_DISABLE, Constant.MOTION_REVERSE_DISABLE);
+            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_ENABLE, Constant.MOTION_REVERSE_ENABLE);
             Console.WriteLine($"Motion_writeEnableLimit status: {status}");
 
             status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_HIGH);

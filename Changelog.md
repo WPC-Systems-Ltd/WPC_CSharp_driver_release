@@ -1,7 +1,15 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.1.4 Date: 2022/12/16, Developer: Chunglee_people 
+---------------------------------------------------- 
 
+### Added
+- Add EMotion into WPC_example_code.cs
+
+### Removed
+- WPC_7steps_Of_Python_Project_Workflow_r6.pdf
+ 
 
 v0.1.3 Date: 2022/12/13, Developer: Chunglee_people 
 ---------------------------------------------------- 

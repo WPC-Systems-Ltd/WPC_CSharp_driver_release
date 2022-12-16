@@ -1,4 +1,4 @@
-# AO
+# Motion
 > **Note**
 > Make sure you are connected to correct IP or serial number.
 
@@ -20,7 +20,7 @@ Then, we take `EMotion` for example.
 
 ### EMotion
 
-<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-EMotion.JPG" alt="drawing" width="600"/>
+<img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-EMotion.jpg" alt="drawing" width="600"/>
 
 ## Troubleshooting
 

@@ -1,5 +1,5 @@
 /// <summary>
-/// Motion_one_axis_move.cs
+/// Motion_load_configuration_file.cs
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -12,7 +12,7 @@
 
 using WPC.Product;
 
-class EMotion_one_axis_move
+class EMotion_load_configuration_file
 {
     static public void Main()
     { 
@@ -36,50 +36,44 @@ class EMotion_one_axis_move
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-             
+ 
             status = dev.Motion_open(port);
             Console.WriteLine($"Motion_open status: {status}");
 
-            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_ENABLE, Constant.MOTION_REVERSE_ENABLE);
+            status = dev.Motion_openConfigurationFile("Emotion.ini");
+            Console.WriteLine($"Motion_openConfigurationFile status: {status}");
+
+            status = dev.Motion_loadConfigurationFile();
+            Console.WriteLine($"Motion_loadConfigurationFile status: {status}");
+             
+            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_DISABLE, Constant.MOTION_REVERSE_DISABLE);
             Console.WriteLine($"Motion_writeEnableLimit status: {status}");
 
             status = dev.Motion_setHomeLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_HOME_DISABLE);
             Console.WriteLine($"Motion_writeHomeLimit status: {status}");
 
-            status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_HIGH);
+            status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_LOW);
             Console.WriteLine($"Motion_writeLimitPolarity status: {status}");
 
             status = dev.Motion_setHomePolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_HOME_POLARITY_ACTIVE_HIGH);
             Console.WriteLine($"Motion_writeHomePolarity status: {status}");
-             
-            status = dev.Motion_configAxisModeAndDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_AXIS_DIR_CW);
-            Console.WriteLine($"Motion_configAxisModeAndDirection status: {status}");
 
-            status = dev.Motion_configEncoderDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENCODER_DIR_CW);
-            Console.WriteLine($"Motion_configEncoderDirection status: {status}"); 
- 
-            status = dev.Motion_configAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($"Motion_configAxisMove status: {status}");
-             
-            status = dev.Motion_configInstantLimitStopMode(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_DECELERATING);
-            Console.WriteLine($"Motion_configInstantLimitStopMode status: {status}");
-              
             status = dev.Motion_resetEncoderPosition(port, Constant.MOTION_AXIS_1);
             Console.WriteLine($"Motion_resetEncoderPosition status: {status}");
 
             status = dev.Motion_start(port, Constant.MOTION_AXIS_1);
             Console.WriteLine($"Motion_start status: {status}");
 
-            int move_status = 0; 
-            while (move_status == 0) 
+            int move_status = 0;
+            while (move_status == 0)
             {
                 move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
                 Console.WriteLine($"move_status status: {move_status}");
             }
 
             status = dev.Motion_stop(port, Constant.MOTION_STOP_TYPE_DECELERATION, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_stop status: {status}"); 
- 
+            Console.WriteLine($"Motion_stop status: {status}");
+
             status = dev.Motion_close(port);
             Console.WriteLine($"Motion_close status: {status}");
         }
@@ -95,5 +89,5 @@ class EMotion_one_axis_move
         dev.close();
 
         Console.WriteLine("End example code...");
-    }
+    } 
 }

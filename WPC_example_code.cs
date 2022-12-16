@@ -10,18 +10,21 @@ public class WPC_example_code
     { 
         Console.WriteLine("");
         Console.WriteLine("DeviceFinder, please input 0");
-        Console.WriteLine("EthanA, please input 1");
-        Console.WriteLine("EthanD, please input 2");
-        Console.WriteLine("USBDAQF1AD, please input 3");
-        Console.WriteLine("USBDAQF1AOD, please input 4");
-        Console.WriteLine("USBDAQF1CD, please input 5");
-        Console.WriteLine("USBDAQF1D, please input 6");
-        Console.WriteLine("USBDAQF1DSNK, please input 7");
-        Console.WriteLine("USBDAQF1RD, please input 8");
-        Console.WriteLine("USBDAQF1TD, please input 9");
-        Console.WriteLine("WifiDAQE3A, please input 10");
-        Console.WriteLine("EthanL, please input 11");
-        Console.WriteLine("EthanO, please input 12");
+        Console.WriteLine("Emotion, please input 1");
+        Console.WriteLine("EthanA, please input 2");
+        Console.WriteLine("EthanD, please input 3");
+        Console.WriteLine("EthanL, please input 4");
+        Console.WriteLine("EthanO, please input 5");
+        Console.WriteLine("USBDAQF1AD, please input 6");
+        Console.WriteLine("USBDAQF1AOD, please input 7");
+        Console.WriteLine("USBDAQF1CD, please input 8");
+        Console.WriteLine("USBDAQF1D, please input 9");
+        Console.WriteLine("USBDAQF1DSNK, please input 10");
+        Console.WriteLine("USBDAQF1RD, please input 11");
+        Console.WriteLine("USBDAQF1TD, please input 12");
+        Console.WriteLine("WifiDAQE3A, please input 13");
+  
+ 
     }
     #endregion
 
@@ -180,6 +183,24 @@ public class WPC_example_code
         Console.WriteLine("Run TC_read_channel_status.cs, please input 81");
     }
     #endregion
+     
+    #region MotionMessage
+    static void showMotionMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For motion");
+        Console.WriteLine("----------------");
+        Console.WriteLine("Run Motion_get_logical_position.cs, please input 90");
+        Console.WriteLine("Run Motion_one_axis_move.cs, please input 91");
+        Console.WriteLine("Run Motion_find_home.cs, please input 92");
+        Console.WriteLine("Run Motion_find_index.cs, please input 93");
+        Console.WriteLine("Run Motion_find_limit.cs, please input 94");
+        Console.WriteLine("Run Motion_velocity_blending.cs, please input 95");
+        Console.WriteLine("Run Motion_velocity_blending_accerleration.cs, please input 96");
+        Console.WriteLine("Run Motion_set_configuration_file.cs, please input 97");
+        Console.WriteLine("Run Motion_load_configuration_file.cs, please input 98");
+    }
+    #endregion
 
     static void Main()
     {
@@ -200,19 +221,37 @@ public class WPC_example_code
                 break;
 
             case 1:
-                Console.WriteLine("Get 1, show EthanA series example code"); 
+                Console.WriteLine("Get 1, show Emotion series example code");
+                showSysETHMessage();
+                showMotionMessage();
+                break;
+
+            case 2:
+                Console.WriteLine("Get 2, show EthanA series example code"); 
                 showSysETHMessage();
                 showAIMessage(); 
                 break;
 
-            case 2:
-                Console.WriteLine("Get 2, show EthanD series example code");
+            case 3:
+                Console.WriteLine("Get 3, show EthanD series example code");
                 showSysETHMessage();
                 showDIOMessage();
                 break;
 
-            case 3:
-                Console.WriteLine("Get 3, show USBDAQF1AD series example code");
+            case 4:
+                Console.WriteLine("Get 4, show EthanL series example code");
+                showSysETHMessage();
+                showDIOMessage();
+                break;
+
+            case 5:
+                Console.WriteLine("Get 5, show EthanO series example code");
+                showSysETHMessage();
+                showAOMessage();
+                break;
+
+            case 6:
+                Console.WriteLine("Get 6, show USBDAQF1AD series example code");
                 showSysUSBMessage();
                 showAIMessage();
                 showDIOMessage();
@@ -221,8 +260,8 @@ public class WPC_example_code
                 showUARTMessage();
                 break;
 
-            case 4:
-                Console.WriteLine("Get 4, show USBDAQF1AOD series example code");
+            case 7:
+                Console.WriteLine("Get 7, show USBDAQF1AOD series example code");
                 showSysUSBMessage();
                 showAIMessage();
                 showAIOMessage();
@@ -232,8 +271,8 @@ public class WPC_example_code
                 showUARTMessage();
                 break;
 
-            case 5:
-                Console.WriteLine("Get 5, show USBDAQF1CD series example code");
+            case 8:
+                Console.WriteLine("Get 8, show USBDAQF1CD series example code");
                 showSysUSBMessage(); 
                 showDIOMessage();
                 showI2CMessage();
@@ -242,8 +281,8 @@ public class WPC_example_code
                 showCANMessage();
                 break;
 
-            case 6:
-                Console.WriteLine("Get 6, show USBDAQF1D series example code");
+            case 9:
+                Console.WriteLine("Get 9, show USBDAQF1D series example code");
                 showSysUSBMessage();
                 showDIOMessage();
                 showI2CMessage();
@@ -251,14 +290,14 @@ public class WPC_example_code
                 showUARTMessage();
                 break;
 
-            case 7:
-                Console.WriteLine("Get 7, show USBDAQF1DSNK series example code");
+            case 10:
+                Console.WriteLine("Get 10, show USBDAQF1DSNK series example code");
                 showSysUSBMessage();
                 showDIOMessage(); 
                 break;
 
-            case 8:
-                Console.WriteLine("Get 8, show USBDAQF1RD series example code");
+            case 11:
+                Console.WriteLine("Get 1, show USBDAQF1RD series example code");
                 showSysUSBMessage();
                 showDIOMessage();
                 showI2CMessage();
@@ -267,8 +306,8 @@ public class WPC_example_code
                 showRTDMessage();
                 break;
             
-            case 9:
-                Console.WriteLine("Get 9, show USBDAQF1TD series example code");
+            case 12:
+                Console.WriteLine("Get 12, show USBDAQF1TD series example code");
                 showSysUSBMessage();
                 showDIOMessage();
                 showI2CMessage();
@@ -277,23 +316,12 @@ public class WPC_example_code
                 showTCMessage();
                 break;
 
-            case 10:
-                Console.WriteLine("Get 10, show WifiDAQE3A series example code");
+            case 13:
+                Console.WriteLine("Get 13, show WifiDAQE3A series example code");
                 showSysWifiMessage(); 
                 showAIMessage();
                 break;
 
-            case 11:
-                Console.WriteLine("Get 11, show EthanL series example code");
-                showSysETHMessage();
-                showDIOMessage();
-                break;
-
-            case 12:
-                Console.WriteLine("Get 12, show EthanO series example code");
-                showSysETHMessage();
-                showAOMessage();
-                break;
             default:
                 break; 
         }
@@ -317,8 +345,51 @@ public class WPC_example_code
                         break;
                 }
                 break;
-            
+
             case 1:
+                switch (example_code)
+                {
+                    #region Emotion_Sys
+                    case 1:
+                        EMotion_get_network_info.Main();
+                        break;
+                    #endregion
+
+                    #region Emotion_motion
+                    case 90:
+                        EMotion_get_logical_position.Main();
+                        break;
+                    case 91:
+                        EMotion_one_axis_move.Main();
+                        break;
+                    case 92:
+                        EMotion_find_home.Main();
+                        break;
+                    case 93:
+                        EMotion_find_index.Main();
+                        break;
+                    case 94:
+                        EMotion_find_limit.Main();
+                        break;
+                    case 95:
+                        EMotion_velocity_blending.Main();
+                        break;
+                    case 96:
+                        EMotion_velocity_blending_accerleration.Main();
+                        break;
+                    case 97:
+                        EMotion_set_configuration_file.Main();
+                        break;
+                    case 98:
+                        EMotion_load_configuration_file.Main();
+                        break;
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
+            case 2:
                 switch (example_code) 
                 {
                     #region EthanA_Sys
@@ -350,7 +421,7 @@ public class WPC_example_code
                 }
                 break;
 
-            case 2:
+            case 3:
                 switch (example_code)
                 {
                     #region EthanD_Sys
@@ -379,7 +450,62 @@ public class WPC_example_code
                 }
                 break; 
 
-            case 3:
+
+            case 4:
+                switch (example_code)
+                {
+                    #region EthanL_Sys
+                    case 1:
+                        EthanL_get_network_info.Main();
+                        break;
+                    #endregion
+
+                    #region EthanL_DIO
+                    case 20:
+                        EthanL_DIO_loopback_pins.Main();
+                        break;
+                    case 21:
+                        EthanL_DIO_loopback_port.Main();
+                        break;
+                    case 22:
+                        EthanL_DO_blinky_pins.Main();
+                        break;
+                    case 23:
+                        EthanL_DO_blinky_port.Main();
+                        break;
+                    #endregion 
+                    default:
+                        break;
+                }
+                break;
+
+            case 5:
+                switch (example_code)
+                {
+                    #region EthanO_Sys
+                    case 1:
+                        EthanO_get_network_info.Main();
+                        break;
+                    #endregion
+
+                    #region EthanO_AO
+                    case 17:
+                        EthanO_AO_write_all_channels.Main();
+                        break;
+                    case 18:
+                        EthanO_AO_write_one_channel.Main();
+                        break;
+                    case 19:
+                        EthanO_AO_waveform_generation.Main();
+                        break;
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
+           
+            case 6:
                 switch (example_code)
                 {
                     #region USBDAQF1AD_Sys
@@ -426,7 +552,7 @@ public class WPC_example_code
                         USBDAQF1AD_I2C_write_read.Main();
                         break;
                     #endregion
-                         
+
                     #region USBDAQF1AD_SPI
                     case 40:
                         USBDAQF1AD_SPI_read_and_write.Main();
@@ -444,13 +570,13 @@ public class WPC_example_code
                         USBDAQF1AD_UART_write.Main();
                         break;
                     #endregion
-                    
+
                     default:
-                        break; 
+                        break;
                 }
                 break;
-
-            case 4:
+            
+            case 7:
                 switch (example_code)
                 {
                     #region USBDAQF1AOD_Sys
@@ -533,7 +659,7 @@ public class WPC_example_code
                 }
                 break;
 
-            case 5:
+            case 8:
                 switch (example_code)
                 {
                     #region USBDAQF1CD_Sys
@@ -595,7 +721,7 @@ public class WPC_example_code
                 }
                 break;
 
-            case 6:
+            case 9:
                 switch (example_code)
                 {
                     #region USBDAQF1D_Sys
@@ -648,7 +774,7 @@ public class WPC_example_code
                 }
                 break;
 
-            case 7:
+            case 10:
                 switch (example_code)
                 {
                     #region USBDAQF1DSNK_Sys
@@ -677,7 +803,7 @@ public class WPC_example_code
                 }
                 break;
 
-            case 8:
+            case 11:
                 switch (example_code)
                 {
                     #region USBDAQF1RD_Sys
@@ -739,7 +865,7 @@ public class WPC_example_code
                 }
                 break;
 
-            case 9:
+            case 12:
                 switch (example_code)
                 {
                     #region USBDAQF1TD_Sys
@@ -801,7 +927,7 @@ public class WPC_example_code
                 }
                 break;
 
-            case 10:
+            case 13:
                 switch (example_code)
                 {
                     #region WifiDAQE3A_Sys
@@ -836,59 +962,7 @@ public class WPC_example_code
                 }
                 break;
 
-            case 11:
-                switch (example_code)
-                {
-                    #region EthanL_Sys
-                    case 1:
-                        EthanL_get_network_info.Main();
-                        break;
-                    #endregion
 
-                    #region EthanL_DIO
-                    case 20:
-                        EthanL_DIO_loopback_pins.Main();
-                        break;
-                    case 21:
-                        EthanL_DIO_loopback_port.Main();
-                        break;
-                    case 22:
-                        EthanL_DO_blinky_pins.Main();
-                        break;
-                    case 23:
-                        EthanL_DO_blinky_port.Main();
-                        break;
-                    #endregion 
-                    default:
-                        break;
-                }
-                break;
-
-            case 12:
-                switch (example_code)
-                {
-                    #region EthanO_Sys
-                    case 1:
-                        EthanO_get_network_info.Main();
-                        break;
-                    #endregion
-
-                    #region EthanO_AO
-                    case 17:
-                        EthanO_AO_write_all_channels.Main();
-                        break;
-                    case 18:
-                        EthanO_AO_write_one_channel.Main();
-                        break;
-                    case 19:
-                        EthanO_AO_waveform_generation.Main();
-                        break;
-                    #endregion
-
-                    default:
-                        break;
-                }
-                break;
             default:
                 break;
         }  

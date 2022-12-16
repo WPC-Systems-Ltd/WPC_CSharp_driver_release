@@ -535,6 +535,32 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Module_IMotionModule_Motion_loadConfigurationFile_" data-uid="WPC.Module.IMotionModule.Motion_loadConfigurationFile*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_loadConfigurationFile" data-uid="WPC.Module.IMotionModule.Motion_loadConfigurationFile">Motion_loadConfigurationFile()</h4>
+  <div class="markdown level1 summary"><p>Load motion contoller configuration from file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_loadConfigurationFile()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Module_IMotionModule_Motion_open_" data-uid="WPC.Module.IMotionModule.Motion_open*"></a>
   <h4 id="WPC_Module_IMotionModule_Motion_open_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_open(System.Int32,System.Int32)">Motion_open(Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Open motion controller.</p>
@@ -564,6 +590,50 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
         <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_openConfigurationFile_" data-uid="WPC.Module.IMotionModule.Motion_openConfigurationFile*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_openConfigurationFile_System_String_" data-uid="WPC.Module.IMotionModule.Motion_openConfigurationFile(System.String)">Motion_openConfigurationFile(String)</h4>
+  <div class="markdown level1 summary"><p>Open configuration file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_openConfigurationFile(string file_name = &quot;test.ini&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">file_name</span></td>
+        <td><p>The name of configuration file.</p>
 </td>
       </tr>
     </tbody>
@@ -844,6 +914,32 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_saveConfigurationFile_" data-uid="WPC.Module.IMotionModule.Motion_saveConfigurationFile*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_saveConfigurationFile" data-uid="WPC.Module.IMotionModule.Motion_saveConfigurationFile">Motion_saveConfigurationFile()</h4>
+  <div class="markdown level1 summary"><p>Save motion contoller configuration into file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_saveConfigurationFile()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>

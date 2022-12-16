@@ -42,7 +42,7 @@ class EMotion_find_index
             status = dev.Motion_configAxisModeAndDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_AXIS_DIR_CW);
             Console.WriteLine($"Motion_configAxisModeAndDirection status: {status}");
 
-            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_DISABLE, Constant.MOTION_REVERSE_DISABLE);
+            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_ENABLE, Constant.MOTION_REVERSE_ENABLE);
             Console.WriteLine($"Motion_writeEnableLimit status: {status}");
 
             status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_HIGH);

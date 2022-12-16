@@ -1137,6 +1137,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_findReference
   nameWithType: IMotionModule.Motion_findReference
+- uid: WPC.Module.IMotionModule.Motion_loadConfigurationFile
+  name: Motion_loadConfigurationFile()
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_loadConfigurationFile
+  commentId: M:WPC.Module.IMotionModule.Motion_loadConfigurationFile
+  fullName: WPC.Module.IMotionModule.Motion_loadConfigurationFile()
+  nameWithType: IMotionModule.Motion_loadConfigurationFile()
+- uid: WPC.Module.IMotionModule.Motion_loadConfigurationFile*
+  name: Motion_loadConfigurationFile
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_loadConfigurationFile_
+  commentId: Overload:WPC.Module.IMotionModule.Motion_loadConfigurationFile
+  isSpec: "True"
+  fullName: WPC.Module.IMotionModule.Motion_loadConfigurationFile
+  nameWithType: IMotionModule.Motion_loadConfigurationFile
 - uid: WPC.Module.IMotionModule.Motion_open(System.Int32,System.Int32)
   name: Motion_open(Int32, Int32)
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_open_System_Int32_System_Int32_
@@ -1150,6 +1163,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_open
   nameWithType: IMotionModule.Motion_open
+- uid: WPC.Module.IMotionModule.Motion_openConfigurationFile(System.String)
+  name: Motion_openConfigurationFile(String)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_openConfigurationFile_System_String_
+  commentId: M:WPC.Module.IMotionModule.Motion_openConfigurationFile(System.String)
+  fullName: WPC.Module.IMotionModule.Motion_openConfigurationFile(System.String)
+  nameWithType: IMotionModule.Motion_openConfigurationFile(String)
+- uid: WPC.Module.IMotionModule.Motion_openConfigurationFile*
+  name: Motion_openConfigurationFile
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_openConfigurationFile_
+  commentId: Overload:WPC.Module.IMotionModule.Motion_openConfigurationFile
+  isSpec: "True"
+  fullName: WPC.Module.IMotionModule.Motion_openConfigurationFile
+  nameWithType: IMotionModule.Motion_openConfigurationFile
 - uid: WPC.Module.IMotionModule.Motion_readEncoderPosition(System.Int32,System.Int32,System.Int32)
   name: Motion_readEncoderPosition(Int32, Int32, Int32)
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_readEncoderPosition_System_Int32_System_Int32_System_Int32_
@@ -1215,6 +1241,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_resetEncoderPosition
   nameWithType: IMotionModule.Motion_resetEncoderPosition
+- uid: WPC.Module.IMotionModule.Motion_saveConfigurationFile
+  name: Motion_saveConfigurationFile()
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_saveConfigurationFile
+  commentId: M:WPC.Module.IMotionModule.Motion_saveConfigurationFile
+  fullName: WPC.Module.IMotionModule.Motion_saveConfigurationFile()
+  nameWithType: IMotionModule.Motion_saveConfigurationFile()
+- uid: WPC.Module.IMotionModule.Motion_saveConfigurationFile*
+  name: Motion_saveConfigurationFile
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_saveConfigurationFile_
+  commentId: Overload:WPC.Module.IMotionModule.Motion_saveConfigurationFile
+  isSpec: "True"
+  fullName: WPC.Module.IMotionModule.Motion_saveConfigurationFile
+  nameWithType: IMotionModule.Motion_saveConfigurationFile
 - uid: WPC.Module.IMotionModule.Motion_setEnableLimit(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   name: Motion_setEnableLimit(Int32, Int32, Int32, Int32, Int32)
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_setEnableLimit_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
@@ -2308,6 +2347,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Motion_GetLogicalPostion
   nameWithType: EMotion.Motion_GetLogicalPostion
+- uid: WPC.Product.EMotion.Motion_loadConfigurationFile
+  name: Motion_loadConfigurationFile()
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_loadConfigurationFile
+  commentId: M:WPC.Product.EMotion.Motion_loadConfigurationFile
+  fullName: WPC.Product.EMotion.Motion_loadConfigurationFile()
+  nameWithType: EMotion.Motion_loadConfigurationFile()
+- uid: WPC.Product.EMotion.Motion_loadConfigurationFile*
+  name: Motion_loadConfigurationFile
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_loadConfigurationFile_
+  commentId: Overload:WPC.Product.EMotion.Motion_loadConfigurationFile
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Motion_loadConfigurationFile
+  nameWithType: EMotion.Motion_loadConfigurationFile
 - uid: WPC.Product.EMotion.Motion_open(System.Int32,System.Int32)
   name: Motion_open(Int32, Int32)
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_open_System_Int32_System_Int32_
@@ -2321,6 +2373,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Motion_open
   nameWithType: EMotion.Motion_open
+- uid: WPC.Product.EMotion.Motion_openConfigurationFile(System.String)
+  name: Motion_openConfigurationFile(String)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_openConfigurationFile_System_String_
+  commentId: M:WPC.Product.EMotion.Motion_openConfigurationFile(System.String)
+  fullName: WPC.Product.EMotion.Motion_openConfigurationFile(System.String)
+  nameWithType: EMotion.Motion_openConfigurationFile(String)
+- uid: WPC.Product.EMotion.Motion_openConfigurationFile*
+  name: Motion_openConfigurationFile
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_openConfigurationFile_
+  commentId: Overload:WPC.Product.EMotion.Motion_openConfigurationFile
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Motion_openConfigurationFile
+  nameWithType: EMotion.Motion_openConfigurationFile
 - uid: WPC.Product.EMotion.Motion_overrideAxisAccerleration(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   name: Motion_overrideAxisAccerleration(Int32, Int32, Int32, Int32, Int32)
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_overrideAxisAccerleration_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
@@ -2425,6 +2490,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Motion_resetEncoderPosition
   nameWithType: EMotion.Motion_resetEncoderPosition
+- uid: WPC.Product.EMotion.Motion_saveConfigurationFile
+  name: Motion_saveConfigurationFile()
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_saveConfigurationFile
+  commentId: M:WPC.Product.EMotion.Motion_saveConfigurationFile
+  fullName: WPC.Product.EMotion.Motion_saveConfigurationFile()
+  nameWithType: EMotion.Motion_saveConfigurationFile()
+- uid: WPC.Product.EMotion.Motion_saveConfigurationFile*
+  name: Motion_saveConfigurationFile
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_saveConfigurationFile_
+  commentId: Overload:WPC.Product.EMotion.Motion_saveConfigurationFile
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Motion_saveConfigurationFile
+  nameWithType: EMotion.Motion_saveConfigurationFile
 - uid: WPC.Product.EMotion.Motion_setEnableLimit(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   name: Motion_setEnableLimit(Int32, Int32, Int32, Int32, Int32)
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_setEnableLimit_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
