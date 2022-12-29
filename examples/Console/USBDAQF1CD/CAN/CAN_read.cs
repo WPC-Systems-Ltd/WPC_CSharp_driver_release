@@ -1,4 +1,3 @@
-/// <summary>
 /// CAN_read.cs
 /// 
 /// This example demonstrates how to read data from another device with CAN interface from USBDAQF1CD.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 using WPC.Module;

@@ -1,5 +1,3 @@
-
-/// <summary>
 /// SPI_write.cs
 /// 
 /// This example demonstrates how to communicate with USBDAQF1CD (master) and 25LC640(slave) with SPI interface.
@@ -16,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

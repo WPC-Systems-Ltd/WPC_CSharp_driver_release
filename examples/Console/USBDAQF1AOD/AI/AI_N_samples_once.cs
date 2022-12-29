@@ -1,4 +1,3 @@
-/// <summary>
 /// AI_N_samples_once.cs
 /// 
 /// This example demonstrates how to get AI data in once in N sample mode from USBDAQF1AOD.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

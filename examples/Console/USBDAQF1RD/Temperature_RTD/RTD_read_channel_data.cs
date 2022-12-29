@@ -1,4 +1,3 @@
-/// <summary>
 /// RTD_read_channel_data.cs
 /// 
 /// This example demonstrates how to read RTD data in two channels from USBDAQF1RD.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

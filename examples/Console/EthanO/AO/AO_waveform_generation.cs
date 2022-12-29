@@ -1,4 +1,3 @@
-/// <summary>
 /// AO_waveform_generation.cs
 /// 
 /// This example demonstrates how to use AO waveform generation in specific channels from EthanO.
@@ -17,8 +16,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

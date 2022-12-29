@@ -1,4 +1,3 @@
-/// <summary>
 /// I2C_write_read.cs
 /// 
 /// This example demonstrates how to communicate with USBDAQF1AOD (master) and 24C08C(slave) with I2C interface.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

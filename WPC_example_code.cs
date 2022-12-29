@@ -190,15 +190,27 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For motion");
         Console.WriteLine("----------------");
-        Console.WriteLine("Run Motion_get_logical_position.cs, please input 90");
-        Console.WriteLine("Run Motion_one_axis_move.cs, please input 91");
-        Console.WriteLine("Run Motion_find_home.cs, please input 92");
-        Console.WriteLine("Run Motion_find_index.cs, please input 93");
-        Console.WriteLine("Run Motion_find_limit.cs, please input 94");
-        Console.WriteLine("Run Motion_velocity_blending.cs, please input 95");
-        Console.WriteLine("Run Motion_velocity_blending_accerleration.cs, please input 96");
-        Console.WriteLine("Run Motion_set_configuration_file.cs, please input 97");
-        Console.WriteLine("Run Motion_load_configuration_file.cs, please input 98");
+        Console.WriteLine("Run Motion_1axis_move.cs, please input 90");
+        Console.WriteLine("Run Motion_1axis_move_with_alarm_in.cs, please input 91");
+        Console.WriteLine("Run Motion_1axis_move_with_breakpoint.cs, please input 92");
+        Console.WriteLine("Run Motion_1axis_move_with_capture.cs, please input 93");
+        Console.WriteLine("Run Motion_1axis_move_with_configuration_file.cs, please input 94");
+        Console.WriteLine("Run Motion_1axis_move_with_inposition.cs, please input 95");
+        Console.WriteLine("Run Motion_1axis_move_with_S_curve_acceleration.cs, please input 96");
+        Console.WriteLine("Run Motion_2axis_circular_interpolation.cs, please input 97");
+        Console.WriteLine("Run Motion_2axis_linear_interpolation.cs, please input 98");
+        Console.WriteLine("Run Motion_3axis_asynchronous_move.cs, please input 99");
+        Console.WriteLine("Run Motion_3axis_helical_interpolation.cs, please input 100");
+        Console.WriteLine("Run Motion_3axis_linear_interpolation.cs, please input 101");
+        Console.WriteLine("Run Motion_3axis_synchronous_move.cs, please input 102");
+        Console.WriteLine("Run Motion_find_home.cs, please input 103");
+        Console.WriteLine("Run Motion_find_index.cs, please input 104");
+        Console.WriteLine("Run Motion_find_limit.cs, please input 105");
+        Console.WriteLine("Run Motion_get_logical_position.cs, please input 106");
+        Console.WriteLine("Run Motion_load_configuration_file.cs, please input 107");
+        Console.WriteLine("Run Motion_set_configuration_file.cs, please input 108");
+        Console.WriteLine("Run Motion_velocity_blending.cs, please input 109");
+        Console.WriteLine("Run Motion_velocity_blending_accerleration.cs, please input 110"); 
     }
     #endregion
 
@@ -357,32 +369,69 @@ public class WPC_example_code
 
                     #region Emotion_motion
                     case 90:
-                        EMotion_get_logical_position.Main();
+                        EMotion_1axis_move.Main();
                         break;
                     case 91:
-                        EMotion_one_axis_move.Main();
+                        EMotion_1axis_move_with_alarm_in.Main();
                         break;
                     case 92:
-                        EMotion_find_home.Main();
+                        EMotion_1axis_move_with_breakpoint.Main();
                         break;
                     case 93:
-                        EMotion_find_index.Main();
+                        EMotion_1axis_move_with_capture.Main();
                         break;
                     case 94:
-                        EMotion_find_limit.Main();
+                        EMotion_1axis_move_with_configuration_file.Main();
                         break;
                     case 95:
-                        EMotion_velocity_blending.Main();
+                        EMotion_1axis_move_with_inposition.Main();
                         break;
                     case 96:
-                        EMotion_velocity_blending_accerleration.Main();
+                        EMotion_1axis_move_with_S_curve_acceleration.Main();
                         break;
                     case 97:
-                        EMotion_set_configuration_file.Main();
+                        EMotion_2axis_circular_interpolation.Main();
                         break;
                     case 98:
+                        EMotion_2axis_linear_interpolation.Main();
+                        break;
+                    case 99:
+                        EMotion_3axis_asynchronous_move.Main();
+                        break;
+                    case 100:
+                        EMotion_3axis_helical_interpolation.Main();
+                        break;
+                    case 101:
+                        EMotion_3axis_linear_interpolation.Main();
+                        break;
+                    case 102:
+                        EMotion_3axis_synchronous_move.Main();
+                        break;
+                    case 103:
+                        EMotion_find_home.Main();
+                        break;
+                    case 104:
+                        EMotion_find_index.Main();
+                        break;
+                    case 105:
+                        EMotion_find_limit.Main();
+                        break; 
+                    case 106:
+                        EMotion_get_logical_position.Main();
+                        break;
+                    case 107:
                         EMotion_load_configuration_file.Main();
                         break;
+                    case 108:
+                        EMotion_set_configuration_file.Main();
+                        break;
+                    case 109:
+                        EMotion_velocity_blending.Main();
+                        break;
+                    case 110:
+                        EMotion_velocity_blending_accerleration.Main();
+                        break;
+         
                     #endregion
 
                     default:

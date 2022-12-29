@@ -1,4 +1,3 @@
-/// <summary>
 /// TC_read_channel_data_with_logger.cs
 /// 
 /// This example demonstrates how to read thermocouple and write to CSV file from USBDAQF1TD.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary> 
 
 using WPC.Product;
 

@@ -1,4 +1,3 @@
-/// <summary>
 /// Find_all_devices.cs 
 /// 
 /// This example demonstrates how to find all available USB and ethernet devices.
@@ -9,8 +8,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

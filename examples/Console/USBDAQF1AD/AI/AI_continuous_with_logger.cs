@@ -1,4 +1,3 @@
-/// <summary>
 /// AI_continuous_with_logger.cs
 ///
 /// This example demonstrates how to get AI data and write to CSV file in continuous mode from USBDAQF1AD.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

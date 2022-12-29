@@ -1,5 +1,4 @@
-/// <summary>
-/// Get_USB_info.cs
+/// get_USB_info.cs
 /// 
 /// This example demonstrates how to get hardware information from USBDAQF1CD.
 /// 
@@ -13,8 +12,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

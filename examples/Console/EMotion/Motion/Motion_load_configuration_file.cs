@@ -1,4 +1,3 @@
-/// <summary>
 /// Motion_load_configuration_file.cs
 ///
 /// For other examples please check:
@@ -7,8 +6,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
@@ -40,40 +37,15 @@ class EMotion_load_configuration_file
             status = dev.Motion_open(port);
             Console.WriteLine($"Motion_open status: {status}");
 
-            status = dev.Motion_openConfigurationFile("Emotion.ini");
-            Console.WriteLine($"Motion_openConfigurationFile status: {status}");
+            //// Or specify a specific name in a specific dir
+            //status = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
+            
+            status = dev.Motion_openCfgFile("Emotion.ini");
+            Console.WriteLine($"Motion_openCfgFile status: {status}");
 
-            status = dev.Motion_loadConfigurationFile();
-            Console.WriteLine($"Motion_loadConfigurationFile status: {status}");
-             
-            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_DISABLE, Constant.MOTION_REVERSE_DISABLE);
-            Console.WriteLine($"Motion_writeEnableLimit status: {status}");
-
-            status = dev.Motion_setHomeLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_HOME_DISABLE);
-            Console.WriteLine($"Motion_writeHomeLimit status: {status}");
-
-            status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($"Motion_writeLimitPolarity status: {status}");
-
-            status = dev.Motion_setHomePolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_HOME_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($"Motion_writeHomePolarity status: {status}");
-
-            status = dev.Motion_resetEncoderPosition(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_resetEncoderPosition status: {status}");
-
-            status = dev.Motion_start(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_start status: {status}");
-
-            int move_status = 0;
-            while (move_status == 0)
-            {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($"move_status status: {move_status}");
-            }
-
-            status = dev.Motion_stop(port, Constant.MOTION_STOP_TYPE_DECELERATION, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_stop status: {status}");
-
+            status = dev.Motion_loadCfgFile();
+            Console.WriteLine($"Motion_loadCfgFile status: {status}");
+              
             status = dev.Motion_close(port);
             Console.WriteLine($"Motion_close status: {status}");
         }

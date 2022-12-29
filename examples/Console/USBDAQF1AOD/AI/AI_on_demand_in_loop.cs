@@ -1,4 +1,3 @@
-/// <summary>
 /// AI_on_demand_in_loop.cs
 /// 
 /// This example demonstrates how to get AI data with loop in ondemand mode from USBDAQF1AOD.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

@@ -1,5 +1,4 @@
-/// <summary>
-/// Get_network_info.cs
+/// get_network_info.cs
 /// 
 /// This example demonstrates how to get hardware & network information from EthanO.
 /// 
@@ -13,8 +12,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

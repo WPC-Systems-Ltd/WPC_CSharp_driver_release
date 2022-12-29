@@ -1,4 +1,3 @@
-/// <summary>
 /// Motion_velocity_blending_accerleration.cs
 ///
 /// For other examples please check:
@@ -7,8 +6,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
@@ -39,46 +36,43 @@ class EMotion_velocity_blending_accerleration
 
             status = dev.Motion_open(port);
             Console.WriteLine($"Motion_open status: {status}");
+             
+            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
+            Console.WriteLine($"Motion_cfgAxisParam status: {status}");
 
-            status = dev.Motion_configAxisModeAndDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_AXIS_DIR_CW);
-            Console.WriteLine($"Motion_configAxisModeAndDirection status: {status}");
+            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_VELOCITY_MODE, velocity: 3000);
+            Console.WriteLine($"Motion_cfgAxisMove status: {status}");
 
-            status = dev.Motion_configAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_VELOCITY_MODE, velocity: 3000);
-            Console.WriteLine($"Motion_configAxisMove status: {status}");
+            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
+            Console.WriteLine($"Motion_cfgLimit status: {status}");
 
-            status = dev.Motion_setEnableLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_FORWARD_ENABLE, Constant.MOTION_REVERSE_ENABLE);
-            Console.WriteLine($"Motion_writeEnableLimit status: {status}");
+            status = dev.Motion_cfgEncoder(port, Constant.MOTION_AXIS_1, Constant.MOTION_POLARITY_ACTIVE_LOW);
+            Console.WriteLine($"Motion_cfgEncoder status: {status}");
 
-            status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($"Motion_writeLimitPolarity status: {status}");
+            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
+            Console.WriteLine($"Motion_rstEncoderPosi status: {status}");
 
-            status = dev.Motion_setEncoderPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENCODER_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($"Motion_setEncoderPolarity status: {status}");
-
-            status = dev.Motion_resetEncoderPosition(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_resetEncoderPosition status: {status}");
-
-            status = dev.Motion_start(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_start status: {status}");
+            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
+            Console.WriteLine($"Motion_startSingleAxisMove status: {status}");
              
             Thread.Sleep(5000);
              
             status = dev.Motion_overrideAxisVelocity(port, Constant.MOTION_AXIS_1, -3000);
             Console.WriteLine($"Motion_overrideAxisVelocity status: {status}");
 
-            status = dev.Motion_overrideAxisAccerleration(port, Constant.MOTION_AXIS_1, 100, 100);
-            Console.WriteLine($"Motion_overrideAxisAccerleration status: {status}");
+            status = dev.Motion_overrideAxisAccel(port, Constant.MOTION_AXIS_1, 100, 100);
+            Console.WriteLine($"Motion_overrideAxisAccel status: {status}");
              
             Thread.Sleep(5000);
 
             status = dev.Motion_overrideAxisVelocity(port, Constant.MOTION_AXIS_1, 6000);
             Console.WriteLine($"Motion_overrideAxisVelocity status: {status}");
-            status = dev.Motion_overrideAxisAccerleration(port, Constant.MOTION_AXIS_1, 100000, 100000);
-            Console.WriteLine($"Motion_overrideAxisAccerleration status: {status}");
+            status = dev.Motion_overrideAxisAccel(port, Constant.MOTION_AXIS_1, 100000, 100000);
+            Console.WriteLine($"Motion_overrideAxisAccel status: {status}");
              
             Thread.Sleep(5000);
 
-            status = dev.Motion_stop(port, Constant.MOTION_STOP_TYPE_DECELERATION, Constant.MOTION_AXIS_1);
+            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
             Console.WriteLine($"Motion_stop status: {status}");
 
             status = dev.Motion_close(port);

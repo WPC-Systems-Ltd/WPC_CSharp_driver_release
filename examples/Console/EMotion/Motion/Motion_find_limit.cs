@@ -1,4 +1,3 @@
-/// <summary>
 /// Motion_find_limit.cs
 ///
 /// For other examples please check:
@@ -7,8 +6,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
@@ -32,27 +29,31 @@ class EMotion_find_limit
             // Parameters setting
             int status;
             int port = 0;
+            
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
              
             status = dev.Motion_open(port);
             Console.WriteLine($"Motion_open status: {status}");
- 
-            status = dev.Motion_setLimitPolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_LIMIT_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($"Motion_writeLimitPolarity status: {status}");
-
-            status = dev.Motion_setHomePolarity(port, Constant.MOTION_AXIS_1, Constant.MOTION_HOME_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($"Motion_writeHomePolarity status: {status}");
              
-            status = dev.Motion_configAxisModeAndDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_AXIS_DIR_CW);
-            Console.WriteLine($"Motion_configAxisModeAndDirection status: {status}");
-             
-            status = dev.Motion_resetEncoderPosition(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_resetEncoderPosition status: {status}");
+            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
+            Console.WriteLine($"Motion_cfgAxisParam status: {status}");
 
-            status = dev.Motion_findReference(port, Constant.MOTION_AXIS_1, Constant.MOTION_FIND_FORWARD_AND_REVERSE_LIMIT, Constant.MOTION_FIND_REFERENCE_DIR_REVERSE);
-            Console.WriteLine($"Motion_findReference status: {status}");
+            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
+            Console.WriteLine($"Motion_cfgLimit status: {status}");
+
+            status = dev.Motion_cfgFindRef(port, Constant.MOTION_AXIS_1, Constant.MOTION_FIND_FORWARD_AND_REVERSE_LIMIT, Constant.MOTION_DIRECTION_REVERSE);
+            Console.WriteLine($"Motion_cfgFindRef status: {status}");
+
+            status = dev.Motion_cfgHome(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_FALSE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
+            Console.WriteLine($"Motion_cfgHome status: {status}");
+
+            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
+            Console.WriteLine($"Motion_rstEncoderPosi status: {status}");
+             
+            status = dev.Motion_findRef(port, Constant.MOTION_AXIS_1);
+            Console.WriteLine($"Motion_findRef status: {status}");
 
             int finding_referece = 1;
             int found_reference = 0;
@@ -68,15 +69,15 @@ class EMotion_find_limit
                 int home_status = dev.Motion_readHomeStatus(port, Constant.MOTION_AXIS_1);
                 if (home_status == 1) { Console.WriteLine($"Home hit"); }
 
-                List<int>  driving_status = dev.Motion_checkReference(port, Constant.MOTION_AXIS_1);
+                List<int>  driving_status = dev.Motion_checkRef(port, Constant.MOTION_AXIS_1);
                 finding_referece = driving_status[0];
                 found_reference = driving_status[1];  
                 if (found_reference == 1) { Console.WriteLine($"Found reference"); }
                 //if (finding_referece == 1) { Console.WriteLine($"Finding reference"); }
             } 
 
-            status = dev.Motion_stop(port, Constant.MOTION_STOP_TYPE_DECELERATION, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_stop status: {status}"); 
+            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
+            Console.WriteLine($"Motion_stop status: {status}");
  
             status = dev.Motion_close(port);
             Console.WriteLine($"Motion_close status: {status}");

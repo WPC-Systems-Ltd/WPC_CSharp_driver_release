@@ -1,4 +1,3 @@
-/// <summary>
 /// DIO_loopback_port.cs
 /// 
 /// This example demonstrates how to write DIO loopback in port from EthanL.
@@ -17,8 +16,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

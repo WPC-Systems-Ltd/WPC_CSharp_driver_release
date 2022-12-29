@@ -1,4 +1,3 @@
-/// <summary>
 /// Motion_get_logical_position.cs
 ///
 /// For other examples please check:
@@ -7,8 +6,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
@@ -37,14 +34,14 @@ class EMotion_get_logical_position
 
             for (int i = 0; i < 1000; i++) 
             {   
-                status = dev.Motion_setLogicalPostion(port, Constant.MOTION_AXIS_1, i);
+                status = dev.Motion_setLogicalPosi(port, Constant.MOTION_AXIS_1, i);
                 if (status != 0)
                 {
-                    Console.WriteLine($"Motion_setLogicalPostion status: {status}"); 
+                    Console.WriteLine($"Motion_setLogicalPosi status: {status}"); 
                 }
                 
-                int posi = dev.Motion_GetLogicalPostion(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($"Motion_GetLogicalP3ostion: {posi}");
+                int posi = dev.Motion_getLogicalPosi(port, Constant.MOTION_AXIS_1);
+                Console.WriteLine($"Motion_getLogicalPosi: {posi}");
             }
         }
         catch (Exception ex)

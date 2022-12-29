@@ -1,4 +1,3 @@
-/// <summary>
 /// Motion_set_configuration_file.cs
 ///
 /// For other examples please check:
@@ -7,8 +6,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
@@ -39,24 +36,21 @@ class EMotion_set_configuration_file
 
             status = dev.Motion_open(port);
             Console.WriteLine($"Motion_open status: {status}");
+ 
+            //// Or specify a specific name in a specific dir
+            //status = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
+ 
+            status = dev.Motion_openCfgFile("Emotion.ini");
+            Console.WriteLine($"Motion_openCfgFile status: {status}");
 
-            status = dev.Motion_openConfigurationFile("Emotion.ini");
-            Console.WriteLine($"Motion_openConfigurationFile status: {status}");
+            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
+            Console.WriteLine($"Motion_cfgAxisParam status: {status}");
 
-            status = dev.Motion_configAxisModeAndDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_AXIS_DIR_CW);
-            Console.WriteLine($"Motion_configAxisModeAndDirection status: {status}");
+            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, velocity: 2000, target_position: 10000, acceleration: 1000, deceleration: 1000);
+            Console.WriteLine($"Motion_cfgAxisMove status: {status}"); 
 
-            status = dev.Motion_configEncoderDirection(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENCODER_DIR_CW);
-            Console.WriteLine($"Motion_configEncoderDirection status: {status}");
-
-            status = dev.Motion_configAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, velocity: 2000, target_position: 10000, acceleration: 1000, deceleration: 1000);
-            Console.WriteLine($"Motion_configAxisMove status: {status}");
-
-            status = dev.Motion_configInstantLimitStopMode(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_DECELERATING);
-            Console.WriteLine($"Motion_configInstantLimitStopMode status: {status}");
-
-            status = dev.Motion_saveConfigurationFile();
-            Console.WriteLine($"Motion_saveConfigurationFile status: {status}");
+            status = dev.Motion_saveCfgFile();
+            Console.WriteLine($"Motion_saveCfgFile status: {status}");
 
             status = dev.Motion_close(port);
             Console.WriteLine($"Motion_close status: {status}");

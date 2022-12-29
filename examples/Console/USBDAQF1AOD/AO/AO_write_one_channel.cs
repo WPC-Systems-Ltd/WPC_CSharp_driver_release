@@ -1,4 +1,3 @@
-/// <summary>
 /// AO_write_one_channel.cs
 /// 
 /// This example demonstrates how to write AO in specific channels from USBDAQF1AOD.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 

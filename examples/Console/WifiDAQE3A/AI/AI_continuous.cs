@@ -1,4 +1,3 @@
-/// <summary>
 /// AI_continuous.cs
 ///
 /// This example demonstrates how to get AI data with loop in continuous mode from WifiDAQE3A.
@@ -15,8 +14,6 @@
 /// 
 /// Copyright (c) 2022 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
