@@ -101,10 +101,8 @@ class USBDAQF1TD_UART_read
 {
     static public void Main()
     { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -116,7 +114,7 @@ class USBDAQF1TD_UART_read
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 2;
             int baudrate = 9600;
 
@@ -126,35 +124,36 @@ class USBDAQF1TD_UART_read
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open UART port
-            status = dev.UART_open(port);
-            Console.WriteLine($&quot;UART_open status: {status}&quot;);
+            err = dev.UART_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set UART port and set baudrate to 9600
-            status = dev.UART_setBaudRate(port, baudrate);
-            Console.WriteLine($&quot;UART_setBaudRate status: {status}&quot;);
+            err = dev.UART_setBaudRate(port, baudrate);
+            Console.WriteLine($&quot;setBaudRate: {err}&quot;);
 
             // Set UART port and set data bit to 8-bit data
-            status = dev.UART_setDataBit(port, Constant.UART_DATA_SIZE_8_BITS);
-            Console.WriteLine($&quot;UART_setDataBit status: {status}&quot;);
+            err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS);
+            Console.WriteLine($&quot;setDataBit: {err}&quot;);
 
             // Set UART port and set parity to None
-            status = dev.UART_setParity(port, Constant.UART_PARITY_NONE);
-            Console.WriteLine($&quot;UART_setParity status: {status}&quot;);
+            err = dev.UART_setParity(port, Const.UART_PARITY_NONE);
+            Console.WriteLine($&quot;setParity: {err}&quot;);
 
             // Set UART port and set stop bit to to 1 bit
-            status = dev.UART_setNumStopBit(port, Constant.UART_STOP_BIT_1);
-            Console.WriteLine($&quot;UART_setNumStopBit status: {status}&quot;);
+            err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1);
+            Console.WriteLine($&quot;setNumStopBit: {err}&quot;);
 
             // Wait for 10 sec
             Thread.Sleep(10000); // delay [ms]
 
             // Set UART port and read 20 bytes
-            List&lt;byte&gt; data  = dev.UART_read(port, 20);
+            List&lt;byte&gt; data = dev.UART_read(port, 20);
+
             WPC_utilities.printByteList(data);
  
             // Close UART port
-            status = dev.UART_close(port);
-            Console.WriteLine($&quot;UART_close status: {status}&quot;);
+            err = dev.UART_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -166,8 +165,6 @@ class USBDAQF1TD_UART_read
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
@@ -194,11 +191,9 @@ using WPC.Product;
 class USBDAQF1TD_UART_write
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -210,7 +205,7 @@ class USBDAQF1TD_UART_write
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 2;
             int baudrate = 9600;
 
@@ -220,36 +215,36 @@ class USBDAQF1TD_UART_write
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open UART port
-            status = dev.UART_open(port);
-            Console.WriteLine($&quot;UART_open status: {status}&quot;);
+            err = dev.UART_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set UART port and set baudrate to 9600
-            status = dev.UART_setBaudRate(port, baudrate);
-            Console.WriteLine($&quot;UART_setBaudRate status: {status}&quot;);
+            err = dev.UART_setBaudRate(port, baudrate);
+            Console.WriteLine($&quot;setBaudRate: {err}&quot;);
 
             // Set UART port and set data bit to 8-bit data
-            status = dev.UART_setDataBit(port, Constant.UART_DATA_SIZE_8_BITS);
-            Console.WriteLine($&quot;UART_setDataBit status: {status}&quot;);
+            err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS);
+            Console.WriteLine($&quot;setDataBit: {err}&quot;);
 
             // Set UART port and set parity to None
-            status = dev.UART_setParity(port, Constant.UART_PARITY_NONE);
-            Console.WriteLine($&quot;UART_setParity status: {status}&quot;);
+            err = dev.UART_setParity(port, Const.UART_PARITY_NONE);
+            Console.WriteLine($&quot;setParity: {err}&quot;);
 
             // Set UART port and set stop bit to 1 bit
-            status = dev.UART_setNumStopBit(port, Constant.UART_STOP_BIT_1);
-            Console.WriteLine($&quot;UART_setNumStopBit status: {status}&quot;);
+            err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1);
+            Console.WriteLine($&quot;setNumStopBit: {err}&quot;);
 
             // Set UART port and and write &quot;chunglee people&quot; to device
-            status = dev.UART_write(port, &quot;chunglee_people&quot;);
-            Console.WriteLine($&quot;UART_write status: {status}&quot;);
+            err = dev.UART_write(port, &quot;chunglee_people&quot;);
+            Console.WriteLine($&quot;write: {err}&quot;);;
 
             // Set UART port and and write &quot;WPC_systems&quot; to device
-            status = dev.UART_write(port, &quot;WPC_systems&quot;);
-            Console.WriteLine($&quot;UART_write status: {status}&quot;);
+            err = dev.UART_write(port, &quot;WPC_systems&quot;);
+            Console.WriteLine($&quot;write: {err}&quot;);;
 
             // Close UART port
-            status = dev.UART_close(port);
-            Console.WriteLine($&quot;UART_close status: {status}&quot;);
+            err = dev.UART_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);;
         }
         catch (Exception ex)
         {
@@ -261,8 +256,6 @@ class USBDAQF1TD_UART_write
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>

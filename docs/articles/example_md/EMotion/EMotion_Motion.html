@@ -110,11 +110,9 @@ using WPC.Product;
 class EMotion_get_logical_position
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {   
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -124,7 +122,7 @@ class EMotion_get_logical_position
         
         try
         {  
-            int status;
+            int err;
             int port = 0;
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -132,14 +130,14 @@ class EMotion_get_logical_position
 
             for (int i = 0; i &lt; 1000; i++) 
             {   
-                status = dev.Motion_setLogicalPosi(port, Constant.MOTION_AXIS_1, i);
-                if (status != 0)
+                err = dev.Motion_setLogicalPosi(port, Const.MOT_AXIS1, i);
+                if (err != 0)
                 {
-                    Console.WriteLine($&quot;Motion_setLogicalPosi status: {status}&quot;); 
+                    Console.WriteLine($&quot;setLogicalPosi: {err}&quot;);
                 }
                 
-                int posi = dev.Motion_getLogicalPosi(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_getLogicalPosi: {posi}&quot;);
+                int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;getLogicalPosi: {posi}&quot;);
             }
         }
         catch (Exception ex)
@@ -151,9 +149,7 @@ class EMotion_get_logical_position
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -172,11 +168,9 @@ using WPC.Product;
 class EMotion_1axis_move
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -187,46 +181,45 @@ class EMotion_1axis_move
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
              
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
-            status = dev.Motion_cfgHome(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_FALSE, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgHome status: {status}&quot;);
+            err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgHome: {err}&quot;);
              
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;); 
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
   
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
             int move_status = 0; 
             while (move_status == 0) 
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_readMoveStatus : {move_status}&quot;);
-            }
-
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;Motion_getMoveStatus : {move_status}&quot;);
+            } 
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
  
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port); 
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -237,9 +230,7 @@ class EMotion_1axis_move
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -258,11 +249,9 @@ using WPC.Product;
 class EMotion_1axis_move_with_alarm_in
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -273,59 +262,55 @@ class EMotion_1axis_move_with_alarm_in
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
-            status = dev.Motion_cfgAlarm(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_FALSE, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAlarm status: {status}&quot;);
+            err = dev.Motion_cfgAlarm(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAlarm: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
 
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_readMoveStatus : {move_status}&quot;);
-            }
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;Motion_getMoveStatus : {move_status}&quot;);
+            } 
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;); 
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex);
         }
-
         // Disconnect device
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 } 
 </code></pre></section>
@@ -344,11 +329,9 @@ using WPC.Product;
 class EMotion_1axis_move_with_inposition
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -359,46 +342,46 @@ class EMotion_1axis_move_with_inposition
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
-            status = dev.Motion_cfgInposi(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_FALSE, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgInposi status: {status}&quot;);
+            err = dev.Motion_cfgInposi(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgInposi: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
 
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_readMoveStatus : {move_status}&quot;);
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;Motion_getMoveStatus : {move_status}&quot;);
             }
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;); 
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -409,9 +392,7 @@ class EMotion_1axis_move_with_inposition
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 } 
 </code></pre></section>
@@ -430,11 +411,9 @@ using WPC.Product;
 class EMotion_1axis_move_with_configuration_file
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {   
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -445,46 +424,45 @@ class EMotion_1axis_move_with_configuration_file
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             //// Or specify a specific name in a specific dir
-            //status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
-            status = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
              
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_readMoveStatus : {move_status}&quot;);
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;Motion_getMoveStatus : {move_status}&quot;);
             }
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
  
         }
         catch (Exception ex)
@@ -496,9 +474,7 @@ class EMotion_1axis_move_with_configuration_file
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -517,11 +493,9 @@ using WPC.Product;
 class EMotion_1axis_move_with_breakpoint
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -532,7 +506,7 @@ class EMotion_1axis_move_with_breakpoint
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -540,41 +514,41 @@ class EMotion_1axis_move_with_breakpoint
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
             //// Or specify a specific name in a specific dir
-            //status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
-            status = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
  
-            status = dev.Motion_cfgBreakPoint(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, Constant.MOTION_POLARITY_ACTIVE_HIGH, 100, 100, 100, 100);
-            Console.WriteLine($&quot;Motion_cfgBreakPoint status: {status}&quot;);
+            err = dev.Motion_cfgBreakPoint(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, Const.MOT_ACTIVE_HIGH, 100, 100, 100, 100);
+            Console.WriteLine($&quot;cfgBreakPoint: {err}&quot;);
 
-            status = dev.Motion_setBreakPointEnable(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE);
-            Console.WriteLine($&quot;Motion_setBreakPointEnable status: {status}&quot;);
+            err = dev.Motion_enableBreakPoint(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;setBreakPointEnable: {err}&quot;);
              
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
              
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_readMoveStatus : {move_status}&quot;);
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;Motion_getMoveStatus: {move_status}&quot;);
             }
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
  
         }
         catch (Exception ex)
@@ -586,9 +560,7 @@ class EMotion_1axis_move_with_breakpoint
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -607,11 +579,9 @@ using WPC.Product;
 class EMotion_1axis_move_with_capture
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -622,56 +592,54 @@ class EMotion_1axis_move_with_capture
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             //// Or specify a specific name in a specific dir
-            //status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
-            status = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
 
-            status = dev.Motion_cfgCapture(port, Constant.MOTION_AXIS_1, Constant.MOTION_CAPTURE_RISING_EDGE_TYPE, Constant.MOTION_CAPTURE_LOGICAL_POSITION_MODE);
-            Console.WriteLine($&quot;Motion_cfgCapture status: {status}&quot;);
+            err = dev.Motion_cfgCapture(port, Const.MOT_AXIS1, Const.MOT_CAPTURE_RISING_EDGE, Const.MOT_CAPTURE_LOGICAL_POSITION);
+            Console.WriteLine($&quot;cfgCapture: {err}&quot;);
 
-            status = dev.Motion_setCaptureEnable(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE);
-            Console.WriteLine($&quot;Motion_setCaptureEnable status: {status}&quot;);
+            err = dev.Motion_enableCapture(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;setCaptureEnable: {err}&quot;);
              
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
              
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_readMoveStatus : {move_status}&quot;);
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;Motion_getMoveStatus : {move_status}&quot;);
                 
-                int capture_points = dev.Motion_readCapturePoint(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_readCapturePoint|: {move_status}&quot;);
-            }
+                int capture_points = dev.Motion_readCapturePoint(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;Motion_readCapturePoint: {move_status}&quot;);
+            } 
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
- 
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;); 
         }
         catch (Exception ex)
         {
@@ -682,9 +650,7 @@ class EMotion_1axis_move_with_capture
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -703,11 +669,9 @@ using WPC.Product;
 class EMotion_1axis_move_with_S_curve_acceleration
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -718,53 +682,51 @@ class EMotion_1axis_move_with_S_curve_acceleration
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             //// Or specify a specific name in a specific dir
-            //status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
-            status = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);;
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+             Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
 
-            status = dev.Motion_cfgJerkAndAccelMode(port, Constant.MOTION_AXIS_1, 1, Constant.MOTION_ACCEL_SCURVE_MODE);
-            Console.WriteLine($&quot;Motion_cfgJerkAndAccelMode status: {status}&quot;); 
+            err = dev.Motion_cfgJerkAndAccelMode(port, Const.MOT_AXIS1, 1, Const.MOT_SCURVE);
+            Console.WriteLine($&quot;cfgJerkAndAccelMode: {err}&quot;);
 
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;Motion_readMoveStatus : {move_status}&quot;);
-            }
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;Motion_getMoveStatus : {move_status}&quot;);
+            } 
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_INSTANT); // Use Halt in S-Curve Move to prevent stop too slow
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_INSTANT); // Use Halt in S-Curve Move to prevent stop too slow
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
- 
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;); 
         }
         catch (Exception ex)
         {
@@ -775,9 +737,7 @@ class EMotion_1axis_move_with_S_curve_acceleration
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -806,11 +766,9 @@ using WPC.Product;
 class EMotion_velocity_blending
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -821,51 +779,51 @@ class EMotion_velocity_blending
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
-            status = dev.Motion_cfgEncoder(port, Constant.MOTION_AXIS_1, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgEncoder status: {status}&quot;);
+            err = dev.Motion_cfgEncoder(port, Const.MOT_AXIS1, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgEncoder: {err}&quot;);
 
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_VELOCITY_MODE, target_position: 10000, velocity: 1000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_VELOCITY, target_position: 10000, velocity: 1000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
-
-            Thread.Sleep(3000);
-
-            status = dev.Motion_overrideAxisVelocity(port, Constant.MOTION_AXIS_1, 5000);
-            Console.WriteLine($&quot;Motion_overrideAxisVelocity status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
             Thread.Sleep(3000);
 
-            status = dev.Motion_overrideAxisVelocity(port, Constant.MOTION_AXIS_1, -3000);
-            Console.WriteLine($&quot;Motion_overrideAxisVelocity status: {status}&quot;);
+            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, 5000);
+            Console.WriteLine($&quot;overrideAxisVelocity: {err}&quot;);
 
             Thread.Sleep(3000);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, -3000);
+            Console.WriteLine($&quot;overrideAxisVelocity: {err}&quot;);
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            Thread.Sleep(3000);
+
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
+
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -876,9 +834,7 @@ class EMotion_velocity_blending
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -897,11 +853,9 @@ using WPC.Product;
 class EMotion_velocity_blending_accerleration
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -912,56 +866,57 @@ class EMotion_velocity_blending_accerleration
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
              
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_VELOCITY_MODE, velocity: 3000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_VELOCITY, velocity: 3000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
-            status = dev.Motion_cfgEncoder(port, Constant.MOTION_AXIS_1, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgEncoder status: {status}&quot;);
+            err = dev.Motion_cfgEncoder(port, Const.MOT_AXIS1, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgEncoder: {err}&quot;);
 
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_startSingleAxisMove status: {status}&quot;);
-             
-            Thread.Sleep(5000);
-             
-            status = dev.Motion_overrideAxisVelocity(port, Constant.MOTION_AXIS_1, -3000);
-            Console.WriteLine($&quot;Motion_overrideAxisVelocity status: {status}&quot;);
-
-            status = dev.Motion_overrideAxisAccel(port, Constant.MOTION_AXIS_1, 100, 100);
-            Console.WriteLine($&quot;Motion_overrideAxisAccel status: {status}&quot;);
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
              
             Thread.Sleep(5000);
+             
+            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, -3000);
+            Console.WriteLine($&quot;overrideAxisVelocity: {err}&quot;);
 
-            status = dev.Motion_overrideAxisVelocity(port, Constant.MOTION_AXIS_1, 6000);
-            Console.WriteLine($&quot;Motion_overrideAxisVelocity status: {status}&quot;);
-            status = dev.Motion_overrideAxisAccel(port, Constant.MOTION_AXIS_1, 100000, 100000);
-            Console.WriteLine($&quot;Motion_overrideAxisAccel status: {status}&quot;);
+            err = dev.Motion_overrideAxisAccel(port, Const.MOT_AXIS1, 100, 100);
+            Console.WriteLine($&quot;overrideAxisAccel: {err}&quot;);;
              
             Thread.Sleep(5000);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, 6000);
+            Console.WriteLine($&quot;overrideAxisVelocity: {err}&quot;);
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_overrideAxisAccel(port, Const.MOT_AXIS1, 100000, 100000);
+            Console.WriteLine($&quot;overrideAxisAccel: {err}&quot;);
+             
+            Thread.Sleep(5000);
+
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
+
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -972,9 +927,7 @@ class EMotion_velocity_blending_accerleration
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     } 
 }
 </code></pre></section>
@@ -1003,11 +956,9 @@ using WPC.Product;
 class EMotion_set_configuration_file
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {   
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1018,33 +969,33 @@ class EMotion_set_configuration_file
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
  
             //// Or specify a specific name in a specific dir
-            //status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
  
-            status = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, velocity: 2000, target_position: 10000, acceleration: 1000, deceleration: 1000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;); 
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, velocity: 2000, target_position: 10000, acceleration: 1000, deceleration: 1000);
+            Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
 
-            status = dev.Motion_saveCfgFile();
-            Console.WriteLine($&quot;Motion_saveCfgFile status: {status}&quot;);
+            err = dev.Motion_saveCfgFile();
+            Console.WriteLine($&quot;saveCfgFile: {err}&quot;);
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1055,9 +1006,7 @@ class EMotion_set_configuration_file
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
       } 
 } 
 </code></pre></section>
@@ -1076,11 +1025,9 @@ using WPC.Product;
 class EMotion_load_configuration_file
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1091,27 +1038,27 @@ class EMotion_load_configuration_file
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
  
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             //// Or specify a specific name in a specific dir
-            //status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
             
-            status = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
               
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1123,8 +1070,6 @@ class EMotion_load_configuration_file
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     } 
 }
 </code></pre></section>
@@ -1156,11 +1101,9 @@ using WPC.Product;
 class EMotion_find_home
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1171,61 +1114,61 @@ class EMotion_find_home
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
             
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit: {err}&quot;);
              
-            status = dev.Motion_cfgFindRef(port, Constant.MOTION_AXIS_1, Constant.MOTION_FIND_HOME, Constant.MOTION_DIRECTION_REVERSE);
-            Console.WriteLine($&quot;Motion_cfgFindRef status: {status}&quot;);
+            err = dev.Motion_cfgFindRef(port, Const.MOT_AXIS1, Const.MOT_FIND_HOME, Const.MOT_DIR_REVERSE);
+            Console.WriteLine($&quot;cfgFindRef: {err}&quot;);
 
-            status = dev.Motion_cfgHome(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_FALSE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgHome status: {status}&quot;);
+            err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgHome: {err}&quot;);
 
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_findRef(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_findRef status: {status}&quot;);
+            err = dev.Motion_findRef(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;findRef: {err}&quot;);
 
             int finding_referece = 1;
             int found_reference = 0;
             while (found_reference == 0)
             {
                 // read forward and reverse limit status
-                List&lt;int&gt; hit_status = dev.Motion_readLimitStatus(port, Constant.MOTION_AXIS_1); 
+                List&lt;int&gt; hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1); 
                 int forward_hit = hit_status[0];
                 int reverse_hit = hit_status[1];
                 if (forward_hit == 1) { Console.WriteLine($&quot;Forward hit&quot;); }
                 if (reverse_hit == 1) { Console.WriteLine($&quot;Reverse hit&quot;); }
 
                 // read home status
-                int home_status = dev.Motion_readHomeStatus(port, Constant.MOTION_AXIS_1);
+                int home_status = dev.Motion_getHomeStatus(port, Const.MOT_AXIS1);
                 if (home_status == 1) { Console.WriteLine($&quot;Home hit&quot;); }
                 
                 // Check finding and found status
-                List&lt;int&gt; driving_status = dev.Motion_checkRef(port, Constant.MOTION_AXIS_1);
+                List&lt;int&gt; driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1);
                 finding_referece = driving_status[0];
                 found_reference = driving_status[1];  
                 if (found_reference == 1) { Console.WriteLine($&quot;Found refernce&quot;); }
                 if (finding_referece == 1) { Console.WriteLine($&quot;Finding refernce&quot;); }
             } 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
  
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1236,9 +1179,7 @@ class EMotion_find_home
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -1257,11 +1198,9 @@ using WPC.Product;
 class EMotion_find_limit
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {   
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1272,60 +1211,59 @@ class EMotion_find_limit
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
             
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
              
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
              
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
-            status = dev.Motion_cfgFindRef(port, Constant.MOTION_AXIS_1, Constant.MOTION_FIND_FORWARD_AND_REVERSE_LIMIT, Constant.MOTION_DIRECTION_REVERSE);
-            Console.WriteLine($&quot;Motion_cfgFindRef status: {status}&quot;);
+            err = dev.Motion_cfgFindRef(port, Const.MOT_AXIS1, Const.MOT_FIND_LIMIT, Const.MOT_DIR_REVERSE);
+            Console.WriteLine($&quot;cfgFindRef: {err}&quot;);
 
-            status = dev.Motion_cfgHome(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_FALSE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgHome status: {status}&quot;);
+            err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgHome: {err}&quot;);
 
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
              
-            status = dev.Motion_findRef(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_findRef status: {status}&quot;);
+            err = dev.Motion_findRef(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;findRef: {err}&quot;);
 
             int finding_referece = 1;
             int found_reference = 0;
             while (found_reference == 0)
             {
                 // read forward and reverse limit
-                List&lt;int&gt; hit_status = dev.Motion_readLimitStatus(port, Constant.MOTION_AXIS_1); 
+                List&lt;int&gt; hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1); 
                 int forward_hit = hit_status[0];
                 int reverse_hit = hit_status[1];
                 if (forward_hit == 1) { Console.WriteLine($&quot;Forward hit&quot;); }
                 if (reverse_hit == 1) { Console.WriteLine($&quot;Reverse hit&quot;); }
 
-                int home_status = dev.Motion_readHomeStatus(port, Constant.MOTION_AXIS_1);
+                int home_status = dev.Motion_getHomeStatus(port, Const.MOT_AXIS1);
                 if (home_status == 1) { Console.WriteLine($&quot;Home hit&quot;); }
 
-                List&lt;int&gt;  driving_status = dev.Motion_checkRef(port, Constant.MOTION_AXIS_1);
+                List&lt;int&gt;  driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1);
                 finding_referece = driving_status[0];
                 found_reference = driving_status[1];  
                 if (found_reference == 1) { Console.WriteLine($&quot;Found reference&quot;); }
                 //if (finding_referece == 1) { Console.WriteLine($&quot;Finding reference&quot;); }
-            } 
-
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            }  
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
  
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1336,9 +1274,7 @@ class EMotion_find_limit
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -1357,11 +1293,9 @@ using WPC.Product;
 class EMotion_find_index
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {   
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1372,56 +1306,55 @@ class EMotion_find_index
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
              
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
-            status = dev.Motion_cfgFindRef(port, Constant.MOTION_AXIS_1, Constant.MOTION_FIND_INDEX, Constant.MOTION_DIRECTION_REVERSE);
-            Console.WriteLine($&quot;Motion_cfgFindRef status: {status}&quot;);
+            err = dev.Motion_cfgFindRef(port, Const.MOT_AXIS1, Const.MOT_FIND_INDEX, Const.MOT_DIR_REVERSE);
+            Console.WriteLine($&quot;cfgFindRef: {err}&quot;);
 
-            status = dev.Motion_cfgEncoder(port, Constant.MOTION_AXIS_1, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgEncoder status: {status}&quot;);
+            err = dev.Motion_cfgEncoder(port, Const.MOT_AXIS1, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgEncoder: {err}&quot;);
                
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi status: {status}&quot;);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
-            status = dev.Motion_findRef(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($&quot;Motion_findRef status: {status}&quot;);
+            err = dev.Motion_findRef(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;findRef: {err}&quot;);
 
             int finding_referece = 1;
             int found_reference = 0;
             while (found_reference == 0)
             {
                 // read forward and reverse limit
-                List&lt;int&gt; hit_status = dev.Motion_readLimitStatus(port, Constant.MOTION_AXIS_1); 
+                List&lt;int&gt; hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1); 
                 int forward_hit = hit_status[0];
                 int reverse_hit = hit_status[1];
                 if (forward_hit == 1) { Console.WriteLine($&quot;Forward hit&quot;); }
                 if (reverse_hit == 1) { Console.WriteLine($&quot;Reverse hit&quot;); }
                   
-                List&lt;int&gt;  driving_status = dev.Motion_checkRef(port, Constant.MOTION_AXIS_1);
+                List&lt;int&gt;  driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1);
                 finding_referece = driving_status[0];
                 found_reference = driving_status[1];  
                 if (found_reference == 1) { Console.WriteLine($&quot;Found reference&quot;); }
                 //if (finding_referece == 1) { Console.WriteLine($&quot;Finding reference&quot;); }
-            } 
-
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            }  
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
  
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1432,9 +1365,7 @@ class EMotion_find_index
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 } 
 </code></pre></section>
@@ -1475,11 +1406,9 @@ using WPC.Product;
 class EMotion_2axis_linear_interpolation
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1490,48 +1419,49 @@ class EMotion_2axis_linear_interpolation
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
-            status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\3AxisStage_2P.ini&quot;);
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            //// Or specify a specific name in a specific dir
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            status = dev.Motion_cfg2AxisLinearInterpo(port, Constant.MOTION_AXIS_1, 2000, Constant.MOTION_AXIS_2, 2000, linear_interpo_vector_speed: 2000);
-            Console.WriteLine($&quot;Motion_cfg2AxisLinearInterpo status: {status}&quot;);
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;oadCfgFile: {err}&quot;);
 
-            status = dev.Motion_startLinearInterpo(port);
-            Console.WriteLine($&quot;Motion_startLinearInterpo status: {status}&quot;);
+            err = dev.Motion_cfg2AxisLinearInterpo(port, Const.MOT_AXIS1, 2000, Const.MOT_AXIS2, 2000, linear_interpo_vector_speed: 2000);
+            Console.WriteLine($&quot;cfg2AxisLinearInterpo: {err}&quot;);
 
-
+            err = dev.Motion_startLinearInterpo(port);
+            Console.WriteLine($&quot;startLinearInterpo: {err}&quot;);
+ 
             int move_status = 0;
             while (move_status == 0)
             { 
-                int axis1_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                int axis2_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_2);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2);
 
                 move_status = axis1_move_status &amp; axis2_move_status;
                 if (move_status == 0) { Console.WriteLine($&quot;Moving......&quot;); }
                 else { Console.WriteLine($&quot;Move completed&quot;); }
-            }
+            } 
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis1: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;); 
+            err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis2: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_2, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;); 
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1542,9 +1472,7 @@ class EMotion_2axis_linear_interpolation
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -1563,11 +1491,9 @@ using WPC.Product;
 class EMotion_2axis_circular_interpolation
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1578,40 +1504,42 @@ class EMotion_2axis_circular_interpolation
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
-            status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\3AxisStage_2P.ini&quot;); 
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            //// Or specify a specific name in a specific dir
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
+
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
              
-            status = dev.Motion_cfgCircularInterpo(port, Constant.MOTION_AXIS_1, Constant.MOTION_AXIS_2, 2000, 2000, 0, 0, Constant.MOTION_DIRECTION_CW, circular_interpo_vector_speed:1000);
-            Console.WriteLine($&quot;Motion_cfgCircularInterpo status: {status}&quot;);
+            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, 2000, 2000, 0, 0, Const.MOT_DIR_CW, circular_interpo_vector_speed:1000);
+            Console.WriteLine($&quot;cfgCircularInterpo: {err}&quot;);
              
-            status = dev.Motion_startCircularInterpo(port);
-            Console.WriteLine($&quot;Motion_startCircularInterpo status: {status}&quot;);
+            err = dev.Motion_startCircularInterpo(port);
+            Console.WriteLine($&quot;startCircularInterpo: {err}&quot;);
              
             int move_status = 0;
             while (move_status == 0)
             { 
-                int axis1_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                int axis2_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_2);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2);
                 move_status = axis1_move_status &amp; axis2_move_status;    
                 if (move_status == 0) { Console.WriteLine($&quot;Moving......&quot;); }
                 else { Console.WriteLine($&quot;Move completed&quot;); }
-            }
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            } 
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1622,9 +1550,7 @@ class EMotion_2axis_circular_interpolation
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 } 
 </code></pre></section>
@@ -1643,11 +1569,9 @@ using WPC.Product;
 class EMotion_3axis_helical_interpolation
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {   
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1658,43 +1582,42 @@ class EMotion_3axis_helical_interpolation
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             //// Or specify a specific name in a specific dir
-            //status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
-            status = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
 
-            status = dev.Motion_cfgHelicalInterpo(port, 0, 0, 100, 100, Constant.MOTION_ENABLE_FALSE, 0, Constant.MOTION_ENABLE_FALSE, 0, 0, 0, Constant.MOTION_DIRECTION_CW, 1000);
-            Console.WriteLine($&quot;Motion_cfgHelicalInterpo status: {status}&quot;);
+            err = dev.Motion_cfgHelicalInterpo(port, 0, 0, 100, 100, Const.MOT_FALSE, 0, Const.MOT_FALSE, 0, 0, 0, Const.MOT_DIR_CW, 1000);
+            Console.WriteLine($&quot;cfgHelicalInterpo: {err}&quot;);
              
-            status = dev.Motion_startHelicalInterpo(port);
-            Console.WriteLine($&quot;Motion_startHelicalInterpo status: {status}&quot;);
+            err = dev.Motion_startHelicalInterpo(port);
+            Console.WriteLine($&quot;startHelicalInterpo: {err}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($&quot;move_status status: {move_status}&quot;); 
-            }
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($&quot;move_status err: {move_status}&quot;); 
+            } 
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;); 
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1706,8 +1629,6 @@ class EMotion_3axis_helical_interpolation
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
@@ -1726,11 +1647,9 @@ using WPC.Product;
 class EMotion_3axis_linear_interpolation
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1741,50 +1660,53 @@ class EMotion_3axis_linear_interpolation
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
-            status = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\3AxisStage_2P.ini&quot;); 
-            Console.WriteLine($&quot;Motion_openCfgFile status: {status}&quot;);
+            //// Or specify a specific name in a specific dir
+            //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;Motion_loadCfgFile status: {status}&quot;);
+            err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
+            Console.WriteLine($&quot;openCfgFile: {err}&quot;);
+            
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
 
-            status = dev.Motion_cfg3AxisLinearInterpo(port, Constant.MOTION_AXIS_1, -2000, Constant.MOTION_AXIS_2, -2000, Constant.MOTION_AXIS_3, 3000, linear_interpo_vector_speed:2000);
-            Console.WriteLine($&quot;Motion_cfg3AxisLinearInterpo status: {status}&quot;);
+            err = dev.Motion_cfg3AxisLinearInterpo(port, Const.MOT_AXIS1, -2000, Const.MOT_AXIS2, -2000, Const.MOT_AXIS3, 3000, linear_interpo_vector_speed:2000);
+            Console.WriteLine($&quot;cfg3AxisLinearInterpo: {err}&quot;);
 
-            status = dev.Motion_startLinearInterpo(port);
-            Console.WriteLine($&quot;Motion_startLinearInterpo status: {status}&quot;);
+            err = dev.Motion_startLinearInterpo(port);
+            Console.WriteLine($&quot;startLinearInterpo: {err}&quot;);
  
             int move_status = 0;
             while (move_status == 0)
             { 
-                int axis1_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                int axis2_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_2);
-                int axis3_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_3);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2);
+                int axis3_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS3);
                 move_status = axis1_move_status &amp; axis2_move_status &amp; axis3_move_status;    
                 if (move_status == 0) { Console.WriteLine($&quot;Moving......&quot;); }
                 else { Console.WriteLine($&quot;Move completed&quot;); }
             }
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;); 
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis1: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_2, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;); 
+            err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis2: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_3, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS3, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis3: {err}&quot;);
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;);
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -1795,9 +1717,7 @@ class EMotion_3axis_linear_interpolation
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -1820,7 +1740,7 @@ class EMotion_3axis_synchronous_move
         int move_status = 0;
         while (move_status == 0)
         {
-            move_status = handle.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
+            move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;Axis 1 move status: {move_status}&quot;);
             Thread.Sleep(5);
         }
@@ -1831,7 +1751,7 @@ class EMotion_3axis_synchronous_move
         int move_status = 0;
         while (move_status == 0)
         {
-            move_status = handle.Motion_readMoveStatus(port, Constant.MOTION_AXIS_2);
+            move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS2);
             Console.WriteLine($&quot;Axis 2 move status: {move_status}&quot;);
             Thread.Sleep(5);
         }
@@ -1842,18 +1762,16 @@ class EMotion_3axis_synchronous_move
         int move_status = 0;
         while (move_status == 0)
         {
-            move_status = handle.Motion_readMoveStatus(port, Constant.MOTION_AXIS_3);
+            move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS3);
             Console.WriteLine($&quot;Axis 3 move status: {move_status}&quot;);
             Thread.Sleep(5);
         }
     }
     
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {   
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -1864,49 +1782,49 @@ class EMotion_3axis_synchronous_move
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
             
             // For Axis 1
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam axis1: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;); 
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit axis1: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove axis1: {err}&quot;);
 
             // For Axis 2
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_2, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam axis2: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_2, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS2, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+             Console.WriteLine($&quot;cfgLimit axis2: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_2, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS2, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove axis2: {err}&quot;);
              
             // For Axis 3
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_3, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam axis3: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_3, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS3, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit axis3: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_3, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS3, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove axis3: {err}&quot;);
 
             List&lt;int&gt; axis_list = new List&lt;int&gt; {0, 1, 2};
-            status = dev.Motion_startMultiAxisMove(port, axis_list);
-            Console.WriteLine($&quot;Motion_startMultiAxisMove status: {status}&quot;);
+            err = dev.Motion_startMultiAxisMove(port, axis_list);
+            Console.WriteLine($&quot;startMultiAxisMove: {err}&quot;);
 
             Thread T1 = new Thread(() =&gt; Axis1_Thread(dev, port));
             Thread T2 = new Thread(() =&gt; Axis2_Thread(dev, port));
@@ -1925,17 +1843,17 @@ class EMotion_3axis_synchronous_move
             T3.Join();
             Console.WriteLine(&quot;Axis3_Thread returned.&quot;);
              
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis1: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_2, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis2: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_3, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS3, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis3: {err}&quot;);
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;); 
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;); 
         }
         catch (Exception ex)
         {
@@ -1946,9 +1864,7 @@ class EMotion_3axis_synchronous_move
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -1971,7 +1887,7 @@ class EMotion_3axis_asynchronous_move
         int move_status = 0;
         while (move_status == 0)
         {
-            move_status = handle.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
+            move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;Axis 1 move status: {move_status}&quot;);
             Thread.Sleep(5);
         }
@@ -1982,7 +1898,7 @@ class EMotion_3axis_asynchronous_move
         int move_status = 0;
         while (move_status == 0)
         {
-            move_status = handle.Motion_readMoveStatus(port, Constant.MOTION_AXIS_2);
+            move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS2);
             Console.WriteLine($&quot;Axis 2 move status: {move_status}&quot;);
             Thread.Sleep(5);
         }
@@ -1993,18 +1909,16 @@ class EMotion_3axis_asynchronous_move
         int move_status = 0;
         while (move_status == 0)
         {
-            move_status = handle.Motion_readMoveStatus(port, Constant.MOTION_AXIS_3);
+            move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS3);
             Console.WriteLine($&quot;Axis 3 move status: {move_status}&quot;);
             Thread.Sleep(5);
         }
     }
     
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -2015,49 +1929,49 @@ class EMotion_3axis_asynchronous_move
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($&quot;Motion_open status: {status}&quot;);
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
             
             // For Axis 1
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam axis1: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;); 
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit axis1: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove axis1: {err}&quot;);
 
             // For Axis 2
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_2, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam axis2: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_2, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS2, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit axis2: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_2, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS2, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove axis2: {err}&quot;);
              
             // For Axis 3
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_3, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($&quot;Motion_cfgAxisParam status: {status}&quot;);
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxisParam axis3: {err}&quot;);
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_3, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($&quot;Motion_cfgLimit status: {status}&quot;);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS3, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($&quot;cfgLimit axis3: {err}&quot;);
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_3, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($&quot;Motion_cfgAxisMove status: {status}&quot;);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS3, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($&quot;cfgAxisMove axis3: {err}&quot;);
 
             List&lt;int&gt; axis_list = new List&lt;int&gt; {0, 1, 2};
-            status = dev.Motion_startMultiAxisMove(port, axis_list);
-            Console.WriteLine($&quot;Motion_startMultiAxisMove status: {status}&quot;);
+            err = dev.Motion_startMultiAxisMove(port, axis_list);
+            Console.WriteLine($&quot;startMultiAxisMove: {err}&quot;);
 
             Thread T1 = new Thread(() =&gt; Axis1_Thread(dev, port));
             Thread T2 = new Thread(() =&gt; Axis2_Thread(dev, port));
@@ -2076,17 +1990,17 @@ class EMotion_3axis_asynchronous_move
             T3.Join();
             Console.WriteLine(&quot;Axis3_Thread returned.&quot;);
              
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis1: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_2, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis2: {err}&quot;);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_3, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;Motion_stop status: {status}&quot;);
+            err = dev.Motion_stop(port, Const.MOT_AXIS3, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($&quot;stop axis3: {err}&quot;);
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($&quot;Motion_close status: {status}&quot;); 
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -2097,9 +2011,7 @@ class EMotion_3axis_asynchronous_move
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>

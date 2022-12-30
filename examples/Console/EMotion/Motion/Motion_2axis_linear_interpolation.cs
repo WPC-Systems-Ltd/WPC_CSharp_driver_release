@@ -12,11 +12,9 @@ using WPC.Product;
 class EMotion_2axis_linear_interpolation
 {
     static public void Main()
-    { 
-        Console.WriteLine("Start example code...");
-
+    {  
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -27,48 +25,49 @@ class EMotion_2axis_linear_interpolation
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($"Motion_open status: {status}");
+            err = dev.Motion_open(port);
+            Console.WriteLine($"open: {err}");
 
-            status = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini");
-            Console.WriteLine($"Motion_openCfgFile status: {status}");
+            //// Or specify a specific name in a specific dir
+            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile status: {status}");
+            err = dev.Motion_openCfgFile("Emotion.ini");
+            Console.WriteLine($"openCfgFile: {err}");
 
-            status = dev.Motion_cfg2AxisLinearInterpo(port, Constant.MOTION_AXIS_1, 2000, Constant.MOTION_AXIS_2, 2000, linear_interpo_vector_speed: 2000);
-            Console.WriteLine($"Motion_cfg2AxisLinearInterpo status: {status}");
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($"oadCfgFile: {err}");
 
-            status = dev.Motion_startLinearInterpo(port);
-            Console.WriteLine($"Motion_startLinearInterpo status: {status}");
+            err = dev.Motion_cfg2AxisLinearInterpo(port, Const.MOT_AXIS1, 2000, Const.MOT_AXIS2, 2000, linear_interpo_vector_speed: 2000);
+            Console.WriteLine($"cfg2AxisLinearInterpo: {err}");
 
-
+            err = dev.Motion_startLinearInterpo(port);
+            Console.WriteLine($"startLinearInterpo: {err}");
+ 
             int move_status = 0;
             while (move_status == 0)
             { 
-                int axis1_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                int axis2_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_2);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2);
 
                 move_status = axis1_move_status & axis2_move_status;
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
                 else { Console.WriteLine($"Move completed"); }
-            }
+            } 
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($"stop axis1: {err}");
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($"Motion_stop status: {status}"); 
+            err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($"stop axis2: {err}");
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_2, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($"Motion_stop status: {status}"); 
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($"Motion_close status: {status}");
+            err = dev.Motion_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -79,8 +78,6 @@ class EMotion_2axis_linear_interpolation
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine("End example code...");
+        dev.close(); 
     }
 }

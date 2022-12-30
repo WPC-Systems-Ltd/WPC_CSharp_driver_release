@@ -102,11 +102,9 @@ using WPC.Product;
 class USBDAQF1AOD_AIO_all_channels_loopback
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1AOD dev = new USBDAQF1AOD();
@@ -118,9 +116,9 @@ class USBDAQF1AOD_AIO_all_channels_loopback
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
-            List&lt;double&gt; sample;
+            List&lt;double&gt; s;
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -128,43 +126,43 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI port
-            status = dev.AI_open(port);
-            Console.WriteLine($&quot;AI_open status: {status}&quot;);
+            err = dev.AI_open(port);
+            Console.WriteLine($&quot;AI_open: {err}&quot;);
 
             // Open AO port
-            status = dev.AO_open(port);
-            Console.WriteLine($&quot;AO_open status: {status}&quot;);
+            err = dev.AO_open(port);
+            Console.WriteLine($&quot;AO_open: {err}&quot;);
 
             // Set AI port and data acquisition
-            sample = dev.AI_readOnDemand(port);
+            s = dev.AI_readOnDemand(port);
 
             // Read acquisition data
-            Console.WriteLine($&quot;data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}&quot;);
+            Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Set AO port and write data simultaneously
             List&lt;double&gt; AO_values = new List&lt;double&gt; { 0, 1, 2, 3, 4, 5, 4, 3 };
-            status = dev.AO_writeAllChannels(port, AO_values);
-            Console.WriteLine($&quot;AO_writeAllChannels status: {status}&quot;);
+            err = dev.AO_writeAllChannels(port, AO_values);
+            Console.WriteLine($&quot;AO_writeAllChannels: {err}&quot;);
 
             // Set AI port and data acquisition
-            sample = dev.AI_readOnDemand(port);
+            s = dev.AI_readOnDemand(port);
 
             // Read acquisition data
-            Console.WriteLine($&quot;data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}&quot;);
+            Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AI port
-            status = dev.AI_close(port);
-            Console.WriteLine($&quot;AI_close status: {status}&quot;);
+            err = dev.AI_close(port);
+            Console.WriteLine($&quot;AI_close: {err}&quot;);
 
             // Close AO port
-            status = dev.AO_close(port);
-            Console.WriteLine($&quot;AO_close status: {status}&quot;);
+            err = dev.AO_close(port);
+            Console.WriteLine($&quot;AO_close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -176,8 +174,6 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
@@ -206,11 +202,9 @@ using WPC.Product;
 class USBDAQF1AOD_AIO_one_channel_loopback
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1AOD dev = new USBDAQF1AOD();
@@ -222,7 +216,7 @@ class USBDAQF1AOD_AIO_one_channel_loopback
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             // Get firmware model &amp; version
@@ -231,54 +225,54 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI port
-            status = dev.AI_open(port);
-            Console.WriteLine($&quot;AI_open status: {status}&quot;);
+            err = dev.AI_open(port);
+            Console.WriteLine($&quot;AI_open: {err}&quot;);
 
             // Open AO port
-            status = dev.AO_open(port);
-            Console.WriteLine($&quot;AO_open status: {status}&quot;);
+            err = dev.AO_open(port);
+            Console.WriteLine($&quot;AO_open: {err}&quot;);
 
             // Set AI port and data acquisition
-            List&lt;double&gt; sample = dev.AI_readOnDemand(port);
+            List&lt;double&gt; s = dev.AI_readOnDemand(port);
 
             // Read acquisition data
-            Console.WriteLine($&quot;data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}&quot;);
+            Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Set AO port and write data 1.5(V) in channel 4
-            status = dev.AO_writeOneChannel(port, 4, 1.5);
-            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+            err = dev.AO_writeOneChannel(port, 4, 1.5);
+            Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AO port and write data 2.5(V) in channel 5
-            status = dev.AO_writeOneChannel(port, 5, 2.5);
-            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
-
+            err = dev.AO_writeOneChannel(port, 5, 2.5);
+            Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
+ 
             // Set AO port and write data 3.5(V) in channel 6
-            status = dev.AO_writeOneChannel(port, 6, 3.5);
-            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+            err = dev.AO_writeOneChannel(port, 6, 3.5);
+            Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AO port and write data 4.5(V) in channel 7
-            status = dev.AO_writeOneChannel(port, 7, 4.5);
-            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+            err = dev.AO_writeOneChannel(port, 7, 4.5);
+            Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AI port and data acquisition
-            sample = dev.AI_readOnDemand(port);
+            s = dev.AI_readOnDemand(port);
 
             // Read acquisition data
-            Console.WriteLine($&quot;data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}&quot;);
+            Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AI port
-            status = dev.AI_close(port);
-            Console.WriteLine($&quot;AI_close status: {status}&quot;);
+            err = dev.AI_close(port);
+            Console.WriteLine($&quot;AI_close: {err}&quot;);
 
             // Close AO port
-            status = dev.AO_close(port);
-            Console.WriteLine($&quot;AO_close status: {status}&quot;);
+            err = dev.AO_close(port);
+            Console.WriteLine($&quot;AO_close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -289,9 +283,7 @@ class USBDAQF1AOD_AIO_one_channel_loopback
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>

@@ -22,11 +22,9 @@ using WPC.Product;
 class USBDAQF1TD_DIO_loopback_port
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -38,7 +36,7 @@ class USBDAQF1TD_DIO_loopback_port
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port_DO = 0;
             int port_DI = 1; 
 
@@ -48,28 +46,28 @@ class USBDAQF1TD_DIO_loopback_port
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open all pins with digital output 
-            status = dev.DO_openPort(port_DO);
-            Console.WriteLine($"DO_openPort status: {status}");
+            err = dev.DO_openPort(port_DO);
+            Console.WriteLine($"open DO Port: {err}"); 
 
             // Open all pins with digital input
-            status = dev.DI_openPort(port_DI);
-            Console.WriteLine($"DI_openPort status: {status}");
-
+            err = dev.DI_openPort(port_DI);
+            Console.WriteLine($"open DI Port: {err}"); 
+ 
             // Set pin0, pin1 and pin2 to high, others to low
-            status = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 1, 0, 0, 0, 0 });
-            Console.WriteLine($"DO_writePort status: {status}");
+            err = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 1, 0, 0, 0, 0 });
+            Console.WriteLine($"writePort: {err}"); 
 
             // Read all pins state
             List<int> pin_s = dev.DI_readPort(port_DI);
             Console.WriteLine($"DI_readPort: {pin_s[0]},{pin_s[1]},{pin_s[2]},{pin_s[3]},{pin_s[4]},{pin_s[5]}");
 
             // Close all pins with digital output
-            status = dev.DO_closePort(port_DO);
-            Console.WriteLine($"DO_closePort status: {status}");
+            err = dev.DO_closePort(port_DO);
+            Console.WriteLine($"close DO Port: {err}"); 
 
             // Close all pins with digital input
-            status = dev.DI_closePort(port_DI);
-            Console.WriteLine($"DI_closePort status: {status}");
+            err = dev.DI_closePort(port_DI);
+            Console.WriteLine($"close DI Port : {err}"); 
         }
         catch (Exception ex)
         {
@@ -80,8 +78,6 @@ class USBDAQF1TD_DIO_loopback_port
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine("End example code...");
+        dev.close(); 
     }
 }

@@ -12,11 +12,9 @@ using WPC.Product;
 class EMotion_1axis_move_with_breakpoint
 {
     static public void Main()
-    { 
-        Console.WriteLine("Start example code...");
-
+    {  
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -27,7 +25,7 @@ class EMotion_1axis_move_with_breakpoint
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -35,41 +33,41 @@ class EMotion_1axis_move_with_breakpoint
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
              
             //// Or specify a specific name in a specific dir
-            //status = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
+            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
 
-            status = dev.Motion_openCfgFile("Emotion.ini");
-            Console.WriteLine($"Motion_openCfgFile status: {status}");
+            err = dev.Motion_openCfgFile("Emotion.ini");
+            Console.WriteLine($"openCfgFile: {err}");
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile status: {status}");
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($"loadCfgFile: {err}");
  
-            status = dev.Motion_cfgBreakPoint(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, Constant.MOTION_POLARITY_ACTIVE_HIGH, 100, 100, 100, 100);
-            Console.WriteLine($"Motion_cfgBreakPoint status: {status}");
+            err = dev.Motion_cfgBreakPoint(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, Const.MOT_ACTIVE_HIGH, 100, 100, 100, 100);
+            Console.WriteLine($"cfgBreakPoint: {err}");
 
-            status = dev.Motion_setBreakPointEnable(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE);
-            Console.WriteLine($"Motion_setBreakPointEnable status: {status}");
+            err = dev.Motion_enableBreakPoint(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($"setBreakPointEnable: {err}");
              
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_RELATIVE_POSITION_MODE, target_position: 10000);
-            Console.WriteLine($"Motion_cfgAxisMove status: {status}");
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            Console.WriteLine($"cfgAxisMove: {err}");
              
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_rstEncoderPosi status: {status}");
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($"rstEncoderPosi: {err}");
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_startSingleAxisMove status: {status}");
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($"startSingleAxisMove: {err}");
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($"Motion_readMoveStatus : {move_status}");
+                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                Console.WriteLine($"Motion_getMoveStatus: {move_status}");
             }
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($"Motion_stop status: {status}");
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($"stop: {err}");
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($"Motion_close status: {status}");
+            err = dev.Motion_close(port);
+            Console.WriteLine($"close: {err}");
  
         }
         catch (Exception ex)
@@ -81,8 +79,6 @@ class EMotion_1axis_move_with_breakpoint
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine("End example code...");
+        dev.close(); 
     }
 }

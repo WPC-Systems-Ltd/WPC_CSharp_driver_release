@@ -21,11 +21,9 @@ using WPC.Module;
 class USBDAQF1CD_CAN_read
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -37,7 +35,7 @@ class USBDAQF1CD_CAN_read
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 1;
 
             // Get firmware model & version
@@ -46,16 +44,16 @@ class USBDAQF1CD_CAN_read
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open CAN
-            status = dev.CAN_open(port);
-            Console.WriteLine($"CAN_open status: {status}");
+            err = dev.CAN_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set CAN port and set speed to 125K
-            status = dev.CAN_setSpeed(port, Constant.CAN_SPEED_125K);
-            Console.WriteLine($"CAN_setSpeed status: {status}");
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K);
+            Console.WriteLine($"setSpeed: {err}");
 
             // Set CAN port and start CAN
-            status = dev.CAN_start(port);
-            Console.WriteLine($"CAN_start status: {status}");
+            err = dev.CAN_start(port);
+            Console.WriteLine($"start: {err}");
 
             for (int i = 0; i < 1000; i++)
             {
@@ -75,12 +73,12 @@ class USBDAQF1CD_CAN_read
             } 
 
             // Stop CAN
-            status = dev.CAN_stop(port);
-            Console.WriteLine($"CAN_stop status: {status}");
+            err = dev.CAN_stop(port);
+            Console.WriteLine($"stop: {err}");
 
             // Close CAN
-            status = dev.CAN_close(port);
-            Console.WriteLine($"CAN_close status: {status}");
+            err = dev.CAN_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -92,7 +90,5 @@ class USBDAQF1CD_CAN_read
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

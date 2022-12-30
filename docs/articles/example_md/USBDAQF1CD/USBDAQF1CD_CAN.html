@@ -101,11 +101,9 @@ using WPC.Module;
 class USBDAQF1CD_CAN_read
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -117,7 +115,7 @@ class USBDAQF1CD_CAN_read
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 1;
 
             // Get firmware model &amp; version
@@ -126,16 +124,16 @@ class USBDAQF1CD_CAN_read
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open CAN
-            status = dev.CAN_open(port);
-            Console.WriteLine($&quot;CAN_open status: {status}&quot;);
+            err = dev.CAN_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set CAN port and set speed to 125K
-            status = dev.CAN_setSpeed(port, Constant.CAN_SPEED_125K);
-            Console.WriteLine($&quot;CAN_setSpeed status: {status}&quot;);
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K);
+            Console.WriteLine($&quot;setSpeed: {err}&quot;);
 
             // Set CAN port and start CAN
-            status = dev.CAN_start(port);
-            Console.WriteLine($&quot;CAN_start status: {status}&quot;);
+            err = dev.CAN_start(port);
+            Console.WriteLine($&quot;start: {err}&quot;);
 
             for (int i = 0; i &lt; 1000; i++)
             {
@@ -155,12 +153,12 @@ class USBDAQF1CD_CAN_read
             } 
 
             // Stop CAN
-            status = dev.CAN_stop(port);
-            Console.WriteLine($&quot;CAN_stop status: {status}&quot;);
+            err = dev.CAN_stop(port);
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
             // Close CAN
-            status = dev.CAN_close(port);
-            Console.WriteLine($&quot;CAN_close status: {status}&quot;);
+            err = dev.CAN_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -172,8 +170,6 @@ class USBDAQF1CD_CAN_read
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
@@ -201,11 +197,9 @@ using WPC.Product;
 class USBDAQF1CD_CAN_write
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -217,7 +211,7 @@ class USBDAQF1CD_CAN_write
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 1;
 
             // Get firmware model &amp; version
@@ -226,35 +220,35 @@ class USBDAQF1CD_CAN_write
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open CAN
-            status = dev.CAN_open(port);
-            Console.WriteLine($&quot;CAN_open status: {status}&quot;);
+            err = dev.CAN_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set CAN port and set speed to 125K
-            status = dev.CAN_setSpeed(port, Constant.CAN_SPEED_125K);
-            Console.WriteLine($&quot;CAN_setSpeed status: {status}&quot;);
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K);
+            Console.WriteLine($&quot;setSpeed: {err}&quot;);
 
             // Set CAN port and start CAN
-            status = dev.CAN_start(port);
-            Console.WriteLine($&quot;CAN_start status: {status}&quot;);
+            err = dev.CAN_start(port);
+            Console.WriteLine($&quot;start: {err}&quot;);
 
             // ID: 10, data with 8 bytes, Standard &amp; Data 
-            status = dev.CAN_write(port, 10, new List&lt;byte&gt; { 33, 22, 11, 88, 77, 55, 66, 22 }, Constant.CAN_FRAME_TYPE_DATA, Constant.CAN_ID_STANDARD);
-            Console.WriteLine($&quot;CAN_write status: {status}&quot;);
+            err = dev.CAN_write(port, 10, new List&lt;byte&gt; { 33, 22, 11, 88, 77, 55, 66, 22 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD);
+            Console.WriteLine($&quot;write: {err}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms] 
 
             // ID: 20, data with 8 bytes, Standard &amp; Data 
-            status = dev.CAN_write(port, 20, new List&lt;byte&gt; { 1, 2, 3 }, Constant.CAN_FRAME_TYPE_DATA, Constant.CAN_ID_STANDARD);
-            Console.WriteLine($&quot;CAN_write status: {status}&quot;);
+            err = dev.CAN_write(port, 20, new List&lt;byte&gt; { 1, 2, 3 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD);
+            Console.WriteLine($&quot;write: {err}&quot;);
 
             // Stop CAN
-            status = dev.CAN_stop(port);
-            Console.WriteLine($&quot;CAN_stop status: {status}&quot;);
+            err = dev.CAN_stop(port);
+            Console.WriteLine($&quot;stop: {err}&quot;);
 
             // Close CAN
-            status = dev.CAN_close(port);
-            Console.WriteLine($&quot;CAN_close status: {status}&quot;); 
+            err = dev.CAN_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;); 
         }
         catch (Exception ex)
         {
@@ -266,8 +260,6 @@ class USBDAQF1CD_CAN_write
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>

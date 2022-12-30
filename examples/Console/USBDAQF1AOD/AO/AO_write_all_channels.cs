@@ -24,7 +24,7 @@ class USBDAQF1AOD_AO_write_all_channels
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1AOD dev = new USBDAQF1AOD();
@@ -36,7 +36,7 @@ class USBDAQF1AOD_AO_write_all_channels
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             // Get firmware model & version
@@ -45,20 +45,21 @@ class USBDAQF1AOD_AO_write_all_channels
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AO port
-            status = dev.AO_open(port);
-            Console.WriteLine($"AO_open status: {status}");
+            err = dev.AO_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set AO port and write data simultaneously
             List<double> AO_values = new List<double> { 3, 1, 2, 3, 4, 5, 4, 3 };
-            status = dev.AO_writeAllChannels(port, AO_values);
-            Console.WriteLine($"AO_writeAllChannels status: {status}");
+
+            err = dev.AO_writeAllChannels(port, AO_values);
+            Console.WriteLine($"writeAllChannels: {err}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AO port
-            status = dev.AO_close(port);
-            Console.WriteLine($"AO_close status: {status}");
+            err = dev.AO_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -70,7 +71,5 @@ class USBDAQF1AOD_AO_write_all_channels
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

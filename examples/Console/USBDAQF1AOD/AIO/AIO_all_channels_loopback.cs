@@ -22,11 +22,9 @@ using WPC.Product;
 class USBDAQF1AOD_AIO_all_channels_loopback
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1AOD dev = new USBDAQF1AOD();
@@ -38,9 +36,9 @@ class USBDAQF1AOD_AIO_all_channels_loopback
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
-            List<double> sample;
+            List<double> s;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo();
@@ -48,43 +46,43 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            status = dev.AI_open(port);
-            Console.WriteLine($"AI_open status: {status}");
+            err = dev.AI_open(port);
+            Console.WriteLine($"AI_open: {err}");
 
             // Open AO port
-            status = dev.AO_open(port);
-            Console.WriteLine($"AO_open status: {status}");
+            err = dev.AO_open(port);
+            Console.WriteLine($"AO_open: {err}");
 
             // Set AI port and data acquisition
-            sample = dev.AI_readOnDemand(port);
+            s = dev.AI_readOnDemand(port);
 
             // Read acquisition data
-            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+            Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Set AO port and write data simultaneously
             List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
-            status = dev.AO_writeAllChannels(port, AO_values);
-            Console.WriteLine($"AO_writeAllChannels status: {status}");
+            err = dev.AO_writeAllChannels(port, AO_values);
+            Console.WriteLine($"AO_writeAllChannels: {err}");
 
             // Set AI port and data acquisition
-            sample = dev.AI_readOnDemand(port);
+            s = dev.AI_readOnDemand(port);
 
             // Read acquisition data
-            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+            Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AI port
-            status = dev.AI_close(port);
-            Console.WriteLine($"AI_close status: {status}");
+            err = dev.AI_close(port);
+            Console.WriteLine($"AI_close: {err}");
 
             // Close AO port
-            status = dev.AO_close(port);
-            Console.WriteLine($"AO_close status: {status}");
+            err = dev.AO_close(port);
+            Console.WriteLine($"AO_close: {err}");
         }
         catch (Exception ex)
         {
@@ -96,7 +94,5 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

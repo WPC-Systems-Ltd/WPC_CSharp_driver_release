@@ -18,11 +18,9 @@ using WPC.Product;
 class USBDAQF1CD_get_USB_info
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    {  
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -56,7 +54,5 @@ class USBDAQF1CD_get_USB_info
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

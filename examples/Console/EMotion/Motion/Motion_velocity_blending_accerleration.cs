@@ -12,11 +12,9 @@ using WPC.Product;
 class EMotion_velocity_blending_accerleration
 {
     static public void Main()
-    { 
-        Console.WriteLine("Start example code...");
-
+    {  
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -27,56 +25,57 @@ class EMotion_velocity_blending_accerleration
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            status = dev.Motion_open(port);
-            Console.WriteLine($"Motion_open status: {status}");
+            err = dev.Motion_open(port);
+            Console.WriteLine($"open: {err}");
              
-            status = dev.Motion_cfgAxisParam(port, Constant.MOTION_AXIS_1, Constant.MOTION_STEPPER_OUTPUT_TWO_PULSE, Constant.MOTION_DIRECTION_CW, Constant.MOTION_DIRECTION_CW, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($"Motion_cfgAxisParam status: {status}");
+            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($"cfgAxisParam: {err}");
 
-            status = dev.Motion_cfgAxisMove(port, Constant.MOTION_AXIS_1, Constant.MOTION_VELOCITY_MODE, velocity: 3000);
-            Console.WriteLine($"Motion_cfgAxisMove status: {status}");
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_VELOCITY, velocity: 3000);
+            Console.WriteLine($"cfgAxisMove: {err}");
 
-            status = dev.Motion_cfgLimit(port, Constant.MOTION_AXIS_1, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_ENABLE_TRUE, Constant.MOTION_POLARITY_ACTIVE_HIGH);
-            Console.WriteLine($"Motion_cfgLimit status: {status}");
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            Console.WriteLine($"cfgLimit: {err}");
 
-            status = dev.Motion_cfgEncoder(port, Constant.MOTION_AXIS_1, Constant.MOTION_POLARITY_ACTIVE_LOW);
-            Console.WriteLine($"Motion_cfgEncoder status: {status}");
+            err = dev.Motion_cfgEncoder(port, Const.MOT_AXIS1, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($"cfgEncoder: {err}");
 
-            status = dev.Motion_rstEncoderPosi(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_rstEncoderPosi status: {status}");
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            Console.WriteLine($"rstEncoderPosi: {err}");
 
-            status = dev.Motion_startSingleAxisMove(port, Constant.MOTION_AXIS_1);
-            Console.WriteLine($"Motion_startSingleAxisMove status: {status}");
-             
-            Thread.Sleep(5000);
-             
-            status = dev.Motion_overrideAxisVelocity(port, Constant.MOTION_AXIS_1, -3000);
-            Console.WriteLine($"Motion_overrideAxisVelocity status: {status}");
-
-            status = dev.Motion_overrideAxisAccel(port, Constant.MOTION_AXIS_1, 100, 100);
-            Console.WriteLine($"Motion_overrideAxisAccel status: {status}");
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($"startSingleAxisMove: {err}");
              
             Thread.Sleep(5000);
+             
+            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, -3000);
+            Console.WriteLine($"overrideAxisVelocity: {err}");
 
-            status = dev.Motion_overrideAxisVelocity(port, Constant.MOTION_AXIS_1, 6000);
-            Console.WriteLine($"Motion_overrideAxisVelocity status: {status}");
-            status = dev.Motion_overrideAxisAccel(port, Constant.MOTION_AXIS_1, 100000, 100000);
-            Console.WriteLine($"Motion_overrideAxisAccel status: {status}");
+            err = dev.Motion_overrideAxisAccel(port, Const.MOT_AXIS1, 100, 100);
+            Console.WriteLine($"overrideAxisAccel: {err}");;
              
             Thread.Sleep(5000);
 
-            status = dev.Motion_stop(port, Constant.MOTION_AXIS_1, Constant.MOTION_STOP_TYPE_DECELERATION);
-            Console.WriteLine($"Motion_stop status: {status}");
+            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, 6000);
+            Console.WriteLine($"overrideAxisVelocity: {err}");
 
-            status = dev.Motion_close(port);
-            Console.WriteLine($"Motion_close status: {status}");
+            err = dev.Motion_overrideAxisAccel(port, Const.MOT_AXIS1, 100000, 100000);
+            Console.WriteLine($"overrideAxisAccel: {err}");
+             
+            Thread.Sleep(5000);
+
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            Console.WriteLine($"stop: {err}");
+
+            err = dev.Motion_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -87,8 +86,6 @@ class EMotion_velocity_blending_accerleration
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine("End example code...");
+        dev.close(); 
     } 
 }

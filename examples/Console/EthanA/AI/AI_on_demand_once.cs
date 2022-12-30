@@ -20,11 +20,9 @@ using WPC.Product;
 class EthanA_AI_on_demand_once
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -36,7 +34,7 @@ class EthanA_AI_on_demand_once
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             // Get firmware model & version
@@ -45,22 +43,22 @@ class EthanA_AI_on_demand_once
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            status = dev.AI_open(port);
-            Console.WriteLine($"AI_open status: {status}");
+            err = dev.AI_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set AI port and acquisition mode to on demand
-            status = dev.AI_setMode(port, Constant.AI_MODE_ON_DEMAND);
-            Console.WriteLine($"AI_setMode status: {status}");
+            err = dev.AI_setMode(port, Const.AI_MODE_ON_DEMAND);
+            Console.WriteLine($"setMode: {err}");
 
             // Set AI port and data acquisition
-            List<double> sample = dev.AI_readOnDemand(port);
+            List<double> s = dev.AI_readOnDemand(port);
 
             // Read acquisition data
-            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+            Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
             // Close AI port
-            status = dev.AI_close(port);
-            Console.WriteLine($"AI_close status: {status}");
+            err = dev.AI_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -72,7 +70,5 @@ class EthanA_AI_on_demand_once
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

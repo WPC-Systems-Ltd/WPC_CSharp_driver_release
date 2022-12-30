@@ -18,11 +18,9 @@ using WPC.Product;
 class EthanO_get_network_info
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EthanO dev = new EthanO();
@@ -64,7 +62,5 @@ class EthanO_get_network_info
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

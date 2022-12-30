@@ -108,11 +108,9 @@ using WPC.Product;
 class USBDAQF1CD_DIO_loopback_pins
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -124,7 +122,7 @@ class USBDAQF1CD_DIO_loopback_pins
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
             List&lt;int&gt; DO_pins = new List&lt;int&gt; { 0, 1, 2, 3, 4 };
             List&lt;int&gt; DI_pins = new List&lt;int&gt; { 5, 6, 7 };
@@ -135,30 +133,31 @@ class USBDAQF1CD_DIO_loopback_pins
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open pin0, pin1, pin2, pin3 and pin4 with digital output
-            status = dev.DO_openPins(port, DO_pins);
-            Console.WriteLine($&quot;DO_openPins status: {status}&quot;);
+            err = dev.DO_openPins(port, DO_pins);
+            Console.WriteLine($&quot;openPins: {err}&quot;); 
 
             // Open pin5, pin6 and pin7 with digital output
-            status = dev.DI_openPins(port, DI_pins);
-            Console.WriteLine($&quot;DI_openPins status: {status}&quot;);
+            err = dev.DI_openPins(port, DI_pins);
+            Console.WriteLine($&quot;openPins: {err}&quot;); 
 
             // Set pin0 and pin1 to high, others to low
-            status = dev.DO_writePins(port, DO_pins, new List&lt;int&gt; { 1, 1, 0, 0, 0 });
-            Console.WriteLine($&quot;DO_writePins status: {status}&quot;);
+            err = dev.DO_writePins(port, DO_pins, new List&lt;int&gt; { 1, 1, 0, 0, 0 });
+            Console.WriteLine($&quot;writePins: {err}&quot;); 
 
             // Read pin5, pin6 and pin7 state
             List&lt;int&gt; pin_s = dev.DI_readPins(port, DI_pins);
             Console.WriteLine($&quot;DI_readPins: {pin_s[0]}, {pin_s[1]}, {pin_s[2]}&quot;);
+            
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close pin0, pin1, pin2, pin3 and pin4 with digital output
-            status = dev.DO_closePins(port, DO_pins);
-            Console.WriteLine($&quot;DO_closePins status: {status}&quot;);
+            err = dev.DO_closePins(port, DO_pins);
+            Console.WriteLine($&quot;closePins: {err}&quot;); 
 
             // Close pin5, pin6 and pin7 with digital input 
-            status = dev.DI_closePins(port, DI_pins);
-            Console.WriteLine($&quot;DI_closePins status: {status}&quot;);
+            err = dev.DI_closePins(port, DI_pins);
+            Console.WriteLine($&quot;closePins: {err}&quot;); 
         }
         catch (Exception ex)
         {
@@ -170,8 +169,6 @@ class USBDAQF1CD_DIO_loopback_pins
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
@@ -200,11 +197,9 @@ using WPC.Product;
 class USBDAQF1CD_DIO_loopback_port
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -216,7 +211,7 @@ class USBDAQF1CD_DIO_loopback_port
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port_DO = 0;
             int port_DI = 1; 
 
@@ -226,28 +221,28 @@ class USBDAQF1CD_DIO_loopback_port
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open all pins with digital output 
-            status = dev.DO_openPort(port_DO);
-            Console.WriteLine($&quot;DO_openPort status: {status}&quot;);
+            err = dev.DO_openPort(port_DO);
+            Console.WriteLine($&quot;open DO Port: {err}&quot;); 
 
             // Open all pins with digital input
-            status = dev.DI_openPort(port_DI);
-            Console.WriteLine($&quot;DI_openPort status: {status}&quot;);
-
+            err = dev.DI_openPort(port_DI);
+            Console.WriteLine($&quot;open DI Port: {err}&quot;); 
+ 
             // Set pin0, pin1 and pin2 to high, others to low
-            status = dev.DO_writePort(port_DO, new List&lt;int&gt; { 0, 0, 0, 1, 0, 0, 0, 0 });
-            Console.WriteLine($&quot;DO_writePort status: {status}&quot;);
+            err = dev.DO_writePort(port_DO, new List&lt;int&gt; { 0, 0, 0, 1, 0, 0, 0, 0 });
+            Console.WriteLine($&quot;writePort: {err}&quot;); 
 
             // Read all pins state
             List&lt;int&gt; pin_s = dev.DI_readPort(port_DI);
             Console.WriteLine($&quot;DI_readPort: {pin_s[0]},{pin_s[1]},{pin_s[2]},{pin_s[3]},{pin_s[4]},{pin_s[5]}&quot;);
 
             // Close all pins with digital output
-            status = dev.DO_closePort(port_DO);
-            Console.WriteLine($&quot;DO_closePort status: {status}&quot;);
+            err = dev.DO_closePort(port_DO);
+            Console.WriteLine($&quot;close DO Port: {err}&quot;); 
 
             // Close all pins with digital input
-            status = dev.DI_closePort(port_DI);
-            Console.WriteLine($&quot;DI_closePort status: {status}&quot;);
+            err = dev.DI_closePort(port_DI);
+            Console.WriteLine($&quot;close DI Port : {err}&quot;); 
         }
         catch (Exception ex)
         {
@@ -258,9 +253,7 @@ class USBDAQF1CD_DIO_loopback_port
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -287,11 +280,9 @@ using WPC.Product;
 class USBDAQF1CD_DO_blinky_pins
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -303,7 +294,7 @@ class USBDAQF1CD_DO_blinky_pins
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
             List&lt;int&gt; DO_pins = new List&lt;int&gt; { 0, 1, 2, 3 };
             List&lt;int&gt; DO_odd_state = new List&lt;int&gt; { 0, 1, 0, 1 };
@@ -315,22 +306,21 @@ class USBDAQF1CD_DO_blinky_pins
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open pin0, pin1, pin2 and pin3 with digital output
-            status = dev.DO_openPins(port, DO_pins);
-            Console.WriteLine($&quot;DO_openPins status: {status}&quot;);
+            err = dev.DO_openPins(port, DO_pins);
+            Console.WriteLine($&quot;openPins: {err}&quot;); 
 
             // Toggle digital state for 10 times. Each times delay for 0.1 second 
             for (int i = 0; i &lt; 10; i++)
             {
                 if (i%2 == 0)
                 {
-                    status = dev.DO_writePins(port, DO_pins, DO_even_state);
+                    err = dev.DO_writePins(port, DO_pins, DO_even_state);
                 }
                 else
                 {
-                    status = dev.DO_writePins(port, DO_pins, DO_odd_state);
-                }
- 
-                Console.WriteLine($&quot;DO_writePins status: {status}&quot;);
+                    err = dev.DO_writePins(port, DO_pins, DO_odd_state);
+                } 
+                Console.WriteLine($&quot;writePins: {err}&quot;); 
                 Thread.Sleep(100); // delay [ms] 
             }
 
@@ -338,8 +328,8 @@ class USBDAQF1CD_DO_blinky_pins
             Thread.Sleep(1000); // delay [ms]
 
             // Close pin0, pin1, pin2 and pin3 with digital output
-            status = dev.DO_closePins(port, DO_pins);
-            Console.WriteLine($&quot;DO_closePins status: {status}&quot;);
+            err = dev.DO_closePins(port, DO_pins);
+            Console.WriteLine($&quot;closePins: {err}&quot;); 
         }
         catch (Exception ex)
         {
@@ -351,8 +341,6 @@ class USBDAQF1CD_DO_blinky_pins
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
@@ -379,11 +367,9 @@ using WPC.Product;
 class USBDAQF1CD_DO_blinky_port
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -395,7 +381,7 @@ class USBDAQF1CD_DO_blinky_port
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
             List&lt;int&gt; DO_odd_state = new List&lt;int&gt; { 0, 1, 0, 1, 0, 1, 0, 1 };
             List&lt;int&gt; DO_even_state = new List&lt;int&gt; { 1, 0, 1, 0, 1, 0, 1, 0 };
@@ -406,22 +392,22 @@ class USBDAQF1CD_DO_blinky_port
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open all pins and set it to digital output.
-            status = dev.DO_openPort(port);
-            Console.WriteLine($&quot;DO_openPins status: {status}&quot;);
+            err = dev.DO_openPort(port);
+            Console.WriteLine($&quot;openPort: {err}&quot;);
 
             // Toggle digital state for 30 times. Each times delay for 0.1 second
             for (int i = 0; i &lt; 30; i++)
             {
                 if (i % 2 == 0)
                 {
-                    status = dev.DO_writePort(port, DO_even_state);
+                    err = dev.DO_writePort(port, DO_even_state);
                 }
                 else
                 {
-                    status = dev.DO_writePort(port, DO_odd_state);
+                    err = dev.DO_writePort(port, DO_odd_state);
                 }
 
-                Console.WriteLine($&quot;DO_writePort status: {status}&quot;);
+                Console.WriteLine($&quot;writePort: {err}&quot;); 
                 Thread.Sleep(100);// delay [ms]
             }
 
@@ -429,8 +415,8 @@ class USBDAQF1CD_DO_blinky_port
             Thread.Sleep(1000); // delay [ms]
 
             // Close all pins with digital output
-            status = dev.DO_closePort(port);
-            Console.WriteLine($&quot;DO_closePort status: {status}&quot;);
+            err = dev.DO_closePort(port);
+            Console.WriteLine($&quot;closePort: {err}&quot;); 
         }
         catch (Exception ex)
         {
@@ -442,8 +428,6 @@ class USBDAQF1CD_DO_blinky_port
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>

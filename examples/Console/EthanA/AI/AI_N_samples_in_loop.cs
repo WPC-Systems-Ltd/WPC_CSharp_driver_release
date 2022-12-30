@@ -27,10 +27,10 @@ class EthanA_AI_N_samples_in_loop
             // Data acquisition
             List<List<double>> streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
-            foreach (List<double> sample in streaming_list)
+            foreach (List<double> s in streaming_list)
             {
                 // Read acquisition data
-                Console.WriteLine($"data : {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+                Console.WriteLine($"data : {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
             }
 
             // Wait for 0.01 sec
@@ -42,11 +42,9 @@ class EthanA_AI_N_samples_in_loop
     }
 
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -58,7 +56,7 @@ class EthanA_AI_N_samples_in_loop
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
             int samples = 3000;
             float sampling_rate = 1000;
@@ -69,24 +67,24 @@ class EthanA_AI_N_samples_in_loop
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            status = dev.AI_open(port);
-            Console.WriteLine($"AI_open status: {status}");
+            err = dev.AI_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set AI port and acquisition mode to continuous
-            status = dev.AI_setMode(port, Constant.AI_MODE_CONTINOUS);
-            Console.WriteLine($"AI_setMode status: {status}");
+            err = dev.AI_setMode(port, Const.AI_MODE_CONTINOUS);
+            Console.WriteLine($"setMode: {err}");
 
             // Set AI port and sampling rate to 1k (Hz)
-            status = dev.AI_setSamplingRate(port, sampling_rate);
-            Console.WriteLine($"AI_setSamplingRate status : {status}");
+            err = dev.AI_setSamplingRate(port, sampling_rate);
+            Console.WriteLine($"setSamplingRate: {err}");
 
             // Set AI port and # of samples to 3000 (pts)
-            status = dev.AI_setNumSamples(port, samples);
-            Console.WriteLine($"AI_setNumSamples status: {status}");
+            err = dev.AI_setNumSamples(port, samples);
+            Console.WriteLine($"setNumSamples: {err}");
 
             // Set AI port and start acquisition
-            status = dev.AI_start(port);
-            Console.WriteLine($"AI_start status: {status}");
+            err = dev.AI_start(port);
+            Console.WriteLine($"start: {err}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
@@ -95,8 +93,8 @@ class EthanA_AI_N_samples_in_loop
             loop_func(dev, port, 1, 3);
 
             // Close AI port
-            status = dev.AI_close(port);
-            Console.WriteLine($"AI_close status: {status}");
+            err = dev.AI_close(port);
+            Console.WriteLine($"open: {err}");
         }
         catch (Exception ex)
         {
@@ -107,8 +105,6 @@ class EthanA_AI_N_samples_in_loop
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine("End example code...");
+        dev.close(); 
     }
 }

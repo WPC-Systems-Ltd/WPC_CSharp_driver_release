@@ -1,7 +1,7 @@
 WPC CSharp driver release changelog
 ===================================
 
-v0.1.4 Date: 2022/12/29, Developer: Chunglee_people 
+v0.1.4 Date: 2022/12/30, Developer: Chunglee_people 
 ---------------------------------------------------- 
 
 ### Added

@@ -91,11 +91,9 @@ using WPC.Product;
 class DeviceFinder_find_all_devices
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         DeviceFinder dev = new DeviceFinder();
@@ -136,9 +134,7 @@ class DeviceFinder_find_all_devices
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>

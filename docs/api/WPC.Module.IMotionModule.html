@@ -1547,6 +1547,192 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Module_IMotionModule_Motion_enableBreakPoint_" data-uid="WPC.Module.IMotionModule.Motion_enableBreakPoint*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_enableBreakPoint_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_enableBreakPoint(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_enableBreakPoint(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the breakpoint singal of specific axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_enableBreakPoint(int port, int axis, int break_enable, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">break_enable</span></td>
+        <td><p>Enable/disable breakpoint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_enableCapture_" data-uid="WPC.Module.IMotionModule.Motion_enableCapture*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_enableCapture_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_enableCapture(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_enableCapture(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the capture singal of specific axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_enableCapture(int port, int axis, int capture_enable, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">capture_enable</span></td>
+        <td><p>Enable/disable capture.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_enableServoOn_" data-uid="WPC.Module.IMotionModule.Motion_enableServoOn*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_enableServoOn(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the servo on singal of specific axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_enableServoOn(int port, int axis, int serve_on_enable, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">serve_on_enable</span></td>
+        <td><p>Enable/disable servo on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Module_IMotionModule_Motion_findRef_" data-uid="WPC.Module.IMotionModule.Motion_findRef*"></a>
   <h4 id="WPC_Module_IMotionModule_Motion_findRef_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_findRef(System.Int32,System.Int32,System.Int32)">Motion_findRef(Int32, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Execute a search operation to find a reference position.</p>
@@ -1599,6 +1785,171 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><span class="xref">System.Int32</span></td>
         <td><p>Return 0 if executed successfully; return error code otherwise.<br>
 See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_getHomeStatus_" data-uid="WPC.Module.IMotionModule.Motion_getHomeStatus*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_getHomeStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_getHomeStatus(System.Int32,System.Int32,System.Int32)">Motion_getHomeStatus(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the instantaneous status of the home inputs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_getHomeStatus(int port, int axis, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Home input status</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_getLimitStatus_" data-uid="WPC.Module.IMotionModule.Motion_getLimitStatus*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_getLimitStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_getLimitStatus(System.Int32,System.Int32,System.Int32)">Motion_getLimitStatus(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the instantaneous status of the hardware limit inputs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;int&gt; Motion_getLimitStatus(int port, int axis, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_reflease/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>List int of the forward and reverse limit inputs status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_getMoveStatus_" data-uid="WPC.Module.IMotionModule.Motion_getMoveStatus*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_getMoveStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_getMoveStatus(System.Int32,System.Int32,System.Int32)">Motion_getMoveStatus(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the move complete status of an axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_getMoveStatus(int port, int axis, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>If return value is 1, move complete.</p>
 </td>
       </tr>
     </tbody>
@@ -1702,6 +2053,136 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">file_name</span></td>
         <td><p>The name of configuration file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_overrideAxisAccel_" data-uid="WPC.Module.IMotionModule.Motion_overrideAxisAccel*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_overrideAxisAccel_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_overrideAxisAccel(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">Motion_overrideAxisAccel(Int32, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Override instantaneous accerleration / deceleration for an axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_overrideAxisAccel(int port, int axis, int new_acceleration, int new_deceleration, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">new_acceleration</span></td>
+        <td><p>Acceleration value in counts/s2 or steps/s2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">new_deceleration</span></td>
+        <td><p>Deceleration value in counts/s2 or steps/s2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_overrideAxisVelocity_" data-uid="WPC.Module.IMotionModule.Motion_overrideAxisVelocity*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_overrideAxisVelocity_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_overrideAxisVelocity(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_overrideAxisVelocity(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Override instantaneous velocity for an axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_overrideAxisVelocity(int port, int axis, int new_velocity, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">new_velocity</span></td>
+        <td><p>Velocity in counts/s or steps/s.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
 </td>
       </tr>
     </tbody>
@@ -1833,171 +2314,6 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Module_IMotionModule_Motion_readHomeStatus_" data-uid="WPC.Module.IMotionModule.Motion_readHomeStatus*"></a>
-  <h4 id="WPC_Module_IMotionModule_Motion_readHomeStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_readHomeStatus(System.Int32,System.Int32,System.Int32)">Motion_readHomeStatus(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read the instantaneous status of the home inputs</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_readHomeStatus(int port, int axis, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">axis</span></td>
-        <td><p>Axis selector.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Home input status</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Module_IMotionModule_Motion_readLimitStatus_" data-uid="WPC.Module.IMotionModule.Motion_readLimitStatus*"></a>
-  <h4 id="WPC_Module_IMotionModule_Motion_readLimitStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_readLimitStatus(System.Int32,System.Int32,System.Int32)">Motion_readLimitStatus(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read the instantaneous status of the hardware limit inputs</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;int&gt; Motion_readLimitStatus(int port, int axis, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_reflease/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">axis</span></td>
-        <td><p>Axis selector.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>List int of the forward and reverse limit inputs status.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Module_IMotionModule_Motion_readMoveStatus_" data-uid="WPC.Module.IMotionModule.Motion_readMoveStatus*"></a>
-  <h4 id="WPC_Module_IMotionModule_Motion_readMoveStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_readMoveStatus(System.Int32,System.Int32,System.Int32)">Motion_readMoveStatus(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read the move complete status of an axis.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_readMoveStatus(int port, int axis, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">axis</span></td>
-        <td><p>Axis selector.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>If return value is 1, move complete.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="WPC_Module_IMotionModule_Motion_rstEncoderPosi_" data-uid="WPC.Module.IMotionModule.Motion_rstEncoderPosi*"></a>
   <h4 id="WPC_Module_IMotionModule_Motion_rstEncoderPosi_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_rstEncoderPosi(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_rstEncoderPosi(Int32, Int32, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Reset the position of an encoder to zero.</p>
@@ -2069,130 +2385,6 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">int Motion_saveCfgFile()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Module_IMotionModule_Motion_setBreakPointEnable_" data-uid="WPC.Module.IMotionModule.Motion_setBreakPointEnable*"></a>
-  <h4 id="WPC_Module_IMotionModule_Motion_setBreakPointEnable_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_setBreakPointEnable(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_setBreakPointEnable(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set breabkpoint enable.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_setBreakPointEnable(int port, int axis, int break_enable, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">axis</span></td>
-        <td><p>Axis selector.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">break_enable</span></td>
-        <td><p>Enable/disable breakpoint.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Module_IMotionModule_Motion_setCaptureEnable_" data-uid="WPC.Module.IMotionModule.Motion_setCaptureEnable*"></a>
-  <h4 id="WPC_Module_IMotionModule_Motion_setCaptureEnable_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_setCaptureEnable(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_setCaptureEnable(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set capture enable.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_setCaptureEnable(int port, int axis, int capture_enable, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">axis</span></td>
-        <td><p>Axis selector.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">capture_enable</span></td>
-        <td><p>Enable/disable capture.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>

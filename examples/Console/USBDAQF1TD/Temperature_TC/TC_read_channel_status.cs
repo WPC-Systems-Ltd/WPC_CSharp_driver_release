@@ -20,11 +20,9 @@ using WPC.Product;
 class USBDAQF1TD_TC_read_channel_status
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -36,6 +34,7 @@ class USBDAQF1TD_TC_read_channel_status
         try
         {
             // Parameters setting
+            int err;
             int status;
             int port = 1;
             int channel_0 = 0;
@@ -47,23 +46,22 @@ class USBDAQF1TD_TC_read_channel_status
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open thermo port
-            status = dev.Thermal_open(port);
-            Console.WriteLine($"Thermal_open status: {status}");
+            err = dev.Thermal_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set thermo port and get status in channel 0 
             status = dev.Thermal_getStatus(port, channel_0);
-            Console.WriteLine($"Thermal_getStatus in chaannel 0: {status}");
-
+            Console.WriteLine($"Thermal_getStatus in channel 0: {status}");
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set thermo port and get status in channel 1 
             status = dev.Thermal_getStatus(port, channel_1);
-            Console.WriteLine($"Thermal_getStatus in chaannel 1: {status}");
+            Console.WriteLine($"Thermal_getStatus in channel 1: {status}");
 
             // Close thermo port
-            status = dev.Thermal_close(port);
-            Console.WriteLine($"Thermal_close status: {status}");
+            err = dev.Thermal_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -75,7 +73,5 @@ class USBDAQF1TD_TC_read_channel_status
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

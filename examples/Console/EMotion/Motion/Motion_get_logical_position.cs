@@ -12,11 +12,9 @@ using WPC.Product;
 class EMotion_get_logical_position
 {
     static public void Main()
-    { 
-        Console.WriteLine("Start example code...");
-
+    {   
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -26,7 +24,7 @@ class EMotion_get_logical_position
         
         try
         {  
-            int status;
+            int err;
             int port = 0;
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -34,14 +32,14 @@ class EMotion_get_logical_position
 
             for (int i = 0; i < 1000; i++) 
             {   
-                status = dev.Motion_setLogicalPosi(port, Constant.MOTION_AXIS_1, i);
-                if (status != 0)
+                err = dev.Motion_setLogicalPosi(port, Const.MOT_AXIS1, i);
+                if (err != 0)
                 {
-                    Console.WriteLine($"Motion_setLogicalPosi status: {status}"); 
+                    Console.WriteLine($"setLogicalPosi: {err}");
                 }
                 
-                int posi = dev.Motion_getLogicalPosi(port, Constant.MOTION_AXIS_1);
-                Console.WriteLine($"Motion_getLogicalPosi: {posi}");
+                int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1);
+                Console.WriteLine($"getLogicalPosi: {posi}");
             }
         }
         catch (Exception ex)
@@ -53,8 +51,6 @@ class EMotion_get_logical_position
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine("End example code...");
+        dev.close(); 
     }
 }

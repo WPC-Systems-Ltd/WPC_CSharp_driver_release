@@ -107,7 +107,7 @@ class USBDAQF1RD_RTD_read_channel_data
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1RD dev = new USBDAQF1RD();
@@ -119,7 +119,7 @@ class USBDAQF1RD_RTD_read_channel_data
         try
         {
             // Parameters setting
-            int status;
+            int err;
             float data;
             int port = 1;
             int channel_0 = 0;
@@ -131,8 +131,8 @@ class USBDAQF1RD_RTD_read_channel_data
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open RTD port
-            status = dev.Thermal_open(port);
-            Console.WriteLine($&quot;Thermal_open status: {status}&quot;);
+            err = dev.Thermal_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
@@ -146,8 +146,8 @@ class USBDAQF1RD_RTD_read_channel_data
             Console.WriteLine($&quot;Read channel 1 data: {data} °C &quot;);
 
             // Close RTD port
-            status = dev.Thermal_close(port);
-            Console.WriteLine($&quot;Thermal_close status: {status}&quot;);
+            err = dev.Thermal_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -188,10 +188,8 @@ class USBDAQF1RD_RTD_read_channel_status
 {
     static public void Main()
     { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1RD dev = new USBDAQF1RD();
@@ -204,6 +202,7 @@ class USBDAQF1RD_RTD_read_channel_status
         {
             // Parameters setting
             int status;
+            int err;
             int port = 1;
             int channel_0 = 0;
             int channel_1 = 1;
@@ -214,8 +213,8 @@ class USBDAQF1RD_RTD_read_channel_status
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open RTD port
-            status = dev.Thermal_open(port);
-            Console.WriteLine($&quot;Thermal_open status: {status}&quot;);
+            err = dev.Thermal_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
@@ -229,8 +228,8 @@ class USBDAQF1RD_RTD_read_channel_status
             Console.WriteLine($&quot;Thermal_getStatus in chaannel 1: {status}&quot;);
 
             // Close RTD port
-            status = dev.Thermal_close(port);
-            Console.WriteLine($&quot;Thermal_close status: {status}&quot;);
+            err = dev.Thermal_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -242,8 +241,6 @@ class USBDAQF1RD_RTD_read_channel_status
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
@@ -270,11 +267,9 @@ using WPC.Product;
 class USBDAQF1RD_DataLogger_RTD_read_channel_data
 {
     static public void Main()
-    { 
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    {  
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         USBDAQF1RD dev = new USBDAQF1RD();
@@ -296,7 +291,7 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 1;
             int channel_0 = 0;
             int channel_1 = 1;
@@ -307,9 +302,9 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open RTD port
-            status = dev.Thermal_open(port);
-            Console.WriteLine($&quot;Thermal_open status: {status}&quot;);
-
+            err = dev.Thermal_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
+ 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
@@ -326,9 +321,9 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             dev_logger.Logger_writeValue(data);  
 
             // Close RTD port
-            status = dev.Thermal_close(port);
-            Console.WriteLine($&quot;Thermal_close status: {status}&quot;);
-            
+            err = dev.Thermal_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
+ 
             // Close File
             dev_logger.Logger_closeFile();
 
@@ -343,8 +338,6 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>

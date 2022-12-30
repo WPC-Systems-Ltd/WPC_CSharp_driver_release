@@ -12,11 +12,9 @@ using WPC.Product;
 class EMotion_2axis_circular_interpolation
 {
     static public void Main()
-    { 
-        Console.WriteLine("Start example code...");
-
+    {  
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EMotion dev = new EMotion();
@@ -27,40 +25,42 @@ class EMotion_2axis_circular_interpolation
         try
         {   
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
               
-            status = dev.Motion_open(port);
-            Console.WriteLine($"Motion_open status: {status}");
+            err = dev.Motion_open(port);
+            Console.WriteLine($"open: {err}");
 
-            status = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini"); 
-            Console.WriteLine($"Motion_openCfgFile status: {status}");
+            //// Or specify a specific name in a specific dir
+            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
 
-            status = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile status: {status}");
+            err = dev.Motion_openCfgFile("Emotion.ini");
+            Console.WriteLine($"openCfgFile: {err}");
+
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($"loadCfgFile: {err}");
              
-            status = dev.Motion_cfgCircularInterpo(port, Constant.MOTION_AXIS_1, Constant.MOTION_AXIS_2, 2000, 2000, 0, 0, Constant.MOTION_DIRECTION_CW, circular_interpo_vector_speed:1000);
-            Console.WriteLine($"Motion_cfgCircularInterpo status: {status}");
+            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, 2000, 2000, 0, 0, Const.MOT_DIR_CW, circular_interpo_vector_speed:1000);
+            Console.WriteLine($"cfgCircularInterpo: {err}");
              
-            status = dev.Motion_startCircularInterpo(port);
-            Console.WriteLine($"Motion_startCircularInterpo status: {status}");
+            err = dev.Motion_startCircularInterpo(port);
+            Console.WriteLine($"startCircularInterpo: {err}");
              
             int move_status = 0;
             while (move_status == 0)
             { 
-                int axis1_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_1);
-                int axis2_move_status = dev.Motion_readMoveStatus(port, Constant.MOTION_AXIS_2);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2);
                 move_status = axis1_move_status & axis2_move_status;    
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
                 else { Console.WriteLine($"Move completed"); }
-            }
-
-            status = dev.Motion_close(port);
-            Console.WriteLine($"Motion_close status: {status}");
+            } 
+            err = dev.Motion_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -71,8 +71,6 @@ class EMotion_2axis_circular_interpolation
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine("End example code...");
+        dev.close(); 
     }
 } 

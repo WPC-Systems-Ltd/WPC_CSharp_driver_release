@@ -21,10 +21,8 @@ class USBDAQF1TD_TC_read_channel_data
 {
     static public void Main()
     { 
-        Console.WriteLine("Start example code...");
-
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -36,7 +34,7 @@ class USBDAQF1TD_TC_read_channel_data
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 1;
             int channel = 1;
 
@@ -46,19 +44,19 @@ class USBDAQF1TD_TC_read_channel_data
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open thermo port
-            status = dev.Thermal_open(port);
-            Console.WriteLine($"Thermal_open status: {status}");
+            err = dev.Thermal_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set thermo port and set K type in channel 1 
-            status = dev.Thermal_setOverSampling(port, channel, Constant.THERMAL_OVERSAMPLING_NONE);
-            Console.WriteLine($"Thermal_setOverSampling status: {status}");
+            err = dev.Thermal_setOverSampling(port, channel, Const.THERMAL_OVERSAMPLING_NONE);
+            Console.WriteLine($"setOverSampling: {err}");
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set thermo port and set K type in channel 1 
-            status = dev.Thermal_setType(port, channel, Constant.THERMAL_COUPLE_TYPE_K);
-            Console.WriteLine($"Thermal_setType status: {status}");
+            err = dev.Thermal_setType(port, channel, Const.THERMAL_COUPLE_TYPE_K);
+            Console.WriteLine($"setType: {err}");
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
@@ -68,8 +66,8 @@ class USBDAQF1TD_TC_read_channel_data
             Console.WriteLine($"Read channel 1 data: {data} °C ");
 
             // Close thermo port
-            status = dev.Thermal_close(port);
-            Console.WriteLine($"Thermal_close status: {status}");
+            err = dev.Thermal_close(port);
+            Console.WriteLine($"close: {err}");
 
         }
         catch (Exception ex)
@@ -82,7 +80,5 @@ class USBDAQF1TD_TC_read_channel_data
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }
