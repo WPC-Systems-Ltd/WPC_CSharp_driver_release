@@ -102,7 +102,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -128,17 +128,22 @@ class EMotion_get_logical_position
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            for (int i = 0; i &lt; 1000; i++) 
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
+
+            for (int i = 0; i &lt; 100; i++) 
             {   
                 err = dev.Motion_setLogicalPosi(port, Const.MOT_AXIS1, i);
                 if (err != 0)
                 {
                     Console.WriteLine($&quot;setLogicalPosi: {err}&quot;);
                 }
-                
                 int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1);
                 Console.WriteLine($&quot;getLogicalPosi: {posi}&quot;);
             }
+
+            err = dev.Motion_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -160,7 +165,7 @@ class EMotion_get_logical_position
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -190,21 +195,24 @@ class EMotion_1axis_move
              
             err = dev.Motion_open(port);
             Console.WriteLine($&quot;open: {err}&quot;);
-
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
-             
+ 
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
+  
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
             err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW);
             Console.WriteLine($&quot;cfgHome: {err}&quot;);
              
-            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 5000);
             Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
   
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
@@ -213,12 +221,16 @@ class EMotion_1axis_move
             while (move_status == 0) 
             {
                 move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
-                Console.WriteLine($&quot;Motion_getMoveStatus : {move_status}&quot;);
+                if (move_status == 0){Console.WriteLine($&quot;Moving...&quot;);} 
             } 
+            
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
- 
-            err = dev.Motion_close(port); 
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+            
+            err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
@@ -241,7 +253,7 @@ class EMotion_1axis_move
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -272,9 +284,9 @@ class EMotion_1axis_move_with_alarm_in
             err = dev.Motion_open(port);
             Console.WriteLine($&quot;open: {err}&quot;);
 
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
-
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
+            
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit: {err}&quot;);
 
@@ -287,6 +299,9 @@ class EMotion_1axis_move_with_alarm_in
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
@@ -298,6 +313,9 @@ class EMotion_1axis_move_with_alarm_in
             } 
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
@@ -321,7 +339,7 @@ class EMotion_1axis_move_with_alarm_in
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -352,8 +370,8 @@ class EMotion_1axis_move_with_inposition
             err = dev.Motion_open(port);
             Console.WriteLine($&quot;open: {err}&quot;);
 
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit: {err}&quot;);
@@ -366,6 +384,9 @@ class EMotion_1axis_move_with_inposition
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
@@ -380,6 +401,9 @@ class EMotion_1axis_move_with_inposition
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+            
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -403,7 +427,7 @@ class EMotion_1axis_move_with_inposition
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -449,6 +473,9 @@ class EMotion_1axis_move_with_configuration_file
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
@@ -460,6 +487,9 @@ class EMotion_1axis_move_with_configuration_file
             }
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
@@ -485,7 +515,7 @@ class EMotion_1axis_move_with_configuration_file
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -508,11 +538,18 @@ class EMotion_1axis_move_with_breakpoint
             // Parameters setting
             int err;
             int port = 0;
-
+            int start_position = 100;
+            ushort pulse_width = 100;
+            ushort pulse_period = 100;
+            ushort pulse_number = 100;
+ 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-             
+            
+            err = dev.Motion_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
+
             //// Or specify a specific name in a specific dir
             //err = dev.Motion_openCfgFile(@&quot;C:\Users\user\Desktop\Emotion.ini&quot;);
 
@@ -522,7 +559,7 @@ class EMotion_1axis_move_with_breakpoint
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
  
-            err = dev.Motion_cfgBreakPoint(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, Const.MOT_ACTIVE_HIGH, 100, 100, 100, 100);
+            err = dev.Motion_cfgBreakPoint(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, Const.MOT_ACTIVE_HIGH, start_position, pulse_width, pulse_period, pulse_number);
             Console.WriteLine($&quot;cfgBreakPoint: {err}&quot;);
 
             err = dev.Motion_enableBreakPoint(port, Const.MOT_AXIS1, Const.MOT_TRUE);
@@ -534,6 +571,9 @@ class EMotion_1axis_move_with_breakpoint
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+            
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
@@ -546,6 +586,9 @@ class EMotion_1axis_move_with_breakpoint
 
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
@@ -571,7 +614,7 @@ class EMotion_1axis_move_with_breakpoint
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -623,6 +666,9 @@ class EMotion_1axis_move_with_capture
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
@@ -630,14 +676,17 @@ class EMotion_1axis_move_with_capture
             while (move_status == 0)
             {
                 move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
-                Console.WriteLine($&quot;Motion_getMoveStatus : {move_status}&quot;);
+                Console.WriteLine($&quot;getMoveStatus : {move_status}&quot;);
                 
                 int capture_points = dev.Motion_readCapturePoint(port, Const.MOT_AXIS1);
-                Console.WriteLine($&quot;Motion_readCapturePoint: {move_status}&quot;);
+                Console.WriteLine($&quot;readCapturePoint: {move_status}&quot;);
             } 
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+            
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;); 
         }
@@ -661,7 +710,7 @@ class EMotion_1axis_move_with_capture
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -713,6 +762,9 @@ class EMotion_1axis_move_with_S_curve_acceleration
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
 
@@ -724,6 +776,9 @@ class EMotion_1axis_move_with_S_curve_acceleration
             } 
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_INSTANT); // Use Halt in S-Curve Move to prevent stop too slow
             Console.WriteLine($&quot;stop: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;); 
@@ -758,7 +813,7 @@ class EMotion_1axis_move_with_S_curve_acceleration
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -789,8 +844,8 @@ class EMotion_velocity_blending
             err = dev.Motion_open(port);
             Console.WriteLine($&quot;open: {err}&quot;);
 
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit: {err}&quot;);
@@ -803,6 +858,9 @@ class EMotion_velocity_blending
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_VELOCITY, target_position: 10000, velocity: 1000);
             Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
+ 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
@@ -822,6 +880,9 @@ class EMotion_velocity_blending
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+            
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -845,7 +906,7 @@ class EMotion_velocity_blending
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -876,8 +937,8 @@ class EMotion_velocity_blending_accerleration
             err = dev.Motion_open(port);
             Console.WriteLine($&quot;open: {err}&quot;);
              
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_VELOCITY, velocity: 3000);
             Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
@@ -887,6 +948,9 @@ class EMotion_velocity_blending_accerleration
 
             err = dev.Motion_cfgEncoder(port, Const.MOT_AXIS1, Const.MOT_ACTIVE_LOW);
             Console.WriteLine($&quot;cfgEncoder: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
@@ -915,6 +979,9 @@ class EMotion_velocity_blending_accerleration
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+            
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -935,25 +1002,25 @@ class EMotion_velocity_blending_accerleration
 <div class="tabGroup" id="tabgroup_bHGHmlrG6S-2">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S-2_tabid-C" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-C" data-tab="tabid-C" tabindex="0" aria-selected="true">Motion_set_configuration_file.cs</a>
+<a href="#tabpanel_bHGHmlrG6S-2_tabid-C" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-C" data-tab="tabid-C" tabindex="0" aria-selected="true">Motion_save_configuration_file.cs</a>
 </li>
 <li role="presentation">
 <a href="#tabpanel_bHGHmlrG6S-2_tabid-D" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_tabid-D" data-tab="tabid-D" tabindex="-1">Motion_load_configuration_file.cs</a>
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S-2_tabid-C" role="tabpanel" data-tab="tabid-C">
-<pre><code class="lang-csharp" name="CS">/// Motion_set_configuration_file.cs
+<pre><code class="lang-csharp" name="CS">/// Motion_save_configuration_file.cs
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
 
-class EMotion_set_configuration_file
+class EMotion_save_configuration_file
 {
     static public void Main()
     {   
@@ -985,8 +1052,8 @@ class EMotion_set_configuration_file
             err = dev.Motion_openCfgFile(&quot;Emotion.ini&quot;);
             Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, velocity: 2000, target_position: 10000, acceleration: 1000, deceleration: 1000);
             Console.WriteLine($&quot;cfgAxisMove: {err}&quot;);
@@ -1017,7 +1084,7 @@ class EMotion_set_configuration_file
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1093,7 +1160,7 @@ class EMotion_load_configuration_file
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1124,8 +1191,8 @@ class EMotion_find_home
             err = dev.Motion_open(port);
             Console.WriteLine($&quot;open: {err}&quot;);
 
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit: {err}&quot;);
@@ -1136,18 +1203,21 @@ class EMotion_find_home
             err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgHome: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
             err = dev.Motion_findRef(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;findRef: {err}&quot;);
 
-            int finding_referece = 1;
-            int found_reference = 0;
-            while (found_reference == 0)
+            int finding = 1;
+            int found = 0;
+            while (found == 0)
             {
                 // read forward and reverse limit status
-                List&lt;int&gt; hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1); 
+                List&lt;int&gt; hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1);
                 int forward_hit = hit_status[0];
                 int reverse_hit = hit_status[1];
                 if (forward_hit == 1) { Console.WriteLine($&quot;Forward hit&quot;); }
@@ -1156,17 +1226,21 @@ class EMotion_find_home
                 // read home status
                 int home_status = dev.Motion_getHomeStatus(port, Const.MOT_AXIS1);
                 if (home_status == 1) { Console.WriteLine($&quot;Home hit&quot;); }
-                
+
                 // Check finding and found status
                 List&lt;int&gt; driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1);
-                finding_referece = driving_status[0];
-                found_reference = driving_status[1];  
-                if (found_reference == 1) { Console.WriteLine($&quot;Found refernce&quot;); }
-                if (finding_referece == 1) { Console.WriteLine($&quot;Finding refernce&quot;); }
-            } 
+                finding = driving_status[0];
+                found = driving_status[1];
+                if (found == 1) { Console.WriteLine($&quot;Found refernce&quot;); }
+                //if (finding == 1) { Console.WriteLine($&quot;Finding refernce&quot;); }
+            }
+
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
- 
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -1190,7 +1264,7 @@ class EMotion_find_home
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1221,8 +1295,8 @@ class EMotion_find_limit
             err = dev.Motion_open(port);
             Console.WriteLine($&quot;open: {err}&quot;);
              
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit: {err}&quot;);
@@ -1232,6 +1306,9 @@ class EMotion_find_limit
 
             err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgHome: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
@@ -1262,6 +1339,9 @@ class EMotion_find_limit
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
  
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+ 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -1285,7 +1365,7 @@ class EMotion_find_limit
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1315,8 +1395,8 @@ class EMotion_find_index
             err = dev.Motion_open(port);
             Console.WriteLine($&quot;open: {err}&quot;);
              
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit: {err}&quot;);
@@ -1326,16 +1406,19 @@ class EMotion_find_index
 
             err = dev.Motion_cfgEncoder(port, Const.MOT_AXIS1, Const.MOT_ACTIVE_LOW);
             Console.WriteLine($&quot;cfgEncoder: {err}&quot;);
-               
+            
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+            
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;rstEncoderPosi: {err}&quot;);
 
             err = dev.Motion_findRef(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;findRef: {err}&quot;);
 
-            int finding_referece = 1;
-            int found_reference = 0;
-            while (found_reference == 0)
+            int finding = 1;
+            int found = 0;
+            while (found == 0)
             {
                 // read forward and reverse limit
                 List&lt;int&gt; hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1); 
@@ -1345,14 +1428,18 @@ class EMotion_find_index
                 if (reverse_hit == 1) { Console.WriteLine($&quot;Reverse hit&quot;); }
                   
                 List&lt;int&gt;  driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1);
-                finding_referece = driving_status[0];
-                found_reference = driving_status[1];  
-                if (found_reference == 1) { Console.WriteLine($&quot;Found reference&quot;); }
+                finding = driving_status[0];
+                found = driving_status[1];  
+                if (found == 1) { Console.WriteLine($&quot;Found reference&quot;); }
                 //if (finding_referece == 1) { Console.WriteLine($&quot;Finding reference&quot;); }
-            }  
+            }
+              
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
- 
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;); 
+
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -1398,7 +1485,7 @@ class EMotion_find_index
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1421,6 +1508,8 @@ class EMotion_2axis_linear_interpolation
             // Parameters setting
             int err;
             int port = 0;
+            int dest_posi1 = 2000;
+            int dest_posi2 = 2000;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -1436,9 +1525,9 @@ class EMotion_2axis_linear_interpolation
             Console.WriteLine($&quot;openCfgFile: {err}&quot;);
 
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($&quot;oadCfgFile: {err}&quot;);
+            Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
 
-            err = dev.Motion_cfg2AxisLinearInterpo(port, Const.MOT_AXIS1, 2000, Const.MOT_AXIS2, 2000, linear_interpo_vector_speed: 2000);
+            err = dev.Motion_cfg2AxisLinearInterpo(port, Const.MOT_AXIS1, dest_posi1, Const.MOT_AXIS2, dest_posi2, speed: 2000);
             Console.WriteLine($&quot;cfg2AxisLinearInterpo: {err}&quot;);
 
             err = dev.Motion_startLinearInterpo(port);
@@ -1460,6 +1549,9 @@ class EMotion_2axis_linear_interpolation
             err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop axis2: {err}&quot;);
 
+            err = dev.Motion_releaseInterpoAxis(port);
+            Console.WriteLine($&quot;releaseInterpoAxis: {err}&quot;);  
+            
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -1483,7 +1575,7 @@ class EMotion_2axis_linear_interpolation
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1506,6 +1598,10 @@ class EMotion_2axis_circular_interpolation
             // Parameters setting
             int err;
             int port = 0;
+            int center_point_x = 2000;
+            int center_point_y = 2000;
+            int finish_point_x = 0;
+            int finish_point_y = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -1523,9 +1619,15 @@ class EMotion_2axis_circular_interpolation
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
              
-            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, 2000, 2000, 0, 0, Const.MOT_DIR_CW, circular_interpo_vector_speed:1000);
+            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000);
             Console.WriteLine($&quot;cfgCircularInterpo: {err}&quot;);
              
+            for (int i = 0; i &lt; 4; i++)
+            {
+                err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE);
+                Console.WriteLine($&quot;enableServoOn: {err}&quot;); 
+            }
+ 
             err = dev.Motion_startCircularInterpo(port);
             Console.WriteLine($&quot;startCircularInterpo: {err}&quot;);
              
@@ -1537,7 +1639,19 @@ class EMotion_2axis_circular_interpolation
                 move_status = axis1_move_status &amp; axis2_move_status;    
                 if (move_status == 0) { Console.WriteLine($&quot;Moving......&quot;); }
                 else { Console.WriteLine($&quot;Move completed&quot;); }
-            } 
+            }
+
+            for (int i = 0; i &lt; 4; i++)
+            {
+                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION);
+                Console.WriteLine($&quot;stop: {err}&quot;); 
+
+                err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE);
+                Console.WriteLine($&quot;enableServoOn: {err}&quot;);  
+            }
+            err = dev.Motion_releaseInterpoAxis(port);
+            Console.WriteLine($&quot;releaseInterpoAxis: {err}&quot;);  
+
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -1561,7 +1675,7 @@ class EMotion_2axis_circular_interpolation
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1583,7 +1697,16 @@ class EMotion_3axis_helical_interpolation
         {   
             // Parameters setting
             int err;
-            int port = 0;
+            int port = 0; 
+            int center_x = 0;
+            int center_y = 0;
+            int finish_x = 100;
+            int finish_y = 100;
+            int pitch_axis3 = 0;
+            int pitch_axis4 = 0;
+            int rotation_num = 0;
+            int speed = 0;
+            int cal_timeout = 1000;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -1601,7 +1724,9 @@ class EMotion_3axis_helical_interpolation
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
 
-            err = dev.Motion_cfgHelicalInterpo(port, 0, 0, 100, 100, Const.MOT_FALSE, 0, Const.MOT_FALSE, 0, 0, 0, Const.MOT_DIR_CW, 1000);
+            err = dev.Motion_cfgHelicalInterpo(port, center_x, center_y, finish_x, finish_y, Const.MOT_FALSE, pitch_axis3, Const.MOT_FALSE, pitch_axis4,
+            rotation_num, speed, Const.MOT_DIR_CW, cal_timeout);
+
             Console.WriteLine($&quot;cfgHelicalInterpo: {err}&quot;);
              
             err = dev.Motion_startHelicalInterpo(port);
@@ -1611,10 +1736,13 @@ class EMotion_3axis_helical_interpolation
             while (move_status == 0)
             {
                 move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
-                Console.WriteLine($&quot;move_status err: {move_status}&quot;); 
+                Console.WriteLine($&quot;move_status: {move_status}&quot;); 
             } 
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop: {err}&quot;);
+
+            err = dev.Motion_releaseInterpoAxis(port);
+            Console.WriteLine($&quot;releaseInterpoAxis: {err}&quot;);  
 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
@@ -1639,7 +1767,7 @@ class EMotion_3axis_helical_interpolation
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1662,6 +1790,9 @@ class EMotion_3axis_linear_interpolation
             // Parameters setting
             int err;
             int port = 0;
+            int dest_posi1 = -2000;
+            int dest_posi2 = -2000;
+            int dest_posi3 = 3000;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -1679,7 +1810,7 @@ class EMotion_3axis_linear_interpolation
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($&quot;loadCfgFile: {err}&quot;);
 
-            err = dev.Motion_cfg3AxisLinearInterpo(port, Const.MOT_AXIS1, -2000, Const.MOT_AXIS2, -2000, Const.MOT_AXIS3, 3000, linear_interpo_vector_speed:2000);
+            err = dev.Motion_cfg3AxisLinearInterpo(port, Const.MOT_AXIS1, dest_posi1, Const.MOT_AXIS2, dest_posi2, Const.MOT_AXIS3, dest_posi3, speed:2000);
             Console.WriteLine($&quot;cfg3AxisLinearInterpo: {err}&quot;);
 
             err = dev.Motion_startLinearInterpo(port);
@@ -1695,15 +1826,14 @@ class EMotion_3axis_linear_interpolation
                 if (move_status == 0) { Console.WriteLine($&quot;Moving......&quot;); }
                 else { Console.WriteLine($&quot;Move completed&quot;); }
             }
-
-            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;stop axis1: {err}&quot;);
-
-            err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;stop axis2: {err}&quot;);
-
-            err = dev.Motion_stop(port, Const.MOT_AXIS3, Const.MOT_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;stop axis3: {err}&quot;);
+            for (int i = 0; i &lt; 3; i++)
+            {
+                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION);
+                Console.WriteLine($&quot;stop: {err}&quot;); 
+            }
+            
+            err = dev.Motion_releaseInterpoAxis(port);
+            Console.WriteLine($&quot;releaseInterpoAxis: {err}&quot;);  
 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
@@ -1728,7 +1858,7 @@ class EMotion_3axis_linear_interpolation
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1793,8 +1923,8 @@ class EMotion_3axis_synchronous_move
             Console.WriteLine($&quot;open: {err}&quot;);
             
             // For Axis 1
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam axis1: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis axis1: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit axis1: {err}&quot;);
@@ -1802,25 +1932,36 @@ class EMotion_3axis_synchronous_move
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($&quot;cfgAxisMove axis1: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
+
             // For Axis 2
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam axis2: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis axis2: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS2, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
              Console.WriteLine($&quot;cfgLimit axis2: {err}&quot;);
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS2, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($&quot;cfgAxisMove axis2: {err}&quot;);
-             
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS2, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+            
             // For Axis 3
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam axis3: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis axis3: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS3, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit axis3: {err}&quot;);
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS3, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($&quot;cfgAxisMove axis3: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS3, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
 
             List&lt;int&gt; axis_list = new List&lt;int&gt; {0, 1, 2};
             err = dev.Motion_startMultiAxisMove(port, axis_list);
@@ -1846,11 +1987,20 @@ class EMotion_3axis_synchronous_move
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop axis1: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
             err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop axis2: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS2, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
             err = dev.Motion_stop(port, Const.MOT_AXIS3, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($&quot;stop axis3: {err}&quot;);
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS3, Const.MOT_FALSE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;); 
@@ -1875,7 +2025,7 @@ class EMotion_3axis_synchronous_move
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -1885,34 +2035,52 @@ class EMotion_3axis_asynchronous_move
     public static void Axis1_Thread(EMotion handle, int port)
     {
         int move_status = 0;
+        int err;
         while (move_status == 0)
         {
             move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS1);
             Console.WriteLine($&quot;Axis 1 move status: {move_status}&quot;);
             Thread.Sleep(5);
         }
+        err = handle.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+        Console.WriteLine($&quot;stop axis1: {err}&quot;);
+
+        err = handle.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+        Console.WriteLine($&quot;enableServoOn: {err}&quot;);
     }
 
     public static void Axis2_Thread(EMotion handle, int port)
     {
         int move_status = 0;
+        int err;
         while (move_status == 0)
         {
             move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS2);
             Console.WriteLine($&quot;Axis 2 move status: {move_status}&quot;);
             Thread.Sleep(5);
         }
+        err = handle.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
+        Console.WriteLine($&quot;stop axis2: {err}&quot;);
+
+        err = handle.Motion_enableServoOn(port, Const.MOT_AXIS2, Const.MOT_FALSE);
+        Console.WriteLine($&quot;enableServoOn: {err}&quot;);
     }
 
     public static void Axis3_Thread(EMotion handle, int port)
     {
         int move_status = 0;
+        int err;
         while (move_status == 0)
         {
             move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS3);
             Console.WriteLine($&quot;Axis 3 move status: {move_status}&quot;);
             Thread.Sleep(5);
-        }
+        }             
+        err = handle.Motion_stop(port, Const.MOT_AXIS3, Const.MOT_STOP_TYPE_DECELERATION);
+        Console.WriteLine($&quot;stop axis3: {err}&quot;);
+
+        err = handle.Motion_enableServoOn(port, Const.MOT_AXIS3, Const.MOT_FALSE);
+        Console.WriteLine($&quot;enableServoOn: {err}&quot;);
     }
     
     static public void Main()
@@ -1940,8 +2108,8 @@ class EMotion_3axis_asynchronous_move
             Console.WriteLine($&quot;open: {err}&quot;);
             
             // For Axis 1
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam axis1: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis axis1: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit axis1: {err}&quot;);
@@ -1949,19 +2117,31 @@ class EMotion_3axis_asynchronous_move
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($&quot;cfgAxisMove axis1: {err}&quot;);
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
+
             // For Axis 2
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam axis2: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis axis2: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS2, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit axis2: {err}&quot;);
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS2, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($&quot;cfgAxisMove axis2: {err}&quot;);
-             
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS2, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
+
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS2);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
+
             // For Axis 3
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($&quot;cfgAxisParam axis3: {err}&quot;);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($&quot;cfgAxis axis3: {err}&quot;);
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS3, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($&quot;cfgLimit axis3: {err}&quot;);
@@ -1969,10 +2149,12 @@ class EMotion_3axis_asynchronous_move
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS3, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($&quot;cfgAxisMove axis3: {err}&quot;);
 
-            List&lt;int&gt; axis_list = new List&lt;int&gt; {0, 1, 2};
-            err = dev.Motion_startMultiAxisMove(port, axis_list);
-            Console.WriteLine($&quot;startMultiAxisMove: {err}&quot;);
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS3, Const.MOT_TRUE);
+            Console.WriteLine($&quot;enableServoOn: {err}&quot;);
 
+            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS3);
+            Console.WriteLine($&quot;startSingleAxisMove: {err}&quot;);
+ 
             Thread T1 = new Thread(() =&gt; Axis1_Thread(dev, port));
             Thread T2 = new Thread(() =&gt; Axis2_Thread(dev, port));
             Thread T3 = new Thread(() =&gt; Axis3_Thread(dev, port));
@@ -1989,16 +2171,7 @@ class EMotion_3axis_asynchronous_move
 
             T3.Join();
             Console.WriteLine(&quot;Axis3_Thread returned.&quot;);
-             
-            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;stop axis1: {err}&quot;);
-
-            err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;stop axis2: {err}&quot;);
-
-            err = dev.Motion_stop(port, Const.MOT_AXIS3, Const.MOT_STOP_TYPE_DECELERATION);
-            Console.WriteLine($&quot;stop axis3: {err}&quot;);
-
+ 
             err = dev.Motion_close(port);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
@@ -2067,7 +2240,7 @@ class EMotion_3axis_asynchronous_move
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

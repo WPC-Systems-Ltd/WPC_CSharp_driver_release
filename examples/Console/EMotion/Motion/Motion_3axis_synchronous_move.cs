@@ -4,7 +4,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -69,8 +69,8 @@ class EMotion_3axis_synchronous_move
             Console.WriteLine($"open: {err}");
             
             // For Axis 1
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($"cfgAxisParam axis1: {err}");
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($"cfgAxis axis1: {err}");
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($"cfgLimit axis1: {err}");
@@ -78,25 +78,36 @@ class EMotion_3axis_synchronous_move
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($"cfgAxisMove axis1: {err}");
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($"enableServoOn: {err}");
+
+
             // For Axis 2
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($"cfgAxisParam axis2: {err}");
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($"cfgAxis axis2: {err}");
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS2, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
              Console.WriteLine($"cfgLimit axis2: {err}");
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS2, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($"cfgAxisMove axis2: {err}");
-             
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS2, Const.MOT_TRUE);
+            Console.WriteLine($"enableServoOn: {err}");
+            
             // For Axis 3
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($"cfgAxisParam axis3: {err}");
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($"cfgAxis axis3: {err}");
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS3, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($"cfgLimit axis3: {err}");
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS3, Const.MOT_RELATIVE_POSITION, target_position: 10000);
             Console.WriteLine($"cfgAxisMove axis3: {err}");
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS3, Const.MOT_TRUE);
+            Console.WriteLine($"enableServoOn: {err}");
+
 
             List<int> axis_list = new List<int> {0, 1, 2};
             err = dev.Motion_startMultiAxisMove(port, axis_list);
@@ -122,11 +133,20 @@ class EMotion_3axis_synchronous_move
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop axis1: {err}");
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($"enableServoOn: {err}");
+
             err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop axis2: {err}");
 
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS2, Const.MOT_FALSE);
+            Console.WriteLine($"enableServoOn: {err}");
+
             err = dev.Motion_stop(port, Const.MOT_AXIS3, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop axis3: {err}");
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS3, Const.MOT_FALSE);
+            Console.WriteLine($"enableServoOn: {err}");
 
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}"); 

@@ -23,9 +23,8 @@ public class WPC_example_code
         Console.WriteLine("USBDAQF1RD, please input 11");
         Console.WriteLine("USBDAQF1TD, please input 12");
         Console.WriteLine("WifiDAQE3A, please input 13");
-  
- 
     }
+
     #endregion
 
     #region DeviceFinderMessage
@@ -208,7 +207,7 @@ public class WPC_example_code
         Console.WriteLine("Run Motion_find_limit.cs, please input 105");
         Console.WriteLine("Run Motion_get_logical_position.cs, please input 106");
         Console.WriteLine("Run Motion_load_configuration_file.cs, please input 107");
-        Console.WriteLine("Run Motion_set_configuration_file.cs, please input 108");
+        Console.WriteLine("Run Motion_save_configuration_file.cs, please input 108");
         Console.WriteLine("Run Motion_velocity_blending.cs, please input 109");
         Console.WriteLine("Run Motion_velocity_blending_accerleration.cs, please input 110"); 
     }
@@ -423,7 +422,7 @@ public class WPC_example_code
                         EMotion_load_configuration_file.Main();
                         break;
                     case 108:
-                        EMotion_set_configuration_file.Main();
+                        EMotion_save_configuration_file.Main();
                         break;
                     case 109:
                         EMotion_velocity_blending.Main();

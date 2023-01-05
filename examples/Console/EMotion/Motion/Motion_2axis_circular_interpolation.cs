@@ -4,7 +4,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -27,6 +27,10 @@ class EMotion_2axis_circular_interpolation
             // Parameters setting
             int err;
             int port = 0;
+            int center_point_x = 2000;
+            int center_point_y = 2000;
+            int finish_point_x = 0;
+            int finish_point_y = 0;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -44,9 +48,15 @@ class EMotion_2axis_circular_interpolation
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($"loadCfgFile: {err}");
              
-            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, 2000, 2000, 0, 0, Const.MOT_DIR_CW, circular_interpo_vector_speed:1000);
+            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000);
             Console.WriteLine($"cfgCircularInterpo: {err}");
              
+            for (int i = 0; i < 4; i++)
+            {
+                err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE);
+                Console.WriteLine($"enableServoOn: {err}"); 
+            }
+ 
             err = dev.Motion_startCircularInterpo(port);
             Console.WriteLine($"startCircularInterpo: {err}");
              
@@ -58,7 +68,19 @@ class EMotion_2axis_circular_interpolation
                 move_status = axis1_move_status & axis2_move_status;    
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
                 else { Console.WriteLine($"Move completed"); }
-            } 
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION);
+                Console.WriteLine($"stop: {err}"); 
+
+                err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE);
+                Console.WriteLine($"enableServoOn: {err}");  
+            }
+            err = dev.Motion_releaseInterpoAxis(port);
+            Console.WriteLine($"releaseInterpoAxis: {err}");  
+
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");
         }

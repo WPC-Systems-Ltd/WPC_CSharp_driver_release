@@ -4,7 +4,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -34,21 +34,24 @@ class EMotion_1axis_move
              
             err = dev.Motion_open(port);
             Console.WriteLine($"open: {err}");
-
-            err = dev.Motion_cfgAxisParam(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
-            Console.WriteLine($"cfgAxisParam: {err}");
-             
+ 
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            Console.WriteLine($"cfgAxis: {err}");
+  
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
             Console.WriteLine($"cfgLimit: {err}");
 
             err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW);
             Console.WriteLine($"cfgHome: {err}");
              
-            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 5000);
             Console.WriteLine($"cfgAxisMove: {err}");
   
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($"rstEncoderPosi: {err}");
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            Console.WriteLine($"enableServoOn: {err}");
 
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($"startSingleAxisMove: {err}");
@@ -57,12 +60,16 @@ class EMotion_1axis_move
             while (move_status == 0) 
             {
                 move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
-                Console.WriteLine($"Motion_getMoveStatus : {move_status}");
+                if (move_status == 0){Console.WriteLine($"Moving...");} 
             } 
+            
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop: {err}");
- 
-            err = dev.Motion_close(port); 
+
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            Console.WriteLine($"enableServoOn: {err}");
+            
+            err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

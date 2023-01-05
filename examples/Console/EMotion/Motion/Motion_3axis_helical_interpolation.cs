@@ -4,7 +4,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -26,7 +26,16 @@ class EMotion_3axis_helical_interpolation
         {   
             // Parameters setting
             int err;
-            int port = 0;
+            int port = 0; 
+            int center_x = 0;
+            int center_y = 0;
+            int finish_x = 100;
+            int finish_y = 100;
+            int pitch_axis3 = 0;
+            int pitch_axis4 = 0;
+            int rotation_num = 0;
+            int speed = 0;
+            int cal_timeout = 1000;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -44,7 +53,9 @@ class EMotion_3axis_helical_interpolation
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($"loadCfgFile: {err}");
 
-            err = dev.Motion_cfgHelicalInterpo(port, 0, 0, 100, 100, Const.MOT_FALSE, 0, Const.MOT_FALSE, 0, 0, 0, Const.MOT_DIR_CW, 1000);
+            err = dev.Motion_cfgHelicalInterpo(port, center_x, center_y, finish_x, finish_y, Const.MOT_FALSE, pitch_axis3, Const.MOT_FALSE, pitch_axis4,
+            rotation_num, speed, Const.MOT_DIR_CW, cal_timeout);
+
             Console.WriteLine($"cfgHelicalInterpo: {err}");
              
             err = dev.Motion_startHelicalInterpo(port);
@@ -54,10 +65,13 @@ class EMotion_3axis_helical_interpolation
             while (move_status == 0)
             {
                 move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
-                Console.WriteLine($"move_status err: {move_status}"); 
+                Console.WriteLine($"move_status: {move_status}"); 
             } 
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop: {err}");
+
+            err = dev.Motion_releaseInterpoAxis(port);
+            Console.WriteLine($"releaseInterpoAxis: {err}");  
 
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");

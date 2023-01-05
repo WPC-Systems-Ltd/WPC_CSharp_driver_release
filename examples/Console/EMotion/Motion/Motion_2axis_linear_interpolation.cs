@@ -4,7 +4,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -27,6 +27,8 @@ class EMotion_2axis_linear_interpolation
             // Parameters setting
             int err;
             int port = 0;
+            int dest_posi1 = -2000;
+            int dest_posi2 = 2000;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -38,13 +40,13 @@ class EMotion_2axis_linear_interpolation
             //// Or specify a specific name in a specific dir
             //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
 
-            err = dev.Motion_openCfgFile("Emotion.ini");
+            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
             Console.WriteLine($"openCfgFile: {err}");
 
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"oadCfgFile: {err}");
+            Console.WriteLine($"loadCfgFile: {err}");
 
-            err = dev.Motion_cfg2AxisLinearInterpo(port, Const.MOT_AXIS1, 2000, Const.MOT_AXIS2, 2000, linear_interpo_vector_speed: 2000);
+            err = dev.Motion_cfg2AxisLinearInterpo(port, Const.MOT_AXIS1, dest_posi1, Const.MOT_AXIS2, dest_posi2, speed: 2000);
             Console.WriteLine($"cfg2AxisLinearInterpo: {err}");
 
             err = dev.Motion_startLinearInterpo(port);
@@ -66,6 +68,9 @@ class EMotion_2axis_linear_interpolation
             err = dev.Motion_stop(port, Const.MOT_AXIS2, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop axis2: {err}");
 
+            err = dev.Motion_releaseInterpoAxis(port);
+            Console.WriteLine($"releaseInterpoAxis: {err}");  
+            
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");
         }
