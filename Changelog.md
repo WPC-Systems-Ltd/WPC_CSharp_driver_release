@@ -1,12 +1,20 @@
 WPC CSharp driver release changelog
 ===================================
 
-v0.1.4 Date: 2022/12/30, Developer: Chunglee_people 
+v0.1.4 Date: 2023/01/06, Developer: Chunglee_people 
 ---------------------------------------------------- 
 
 ### Added
+- Example codes: 
+   - Motion_find_home.cs, Motion_find_limit.cs and Motion_find_index.cs,
+   - Motion_velocity_blending.cs and Motion_velocity_blending_accerleration,
+   - Motion_load_configuration_file.cs and Motion_set_configuration_file,
+   - Motion_1axis_move_with_alarm_in.cs, Motion_1axis_move_with_inposition.cs, Motion_1axis_move_with_breakpoint.cs, 
+	 Motion_1axis_move_with_configuration_file.cs, Motion_1axis_move_with_capture.cs and Motion_1axis_move_with_S_curve_acceleration.cs 
+   - Motion_2axis_circular_interpolation.cs and Motion_2axis_linear_interpolation.cs 
+   - Motion_3axis_linear_interpolation.cs and Motion_3axis_helical_interpolation.cs 
+   - Motion_3axis_synchronous_move.cs and Motion_3axis_asynchronous_move.cs
 - Add EMotion into WPC_example_code.cs
-
 ### Removed
 - WPC_7steps_Of_Python_Project_Workflow_r6.pdf
  
