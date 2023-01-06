@@ -1,4 +1,3 @@
-/// <summary>
 /// I2C_write_read.cs
 /// 
 /// This example demonstrates how to communicate with USBDAQF1TD (master) and 24C08C(slave) with I2C interface.
@@ -13,10 +12,8 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
@@ -24,10 +21,8 @@ class USBDAQF1TD_I2C_write_read
 {
     static public void Main()
     {
-        Console.WriteLine("Start example code...");
-
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -39,7 +34,7 @@ class USBDAQF1TD_I2C_write_read
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 1;
             int device_address = 0x50;
             byte word_address = 0x00;
@@ -51,23 +46,23 @@ class USBDAQF1TD_I2C_write_read
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open I2C port
-            status = dev.I2C_open(port);
-            Console.WriteLine($"I2C_open status: {status}");
+            err = dev.I2C_open(port);
+            Console.WriteLine($"open: {err}"); 
 
             // Set I2C port and set clock rate to standard mode
-            status = dev.I2C_setClockRate(port, Constant.I2C_SPEED_STANDARD);
-            Console.WriteLine($"I2C_setClockRate status: {status}");
+            err = dev.I2C_setClockRate(port, Const.I2C_SPEED_STANDARD);
+            Console.WriteLine($"setClockRate: {err}"); 
 
             // Write WREN byte
-            status = dev.I2C_write(port, device_address, I2C_write_data);
-            Console.WriteLine($"I2C_write status: {status}");
+            err = dev.I2C_write(port, device_address, I2C_write_data);
+            Console.WriteLine($"write: {err}"); 
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Read data via I2C
-            status = dev.I2C_write(port, device_address, new List<byte> {word_address});
-            Console.WriteLine($"I2C_write status: {status}");
+            err = dev.I2C_write(port, device_address, new List<byte> {word_address});
+            Console.WriteLine($"write: {err}"); 
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
@@ -76,8 +71,8 @@ class USBDAQF1TD_I2C_write_read
             Console.WriteLine($"I2C_read data: {data[0]},{data[1]},{data[2]},{data[3]}");
 
             // Close I2C port
-            status = dev.I2C_close(port);
-            Console.WriteLine($"I2C_close status: {status}");
+            err = dev.I2C_close(port);
+            Console.WriteLine($"close: {err}"); 
         }
         catch (Exception ex)
         {
@@ -89,7 +84,5 @@ class USBDAQF1TD_I2C_write_read
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

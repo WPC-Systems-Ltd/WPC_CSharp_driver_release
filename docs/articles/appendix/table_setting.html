@@ -593,39 +593,20 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_AXIS_1</td>
+<td style="text-align: left;">MOT_AXIS1</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_AXIS_2</td>
+<td style="text-align: left;">MOT_AXIS2</td>
 <td style="text-align: left;">1</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_AXIS_3</td>
+<td style="text-align: left;">MOT_AXIS3</td>
 <td style="text-align: left;">2</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_AXIS_4</td>
+<td style="text-align: left;">MOT_AXIS4</td>
 <td style="text-align: left;">3</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-connector">Motion Connector</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOTION_CONNECTOR_0</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOTION_CONNECTOR_1</td>
-<td style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
@@ -639,15 +620,15 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_ABSOLUTE_POSITION_MODE</td>
+<td style="text-align: left;">MOT_ABSOLUTE_POSITION</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_RELATIVE_POSITION_MODE</td>
+<td style="text-align: left;">MOT_RELATIVE_POSITION</td>
 <td style="text-align: left;">1</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_VELOCITY_MODE</td>
+<td style="text-align: left;">MOT_VELOCITY</td>
 <td style="text-align: left;">2</td>
 </tr>
 </tbody>
@@ -662,16 +643,16 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_STEPPER_OUTPUT_ONE_PULSE</td>
+<td style="text-align: left;">MOT_ONE_PULSE</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_STEPPER_OUTPUT_TWO_PULSE</td>
+<td style="text-align: left;">MOT_TWO_PULSE</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="motion-axis-direction">Motion Axis Direction</h3>
+<h3 id="motion-direction">Motion Direction</h3>
 <table>
 <thead>
 <tr>
@@ -681,30 +662,11 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_AXIS_DIRECTION_CW</td>
+<td style="text-align: left;">MOT_DIR_CW</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_AXIS_DIRECTION_CCW</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-encoder-direction">Motion Encoder Direction</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOTION_ENCODER_DIRECTION_CW</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOTION_ENCODER_DIRECTION_CCW</td>
+<td style="text-align: left;">MOT_DIR_CCW</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
@@ -719,16 +681,16 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_STOP_TYPE_DECELERATION</td>
+<td style="text-align: left;">MOT_STOP_TYPE_DECELERATION</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_STOP_TYPE_HALT</td>
+<td style="text-align: left;">MOT_STOP_TYPE_HALT</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="motion-encoder-polarity">Motion Encoder Polarity</h3>
+<h3 id="motion-polarity">Motion Polarity</h3>
 <table>
 <thead>
 <tr>
@@ -738,16 +700,16 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_ENCODER_POLARITY_ACTIVE_LOW</td>
+<td style="text-align: left;">MOT_ACTIVE_LOW</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_ENCODER_POLARITY_ACTIVE_HIGH</td>
+<td style="text-align: left;">MOT_ACTIVE_HIGH</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="motion-alarm-polarity">Motion Alarm Polarity</h3>
+<h3 id="motion-enable">Motion Enable</h3>
 <table>
 <thead>
 <tr>
@@ -757,16 +719,16 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_ALARM_POLARITY_ACTIVE_LOW</td>
+<td style="text-align: left;">MOT_FALSE</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_ALARM_POLARITY_ACTIVE_HIGH</td>
+<td style="text-align: left;">MOT_TRUE</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="motion-home-polarity">Motion Home Polarity</h3>
+<h3 id="motion-search-direction">Motion Search Direction</h3>
 <table>
 <thead>
 <tr>
@@ -776,16 +738,16 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_HOME_POLARITY_ACTIVE_LOW</td>
+<td style="text-align: left;">MOT_DIR_FORWARD</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_HOME_POLARITY_ACTIVE_HIGH</td>
+<td style="text-align: left;">MOT_DIR_REVERSE</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="motion-inposition-polarity">Motion Inposition Polarity</h3>
+<h3 id="motion-find-reference-type">Motion Find Reference Type</h3>
 <table>
 <thead>
 <tr>
@@ -795,16 +757,20 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_INPOSITION_POLARITY_ACTIVE_LOW</td>
+<td style="text-align: left;">MOT_FIND_HOME</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_INPOSITION_POLARITY_ACTIVE_HIGH</td>
+<td style="text-align: left;">MOT_FIND_INDEX</td>
 <td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_FIND_LIMIT</td>
+<td style="text-align: left;">2</td>
 </tr>
 </tbody>
 </table>
-<h3 id="motion-limit-polarity">Motion Limit Polarity</h3>
+<h3 id="motion-capture-mode">Motion Capture Mode</h3>
 <table>
 <thead>
 <tr>
@@ -814,16 +780,16 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_LIMIT_POLARITY_ACTIVE_LOW</td>
+<td style="text-align: left;">MOT_CAPTURE_LOGICAL_POSITION</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_LIMIT_POLARITY_ACTIVE_HIGH</td>
+<td style="text-align: left;">MOT_CAPTURE_ENCODER_POSITION</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="motion-inposition-disableenable">Motion Inposition Disable/Enable</h3>
+<h3 id="motion-capture-type">Motion Capture Type</h3>
 <table>
 <thead>
 <tr>
@@ -833,87 +799,11 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOTION_INPOSITION_DISABLE</td>
+<td style="text-align: left;">MOT_CAPTURE_RISING_EDGE</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOTION_INPOSITION_ENABLE</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-home-disableenable">Motion Home Disable/Enable</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOTION_ALARM_DISABLE</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOTION_ALARM_ENABLE</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-alarm-disableenable">Motion Alarm Disable/Enable</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOTION_ALARM_DISABLE</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOTION_ALARM_ENABLE</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-forward-disableenable">Motion Forward Disable/Enable</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOTION_FORWARD_DISABLE</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOTION_FORWARD_ENABLE</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-reverse-disableenable">Motion Reverse Disable/Enable</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOTION_REVERSE_DISABLE</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOTION_REVERSE_ENABLE</td>
+<td style="text-align: left;">MOT_CAPTURE_FALLING_EDGE</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
@@ -969,7 +859,7 @@
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

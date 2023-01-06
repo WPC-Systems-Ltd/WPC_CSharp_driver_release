@@ -1,4 +1,3 @@
-/// <summary>
 /// AI_N_samples_once.cs
 /// 
 /// This example demonstrates how to get AI data in once in N sample mode from EthanA.
@@ -13,22 +12,17 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
 class EthanA_AI_N_samples_once
 {
     static public void Main()
-    {
-
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -40,7 +34,7 @@ class EthanA_AI_N_samples_once
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
             int samples = 50;
             float sampling_rate = 1000;
@@ -51,24 +45,24 @@ class EthanA_AI_N_samples_once
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            status = dev.AI_open(port);
-            Console.WriteLine($"AI_open status: {status}");
+            err = dev.AI_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set AI port and acquisition mode to N-sample mode
-            status = dev.AI_setMode(port, Constant.AI_MODE_N_SAMPLE);
-            Console.WriteLine($"AI_setMode status: {status}");
+            err = dev.AI_setMode(port, Const.AI_MODE_N_SAMPLE);
+            Console.WriteLine($"setMode: {err}");
 
             // Set AI port and # of samples to 5 (pts)
-            status = dev.AI_setNumSamples(port, samples);
-            Console.WriteLine($"AI_setNumSamples status: {status}");
+            err = dev.AI_setNumSamples(port, samples);
+            Console.WriteLine($"setNumSamples: {err}");
 
             // Set AI port and sampling rate to 1k (Hz)
-            status = dev.AI_setSamplingRate(port, sampling_rate);
-            Console.WriteLine($"AI_setSamplingRate status: {status}");
+            err = dev.AI_setSamplingRate(port, sampling_rate);
+            Console.WriteLine($"setSamplingRate: {err}");
 
             // Set AI port and start acquisition
-            status = dev.AI_start(port);
-            Console.WriteLine($"AI_start status: {status}");
+            err = dev.AI_start(port);
+            Console.WriteLine($"start: {err}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
@@ -83,8 +77,8 @@ class EthanA_AI_N_samples_once
             }
 
             // Close AI port
-            status = dev.AI_close(port);
-            Console.WriteLine($"AI_close status: {status}");
+            err = dev.AI_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -95,8 +89,6 @@ class EthanA_AI_N_samples_once
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine("End example code...");
+        dev.close(); 
     }
 }

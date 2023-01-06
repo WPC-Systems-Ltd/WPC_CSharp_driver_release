@@ -1,5 +1,4 @@
-/// <summary>
-/// Get_network_info.cs
+/// get_network_info.cs
 /// 
 /// This example demonstrates how to get hardware & network information from EthanA.
 /// 
@@ -11,21 +10,17 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
 class EthanA_get_network_info
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         EthanA dev = new EthanA();
@@ -67,7 +62,5 @@ class EthanA_get_network_info
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

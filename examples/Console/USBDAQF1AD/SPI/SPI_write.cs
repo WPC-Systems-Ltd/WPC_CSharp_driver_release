@@ -1,5 +1,3 @@
-
-/// <summary>
 /// SPI_write.cs
 /// 
 /// This example demonstrates how to communicate with USBDAQF1AD (master) and 25LC640(slave) with SPI interface.
@@ -14,10 +12,8 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
@@ -25,10 +21,8 @@ class USBDAQF1AD_SPI_write
 {
     static public void Main()
     { 
-        Console.WriteLine("Start example code...");
-
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1AD dev = new USBDAQF1AD();
@@ -40,7 +34,7 @@ class USBDAQF1AD_SPI_write
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 2;
             int DO_port = 0;
             int DO_pin = 0;
@@ -57,80 +51,80 @@ class USBDAQF1AD_SPI_write
             */
 
             // Open pin0 in port0 with digital output
-            status = dev.DO_openPins(DO_port, new List<int> { DO_pin });
-            Console.WriteLine($"DO_openPins status: {status}");
+            err = dev.DO_openPins(DO_port, new List<int> { DO_pin });
+            Console.WriteLine($"openPins: {err}");
 
             // Open SPI port
-            status = dev.SPI_open(port);
-            Console.WriteLine($"SPI_open status: {status}");
+            err = dev.SPI_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set CS(pin0) to high
-            status = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 });
-            Console.WriteLine($"DO_writePins status: {status}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 });
+            Console.WriteLine($"writePins: {err}");
 
             /* 
             Set SPI parameter
             */
 
             // Set SPI port and set datasize to 8-bits data
-            status = dev.SPI_setDataSize(port, Constant.SPI_DATA_SIZE_8_BITS);
-            Console.WriteLine($"SPI_setDataSize status: {status}");
+            err = dev.SPI_setDataSize(port, Const.SPI_DATA_SIZE_8_BITS);
+            Console.WriteLine($"setDataSize: {err}");
 
             // Set SPI port and set first_bit to MSB first
-            status = dev.SPI_setFirstBit(port, Constant.SPI_FIRST_BIT_MSB);
-            Console.WriteLine($"SPI_setFirstBit status: {status}");
+            err = dev.SPI_setFirstBit(port, Const.SPI_FIRST_BIT_MSB);
+            Console.WriteLine($"setFirstBit: {err}");
 
             // Set SPI port and set prescaler to 64
-            status = dev.SPI_setPrescaler(port, Constant.SPI_PRESCALER_64);
-            Console.WriteLine($"SPI_setPrescaler status: {status}");
+            err = dev.SPI_setPrescaler(port, Const.SPI_PRESCALER_64);
+            Console.WriteLine($"setPrescaler: {err}");
 
             // Set SPI port and set CPOL and CPHA to mode 0 
-            status = dev.SPI_setMode(port, Constant.SPI_MODE_0);
-            Console.WriteLine($"SPI_setMode status: {status}");
+            err = dev.SPI_setMode(port, Const.SPI_MODE_0);
+            Console.WriteLine($"setMode: {err}");
 
             /* 
             Write data via SPI
             */
 
             // Set CS(pin0) to low
-            status = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 });
-            Console.WriteLine($"DO_writePins status: {status}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 });
+            Console.WriteLine($"writePins: {err}");
 
             // Write WREN byte
-            status = dev.SPI_write(port, new List<byte> { WREN });
-            Console.WriteLine($"SPI_write status: {status}");
+            err = dev.SPI_write(port, new List<byte> { WREN });
+            Console.WriteLine($"write: {err}");
 
             // Set CS(pin0) to high
-            status = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 });
-            Console.WriteLine($"DO_writePins status: {status}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 });
+            Console.WriteLine($"writePins: {err}");
 
             /* 
             Write data via SPI
             */
 
             // Set CS(pin0) to low
-            status = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 });
-            Console.WriteLine($"DO_writePins status: {status}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 });
+            Console.WriteLine($"writePins: {err}");
 
             // Write data byte 0x55 in to address 0x0002
-            status = dev.SPI_write(port, new List<byte> { WRITE, 0x00, 0x02, 0x55 });
-            Console.WriteLine($"SPI_write status: {status}");
+            err = dev.SPI_write(port, new List<byte> { WRITE, 0x00, 0x02, 0x55 });
+            Console.WriteLine($"write: {err}");
 
             // Set CS(pin0) to high
-            status = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 });
-            Console.WriteLine($"DO_writePins status: {status}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 });
+            Console.WriteLine($"writePins: {err}");
 
             /* 
             Close DO pins and SPI port
             */
 
             // Close SPI port
-            status = dev.SPI_close(port);
-            Console.WriteLine($"SPI_close status: {status}");
+            err = dev.SPI_close(port);
+            Console.WriteLine($"close: {err}");
 
             // Close pin0 in port0 with digital output
-            status = dev.DO_closePins(DO_port, new List<int> { DO_pin });
-            Console.WriteLine($"DO_closePins status: {status}");
+            err = dev.DO_closePins(DO_port, new List<int> { DO_pin });
+            Console.WriteLine($"closePins: {err}");
         }
         catch (Exception ex)
         {
@@ -142,7 +136,5 @@ class USBDAQF1AD_SPI_write
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }
