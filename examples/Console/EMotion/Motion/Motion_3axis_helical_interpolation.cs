@@ -47,7 +47,7 @@ class EMotion_3axis_helical_interpolation
             //// Or specify a specific name in a specific dir
             //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
 
-            err = dev.Motion_openCfgFile("Emotion.ini");
+            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
             Console.WriteLine($"openCfgFile: {err}");
 
             err = dev.Motion_loadCfgFile();

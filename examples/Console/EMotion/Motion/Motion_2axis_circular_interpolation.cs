@@ -42,7 +42,7 @@ class EMotion_2axis_circular_interpolation
             //// Or specify a specific name in a specific dir
             //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
 
-            err = dev.Motion_openCfgFile("Emotion.ini");
+            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
             Console.WriteLine($"openCfgFile: {err}");
 
             err = dev.Motion_loadCfgFile();
@@ -51,11 +51,11 @@ class EMotion_2axis_circular_interpolation
             err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000);
             Console.WriteLine($"cfgCircularInterpo: {err}");
              
-            for (int i = 0; i < 4; i++)
-            {
-                err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE);
-                Console.WriteLine($"enableServoOn: {err}"); 
-            }
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE);
+            //    Console.WriteLine($"enableServoOn: {err}"); 
+            //}
  
             err = dev.Motion_startCircularInterpo(port);
             Console.WriteLine($"startCircularInterpo: {err}");
@@ -75,8 +75,8 @@ class EMotion_2axis_circular_interpolation
                 err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION);
                 Console.WriteLine($"stop: {err}"); 
 
-                err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE);
-                Console.WriteLine($"enableServoOn: {err}");  
+                //err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE);
+                //Console.WriteLine($"enableServoOn: {err}");  
             }
             err = dev.Motion_releaseInterpoAxis(port);
             Console.WriteLine($"releaseInterpoAxis: {err}");  

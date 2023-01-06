@@ -27,9 +27,9 @@ class EMotion_3axis_linear_interpolation
             // Parameters setting
             int err;
             int port = 0;
-            int dest_posi1 = -2000;
-            int dest_posi2 = -2000;
-            int dest_posi3 = 3000;
+            int dest_posi1 = 5000;
+            int dest_posi2 = 5000;
+            int dest_posi3 = 5000;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -41,7 +41,7 @@ class EMotion_3axis_linear_interpolation
             //// Or specify a specific name in a specific dir
             //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
 
-            err = dev.Motion_openCfgFile("Emotion.ini");
+            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
             Console.WriteLine($"openCfgFile: {err}");
             
             err = dev.Motion_loadCfgFile();

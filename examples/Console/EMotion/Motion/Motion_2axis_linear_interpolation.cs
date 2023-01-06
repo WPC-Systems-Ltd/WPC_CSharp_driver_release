@@ -27,8 +27,8 @@ class EMotion_2axis_linear_interpolation
             // Parameters setting
             int err;
             int port = 0;
-            int dest_posi1 = -2000;
-            int dest_posi2 = 2000;
+            int dest_posi1 = -5000;
+            int dest_posi2 = -5000;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
