@@ -81,8 +81,7 @@
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// &lt;summary&gt;
-/// AO_write_all_channels.cs
+<pre><code class="lang-csharp" name="CS">/// AO_write_all_channels.cs
 /// 
 /// This example demonstrates how to write AO in all channels from EthanO.
 /// 
@@ -96,10 +95,8 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// &lt;/summary&gt;
 
 using WPC.Product;
 
@@ -110,7 +107,7 @@ class EthanO_AO_write_all_channels
         Console.WriteLine(&quot;Start example code...&quot;);
 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EthanO dev = new EthanO();
@@ -122,7 +119,7 @@ class EthanO_AO_write_all_channels
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             // Get firmware model &amp; version
@@ -131,20 +128,21 @@ class EthanO_AO_write_all_channels
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AO port
-            status = dev.AO_open(port);
-            Console.WriteLine($&quot;AO_open status: {status}&quot;);
+            err = dev.AO_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set AO port and write data simultaneously
             List&lt;double&gt; AO_values = new List&lt;double&gt; { 3, 1, 2, 3, 4, 5, 4, 3 };
-            status = dev.AO_writeAllChannels(port, AO_values);
-            Console.WriteLine($&quot;AO_writeAllChannels status: {status}&quot;);
+
+            err = dev.AO_writeAllChannels(port, AO_values);
+            Console.WriteLine($&quot;writeAllChannels: {err}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AO port
-            status = dev.AO_close(port);
-            Console.WriteLine($&quot;AO_close status: {status}&quot;);
+            err = dev.AO_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -156,14 +154,11 @@ class EthanO_AO_write_all_channels
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// &lt;summary&gt;
-/// AO_write_one_channel.cs
+<pre><code class="lang-csharp" name="CS">/// AO_write_one_channel.cs
 /// 
 /// This example demonstrates how to write AO in specific channels from EthanO.
 /// 
@@ -177,21 +172,17 @@ class EthanO_AO_write_all_channels
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// &lt;/summary&gt;
 
 using WPC.Product;
 
 class EthanO_AO_write_one_channel
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EthanO dev = new EthanO();
@@ -203,7 +194,7 @@ class EthanO_AO_write_one_channel
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             // Get firmware model &amp; version
@@ -212,31 +203,31 @@ class EthanO_AO_write_one_channel
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AO port
-            status = dev.AO_open(port);
-            Console.WriteLine($&quot;AO_open status: {status}&quot;);
+            err = dev.AO_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set AO port and write data 1.5(V) in channel 4
-            status = dev.AO_writeOneChannel(port, 4, 1.5);
-            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+            err = dev.AO_writeOneChannel(port, 4, 1.5);
+            Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AO port and write data 2.5(V) in channel 5
-            status = dev.AO_writeOneChannel(port, 5, 2.5);
-            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+            err = dev.AO_writeOneChannel(port, 5, 2.5);
+            Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AO port and write data 3.5(V) in channel 6
-            status = dev.AO_writeOneChannel(port, 6, 3.5);
-            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+            err = dev.AO_writeOneChannel(port, 6, 3.5);
+            Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AO port and write data 4.5(V) in channel 7
-            status = dev.AO_writeOneChannel(port, 7, 4.5);
-            Console.WriteLine($&quot;AO_writeOneChanne status: {status}&quot;);
+            err = dev.AO_writeOneChannel(port, 7, 4.5);
+            Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AO port
-            status = dev.AO_close(port);
-            Console.WriteLine($&quot;AO_close status: {status}&quot;);
+            err = dev.AO_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -248,14 +239,11 @@ class EthanO_AO_write_one_channel
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// &lt;summary&gt;
-/// AO_waveform_generation.cs
+<pre><code class="lang-csharp" name="CS">/// AO_waveform_generation.cs
 /// 
 /// This example demonstrates how to use AO waveform generation in specific channels from EthanO.
 /// 
@@ -271,21 +259,17 @@ class EthanO_AO_write_one_channel
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// &lt;/summary&gt;
 
 using WPC.Product;
 
 class EthanO_AO_waveform_generation
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EthanO dev = new EthanO();
@@ -297,7 +281,7 @@ class EthanO_AO_waveform_generation
         try
         { 
             // Parameters setting
-            int status; 
+            int err; 
             int port = 0; 
             List&lt;int&gt; AO_pins_enabled = new List&lt;int&gt; { 0, 0, 0, 0, 0, 0, 1, 1 };
             double sampling_rate = 1000; 
@@ -312,55 +296,55 @@ class EthanO_AO_waveform_generation
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AO port
-            status = dev.AO_open(port);
-            Console.WriteLine($&quot;AO_open status: {status}&quot;);
+            err = dev.AO_open(port);
+            Console.WriteLine($&quot;open: {err}&quot;);
             
             // Set AO enabled channels
-            status = dev.AO_setEnableChannels(port, AO_pins_enabled);
-            Console.WriteLine($&quot;AO_setEnableChannels status: {status}&quot;);
+            err = dev.AO_setEnableChannels(port, AO_pins_enabled);
+            Console.WriteLine($&quot;setEnableChannels: {err}&quot;);
 
             // Set AO form in channel 0
-            status = dev.AO_setForm(port, 0, Constant.AO_FORM_TRIANGULAR);
-            Console.WriteLine($&quot;AO_setForm_async in channel 0 status : {status}&quot;);
+            err = dev.AO_setForm(port, 0, Const.AO_FORM_TRIANGULAR);
+            Console.WriteLine($&quot;setForm: {err}&quot;);
 
             // Set AO form in channel 1
-            status = dev.AO_setForm(port, 1, Constant.AO_FORM_TRIANGULAR);
-            Console.WriteLine($&quot;AO_setForm_async in channel 1 status : {status}&quot;);
+            err = dev.AO_setForm(port, 1, Const.AO_FORM_TRIANGULAR);
+            Console.WriteLine($&quot;setForm: {err}&quot;);
 
             // Set Channel 0 form parameters
-            status = dev.AO_setFormParam(port, 0, amplitude, offset, period_0);
-            Console.WriteLine($&quot;AO_setFormParam in channel 0 status : {status}&quot;);
+            err = dev.AO_setFormParam(port, 0, amplitude, offset, period_0);
+            Console.WriteLine($&quot;setFormParam: {err}&quot;);
 
             // Set Channel 1 form parameters
-            status = dev.AO_setFormParam(port, 1, amplitude, offset, period_1);
-            Console.WriteLine($&quot;AO_setFormParam in channel 1 status : {status}&quot;);
+            err = dev.AO_setFormParam(port, 1, amplitude, offset, period_1);
+            Console.WriteLine($&quot;setFormParam: {err}&quot;);
 
             // Set AO port and generation mode
-            status = dev.AO_setMode(port, Constant.AO_MODE_CONTINOUS);
-            Console.WriteLine($&quot;AO_setMode status : {status}&quot;);
+            err = dev.AO_setMode(port, Const.AO_MODE_CONTINOUS);
+            Console.WriteLine($&quot;setMode: {err}&quot;);
 
             // Set AO port and sampling rate to 1k (Hz)
-            status = dev.AO_setSamplingRate(port, sampling_rate);
-            Console.WriteLine($&quot;AO_setSamplingRate status : {status}&quot;);
+            err = dev.AO_setSamplingRate(port, sampling_rate);
+            Console.WriteLine($&quot;setSamplingRate: {err}&quot;);
 
             // Open AO streaming
             List&lt;int&gt; AO_info = dev.AO_openStreaming(port);
             Console.WriteLine($&quot;AO mode {AO_info[0]}, sampling rate {AO_info[1]}&quot;);
 
             // Start AO streaming
-            status = dev.AO_startStreaming(port);
-            Console.WriteLine($&quot;AO_startStreaming status: {status}&quot;);
+            err = dev.AO_startStreaming(port);
+            Console.WriteLine($&quot;startStreaming: {err}&quot;);
 
             // Wait for 10 sec
             Thread.Sleep(10000); // delay [ms]
 
             // Close AO streaming
-            status = dev.AO_closeStreaming(port);
-            Console.WriteLine($&quot;AO_closeStreaming status: {status}&quot;);
+            err = dev.AO_closeStreaming(port);
+            Console.WriteLine($&quot;closeStreaming: {err}&quot;);
 
             // Close AO port
-            status = dev.AO_close(port);
-            Console.WriteLine($&quot;AO_close status: {status}&quot;);
+            err = dev.AO_close(port);
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -371,9 +355,7 @@ class EthanO_AO_waveform_generation
         dev.disconnect();
 
         // Release device handle
-        dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
+        dev.close(); 
     }
 }
 </code></pre></section>
@@ -429,7 +411,7 @@ class EthanO_AO_waveform_generation
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

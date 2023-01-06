@@ -1,5 +1,4 @@
 
-/// <summary>
 /// CAN_write.cs
 /// 
 /// This example demonstrates how to write data to another device with CAN interface from USBDAQF1CD.
@@ -14,21 +13,17 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
 class USBDAQF1CD_CAN_write
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    {  
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1CD dev = new USBDAQF1CD();
@@ -40,7 +35,7 @@ class USBDAQF1CD_CAN_write
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 1;
 
             // Get firmware model & version
@@ -49,35 +44,35 @@ class USBDAQF1CD_CAN_write
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open CAN
-            status = dev.CAN_open(port);
-            Console.WriteLine($"CAN_open status: {status}");
+            err = dev.CAN_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set CAN port and set speed to 125K
-            status = dev.CAN_setSpeed(port, Constant.CAN_SPEED_125K);
-            Console.WriteLine($"CAN_setSpeed status: {status}");
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K);
+            Console.WriteLine($"setSpeed: {err}");
 
             // Set CAN port and start CAN
-            status = dev.CAN_start(port);
-            Console.WriteLine($"CAN_start status: {status}");
+            err = dev.CAN_start(port);
+            Console.WriteLine($"start: {err}");
 
             // ID: 10, data with 8 bytes, Standard & Data 
-            status = dev.CAN_write(port, 10, new List<byte> { 33, 22, 11, 88, 77, 55, 66, 22 }, Constant.CAN_FRAME_TYPE_DATA, Constant.CAN_ID_STANDARD);
-            Console.WriteLine($"CAN_write status: {status}");
+            err = dev.CAN_write(port, 10, new List<byte> { 33, 22, 11, 88, 77, 55, 66, 22 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD);
+            Console.WriteLine($"write: {err}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms] 
 
             // ID: 20, data with 8 bytes, Standard & Data 
-            status = dev.CAN_write(port, 20, new List<byte> { 1, 2, 3 }, Constant.CAN_FRAME_TYPE_DATA, Constant.CAN_ID_STANDARD);
-            Console.WriteLine($"CAN_write status: {status}");
+            err = dev.CAN_write(port, 20, new List<byte> { 1, 2, 3 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD);
+            Console.WriteLine($"write: {err}");
 
             // Stop CAN
-            status = dev.CAN_stop(port);
-            Console.WriteLine($"CAN_stop status: {status}");
+            err = dev.CAN_stop(port);
+            Console.WriteLine($"stop: {err}");
 
             // Close CAN
-            status = dev.CAN_close(port);
-            Console.WriteLine($"CAN_close status: {status}"); 
+            err = dev.CAN_close(port);
+            Console.WriteLine($"close: {err}"); 
         }
         catch (Exception ex)
         {
@@ -89,7 +84,5 @@ class USBDAQF1CD_CAN_write
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

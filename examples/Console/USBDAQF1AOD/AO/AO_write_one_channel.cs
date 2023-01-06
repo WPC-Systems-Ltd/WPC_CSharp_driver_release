@@ -1,4 +1,3 @@
-/// <summary>
 /// AO_write_one_channel.cs
 /// 
 /// This example demonstrates how to write AO in specific channels from USBDAQF1AOD.
@@ -13,21 +12,17 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
 class USBDAQF1AOD_AO_write_one_channel
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1AOD dev = new USBDAQF1AOD();
@@ -39,7 +34,7 @@ class USBDAQF1AOD_AO_write_one_channel
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
 
             // Get firmware model & version
@@ -48,31 +43,31 @@ class USBDAQF1AOD_AO_write_one_channel
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AO port
-            status = dev.AO_open(port);
-            Console.WriteLine($"AO_open status: {status}");
+            err = dev.AO_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set AO port and write data 1.5(V) in channel 4
-            status = dev.AO_writeOneChannel(port, 4, 1.5);
-            Console.WriteLine($"AO_writeOneChanne status: {status}");
+            err = dev.AO_writeOneChannel(port, 4, 1.5);
+            Console.WriteLine($"writeOneChannel: {err}");
 
             // Set AO port and write data 2.5(V) in channel 5
-            status = dev.AO_writeOneChannel(port, 5, 2.5);
-            Console.WriteLine($"AO_writeOneChanne status: {status}");
+            err = dev.AO_writeOneChannel(port, 5, 2.5);
+            Console.WriteLine($"writeOneChannel: {err}");
 
             // Set AO port and write data 3.5(V) in channel 6
-            status = dev.AO_writeOneChannel(port, 6, 3.5);
-            Console.WriteLine($"AO_writeOneChanne status: {status}");
+            err = dev.AO_writeOneChannel(port, 6, 3.5);
+            Console.WriteLine($"writeOneChannel: {err}");
 
             // Set AO port and write data 4.5(V) in channel 7
-            status = dev.AO_writeOneChannel(port, 7, 4.5);
-            Console.WriteLine($"AO_writeOneChanne status: {status}");
+            err = dev.AO_writeOneChannel(port, 7, 4.5);
+            Console.WriteLine($"writeOneChannel: {err}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AO port
-            status = dev.AO_close(port);
-            Console.WriteLine($"AO_close status: {status}");
+            err = dev.AO_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -84,7 +79,5 @@ class USBDAQF1AOD_AO_write_one_channel
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

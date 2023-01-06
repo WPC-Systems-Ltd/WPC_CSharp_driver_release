@@ -1,5 +1,4 @@
-/// <summary>
-/// Get_USB_info.cs
+/// get_USB_info.cs
 /// 
 /// This example demonstrates how to get hardware information from USBDAQF1TD.
 /// 
@@ -11,21 +10,17 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
 class USBDAQF1TD_get_USB_info
 {
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    {  
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1TD dev = new USBDAQF1TD();
@@ -59,7 +54,5 @@ class USBDAQF1TD_get_USB_info
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }

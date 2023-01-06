@@ -75,8 +75,7 @@
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// &lt;summary&gt;
-/// Get_network_info.cs
+<pre><code class="lang-csharp" name="CS">/// get_network_info.cs
 /// 
 /// This example demonstrates how to get hardware &amp; network information from EthanD.
 /// 
@@ -88,21 +87,17 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// &lt;/summary&gt;
 
 using WPC.Product;
 
 class EthanD_get_network_info
 {
     static public void Main()
-    {
-        Console.WriteLine(&quot;Start example code...&quot;);
-
+    { 
         // Get C# driver version
-        Console.WriteLine($&quot;{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}&quot;);
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
         EthanD dev = new EthanD();
@@ -144,8 +139,6 @@ class EthanD_get_network_info
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine(&quot;End example code...&quot;);
     }
 }
 </code></pre></section>
@@ -201,7 +194,7 @@ class EthanD_get_network_info
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

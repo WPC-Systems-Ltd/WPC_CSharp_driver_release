@@ -1,4 +1,3 @@
-/// <summary>
 /// AI_on_demand_in_loop.cs
 /// 
 /// This example demonstrates how to get AI data with loop in ondemand mode from USBDAQF1AD.
@@ -13,10 +12,8 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022 WPC Systems Ltd.
+/// Copyright (c) 2022-2023 WPC Systems Ltd.
 /// All rights reserved.
-///  
-/// </summary>
 
 using WPC.Product;
 
@@ -28,10 +25,10 @@ class USBDAQF1AD_AI_on_demand_in_loop
         while (t < timeout) 
         {
             // Data acquisition
-            List<double> sample = handle.AI_readOnDemand(port);
+            List<double> s = handle.AI_readOnDemand(port);
 
             // Read acquisition data
-            Console.WriteLine($"data: {sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+            Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
             
             // Wait for 0.01 sec
             Thread.Sleep(10); // delay [ms]
@@ -42,11 +39,9 @@ class USBDAQF1AD_AI_on_demand_in_loop
     }
 
     static public void Main()
-    {
-        Console.WriteLine("Start example code...");
-
+    { 
         // Get C# driver version
-        Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
+        Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
         USBDAQF1AD dev = new USBDAQF1AD();
@@ -58,7 +53,7 @@ class USBDAQF1AD_AI_on_demand_in_loop
         try
         {
             // Parameters setting
-            int status;
+            int err;
             int port = 0;
              
             // Get firmware model & version
@@ -67,22 +62,22 @@ class USBDAQF1AD_AI_on_demand_in_loop
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            status = dev.AI_open(port);
-            Console.WriteLine($"AI_open status: {status}");
+            err = dev.AI_open(port);
+            Console.WriteLine($"open: {err}");
 
             // Set AI port and acquisition mode to on demand
-            status = dev.AI_setMode(port, Constant.AI_MODE_ON_DEMAND);
-            Console.WriteLine($"AI_setMode status: {status}");
+            err = dev.AI_setMode(port, Const.AI_MODE_ON_DEMAND);
+            Console.WriteLine($"setMode: {err}");
 
             // Data acquisition
-            List<double> sample = dev.AI_readOnDemand(port);
+            List<double> s = dev.AI_readOnDemand(port);
 
             // Start loop
             loop_func(dev, port, 1, 3);
 
             // Close AI port
-            status = dev.AI_close(port);
-            Console.WriteLine($"AI_close status: {status}");
+            err = dev.AI_close(port);
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -94,7 +89,5 @@ class USBDAQF1AD_AI_on_demand_in_loop
 
         // Release device handle
         dev.close();
-
-        Console.WriteLine("End example code...");
     }
 }
