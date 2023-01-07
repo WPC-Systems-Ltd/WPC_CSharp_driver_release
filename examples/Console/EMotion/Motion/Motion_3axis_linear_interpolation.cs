@@ -4,7 +4,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022-2023 WPC Systems Ltd.
+/// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -27,9 +27,9 @@ class EMotion_3axis_linear_interpolation
             // Parameters setting
             int err;
             int port = 0;
-            int dest_posi1 = 5000;
-            int dest_posi2 = 5000;
-            int dest_posi3 = 5000;
+            int dest_posi1 = -2000;
+            int dest_posi2 = -2000;
+            int dest_posi3 = 3000;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -41,7 +41,7 @@ class EMotion_3axis_linear_interpolation
             //// Or specify a specific name in a specific dir
             //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
 
-            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
+            err = dev.Motion_openCfgFile("Emotion.ini");
             Console.WriteLine($"openCfgFile: {err}");
             
             err = dev.Motion_loadCfgFile();
