@@ -31,10 +31,12 @@ class EMotion_1axis_move
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-             
+            
+            // Motion open
             err = dev.Motion_open(port);
             Console.WriteLine($"open: {err}");
- 
+            
+            // Motion configure
             err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
             Console.WriteLine($"cfgAxis: {err}");
   
@@ -44,7 +46,7 @@ class EMotion_1axis_move
             err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW);
             Console.WriteLine($"cfgHome: {err}");
              
-            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 5000);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_posi: 5000);
             Console.WriteLine($"cfgAxisMove: {err}");
   
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
@@ -52,7 +54,8 @@ class EMotion_1axis_move
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
             Console.WriteLine($"enableServoOn: {err}");
-
+            
+            // Motion start
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($"startSingleAxisMove: {err}");
 
@@ -63,12 +66,14 @@ class EMotion_1axis_move
                 if (move_status == 0){Console.WriteLine($"Moving...");} 
             } 
             
+            // Motion stop
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop: {err}");
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
             Console.WriteLine($"enableServoOn: {err}");
             
+            // Motion close
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");
         }

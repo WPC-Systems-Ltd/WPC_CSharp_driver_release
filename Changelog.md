@@ -1,5 +1,12 @@
 WPC CSharp driver release changelog
 ===================================
+ 
+v0.1.5 Date: 2023/01/18, Developer: Chunglee_people 
+---------------------------------------------------
+### Fixed
+- Fix example code
+- Fix Motion API and its description
+- Update error code
 
 v0.1.4 Date: 2023/01/06, Developer: Chunglee_people 
 ---------------------------------------------------- 

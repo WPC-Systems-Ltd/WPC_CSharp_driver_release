@@ -1111,12 +1111,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_cfgAxis
   nameWithType: IMotionModule.Motion_cfgAxis
-- uid: WPC.Module.IMotionModule.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  name: Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)
-  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_cfgAxisMove_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IMotionModule.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Module.IMotionModule.Motion_cfgAxisMove(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: IMotionModule.Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IMotionModule.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_cfgAxisMove_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IMotionModule.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IMotionModule.Motion_cfgAxisMove(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IMotionModule.Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
 - uid: WPC.Module.IMotionModule.Motion_cfgAxisMove*
   name: Motion_cfgAxisMove
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_cfgAxisMove_
@@ -1358,6 +1358,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_getLimitStatus
   nameWithType: IMotionModule.Motion_getLimitStatus
+- uid: WPC.Module.IMotionModule.Motion_getLogicalPosi(System.Int32,System.Int32,System.Int32)
+  name: Motion_getLogicalPosi(Int32, Int32, Int32)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_getLogicalPosi_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IMotionModule.Motion_getLogicalPosi(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IMotionModule.Motion_getLogicalPosi(System.Int32, System.Int32, System.Int32)
+  nameWithType: IMotionModule.Motion_getLogicalPosi(Int32, Int32, Int32)
+- uid: WPC.Module.IMotionModule.Motion_getLogicalPosi*
+  name: Motion_getLogicalPosi
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_getLogicalPosi_
+  commentId: Overload:WPC.Module.IMotionModule.Motion_getLogicalPosi
+  isSpec: "True"
+  fullName: WPC.Module.IMotionModule.Motion_getLogicalPosi
+  nameWithType: IMotionModule.Motion_getLogicalPosi
 - uid: WPC.Module.IMotionModule.Motion_getMoveStatus(System.Int32,System.Int32,System.Int32)
   name: Motion_getMoveStatus(Int32, Int32, Int32)
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_getMoveStatus_System_Int32_System_Int32_System_Int32_
@@ -1501,6 +1514,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_saveCfgFile
   nameWithType: IMotionModule.Motion_saveCfgFile
+- uid: WPC.Module.IMotionModule.Motion_setLogicalPosi(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Motion_setLogicalPosi(Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_setLogicalPosi_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IMotionModule.Motion_setLogicalPosi(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IMotionModule.Motion_setLogicalPosi(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IMotionModule.Motion_setLogicalPosi(Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IMotionModule.Motion_setLogicalPosi*
+  name: Motion_setLogicalPosi
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_setLogicalPosi_
+  commentId: Overload:WPC.Module.IMotionModule.Motion_setLogicalPosi
+  isSpec: "True"
+  fullName: WPC.Module.IMotionModule.Motion_setLogicalPosi
+  nameWithType: IMotionModule.Motion_setLogicalPosi
 - uid: WPC.Module.IMotionModule.Motion_startCircularInterpo(System.Int32,System.Int32)
   name: Motion_startCircularInterpo(Int32, Int32)
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_startCircularInterpo_System_Int32_System_Int32_
@@ -2532,12 +2558,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Motion_cfgAxis
   nameWithType: EMotion.Motion_cfgAxis
-- uid: WPC.Product.EMotion.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  name: Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)
-  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_cfgAxisMove_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EMotion.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Product.EMotion.Motion_cfgAxisMove(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: EMotion.Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EMotion.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_cfgAxisMove_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Motion_cfgAxisMove(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EMotion.Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
 - uid: WPC.Product.EMotion.Motion_cfgAxisMove*
   name: Motion_cfgAxisMove
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_cfgAxisMove_

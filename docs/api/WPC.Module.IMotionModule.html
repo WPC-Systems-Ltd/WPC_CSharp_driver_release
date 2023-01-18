@@ -90,7 +90,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfg2AxisLinearInterpo(int port, int axis1, int dest_posi1, int axis2, int dest_posi2, int speed = 10000, int acceleration = 100000, int deceleration = 100000, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfg2AxisLinearInterpo(int port, int axis1, int dest_posi1, int axis2, int dest_posi2, int speed = 10000, int accel = 100000, int decel = 100000, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,13 +140,13 @@
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">acceleration</span></td>
+        <td><span class="parametername">accel</span></td>
         <td><p>Acceleration of linear interpolation.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">deceleration</span></td>
+        <td><span class="parametername">decel</span></td>
         <td><p>Deceleration of linear interpolation.</p>
 </td>
       </tr>
@@ -182,7 +182,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfg3AxisLinearInterpo(int port, int axis1, int dest_posi1, int axis2, int dest_posi2, int axis3, int dest_posi3, int speed = 10000, int acceleration = 100000, int deceleration = 100000, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfg3AxisLinearInterpo(int port, int axis1, int dest_posi1, int axis2, int dest_posi2, int axis3, int dest_posi3, int speed = 10000, int accel = 100000, int decel = 100000, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,13 +244,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">acceleration</span></td>
+        <td><span class="parametername">accel</span></td>
         <td><p>Acceleration of linear interpolation.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">deceleration</span></td>
+        <td><span class="parametername">decel</span></td>
         <td><p>Deceleration of linear interpolation.</p>
 </td>
       </tr>
@@ -286,7 +286,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfg4AxisLinearInterpo(int port, int axis1, int dest_posi1, int axis2, int dest_posi2, int axis3, int dest_pois3, int axis4, int dest_posi4, int speed = 10000, int acceleration = 100000, int deceleration = 100000, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfg4AxisLinearInterpo(int port, int axis1, int dest_posi1, int axis2, int dest_posi2, int axis3, int dest_pois3, int axis4, int dest_posi4, int speed = 10000, int accel = 100000, int decel = 100000, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -360,13 +360,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">acceleration</span></td>
+        <td><span class="parametername">accel</span></td>
         <td><p>Acceleration of linear interpolation.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">deceleration</span></td>
+        <td><span class="parametername">decel</span></td>
         <td><p>Deceleration of linear interpolation.</p>
 </td>
       </tr>
@@ -402,7 +402,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgAlarm(int port, int axis, int alarm_enable, int alarm_polarity, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgAlarm(int port, int axis, int en_alarm, int alarm_polarity, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -428,7 +428,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">alarm_enable</span></td>
+        <td><span class="parametername">en_alarm</span></td>
         <td><p>Enable/disable alarm inputs.</p>
 </td>
       </tr>
@@ -470,7 +470,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgAxis(int port, int axis, int stepper_output, int axis_direction, int encoder_direction, int servo_on_polarity, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgAxis(int port, int axis, int stepper_output, int axis_dir, int encoder_dir, int servo_on_polarity, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,13 +502,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">axis_direction</span></td>
+        <td><span class="parametername">axis_dir</span></td>
         <td><p>Set axis direction to CW or CCW.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">encoder_direction</span></td>
+        <td><span class="parametername">encoder_dir</span></td>
         <td><p>Set encoder direction to CW or CCW.</p>
 </td>
       </tr>
@@ -544,13 +544,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <a id="WPC_Module_IMotionModule_Motion_cfgAxisMove_" data-uid="WPC.Module.IMotionModule.Motion_cfgAxisMove*"></a>
-  <h4 id="WPC_Module_IMotionModule_Motion_cfgAxisMove_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
+  <h4 id="WPC_Module_IMotionModule_Motion_cfgAxisMove_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">Motion_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Configure motion operation mode, target position, velocity, acceleration and deceleration of a single axis move.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgAxisMove(int port, int axis, int operation_mode, int target_position = 0, int velocity = 10000, int acceleration = 100000, int deceleration = 100000)</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgAxisMove(int port, int axis, int mode, int target_posi = 0, int velo = 10000, int accel = 100000, int decel = 100000, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -576,32 +576,38 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">operation_mode</span></td>
+        <td><span class="parametername">mode</span></td>
         <td><p>Specifies the operation mode.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">target_position</span></td>
+        <td><span class="parametername">target_posi</span></td>
         <td><p>Target position in counts or steps.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">velocity</span></td>
+        <td><span class="parametername">velo</span></td>
         <td><p>Velocity in counts/s or steps/s.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">acceleration</span></td>
+        <td><span class="parametername">accel</span></td>
         <td><p>Acceleration value in counts/s2 or steps/s2.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">deceleration</span></td>
+        <td><span class="parametername">decel</span></td>
         <td><p>Deceleration value in counts/s2 or steps/s2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
 </td>
       </tr>
     </tbody>
@@ -630,7 +636,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgBreakPoint(int port, int axis, int breakpoint_mode, int breakpoint_polarity, int start_position, ushort pulse_width, ushort pulse_period, ushort pulse_number, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgBreakPoint(int port, int axis, int mode, int breakpoint_polarity, int start_posi, ushort pulse_width, ushort pulse_period, ushort pulse_number, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -656,7 +662,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">breakpoint_mode</span></td>
+        <td><span class="parametername">mode</span></td>
         <td><p>Breakpoint mode.</p>
 </td>
       </tr>
@@ -668,7 +674,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">start_position</span></td>
+        <td><span class="parametername">start_posi</span></td>
         <td><p>TODO.</p>
 </td>
       </tr>
@@ -722,7 +728,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgCapture(int port, int axis, int capture_type, int capture_mode, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgCapture(int port, int axis, int capture_type, int mode, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -754,7 +760,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">capture_mode</span></td>
+        <td><span class="parametername">mode</span></td>
         <td><p>TODO.</p>
 </td>
       </tr>
@@ -790,7 +796,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgCircularInterpo(int port, int x_axis, int y_axis, int center_point_x, int center_point_y, int finish_point_x, int finish_point_y, int direction, int speed = 10000, int acceleration = 100000, int deceleration = 100000, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgCircularInterpo(int port, int x_axis, int y_axis, int center_point_x, int center_point_y, int finish_point_x, int finish_point_y, int dir, int speed = 10000, int accel = 100000, int decel = 100000, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -846,7 +852,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">direction</span></td>
+        <td><span class="parametername">dir</span></td>
         <td><p>Set the circular direction for CW or CCW</p>
 </td>
       </tr>
@@ -858,13 +864,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">acceleration</span></td>
+        <td><span class="parametername">accel</span></td>
         <td><p>Acceleration of circular interpolation.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">deceleration</span></td>
+        <td><span class="parametername">decel</span></td>
         <td><p>Deceleration of circular interpolation.</p>
 </td>
       </tr>
@@ -962,7 +968,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgFindRef(int port, int axis, int search_type, int search_direction, int search_velocity = 10000, int approach_velocity_percent = 20, int reset_position_enable = default(int), int offset_position = 0, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgFindRef(int port, int axis, int search_type, int search_dir, int search_velo = 10000, int approach_velo_percent = 20, int en_reset_posi = default(int), int offset_posi = 0, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -994,31 +1000,31 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">search_direction</span></td>
+        <td><span class="parametername">search_dir</span></td>
         <td><p>Set search direction to forward or reverse.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">search_velocity</span></td>
+        <td><span class="parametername">search_velo</span></td>
         <td><p>Set velocity in counts/s or steps/s.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">approach_velocity_percent</span></td>
+        <td><span class="parametername">approach_velo_percent</span></td>
         <td><p>The percent of the loaded velocity that a given axis uses to perform final adjustments.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">reset_position_enable</span></td>
+        <td><span class="parametername">en_reset_posi</span></td>
         <td><p>If true, after successfully locating the given reference, it resets positions to values indicated by current position. If false, no reset is performed.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">offset_position</span></td>
+        <td><span class="parametername">offset_posi</span></td>
         <td><p>Performs an offset move of a given distance, in counts (steps), after successfully locating the given reference, but before resetting the position if a reset is requested.</p>
 </td>
       </tr>
@@ -1054,7 +1060,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgHelicalInterpo(int port, int center_point_x, int center_point_y, int finish_point_x, int finish_point_y, int enable_axis3, int pitch_axis3, int enable_axis4, int pitch_axis4, int rotation_number, int circular_speed, int circular_direction, int calculation_timeout, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgHelicalInterpo(int port, int center_point_x, int center_point_y, int finish_point_x, int finish_point_y, int en_axis3, int pitch_axis3, int en_axis4, int pitch_axis4, int rotation_number, int speed, int dir, int calculation_timeout, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1098,7 +1104,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">enable_axis3</span></td>
+        <td><span class="parametername">en_axis3</span></td>
         <td><p>TODO</p>
 </td>
       </tr>
@@ -1110,7 +1116,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">enable_axis4</span></td>
+        <td><span class="parametername">en_axis4</span></td>
         <td><p>TODO</p>
 </td>
       </tr>
@@ -1128,13 +1134,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">circular_speed</span></td>
+        <td><span class="parametername">speed</span></td>
         <td><p>Set the speed for circular interpolation.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">circular_direction</span></td>
+        <td><span class="parametername">dir</span></td>
         <td><p>Set the circular direction to CW or CCW.</p>
 </td>
       </tr>
@@ -1176,7 +1182,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgHome(int port, int axis, int home_enable, int home_polarity, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgHome(int port, int axis, int en_home, int home_polarity, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1202,7 +1208,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">home_enable</span></td>
+        <td><span class="parametername">en_home</span></td>
         <td><p>Enable/disable home inputs.</p>
 </td>
       </tr>
@@ -1244,7 +1250,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgInposi(int port, int axis, int inposition_enable, int inposition_polarity, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgInposi(int port, int axis, int en_inposi, int inposition_polarity, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1270,7 +1276,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">inposition_enable</span></td>
+        <td><span class="parametername">en_inposi</span></td>
         <td><p>Enable/disable inposition input.</p>
 </td>
       </tr>
@@ -1312,7 +1318,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgJerkAndAccelMode(int port, int axis, int jerk, int acceleration_mode, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgJerkAndAccelMode(int port, int axis, int jerk, int accel_mode, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1344,7 +1350,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">acceleration_mode</span></td>
+        <td><span class="parametername">accel_mode</span></td>
         <td><p>Trapezoidal or S curve mode.</p>
 </td>
       </tr>
@@ -1380,7 +1386,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgLimit(int port, int axis, int forward_enable, int reverse_enable, int limit_polarity, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgLimit(int port, int axis, int en_forward, int en_reverse, int limit_polarity, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1406,13 +1412,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">forward_enable</span></td>
+        <td><span class="parametername">en_forward</span></td>
         <td><p>Enable/disable forward limit inputs.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">reverse_enable</span></td>
+        <td><span class="parametername">en_reverse</span></td>
         <td><p>Enable/disable reverse limit inputs.</p>
 </td>
       </tr>
@@ -1559,7 +1565,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_enableBreakPoint(int port, int axis, int break_enable, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_enableBreakPoint(int port, int axis, int en_break, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1585,7 +1591,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">break_enable</span></td>
+        <td><span class="parametername">en_break</span></td>
         <td><p>Enable/disable breakpoint.</p>
 </td>
       </tr>
@@ -1621,7 +1627,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_enableCapture(int port, int axis, int capture_enable, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_enableCapture(int port, int axis, int en_capture, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1647,7 +1653,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">capture_enable</span></td>
+        <td><span class="parametername">en_capture</span></td>
         <td><p>Enable/disable capture.</p>
 </td>
       </tr>
@@ -1683,7 +1689,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_enableServoOn(int port, int axis, int serve_on_enable, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_enableServoOn(int port, int axis, int en_servo_on, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1709,7 +1715,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">serve_on_enable</span></td>
+        <td><span class="parametername">en_servo_on</span></td>
         <td><p>Enable/disable servo on.</p>
 </td>
       </tr>
@@ -1904,6 +1910,61 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Module_IMotionModule_Motion_getLogicalPosi_" data-uid="WPC.Module.IMotionModule.Motion_getLogicalPosi*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_getLogicalPosi_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_getLogicalPosi(System.Int32,System.Int32,System.Int32)">Motion_getLogicalPosi(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Get logical position for an axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_getLogicalPosi(int port, int axis, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Logical position of the axis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Module_IMotionModule_Motion_getMoveStatus_" data-uid="WPC.Module.IMotionModule.Motion_getMoveStatus*"></a>
   <h4 id="WPC_Module_IMotionModule_Motion_getMoveStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_getMoveStatus(System.Int32,System.Int32,System.Int32)">Motion_getMoveStatus(Int32, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Read the move complete status of an axis.</p>
@@ -2083,7 +2144,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_overrideAxisAccel(int port, int axis, int new_acceleration, int new_deceleration, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_overrideAxisAccel(int port, int axis, int new_accel, int new_decel, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2109,13 +2170,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">new_acceleration</span></td>
+        <td><span class="parametername">new_accel</span></td>
         <td><p>Acceleration value in counts/s2 or steps/s2.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">new_deceleration</span></td>
+        <td><span class="parametername">new_decel</span></td>
         <td><p>Deceleration value in counts/s2 or steps/s2.</p>
 </td>
       </tr>
@@ -2151,7 +2212,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_overrideAxisVelocity(int port, int axis, int new_velocity, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_overrideAxisVelocity(int port, int axis, int new_velo, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2177,7 +2238,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">new_velocity</span></td>
+        <td><span class="parametername">new_velo</span></td>
         <td><p>Velocity in counts/s or steps/s.</p>
 </td>
       </tr>
@@ -2373,7 +2434,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_rstEncoderPosi(int port, int axis, int position, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_rstEncoderPosi(int port, int axis, int encoder_posi, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2399,7 +2460,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">position</span></td>
+        <td><span class="parametername">encoder_posi</span></td>
         <td><p>Reset value for axis.</p>
 </td>
       </tr>
@@ -2448,6 +2509,68 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_setLogicalPosi_" data-uid="WPC.Module.IMotionModule.Motion_setLogicalPosi*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_setLogicalPosi_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_setLogicalPosi(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_setLogicalPosi(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set logical position for an axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_setLogicalPosi(int port, int axis, int counter, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">counter</span></td>
+        <td><p>The number of counter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2720,7 +2843,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_stop(int port, int axis, int stop_mode, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_stop(int port, int axis, int mode, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2746,7 +2869,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">stop_mode</span></td>
+        <td><span class="parametername">mode</span></td>
         <td><p>Mode of stop to execute.</p>
 </td>
       </tr>

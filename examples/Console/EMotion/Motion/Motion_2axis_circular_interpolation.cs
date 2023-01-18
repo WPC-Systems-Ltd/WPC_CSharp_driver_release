@@ -35,19 +35,23 @@ class EMotion_2axis_circular_interpolation
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-              
+
+            // Motion open
             err = dev.Motion_open(port);
             Console.WriteLine($"open: {err}");
 
-            //// Or specify a specific name in a specific dir
-            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
+            // Or specify a specific name in a specific dir
+            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini"); 
 
-            err = dev.Motion_openCfgFile("Emotion.ini");
+            // Motion open configuration file 
+            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
             Console.WriteLine($"openCfgFile: {err}");
 
+            // Motion load configuration file
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($"loadCfgFile: {err}");
-             
+
+            // Motion configure
             err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000);
             Console.WriteLine($"cfgCircularInterpo: {err}");
              
@@ -56,7 +60,8 @@ class EMotion_2axis_circular_interpolation
                 err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE);
                 Console.WriteLine($"enableServoOn: {err}"); 
             }
- 
+
+            // Motion start
             err = dev.Motion_startCircularInterpo(port);
             Console.WriteLine($"startCircularInterpo: {err}");
              
@@ -72,6 +77,7 @@ class EMotion_2axis_circular_interpolation
 
             for (int i = 0; i < 4; i++)
             {
+                // Motion stop
                 err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION);
                 Console.WriteLine($"stop: {err}"); 
 
@@ -80,7 +86,8 @@ class EMotion_2axis_circular_interpolation
             }
             err = dev.Motion_releaseInterpoAxis(port);
             Console.WriteLine($"releaseInterpoAxis: {err}");  
-
+            
+            // Motion close
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");
         }

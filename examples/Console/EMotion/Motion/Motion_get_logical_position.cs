@@ -29,7 +29,8 @@ class EMotion_get_logical_position
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-
+            
+            // Motion open
             err = dev.Motion_open(port);
             Console.WriteLine($"open: {err}");
 
@@ -43,7 +44,8 @@ class EMotion_get_logical_position
                 int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1);
                 Console.WriteLine($"getLogicalPosi: {posi}");
             }
-
+            
+            // Motion close
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");
         }

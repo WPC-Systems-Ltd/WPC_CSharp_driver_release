@@ -31,26 +31,30 @@ class EMotion_1axis_move_with_capture
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-             
+            
+            // Motion open
             err = dev.Motion_open(port);
             Console.WriteLine($"open: {err}");
 
-            //// Or specify a specific name in a specific dir
-            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
+            // Or specify a specific name in a specific dir
+            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini"); 
 
-            err = dev.Motion_openCfgFile("Emotion.ini");
+            // Motion open configuration file 
+            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
             Console.WriteLine($"openCfgFile: {err}");
 
+            // Motion load configuration file
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($"loadCfgFile: {err}");
 
+            // Motion configure
             err = dev.Motion_cfgCapture(port, Const.MOT_AXIS1, Const.MOT_CAPTURE_RISING_EDGE, Const.MOT_CAPTURE_LOGICAL_POSITION);
             Console.WriteLine($"cfgCapture: {err}");
 
             err = dev.Motion_enableCapture(port, Const.MOT_AXIS1, Const.MOT_TRUE);
             Console.WriteLine($"setCaptureEnable: {err}");
              
-            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_position: 10000);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_posi: 10000);
             Console.WriteLine($"cfgAxisMove: {err}");
              
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
@@ -58,7 +62,8 @@ class EMotion_1axis_move_with_capture
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
             Console.WriteLine($"enableServoOn: {err}");
-
+            
+            // Motion start
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($"startSingleAxisMove: {err}");
 
@@ -70,13 +75,16 @@ class EMotion_1axis_move_with_capture
                 
                 int capture_points = dev.Motion_readCapturePoint(port, Const.MOT_AXIS1);
                 Console.WriteLine($"readCapturePoint: {move_status}");
-            } 
+            }
+
+            // Motion stop
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop: {err}");
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
             Console.WriteLine($"enableServoOn: {err}");
             
+            // Motion close
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}"); 
         }

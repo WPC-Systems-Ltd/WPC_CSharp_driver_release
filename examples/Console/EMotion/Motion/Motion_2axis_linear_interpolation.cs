@@ -33,22 +33,27 @@ class EMotion_2axis_linear_interpolation
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-              
+
+            // Motion open
             err = dev.Motion_open(port);
             Console.WriteLine($"open: {err}");
 
-            //// Or specify a specific name in a specific dir
-            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\Emotion.ini");
+            // Or specify a specific name in a specific dir
+            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini"); 
 
-            err = dev.Motion_openCfgFile("Emotion.ini");
+            // Motion open configuration file 
+            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
             Console.WriteLine($"openCfgFile: {err}");
 
+            // Motion load configuration file
             err = dev.Motion_loadCfgFile();
             Console.WriteLine($"loadCfgFile: {err}");
 
+            // Motion configure
             err = dev.Motion_cfg2AxisLinearInterpo(port, Const.MOT_AXIS1, dest_posi1, Const.MOT_AXIS2, dest_posi2, speed: 2000);
             Console.WriteLine($"cfg2AxisLinearInterpo: {err}");
-
+            
+            // Motion start
             err = dev.Motion_startLinearInterpo(port);
             Console.WriteLine($"startLinearInterpo: {err}");
  
@@ -61,7 +66,9 @@ class EMotion_2axis_linear_interpolation
                 move_status = axis1_move_status & axis2_move_status;
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
                 else { Console.WriteLine($"Move completed"); }
-            } 
+            }
+
+            // Motion stop
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop axis1: {err}");
 
@@ -71,6 +78,7 @@ class EMotion_2axis_linear_interpolation
             err = dev.Motion_releaseInterpoAxis(port);
             Console.WriteLine($"releaseInterpoAxis: {err}");  
             
+            // Motion close
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");
         }
