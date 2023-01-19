@@ -69,12 +69,167 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="setting-table">Setting Table</h1>
 
+<h2 id="ai">AI</h2>
+<h3 id="ai-mode">AI Mode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AI_MODE_ON_DEMAND</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">AI_MODE_N_SAMPLE</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">AI_MODE_CONTINOUS</td>
+<td style="text-align: left;">2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ao">AO</h2>
+<h3 id="ao-form">AO Form</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Form</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AO_FORM_RETANGULAR</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">AO_FORM_TRIANGULAR</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">AO_FORM_SINE</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ao-mode">AO Mode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AO_MODE_ON_DEMAND</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">AO_MODE_N_SAMPLE</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">AO_MODE_CONTINOUS</td>
+<td style="text-align: left;">2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="can">CAN</h2>
+<h3 id="can-speed">CAN Speed</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speed</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CAN_SPEED_125K</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_SPEED_250K</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_SPEED_500K</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_SPEED_1M</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can-type">CAN Type</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CAN_FRAME_TYPE_DATA</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_FRAME_TYPE_REMOTE</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CAN_ID_STANDARD</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN_ID_EXTENDED</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
 <h2 id="i2c">I2C</h2>
+<h3 id="i2c-address">I2C address</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Address size</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">I2C_ADDR_SIZE_7_BITS</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">I2C_ADDR_SIZE_10_BITS</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
 <h3 id="i2c-speed">I2C speed</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Speed</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
@@ -97,21 +252,228 @@
 </tr>
 </tbody>
 </table>
-<h3 id="i2c-address">I2C address</h3>
+<h2 id="motion">Motion</h2>
+<h3 id="motion-axis">Motion Axis</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Axis</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">I2C_ADDR_SIZE_7_BITS</td>
+<td style="text-align: left;">MOT_AXIS1</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">I2C_ADDR_SIZE_10_BITS</td>
+<td style="text-align: left;">MOT_AXIS2</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_AXIS3</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_AXIS4</td>
+<td style="text-align: left;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-capture-mode">Motion Capture Mode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_CAPTURE_LOGICAL_POSITION</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_CAPTURE_ENCODER_POSITION</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-capture-type">Motion Capture Type</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_CAPTURE_RISING_EDGE</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_CAPTURE_FALLING_EDGE</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-direction">Motion Direction</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Direction</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_DIR_CW</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_DIR_CCW</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-enable">Motion Enable</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Enable</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_FALSE</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_TRUE</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-find-reference-type">Motion Find Reference Type</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_FIND_HOME</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_FIND_INDEX</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_FIND_LIMIT</td>
+<td style="text-align: left;">2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-operation-mode">Motion Operation Mode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operation Mode</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_ABSOLUTE_POSITION</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_RELATIVE_POSITION</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_VELOCITY</td>
+<td style="text-align: left;">2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-polarity">Motion Polarity</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Polarity</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_ACTIVE_LOW</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_ACTIVE_HIGH</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-search-direction">Motion Search Direction</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Direction</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_DIR_FORWARD</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_DIR_REVERSE</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-stepper-output">Motion Stepper Output</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stepper Output</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_ONE_PULSE</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_TWO_PULSE</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="motion-stop-type">Motion Stop Type</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MOT_STOP_TYPE_DECELERATION</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOT_STOP_TYPE_HALT</td>
 <td style="text-align: left;">1</td>
 </tr>
 </tbody>
@@ -174,11 +536,49 @@
 </tr>
 </tbody>
 </table>
+<h3 id="spi-data-size">SPI Data Size</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Data Size</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPI_DATA_SIZE_8_BITS</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_DATA_SIZE_16_BITS</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spi-endianness">SPI Endianness</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Endianness</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPI_FIRST_BIT_MSB</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPI_FIRST_BIT_LSB</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
 <h3 id="spi-mode">SPI Mode</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Mode</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
@@ -201,49 +601,11 @@
 </tr>
 </tbody>
 </table>
-<h3 id="spi-data-size">SPI Data Size</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">SPI_DATA_SIZE_8_BITS</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPI_DATA_SIZE_16_BITS</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="spi-first-bit">SPI First Bit</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">SPI_FIRST_BIT_MSB</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPI_FIRST_BIT_LSB</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
 <h3 id="spi-prescaler">SPI Prescaler</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Prescaler</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
@@ -282,218 +644,12 @@
 </tr>
 </tbody>
 </table>
-<h2 id="uart">UART</h2>
-<h3 id="uart-data-size">UART Data Size</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">UART_DATA_SIZE_8_BITS</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">UART_DATA_SIZE_9_BITS</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="uart-parity">UART Parity</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">UART_PARITY_NONE</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">UART_PARITY_EVEN</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;">UART_PARITY_ODD</td>
-<td style="text-align: left;">3</td>
-</tr>
-</tbody>
-</table>
-<h3 id="uart-stop-bit">UART Stop Bit</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">UART_STOP_BIT_1</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">UART_STOP_BIT_0P5</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">UART_STOP_BIT_2</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;">UART_STOP_BIT_1P5</td>
-<td style="text-align: left;">3</td>
-</tr>
-</tbody>
-</table>
-<h2 id="can">CAN</h2>
-<h3 id="can-type">CAN Type</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">CAN_FRAME_TYPE_DATA</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">CAN_FRAME_TYPE_REMOTE</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">CAN_ID_STANDARD</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">CAN_ID_EXTENDED</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="can-speed">CAN Speed</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">CAN_SPEED_125K</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">CAN_SPEED_250K</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">CAN_SPEED_500K</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;">CAN_SPEED_1M</td>
-<td style="text-align: left;">3</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ai">AI</h2>
-<h3 id="ai-mode">AI Mode</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">AI_MODE_ON_DEMAND</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">AI_MODE_N_SAMPLE</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">AI_MODE_CONTINOUS</td>
-<td style="text-align: left;">2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ao">AO</h2>
-<h3 id="ao-mode">AO Mode</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">AO_MODE_ON_DEMAND</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">AO_MODE_N_SAMPLE</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">AO_MODE_CONTINOUS</td>
-<td style="text-align: left;">2</td>
-</tr>
-</tbody>
-</table>
-<h3 id="ao-form">AO Form</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">AO_FORM_RETANGULAR</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">AO_FORM_TRIANGULAR</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;">AO_FORM_SINE</td>
-<td style="text-align: left;">3</td>
-</tr>
-</tbody>
-</table>
 <h2 id="thermal">Thermal</h2>
 <h3 id="thermal-channel">Thermal Channel</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Channel</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
@@ -508,11 +664,42 @@
 </tr>
 </tbody>
 </table>
+<h3 id="thermal-oversampling">Thermal OverSampling</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">OverSampling</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_NONE</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_2</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_4</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_8</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMAL_OVERSAMPLING_16</td>
+<td style="text-align: left;">4</td>
+</tr>
+</tbody>
+</table>
 <h3 id="thermal-type">Thermal Type</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Type</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
@@ -551,260 +738,73 @@
 </tr>
 </tbody>
 </table>
-<h3 id="thermal-oversampling">Thermal OverSampling</h3>
+<h2 id="uart">UART</h2>
+<h3 id="uart-data-size">UART Data Size</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Data Size</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">THERMAL_OVERSAMPLING_NONE</td>
+<td style="text-align: left;">UART_DATA_SIZE_8_BITS</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">THERMAL_OVERSAMPLING_2</td>
+<td style="text-align: left;">UART_DATA_SIZE_9_BITS</td>
 <td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">THERMAL_OVERSAMPLING_4</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;">THERMAL_OVERSAMPLING_8</td>
-<td style="text-align: left;">3</td>
-</tr>
-<tr>
-<td style="text-align: left;">THERMAL_OVERSAMPLING_16</td>
-<td style="text-align: left;">4</td>
 </tr>
 </tbody>
 </table>
-<h2 id="motion">Motion</h2>
-<h3 id="motion-axis">Motion Axis</h3>
+<h3 id="uart-parity">UART Parity</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Parity</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOT_AXIS1</td>
+<td style="text-align: left;">UART_PARITY_NONE</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOT_AXIS2</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_AXIS3</td>
+<td style="text-align: left;">UART_PARITY_EVEN</td>
 <td style="text-align: left;">2</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOT_AXIS4</td>
+<td style="text-align: left;">UART_PARITY_ODD</td>
 <td style="text-align: left;">3</td>
 </tr>
 </tbody>
 </table>
-<h3 id="motion-operation-mode">Motion Operation Mode</h3>
+<h3 id="uart-stop-bit">UART Stop Bit</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
+<th style="text-align: left;">Stop Bit</th>
 <th style="text-align: left;">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">MOT_ABSOLUTE_POSITION</td>
+<td style="text-align: left;">UART_STOP_BIT_1</td>
 <td style="text-align: left;">0</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOT_RELATIVE_POSITION</td>
+<td style="text-align: left;">UART_STOP_BIT_0P5</td>
 <td style="text-align: left;">1</td>
 </tr>
 <tr>
-<td style="text-align: left;">MOT_VELOCITY</td>
+<td style="text-align: left;">UART_STOP_BIT_2</td>
 <td style="text-align: left;">2</td>
 </tr>
-</tbody>
-</table>
-<h3 id="motion-stepper-output">Motion Stepper Output</h3>
-<table>
-<thead>
 <tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_ONE_PULSE</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_TWO_PULSE</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-direction">Motion Direction</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_DIR_CW</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_DIR_CCW</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-stop-type">Motion Stop Type</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_STOP_TYPE_DECELERATION</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_STOP_TYPE_HALT</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-polarity">Motion Polarity</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_ACTIVE_LOW</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_ACTIVE_HIGH</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-enable">Motion Enable</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_FALSE</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_TRUE</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-search-direction">Motion Search Direction</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_DIR_FORWARD</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_DIR_REVERSE</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-find-reference-type">Motion Find Reference Type</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_FIND_HOME</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_FIND_INDEX</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_FIND_LIMIT</td>
-<td style="text-align: left;">2</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-capture-mode">Motion Capture Mode</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_CAPTURE_LOGICAL_POSITION</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_CAPTURE_ENCODER_POSITION</td>
-<td style="text-align: left;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="motion-capture-type">Motion Capture Type</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameters</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MOT_CAPTURE_RISING_EDGE</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">MOT_CAPTURE_FALLING_EDGE</td>
-<td style="text-align: left;">1</td>
+<td style="text-align: left;">UART_STOP_BIT_1P5</td>
+<td style="text-align: left;">3</td>
 </tr>
 </tbody>
 </table>

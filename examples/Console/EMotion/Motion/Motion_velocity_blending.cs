@@ -4,7 +4,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 /// 
-/// Copyright (c) 2022-2023 WPC Systems Ltd.
+/// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -27,14 +27,17 @@ class EMotion_velocity_blending
             // Parameters setting
             int err;
             int port = 0;
+            int new_velo;
 
             string[] driver_info = dev.Sys_getDriverInfo();
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-             
+            
+            // Motion open
             err = dev.Motion_open(port);
             Console.WriteLine($"open: {err}");
-
+            
+            // Motion configure
             err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
             Console.WriteLine($"cfgAxis: {err}");
 
@@ -47,33 +50,40 @@ class EMotion_velocity_blending
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
             Console.WriteLine($"rstEncoderPosi: {err}");
 
-            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_VELOCITY, target_position: 10000, velocity: 1000);
+            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_VELOCITY, target_posi: 10000, velo: 1000);
             Console.WriteLine($"cfgAxisMove: {err}");
  
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
             Console.WriteLine($"enableServoOn: {err}");
-
+            
+            // Motion start
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1);
             Console.WriteLine($"startSingleAxisMove: {err}");
 
             Thread.Sleep(3000);
 
-            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, 5000);
+            // Motion override velocity
+            new_velo = 5000;
+            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, new_velo);
             Console.WriteLine($"overrideAxisVelocity: {err}");
 
             Thread.Sleep(3000);
 
-            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, -3000);
+            // Motion override velocity
+            new_velo = -3000;
+            err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, new_velo);
             Console.WriteLine($"overrideAxisVelocity: {err}");
 
             Thread.Sleep(3000);
 
+            // Motion stop
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
             Console.WriteLine($"stop: {err}");
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
             Console.WriteLine($"enableServoOn: {err}");
             
+            // Motion close
             err = dev.Motion_close(port);
             Console.WriteLine($"close: {err}");
         }
