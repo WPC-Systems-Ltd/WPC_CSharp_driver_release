@@ -1,4 +1,4 @@
-/// get_WifiDAQ_status.cs
+/// get_WifiDAQ_status.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get basic information from WifiDAQE3A such as RSSI & battery & thermo.
 /// 
@@ -27,18 +27,21 @@ class WifiDAQE3A_get_WifiDAQ_status
         // Perform DAQ basic information 
         try
         {
+            // Parameters setting
+            int timeout = 3000;
+         
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get RSSI, battery and thermo
 
-            int data1 = dev.Wifi_readRSSI();
+            int data1 = dev.Wifi_readRSSI(timeout);
 
-            int data2 = dev.Wifi_readBattery();
+            int data2 = dev.Wifi_readBattery(timeout);
 
-            float data3 = dev.Wifi_readThermo();
+            float data3 = dev.Wifi_readThermo(timeout);
 
             Console.WriteLine($"RSSI: {data1} dBm");
 

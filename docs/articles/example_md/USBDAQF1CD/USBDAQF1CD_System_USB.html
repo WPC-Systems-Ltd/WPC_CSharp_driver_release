@@ -75,7 +75,7 @@
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// get_USB_info.cs
+<pre><code class="lang-csharp" name="CS">/// get_USB_info.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get hardware information from USBDAQF1CD.
 /// 
@@ -107,18 +107,21 @@ class USBDAQF1CD_get_USB_info
 
         // Perform DAQ basic information 
         try
-        {
+        {   
+            // Parameters setting
+            int timeout = 3000;
+       
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get serial number 
-            string serial_num = dev.Sys_getSerialNumber();
+            string serial_num = dev.Sys_getSerialNumber(timeout);
             Console.WriteLine($&quot;Serial number: {serial_num}&quot;);
 
             // Get RTC Time
-            string RTC = dev.Sys_getRTC(); 
+            string RTC = dev.Sys_getRTC(timeout); 
             Console.WriteLine($&quot;RTC data time: {RTC}&quot;);
         }
         catch (Exception ex)
@@ -186,7 +189,7 @@ class USBDAQF1CD_get_USB_info
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

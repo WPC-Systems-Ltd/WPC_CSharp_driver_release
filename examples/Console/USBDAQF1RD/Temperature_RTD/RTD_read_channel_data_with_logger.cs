@@ -1,4 +1,4 @@
-/// RTD_read_channel_data_with_logger.cs
+/// RTD_read_channel_data_with_logger.cs with synchronous mode.
 /// 
 /// This example demonstrates how to read RTD data and write to CSV file in two channels from USBDAQF1RD.
 /// 
@@ -48,25 +48,26 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             int port = 1;
             int channel_0 = 0;
             int channel_1 = 1;
-
+            int timeout = 3000;
+            
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open RTD port
-            err = dev.Thermal_open(port);
+            err = dev.Thermal_open(port, timeout);
             Console.WriteLine($"open: {err}");
  
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set RTD port and read RTD in channel 0
-            float data0 = dev.Thermal_readSensor(port, channel_0);
+            float data0 = dev.Thermal_readSensor(port, channel_0, timeout);
             Console.WriteLine($"Read channel 0 data: {data0} °C ");
 
             // Set RTD port and read RTD in channel 1
-            float data1 = dev.Thermal_readSensor(port, channel_1);
+            float data1 = dev.Thermal_readSensor(port, channel_1, timeout);
             Console.WriteLine($"Read channel 1 data: {data1} °C ");
             
             // Write data into CSV file
@@ -74,7 +75,7 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             dev_logger.Logger_writeValue(data);  
 
             // Close RTD port
-            err = dev.Thermal_close(port);
+            err = dev.Thermal_close(port, timeout);
             Console.WriteLine($"close: {err}");
  
             // Close File

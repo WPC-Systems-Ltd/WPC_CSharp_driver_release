@@ -1,4 +1,4 @@
-/// UART_write.cs
+/// UART_write.cs with synchronous mode.
 ///
 /// This example demonstrates how to write data to another device with UART interface from USBDAQF1CD.
 /// 
@@ -37,9 +37,10 @@ class USBDAQF1CD_UART_write
             int err;
             int port = 2;
             int baudrate = 9600;
-
+            int timeout = 3000;
+            
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 

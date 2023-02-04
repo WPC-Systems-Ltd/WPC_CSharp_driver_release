@@ -1,4 +1,4 @@
-/// AI_continuous_with_logger.cs
+/// AI_continuous_with_logger.cs with synchronous mode.
 ///
 /// This example demonstrates how to get AI data and write to CSV file in continuous mode from EthanA.
 /// 
@@ -74,26 +74,27 @@ class EthanA_DataLogger_AI_continuous
             int err;
             int port = 0;
             float sampling_rate = 1000;
+            int timeout = 3000;
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            err = dev.AI_open(port);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Set AI port and acquisition mode to continuous
-            err = dev.AI_setMode(port, Const.AI_MODE_CONTINOUS);
+            err = dev.AI_setMode(port, Const.AI_MODE_CONTINUOUS, timeout);
             Console.WriteLine($"setMode: {err}");
 
             // Set AI port and sampling rate to 1k (Hz)
-            err = dev.AI_setSamplingRate(port, sampling_rate);
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
             Console.WriteLine($"setSamplingRate: {err}");
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout);
             Console.WriteLine($"start: {err}");
 
             // Wait for 1 sec
@@ -103,7 +104,7 @@ class EthanA_DataLogger_AI_continuous
             loop_func(dev, dev_logger, port, 600, 1, 3);
 
             // Close AI port
-            err = dev.AI_close(port);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($"close: {err}");
             
             // Close File

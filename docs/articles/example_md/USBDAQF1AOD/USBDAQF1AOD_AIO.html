@@ -78,7 +78,7 @@
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// AIO_all_channels_loopback.cs 
+<pre><code class="lang-csharp" name="CS">/// AIO_all_channels_loopback.cs  with synchronous mode.
 /// 
 /// This example demonstrates how to write AIO loopback in all channels from USBDAQF1AOD.
 /// 
@@ -119,22 +119,23 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             int err;
             int port = 0;
             List&lt;double&gt; s;
-
+            int timeout = 3000;
+       
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI port
-            err = dev.AI_open(port);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($&quot;AI_open: {err}&quot;);
 
             // Open AO port
-            err = dev.AO_open(port);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($&quot;AO_open: {err}&quot;);
 
             // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port);
+            s = dev.AI_readOnDemand(port, timeout);
 
             // Read acquisition data
             Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
@@ -144,11 +145,11 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 
             // Set AO port and write data simultaneously
             List&lt;double&gt; AO_values = new List&lt;double&gt; { 0, 1, 2, 3, 4, 5, 4, 3 };
-            err = dev.AO_writeAllChannels(port, AO_values);
+            err = dev.AO_writeAllChannels(port, AO_values, timeout);
             Console.WriteLine($&quot;AO_writeAllChannels: {err}&quot;);
 
             // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port);
+            s = dev.AI_readOnDemand(port, timeout);
 
             // Read acquisition data
             Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
@@ -157,11 +158,11 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             Thread.Sleep(1000); // delay [ms]
 
             // Close AI port
-            err = dev.AI_close(port);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($&quot;AI_close: {err}&quot;);
 
             // Close AO port
-            err = dev.AO_close(port);
+            err = dev.AO_close(port, timeout);
             Console.WriteLine($&quot;AO_close: {err}&quot;);
         }
         catch (Exception ex)
@@ -178,7 +179,7 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// AIO_one_channel_loopback.cs
+<pre><code class="lang-csharp" name="CS">/// AIO_one_channel_loopback.cs with synchronous mode.
 ///
 /// This example demonstrates how to write AIO loopback in specific channel from USBDAQF1AOD.
 /// 
@@ -218,22 +219,23 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             // Parameters setting
             int err;
             int port = 0;
-
+            int timeout = 3000;
+       
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI port
-            err = dev.AI_open(port);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($&quot;AI_open: {err}&quot;);
 
             // Open AO port
-            err = dev.AO_open(port);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($&quot;AO_open: {err}&quot;);
 
             // Set AI port and data acquisition
-            List&lt;double&gt; s = dev.AI_readOnDemand(port);
+            List&lt;double&gt; s = dev.AI_readOnDemand(port, timeout);
 
             // Read acquisition data
             Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
@@ -242,23 +244,23 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             Thread.Sleep(1000); // delay [ms]
 
             // Set AO port and write data 1.5(V) in channel 4
-            err = dev.AO_writeOneChannel(port, 4, 1.5);
+            err = dev.AO_writeOneChannel(port, 4, 1.5, timeout);
             Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AO port and write data 2.5(V) in channel 5
-            err = dev.AO_writeOneChannel(port, 5, 2.5);
+            err = dev.AO_writeOneChannel(port, 5, 2.5, timeout);
             Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
  
             // Set AO port and write data 3.5(V) in channel 6
-            err = dev.AO_writeOneChannel(port, 6, 3.5);
+            err = dev.AO_writeOneChannel(port, 6, 3.5, timeout);
             Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AO port and write data 4.5(V) in channel 7
-            err = dev.AO_writeOneChannel(port, 7, 4.5);
+            err = dev.AO_writeOneChannel(port, 7, 4.5, timeout);
             Console.WriteLine($&quot;writeOneChannel: {err}&quot;);
 
             // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port);
+            s = dev.AI_readOnDemand(port, timeout);
 
             // Read acquisition data
             Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
@@ -267,11 +269,11 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             Thread.Sleep(1000); // delay [ms]
 
             // Close AI port
-            err = dev.AI_close(port);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($&quot;AI_close: {err}&quot;);
 
             // Close AO port
-            err = dev.AO_close(port);
+            err = dev.AO_close(port, timeout);
             Console.WriteLine($&quot;AO_close: {err}&quot;);
         }
         catch (Exception ex)
@@ -339,7 +341,7 @@ class USBDAQF1AOD_AIO_one_channel_loopback
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

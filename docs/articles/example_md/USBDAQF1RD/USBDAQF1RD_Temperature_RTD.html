@@ -81,7 +81,7 @@
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// RTD_read_channel_data.cs
+<pre><code class="lang-csharp" name="CS">/// RTD_read_channel_data.cs with synchronous mode.
 /// 
 /// This example demonstrates how to read RTD data in two channels from USBDAQF1RD.
 /// 
@@ -124,29 +124,30 @@ class USBDAQF1RD_RTD_read_channel_data
             int port = 1;
             int channel_0 = 0;
             int channel_1 = 1;
-
+            int timeout = 3000;
+            
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open RTD port
-            err = dev.Thermal_open(port);
+            err = dev.Thermal_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set RTD port and read RTD in channel 0
-            data = dev.Thermal_readSensor(port, channel_0);
+            data = dev.Thermal_readSensor(port, channel_0, timeout);
             Console.WriteLine($&quot;Read channel 0 data: {data} °C &quot;);
 
             // Set RTD port and read RTD in channel 1
-            data = dev.Thermal_readSensor(port, channel_1);
+            data = dev.Thermal_readSensor(port, channel_1, timeout);
             Console.WriteLine($&quot;Read channel 1 data: {data} °C &quot;);
 
             // Close RTD port
-            err = dev.Thermal_close(port);
+            err = dev.Thermal_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
@@ -165,7 +166,7 @@ class USBDAQF1RD_RTD_read_channel_data
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// RTD_read_channel_status.cs
+<pre><code class="lang-csharp" name="CS">/// RTD_read_channel_status.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get status in two channels from USBDAQF1RD.
 /// 
@@ -206,29 +207,30 @@ class USBDAQF1RD_RTD_read_channel_status
             int port = 1;
             int channel_0 = 0;
             int channel_1 = 1;
-
+            int timeout = 3000;
+            
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open RTD port
-            err = dev.Thermal_open(port);
+            err = dev.Thermal_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set RTD port and get status in channel 0
-            status = dev.Thermal_getStatus(port, channel_0);
+            status = dev.Thermal_getStatus(port, channel_0, timeout);
             Console.WriteLine($&quot;Thermal_getStatus in chaannel 0: {status}&quot;);
 
             // Set RTD port and get status in channel 1
-            status = dev.Thermal_getStatus(port, channel_1);
+            status = dev.Thermal_getStatus(port, channel_1, timeout);
             Console.WriteLine($&quot;Thermal_getStatus in chaannel 1: {status}&quot;);
 
             // Close RTD port
-            err = dev.Thermal_close(port);
+            err = dev.Thermal_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
@@ -245,7 +247,7 @@ class USBDAQF1RD_RTD_read_channel_status
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// RTD_read_channel_data_with_logger.cs
+<pre><code class="lang-csharp" name="CS">/// RTD_read_channel_data_with_logger.cs with synchronous mode.
 /// 
 /// This example demonstrates how to read RTD data and write to CSV file in two channels from USBDAQF1RD.
 /// 
@@ -295,25 +297,26 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             int port = 1;
             int channel_0 = 0;
             int channel_1 = 1;
-
+            int timeout = 3000;
+            
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open RTD port
-            err = dev.Thermal_open(port);
+            err = dev.Thermal_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
  
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set RTD port and read RTD in channel 0
-            float data0 = dev.Thermal_readSensor(port, channel_0);
+            float data0 = dev.Thermal_readSensor(port, channel_0, timeout);
             Console.WriteLine($&quot;Read channel 0 data: {data0} °C &quot;);
 
             // Set RTD port and read RTD in channel 1
-            float data1 = dev.Thermal_readSensor(port, channel_1);
+            float data1 = dev.Thermal_readSensor(port, channel_1, timeout);
             Console.WriteLine($&quot;Read channel 1 data: {data1} °C &quot;);
             
             // Write data into CSV file
@@ -321,7 +324,7 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             dev_logger.Logger_writeValue(data);  
 
             // Close RTD port
-            err = dev.Thermal_close(port);
+            err = dev.Thermal_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;);
  
             // Close File
@@ -393,7 +396,7 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

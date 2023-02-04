@@ -1,4 +1,4 @@
-/// AI_N_samples_in_loop.cs
+/// AI_N_samples_in_loop.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get AI data with loop in N samples mode from EthanA.
 /// 
@@ -60,30 +60,31 @@ class EthanA_AI_N_samples_in_loop
             int port = 0;
             int samples = 3000;
             float sampling_rate = 1000;
-             
+            int timeout = 3000;
+                         
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            err = dev.AI_open(port);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Set AI port and acquisition mode to continuous
-            err = dev.AI_setMode(port, Const.AI_MODE_CONTINOUS);
+            err = dev.AI_setMode(port, Const.AI_MODE_CONTINUOUS, timeout);
             Console.WriteLine($"setMode: {err}");
 
             // Set AI port and sampling rate to 1k (Hz)
-            err = dev.AI_setSamplingRate(port, sampling_rate);
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
             Console.WriteLine($"setSamplingRate: {err}");
 
             // Set AI port and # of samples to 3000 (pts)
-            err = dev.AI_setNumSamples(port, samples);
+            err = dev.AI_setNumSamples(port, samples, timeout);
             Console.WriteLine($"setNumSamples: {err}");
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout);
             Console.WriteLine($"start: {err}");
 
             // Wait for 1 sec
@@ -93,7 +94,7 @@ class EthanA_AI_N_samples_in_loop
             loop_func(dev, port, 1, 3);
 
             // Close AI port
-            err = dev.AI_close(port);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($"open: {err}");
         }
         catch (Exception ex)

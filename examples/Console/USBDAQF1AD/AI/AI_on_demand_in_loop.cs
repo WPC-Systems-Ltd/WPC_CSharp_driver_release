@@ -1,4 +1,4 @@
-/// AI_on_demand_in_loop.cs
+/// AI_on_demand_in_loop.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get AI data with loop in ondemand mode from USBDAQF1AD.
 /// 
@@ -55,28 +55,29 @@ class USBDAQF1AD_AI_on_demand_in_loop
             // Parameters setting
             int err;
             int port = 0;
-             
+            int timeout = 3000;
+                    
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            err = dev.AI_open(port);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Set AI port and acquisition mode to on demand
-            err = dev.AI_setMode(port, Const.AI_MODE_ON_DEMAND);
+            err = dev.AI_setMode(port, Const.AI_MODE_ON_DEMAND, timeout);
             Console.WriteLine($"setMode: {err}");
 
             // Data acquisition
-            List<double> s = dev.AI_readOnDemand(port);
+            List<double> s = dev.AI_readOnDemand(port, timeout);
 
             // Start loop
             loop_func(dev, port, 1, 3);
 
             // Close AI port
-            err = dev.AI_close(port);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

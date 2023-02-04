@@ -1,4 +1,4 @@
-/// Motion_find_home.cs
+/// Motion_find_home.cs with synchronous mode.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -27,36 +27,37 @@ class EMotion_find_home
             // Parameters setting
             int err;
             int port = 0;
-            
-            string[] driver_info = dev.Sys_getDriverInfo();
+            int timeout = 3000;
+                  
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Motion configure
-            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW);
+            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($"cfgAxis: {err}");
 
-            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH);
+            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
             Console.WriteLine($"cfgLimit: {err}");
              
-            err = dev.Motion_cfgFindRef(port, Const.MOT_AXIS1, Const.MOT_FIND_HOME, Const.MOT_DIR_REVERSE);
+            err = dev.Motion_cfgFindRef(port, Const.MOT_AXIS1, Const.MOT_FIND_HOME, Const.MOT_DIR_REVERSE, timeout);
             Console.WriteLine($"cfgFindRef: {err}");
 
-            err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_HIGH);
+            err = dev.Motion_cfgHome(port, Const.MOT_AXIS1, Const.MOT_FALSE, Const.MOT_ACTIVE_HIGH, timeout);
             Console.WriteLine($"cfgHome: {err}");
 
-            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE);
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE, timeout);
             Console.WriteLine($"enableServoOn: {err}");
 
-            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1);
+            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1, timeout);
             Console.WriteLine($"rstEncoderPosi: {err}");
             
             // Motion start
-            err = dev.Motion_findRef(port, Const.MOT_AXIS1);
+            err = dev.Motion_findRef(port, Const.MOT_AXIS1, timeout);
             Console.WriteLine($"findRef: {err}");
 
             int finding = 1;
@@ -64,18 +65,18 @@ class EMotion_find_home
             while (found == 0)
             {
                 // read forward and reverse limit status
-                List<int> hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1);
+                List<int> hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1, timeout);
                 int forward_hit = hit_status[0];
                 int reverse_hit = hit_status[1];
                 if (forward_hit == 1) { Console.WriteLine($"Forward hit"); }
                 if (reverse_hit == 1) { Console.WriteLine($"Reverse hit"); }
 
                 // read home status
-                int home_status = dev.Motion_getHomeStatus(port, Const.MOT_AXIS1);
+                int home_status = dev.Motion_getHomeStatus(port, Const.MOT_AXIS1, timeout);
                 if (home_status == 1) { Console.WriteLine($"Home hit"); }
 
                 // Check finding and found status
-                List<int> driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1);
+                List<int> driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1, timeout);
                 finding = driving_status[0];
                 found = driving_status[1];
                 if (found == 1) { Console.WriteLine($"Found refernce"); }
@@ -83,14 +84,14 @@ class EMotion_find_home
             }
 
             // Motion stop
-            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION);
+            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($"stop: {err}");
 
-            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE);
+            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE, timeout);
             Console.WriteLine($"enableServoOn: {err}");
             
             // Motion close
-            err = dev.Motion_close(port);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

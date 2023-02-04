@@ -1,4 +1,4 @@
-/// TC_read_channel_data_with_logger.cs
+/// TC_read_channel_data_with_logger.cs with synchronous mode.
 /// 
 /// This example demonstrates how to read thermocouple and write to CSV file from USBDAQF1TD.
 /// 
@@ -47,32 +47,33 @@ class USBDAQF1TD_DataLogger_TC_read_channel_data
             int err;
             int port = 1;
             int channel = 1;
-
+            int timeout = 3000;
+            
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open thermo port
-            err = dev.Thermal_open(port);
+            err = dev.Thermal_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Set thermo port and set K type in channel 1 
-            err = dev.Thermal_setOverSampling(port, channel, Const.THERMAL_OVERSAMPLING_NONE);
+            err = dev.Thermal_setOverSampling(port, channel, Const.THERMAL_OVERSAMPLING_NONE, timeout);
             Console.WriteLine($"setOverSampling: {err}");
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set thermo port and set K type in channel 1 
-            err = dev.Thermal_setType(port, channel, Const.THERMAL_COUPLE_TYPE_K);
+            err = dev.Thermal_setType(port, channel, Const.THERMAL_COUPLE_TYPE_K, timeout);
             Console.WriteLine($"setType: {err}");
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set thermo port and read thermo in channel 1
-            float data1 = dev.Thermal_readSensor(port, channel);
+            float data1 = dev.Thermal_readSensor(port, channel, timeout);
             Console.WriteLine($"Read channel 1 data: {data1} °C ");
 
             // Write data into CSV file
@@ -80,7 +81,7 @@ class USBDAQF1TD_DataLogger_TC_read_channel_data
             dev_logger.Logger_writeValue(data);
 
             // Close thermo port
-            err = dev.Thermal_close(port);
+            err = dev.Thermal_close(port, timeout);
             Console.WriteLine($"close: {err}");
             
             // Close File

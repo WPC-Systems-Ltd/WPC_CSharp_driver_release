@@ -1,4 +1,4 @@
-/// get_network_info.cs
+/// get_network_info.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get hardware & network information from WifiDAQE3A.
 /// 
@@ -31,24 +31,27 @@ class WifiDAQE3A_get_network_info
         // Perform DAQ basic information 
         try
         {
+            // Parameters setting
+            int timeout = 3000;
+        
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get serial number & RTC Time
-            string serial_num = dev.Sys_getSerialNumber();
-            string RTC = dev.Sys_getRTC();
+            string serial_num = dev.Sys_getSerialNumber(timeout);
+            string RTC = dev.Sys_getRTC(timeout);
             Console.WriteLine($"Serial number: {serial_num}"); 
             Console.WriteLine($"RTC data time: {RTC}");
              
             // Get IP & submask
-            List<string> info = dev.Sys_getIPAddrAndSubmask();
+            List<string> info = dev.Sys_getIPAddrAndSubmask(timeout);
             Console.WriteLine($"IP: {info[0]}");
             Console.WriteLine($"Submask: {info[1]}");
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr();
+            string mac = dev.Sys_getMACAddr(timeout);
             Console.WriteLine($"MAC: {mac}");
         }
         catch (Exception ex)

@@ -1,4 +1,4 @@
-/// DO_blinky_port.cs
+/// DO_blinky_port.cs with synchronous mode.
 /// 
 /// This example demonstrates how to write DO high or low in port from USBDAQF1RD.
 /// 
@@ -38,14 +38,15 @@ class USBDAQF1RD_DO_blinky_port
             int port = 0;
             List<int> DO_odd_state = new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 };
             List<int> DO_even_state = new List<int> { 1, 0, 1, 0, 1, 0, 1, 0 };
-            
+            int timeout = 3000;
+                  
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open all pins and set it to digital output.
-            err = dev.DO_openPort(port);
+            err = dev.DO_openPort(port, timeout);
             Console.WriteLine($"openPort: {err}");
 
             // Toggle digital state for 30 times. Each times delay for 0.1 second
@@ -53,11 +54,11 @@ class USBDAQF1RD_DO_blinky_port
             {
                 if (i % 2 == 0)
                 {
-                    err = dev.DO_writePort(port, DO_even_state);
+                    err = dev.DO_writePort(port, DO_even_state, timeout);
                 }
                 else
                 {
-                    err = dev.DO_writePort(port, DO_odd_state);
+                    err = dev.DO_writePort(port, DO_odd_state, timeout);
                 }
 
                 Console.WriteLine($"writePort: {err}"); 
@@ -68,7 +69,7 @@ class USBDAQF1RD_DO_blinky_port
             Thread.Sleep(1000); // delay [ms]
 
             // Close all pins with digital output
-            err = dev.DO_closePort(port);
+            err = dev.DO_closePort(port, timeout);
             Console.WriteLine($"closePort: {err}"); 
         }
         catch (Exception ex)

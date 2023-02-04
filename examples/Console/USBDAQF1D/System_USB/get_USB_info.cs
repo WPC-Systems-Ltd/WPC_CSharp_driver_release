@@ -1,4 +1,4 @@
-/// get_USB_info.cs
+/// get_USB_info.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get hardware information from USBDAQF1D.
 /// 
@@ -30,18 +30,21 @@ class USBDAQF1D_get_USB_info
 
         // Perform DAQ basic information 
         try
-        {
+        {   
+            // Parameters setting
+            int timeout = 3000;
+       
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get serial number 
-            string serial_num = dev.Sys_getSerialNumber();
+            string serial_num = dev.Sys_getSerialNumber(timeout);
             Console.WriteLine($"Serial number: {serial_num}");
 
             // Get RTC Time
-            string RTC = dev.Sys_getRTC(); 
+            string RTC = dev.Sys_getRTC(timeout); 
             Console.WriteLine($"RTC data time: {RTC}");
         }
         catch (Exception ex)

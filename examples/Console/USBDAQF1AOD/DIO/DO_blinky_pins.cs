@@ -1,4 +1,4 @@
-/// DO_blinky_pins.cs
+/// DO_blinky_pins.cs with synchronous mode.
 /// 
 /// This example demonstrates how to write DO high or low in pins from USBDAQF1AOD.
 /// 
@@ -39,14 +39,15 @@ class USBDAQF1AOD_DO_blinky_pins
             List<int> DO_pins = new List<int> { 0, 1, 2, 3 };
             List<int> DO_odd_state = new List<int> { 0, 1, 0, 1 };
             List<int> DO_even_state = new List<int> { 1, 0, 1, 0 };
-
+            int timeout = 3000;
+       
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open pin0, pin1, pin2 and pin3 with digital output
-            err = dev.DO_openPins(port, DO_pins);
+            err = dev.DO_openPins(port, DO_pins, timeout);
             Console.WriteLine($"openPins: {err}"); 
 
             // Toggle digital state for 10 times. Each times delay for 0.1 second 
@@ -54,11 +55,11 @@ class USBDAQF1AOD_DO_blinky_pins
             {
                 if (i%2 == 0)
                 {
-                    err = dev.DO_writePins(port, DO_pins, DO_even_state);
+                    err = dev.DO_writePins(port, DO_pins, DO_even_state, timeout);
                 }
                 else
                 {
-                    err = dev.DO_writePins(port, DO_pins, DO_odd_state);
+                    err = dev.DO_writePins(port, DO_pins, DO_odd_state, timeout);
                 } 
                 Console.WriteLine($"writePins: {err}"); 
                 Thread.Sleep(100); // delay [ms] 
@@ -68,7 +69,7 @@ class USBDAQF1AOD_DO_blinky_pins
             Thread.Sleep(1000); // delay [ms]
 
             // Close pin0, pin1, pin2 and pin3 with digital output
-            err = dev.DO_closePins(port, DO_pins);
+            err = dev.DO_closePins(port, DO_pins, timeout);
             Console.WriteLine($"closePins: {err}"); 
         }
         catch (Exception ex)

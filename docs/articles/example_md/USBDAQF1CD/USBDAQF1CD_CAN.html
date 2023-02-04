@@ -78,7 +78,7 @@
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// CAN_read.cs
+<pre><code class="lang-csharp" name="CS">/// CAN_read.cs with synchronous mode.
 /// 
 /// This example demonstrates how to read data from another device with CAN interface from USBDAQF1CD.
 /// 
@@ -117,27 +117,28 @@ class USBDAQF1CD_CAN_read
             // Parameters setting
             int err;
             int port = 1;
-
+            int timeout = 3000;
+       
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open CAN
-            err = dev.CAN_open(port);
+            err = dev.CAN_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set CAN port and set speed to 125K
-            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K);
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout);
             Console.WriteLine($&quot;setSpeed: {err}&quot;);
 
             // Set CAN port and start CAN
-            err = dev.CAN_start(port);
+            err = dev.CAN_start(port, timeout);
             Console.WriteLine($&quot;start: {err}&quot;);
 
             for (int i = 0; i &lt; 1000; i++)
             {
-                List&lt;CANFrame&gt; frame_list = dev.CAN_read(port, 5);
+                List&lt;CANFrame&gt; frame_list = dev.CAN_read(port, 5, timeout);
                 if (frame_list.Count() &gt; 0)
                 {
                     foreach (CANFrame frame in frame_list)
@@ -153,11 +154,11 @@ class USBDAQF1CD_CAN_read
             } 
 
             // Stop CAN
-            err = dev.CAN_stop(port);
+            err = dev.CAN_stop(port, timeout);
             Console.WriteLine($&quot;stop: {err}&quot;);
 
             // Close CAN
-            err = dev.CAN_close(port);
+            err = dev.CAN_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
@@ -175,7 +176,7 @@ class USBDAQF1CD_CAN_read
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">
-/// CAN_write.cs
+/// CAN_write.cs with synchronous mode.
 /// 
 /// This example demonstrates how to write data to another device with CAN interface from USBDAQF1CD.
 /// 
@@ -213,41 +214,42 @@ class USBDAQF1CD_CAN_write
             // Parameters setting
             int err;
             int port = 1;
-
+            int timeout = 3000;
+       
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open CAN
-            err = dev.CAN_open(port);
+            err = dev.CAN_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set CAN port and set speed to 125K
-            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K);
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout);
             Console.WriteLine($&quot;setSpeed: {err}&quot;);
 
             // Set CAN port and start CAN
-            err = dev.CAN_start(port);
+            err = dev.CAN_start(port, timeout);
             Console.WriteLine($&quot;start: {err}&quot;);
 
             // ID: 10, data with 8 bytes, Standard &amp; Data 
-            err = dev.CAN_write(port, 10, new List&lt;byte&gt; { 33, 22, 11, 88, 77, 55, 66, 22 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD);
+            err = dev.CAN_write(port, 10, new List&lt;byte&gt; { 33, 22, 11, 88, 77, 55, 66, 22 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD, timeout);
             Console.WriteLine($&quot;write: {err}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms] 
 
             // ID: 20, data with 8 bytes, Standard &amp; Data 
-            err = dev.CAN_write(port, 20, new List&lt;byte&gt; { 1, 2, 3 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD);
+            err = dev.CAN_write(port, 20, new List&lt;byte&gt; { 1, 2, 3 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD, timeout);
             Console.WriteLine($&quot;write: {err}&quot;);
 
             // Stop CAN
-            err = dev.CAN_stop(port);
+            err = dev.CAN_stop(port, timeout);
             Console.WriteLine($&quot;stop: {err}&quot;);
 
             // Close CAN
-            err = dev.CAN_close(port);
+            err = dev.CAN_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;); 
         }
         catch (Exception ex)
@@ -315,7 +317,7 @@ class USBDAQF1CD_CAN_write
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

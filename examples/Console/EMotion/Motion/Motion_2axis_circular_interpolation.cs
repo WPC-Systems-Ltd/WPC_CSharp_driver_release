@@ -1,4 +1,4 @@
-/// Motion_2axis_circular_interpolation.cs
+/// Motion_2axis_circular_interpolation.cs with synchronous mode.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -31,13 +31,14 @@ class EMotion_2axis_circular_interpolation
             int center_point_y = 2000;
             int finish_point_x = 0;
             int finish_point_y = 0;
-
-            string[] driver_info = dev.Sys_getDriverInfo();
+            int timeout = 3000;
+       
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Or specify a specific name in a specific dir
@@ -52,24 +53,24 @@ class EMotion_2axis_circular_interpolation
             Console.WriteLine($"loadCfgFile: {err}");
 
             // Motion configure
-            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000);
+            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000, timeout: timeout);
             Console.WriteLine($"cfgCircularInterpo: {err}");
              
             for (int i = 0; i < 4; i++)
             {
-                err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE);
+                err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE, timeout);
                 Console.WriteLine($"enableServoOn: {err}"); 
             }
 
             // Motion start
-            err = dev.Motion_startCircularInterpo(port);
+            err = dev.Motion_startCircularInterpo(port, timeout);
             Console.WriteLine($"startCircularInterpo: {err}");
              
             int move_status = 0;
             while (move_status == 0)
             { 
-                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1);
-                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1, timeout);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2, timeout);
                 move_status = axis1_move_status & axis2_move_status;    
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
                 else { Console.WriteLine($"Move completed"); }
@@ -78,17 +79,17 @@ class EMotion_2axis_circular_interpolation
             for (int i = 0; i < 4; i++)
             {
                 // Motion stop
-                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION);
+                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout);
                 Console.WriteLine($"stop: {err}"); 
 
-                err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE);
+                err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE, timeout);
                 Console.WriteLine($"enableServoOn: {err}");  
             }
-            err = dev.Motion_releaseInterpoAxis(port);
+            err = dev.Motion_releaseInterpoAxis(port, timeout);
             Console.WriteLine($"releaseInterpoAxis: {err}");  
             
             // Motion close
-            err = dev.Motion_close(port);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

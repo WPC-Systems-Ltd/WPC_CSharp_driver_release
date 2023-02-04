@@ -78,7 +78,7 @@
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// UART_read.cs
+<pre><code class="lang-csharp" name="CS">/// UART_read.cs with synchronous mode.
 ///
 /// This example demonstrates how to read data from another device with UART interface from USBDAQF1TD.
 /// 
@@ -117,42 +117,43 @@ class USBDAQF1TD_UART_read
             int err;
             int port = 2;
             int baudrate = 9600;
-
+            int timeout = 3000;
+            
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open UART port
-            err = dev.UART_open(port);
+            err = dev.UART_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
 
             // Set UART port and set baudrate to 9600
-            err = dev.UART_setBaudRate(port, baudrate);
+            err = dev.UART_setBaudRate(port, baudrate, timeout);
             Console.WriteLine($&quot;setBaudRate: {err}&quot;);
 
             // Set UART port and set data bit to 8-bit data
-            err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS);
+            err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS, timeout);
             Console.WriteLine($&quot;setDataBit: {err}&quot;);
 
             // Set UART port and set parity to None
-            err = dev.UART_setParity(port, Const.UART_PARITY_NONE);
+            err = dev.UART_setParity(port, Const.UART_PARITY_NONE, timeout);
             Console.WriteLine($&quot;setParity: {err}&quot;);
 
             // Set UART port and set stop bit to to 1 bit
-            err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1);
+            err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1, timeout);
             Console.WriteLine($&quot;setNumStopBit: {err}&quot;);
 
             // Wait for 10 sec
             Thread.Sleep(10000); // delay [ms]
 
             // Set UART port and read 20 bytes
-            List&lt;byte&gt; data = dev.UART_read(port, 20);
+            List&lt;byte&gt; data = dev.UART_read(port, 20, timeout);
 
             WPC_utilities.printByteList(data);
  
             // Close UART port
-            err = dev.UART_close(port);
+            err = dev.UART_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
@@ -169,7 +170,7 @@ class USBDAQF1TD_UART_read
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// UART_write.cs
+<pre><code class="lang-csharp" name="CS">/// UART_write.cs with synchronous mode.
 ///
 /// This example demonstrates how to write data to another device with UART interface from USBDAQF1TD.
 /// 
@@ -208,9 +209,10 @@ class USBDAQF1TD_UART_write
             int err;
             int port = 2;
             int baudrate = 9600;
-
+            int timeout = 3000;
+            
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
@@ -311,7 +313,7 @@ class USBDAQF1TD_UART_write
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

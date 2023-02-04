@@ -1,4 +1,4 @@
-/// AO_write_all_channels.cs
+/// AO_write_all_channels.cs with synchronous mode.
 /// 
 /// This example demonstrates how to write AO in all channels from USBDAQF1AOD.
 /// 
@@ -38,27 +38,28 @@ class USBDAQF1AOD_AO_write_all_channels
             // Parameters setting
             int err;
             int port = 0;
-
+            int timeout = 3000;
+       
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AO port
-            err = dev.AO_open(port);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Set AO port and write data simultaneously
             List<double> AO_values = new List<double> { 3, 1, 2, 3, 4, 5, 4, 3 };
 
-            err = dev.AO_writeAllChannels(port, AO_values);
+            err = dev.AO_writeAllChannels(port, AO_values, timeout);
             Console.WriteLine($"writeAllChannels: {err}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AO port
-            err = dev.AO_close(port);
+            err = dev.AO_close(port, timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

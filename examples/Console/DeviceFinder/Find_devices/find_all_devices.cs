@@ -1,4 +1,4 @@
-/// Find_all_devices.cs 
+/// Find_all_devices.cs  with synchronous mode.
 /// 
 /// This example demonstrates how to find all available USB and ethernet devices.
 /// 

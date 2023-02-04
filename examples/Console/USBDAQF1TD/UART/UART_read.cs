@@ -1,4 +1,4 @@
-/// UART_read.cs
+/// UART_read.cs with synchronous mode.
 ///
 /// This example demonstrates how to read data from another device with UART interface from USBDAQF1TD.
 /// 
@@ -37,42 +37,43 @@ class USBDAQF1TD_UART_read
             int err;
             int port = 2;
             int baudrate = 9600;
-
+            int timeout = 3000;
+            
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open UART port
-            err = dev.UART_open(port);
+            err = dev.UART_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Set UART port and set baudrate to 9600
-            err = dev.UART_setBaudRate(port, baudrate);
+            err = dev.UART_setBaudRate(port, baudrate, timeout);
             Console.WriteLine($"setBaudRate: {err}");
 
             // Set UART port and set data bit to 8-bit data
-            err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS);
+            err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS, timeout);
             Console.WriteLine($"setDataBit: {err}");
 
             // Set UART port and set parity to None
-            err = dev.UART_setParity(port, Const.UART_PARITY_NONE);
+            err = dev.UART_setParity(port, Const.UART_PARITY_NONE, timeout);
             Console.WriteLine($"setParity: {err}");
 
             // Set UART port and set stop bit to to 1 bit
-            err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1);
+            err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1, timeout);
             Console.WriteLine($"setNumStopBit: {err}");
 
             // Wait for 10 sec
             Thread.Sleep(10000); // delay [ms]
 
             // Set UART port and read 20 bytes
-            List<byte> data = dev.UART_read(port, 20);
+            List<byte> data = dev.UART_read(port, 20, timeout);
 
             WPC_utilities.printByteList(data);
  
             // Close UART port
-            err = dev.UART_close(port);
+            err = dev.UART_close(port, timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

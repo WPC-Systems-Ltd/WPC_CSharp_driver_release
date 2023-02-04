@@ -75,7 +75,7 @@
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// I2C_write_read.cs
+<pre><code class="lang-csharp" name="CS">/// I2C_write_read.cs with synchronous mode.
 /// 
 /// This example demonstrates how to communicate with USBDAQF1AOD (master) and 24C08C(slave) with I2C interface.
 /// 
@@ -113,42 +113,43 @@ class USBDAQF1AOD_I2C_write_read
             // Parameters setting
             int err;
             int port = 1;
+            int timeout = 3000;
             int device_address = 0x50;
             byte word_address = 0x00;
             List&lt;byte&gt; I2C_write_data = new List&lt;byte&gt; { word_address, 0xAA, 0x55, 0xAA, 0x55};
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open I2C port
-            err = dev.I2C_open(port);
+            err = dev.I2C_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;); 
 
             // Set I2C port and set clock rate to standard mode
-            err = dev.I2C_setClockRate(port, Const.I2C_SPEED_STANDARD);
+            err = dev.I2C_setClockRate(port, Const.I2C_SPEED_STANDARD, timeout);
             Console.WriteLine($&quot;setClockRate: {err}&quot;); 
 
             // Write WREN byte
-            err = dev.I2C_write(port, device_address, I2C_write_data);
+            err = dev.I2C_write(port, device_address, I2C_write_data, timeout);
             Console.WriteLine($&quot;write: {err}&quot;); 
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Read data via I2C
-            err = dev.I2C_write(port, device_address, new List&lt;byte&gt; {word_address});
+            err = dev.I2C_write(port, device_address, new List&lt;byte&gt; {word_address}, timeout);
             Console.WriteLine($&quot;write: {err}&quot;); 
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
-            List&lt;byte&gt; data = dev.I2C_read(port, device_address, 4); 
+            List&lt;byte&gt; data = dev.I2C_read(port, device_address, 4, timeout); 
             Console.WriteLine($&quot;I2C_read data: {data[0]},{data[1]},{data[2]},{data[3]}&quot;);
 
             // Close I2C port
-            err = dev.I2C_close(port);
+            err = dev.I2C_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;); 
         }
         catch (Exception ex)
@@ -216,7 +217,7 @@ class USBDAQF1AOD_I2C_write_read
                                   &emsp;
                                   <a href="https://www.facebook.com/WpcSystemsLtd"><i class="fab fa-facebook-square" style='font-size:40px; color:#3b5998'></i></a> 
                                   <br><br> 
-                                  <p>Copyright © 2022-2023 WPC Systems Ltd. All right reserved.</p>
+                                  <p>Copyright © 2023 WPC Systems Ltd. All right reserved.</p>
                           </div>
                       </div>
                   </div>

@@ -1,4 +1,4 @@
-/// TC_read_channel_status.cs
+/// TC_read_channel_status.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get status from USBDAQF1TD.
 /// 
@@ -39,28 +39,29 @@ class USBDAQF1TD_TC_read_channel_status
             int port = 1;
             int channel_0 = 0;
             int channel_1 = 1;
-
+            int timeout = 3000;
+            
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open thermo port
-            err = dev.Thermal_open(port);
+            err = dev.Thermal_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Set thermo port and get status in channel 0 
-            status = dev.Thermal_getStatus(port, channel_0);
+            status = dev.Thermal_getStatus(port, channel_0, timeout);
             Console.WriteLine($"Thermal_getStatus in channel 0: {status}");
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
             // Set thermo port and get status in channel 1 
-            status = dev.Thermal_getStatus(port, channel_1);
+            status = dev.Thermal_getStatus(port, channel_1, timeout);
             Console.WriteLine($"Thermal_getStatus in channel 1: {status}");
 
             // Close thermo port
-            err = dev.Thermal_close(port);
+            err = dev.Thermal_close(port, timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

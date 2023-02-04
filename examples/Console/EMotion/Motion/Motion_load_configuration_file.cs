@@ -1,4 +1,4 @@
-/// Motion_load_configuration_file.cs
+/// Motion_load_configuration_file.cs with synchronous mode.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -27,13 +27,14 @@ class EMotion_load_configuration_file
             // Parameters setting
             int err;
             int port = 0;
-
-            string[] driver_info = dev.Sys_getDriverInfo();
+            int timeout = 3000;
+       
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
             
             // Motion open
-            err = dev.Motion_open(port);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Or specify a specific name in a specific dir
@@ -48,7 +49,7 @@ class EMotion_load_configuration_file
             Console.WriteLine($"loadCfgFile: {err}");
            
             // Motion close
-            err = dev.Motion_close(port);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

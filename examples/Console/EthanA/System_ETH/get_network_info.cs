@@ -1,4 +1,4 @@
-/// get_network_info.cs
+/// get_network_info.cs with synchronous mode.
 /// 
 /// This example demonstrates how to get hardware & network information from EthanA.
 /// 
@@ -19,6 +19,9 @@ class EthanA_get_network_info
 {
     static public void Main()
     { 
+        // Parameters setting
+        int timeout = 3000;
+       
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -32,24 +35,24 @@ class EthanA_get_network_info
         try
         {
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
 
             // Get serial number & RTC Time
-            string serial_num = dev.Sys_getSerialNumber();
+            string serial_num = dev.Sys_getSerialNumber(timeout);
             string RTC = dev.Sys_getRTC();
             Console.WriteLine($"Serial number: {serial_num}"); 
             Console.WriteLine($"RTC data time: {RTC}");
              
             // Get IP & submask
-            List<string> info = dev.Sys_getIPAddrAndSubmask();
+            List<string> info = dev.Sys_getIPAddrAndSubmask(timeout);
             Console.WriteLine($"IP: {info[0]}");
             Console.WriteLine($"Submask: {info[1]}");
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr();
+            string mac = dev.Sys_getMACAddr(timeout);
             Console.WriteLine($"MAC: {mac}");
         }
         catch (Exception ex)
