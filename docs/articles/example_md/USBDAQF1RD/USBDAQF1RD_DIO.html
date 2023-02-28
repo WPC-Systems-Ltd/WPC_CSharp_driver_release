@@ -85,21 +85,21 @@
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
 <pre><code class="lang-csharp" name="CS">/// DIO_loopback_pins.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to write DIO loopback in pins from USBDAQF1RD.
-/// 
+///
 /// Use DO pins to send signals and use DI pins to receive signals on single device also called &quot;loopback&quot;.
-/// 
+///
 /// First, it shows how to open DO and DI in pins.
-/// 
+///
 /// Second, write DO pin and read DI pin
-/// 
+///
 /// Last, close DO and DI in pins.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -108,7 +108,7 @@ using WPC.Product;
 class USBDAQF1RD_DIO_loopback_pins
 {
     static public void Main()
-    {  
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -117,7 +117,7 @@ class USBDAQF1RD_DIO_loopback_pins
 
         // Connect to device
         dev.connect(&quot;21JA1385&quot;);
-          
+
         // Execute
         try
         {
@@ -127,7 +127,7 @@ class USBDAQF1RD_DIO_loopback_pins
             List&lt;int&gt; DO_pins = new List&lt;int&gt; { 0, 1, 2, 3, 4 };
             List&lt;int&gt; DI_pins = new List&lt;int&gt; { 5, 6, 7 };
             int timeout = 3000;
-       
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -135,30 +135,30 @@ class USBDAQF1RD_DIO_loopback_pins
 
             // Open pin0, pin1, pin2, pin3 and pin4 with digital output
             err = dev.DO_openPins(port, DO_pins, timeout);
-            Console.WriteLine($&quot;openPins: {err}&quot;); 
+            Console.WriteLine($&quot;openPins: {err}&quot;);
 
             // Open pin5, pin6 and pin7 with digital output
             err = dev.DI_openPins(port, DI_pins, timeout);
-            Console.WriteLine($&quot;openPins: {err}&quot;); 
+            Console.WriteLine($&quot;openPins: {err}&quot;);
 
             // Set pin0 and pin1 to high, others to low
             err = dev.DO_writePins(port, DO_pins, new List&lt;int&gt; { 1, 1, 0, 0, 0 }, timeout);
-            Console.WriteLine($&quot;writePins: {err}&quot;); 
+            Console.WriteLine($&quot;writePins: {err}&quot;);
 
             // Read pin5, pin6 and pin7 state
             List&lt;int&gt; pin_s = dev.DI_readPins(port, DI_pins, timeout);
             Console.WriteLine($&quot;DI_readPins: {pin_s[0]}, {pin_s[1]}, {pin_s[2]}&quot;);
-            
+
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close pin0, pin1, pin2, pin3 and pin4 with digital output
             err = dev.DO_closePins(port, DO_pins, timeout);
-            Console.WriteLine($&quot;closePins: {err}&quot;); 
+            Console.WriteLine($&quot;closePins: {err}&quot;);
 
-            // Close pin5, pin6 and pin7 with digital input 
+            // Close pin5, pin6 and pin7 with digital input
             err = dev.DI_closePins(port, DI_pins, timeout);
-            Console.WriteLine($&quot;closePins: {err}&quot;); 
+            Console.WriteLine($&quot;closePins: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -175,21 +175,21 @@ class USBDAQF1RD_DIO_loopback_pins
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// DIO_loopback_port.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to write DIO loopback in port from USBDAQF1RD.
-/// 
+///
 /// Use DO pins to send signals and use DI pins to receive signals on single device also called &quot;loopback&quot;.
-/// 
+///
 /// First, it shows how to open DO and DI in port.
-/// 
+///
 /// Second, write DO in port and read DI in port
-/// 
+///
 /// Last, close DO and DI in port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -198,7 +198,7 @@ using WPC.Product;
 class USBDAQF1RD_DIO_loopback_port
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -214,25 +214,25 @@ class USBDAQF1RD_DIO_loopback_port
             // Parameters setting
             int err;
             int port_DO = 0;
-            int port_DI = 1; 
+            int port_DI = 1;
             int timeout = 3000;
-       
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Open all pins with digital output 
+            // Open all pins with digital output
             err = dev.DO_openPort(port_DO, timeout);
-            Console.WriteLine($&quot;open DO Port: {err}&quot;); 
+            Console.WriteLine($&quot;open DO Port: {err}&quot;);
 
             // Open all pins with digital input
             err = dev.DI_openPort(port_DI, timeout);
-            Console.WriteLine($&quot;open DI Port: {err}&quot;); 
- 
+            Console.WriteLine($&quot;open DI Port: {err}&quot;);
+
             // Set pin0, pin1 and pin2 to high, others to low
             err = dev.DO_writePort(port_DO, new List&lt;int&gt; { 0, 0, 0, 1, 0, 0, 0, 0 }, timeout);
-            Console.WriteLine($&quot;writePort: {err}&quot;); 
+            Console.WriteLine($&quot;writePort: {err}&quot;);
 
             // Read all pins state
             List&lt;int&gt; pin_s = dev.DI_readPort(port_DI, timeout);
@@ -244,7 +244,7 @@ class USBDAQF1RD_DIO_loopback_port
 
             // Close all pins with digital input
             err = dev.DI_closePort(port_DI, timeout);
-            Console.WriteLine($&quot;close DI Port : {err}&quot;); 
+            Console.WriteLine($&quot;close DI Port : {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -255,25 +255,25 @@ class USBDAQF1RD_DIO_loopback_port
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// DO_blinky_pins.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to write DO high or low in pins from USBDAQF1RD.
-/// 
+///
 /// First, it shows how to open DO in pins.
-/// 
-/// Second, each loop has different voltage output so it will look like blinking. 
-/// 
+///
+/// Second, each loop has different voltage output so it will look like blinking.
+///
 /// Last, close DO in pins.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -282,7 +282,7 @@ using WPC.Product;
 class USBDAQF1RD_DO_blinky_pins
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -302,7 +302,7 @@ class USBDAQF1RD_DO_blinky_pins
             List&lt;int&gt; DO_odd_state = new List&lt;int&gt; { 0, 1, 0, 1 };
             List&lt;int&gt; DO_even_state = new List&lt;int&gt; { 1, 0, 1, 0 };
             int timeout = 3000;
-       
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -310,9 +310,9 @@ class USBDAQF1RD_DO_blinky_pins
 
             // Open pin0, pin1, pin2 and pin3 with digital output
             err = dev.DO_openPins(port, DO_pins, timeout);
-            Console.WriteLine($&quot;openPins: {err}&quot;); 
+            Console.WriteLine($&quot;openPins: {err}&quot;);
 
-            // Toggle digital state for 10 times. Each times delay for 0.1 second 
+            // Toggle digital state for 10 times. Each times delay for 0.1 second
             for (int i = 0; i &lt; 10; i++)
             {
                 if (i%2 == 0)
@@ -322,9 +322,9 @@ class USBDAQF1RD_DO_blinky_pins
                 else
                 {
                     err = dev.DO_writePins(port, DO_pins, DO_odd_state, timeout);
-                } 
-                Console.WriteLine($&quot;writePins: {err}&quot;); 
-                Thread.Sleep(100); // delay [ms] 
+                }
+                Console.WriteLine($&quot;writePins: {err}&quot;);
+                Thread.Sleep(100); // delay [ms]
             }
 
             // Wait for 1 sec
@@ -332,7 +332,7 @@ class USBDAQF1RD_DO_blinky_pins
 
             // Close pin0, pin1, pin2 and pin3 with digital output
             err = dev.DO_closePins(port, DO_pins, timeout);
-            Console.WriteLine($&quot;closePins: {err}&quot;); 
+            Console.WriteLine($&quot;closePins: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -349,19 +349,19 @@ class USBDAQF1RD_DO_blinky_pins
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// DO_blinky_port.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to write DO high or low in port from USBDAQF1RD.
-/// 
+///
 /// First, it shows how to open DO in port.
-/// 
-/// Second, each loop has different voltage output so it will look like blinking. 
-/// 
+///
+/// Second, each loop has different voltage output so it will look like blinking.
+///
 /// Last, close DO in port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -370,7 +370,7 @@ using WPC.Product;
 class USBDAQF1RD_DO_blinky_port
 {
     static public void Main()
-    {  
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -379,7 +379,7 @@ class USBDAQF1RD_DO_blinky_port
 
         // Connect to device
         dev.connect(&quot;21JA1385&quot;);
-         
+
         // Execute
         try
         {
@@ -389,7 +389,7 @@ class USBDAQF1RD_DO_blinky_port
             List&lt;int&gt; DO_odd_state = new List&lt;int&gt; { 0, 1, 0, 1, 0, 1, 0, 1 };
             List&lt;int&gt; DO_even_state = new List&lt;int&gt; { 1, 0, 1, 0, 1, 0, 1, 0 };
             int timeout = 3000;
-                  
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -411,7 +411,7 @@ class USBDAQF1RD_DO_blinky_port
                     err = dev.DO_writePort(port, DO_odd_state, timeout);
                 }
 
-                Console.WriteLine($&quot;writePort: {err}&quot;); 
+                Console.WriteLine($&quot;writePort: {err}&quot;);
                 Thread.Sleep(100);// delay [ms]
             }
 
@@ -420,7 +420,7 @@ class USBDAQF1RD_DO_blinky_port
 
             // Close all pins with digital output
             err = dev.DO_closePort(port, timeout);
-            Console.WriteLine($&quot;closePort: {err}&quot;); 
+            Console.WriteLine($&quot;closePort: {err}&quot;);
         }
         catch (Exception ex)
         {

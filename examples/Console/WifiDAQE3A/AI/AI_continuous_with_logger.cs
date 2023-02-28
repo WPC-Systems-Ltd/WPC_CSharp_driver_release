@@ -1,17 +1,17 @@
 /// AI_continuous_with_logger.cs with synchronous mode.
 ///
 /// This example demonstrates how to get AI data and write to CSV file in continuous mode from WifiDAQE3A.
-/// 
+///
 /// First, it shows how to open AI port and configure AI parameters.
-/// 
+///
 /// Second, read AI streaming data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -33,7 +33,7 @@ class WifiDAQE3A_DataLogger_AI_continuous
                 Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
                 // Write data into CSV
-                handle2.Logger_writeList(s); 
+                handle2.Logger_writeList(s);
             }
 
             // Wait for 0.01 sec
@@ -50,7 +50,7 @@ class WifiDAQE3A_DataLogger_AI_continuous
 
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
- 
+
         // Create device handle
         WifiDAQE3A dev = new WifiDAQE3A();
 
@@ -59,15 +59,15 @@ class WifiDAQE3A_DataLogger_AI_continuous
 
         // Create datalogger handle
         Datalogger dev_logger = new Datalogger();
-        
+
         // Open file with WPC_test.csv
         dev_logger.Logger_openFile("WPC_tester_WifiDAQE3A_AI.csv");
-        
+
         // Write header into CSV file
-        var data = $"CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7"; 
+        var data = $"CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7";
         dev_logger.Logger_writeValue(data);
 
-        // Perform DAQ basic information 
+        // Perform DAQ basic information
         try
         {
             // Parameters setting
@@ -106,7 +106,7 @@ class WifiDAQE3A_DataLogger_AI_continuous
             // Close AI port
             err = dev.AI_close(port, timeout);
             Console.WriteLine($"close: {err}");
-            
+
             // Close File
             dev_logger.Logger_closeFile();
         }
@@ -119,6 +119,6 @@ class WifiDAQE3A_DataLogger_AI_continuous
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

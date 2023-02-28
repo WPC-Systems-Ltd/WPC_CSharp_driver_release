@@ -79,19 +79,19 @@
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
 <pre><code class="lang-csharp" name="CS">/// SPI_read_and_write.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to communicate with USBDAQF1AD (master) and 25LC640(slave) with SPI interface.
-/// 
+///
 /// First, it shows how to open SPI port &amp; DIO pins and configure SPI parameters.
-/// 
+///
 /// Second, write some bytes with address into EEPROM (25LC640). We have to make sure that bytes written in address is correct however read address from EEPROM (25LC640).
-/// 
+///
 /// Last, close SPI port &amp; DIO pins
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -100,7 +100,7 @@ using WPC.Product;
 class USBDAQF1AD_SPI_read_and_write
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -109,7 +109,7 @@ class USBDAQF1AD_SPI_read_and_write
 
         // Connect to device
         dev.connect(&quot;21JA1245&quot;);
- 
+
         // Execute
         try
         {
@@ -123,13 +123,13 @@ class USBDAQF1AD_SPI_read_and_write
             byte READ = 0x03;
             byte WREN = 0x06;
             int timeout = 3000;
-       
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            /* 
+            /*
              Open DO pins &amp; SPI port &amp; set CS(pin0) to high
             */
 
@@ -145,7 +145,7 @@ class USBDAQF1AD_SPI_read_and_write
             err = dev.DO_writePins(DO_port, new List&lt;int&gt; { DO_pin }, new List&lt;int&gt; { 1 }, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
-            /* 
+            /*
             Set SPI parameter
             */
 
@@ -161,11 +161,11 @@ class USBDAQF1AD_SPI_read_and_write
             err = dev.SPI_setPrescaler(port, Const.SPI_PRESCALER_64, timeout);
             Console.WriteLine($&quot;setPrescaler: {err}&quot;);
 
-            // Set SPI port and set CPOL and CPHA to mode 0 
+            // Set SPI port and set CPOL and CPHA to mode 0
             err = dev.SPI_setMode(port, Const.SPI_MODE_0, timeout);
             Console.WriteLine($&quot;setMode: {err}&quot;);
 
-            /* 
+            /*
             Write data via SPI
             */
 
@@ -181,7 +181,7 @@ class USBDAQF1AD_SPI_read_and_write
             err = dev.DO_writePins(DO_port, new List&lt;int&gt; { DO_pin }, new List&lt;int&gt; { 1 }, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
-            /* 
+            /*
             Write data via SPI
             */
 
@@ -197,7 +197,7 @@ class USBDAQF1AD_SPI_read_and_write
             err = dev.DO_writePins(DO_port, new List&lt;int&gt; { DO_pin }, new List&lt;int&gt; { 1 }, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
-            /* 
+            /*
             Read data via SPI
             */
 
@@ -214,7 +214,7 @@ class USBDAQF1AD_SPI_read_and_write
             err = dev.DO_writePins(DO_port, new List&lt;int&gt; { DO_pin }, new List&lt;int&gt; { 1 }, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
-            /* 
+            /*
             Close DO pins and SPI port
             */
 
@@ -241,19 +241,19 @@ class USBDAQF1AD_SPI_read_and_write
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// SPI_write.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to communicate with USBDAQF1AD (master) and 25LC640(slave) with SPI interface.
-/// 
+///
 /// First, it shows how to open SPI port &amp; DIO pins and configure SPI parameters.
-/// 
+///
 /// Second, write some bytes with address into EEPROM (25LC640).
-/// 
+///
 /// Last, close SPI port &amp; DIO pins
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -262,7 +262,7 @@ using WPC.Product;
 class USBDAQF1AD_SPI_write
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -280,16 +280,16 @@ class USBDAQF1AD_SPI_write
             int port = 2;
             int DO_port = 0;
             int DO_pin = 0;
-            byte WRITE = 0x02; 
+            byte WRITE = 0x02;
             byte WREN = 0x06;
             int timeout = 3000;
-       
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            /* 
+            /*
              Open DO pins &amp; SPI port &amp; set CS(pin0) to high
             */
 
@@ -305,7 +305,7 @@ class USBDAQF1AD_SPI_write
             err = dev.DO_writePins(DO_port, new List&lt;int&gt; { DO_pin }, new List&lt;int&gt; { 1 }, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
-            /* 
+            /*
             Set SPI parameter
             */
 
@@ -321,11 +321,11 @@ class USBDAQF1AD_SPI_write
             err = dev.SPI_setPrescaler(port, Const.SPI_PRESCALER_64, timeout);
             Console.WriteLine($&quot;setPrescaler: {err}&quot;);
 
-            // Set SPI port and set CPOL and CPHA to mode 0 
+            // Set SPI port and set CPOL and CPHA to mode 0
             err = dev.SPI_setMode(port, Const.SPI_MODE_0, timeout);
             Console.WriteLine($&quot;setMode: {err}&quot;);
 
-            /* 
+            /*
             Write data via SPI
             */
 
@@ -341,7 +341,7 @@ class USBDAQF1AD_SPI_write
             err = dev.DO_writePins(DO_port, new List&lt;int&gt; { DO_pin }, new List&lt;int&gt; { 1 }, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
-            /* 
+            /*
             Write data via SPI
             */
 
@@ -357,7 +357,7 @@ class USBDAQF1AD_SPI_write
             err = dev.DO_writePins(DO_port, new List&lt;int&gt; { DO_pin }, new List&lt;int&gt; { 1 }, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
-            /* 
+            /*
             Close DO pins and SPI port
             */
 

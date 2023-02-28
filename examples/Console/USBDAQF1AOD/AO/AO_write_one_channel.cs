@@ -1,17 +1,17 @@
 /// AO_write_one_channel.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to write AO in specific channels from USBDAQF1AOD.
-/// 
+///
 /// First, it shows how to open AO in port.
-/// 
+///
 /// Second, write digital signals in specific channels.
-/// 
+///
 /// Last, close AO in port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -20,7 +20,7 @@ using WPC.Product;
 class USBDAQF1AOD_AO_write_one_channel
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -37,7 +37,7 @@ class USBDAQF1AOD_AO_write_one_channel
             int err;
             int port = 0;
             int timeout = 3000;
-       
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");

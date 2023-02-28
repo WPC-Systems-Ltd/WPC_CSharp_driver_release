@@ -1,17 +1,17 @@
 /// AI_continuous.cs with synchronous mode.
 ///
 /// This example demonstrates how to get AI data with loop in continuous mode from WifiDAQE3A.
-/// 
+///
 /// First, it shows how to open AI port and configure AI parameters.
-/// 
+///
 /// Second, read AI streaming data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -42,7 +42,7 @@ class WifiDAQE3A_AI_continuous
     }
 
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -60,7 +60,7 @@ class WifiDAQE3A_AI_continuous
             int port = 1;
             float sampling_rate = 1000;
             int timeout = 3000;
-            
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -72,15 +72,15 @@ class WifiDAQE3A_AI_continuous
 
             // Set AI port and acquisition mode to continuous
             err = dev.AI_setMode(port, Const.AI_MODE_CONTINUOUS, timeout);
-            Console.WriteLine($"setMode: {err}"); 
+            Console.WriteLine($"setMode: {err}");
 
             // Set AI port and sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
-            Console.WriteLine($"setSamplingRate: {err}"); 
+            Console.WriteLine($"setSamplingRate: {err}");
 
             // Set AI port and start acquisition
             err = dev.AI_start(port, timeout);
-            Console.WriteLine($"start: {err}"); 
+            Console.WriteLine($"start: {err}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
@@ -90,7 +90,7 @@ class WifiDAQE3A_AI_continuous
 
             // Close AI port
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($"close: {err}"); 
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {
@@ -101,6 +101,6 @@ class WifiDAQE3A_AI_continuous
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

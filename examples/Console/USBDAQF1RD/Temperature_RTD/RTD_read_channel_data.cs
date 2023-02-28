@@ -1,17 +1,17 @@
 /// RTD_read_channel_data.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to read RTD data in two channels from USBDAQF1RD.
-/// 
+///
 /// First, it shows how to open thermal port
-/// 
+///
 /// Second, read channel 0 and channel 1 RTD data
-/// 
+///
 /// Last, close thermal port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -20,7 +20,7 @@ using WPC.Product;
 class USBDAQF1RD_RTD_read_channel_data
 {
     static public void Main()
-    { 
+    {
         Console.WriteLine("Start example code...");
 
         // Get C# driver version
@@ -42,7 +42,7 @@ class USBDAQF1RD_RTD_read_channel_data
             int channel_0 = 0;
             int channel_1 = 1;
             int timeout = 3000;
-            
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");

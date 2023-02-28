@@ -1,17 +1,17 @@
 /// AI_N_samples_in_loop.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get AI data with loop in N samples mode from USBDAQF1AD.
-/// 
+///
 /// First, it shows how to open AI port and configure AI parameters.
-/// 
+///
 /// Second, read AI streaming data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -42,7 +42,7 @@ class USBDAQF1AD_AI_N_samples_in_loop
     }
 
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -51,7 +51,7 @@ class USBDAQF1AD_AI_N_samples_in_loop
 
         // Connect to device
         dev.connect("21JA1245");
-         
+
         // Execute
         try
         {
@@ -61,7 +61,7 @@ class USBDAQF1AD_AI_N_samples_in_loop
             int samples = 3000;
             float sampling_rate = 1000;
             int timeout = 3000;
-                         
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -106,6 +106,6 @@ class USBDAQF1AD_AI_N_samples_in_loop
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

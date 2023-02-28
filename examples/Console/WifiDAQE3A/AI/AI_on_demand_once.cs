@@ -1,17 +1,17 @@
 /// AI_on_demand_once.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get AI data in once in on demand mode from WifiDAQE3A.
-/// 
+///
 /// First, it shows how to open AI port.
-/// 
+///
 /// Second, read AI ondemand data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -20,7 +20,7 @@ using WPC.Product;
 class WifiDAQE3A_AI_on_demand_once
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -30,14 +30,14 @@ class WifiDAQE3A_AI_on_demand_once
         // Connect to device
         dev.connect("192.168.5.79");
 
-        // Perform DAQ basic information 
+        // Perform DAQ basic information
         try
         {
             // Parameters setting
             int err;
             int port = 1;
             int timeout = 3000;
-       
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");

@@ -3,7 +3,7 @@
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -12,7 +12,7 @@ using WPC.Product;
 class EMotion_velocity_blending_accerleration
 {
     static public void Main()
-    {  
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -21,9 +21,9 @@ class EMotion_velocity_blending_accerleration
 
         // Connect to device
         dev.connect("192.168.1.110");
-  
+
         try
-        {   
+        {
             // Parameters setting
             int err;
             int port = 0;
@@ -31,7 +31,7 @@ class EMotion_velocity_blending_accerleration
             int new_accel;
             int new_decel;
             int timeout = 3000;
-       
+
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
@@ -62,20 +62,20 @@ class EMotion_velocity_blending_accerleration
             // Motion start
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1, timeout);
             Console.WriteLine($"startSingleAxisMove: {err}");
-             
+
             Thread.Sleep(5000);
-             
+
             // Motion override velocity
             new_velo = -3000;
             new_accel = 100;
             new_decel = 100;
             err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, new_velo, timeout);
             Console.WriteLine($"overrideAxisVelocity: {err}");
-            
+
             // Motion override acceleration
             err = dev.Motion_overrideAxisAccel(port, Const.MOT_AXIS1, new_accel, new_decel, timeout);
             Console.WriteLine($"overrideAxisAccel: {err}");;
-             
+
             Thread.Sleep(5000);
 
             // Motion override velocity
@@ -84,11 +84,11 @@ class EMotion_velocity_blending_accerleration
             new_decel = 10000;
             err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, new_velo, timeout);
             Console.WriteLine($"overrideAxisVelocity: {err}");
-            
+
             // Motion override acceleration
             err = dev.Motion_overrideAxisAccel(port, Const.MOT_AXIS1, new_accel, new_decel, timeout);
             Console.WriteLine($"overrideAxisAccel: {err}");
-             
+
             Thread.Sleep(5000);
 
             // Motion stop
@@ -97,7 +97,7 @@ class EMotion_velocity_blending_accerleration
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE, timeout);
             Console.WriteLine($"enableServoOn: {err}");
-            
+
             // Motion close
             err = dev.Motion_close(port, timeout);
             Console.WriteLine($"close: {err}");
@@ -111,6 +111,6 @@ class EMotion_velocity_blending_accerleration
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
-    } 
+        dev.close();
+    }
 }

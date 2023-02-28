@@ -1,19 +1,19 @@
 /// AIO_one_channel_loopback.cs with synchronous mode.
 ///
 /// This example demonstrates how to write AIO loopback in specific channel from USBDAQF1AOD.
-/// 
+///
 /// Use AO pins to send signals and use AI pins to receive signals on single device also called "loopback".
-/// 
+///
 /// First, it shows how to open AO and AI in port.
-/// 
+///
 /// Second, write digital signals to AO in specific channel and read AI ondemand data.
-/// 
+///
 /// Last, close AO and AI in port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -22,7 +22,7 @@ using WPC.Product;
 class USBDAQF1AOD_AIO_one_channel_loopback
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -39,7 +39,7 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             int err;
             int port = 0;
             int timeout = 3000;
-       
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -69,7 +69,7 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             // Set AO port and write data 2.5(V) in channel 5
             err = dev.AO_writeOneChannel(port, 5, 2.5, timeout);
             Console.WriteLine($"writeOneChannel: {err}");
- 
+
             // Set AO port and write data 3.5(V) in channel 6
             err = dev.AO_writeOneChannel(port, 6, 3.5, timeout);
             Console.WriteLine($"writeOneChannel: {err}");
@@ -104,6 +104,6 @@ class USBDAQF1AOD_AIO_one_channel_loopback
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

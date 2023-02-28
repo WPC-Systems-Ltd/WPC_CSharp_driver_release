@@ -1,17 +1,17 @@
 /// AO_write_all_channels.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to write AO in all channels from EthanO.
-/// 
+///
 /// First, it shows how to open AO in port.
-/// 
+///
 /// Second, write all digital signals
-/// 
+///
 /// Last, close AO in port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -39,7 +39,7 @@ class EthanO_AO_write_all_channels
             int err;
             int port = 0;
             int timeout = 3000;
-       
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");

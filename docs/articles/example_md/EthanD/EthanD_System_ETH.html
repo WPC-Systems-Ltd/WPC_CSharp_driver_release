@@ -76,17 +76,17 @@
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
 <pre><code class="lang-csharp" name="CS">/// get_network_info.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get hardware &amp; network information from EthanD.
-/// 
+///
 /// First, get hardware information such as firmware model &amp; version.
-/// 
+///
 /// Last, get network information such as IP &amp; submask &amp; MAC.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -95,10 +95,10 @@ using WPC.Product;
 class EthanD_get_network_info
 {
     static public void Main()
-    { 
+    {
         // Parameters setting
         int timeout = 3000;
-       
+
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -107,8 +107,8 @@ class EthanD_get_network_info
 
         // Connect to device
         dev.connect(&quot;192.168.1.110&quot;);
-        
-        // Perform DAQ basic information 
+
+        // Perform DAQ basic information
         try
         {
             // Get firmware model &amp; version
@@ -120,9 +120,9 @@ class EthanD_get_network_info
             // Get serial number &amp; RTC Time
             string serial_num = dev.Sys_getSerialNumber(timeout);
             string RTC = dev.Sys_getRTC();
-            Console.WriteLine($&quot;Serial number: {serial_num}&quot;); 
+            Console.WriteLine($&quot;Serial number: {serial_num}&quot;);
             Console.WriteLine($&quot;RTC data time: {RTC}&quot;);
-             
+
             // Get IP &amp; submask
             List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout);
             Console.WriteLine($&quot;IP: {info[0]}&quot;);

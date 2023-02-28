@@ -82,19 +82,19 @@
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
 <pre><code class="lang-csharp" name="CS">/// TC_read_channel_data.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to read thermocouple from USBDAQF1TD.
-/// 
+///
 /// First, it shows how to open thermal port and configure thermal parameters.
-/// 
+///
 /// Second, read channel 1 thermocouple data.
-/// 
+///
 /// Last, close thermal port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -103,7 +103,7 @@ using WPC.Product;
 class USBDAQF1TD_TC_read_channel_data
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -112,7 +112,7 @@ class USBDAQF1TD_TC_read_channel_data
 
         // Connect to device
         dev.connect(&quot;21JA1239&quot;);
- 
+
         // Execute
         try
         {
@@ -121,7 +121,7 @@ class USBDAQF1TD_TC_read_channel_data
             int port = 1;
             int channel = 1;
             int timeout = 3000;
-            
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -131,14 +131,14 @@ class USBDAQF1TD_TC_read_channel_data
             err = dev.Thermal_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
 
-            // Set thermo port and set K type in channel 1 
+            // Set thermo port and set K type in channel 1
             err = dev.Thermal_setOverSampling(port, channel, Const.THERMAL_OVERSAMPLING_NONE, timeout);
             Console.WriteLine($&quot;setOverSampling: {err}&quot;);
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
-            // Set thermo port and set K type in channel 1 
+            // Set thermo port and set K type in channel 1
             err = dev.Thermal_setType(port, channel, Const.THERMAL_COUPLE_TYPE_K, timeout);
             Console.WriteLine($&quot;setType: {err}&quot;);
 
@@ -151,7 +151,7 @@ class USBDAQF1TD_TC_read_channel_data
 
             // Close thermo port
             err = dev.Thermal_close(port, timeout);
-            Console.WriteLine($&quot;close: {err}&quot;); 
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -168,19 +168,19 @@ class USBDAQF1TD_TC_read_channel_data
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// TC_read_channel_status.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get status from USBDAQF1TD.
-/// 
+///
 /// First, it shows how to open thermal port
-/// 
+///
 /// Second, get status from channel 0 and channel 1
-/// 
+///
 /// Last, close thermal port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -189,7 +189,7 @@ using WPC.Product;
 class USBDAQF1TD_TC_read_channel_status
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -209,7 +209,7 @@ class USBDAQF1TD_TC_read_channel_status
             int channel_0 = 0;
             int channel_1 = 1;
             int timeout = 3000;
-            
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -219,13 +219,13 @@ class USBDAQF1TD_TC_read_channel_status
             err = dev.Thermal_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
 
-            // Set thermo port and get status in channel 0 
+            // Set thermo port and get status in channel 0
             status = dev.Thermal_getStatus(port, channel_0, timeout);
             Console.WriteLine($&quot;Thermal_getStatus in channel 0: {status}&quot;);
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
-            // Set thermo port and get status in channel 1 
+            // Set thermo port and get status in channel 1
             status = dev.Thermal_getStatus(port, channel_1, timeout);
             Console.WriteLine($&quot;Thermal_getStatus in channel 1: {status}&quot;);
 
@@ -248,19 +248,19 @@ class USBDAQF1TD_TC_read_channel_status
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// TC_read_channel_data_with_logger.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to read thermocouple and write to CSV file from USBDAQF1TD.
-/// 
+///
 /// First, it shows how to open thermal port and configure thermal parameters.
-/// 
+///
 /// Second, read channel 1 thermocouple data.
-/// 
+///
 /// Last, close thermal port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -269,7 +269,7 @@ using WPC.Product;
 class USBDAQF1TD_DataLogger_TC_read_channel_data
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -281,12 +281,12 @@ class USBDAQF1TD_DataLogger_TC_read_channel_data
 
         // Create datalogger handle
         Datalogger dev_logger = new Datalogger();
-        
+
         // Open file with WPC_test.csv
         dev_logger.Logger_openFile(&quot;WPC_tester_USBDAQF1TD_TC.csv&quot;);
-        
+
         // Write header into CSV file
-        var data_write = $&quot;Thermo CH1&quot;; 
+        var data_write = $&quot;Thermo CH1&quot;;
         dev_logger.Logger_writeValue(data_write);
 
         // Execute
@@ -297,7 +297,7 @@ class USBDAQF1TD_DataLogger_TC_read_channel_data
             int port = 1;
             int channel = 1;
             int timeout = 3000;
-            
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -307,14 +307,14 @@ class USBDAQF1TD_DataLogger_TC_read_channel_data
             err = dev.Thermal_open(port, timeout);
             Console.WriteLine($&quot;open: {err}&quot;);
 
-            // Set thermo port and set K type in channel 1 
+            // Set thermo port and set K type in channel 1
             err = dev.Thermal_setOverSampling(port, channel, Const.THERMAL_OVERSAMPLING_NONE, timeout);
             Console.WriteLine($&quot;setOverSampling: {err}&quot;);
 
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
-            // Set thermo port and set K type in channel 1 
+            // Set thermo port and set K type in channel 1
             err = dev.Thermal_setType(port, channel, Const.THERMAL_COUPLE_TYPE_K, timeout);
             Console.WriteLine($&quot;setType: {err}&quot;);
 
@@ -326,15 +326,15 @@ class USBDAQF1TD_DataLogger_TC_read_channel_data
             Console.WriteLine($&quot;Read channel 1 data: {data1} °C &quot;);
 
             // Write data into CSV file
-            var data = $&quot;{data1}&quot;; 
+            var data = $&quot;{data1}&quot;;
             dev_logger.Logger_writeValue(data);
 
             // Close thermo port
             err = dev.Thermal_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;);
-            
+
             // Close File
-            dev_logger.Logger_closeFile(); 
+            dev_logger.Logger_closeFile();
         }
         catch (Exception ex)
         {

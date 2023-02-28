@@ -1,17 +1,17 @@
 /// CAN_read.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to read data from another device with CAN interface from USBDAQF1CD.
-/// 
+///
 /// First, it shows how to open CAN port and configure CAN parameters.
-/// 
+///
 /// SSecond, read bytes from another device.
-/// 
+///
 /// Last, stop and close CAN port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -21,7 +21,7 @@ using WPC.Module;
 class USBDAQF1CD_CAN_read
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -38,7 +38,7 @@ class USBDAQF1CD_CAN_read
             int err;
             int port = 1;
             int timeout = 3000;
-       
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -62,16 +62,16 @@ class USBDAQF1CD_CAN_read
                 if (frame_list.Count() > 0)
                 {
                     foreach (CANFrame frame in frame_list)
-                    { 
+                    {
                         WPC_utilities.printByteList(frame.frame_in_list); 
                     }
-                } 
-                else 
-                { 
+                }
+                else
+                {
                     // Wait for 10ms sec
-                    Thread.Sleep(10); // delay [ms]  
-                } 
-            } 
+                    Thread.Sleep(10); // delay [ms]
+                }
+            }
 
             // Stop CAN
             err = dev.CAN_stop(port, timeout);

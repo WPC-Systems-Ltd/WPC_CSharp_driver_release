@@ -3,7 +3,7 @@
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -12,7 +12,7 @@ using WPC.Product;
 class EMotion_find_limit
 {
     static public void Main()
-    {   
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -21,18 +21,18 @@ class EMotion_find_limit
 
         // Connect to device
         dev.connect("192.168.1.110");
-   
+
         try
-        {   
+        {
             // Parameters setting
             int err;
             int port = 0;
             int timeout = 3000;
-                   
+
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
+
             // Motion open
             err = dev.Motion_open(port, timeout);
             Console.WriteLine($"open: {err}");
@@ -55,8 +55,8 @@ class EMotion_find_limit
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1, timeout);
             Console.WriteLine($"rstEncoderPosi: {err}");
-            
-            // Motion start 
+
+            // Motion start
             err = dev.Motion_findRef(port, Const.MOT_AXIS1, timeout);
             Console.WriteLine($"findRef: {err}");
 
@@ -76,7 +76,7 @@ class EMotion_find_limit
 
                 List<int>  driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1, timeout);
                 finding_referece = driving_status[0];
-                found_reference = driving_status[1];  
+                found_reference = driving_status[1];
                 if (found_reference == 1) { Console.WriteLine($"Found reference"); }
                 //if (finding_referece == 1) { Console.WriteLine($"Finding reference"); }
             }
@@ -84,10 +84,10 @@ class EMotion_find_limit
             // Motion stop
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($"stop: {err}");
- 
+
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE, timeout);
             Console.WriteLine($"enableServoOn: {err}");
-            
+
             // Motion close
             err = dev.Motion_close(port, timeout);
             Console.WriteLine($"close: {err}");
@@ -101,6 +101,6 @@ class EMotion_find_limit
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

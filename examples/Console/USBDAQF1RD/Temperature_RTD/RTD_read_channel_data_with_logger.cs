@@ -1,17 +1,17 @@
 /// RTD_read_channel_data_with_logger.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to read RTD data and write to CSV file in two channels from USBDAQF1RD.
-/// 
+///
 /// First, it shows how to open thermal port
-/// 
+///
 /// Second, read channel 0 and channel 1 RTD data
-/// 
+///
 /// Last, close thermal port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -20,7 +20,7 @@ using WPC.Product;
 class USBDAQF1RD_DataLogger_RTD_read_channel_data
 {
     static public void Main()
-    {  
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -32,12 +32,12 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
 
         // Create datalogger handle
         Datalogger dev_logger = new Datalogger();
-        
+
         // Open file with WPC_test.csv
         dev_logger.Logger_openFile("WPC_tester_USBDAQF1RD_RTD.csv");
-        
+
         // Write header into CSV file
-        var data_write = $"RTD CH0, RTD CH1"; 
+        var data_write = $"RTD CH0, RTD CH1";
         dev_logger.Logger_writeValue(data_write);
 
         // Execute
@@ -49,7 +49,7 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             int channel_0 = 0;
             int channel_1 = 1;
             int timeout = 3000;
-            
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -58,7 +58,7 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             // Open RTD port
             err = dev.Thermal_open(port, timeout);
             Console.WriteLine($"open: {err}");
- 
+
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
@@ -69,15 +69,15 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             // Set RTD port and read RTD in channel 1
             float data1 = dev.Thermal_readSensor(port, channel_1, timeout);
             Console.WriteLine($"Read channel 1 data: {data1} °C ");
-            
+
             // Write data into CSV file
-            var data = $"{data0}, {data1}"; 
-            dev_logger.Logger_writeValue(data);  
+            var data = $"{data0}, {data1}";
+            dev_logger.Logger_writeValue(data);
 
             // Close RTD port
             err = dev.Thermal_close(port, timeout);
             Console.WriteLine($"close: {err}");
- 
+
             // Close File
             dev_logger.Logger_closeFile();
 

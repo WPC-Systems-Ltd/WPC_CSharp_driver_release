@@ -3,7 +3,7 @@
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -12,7 +12,7 @@ using WPC.Product;
 class EMotion_find_home
 {
     static public void Main()
-    {  
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -21,14 +21,14 @@ class EMotion_find_home
 
         // Connect to device
         dev.connect("192.168.1.110");
-   
+
         try
-        {   
+        {
             // Parameters setting
             int err;
             int port = 0;
             int timeout = 3000;
-                  
+
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
@@ -43,7 +43,7 @@ class EMotion_find_home
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
             Console.WriteLine($"cfgLimit: {err}");
-             
+
             err = dev.Motion_cfgFindRef(port, Const.MOT_AXIS1, Const.MOT_FIND_HOME, Const.MOT_DIR_REVERSE, timeout);
             Console.WriteLine($"cfgFindRef: {err}");
 
@@ -55,7 +55,7 @@ class EMotion_find_home
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1, timeout);
             Console.WriteLine($"rstEncoderPosi: {err}");
-            
+
             // Motion start
             err = dev.Motion_findRef(port, Const.MOT_AXIS1, timeout);
             Console.WriteLine($"findRef: {err}");
@@ -89,7 +89,7 @@ class EMotion_find_home
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE, timeout);
             Console.WriteLine($"enableServoOn: {err}");
-            
+
             // Motion close
             err = dev.Motion_close(port, timeout);
             Console.WriteLine($"close: {err}");
@@ -103,6 +103,6 @@ class EMotion_find_home
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

@@ -3,7 +3,7 @@
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -12,7 +12,7 @@ using WPC.Product;
 class EMotion_get_logical_position
 {
     static public void Main()
-    {   
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -21,23 +21,23 @@ class EMotion_get_logical_position
 
         // Connect to device
         dev.connect("192.168.1.110");
-        
+
         try
-        {  
+        {
             int err;
             int port = 0;
             int timeout = 3000;
-                   
+
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
+
             // Motion open
             err = dev.Motion_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
-            for (int i = 0; i < 100; i++) 
-            {   
+            for (int i = 0; i < 100; i++)
+            {
                 err = dev.Motion_setLogicalPosi(port, Const.MOT_AXIS1, i, timeout);
                 if (err != 0)
                 {
@@ -46,7 +46,7 @@ class EMotion_get_logical_position
                 int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1, timeout);
                 Console.WriteLine($"getLogicalPosi: {posi}");
             }
-            
+
             // Motion close
             err = dev.Motion_close(port, timeout);
             Console.WriteLine($"close: {err}");
@@ -60,6 +60,6 @@ class EMotion_get_logical_position
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

@@ -1,17 +1,17 @@
 /// UART_read.cs with synchronous mode.
 ///
 /// This example demonstrates how to read data from another device with UART interface from USBDAQF1D.
-/// 
+///
 /// First, it shows how to open UART port and configure UART parameters.
-/// 
+///
 /// Second, read bytes from another device.
-/// 
+///
 /// Last, close UART port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -20,7 +20,7 @@ using WPC.Product;
 class USBDAQF1D_UART_read
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -38,7 +38,7 @@ class USBDAQF1D_UART_read
             int port = 2;
             int baudrate = 9600;
             int timeout = 3000;
-            
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -71,7 +71,7 @@ class USBDAQF1D_UART_read
             List<byte> data = dev.UART_read(port, 20, timeout);
 
             WPC_utilities.printByteList(data);
- 
+
             // Close UART port
             err = dev.UART_close(port, timeout);
             Console.WriteLine($"close: {err}");

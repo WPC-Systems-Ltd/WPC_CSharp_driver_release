@@ -3,7 +3,7 @@
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -12,7 +12,7 @@ using WPC.Product;
 class EMotion_2axis_linear_interpolation
 {
     static public void Main()
-    {  
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -21,16 +21,16 @@ class EMotion_2axis_linear_interpolation
 
         // Connect to device
         dev.connect("192.168.1.110");
-  
+
         try
-        {   
+        {
             // Parameters setting
             int err;
             int port = 0;
             int dest_posi1 = 2000;
             int dest_posi2 = 2000;
             int timeout = 3000;
-       
+
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
@@ -53,14 +53,14 @@ class EMotion_2axis_linear_interpolation
             // Motion configure
             err = dev.Motion_cfg2AxisLinearInterpo(port, Const.MOT_AXIS1, dest_posi1, Const.MOT_AXIS2, dest_posi2, speed: 2000, timeout: timeout);
             Console.WriteLine($"cfg2AxisLinearInterpo: {err}");
-            
+
             // Motion start
             err = dev.Motion_startLinearInterpo(port, timeout);
             Console.WriteLine($"startLinearInterpo: {err}");
- 
+
             int move_status = 0;
             while (move_status == 0)
-            { 
+            {
                 int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1, timeout);
                 int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2, timeout);
 
@@ -77,8 +77,8 @@ class EMotion_2axis_linear_interpolation
             Console.WriteLine($"stop axis2: {err}");
 
             err = dev.Motion_releaseInterpoAxis(port, timeout);
-            Console.WriteLine($"releaseInterpoAxis: {err}");  
-            
+            Console.WriteLine($"releaseInterpoAxis: {err}");
+
             // Motion close
             err = dev.Motion_close(port, timeout);
             Console.WriteLine($"close: {err}");
@@ -92,6 +92,6 @@ class EMotion_2axis_linear_interpolation
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

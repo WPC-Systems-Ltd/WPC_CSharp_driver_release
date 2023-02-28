@@ -1,18 +1,18 @@
 
 /// CAN_write.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to write data to another device with CAN interface from USBDAQF1CD.
-/// 
+///
 /// First, it shows how to open CAN port and configure CAN parameters.
-/// 
+///
 /// Second, write bytes to another device.
-/// 
-/// Last, stop and close CAN port. 
-/// 
+///
+/// Last, stop and close CAN port.
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -21,7 +21,7 @@ using WPC.Product;
 class USBDAQF1CD_CAN_write
 {
     static public void Main()
-    {  
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -38,7 +38,7 @@ class USBDAQF1CD_CAN_write
             int err;
             int port = 1;
             int timeout = 3000;
-       
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -56,14 +56,14 @@ class USBDAQF1CD_CAN_write
             err = dev.CAN_start(port, timeout);
             Console.WriteLine($"start: {err}");
 
-            // ID: 10, data with 8 bytes, Standard & Data 
+            // ID: 10, data with 8 bytes, Standard & Data
             err = dev.CAN_write(port, 10, new List<byte> { 33, 22, 11, 88, 77, 55, 66, 22 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD, timeout);
             Console.WriteLine($"write: {err}");
 
             // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms] 
+            Thread.Sleep(1000); // delay [ms]
 
-            // ID: 20, data with 8 bytes, Standard & Data 
+            // ID: 20, data with 8 bytes, Standard & Data
             err = dev.CAN_write(port, 20, new List<byte> { 1, 2, 3 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD, timeout);
             Console.WriteLine($"write: {err}");
 
@@ -73,7 +73,7 @@ class USBDAQF1CD_CAN_write
 
             // Close CAN
             err = dev.CAN_close(port, timeout);
-            Console.WriteLine($"close: {err}"); 
+            Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)
         {

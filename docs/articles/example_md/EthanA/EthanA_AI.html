@@ -93,17 +93,17 @@
 <pre><code class="lang-csharp" name="CS">/// AI_continuous.cs with synchronous mode.
 ///
 /// This example demonstrates how to get AI data with loop in continuous mode from EthanA.
-/// 
+///
 /// First, it shows how to open AI port and configure AI parameters.
-/// 
+///
 /// Second, read AI streaming data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -134,7 +134,7 @@ class EthanA_AI_continuous
     }
 
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -152,7 +152,7 @@ class EthanA_AI_continuous
             int port = 0;
             float sampling_rate = 1000;
             int timeout = 3000;
-            
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -164,15 +164,15 @@ class EthanA_AI_continuous
 
             // Set AI port and acquisition mode to continuous
             err = dev.AI_setMode(port, Const.AI_MODE_CONTINUOUS, timeout);
-            Console.WriteLine($&quot;setMode: {err}&quot;); 
+            Console.WriteLine($&quot;setMode: {err}&quot;);
 
             // Set AI port and sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
-            Console.WriteLine($&quot;setSamplingRate: {err}&quot;); 
+            Console.WriteLine($&quot;setSamplingRate: {err}&quot;);
 
             // Set AI port and start acquisition
             err = dev.AI_start(port, timeout);
-            Console.WriteLine($&quot;start: {err}&quot;); 
+            Console.WriteLine($&quot;start: {err}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
@@ -182,7 +182,7 @@ class EthanA_AI_continuous
 
             // Close AI port
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($&quot;close: {err}&quot;); 
+            Console.WriteLine($&quot;close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -193,25 +193,25 @@ class EthanA_AI_continuous
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_N_samples_in_loop.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get AI data with loop in N samples mode from EthanA.
-/// 
+///
 /// First, it shows how to open AI port and configure AI parameters.
-/// 
+///
 /// Second, read AI streaming data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -242,7 +242,7 @@ class EthanA_AI_N_samples_in_loop
     }
 
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -251,7 +251,7 @@ class EthanA_AI_N_samples_in_loop
 
         // Connect to device
         dev.connect(&quot;192.168.1.110&quot;);
-         
+
         // Execute
         try
         {
@@ -261,7 +261,7 @@ class EthanA_AI_N_samples_in_loop
             int samples = 3000;
             float sampling_rate = 1000;
             int timeout = 3000;
-                         
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -306,25 +306,25 @@ class EthanA_AI_N_samples_in_loop
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_N_samples_once.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get AI data in once in N sample mode from EthanA.
-/// 
+///
 /// First, it shows how to open AI port and configure AI parameters.
-/// 
+///
 /// Second, read AI streaming data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -333,7 +333,7 @@ using WPC.Product;
 class EthanA_AI_N_samples_once
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -342,7 +342,7 @@ class EthanA_AI_N_samples_once
 
         // Connect to device
         dev.connect(&quot;192.168.1.110&quot;);
-         
+
         // Execute
         try
         {
@@ -352,7 +352,7 @@ class EthanA_AI_N_samples_once
             int samples = 50;
             float sampling_rate = 1000;
             int timeout = 3000;
-       
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -403,53 +403,53 @@ class EthanA_AI_N_samples_once
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_on_demand_in_loop.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get AI data with loop in ondemand mode from EthanA.
-/// 
+///
 /// First, it shows how to open AI port and configure AI parameters.
-/// 
+///
 /// Second, read AI data
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
 
 class EthanA_AI_on_demand_in_loop
-{ 
-    static void loop_func(EthanA handle, int port, int delay , int timeout =3) 
+{
+    static void loop_func(EthanA handle, int port, int delay , int timeout =3)
     {
         int t = 0;
-        while (t &lt; timeout) 
+        while (t &lt; timeout)
         {
             // Data acquisition
             List&lt;double&gt; s = handle.AI_readOnDemand(port);
 
             // Read acquisition data
             Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
-            
+
             // Wait for 0.01 sec
             Thread.Sleep(10); // delay [ms]
-            
+
             t += delay;
         }
         Console.WriteLine(&quot;loop_func end&quot;);
     }
 
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -459,14 +459,14 @@ class EthanA_AI_on_demand_in_loop
         // Connect to device
         dev.connect(&quot;192.168.1.110&quot;);
 
-        // Perform DAQ basic information 
+        // Perform DAQ basic information
         try
         {
             // Parameters setting
             int err;
             int port = 0;
             int timeout = 3000;
-                    
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -505,19 +505,19 @@ class EthanA_AI_on_demand_in_loop
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_on_demand_once.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get AI data in once in on demand mode from EthanA.
-/// 
+///
 /// First, it shows how to open AI port.
-/// 
+///
 /// Second, read AI ondemand data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -526,7 +526,7 @@ using WPC.Product;
 class EthanA_AI_on_demand_once
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
@@ -536,14 +536,14 @@ class EthanA_AI_on_demand_once
         // Connect to device
         dev.connect(&quot;192.168.1.110&quot;);
 
-        // Perform DAQ basic information 
+        // Perform DAQ basic information
         try
         {
             // Parameters setting
             int err;
             int port = 0;
             int timeout = 3000;
-       
+
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
@@ -584,17 +584,17 @@ class EthanA_AI_on_demand_once
 <pre><code class="lang-csharp" name="CS">/// AI_continuous_with_logger.cs with synchronous mode.
 ///
 /// This example demonstrates how to get AI data and write to CSV file in continuous mode from EthanA.
-/// 
+///
 /// First, it shows how to open AI port and configure AI parameters.
-/// 
+///
 /// Second, read AI streaming data.
-/// 
+///
 /// Last, close AI port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -616,7 +616,7 @@ class EthanA_DataLogger_AI_continuous
                 Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
 
                 // Write data into CSV
-                handle2.Logger_writeList(s); 
+                handle2.Logger_writeList(s);
             }
 
             // Wait for 0.01 sec
@@ -633,7 +633,7 @@ class EthanA_DataLogger_AI_continuous
 
         // Get C# driver version
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
- 
+
         // Create device handle
         EthanA dev = new EthanA();
 
@@ -642,15 +642,15 @@ class EthanA_DataLogger_AI_continuous
 
         // Create datalogger handle
         Datalogger dev_logger = new Datalogger();
-        
+
         // Open file with WPC_test.csv
         dev_logger.Logger_openFile(&quot;WPC_tester_EthanA_AI.csv&quot;);
-        
+
         // Write header into CSV file
-        var data = $&quot;CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7&quot;; 
+        var data = $&quot;CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7&quot;;
         dev_logger.Logger_writeValue(data);
 
-        // Perform DAQ basic information 
+        // Perform DAQ basic information
         try
         {
             // Parameters setting
@@ -689,7 +689,7 @@ class EthanA_DataLogger_AI_continuous
             // Close AI port
             err = dev.AI_close(port, timeout);
             Console.WriteLine($&quot;close: {err}&quot;);
-            
+
             // Close File
             dev_logger.Logger_closeFile();
         }
@@ -702,7 +702,7 @@ class EthanA_DataLogger_AI_continuous
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }
 </code></pre></section>

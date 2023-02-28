@@ -1,17 +1,17 @@
 /// TC_read_channel_status.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to get status from USBDAQF1TD.
-/// 
+///
 /// First, it shows how to open thermal port
-/// 
+///
 /// Second, get status from channel 0 and channel 1
-/// 
+///
 /// Last, close thermal port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -20,7 +20,7 @@ using WPC.Product;
 class USBDAQF1TD_TC_read_channel_status
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -40,7 +40,7 @@ class USBDAQF1TD_TC_read_channel_status
             int channel_0 = 0;
             int channel_1 = 1;
             int timeout = 3000;
-            
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -50,13 +50,13 @@ class USBDAQF1TD_TC_read_channel_status
             err = dev.Thermal_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
-            // Set thermo port and get status in channel 0 
+            // Set thermo port and get status in channel 0
             status = dev.Thermal_getStatus(port, channel_0, timeout);
             Console.WriteLine($"Thermal_getStatus in channel 0: {status}");
             // Wait for 0.1 sec
             Thread.Sleep(100); // delay [ms]
 
-            // Set thermo port and get status in channel 1 
+            // Set thermo port and get status in channel 1
             status = dev.Thermal_getStatus(port, channel_1, timeout);
             Console.WriteLine($"Thermal_getStatus in channel 1: {status}");
 

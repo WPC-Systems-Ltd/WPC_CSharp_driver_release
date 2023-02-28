@@ -1,19 +1,19 @@
 /// AO_waveform_generation.cs with synchronous mode.
-/// 
+///
 /// This example demonstrates how to use AO waveform generation in specific channels from USBDAQF1AOD.
-/// 
+///
 /// First, it shows how to open AO in port.
-/// 
+///
 /// Second, set AO streaming parameters
 ///
 /// Last, close AO in port.
 ///
 /// This example demonstrates how to write AO in all channels from USBDAQF1AOD.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -22,7 +22,7 @@ using WPC.Product;
 class USBDAQF1AOD_AO_waveform_generation
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -34,18 +34,18 @@ class USBDAQF1AOD_AO_waveform_generation
 
         // Execute
         try
-        { 
+        {
             // Parameters setting
-            int err; 
-            int port = 0; 
+            int err;
+            int port = 0;
             List<int> AO_pins_enabled = new List<int> { 0, 0, 0, 0, 0, 0, 1, 1 };
-            double sampling_rate = 1000; 
+            double sampling_rate = 1000;
             double amplitude = 1;
             double offset = 0.5;
             double period_0 = 0.2;
             double period_1 = 0.1;
             int timeout = 3000;
-       
+
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -54,7 +54,7 @@ class USBDAQF1AOD_AO_waveform_generation
             // Open AO port
             err = dev.AO_open(port, timeout);
             Console.WriteLine($"open: {err}");
-            
+
             // Set AO enabled channels
             err = dev.AO_setEnableChannels(port, AO_pins_enabled, timeout);
             Console.WriteLine($"setEnableChannels: {err}");
@@ -111,6 +111,6 @@ class USBDAQF1AOD_AO_waveform_generation
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }
