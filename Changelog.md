@@ -1,6 +1,11 @@
 WPC CSharp driver release changelog
 ===================================
- 
+
+v0.1.6 Date: 2023/02/28, Developer: Chunglee_people 
+---------------------------------------------------
+### Fixed
+- Fix I2C error
+
 v0.1.5 Date: 2023/01/18, Developer: Chunglee_people 
 ---------------------------------------------------
 ### Fixed
