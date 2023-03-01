@@ -1,17 +1,17 @@
-/// AO_write_all_channels.cs
-/// 
+/// AO_write_all_channels.cs with synchronous mode.
+///
 /// This example demonstrates how to write AO in all channels from EthanO.
-/// 
+///
 /// First, it shows how to open AO in port.
-/// 
+///
 /// Second, write all digital signals
-/// 
+///
 /// Last, close AO in port.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -38,27 +38,28 @@ class EthanO_AO_write_all_channels
             // Parameters setting
             int err;
             int port = 0;
+            int timeout = 3000;
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo();
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AO port
-            err = dev.AO_open(port);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($"open: {err}");
 
             // Set AO port and write data simultaneously
             List<double> AO_values = new List<double> { 3, 1, 2, 3, 4, 5, 4, 3 };
 
-            err = dev.AO_writeAllChannels(port, AO_values);
+            err = dev.AO_writeAllChannels(port, AO_values, timeout);
             Console.WriteLine($"writeAllChannels: {err}");
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // Close AO port
-            err = dev.AO_close(port);
+            err = dev.AO_close(port, timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

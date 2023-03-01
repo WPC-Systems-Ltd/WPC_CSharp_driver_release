@@ -1,11 +1,11 @@
-/// Find_all_devices.cs 
-/// 
+/// Find_all_devices.cs  with synchronous mode.
+///
 /// This example demonstrates how to find all available USB and ethernet devices.
-/// 
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
-/// 
+///
 /// Copyright (c) 2023 WPC Systems Ltd.
 /// All rights reserved.
 
@@ -14,7 +14,7 @@ using WPC.Product;
 class DeviceFinder_find_all_devices
 {
     static public void Main()
-    { 
+    {
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -23,8 +23,8 @@ class DeviceFinder_find_all_devices
 
         // Connect to device
         dev.connect();
- 
-        // Perform device information 
+
+        // Perform device information
         try
         {
             List<List<string>> usb_list = dev.Bcst_enumerateUSBDevices();
@@ -57,6 +57,6 @@ class DeviceFinder_find_all_devices
         dev.disconnect();
 
         // Release device handle
-        dev.close(); 
+        dev.close();
     }
 }

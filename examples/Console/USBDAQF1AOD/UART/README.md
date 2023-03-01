@@ -9,7 +9,7 @@ This example project demonstrates how to use WPC CSharp driver to read and write
 In order to verify, please take another WPC USB DAQ device or other device which support UART interface.
 
 We connect two device via UART so that can communicate data.
- 
+
 In order to use API correctly, please refer [documentation](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/).
 
 If you want to build your own UART application (for example, read the temperature data from external sensor with UART interface), try to use this as a basic template, then add your own code.
@@ -30,7 +30,7 @@ Then, we take `USBDAQF1AOD` for example.
 
 <img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-USBDAQF1AOD.JPG" alt="drawing" width="600"/>
 
-## UART interfacing SOP 
+## UART interfacing SOP
 
 Create device handle -> Connect to device -> Open UART port -> Set UART parameters -> Write data via UART -> Read data via UART -> Close UART port -> Disconnect device -> Release device handle.
 
