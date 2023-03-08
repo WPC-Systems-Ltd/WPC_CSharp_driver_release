@@ -22,13 +22,23 @@ class WifiDAQE3A_get_WifiDAQ_status
         WifiDAQE3A dev = new WifiDAQE3A();
 
         // Connect to device
-        dev.connect("192.168.5.79");
+        try
+        {
+            dev.connect("192.168.5.79"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Perform DAQ basic information
         try
         {
             // Parameters setting
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);

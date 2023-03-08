@@ -28,7 +28,17 @@ class EthanA_AI_on_demand_once
         EthanA dev = new EthanA();
 
         // Connect to device
-        dev.connect("192.168.1.110");
+        try
+        {
+            dev.connect("192.168.1.110"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Perform DAQ basic information
         try
@@ -36,7 +46,7 @@ class EthanA_AI_on_demand_once
             // Parameters setting
             int err;
             int port = 0;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);

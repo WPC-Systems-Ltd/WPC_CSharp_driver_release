@@ -19,10 +19,10 @@ using WPC.Product;
 
 class USBDAQF1AD_DataLogger_AI_continuous
 {
-    static void loop_func(USBDAQF1AD handle, Datalogger handle2, int port, int num_of_samples, int delay = 1, int timeout = 3)
+    static void loop_func(USBDAQF1AD handle, Datalogger handle2, int port, int num_of_samples, int delay = 50, int exit_loop_time = 300)
     {
-        int t = 0;
-        while (t < timeout)
+        int time_cal = 0;
+        while (time_cal < exit_loop_time)
         {
             // Data acquisition
             List<List<double>> streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
@@ -36,18 +36,14 @@ class USBDAQF1AD_DataLogger_AI_continuous
                 handle2.Logger_writeList(s);
             }
 
-            // Wait for 0.01 sec
-            Thread.Sleep(10); // delay [ms]
-
-            t += delay;
+            // Wait
+            Thread.Sleep(delay); // delay [ms]
+            time_cal += delay;
         }
-        Console.WriteLine("loop_func end");
     }
 
     static public void Main()
     {
-        Console.WriteLine("Start example code...");
-
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -55,7 +51,17 @@ class USBDAQF1AD_DataLogger_AI_continuous
         USBDAQF1AD dev = new USBDAQF1AD();
 
         // Connect to device
-        dev.connect("21JA1245");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Create datalogger handle
         Datalogger dev_logger = new Datalogger();
@@ -74,7 +80,7 @@ class USBDAQF1AD_DataLogger_AI_continuous
             int err;
             int port = 0;
             float sampling_rate = 1000;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -83,29 +89,34 @@ class USBDAQF1AD_DataLogger_AI_continuous
 
             // Open AI port
             err = dev.AI_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"AI_open in port{port}: {err}");
 
             // Set AI port and acquisition mode to continuous
             err = dev.AI_setMode(port, Const.AI_MODE_CONTINUOUS, timeout);
-            Console.WriteLine($"setMode: {err}");
+            Console.WriteLine($"AI_setMode in port{port}: {err}");
 
             // Set AI port and sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
-            Console.WriteLine($"setSamplingRate: {err}");
+            Console.WriteLine($"AI_setSamplingRate in port{port}: {err}");
 
             // Set AI port and start acquisition
             err = dev.AI_start(port, timeout);
-            Console.WriteLine($"start: {err}");
+            Console.WriteLine($"AI_start in port{port}: {err}");
 
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
+            int num_of_samples = 600;
+            int delay = 50;
+            int exit_loop_time = 300;
 
             // Start loop
-            loop_func(dev, dev_logger, port, 600, 1, 3);
+            loop_func(dev, dev_logger, port, num_of_samples, delay, exit_loop_time);
+
+            // Stop AI
+            err = dev.AI_stop(port, timeout);
+            Console.WriteLine($"AI_stop in port{port}: {err}");
 
             // Close AI port
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"AI_close in port{port}: {err}");
 
             // Close File
             dev_logger.Logger_closeFile();

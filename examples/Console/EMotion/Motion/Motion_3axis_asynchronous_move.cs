@@ -19,7 +19,9 @@ class EMotion_3axis_asynchronous_move
         {
             move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS1);
             if (move_status != 0) { Console.WriteLine($"Move completed axis 1..."); }
-            Thread.Sleep(5);
+
+            // Wait
+            Thread.Sleep(5); // delay [ms]
         }
     }
 
@@ -31,7 +33,9 @@ class EMotion_3axis_asynchronous_move
         {
             move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS2);
             if (move_status != 0) { Console.WriteLine($"Move completed axis 2..."); }
-            Thread.Sleep(5);
+
+            // Wait
+            Thread.Sleep(5); // delay [ms]
         }
     }
 
@@ -43,7 +47,9 @@ class EMotion_3axis_asynchronous_move
         {
             move_status = handle.Motion_getMoveStatus(port, Const.MOT_AXIS3);
             if (move_status != 0) { Console.WriteLine($"Move completed axis 3..."); }
-            Thread.Sleep(5);
+
+            // Wait
+            Thread.Sleep(5); // delay [ms]
         }
     }
 
@@ -56,14 +62,24 @@ class EMotion_3axis_asynchronous_move
         EMotion dev = new EMotion();
 
         // Connect to device
-        dev.connect("192.168.1.110");
+        try
+        {
+            dev.connect("192.168.1.110"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         try
         {
             // Parameters setting
             int err;
             int port = 0;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -81,64 +97,64 @@ class EMotion_3axis_asynchronous_move
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"Motion_open in port{port}: {err}");
 
             // Motion configure for axis1
             err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"cfgAxis axis1: {err}");
+            Console.WriteLine($"Motion_cfgAxis in axis {Const.MOT_AXIS1} port{port}: {err}");
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"cfgLimit axis1: {err}");
+            Console.WriteLine($"Motion_cfgLimit in axis {Const.MOT_AXIS1} port{port}: {err}");
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1, timeout);
-            Console.WriteLine($"rstEncoderPosi axis1: {err}");
+            Console.WriteLine($"Motion_rstEncoderPosi in axis {Const.MOT_AXIS1} port{port}: {err}");
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_posi: -1000, timeout: timeout);
-            Console.WriteLine($"cfgAxisMove axis1: {err}");
+            Console.WriteLine($"Motion_cfgAxisMove in axis {Const.MOT_AXIS1} port{port}: {err}");
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE, timeout);
-            Console.WriteLine($"enableServoOn axis1: {err}");
+            Console.WriteLine($"Motion_enableServoOn in axis {Const.MOT_AXIS1} port{port}: {err}");
 
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1, timeout);
-            Console.WriteLine($"startSingleAxisMove: {err}");
+            Console.WriteLine($"Motion_startSingleAxisMove in axis {Const.MOT_AXIS1} port{port}: {err}");
 
             // Motion configure for axis2
             err = dev.Motion_cfgAxis(port, Const.MOT_AXIS2, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"cfgAxis axis2: {err}");
+            Console.WriteLine($"Motion_cfgAxis in axis {Const.MOT_AXIS2} in port{port}: {err}");
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS2, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"cfgLimit axis2: {err}");
+            Console.WriteLine($"Motion_cfgLimit in axis {Const.MOT_AXIS2} in port{port}: {err}");
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS2, timeout);
-            Console.WriteLine($"rstEncoderPosi axis2: {err}");
+            Console.WriteLine($"Motion_rstEncoderPosi in axis {Const.MOT_AXIS2} in port{port}: {err}");
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS2, Const.MOT_RELATIVE_POSITION, target_posi: -1000, timeout: timeout);
-            Console.WriteLine($"cfgAxisMove axis2: {err}");
+            Console.WriteLine($"Motion_cfgAxisMove in axis {Const.MOT_AXIS2} in port{port}: {err}");
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS2, Const.MOT_TRUE, timeout);
-            Console.WriteLine($"enableServoOn axis2: {err}");
+            Console.WriteLine($"Motion_enableServoOn in axis {Const.MOT_AXIS2} in port{port}: {err}");
 
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS2, timeout);
-            Console.WriteLine($"startSingleAxisMove: {err}");
+            Console.WriteLine($"Motion_startSingleAxisMove in axis {Const.MOT_AXIS2} in port{port}: {err}");
 
             // Motion configure for axis3
             err = dev.Motion_cfgAxis(port, Const.MOT_AXIS3, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"cfgAxis axis3: {err}");
+            Console.WriteLine($"Motion_cfgAxis in axis {Const.MOT_AXIS3} in port{port}: {err}");
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS3, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"cfgLimit axis3: {err}");
+            Console.WriteLine($"Motion_cfgLimit in axis {Const.MOT_AXIS3} in port{port}: {err}");
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS3, timeout);
-            Console.WriteLine($"rstEncoderPosi axis3: {err}");
+            Console.WriteLine($"Motion_rstEncoderPosi in axis {Const.MOT_AXIS3} in port{port}: {err}");
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS3, Const.MOT_RELATIVE_POSITION, target_posi: -1000, timeout: timeout);
-            Console.WriteLine($"cfgAxisMove axis3: {err}");
+            Console.WriteLine($"Motion_cfgAxisMove in axis {Const.MOT_AXIS3} in port{port}: {err}");
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS3, Const.MOT_TRUE, timeout);
-            Console.WriteLine($"enableServoOn: {err}");
+            Console.WriteLine($"Motion_enableServoOn in axis {Const.MOT_AXIS3} in port{port}: {err}");
 
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS3, timeout);
-            Console.WriteLine($"startSingleAxisMove: {err}");
+            Console.WriteLine($"Motion_startSingleAxisMove in axis {Const.MOT_AXIS3} in port{port}: {err}");
 
             // Wait for thread completion
             thread_1.Join();
@@ -154,15 +170,15 @@ class EMotion_3axis_asynchronous_move
             {
                 // Motion stop
                 err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-                Console.WriteLine($"stop axis{i}: {err}");
+                Console.WriteLine($"Motion_open in axis {i} in port{port}: {err}");
 
                 err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE, timeout);
-                Console.WriteLine($"enableServoOn axis{i}: {err}");
+                Console.WriteLine($"Motion_enableServoOn in axis {i} in port{port}: {err}");
             }
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"Motion_close in port{port}: {err}");
         }
         catch (Exception ex)
         {

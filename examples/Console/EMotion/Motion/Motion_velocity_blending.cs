@@ -20,7 +20,17 @@ class EMotion_velocity_blending
         EMotion dev = new EMotion();
 
         // Connect to device
-        dev.connect("192.168.1.110");
+        try
+        {
+            dev.connect("192.168.1.110"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         try
         {
@@ -28,7 +38,7 @@ class EMotion_velocity_blending
             int err;
             int port = 0;
             int new_velo;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -36,57 +46,60 @@ class EMotion_velocity_blending
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"Motion_open in port{port}: {err}");
 
             // Motion configure
             err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"cfgAxis: {err}");
+            Console.WriteLine($"Motion_cfgAxis in port{port}: {err}");
 
             err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($"cfgLimit: {err}");
+            Console.WriteLine($"Motion_cfgLimit in port{port}: {err}");
 
             err = dev.Motion_cfgEncoder(port, Const.MOT_AXIS1, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"cfgEncoder: {err}");
+            Console.WriteLine($"Motion_cfgEncoder in port{port}: {err}");
 
             err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1, timeout);
-            Console.WriteLine($"rstEncoderPosi: {err}");
+            Console.WriteLine($"Motion_rstEncoderPosi in port{port}: {err}");
 
             err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_VELOCITY, target_posi: 10000, velo: 1000, timeout= timeout);
-            Console.WriteLine($"cfgAxisMove: {err}");
+            Console.WriteLine($"Motion_cfgAxisMove in port{port}: {err}");
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE, timeout);
-            Console.WriteLine($"enableServoOn: {err}");
+            Console.WriteLine($"Motion_enableServoOn in port{port}: {err}");
 
             // Motion start
             err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1, timeout);
-            Console.WriteLine($"startSingleAxisMove: {err}");
+            Console.WriteLine($"Motion_startSingleAxisMove in port{port}: {err}");
 
-            Thread.Sleep(3000);
+            // Wait for 3 seconds for moving
+            Thread.Sleep(3000); // delay [ms]
 
             // Motion override velocity
             new_velo = 5000;
             err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, new_velo, timeout);
-            Console.WriteLine($"overrideAxisVelocity: {err}");
+            Console.WriteLine($"Motion_overrideAxisVelocity in port{port}: {err}");
 
-            Thread.Sleep(3000);
+            // Wait for 3 seconds for moving
+            Thread.Sleep(3000); // delay [ms]
 
             // Motion override velocity
             new_velo = -3000;
             err = dev.Motion_overrideAxisVelocity(port, Const.MOT_AXIS1, new_velo, timeout);
-            Console.WriteLine($"overrideAxisVelocity: {err}");
+            Console.WriteLine($"Motion_overrideAxisVelocity in port{port}: {err}");
 
-            Thread.Sleep(3000);
+            // Wait for 3 seconds for moving
+            Thread.Sleep(3000); // delay [ms]
 
             // Motion stop
             err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($"stop: {err}");
+            Console.WriteLine($"Motion_stop in port{port}: {err}");
 
             err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE, timeout);
-            Console.WriteLine($"enableServoOn: {err}");
+            Console.WriteLine($"Motion_enableServoOn in port{port}: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"Motion_close in port{port}: {err}");
         }
         catch (Exception ex)
         {

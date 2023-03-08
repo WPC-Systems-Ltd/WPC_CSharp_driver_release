@@ -28,16 +28,26 @@ class USBDAQF1TD_I2C_write_read
         USBDAQF1TD dev = new USBDAQF1TD();
 
         // Connect to device
-        dev.connect("21JA1239");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
         {
             // Parameters setting
             int err;
-            int port = 2;
-            int timeout = 3000;
-            int device_address = 0x50;
+            int port = 1;
+            int timeout = 3000; // ms
+            int device_address = 0x50; // 01010000
             byte word_address = 0x00;
             List<byte> I2C_write_data = new List<byte> { word_address, 0xAA, 0x55, 0xAA, 0x55};
 
@@ -48,29 +58,26 @@ class USBDAQF1TD_I2C_write_read
 
             // Open I2C port
             err = dev.I2C_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"I2C_open in port{port}: {err}");
 
             // Set I2C port and set clock rate to standard mode
             err = dev.I2C_setClockRate(port, Const.I2C_SPEED_STANDARD, timeout);
-            Console.WriteLine($"setClockRate: {err}");
+            Console.WriteLine($"I2C_setClockRate in port{port}: {err}");
 
             // Write WREN byte
             err = dev.I2C_write(port, device_address, I2C_write_data, timeout);
-            Console.WriteLine($"write: {err}");
-
-            // Wait for 0.1 sec
-            Thread.Sleep(100); // delay [ms]
+            Console.WriteLine($"I2C_write in port{port}: {err}");
 
             // Read data via I2C
             err = dev.I2C_write(port, device_address, new List<byte> {word_address}, timeout);
-            Console.WriteLine($"write: {err}");
+            Console.WriteLine($"I2C_write in port{port}: {err}");
 
             List<byte> data = dev.I2C_read(port, device_address, 4, timeout);
-            Console.WriteLine($"I2C_read data: {data[0]},{data[1]},{data[2]},{data[3]}");
+            Console.WriteLine($"I2C_read data in port{port}: {data[0]},{data[1]},{data[2]},{data[3]}");
 
             // Close I2C port
             err = dev.I2C_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"I2C_close in port{port}: {err}");
         }
         catch (Exception ex)
         {

@@ -28,7 +28,17 @@ class USBDAQF1RD_RTD_read_channel_status
         USBDAQF1RD dev = new USBDAQF1RD();
 
         // Connect to device
-        dev.connect("21JA1385");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -37,9 +47,9 @@ class USBDAQF1RD_RTD_read_channel_status
             int status;
             int err;
             int port = 1;
-            int channel_0 = 0;
-            int channel_1 = 1;
-            int timeout = 3000;
+            int ch0 = 0;
+            int ch1 = 1;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -48,22 +58,19 @@ class USBDAQF1RD_RTD_read_channel_status
 
             // Open RTD port
             err = dev.Thermal_open(port, timeout);
-            Console.WriteLine($"open: {err}");
-
-            // Wait for 0.1 sec
-            Thread.Sleep(100); // delay [ms]
+            Console.WriteLine($"Thermal_open in port{port}: {err}");
 
             // Set RTD port and get status in channel 0
-            status = dev.Thermal_getStatus(port, channel_0, timeout);
-            Console.WriteLine($"Thermal_getStatus in chaannel 0: {status}");
+            status = dev.Thermal_getStatus(port, ch0, timeout);
+            Console.WriteLine($"Thermal_getStatus in channel {ch0} status: {status}");
 
             // Set RTD port and get status in channel 1
-            status = dev.Thermal_getStatus(port, channel_1, timeout);
-            Console.WriteLine($"Thermal_getStatus in chaannel 1: {status}");
+            status = dev.Thermal_getStatus(port, ch1, timeout);
+            Console.WriteLine($"Thermal_getStatus in channel {ch1} status: {status}");
 
             // Close RTD port
             err = dev.Thermal_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"Thermal_close in port{port}: {err}");
         }
         catch (Exception ex)
         {

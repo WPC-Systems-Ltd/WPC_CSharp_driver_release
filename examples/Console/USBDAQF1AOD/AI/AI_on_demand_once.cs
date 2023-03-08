@@ -28,7 +28,17 @@ class USBDAQF1AOD_AI_on_demand_once
         USBDAQF1AOD dev = new USBDAQF1AOD();
 
         // Connect to device
-        dev.connect("21JA1439");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Perform DAQ basic information
         try
@@ -36,7 +46,7 @@ class USBDAQF1AOD_AI_on_demand_once
             // Parameters setting
             int err;
             int port = 0;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
