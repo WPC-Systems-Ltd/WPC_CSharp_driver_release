@@ -2,14 +2,20 @@ WPC CSharp driver release changelog
 ===================================
 
 
-v0.1.7 Date: 2023/03/01, Developer: Chunglee_people 
+v0.1.7 Date: 2023/03/09, Developer: Chunglee_people 
 ---------------------------------------------------
-
+ 
 ### Added
-### Changed
-### Fixed
-### Removed
+- Add `serial_num ='default'` in USB series product 
+- Add `ip= '192.168.5.79'` in Wifi series product 
+- Add `ip= '192.168.1.110'` in Ethan series product 
+  
+### Changed 
+- Sync C# & python in example code
 
+### Fixed 
+- Fix zip download website
+  
 v0.1.6 Date: 2023/02/28, Developer: Chunglee_people 
 ---------------------------------------------------
 
