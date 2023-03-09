@@ -30,7 +30,17 @@ class USBDAQF1AOD_AIO_all_channels_loopback
         USBDAQF1AOD dev = new USBDAQF1AOD();
 
         // Connect to device
-        dev.connect("21JA1439");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -39,7 +49,7 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             int err;
             int port = 0;
             List<double> s;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -48,42 +58,36 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 
             // Open AI port
             err = dev.AI_open(port, timeout);
-            Console.WriteLine($"AI_open: {err}");
+            Console.WriteLine($"AI_open in port{port}: {err}");
 
             // Open AO port
             err = dev.AO_open(port, timeout);
-            Console.WriteLine($"AO_open: {err}");
+            Console.WriteLine($"AO_open in port{port}: {err}");
 
             // Set AI port and data acquisition
             s = dev.AI_readOnDemand(port, timeout);
 
             // Read acquisition data
-            Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
-
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
+            Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
             // Set AO port and write data simultaneously
             List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
             err = dev.AO_writeAllChannels(port, AO_values, timeout);
-            Console.WriteLine($"AO_writeAllChannels: {err}");
+            Console.WriteLine($"AO_writeAllChannels in port{port}: {err}");
 
             // Set AI port and data acquisition
             s = dev.AI_readOnDemand(port, timeout);
 
             // Read acquisition data
-            Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
-
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
+            Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
             // Close AI port
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($"AI_close: {err}");
+            Console.WriteLine($"AI_close in port{port}: {err}");
 
             // Close AO port
             err = dev.AO_close(port, timeout);
-            Console.WriteLine($"AO_close: {err}");
+            Console.WriteLine($"AO_close in port{port}: {err}");
         }
         catch (Exception ex)
         {

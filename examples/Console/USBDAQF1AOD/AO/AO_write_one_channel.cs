@@ -28,7 +28,17 @@ class USBDAQF1AOD_AO_write_one_channel
         USBDAQF1AOD dev = new USBDAQF1AOD();
 
         // Connect to device
-        dev.connect("21JA1439");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -36,7 +46,7 @@ class USBDAQF1AOD_AO_write_one_channel
             // Parameters setting
             int err;
             int port = 0;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -45,30 +55,27 @@ class USBDAQF1AOD_AO_write_one_channel
 
             // Open AO port
             err = dev.AO_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"AO_open in port{port}: {err}");
 
             // Set AO port and write data 1.5(V) in channel 4
             err = dev.AO_writeOneChannel(port, 4, 1.5, timeout);
-            Console.WriteLine($"writeOneChannel: {err}");
+            Console.WriteLine($"AO_writeOneChannel in ch4 in port{port}: {err}");
 
             // Set AO port and write data 2.5(V) in channel 5
             err = dev.AO_writeOneChannel(port, 5, 2.5, timeout);
-            Console.WriteLine($"writeOneChannel: {err}");
+            Console.WriteLine($"AO_writeOneChannel in ch5 in port{port}: {err}");
 
             // Set AO port and write data 3.5(V) in channel 6
             err = dev.AO_writeOneChannel(port, 6, 3.5, timeout);
-            Console.WriteLine($"writeOneChannel: {err}");
+            Console.WriteLine($"AO_writeOneChannel in ch6 in port{port}: {err}");
 
             // Set AO port and write data 4.5(V) in channel 7
             err = dev.AO_writeOneChannel(port, 7, 4.5, timeout);
-            Console.WriteLine($"writeOneChannel: {err}");
-
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
+            Console.WriteLine($"AO_writeOneChannel in ch7 in port{port}: {err}");
 
             // Close AO port
             err = dev.AO_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"AO_close in port{port}: {err}");
         }
         catch (Exception ex)
         {

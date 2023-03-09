@@ -116,7 +116,17 @@ class EthanL_DIO_loopback_pins
         EthanL dev = new EthanL();
 
         // Connect to device
-        dev.connect(&quot;192.168.1.110&quot;);
+        try
+        {
+            dev.connect(&quot;192.168.1.110&quot;); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -124,9 +134,9 @@ class EthanL_DIO_loopback_pins
             // Parameters setting
             int err;
             int port = 0;
-            List&lt;int&gt; DO_pins = new List&lt;int&gt; { 0, 1, 2, 3, 4 };
-            List&lt;int&gt; DI_pins = new List&lt;int&gt; { 5, 6, 7 };
-            int timeout = 3000;
+            List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1, 2};
+            List&lt;int&gt; DI_pins = new List&lt;int&gt; {5, 6, 7};
+            int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -135,30 +145,27 @@ class EthanL_DIO_loopback_pins
 
             // Open pin0, pin1, pin2, pin3 and pin4 with digital output
             err = dev.DO_openPins(port, DO_pins, timeout);
-            Console.WriteLine($&quot;openPins: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPins in port{port}: {err}&quot;);
+
+            // Set pin0 and pin1 to high, others to low
+            err = dev.DO_writePins(port, DO_pins, new List&lt;int&gt; {1, 1, 0}, timeout);
+            Console.WriteLine($&quot;writePins: {err}&quot;);
 
             // Open pin5, pin6 and pin7 with digital output
             err = dev.DI_openPins(port, DI_pins, timeout);
-            Console.WriteLine($&quot;openPins: {err}&quot;);
-
-            // Set pin0 and pin1 to high, others to low
-            err = dev.DO_writePins(port, DO_pins, new List&lt;int&gt; { 1, 1, 0, 0, 0 }, timeout);
-            Console.WriteLine($&quot;writePins: {err}&quot;);
+            Console.WriteLine($&quot;DI_openPins in port{port}: {err}&quot;);
 
             // Read pin5, pin6 and pin7 state
             List&lt;int&gt; pin_s = dev.DI_readPins(port, DI_pins, timeout);
-            Console.WriteLine($&quot;DI_readPins: {pin_s[0]}, {pin_s[1]}, {pin_s[2]}&quot;);
-
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
+            Console.WriteLine($&quot;DI_readPins: {pin_s[5]}, {pin_s[6]}, {pin_s[7]}&quot;);
 
             // Close pin0, pin1, pin2, pin3 and pin4 with digital output
             err = dev.DO_closePins(port, DO_pins, timeout);
-            Console.WriteLine($&quot;closePins: {err}&quot;);
+            Console.WriteLine($&quot;DO_closePins in port{port}: {err}&quot;);
 
             // Close pin5, pin6 and pin7 with digital input
             err = dev.DI_closePins(port, DI_pins, timeout);
-            Console.WriteLine($&quot;closePins: {err}&quot;);
+            Console.WriteLine($&quot;DI_closePins in port{port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -206,7 +213,17 @@ class EthanL_DIO_loopback_port
         EthanL dev = new EthanL();
 
         // Connect to device
-        dev.connect(&quot;21JA1245&quot;);
+        try
+        {
+            dev.connect(&quot;192.168.1.110&quot;); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -215,7 +232,7 @@ class EthanL_DIO_loopback_port
             int err;
             int port_DO = 0;
             int port_DI = 1;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -224,27 +241,27 @@ class EthanL_DIO_loopback_port
 
             // Open all pins with digital output
             err = dev.DO_openPort(port_DO, timeout);
-            Console.WriteLine($&quot;open DO Port: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPort in port{port_DO}: {err}&quot;);
 
             // Open all pins with digital input
             err = dev.DI_openPort(port_DI, timeout);
-            Console.WriteLine($&quot;open DI Port: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPort in port{port_DI}: {err}&quot;);
 
             // Set pin0, pin1 and pin2 to high, others to low
             err = dev.DO_writePort(port_DO, new List&lt;int&gt; { 0, 0, 0, 1, 0, 0, 0, 0 }, timeout);
-            Console.WriteLine($&quot;writePort: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePort in port{port_DO}: {err}&quot;);
 
             // Read all pins state
-            List&lt;int&gt; pin_s = dev.DI_readPort(port_DI, timeout);
-            Console.WriteLine($&quot;DI_readPort: {pin_s[0]},{pin_s[1]},{pin_s[2]},{pin_s[3]},{pin_s[4]},{pin_s[5]}&quot;);
+            List&lt;int&gt; p = dev.DI_readPort(port_DI, timeout);
+            Console.WriteLine($&quot;DI_readPort: {p[0]}, {p[1]}, {p[2]}, {p[3]}, {p[4]}, {p[5]}, {p[6]}, {p[7]}&quot;);
 
             // Close all pins with digital output
             err = dev.DO_closePort(port_DO, timeout);
-            Console.WriteLine($&quot;close DO Port: {err}&quot;);
+            Console.WriteLine($&quot;DO_closePort in port{port_DO}: {err}&quot;);
 
             // Close all pins with digital input
             err = dev.DI_closePort(port_DI, timeout);
-            Console.WriteLine($&quot;close DI Port : {err}&quot;);
+            Console.WriteLine($&quot;DI_closePort in port{port_DI}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -290,7 +307,17 @@ class EthanL_DO_blinky_pins
         EthanL dev = new EthanL();
 
         // Connect to device
-        dev.connect(&quot;192.168.1.110&quot;);
+        try
+        {
+            dev.connect(&quot;192.168.1.110&quot;); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -298,21 +325,21 @@ class EthanL_DO_blinky_pins
             // Parameters setting
             int err;
             int port = 0;
-            List&lt;int&gt; DO_pins = new List&lt;int&gt; { 0, 1, 2, 3 };
-            List&lt;int&gt; DO_odd_state = new List&lt;int&gt; { 0, 1, 0, 1 };
-            List&lt;int&gt; DO_even_state = new List&lt;int&gt; { 1, 0, 1, 0 };
-            int timeout = 3000;
+            List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1};
+            List&lt;int&gt; DO_odd_state = new List&lt;int&gt; {0, 1};
+            List&lt;int&gt; DO_even_state = new List&lt;int&gt; {1, 0};
+            int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Open pin0, pin1, pin2 and pin3 with digital output
+            // Open pin0, pin1 with digital output
             err = dev.DO_openPins(port, DO_pins, timeout);
-            Console.WriteLine($&quot;openPins: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPins in port{port}: {err}&quot;);
 
-            // Toggle digital state for 10 times. Each times delay for 0.1 second
+            // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i = 0; i &lt; 10; i++)
             {
                 if (i%2 == 0)
@@ -323,16 +350,15 @@ class EthanL_DO_blinky_pins
                 {
                     err = dev.DO_writePins(port, DO_pins, DO_odd_state, timeout);
                 }
-                Console.WriteLine($&quot;writePins: {err}&quot;);
-                Thread.Sleep(100); // delay [ms]
-            }
+                Console.WriteLine($&quot;DO_writePins in port{port}: {err}&quot;);
 
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
+                // Wait for 0.5 second to see led status
+                Thread.Sleep(500); // delay [ms]
+            }
 
             // Close pin0, pin1, pin2 and pin3 with digital output
             err = dev.DO_closePins(port, DO_pins, timeout);
-            Console.WriteLine($&quot;closePins: {err}&quot;);
+            Console.WriteLine($&quot;DO_closePins in port{port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -378,7 +404,17 @@ class EthanL_DO_blinky_port
         EthanL dev = new EthanL();
 
         // Connect to device
-        dev.connect(&quot;192.168.1.110&quot;);
+        try
+        {
+            dev.connect(&quot;192.168.1.110&quot;); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -388,7 +424,7 @@ class EthanL_DO_blinky_port
             int port = 0;
             List&lt;int&gt; DO_odd_state = new List&lt;int&gt; { 0, 1, 0, 1, 0, 1, 0, 1 };
             List&lt;int&gt; DO_even_state = new List&lt;int&gt; { 1, 0, 1, 0, 1, 0, 1, 0 };
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -397,10 +433,10 @@ class EthanL_DO_blinky_port
 
             // Open all pins and set it to digital output.
             err = dev.DO_openPort(port, timeout);
-            Console.WriteLine($&quot;openPort: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPort in port{port}: {err}&quot;);
 
-            // Toggle digital state for 30 times. Each times delay for 0.1 second
-            for (int i = 0; i &lt; 30; i++)
+            // Toggle digital state for 10 times. Each times delay for 0.5 second
+            for (int i = 0; i &lt; 10; i++)
             {
                 if (i % 2 == 0)
                 {
@@ -410,17 +446,14 @@ class EthanL_DO_blinky_port
                 {
                     err = dev.DO_writePort(port, DO_odd_state, timeout);
                 }
-
-                Console.WriteLine($&quot;writePort: {err}&quot;);
-                Thread.Sleep(100);// delay [ms]
+                Console.WriteLine($&quot;DO_writePort in port{port}: {err}&quot;);
+                // Wait for 0.5 second to see led status
+                Thread.Sleep(500); // delay [ms]
             }
-
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
 
             // Close all pins with digital output
             err = dev.DO_closePort(port, timeout);
-            Console.WriteLine($&quot;closePort: {err}&quot;);
+            Console.WriteLine($&quot;DO_closePort in port{port}: {err}&quot;);
         }
         catch (Exception ex)
         {

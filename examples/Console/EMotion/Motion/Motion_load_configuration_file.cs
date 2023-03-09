@@ -20,14 +20,24 @@ class EMotion_load_configuration_file
         EMotion dev = new EMotion();
 
         // Connect to device
-        dev.connect("192.168.1.110");
+        try
+        {
+            dev.connect("192.168.1.110"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         try
         {
             // Parameters setting
             int err;
             int port = 0;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -35,22 +45,22 @@ class EMotion_load_configuration_file
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"Motion_open in port{port}: {err}");
 
             // Or specify a specific name in a specific dir
             //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
-            Console.WriteLine($"openCfgFile: {err}");
+            Console.WriteLine($"Motion_openCfgFile in port{port}: {err}");
 
             // Motion load configuration file
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"loadCfgFile: {err}");
+            Console.WriteLine($"Motion_loadCfgFile in port{port}: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"Motion_close in port{port}: {err}");
         }
         catch (Exception ex)
         {
@@ -62,5 +72,5 @@ class EMotion_load_configuration_file
 
         // Release device handle
         dev.close();
-    } 
+    }
 }

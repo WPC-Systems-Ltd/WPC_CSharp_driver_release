@@ -20,7 +20,17 @@ class EMotion_2axis_circular_interpolation
         EMotion dev = new EMotion();
 
         // Connect to device
-        dev.connect("192.168.1.110");
+        try
+        {
+            dev.connect("192.168.1.110"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         try
         {
@@ -31,7 +41,7 @@ class EMotion_2axis_circular_interpolation
             int center_point_y = 2000;
             int finish_point_x = 0;
             int finish_point_y = 0;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -39,32 +49,32 @@ class EMotion_2axis_circular_interpolation
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"Motion_open in port{port}: {err}");
 
             // Or specify a specific name in a specific dir
             //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
-            Console.WriteLine($"openCfgFile: {err}");
+            Console.WriteLine($"Motion_openCfgFile in port{port}: {err}");
 
             // Motion load configuration file
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"loadCfgFile: {err}");
+            Console.WriteLine($"Motion_loadCfgFile in port{port}: {err}");
 
             // Motion configure
             err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000, timeout: timeout);
-            Console.WriteLine($"cfgCircularInterpo: {err}");
+            Console.WriteLine($"Motion_cfgCircularInterpo in port{port}: {err}");
 
             for (int i = 0; i < 4; i++)
             {
                 err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE, timeout);
-                Console.WriteLine($"enableServoOn: {err}");
+                Console.WriteLine($"Motion_enableServoOn in axis {i} in port{port}: {err}");
             }
 
             // Motion start
             err = dev.Motion_startCircularInterpo(port, timeout);
-            Console.WriteLine($"startCircularInterpo: {err}");
+            Console.WriteLine($"Motion_startCircularInterpo in port{port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
@@ -80,17 +90,17 @@ class EMotion_2axis_circular_interpolation
             {
                 // Motion stop
                 err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-                Console.WriteLine($"stop: {err}");
+                Console.WriteLine($"Motion_open in axis {i} in port{port}: {err}");
 
                 err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE, timeout);
-                Console.WriteLine($"enableServoOn: {err}");
+                Console.WriteLine($"Motion_enableServoOn in axis {i} in port{port}: {err}");
             }
             err = dev.Motion_releaseInterpoAxis(port, timeout);
-            Console.WriteLine($"releaseInterpoAxis: {err}");
+            Console.WriteLine($"Motion_releaseInterpoAxis in port{port}: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"Motion_close in port{port}: {err}");
         }
         catch (Exception ex)
         {

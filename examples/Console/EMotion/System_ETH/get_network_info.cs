@@ -20,7 +20,7 @@ class EMotion_get_network_info
     static public void Main()
     {
         // Parameters setting
-        int timeout = 3000;
+        int timeout = 3000; // ms
 
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
@@ -29,7 +29,17 @@ class EMotion_get_network_info
         EMotion dev = new EMotion();
 
         // Connect to device
-        dev.connect("192.168.1.110");
+        try
+        {
+            dev.connect("192.168.1.110"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Perform DAQ basic information
         try

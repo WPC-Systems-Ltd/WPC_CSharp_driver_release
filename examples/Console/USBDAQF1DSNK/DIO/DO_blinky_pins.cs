@@ -28,7 +28,17 @@ class USBDAQF1DSNK_DO_blinky_pins
         USBDAQF1DSNK dev = new USBDAQF1DSNK();
 
         // Connect to device
-        dev.connect("21JA1298");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -36,21 +46,21 @@ class USBDAQF1DSNK_DO_blinky_pins
             // Parameters setting
             int err;
             int port = 0;
-            List<int> DO_pins = new List<int> { 0, 1, 2, 3 };
-            List<int> DO_odd_state = new List<int> { 0, 1, 0, 1 };
-            List<int> DO_even_state = new List<int> { 1, 0, 1, 0 };
-            int timeout = 3000;
+            List<int> DO_pins = new List<int> {0, 1};
+            List<int> DO_odd_state = new List<int> {0, 1};
+            List<int> DO_even_state = new List<int> {1, 0};
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open pin0, pin1, pin2 and pin3 with digital output
+            // Open pin0, pin1 with digital output
             err = dev.DO_openPins(port, DO_pins, timeout);
-            Console.WriteLine($"openPins: {err}");
+            Console.WriteLine($"DO_openPins in port{port}: {err}");
 
-            // Toggle digital state for 10 times. Each times delay for 0.1 second
+            // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i = 0; i < 10; i++)
             {
                 if (i%2 == 0)
@@ -61,16 +71,15 @@ class USBDAQF1DSNK_DO_blinky_pins
                 {
                     err = dev.DO_writePins(port, DO_pins, DO_odd_state, timeout);
                 }
-                Console.WriteLine($"writePins: {err}");
-                Thread.Sleep(100); // delay [ms]
-            }
+                Console.WriteLine($"DO_writePins in port{port}: {err}");
 
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
+                // Wait for 0.5 second to see led status
+                Thread.Sleep(500); // delay [ms]
+            }
 
             // Close pin0, pin1, pin2 and pin3 with digital output
             err = dev.DO_closePins(port, DO_pins, timeout);
-            Console.WriteLine($"closePins: {err}");
+            Console.WriteLine($"DO_closePins in port{port}: {err}");
         }
         catch (Exception ex)
         {

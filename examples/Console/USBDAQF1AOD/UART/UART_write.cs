@@ -28,7 +28,17 @@ class USBDAQF1AOD_UART_write
         USBDAQF1AOD dev = new USBDAQF1AOD();
 
         // Connect to device
-        dev.connect("21JA1439");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -37,7 +47,7 @@ class USBDAQF1AOD_UART_write
             int err;
             int port = 2;
             int baudrate = 9600;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -46,35 +56,35 @@ class USBDAQF1AOD_UART_write
 
             // Open UART port
             err = dev.UART_open(port);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"UART_open in port{port}: {err}");
 
             // Set UART port and set baudrate to 9600
             err = dev.UART_setBaudRate(port, baudrate);
-            Console.WriteLine($"setBaudRate: {err}");
+            Console.WriteLine($"UART_setBaudRate in port{port}: {err}");
 
             // Set UART port and set data bit to 8-bit data
             err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS);
-            Console.WriteLine($"setDataBit: {err}");
+            Console.WriteLine($"UART_setDataBit in port{port}: {err}");
 
             // Set UART port and set parity to None
             err = dev.UART_setParity(port, Const.UART_PARITY_NONE);
-            Console.WriteLine($"setParity: {err}");
+            Console.WriteLine($"UART_setParity in port{port}: {err}");
 
             // Set UART port and set stop bit to 1 bit
             err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1);
-            Console.WriteLine($"setNumStopBit: {err}");
+            Console.WriteLine($"UART_setNumStopBit in port{port}: {err}");
 
             // Set UART port and and write "chunglee people" to device
             err = dev.UART_write(port, "chunglee_people");
-            Console.WriteLine($"write: {err}");;
+            Console.WriteLine($"UART_write in port{port}: {err}");;
 
             // Set UART port and and write "WPC_systems" to device
             err = dev.UART_write(port, "WPC_systems");
-            Console.WriteLine($"write: {err}");;
+            Console.WriteLine($"UART_write in port{port}: {err}");;
 
             // Close UART port
             err = dev.UART_close(port);
-            Console.WriteLine($"close: {err}");;
+            Console.WriteLine($"UART_close in port{port}: {err}");;
         }
         catch (Exception ex)
         {

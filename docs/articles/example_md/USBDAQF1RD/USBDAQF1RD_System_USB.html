@@ -103,13 +103,23 @@ class USBDAQF1RD_get_USB_info
         USBDAQF1RD dev = new USBDAQF1RD();
 
         // Connect to device
-        dev.connect(&quot;21JA1385&quot;);
+        try
+        {
+            dev.connect(&quot;default&quot;); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Perform DAQ basic information
         try
         {
             // Parameters setting
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
