@@ -21,9 +21,6 @@ class DeviceFinder_find_all_devices
         // Create device handle
         DeviceFinder dev = new DeviceFinder();
 
-        // Connect to device
-        dev.connect();
-
         // Perform device information
         try
         {
@@ -53,8 +50,6 @@ class DeviceFinder_find_all_devices
         {
             Console.WriteLine(ex);
         }
-        // Disconnect device
-        dev.disconnect();
 
         // Release device handle
         dev.close();

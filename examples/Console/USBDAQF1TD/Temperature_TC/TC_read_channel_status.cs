@@ -28,7 +28,17 @@ class USBDAQF1TD_TC_read_channel_status
         USBDAQF1TD dev = new USBDAQF1TD();
 
         // Connect to device
-        dev.connect("21JA1239");
+        try
+        {
+            dev.connect("default"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -39,7 +49,7 @@ class USBDAQF1TD_TC_read_channel_status
             int port = 1;
             int channel_0 = 0;
             int channel_1 = 1;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -53,8 +63,6 @@ class USBDAQF1TD_TC_read_channel_status
             // Set thermo port and get status in channel 0
             status = dev.Thermal_getStatus(port, channel_0, timeout);
             Console.WriteLine($"Thermal_getStatus in channel 0: {status}");
-            // Wait for 0.1 sec
-            Thread.Sleep(100); // delay [ms]
 
             // Set thermo port and get status in channel 1
             status = dev.Thermal_getStatus(port, channel_1, timeout);

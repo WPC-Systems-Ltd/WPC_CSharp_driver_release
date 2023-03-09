@@ -21,8 +21,6 @@ class EthanO_AO_write_all_channels
 {
     static public void Main()
     {
-        Console.WriteLine("Start example code...");
-
         // Get C# driver version
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
@@ -30,7 +28,17 @@ class EthanO_AO_write_all_channels
         EthanO dev = new EthanO();
 
         // Connect to device
-        dev.connect("192.168.1.110");
+        try
+        {
+            dev.connect("192.168.1.110"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -38,7 +46,7 @@ class EthanO_AO_write_all_channels
             // Parameters setting
             int err;
             int port = 0;
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -47,20 +55,16 @@ class EthanO_AO_write_all_channels
 
             // Open AO port
             err = dev.AO_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            Console.WriteLine($"AO_open in port{port}: {err}");
 
             // Set AO port and write data simultaneously
-            List<double> AO_values = new List<double> { 3, 1, 2, 3, 4, 5, 4, 3 };
-
+            List<double> AO_values = new List<double> { 0,1,2,3,4,5,4,3 };
             err = dev.AO_writeAllChannels(port, AO_values, timeout);
-            Console.WriteLine($"writeAllChannels: {err}");
-
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
+            Console.WriteLine($"AO_writeAllChannels in port{port}: {err}");
 
             // Close AO port
             err = dev.AO_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"AO_close in port{port}: {err}");
         }
         catch (Exception ex)
         {

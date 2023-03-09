@@ -28,7 +28,17 @@ class EthanL_DO_blinky_port
         EthanL dev = new EthanL();
 
         // Connect to device
-        dev.connect("192.168.1.110");
+        try
+        {
+            dev.connect("192.168.1.110"); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
         // Execute
         try
@@ -38,7 +48,7 @@ class EthanL_DO_blinky_port
             int port = 0;
             List<int> DO_odd_state = new List<int> { 0, 1, 0, 1, 0, 1, 0, 1 };
             List<int> DO_even_state = new List<int> { 1, 0, 1, 0, 1, 0, 1, 0 };
-            int timeout = 3000;
+            int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -47,10 +57,10 @@ class EthanL_DO_blinky_port
 
             // Open all pins and set it to digital output.
             err = dev.DO_openPort(port, timeout);
-            Console.WriteLine($"openPort: {err}");
+            Console.WriteLine($"DO_openPort in port{port}: {err}");
 
-            // Toggle digital state for 30 times. Each times delay for 0.1 second
-            for (int i = 0; i < 30; i++)
+            // Toggle digital state for 10 times. Each times delay for 0.5 second
+            for (int i = 0; i < 10; i++)
             {
                 if (i % 2 == 0)
                 {
@@ -60,17 +70,14 @@ class EthanL_DO_blinky_port
                 {
                     err = dev.DO_writePort(port, DO_odd_state, timeout);
                 }
-
-                Console.WriteLine($"writePort: {err}");
-                Thread.Sleep(100);// delay [ms]
+                Console.WriteLine($"DO_writePort in port{port}: {err}");
+                // Wait for 0.5 second to see led status
+                Thread.Sleep(500); // delay [ms]
             }
-
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
 
             // Close all pins with digital output
             err = dev.DO_closePort(port, timeout);
-            Console.WriteLine($"closePort: {err}");
+            Console.WriteLine($"DO_closePort in port{port}: {err}");
         }
         catch (Exception ex)
         {
