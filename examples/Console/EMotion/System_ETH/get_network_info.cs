@@ -41,28 +41,27 @@ class EMotion_get_network_info
             return;
         }
 
-        // Perform DAQ basic information
         try
         {
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
 
             // Get serial number & RTC Time
-            string serial_num = dev.Sys_getSerialNumber(timeout);
+            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
             string RTC = dev.Sys_getRTC();
             Console.WriteLine($"Serial number: {serial_num}");
             Console.WriteLine($"RTC data time: {RTC}");
 
             // Get IP & submask
-            List<string> info = dev.Sys_getIPAddrAndSubmask(timeout);
+            List<string> info = dev.Sys_getIPAddrAndSubmask(timeout:timeout);
             Console.WriteLine($"IP: {info[0]}");
             Console.WriteLine($"Submask: {info[1]}");
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr(timeout);
+            string mac = dev.Sys_getMACAddr(timeout:timeout);
             Console.WriteLine($"MAC: {mac}");
         }
         catch (Exception ex)

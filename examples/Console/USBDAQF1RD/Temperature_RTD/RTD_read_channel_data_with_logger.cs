@@ -17,7 +17,7 @@
 
 using WPC.Product;
 
-class USBDAQF1RD_DataLogger_RTD_read_channel_data
+class USBDAQF1RD_RTD_read_channel_data_with_logger
 {
     static public void Main()
     {
@@ -40,17 +40,6 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             return;
         }
 
-        // Create datalogger handle
-        Datalogger dev_logger = new Datalogger();
-
-        // Open file with WPC_test.csv
-        dev_logger.Logger_openFile("WPC_tester_USBDAQF1RD_RTD.csv");
-
-        // Write header into CSV file
-        var data_write = $"RTD CH0, RTD CH1";
-        dev_logger.Logger_writeValue(data_write);
-
-        // Execute
         try
         {
             // Parameters setting
@@ -61,36 +50,42 @@ class USBDAQF1RD_DataLogger_RTD_read_channel_data
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
+            // Open file with CSV file
+            err = dev.Logger_openFile("WPC_tester_USBDAQF1RD_RTD.csv");
+            Console.WriteLine($"Logger_openFile: {err}");
+
+            // Write header into CSV file
+            var header = $"RTD CH0, RTD CH1";
+            err = dev.Logger_writeValue(header);
+            Console.WriteLine($"Logger_writeValue: {err}");
+
             // Open RTD port
-            err = dev.Thermal_open(port, timeout);
+            err = dev.Thermal_open(port, timeout:timeout);
             Console.WriteLine($"Thermal_open in port{port}: {err}");
 
-            // Wait for at least 100 ms after setting type or oversampling
-            Thread.Sleep(100); // delay [ms]
+            // Wait for at least 250 ms after setting type or oversampling
+            Thread.Sleep(250); // delay [ms]
 
             // Set RTD port and read RTD in channel 0
-            float data0 = dev.Thermal_readSensor(port, ch0, timeout);
+            float data0 = dev.Thermal_readSensor(port, ch0, timeout:timeout);
             Console.WriteLine($"Read sensor in channel {ch0} in port{port}: {data0}°C");
 
             // Set RTD port and read RTD in channel 1
-            float data1 = dev.Thermal_readSensor(port, ch1, timeout);
+            float data1 = dev.Thermal_readSensor(port, ch1, timeout:timeout);
             Console.WriteLine($"Read sensor in channel {ch1} in port{port}: {data1}°C");
 
             // Write data into CSV file
             var data = $"{data0}, {data1}";
-            dev_logger.Logger_writeValue(data);
+            err = dev.Logger_writeValue(data);
+            Console.WriteLine($"Logger_writeValue: {err}");
 
             // Close RTD port
-            err = dev.Thermal_close(port, timeout);
+            err = dev.Thermal_close(port, timeout:timeout);
             Console.WriteLine($"Thermal_close in port{port}: {err}");
-
-            // Close File
-            dev_logger.Logger_closeFile();
-
         }
         catch (Exception ex)
         {

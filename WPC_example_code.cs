@@ -74,11 +74,12 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For AI");
         Console.WriteLine("------");
+        Console.WriteLine("Run AI_continuous_with_logger.cs, please input 9");
         Console.WriteLine("Run AI_continuous.cs, please input 10");
         Console.WriteLine("Run AI_N_samples_in_loop.cs, please input 11");
         Console.WriteLine("Run AI_N_samples_once.cs, please input 12");
         Console.WriteLine("Run AI_on_demand_in_loop.cs, please input 13");
-        Console.WriteLine("Run AI_on_demand_once.cs, please input 14");
+        Console.WriteLine("Run AI_on_demand_once.cs, please input 14"); 
     }
     #endregion
 
@@ -169,6 +170,7 @@ public class WPC_example_code
         Console.WriteLine("-------");
         Console.WriteLine("Run RTD_read_channel_data.cs, please input 70");
         Console.WriteLine("Run RTD_read_channel_status.cs, please input 71");
+        Console.WriteLine("Run RTD_read_channel_data_with_logger.cs, please input 72");
     }
     #endregion
 
@@ -180,6 +182,7 @@ public class WPC_example_code
         Console.WriteLine("----------------");
         Console.WriteLine("Run TC_read_channel_data.cs, please input 80");
         Console.WriteLine("Run TC_read_channel_status.cs, please input 81");
+        Console.WriteLine("Run TC_read_channel_data_with_logger.cs, please input 82");
     }
     #endregion
      
@@ -210,8 +213,22 @@ public class WPC_example_code
         Console.WriteLine("Run Motion_save_configuration_file.cs, please input 108");
         Console.WriteLine("Run Motion_velocity_blending.cs, please input 109");
         Console.WriteLine("Run Motion_velocity_blending_accerleration.cs, please input 110"); 
+        Console.WriteLine("Run Motion_position_blending.cs, please input 111");
+        Console.WriteLine("Run Motion_servo_on.cs, please input 112");
     }
     #endregion
+
+    #region RelayMessage
+    static void showRelayMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For Relay");
+        Console.WriteLine("----------------");
+        Console.WriteLine("Run Relay_read_counters.cs, please input 200");
+        Console.WriteLine("Run Relay_set_channel.cs, please input 201"); 
+    }
+    #endregion
+
 
     static void Main()
     {
@@ -251,8 +268,8 @@ public class WPC_example_code
 
             case 4:
                 Console.WriteLine("Get 4, show EthanL series example code");
-                showSysETHMessage();
-                showDIOMessage();
+                showSysETHMessage(); 
+                showRelayMessage();
                 break;
 
             case 5:
@@ -430,7 +447,12 @@ public class WPC_example_code
                     case 110:
                         EMotion_velocity_blending_accerleration.Main();
                         break;
-         
+                    case 111:
+                        EMotion_position_blending.Main();
+                        break;
+                    case 112:
+                        EMotion_servo_on.Main();
+                        break;
                     #endregion
 
                     default:
@@ -447,6 +469,9 @@ public class WPC_example_code
                     #endregion
 
                     #region EthanA_AI
+                    case 9:
+                        EthanA_DataLogger_AI_continuous.Main();
+                        break;
                     case 10:
                         EthanA_AI_continuous.Main();
                         break;
@@ -506,21 +531,16 @@ public class WPC_example_code
                     case 1:
                         EthanL_get_network_info.Main();
                         break;
-                    #endregion
+                    #endregion 
 
-                    #region EthanL_DIO
-                    case 20:
-                        EthanL_DIO_loopback_pins.Main();
+                    #region EthanL_Relay
+                    case 200:
+                        EthanL_Relay_read_counters.Main();
                         break;
-                    case 21:
-                        EthanL_DIO_loopback_port.Main();
+                    case 201:
+                        EthanL_Relay_set_channel.Main();
                         break;
-                    case 22:
-                        EthanL_DO_blinky_pins.Main();
-                        break;
-                    case 23:
-                        EthanL_DO_blinky_port.Main();
-                        break;
+ 
                     #endregion 
                     default:
                         break;
@@ -563,6 +583,9 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1AD_AI
+                    case 9:
+                        USBDAQF1AD_DataLogger_AI_continuous.Main();
+                        break;
                     case 10:
                         USBDAQF1AD_AI_continuous.Main();
                         break;
@@ -634,6 +657,9 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1AOD_AI
+                    case 9:
+                        USBDAQF1AOD_DataLogger_AI_continuous.Main();
+                        break;
                     case 10:
                         USBDAQF1AOD_AI_continuous.Main();
                         break;
@@ -906,6 +932,9 @@ public class WPC_example_code
                     case 71:
                         USBDAQF1RD_RTD_read_channel_status.Main();
                         break;
+                    case 72:
+                        USBDAQF1RD_RTD_read_channel_data_with_logger.Main();
+                        break;
                     #endregion
 
                     default:
@@ -968,6 +997,10 @@ public class WPC_example_code
                     case 81:
                         USBDAQF1TD_TC_read_channel_status.Main();
                         break;
+                    case 82:
+                        USBDAQF1TD_TC_read_channel_data_with_logger.Main();
+                        break;
+ 
                     #endregion
 
                     default:
@@ -988,6 +1021,9 @@ public class WPC_example_code
                     #endregion
 
                     #region WifiDAQE3A_AI
+                    case 9:
+                        WifiDAQE3A_DataLogger_AI_continuous.Main();
+                        break;
                     case 10:
                         WifiDAQE3A_AI_continuous.Main();
                         break;

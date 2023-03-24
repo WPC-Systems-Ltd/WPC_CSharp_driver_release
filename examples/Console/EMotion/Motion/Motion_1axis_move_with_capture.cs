@@ -38,65 +38,67 @@ class EMotion_1axis_move_with_capture
             int err;
             int port = 0;
             int timeout = 3000; // ms
+            int axis = Const.MOT_AXIS0;
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout);
+            err = dev.Motion_open(port, timeout:timeout);
             Console.WriteLine($"Motion_open in port{port}: {err}");
 
-            // Or specify a specific name in a specific dir
-            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini");
-
+            /*
             // Motion open configuration file
-            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
-            Console.WriteLine($"Motion_openCfgFile in port{port}: {err}");
+            err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
+            Console.WriteLine($"Motion_openCfgFile: {err}");
 
             // Motion load configuration file
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile in port{port}: {err}");
+            Console.WriteLine($"Motion_loadCfgFile: {err}");
+            */
 
             // Motion configure
-            err = dev.Motion_cfgCapture(port, Const.MOT_AXIS1, Const.MOT_CAPTURE_RISING_EDGE, Const.MOT_CAPTURE_LOGICAL_POSITION, timeout);
-            Console.WriteLine($"Motion_cfgCapture in port{port}: {err}");
+            err = dev.Motion_cfgCapture(port, axis, Const.MOT_CAPTURE_RISING_EDGE, Const.MOT_CAPTURE_LOGICAL_POSITION, timeout:timeout);
+            Console.WriteLine($"Motion_cfgCapture in axis{axis}: {err}");
 
-            err = dev.Motion_enableCapture(port, Const.MOT_AXIS1, Const.MOT_TRUE, timeout);
-            Console.WriteLine($"Motion_enableCapture in port{port}: {err}");
+            err = dev.Motion_enableCapture(port, axis, Const.MOT_TRUE, timeout:timeout);
+            Console.WriteLine($"Motion_enableCapture in axis{axis}: {err}");
 
-            err = dev.Motion_cfgAxisMove(port, Const.MOT_AXIS1, Const.MOT_RELATIVE_POSITION, target_posi: 10000, timeout: timeout);
-            Console.WriteLine($"Motion_cfgAxisMove in port{port}: {err}");
+            err = dev.Motion_cfgAxisMove(port, axis, Const.MOT_RELATIVE_POSITION, target_posi:5000, velo:10000, accel:100000, decel:100000, timeout:timeout);
+            Console.WriteLine($"Motion_cfgAxisMove in axis{axis}: {err}");
 
-            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1, timeout);
-            Console.WriteLine($"Motion_rstEncoderPosi in port{port}: {err}");
+            err = dev.Motion_rstEncoderPosi(port, axis, encoder_posi:0, timeout:timeout);
+            Console.WriteLine($"Motion_rstEncoderPosi in axis{axis}: {err}");
 
-            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE, timeout);
-            Console.WriteLine($"Motion_enableServoOn in port{port}: {err}");
+            // Servo on
+            err = dev.Motion_enableServoOn(port, axis, timeout:timeout);
+            Console.WriteLine($"Motion_enableServoOn in axis{axis}: {err}");
 
             // Motion start
-            err = dev.Motion_startSingleAxisMove(port, Const.MOT_AXIS1, timeout);
-            Console.WriteLine($"Motion_startSingleAxisMove in port{port}: {err}");
+            err = dev.Motion_startSingleAxisMove(port, axis, timeout:timeout);
+            Console.WriteLine($"Motion_startSingleAxisMove in axis{axis}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1, timeout);
-                Console.WriteLine($"getMoveStatus : {move_status}");
+                move_status = dev.Motion_getMoveStatus(port, axis, timeout:timeout);
+                Console.WriteLine($"Motion_getMoveStatus in axis{axis}: {move_status}");
 
-                int capture_points = dev.Motion_readCapturePoint(port, Const.MOT_AXIS1, timeout);
-                Console.WriteLine($"readCapturePoint: {move_status}");
+                int capture_points = dev.Motion_readCapturePoint(port, axis, timeout:timeout);
+                Console.WriteLine($"Motion_readCapturePoint in axis{axis}: {capture_points}");
             }
 
             // Motion stop
-            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($"Motion_stop in port{port}: {err}");
+            err = dev.Motion_stop(port, axis, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            Console.WriteLine($"Motion_stop in axis{axis}: {err}");
 
-            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE, timeout);
-            Console.WriteLine($"Motion_enableServoOn in port{port}: {err}");
+            // Servo off
+            err = dev.Motion_enableServoOff(port, axis, timeout:timeout);
+            Console.WriteLine($"Motion_enableServoOff in axis{axis}: {err}");
 
             // Motion close
-            err = dev.Motion_close(port, timeout);
+            err = dev.Motion_close(port, timeout:timeout);
             Console.WriteLine($"Motion_close in port{port}: {err}");
         }
         catch (Exception ex)

@@ -38,27 +38,27 @@ class EMotion_get_logical_position
             int port = 0;
             int timeout = 3000; // ms
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout);
+            err = dev.Motion_open(port, timeout:timeout);
             Console.WriteLine($"Motion_open in port{port}: {err}");
 
-            for (int i = 0; i < 100; i++)
+            for (int i=0; i<100; i++)
             {
-                err = dev.Motion_setLogicalPosi(port, Const.MOT_AXIS1, i, timeout);
+                err = dev.Motion_setLogicalPosi(port, Const.MOT_AXIS1, i, timeout:timeout);
                 if (err != 0)
                 {
                     Console.WriteLine($"setLogicalPosi: {err}");
                 }
-                int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1, timeout);
+                int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1, timeout:timeout);
                 Console.WriteLine($"getLogicalPosi: {posi}");
             }
 
             // Motion close
-            err = dev.Motion_close(port, timeout);
+            err = dev.Motion_close(port, timeout:timeout);
             Console.WriteLine($"Motion_close in port{port}: {err}");
         }
         catch (Exception ex)

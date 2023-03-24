@@ -14,20 +14,20 @@ You can download WPC Device Manager by visiting [WPC Systems Ltd. official websi
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > [!Note]
-> Make sure the latest version of firmware is up to date with your products. 
- 
+> Make sure the latest version of firmware is up to date with your products.
+
 |                   |                 Link                                                            |
 |:------------------|:--------------------------------------------------------------------------------|
 | WPC official site | http://www.wpc.com.tw/                                                          |
-| GitHub			| https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release                    |
+| GitHub			      | https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release                    |
 | User guide        | https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/                    |
 | Example code      | https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples |
 
 
 # Install toolkit
 
-This can be done either manually or through the [NuGet package](https://www.nuget.org/packages/cswpc) 
- 
+This can be done either manually or through the [NuGet package](https://www.nuget.org/packages/cswpc)
+
 ```
 PM> NuGet\Install-Package cswpc
 ```
@@ -51,11 +51,11 @@ Console.WriteLine($"{Constant.PKG_NAME}");
 // Get C# driver full name and version
 Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
-// Get C# handle list  
-foreach (var item in Constant.HANDLE_LIST) 
+// Get C# handle list
+foreach (var item in Constant.HANDLE_LIST)
 {
-  Console.WriteLine($"{item}");  
-} 
+  Console.WriteLine($"{item}");
+}
 ```
 
 # Products
@@ -106,13 +106,13 @@ Take `USB-DAQ-F1-AOD` for example:
 - Port 2 is available for `DI`
 - Ports 0 & 1 are available for `DO`
 - Port 2 is available for `UART`
- 
-# References 
+
+# References
 - [User manual - WPC CSharp driver](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/)
 - [How to install Visual Studio IDE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-install-Visual-Studio-IDE)
 - [How to start up a new project with cswpc package](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-start-up-a-new-project-with-cswpc-package)
 - [How to build your own C# codes into EXE files](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-build-your-own-C%23-codes-into-EXE-files)
- 
+
 # License
 
 **WPC CSharp driver release** is licensed under an MIT-style license see

@@ -23,7 +23,7 @@
     <meta property="og:title" content="WPC CSharp driver" />
     <meta property="og:url" content="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/" />
     <link href="https://www.newtonsoft.com/content/styles/bundle-common?v=YoV7zF4FphgGEnugNXUKWuVJ3PxlOnVhxK54pyuQwXA1" rel="stylesheet" />
-     
+
     <style>
         a:link, i {
             color: black;
@@ -142,11 +142,11 @@ Console.WriteLine($"{Constant.PKG_NAME}");
 // Get C# driver full name and version
 Console.WriteLine($"{Constant.PKG_FULL_NAME} - Version {Constant.VERSION}");
 
-// Get C# handle list  
-foreach (var item in Constant.HANDLE_LIST) 
+// Get C# handle list
+foreach (var item in Constant.HANDLE_LIST)
 {
-  Console.WriteLine($"{item}");  
-} 
+  Console.WriteLine($"{item}");
+}
 </pre>
                                         <div class="carousel-caption">
                                             Quick Start
@@ -162,14 +162,14 @@ DeviceFinder dev = new DeviceFinder();
 // Connect to device
 dev.connect();
 
-// Find USB list  
+// Find USB list
 List&lt;List&lt;string&gt;&gt; usb_list = dev.Bcst_enumerateUSBDevices();
 foreach (List&lt;string&gt; usb in usb_list)
 {
     foreach (string s in usb)
     {
-        Console.Write(s); 
-    } 
+        Console.Write(s);
+    }
 }
 </pre>
                                         <div class="carousel-caption">
@@ -186,14 +186,14 @@ DeviceFinder dev = new DeviceFinder();
 // Connect to device
 dev.connect();
 
-// Find ethernet list    
+// Find ethernet list
 List&lt;List&lt;string&gt;&gt; net_list = dev.Bcst_enumerateNetworkDevices(2000)
 foreach (List&lt;string&gt; net in net_list)
 {
     foreach (string s in net)
     {
-        Console.Write(s); 
-    } 
+        Console.Write(s);
+    }
 }
 </pre>
                                         <div class="carousel-caption">
@@ -210,16 +210,16 @@ EthanA dev = new EthanA();
 
 // Connect to device
 dev.connect("192.168.1.110");
-         
+
 // Get IP & submask
 List &lt;string&gt; info = dev.Sys_getIPAddrAndSubmask();
-Console.WriteLine($"IP: {info[0]}, Submask: {info[1]}"); 
+Console.WriteLine($"IP: {info[0]}, Submask: {info[1]}");
 
 // Disconnect device
 dev.disconnect();
 
 // Release device handle
-dev.close(); 
+dev.close();
 </pre>
                                         <div class="carousel-caption">
                                             Basic Ethernet example
@@ -233,17 +233,17 @@ using WPC.Product;
 USBDAQF1AOD dev = new USBDAQF1AOD();
 
 // Connect to device
-dev.connect("21JA1439");
-         
+dev.connect("default");
+
 // Get RTC Time
-string RTC = dev.Sys_getRTC(); 
+string RTC = dev.Sys_getRTC();
 Console.WriteLine($"RTC data time: {RTC}");
 
 // Disconnect device
 dev.disconnect();
 
 // Release device handle
-dev.close(); 
+dev.close();
 </pre>
                                         <div class="carousel-caption">
                                             Basic USB example
@@ -254,8 +254,8 @@ dev.close();
                         </div>
                     </div>
                 </div>
-            </div> 
-        </div> 
+            </div>
+        </div>
         <div class="container">
             <div class="counter-key-section">
                 <div class="container">
@@ -322,8 +322,8 @@ dev.close();
                         </div>
                     </div>
                 </div>
-            </div> 
-        </div> 
+            </div>
+        </div>
             <footer>
                 <div class="grad-bottom"></div>
                 <div class="footer">

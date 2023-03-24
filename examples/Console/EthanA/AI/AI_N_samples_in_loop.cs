@@ -19,7 +19,7 @@ using WPC.Product;
 
 class EthanA_AI_N_samples_in_loop
 {
-    static void loop_func(EthanA handle, int port, int num_of_samples, int delay = 50, int exit_loop_time = 300)
+    static void loop_func(EthanA handle, int port, int num_of_samples=600, int delay=50, int exit_loop_time=300)
     {
         int time_cal = 0;
         while (time_cal < exit_loop_time)
@@ -60,54 +60,55 @@ class EthanA_AI_N_samples_in_loop
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
             int err;
             int port = 0;
+            int mode = Const.AI_MODE_N_SAMPLE;
             int samples = 3000;
             float sampling_rate = 1000;
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            err = dev.AI_open(port, timeout);
+            err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port{port}: {err}");
 
-            // Set AI port and acquisition mode to continuous
-            err = dev.AI_setMode(port, Const.AI_MODE_CONTINUOUS, timeout);
-            Console.WriteLine($"AI_setMode in port{port}: {err}");
+            // Set AI port and acquisition mode to N sample
+            err = dev.AI_setMode(port, mode, timeout:timeout);
+            Console.WriteLine($"AI_setMode {mode} in port{port}: {err}");
 
             // Set AI port and sampling rate to 1k (Hz)
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
-            Console.WriteLine($"AI_setSamplingRate in port{port}: {err}");
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
+            Console.WriteLine($"AI_setSamplingRate {sampling_rate} in port{port}: {err}");
 
             // Set AI port and # of samples to 3000 (pts)
-            err = dev.AI_setNumSamples(port, samples, timeout);
-            Console.WriteLine($"AI_setNumSamples in port{port}: {err}");
+            err = dev.AI_setNumSamples(port, samples, timeout:timeout);
+            Console.WriteLine($"AI_setNumSamples {samples} in port{port}: {err}");
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port, timeout);
+            err = dev.AI_start(port);
             Console.WriteLine($"AI_start in port{port}: {err}");
 
+            // loop parameters
             int num_of_samples = 600;
             int delay = 50;
             int exit_loop_time = 300;
 
             // Start loop
-            loop_func(dev, port, num_of_samples, delay, exit_loop_time);
+            loop_func(dev, port, num_of_samples:num_of_samples, delay:delay, exit_loop_time:exit_loop_time);
 
             // Stop AI
-            err = dev.AI_stop(port, timeout);
+            err = dev.AI_stop(port, timeout:timeout);
             Console.WriteLine($"AI_stop in port{port}: {err}");
 
             // Close AI port
-            err = dev.AI_close(port, timeout);
+            err = dev.AI_close(port, timeout:timeout);
             Console.WriteLine($"AI_close in port{port}: {err}");
         }
         catch (Exception ex)

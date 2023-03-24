@@ -962,13 +962,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <a id="WPC_Module_IMotionModule_Motion_cfgFindRef_" data-uid="WPC.Module.IMotionModule.Motion_cfgFindRef*"></a>
-  <h4 id="WPC_Module_IMotionModule_Motion_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
+  <h4 id="WPC_Module_IMotionModule_Motion_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Configure find reference parameters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_cfgFindRef(int port, int axis, int search_type, int search_dir, int search_velo = 10000, int approach_velo_percent = 20, int en_reset_posi = default(int), int offset_posi = 0, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_cfgFindRef(int port, int axis, int search_type, int search_dir, int search_velo = 10000, int search_accle = 10000, int approach_velo_percent = 20, int en_reset_posi = default(int), int offset_posi = 0, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1008,6 +1008,12 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">search_velo</span></td>
         <td><p>Set velocity in counts/s or steps/s.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">search_accle</span></td>
+        <td><p>Set acceleration in counts/s2 or steps/s2.</p>
 </td>
       </tr>
       <tr>
@@ -1460,7 +1466,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;int&gt; Motion_checkRef(int port, int axis, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_checkRef(int port, int axis, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1502,8 +1508,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>List int of the finding reference and found reference status.</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Status of reference. 0: finding reference, 1: found reference.</p>
 </td>
       </tr>
     </tbody>
@@ -1682,14 +1688,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Module_IMotionModule_Motion_enableServoOn_" data-uid="WPC.Module.IMotionModule.Motion_enableServoOn*"></a>
-  <h4 id="WPC_Module_IMotionModule_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_enableServoOn(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the servo on singal of specific axis.</p>
+  <a id="WPC_Module_IMotionModule_Motion_enableServoOff_" data-uid="WPC.Module.IMotionModule.Motion_enableServoOff*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_enableServoOff_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_enableServoOff(System.Int32,System.Int32,System.Int32)">Motion_enableServoOff(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Servo off singal of specific axis.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_enableServoOn(int port, int axis, int en_servo_on, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_enableServoOff(int port, int axis, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1715,8 +1721,58 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">en_servo_on</span></td>
-        <td><p>Enable/disable servo on.</p>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_enableServoOn_" data-uid="WPC.Module.IMotionModule.Motion_enableServoOn*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32,System.Int32,System.Int32)">Motion_enableServoOn(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Servo on singal of specific axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_enableServoOn(int port, int axis, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
 </td>
       </tr>
       <tr>
@@ -1796,6 +1852,61 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><span class="xref">System.Int32</span></td>
         <td><p>Return 0 if executed successfully; return error code otherwise.<br>
 See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IMotionModule_Motion_getEncoderPosi_" data-uid="WPC.Module.IMotionModule.Motion_getEncoderPosi*"></a>
+  <h4 id="WPC_Module_IMotionModule_Motion_getEncoderPosi_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IMotionModule.Motion_getEncoderPosi(System.Int32,System.Int32,System.Int32)">Motion_getEncoderPosi(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Get encoder position for an axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Motion_getEncoderPosi(int port, int axis, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Encoder position of the axis.</p>
 </td>
       </tr>
     </tbody>
@@ -2434,7 +2545,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Motion_rstEncoderPosi(int port, int axis, int encoder_posi, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Motion_rstEncoderPosi(int port, int axis, int encoder_posi = 0, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

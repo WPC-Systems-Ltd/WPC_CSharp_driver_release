@@ -40,7 +40,6 @@ class USBDAQF1TD_TC_read_channel_data
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
@@ -50,31 +49,31 @@ class USBDAQF1TD_TC_read_channel_data
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open thermo port
-            err = dev.Thermal_open(port, timeout);
+            err = dev.Thermal_open(port, timeout:timeout);
             Console.WriteLine($"Thermal_open in port{port}: {err}");
 
             // Set thermo port and set K type in channel 1
-            err = dev.Thermal_setOverSampling(port, ch, Const.THERMAL_OVERSAMPLING_NONE, timeout);
+            err = dev.Thermal_setOverSampling(port, ch, Const.THERMAL_OVERSAMPLING_NONE, timeout:timeout);
             Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port{port}: {err}");
 
             // Set thermo port and set K type in channel 1
-            err = dev.Thermal_setType(port, ch, Const.THERMAL_COUPLE_TYPE_K, timeout);
+            err = dev.Thermal_setType(port, ch, Const.THERMAL_COUPLE_TYPE_K, timeout:timeout);
             Console.WriteLine($"Thermal_setType in channel {ch} in port{port}: {err}");
 
-            // Wait for at least 100 ms after setting type or oversampling
-            Thread.Sleep(100); // delay [ms]
+            // Wait for at least 500 ms after setting type or oversampling
+            Thread.Sleep(500); // delay [ms]
 
             // Set thermo port and read thermo in channel 1
-            float data = dev.Thermal_readSensor(port, ch, timeout);
+            float data = dev.Thermal_readSensor(port, ch, timeout:timeout);
             Console.WriteLine($"Read sensor in channel {ch} in port{port}: {data}°C");
 
             // Close thermo port
-            err = dev.Thermal_close(port, timeout);
+            err = dev.Thermal_close(port, timeout:timeout);
             Console.WriteLine($"Thermal_close in port{port}: {err}");
         }
         catch (Exception ex)

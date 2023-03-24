@@ -42,7 +42,6 @@ class USBDAQF1AOD_AO_waveform_generation
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
@@ -57,55 +56,55 @@ class USBDAQF1AOD_AO_waveform_generation
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AO port
-            err = dev.AO_open(port, timeout);
+            err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($"AO_open in port{port}: {err}");
 
             // Set AO enabled channels
-            err = dev.AO_setEnableChannels(port, AO_pins_enabled, timeout);
+            err = dev.AO_setEnableChannels(port, AO_pins_enabled, timeout:timeout);
             Console.WriteLine($"AO_setEnableChannels in port{port}: {err}");
 
             // Set AO form in channel 0
-            err = dev.AO_setForm(port, 0, Const.AO_FORM_TRIANGULAR, timeout);
+            err = dev.AO_setForm(port, 0, Const.AO_FORM_TRIANGULAR, timeout:timeout);
             Console.WriteLine($"AO_setForm in channel 0 in port{port}: {err}");
 
             // Set AO form in channel 1
-            err = dev.AO_setForm(port, 1, Const.AO_FORM_TRIANGULAR, timeout);
+            err = dev.AO_setForm(port, 1, Const.AO_FORM_TRIANGULAR, timeout:timeout);
             Console.WriteLine($"AO_setForm in channel 1 in port{port}: {err}");
 
             // Set Channel 0 form parameters
-            err = dev.AO_setFormParam(port, 0, amplitude, offset, period_0, timeout);
+            err = dev.AO_setFormParam(port, 0, amplitude, offset, period_0, timeout:timeout);
             Console.WriteLine($"AO_setFormParam in channel 0 in port{port}: {err}");
 
             // Set Channel 1 form parameters
-            err = dev.AO_setFormParam(port, 1, amplitude, offset, period_1, timeout);
+            err = dev.AO_setFormParam(port, 1, amplitude, offset, period_1, timeout:timeout);
             Console.WriteLine($"AO_setFormParam in channel 1 in port{port}: {err}");
 
             // Set AO port and generation mode
-            err = dev.AO_setMode(port, Const.AO_MODE_CONTINOUS, timeout);
+            err = dev.AO_setMode(port, Const.AO_MODE_CONTINOUS, timeout:timeout);
             Console.WriteLine($"AO_setMode in port{port}: {err}");
 
             // Set AO port and sampling rate to 1k (Hz)
-            err = dev.AO_setSamplingRate(port, sampling_rate, timeout);
+            err = dev.AO_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($"AO_setSamplingRate in port{port}: {err}");
 
             // Open AO streaming
-            List<int> AO_info = dev.AO_openStreaming(port, timeout);
+            List<int> AO_info = dev.AO_openStreaming(port, timeout:timeout);
             Console.WriteLine($"AO mode {AO_info[0]}, sampling rate {AO_info[1]}");
 
             // Start AO streaming
-            err = dev.AO_startStreaming(port, timeout);
+            err = dev.AO_startStreaming(port);
             Console.WriteLine($"AO_startStreaming in port{port}: {err}");
 
             // Wait for 5 sec
             Thread.Sleep(5000); // delay [ms]
 
             // Close AO streaming
-            err = dev.AO_closeStreaming(port, timeout);
+            err = dev.AO_closeStreaming(port, timeout:timeout);
             Console.WriteLine($"AO_closeStreaming in port{port}: {err}");
 
             // Close AO port

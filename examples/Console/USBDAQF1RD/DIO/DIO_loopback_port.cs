@@ -42,7 +42,6 @@ class USBDAQF1RD_DIO_loopback_port
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
@@ -52,32 +51,32 @@ class USBDAQF1RD_DIO_loopback_port
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open all pins with digital output
-            err = dev.DO_openPort(port_DO, timeout);
+            err = dev.DO_openPort(port_DO, timeout:timeout);
             Console.WriteLine($"DO_openPort in port{port_DO}: {err}");
 
             // Open all pins with digital input
-            err = dev.DI_openPort(port_DI, timeout);
+            err = dev.DI_openPort(port_DI, timeout:timeout);
             Console.WriteLine($"DO_openPort in port{port_DI}: {err}");
 
             // Set pin0, pin1 and pin2 to high, others to low
-            err = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 1, 0, 0, 0, 0 }, timeout);
+            err = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 1, 0, 0, 0, 0 }, timeout:timeout);
             Console.WriteLine($"DO_writePort in port{port_DO}: {err}");
 
             // Read all pins state
-            List<int> p = dev.DI_readPort(port_DI, timeout);
+            List<int> p = dev.DI_readPort(port_DI, timeout:timeout);
             Console.WriteLine($"DI_readPort: {p[0]}, {p[1]}, {p[2]}, {p[3]}, {p[4]}, {p[5]}, {p[6]}, {p[7]}");
 
             // Close all pins with digital output
-            err = dev.DO_closePort(port_DO, timeout);
+            err = dev.DO_closePort(port_DO, timeout:timeout);
             Console.WriteLine($"DO_closePort in port{port_DO}: {err}");
 
             // Close all pins with digital input
-            err = dev.DI_closePort(port_DI, timeout);
+            err = dev.DI_closePort(port_DI, timeout:timeout);
             Console.WriteLine($"DI_closePort in port{port_DI}: {err}");
         }
         catch (Exception ex)

@@ -245,12 +245,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IAIModule.AI_setSamplingRate
   nameWithType: IAIModule.AI_setSamplingRate
-- uid: WPC.Module.IAIModule.AI_start(System.Int32,System.Int32)
-  name: AI_start(Int32, Int32)
-  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_start_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IAIModule.AI_start(System.Int32,System.Int32)
-  fullName: WPC.Module.IAIModule.AI_start(System.Int32, System.Int32)
-  nameWithType: IAIModule.AI_start(Int32, Int32)
+- uid: WPC.Module.IAIModule.AI_start(System.Int32)
+  name: AI_start(Int32)
+  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_start_System_Int32_
+  commentId: M:WPC.Module.IAIModule.AI_start(System.Int32)
+  fullName: WPC.Module.IAIModule.AI_start(System.Int32)
+  nameWithType: IAIModule.AI_start(Int32)
 - uid: WPC.Module.IAIModule.AI_start*
   name: AI_start
   href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_start_
@@ -423,12 +423,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IAOModule.AO_setSamplingRate
   nameWithType: IAOModule.AO_setSamplingRate
-- uid: WPC.Module.IAOModule.AO_startStreaming(System.Int32,System.Int32)
-  name: AO_startStreaming(Int32, Int32)
-  href: api/WPC.Module.IAOModule.html#WPC_Module_IAOModule_AO_startStreaming_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IAOModule.AO_startStreaming(System.Int32,System.Int32)
-  fullName: WPC.Module.IAOModule.AO_startStreaming(System.Int32, System.Int32)
-  nameWithType: IAOModule.AO_startStreaming(Int32, Int32)
+- uid: WPC.Module.IAOModule.AO_startStreaming(System.Int32)
+  name: AO_startStreaming(Int32)
+  href: api/WPC.Module.IAOModule.html#WPC_Module_IAOModule_AO_startStreaming_System_Int32_
+  commentId: M:WPC.Module.IAOModule.AO_startStreaming(System.Int32)
+  fullName: WPC.Module.IAOModule.AO_startStreaming(System.Int32)
+  nameWithType: IAOModule.AO_startStreaming(Int32)
 - uid: WPC.Module.IAOModule.AO_startStreaming*
   name: AO_startStreaming
   href: api/WPC.Module.IAOModule.html#WPC_Module_IAOModule_AO_startStreaming_
@@ -607,12 +607,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ICANModule.CAN_setSpeed
   nameWithType: ICANModule.CAN_setSpeed
-- uid: WPC.Module.ICANModule.CAN_start(System.Int32,System.Int32)
-  name: CAN_start(Int32, Int32)
-  href: api/WPC.Module.ICANModule.html#WPC_Module_ICANModule_CAN_start_System_Int32_System_Int32_
-  commentId: M:WPC.Module.ICANModule.CAN_start(System.Int32,System.Int32)
-  fullName: WPC.Module.ICANModule.CAN_start(System.Int32, System.Int32)
-  nameWithType: ICANModule.CAN_start(Int32, Int32)
+- uid: WPC.Module.ICANModule.CAN_start(System.Int32)
+  name: CAN_start(Int32)
+  href: api/WPC.Module.ICANModule.html#WPC_Module_ICANModule_CAN_start_System_Int32_
+  commentId: M:WPC.Module.ICANModule.CAN_start(System.Int32)
+  fullName: WPC.Module.ICANModule.CAN_start(System.Int32)
+  nameWithType: ICANModule.CAN_start(Int32)
 - uid: WPC.Module.ICANModule.CAN_start*
   name: CAN_start
   href: api/WPC.Module.ICANModule.html#WPC_Module_ICANModule_CAN_start_
@@ -655,19 +655,6 @@ references:
   commentId: T:WPC.Module.IDataloggerModule
   fullName: WPC.Module.IDataloggerModule
   nameWithType: IDataloggerModule
-- uid: WPC.Module.IDataloggerModule.Logger_closeFile
-  name: Logger_closeFile()
-  href: api/WPC.Module.IDataloggerModule.html#WPC_Module_IDataloggerModule_Logger_closeFile
-  commentId: M:WPC.Module.IDataloggerModule.Logger_closeFile
-  fullName: WPC.Module.IDataloggerModule.Logger_closeFile()
-  nameWithType: IDataloggerModule.Logger_closeFile()
-- uid: WPC.Module.IDataloggerModule.Logger_closeFile*
-  name: Logger_closeFile
-  href: api/WPC.Module.IDataloggerModule.html#WPC_Module_IDataloggerModule_Logger_closeFile_
-  commentId: Overload:WPC.Module.IDataloggerModule.Logger_closeFile
-  isSpec: "True"
-  fullName: WPC.Module.IDataloggerModule.Logger_closeFile
-  nameWithType: IDataloggerModule.Logger_closeFile
 - uid: WPC.Module.IDataloggerModule.Logger_openFile(System.String)
   name: Logger_openFile(String)
   href: api/WPC.Module.IDataloggerModule.html#WPC_Module_IDataloggerModule_Logger_openFile_System_String_
@@ -1176,12 +1163,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_cfgEncoder
   nameWithType: IMotionModule.Motion_cfgEncoder
-- uid: WPC.Module.IMotionModule.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  name: Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
-  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IMotionModule.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Module.IMotionModule.Motion_cfgFindRef(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: IMotionModule.Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IMotionModule.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IMotionModule.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IMotionModule.Motion_cfgFindRef(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IMotionModule.Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
 - uid: WPC.Module.IMotionModule.Motion_cfgFindRef*
   name: Motion_cfgFindRef
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_cfgFindRef_
@@ -1306,12 +1293,25 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_enableCapture
   nameWithType: IMotionModule.Motion_enableCapture
-- uid: WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32,System.Int32,System.Int32,System.Int32)
-  name: Motion_enableServoOn(Int32, Int32, Int32, Int32)
-  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32,System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: IMotionModule.Motion_enableServoOn(Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IMotionModule.Motion_enableServoOff(System.Int32,System.Int32,System.Int32)
+  name: Motion_enableServoOff(Int32, Int32, Int32)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_enableServoOff_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IMotionModule.Motion_enableServoOff(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IMotionModule.Motion_enableServoOff(System.Int32, System.Int32, System.Int32)
+  nameWithType: IMotionModule.Motion_enableServoOff(Int32, Int32, Int32)
+- uid: WPC.Module.IMotionModule.Motion_enableServoOff*
+  name: Motion_enableServoOff
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_enableServoOff_
+  commentId: Overload:WPC.Module.IMotionModule.Motion_enableServoOff
+  isSpec: "True"
+  fullName: WPC.Module.IMotionModule.Motion_enableServoOff
+  nameWithType: IMotionModule.Motion_enableServoOff
+- uid: WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32,System.Int32,System.Int32)
+  name: Motion_enableServoOn(Int32, Int32, Int32)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IMotionModule.Motion_enableServoOn(System.Int32, System.Int32, System.Int32)
+  nameWithType: IMotionModule.Motion_enableServoOn(Int32, Int32, Int32)
 - uid: WPC.Module.IMotionModule.Motion_enableServoOn*
   name: Motion_enableServoOn
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_enableServoOn_
@@ -1332,6 +1332,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IMotionModule.Motion_findRef
   nameWithType: IMotionModule.Motion_findRef
+- uid: WPC.Module.IMotionModule.Motion_getEncoderPosi(System.Int32,System.Int32,System.Int32)
+  name: Motion_getEncoderPosi(Int32, Int32, Int32)
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_getEncoderPosi_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IMotionModule.Motion_getEncoderPosi(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IMotionModule.Motion_getEncoderPosi(System.Int32, System.Int32, System.Int32)
+  nameWithType: IMotionModule.Motion_getEncoderPosi(Int32, Int32, Int32)
+- uid: WPC.Module.IMotionModule.Motion_getEncoderPosi*
+  name: Motion_getEncoderPosi
+  href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_getEncoderPosi_
+  commentId: Overload:WPC.Module.IMotionModule.Motion_getEncoderPosi
+  isSpec: "True"
+  fullName: WPC.Module.IMotionModule.Motion_getEncoderPosi
+  nameWithType: IMotionModule.Motion_getEncoderPosi
 - uid: WPC.Module.IMotionModule.Motion_getHomeStatus(System.Int32,System.Int32,System.Int32)
   name: Motion_getHomeStatus(Int32, Int32, Int32)
   href: api/WPC.Module.IMotionModule.html#WPC_Module_IMotionModule_Motion_getHomeStatus_System_Int32_System_Int32_System_Int32_
@@ -1672,19 +1685,45 @@ references:
   commentId: T:WPC.Module.IRelayModule
   fullName: WPC.Module.IRelayModule
   nameWithType: IRelayModule
-- uid: WPC.Module.IRelayModule.Relay_read_async(System.Int32,System.Int32)
-  name: Relay_read_async(Int32, Int32)
-  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_read_async_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IRelayModule.Relay_read_async(System.Int32,System.Int32)
-  fullName: WPC.Module.IRelayModule.Relay_read_async(System.Int32, System.Int32)
-  nameWithType: IRelayModule.Relay_read_async(Int32, Int32)
-- uid: WPC.Module.IRelayModule.Relay_read_async*
-  name: Relay_read_async
-  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_read_async_
-  commentId: Overload:WPC.Module.IRelayModule.Relay_read_async
+- uid: WPC.Module.IRelayModule.Relay_close(System.Int32)
+  name: Relay_close(Int32)
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_close_System_Int32_
+  commentId: M:WPC.Module.IRelayModule.Relay_close(System.Int32)
+  fullName: WPC.Module.IRelayModule.Relay_close(System.Int32)
+  nameWithType: IRelayModule.Relay_close(Int32)
+- uid: WPC.Module.IRelayModule.Relay_close*
+  name: Relay_close
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_close_
+  commentId: Overload:WPC.Module.IRelayModule.Relay_close
   isSpec: "True"
-  fullName: WPC.Module.IRelayModule.Relay_read_async
-  nameWithType: IRelayModule.Relay_read_async
+  fullName: WPC.Module.IRelayModule.Relay_close
+  nameWithType: IRelayModule.Relay_close
+- uid: WPC.Module.IRelayModule.Relay_open(System.Int32)
+  name: Relay_open(Int32)
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_open_System_Int32_
+  commentId: M:WPC.Module.IRelayModule.Relay_open(System.Int32)
+  fullName: WPC.Module.IRelayModule.Relay_open(System.Int32)
+  nameWithType: IRelayModule.Relay_open(Int32)
+- uid: WPC.Module.IRelayModule.Relay_open*
+  name: Relay_open
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_open_
+  commentId: Overload:WPC.Module.IRelayModule.Relay_open
+  isSpec: "True"
+  fullName: WPC.Module.IRelayModule.Relay_open
+  nameWithType: IRelayModule.Relay_open
+- uid: WPC.Module.IRelayModule.Relay_read(System.Int32,System.Int32)
+  name: Relay_read(Int32, Int32)
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_read_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IRelayModule.Relay_read(System.Int32,System.Int32)
+  fullName: WPC.Module.IRelayModule.Relay_read(System.Int32, System.Int32)
+  nameWithType: IRelayModule.Relay_read(Int32, Int32)
+- uid: WPC.Module.IRelayModule.Relay_read*
+  name: Relay_read
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_read_
+  commentId: Overload:WPC.Module.IRelayModule.Relay_read
+  isSpec: "True"
+  fullName: WPC.Module.IRelayModule.Relay_read
+  nameWithType: IRelayModule.Relay_read
 - uid: WPC.Module.ISPIModule
   name: ISPIModule
   href: api/WPC.Module.ISPIModule.html
@@ -2233,98 +2272,6 @@ references:
   commentId: N:WPC.Product
   fullName: WPC.Product
   nameWithType: WPC.Product
-- uid: WPC.Product.Datalogger
-  name: Datalogger
-  href: api/WPC.Product.Datalogger.html
-  commentId: T:WPC.Product.Datalogger
-  fullName: WPC.Product.Datalogger
-  nameWithType: Datalogger
-- uid: WPC.Product.Datalogger.#ctor
-  name: Datalogger()
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger__ctor
-  commentId: M:WPC.Product.Datalogger.#ctor
-  fullName: WPC.Product.Datalogger.Datalogger()
-  nameWithType: Datalogger.Datalogger()
-- uid: WPC.Product.Datalogger.#ctor*
-  name: Datalogger
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger__ctor_
-  commentId: Overload:WPC.Product.Datalogger.#ctor
-  isSpec: "True"
-  fullName: WPC.Product.Datalogger.Datalogger
-  nameWithType: Datalogger.Datalogger
-- uid: WPC.Product.Datalogger.Logger_closeFile
-  name: Logger_closeFile()
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_closeFile
-  commentId: M:WPC.Product.Datalogger.Logger_closeFile
-  fullName: WPC.Product.Datalogger.Logger_closeFile()
-  nameWithType: Datalogger.Logger_closeFile()
-- uid: WPC.Product.Datalogger.Logger_closeFile*
-  name: Logger_closeFile
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_closeFile_
-  commentId: Overload:WPC.Product.Datalogger.Logger_closeFile
-  isSpec: "True"
-  fullName: WPC.Product.Datalogger.Logger_closeFile
-  nameWithType: Datalogger.Logger_closeFile
-- uid: WPC.Product.Datalogger.Logger_openFile(System.String)
-  name: Logger_openFile(String)
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_openFile_System_String_
-  commentId: M:WPC.Product.Datalogger.Logger_openFile(System.String)
-  fullName: WPC.Product.Datalogger.Logger_openFile(System.String)
-  nameWithType: Datalogger.Logger_openFile(String)
-- uid: WPC.Product.Datalogger.Logger_openFile*
-  name: Logger_openFile
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_openFile_
-  commentId: Overload:WPC.Product.Datalogger.Logger_openFile
-  isSpec: "True"
-  fullName: WPC.Product.Datalogger.Logger_openFile
-  nameWithType: Datalogger.Logger_openFile
-- uid: WPC.Product.Datalogger.Logger_writeList(List{System.Double})
-  name: Logger_writeList(List<Double>)
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeList_List_System_Double__
-  commentId: M:WPC.Product.Datalogger.Logger_writeList(List{System.Double})
-  name.vb: Logger_writeList(List(Of Double))
-  fullName: WPC.Product.Datalogger.Logger_writeList(List<System.Double>)
-  fullName.vb: WPC.Product.Datalogger.Logger_writeList(List(Of System.Double))
-  nameWithType: Datalogger.Logger_writeList(List<Double>)
-  nameWithType.vb: Datalogger.Logger_writeList(List(Of Double))
-- uid: WPC.Product.Datalogger.Logger_writeList(List{System.Int32})
-  name: Logger_writeList(List<Int32>)
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeList_List_System_Int32__
-  commentId: M:WPC.Product.Datalogger.Logger_writeList(List{System.Int32})
-  name.vb: Logger_writeList(List(Of Int32))
-  fullName: WPC.Product.Datalogger.Logger_writeList(List<System.Int32>)
-  fullName.vb: WPC.Product.Datalogger.Logger_writeList(List(Of System.Int32))
-  nameWithType: Datalogger.Logger_writeList(List<Int32>)
-  nameWithType.vb: Datalogger.Logger_writeList(List(Of Int32))
-- uid: WPC.Product.Datalogger.Logger_writeList(List{System.Single})
-  name: Logger_writeList(List<Single>)
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeList_List_System_Single__
-  commentId: M:WPC.Product.Datalogger.Logger_writeList(List{System.Single})
-  name.vb: Logger_writeList(List(Of Single))
-  fullName: WPC.Product.Datalogger.Logger_writeList(List<System.Single>)
-  fullName.vb: WPC.Product.Datalogger.Logger_writeList(List(Of System.Single))
-  nameWithType: Datalogger.Logger_writeList(List<Single>)
-  nameWithType.vb: Datalogger.Logger_writeList(List(Of Single))
-- uid: WPC.Product.Datalogger.Logger_writeList*
-  name: Logger_writeList
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeList_
-  commentId: Overload:WPC.Product.Datalogger.Logger_writeList
-  isSpec: "True"
-  fullName: WPC.Product.Datalogger.Logger_writeList
-  nameWithType: Datalogger.Logger_writeList
-- uid: WPC.Product.Datalogger.Logger_writeValue(System.String)
-  name: Logger_writeValue(String)
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeValue_System_String_
-  commentId: M:WPC.Product.Datalogger.Logger_writeValue(System.String)
-  fullName: WPC.Product.Datalogger.Logger_writeValue(System.String)
-  nameWithType: Datalogger.Logger_writeValue(String)
-- uid: WPC.Product.Datalogger.Logger_writeValue*
-  name: Logger_writeValue
-  href: api/WPC.Product.Datalogger.html#WPC_Product_Datalogger_Logger_writeValue_
-  commentId: Overload:WPC.Product.Datalogger.Logger_writeValue
-  isSpec: "True"
-  fullName: WPC.Product.Datalogger.Logger_writeValue
-  nameWithType: Datalogger.Logger_writeValue
 - uid: WPC.Product.DeviceFinder
   name: DeviceFinder
   href: api/WPC.Product.DeviceFinder.html
@@ -2493,6 +2440,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.disconnect
   nameWithType: EMotion.disconnect
+- uid: WPC.Product.EMotion.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Logger_openFile_System_String_
+  commentId: M:WPC.Product.EMotion.Logger_openFile(System.String)
+  fullName: WPC.Product.EMotion.Logger_openFile(System.String)
+  nameWithType: EMotion.Logger_openFile(String)
+- uid: WPC.Product.EMotion.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Logger_openFile_
+  commentId: Overload:WPC.Product.EMotion.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Logger_openFile
+  nameWithType: EMotion.Logger_openFile
+- uid: WPC.Product.EMotion.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.EMotion.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.EMotion.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.EMotion.Logger_writeList(List(Of System.Double))
+  nameWithType: EMotion.Logger_writeList(List<Double>)
+  nameWithType.vb: EMotion.Logger_writeList(List(Of Double))
+- uid: WPC.Product.EMotion.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.EMotion.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.EMotion.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.EMotion.Logger_writeList(List(Of System.Int32))
+  nameWithType: EMotion.Logger_writeList(List<Int32>)
+  nameWithType.vb: EMotion.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.EMotion.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.EMotion.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.EMotion.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.EMotion.Logger_writeList(List(Of System.Single))
+  nameWithType: EMotion.Logger_writeList(List<Single>)
+  nameWithType.vb: EMotion.Logger_writeList(List(Of Single))
+- uid: WPC.Product.EMotion.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Logger_writeList_
+  commentId: Overload:WPC.Product.EMotion.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Logger_writeList
+  nameWithType: EMotion.Logger_writeList
+- uid: WPC.Product.EMotion.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.EMotion.Logger_writeValue(System.String)
+  fullName: WPC.Product.EMotion.Logger_writeValue(System.String)
+  nameWithType: EMotion.Logger_writeValue(String)
+- uid: WPC.Product.EMotion.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Logger_writeValue_
+  commentId: Overload:WPC.Product.EMotion.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Logger_writeValue
+  nameWithType: EMotion.Logger_writeValue
 - uid: WPC.Product.EMotion.Motion_cfg2AxisLinearInterpo(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   name: Motion_cfg2AxisLinearInterpo(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_cfg2AxisLinearInterpo_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
@@ -2623,12 +2630,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Motion_cfgEncoder
   nameWithType: EMotion.Motion_cfgEncoder
-- uid: WPC.Product.EMotion.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  name: Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
-  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EMotion.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Product.EMotion.Motion_cfgFindRef(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: EMotion.Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EMotion.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Motion_cfgFindRef(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EMotion.Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
 - uid: WPC.Product.EMotion.Motion_cfgFindRef*
   name: Motion_cfgFindRef
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_cfgFindRef_
@@ -2753,12 +2760,25 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Motion_enableCapture
   nameWithType: EMotion.Motion_enableCapture
-- uid: WPC.Product.EMotion.Motion_enableServoOn(System.Int32,System.Int32,System.Int32,System.Int32)
-  name: Motion_enableServoOn(Int32, Int32, Int32, Int32)
-  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EMotion.Motion_enableServoOn(System.Int32,System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Product.EMotion.Motion_enableServoOn(System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: EMotion.Motion_enableServoOn(Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EMotion.Motion_enableServoOff(System.Int32,System.Int32,System.Int32)
+  name: Motion_enableServoOff(Int32, Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_enableServoOff_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Motion_enableServoOff(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Motion_enableServoOff(System.Int32, System.Int32, System.Int32)
+  nameWithType: EMotion.Motion_enableServoOff(Int32, Int32, Int32)
+- uid: WPC.Product.EMotion.Motion_enableServoOff*
+  name: Motion_enableServoOff
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_enableServoOff_
+  commentId: Overload:WPC.Product.EMotion.Motion_enableServoOff
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Motion_enableServoOff
+  nameWithType: EMotion.Motion_enableServoOff
+- uid: WPC.Product.EMotion.Motion_enableServoOn(System.Int32,System.Int32,System.Int32)
+  name: Motion_enableServoOn(Int32, Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Motion_enableServoOn(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Motion_enableServoOn(System.Int32, System.Int32, System.Int32)
+  nameWithType: EMotion.Motion_enableServoOn(Int32, Int32, Int32)
 - uid: WPC.Product.EMotion.Motion_enableServoOn*
   name: Motion_enableServoOn
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_enableServoOn_
@@ -2779,6 +2799,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Motion_findRef
   nameWithType: EMotion.Motion_findRef
+- uid: WPC.Product.EMotion.Motion_getEncoderPosi(System.Int32,System.Int32,System.Int32)
+  name: Motion_getEncoderPosi(Int32, Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_getEncoderPosi_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Motion_getEncoderPosi(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Motion_getEncoderPosi(System.Int32, System.Int32, System.Int32)
+  nameWithType: EMotion.Motion_getEncoderPosi(Int32, Int32, Int32)
+- uid: WPC.Product.EMotion.Motion_getEncoderPosi*
+  name: Motion_getEncoderPosi
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_getEncoderPosi_
+  commentId: Overload:WPC.Product.EMotion.Motion_getEncoderPosi
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Motion_getEncoderPosi
+  nameWithType: EMotion.Motion_getEncoderPosi
 - uid: WPC.Product.EMotion.Motion_getHomeStatus(System.Int32,System.Int32,System.Int32)
   name: Motion_getHomeStatus(Int32, Int32, Int32)
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Motion_getHomeStatus_System_Int32_System_Int32_System_Int32_
@@ -3308,12 +3341,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.AI_setSamplingRate
   nameWithType: EthanA.AI_setSamplingRate
-- uid: WPC.Product.EthanA.AI_start(System.Int32,System.Int32)
-  name: AI_start(Int32, Int32)
-  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_start_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EthanA.AI_start(System.Int32,System.Int32)
-  fullName: WPC.Product.EthanA.AI_start(System.Int32, System.Int32)
-  nameWithType: EthanA.AI_start(Int32, Int32)
+- uid: WPC.Product.EthanA.AI_start(System.Int32)
+  name: AI_start(Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_start_System_Int32_
+  commentId: M:WPC.Product.EthanA.AI_start(System.Int32)
+  fullName: WPC.Product.EthanA.AI_start(System.Int32)
+  nameWithType: EthanA.AI_start(Int32)
 - uid: WPC.Product.EthanA.AI_start*
   name: AI_start
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_start_
@@ -3373,6 +3406,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.disconnect
   nameWithType: EthanA.disconnect
+- uid: WPC.Product.EthanA.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Logger_openFile_System_String_
+  commentId: M:WPC.Product.EthanA.Logger_openFile(System.String)
+  fullName: WPC.Product.EthanA.Logger_openFile(System.String)
+  nameWithType: EthanA.Logger_openFile(String)
+- uid: WPC.Product.EthanA.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Logger_openFile_
+  commentId: Overload:WPC.Product.EthanA.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Logger_openFile
+  nameWithType: EthanA.Logger_openFile
+- uid: WPC.Product.EthanA.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.EthanA.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.EthanA.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.EthanA.Logger_writeList(List(Of System.Double))
+  nameWithType: EthanA.Logger_writeList(List<Double>)
+  nameWithType.vb: EthanA.Logger_writeList(List(Of Double))
+- uid: WPC.Product.EthanA.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.EthanA.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.EthanA.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.EthanA.Logger_writeList(List(Of System.Int32))
+  nameWithType: EthanA.Logger_writeList(List<Int32>)
+  nameWithType.vb: EthanA.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.EthanA.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.EthanA.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.EthanA.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.EthanA.Logger_writeList(List(Of System.Single))
+  nameWithType: EthanA.Logger_writeList(List<Single>)
+  nameWithType.vb: EthanA.Logger_writeList(List(Of Single))
+- uid: WPC.Product.EthanA.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Logger_writeList_
+  commentId: Overload:WPC.Product.EthanA.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Logger_writeList
+  nameWithType: EthanA.Logger_writeList
+- uid: WPC.Product.EthanA.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.EthanA.Logger_writeValue(System.String)
+  fullName: WPC.Product.EthanA.Logger_writeValue(System.String)
+  nameWithType: EthanA.Logger_writeValue(String)
+- uid: WPC.Product.EthanA.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Logger_writeValue_
+  commentId: Overload:WPC.Product.EthanA.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Logger_writeValue
+  nameWithType: EthanA.Logger_writeValue
 - uid: WPC.Product.EthanA.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_getDriverInfo_System_Int32_
@@ -3767,6 +3860,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanD.DO_writePort
   nameWithType: EthanD.DO_writePort
+- uid: WPC.Product.EthanD.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Logger_openFile_System_String_
+  commentId: M:WPC.Product.EthanD.Logger_openFile(System.String)
+  fullName: WPC.Product.EthanD.Logger_openFile(System.String)
+  nameWithType: EthanD.Logger_openFile(String)
+- uid: WPC.Product.EthanD.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Logger_openFile_
+  commentId: Overload:WPC.Product.EthanD.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Logger_openFile
+  nameWithType: EthanD.Logger_openFile
+- uid: WPC.Product.EthanD.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.EthanD.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.EthanD.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.EthanD.Logger_writeList(List(Of System.Double))
+  nameWithType: EthanD.Logger_writeList(List<Double>)
+  nameWithType.vb: EthanD.Logger_writeList(List(Of Double))
+- uid: WPC.Product.EthanD.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.EthanD.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.EthanD.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.EthanD.Logger_writeList(List(Of System.Int32))
+  nameWithType: EthanD.Logger_writeList(List<Int32>)
+  nameWithType.vb: EthanD.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.EthanD.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.EthanD.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.EthanD.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.EthanD.Logger_writeList(List(Of System.Single))
+  nameWithType: EthanD.Logger_writeList(List<Single>)
+  nameWithType.vb: EthanD.Logger_writeList(List(Of Single))
+- uid: WPC.Product.EthanD.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Logger_writeList_
+  commentId: Overload:WPC.Product.EthanD.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Logger_writeList
+  nameWithType: EthanD.Logger_writeList
+- uid: WPC.Product.EthanD.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.EthanD.Logger_writeValue(System.String)
+  fullName: WPC.Product.EthanD.Logger_writeValue(System.String)
+  nameWithType: EthanD.Logger_writeValue(String)
+- uid: WPC.Product.EthanD.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Logger_writeValue_
+  commentId: Overload:WPC.Product.EthanD.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Logger_writeValue
+  nameWithType: EthanD.Logger_writeValue
 - uid: WPC.Product.EthanD.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_getDriverInfo_System_Int32_
@@ -4161,19 +4314,105 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.DO_writePort
   nameWithType: EthanL.DO_writePort
-- uid: WPC.Product.EthanL.Relay_read_async(System.Int32,System.Int32)
-  name: Relay_read_async(Int32, Int32)
-  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_read_async_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EthanL.Relay_read_async(System.Int32,System.Int32)
-  fullName: WPC.Product.EthanL.Relay_read_async(System.Int32, System.Int32)
-  nameWithType: EthanL.Relay_read_async(Int32, Int32)
-- uid: WPC.Product.EthanL.Relay_read_async*
-  name: Relay_read_async
-  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_read_async_
-  commentId: Overload:WPC.Product.EthanL.Relay_read_async
+- uid: WPC.Product.EthanL.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Logger_openFile_System_String_
+  commentId: M:WPC.Product.EthanL.Logger_openFile(System.String)
+  fullName: WPC.Product.EthanL.Logger_openFile(System.String)
+  nameWithType: EthanL.Logger_openFile(String)
+- uid: WPC.Product.EthanL.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Logger_openFile_
+  commentId: Overload:WPC.Product.EthanL.Logger_openFile
   isSpec: "True"
-  fullName: WPC.Product.EthanL.Relay_read_async
-  nameWithType: EthanL.Relay_read_async
+  fullName: WPC.Product.EthanL.Logger_openFile
+  nameWithType: EthanL.Logger_openFile
+- uid: WPC.Product.EthanL.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.EthanL.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.EthanL.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.EthanL.Logger_writeList(List(Of System.Double))
+  nameWithType: EthanL.Logger_writeList(List<Double>)
+  nameWithType.vb: EthanL.Logger_writeList(List(Of Double))
+- uid: WPC.Product.EthanL.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.EthanL.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.EthanL.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.EthanL.Logger_writeList(List(Of System.Int32))
+  nameWithType: EthanL.Logger_writeList(List<Int32>)
+  nameWithType.vb: EthanL.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.EthanL.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.EthanL.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.EthanL.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.EthanL.Logger_writeList(List(Of System.Single))
+  nameWithType: EthanL.Logger_writeList(List<Single>)
+  nameWithType.vb: EthanL.Logger_writeList(List(Of Single))
+- uid: WPC.Product.EthanL.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Logger_writeList_
+  commentId: Overload:WPC.Product.EthanL.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Logger_writeList
+  nameWithType: EthanL.Logger_writeList
+- uid: WPC.Product.EthanL.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.EthanL.Logger_writeValue(System.String)
+  fullName: WPC.Product.EthanL.Logger_writeValue(System.String)
+  nameWithType: EthanL.Logger_writeValue(String)
+- uid: WPC.Product.EthanL.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Logger_writeValue_
+  commentId: Overload:WPC.Product.EthanL.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Logger_writeValue
+  nameWithType: EthanL.Logger_writeValue
+- uid: WPC.Product.EthanL.Relay_close(System.Int32)
+  name: Relay_close(Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_close_System_Int32_
+  commentId: M:WPC.Product.EthanL.Relay_close(System.Int32)
+  fullName: WPC.Product.EthanL.Relay_close(System.Int32)
+  nameWithType: EthanL.Relay_close(Int32)
+- uid: WPC.Product.EthanL.Relay_close*
+  name: Relay_close
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_close_
+  commentId: Overload:WPC.Product.EthanL.Relay_close
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Relay_close
+  nameWithType: EthanL.Relay_close
+- uid: WPC.Product.EthanL.Relay_open(System.Int32)
+  name: Relay_open(Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_open_System_Int32_
+  commentId: M:WPC.Product.EthanL.Relay_open(System.Int32)
+  fullName: WPC.Product.EthanL.Relay_open(System.Int32)
+  nameWithType: EthanL.Relay_open(Int32)
+- uid: WPC.Product.EthanL.Relay_open*
+  name: Relay_open
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_open_
+  commentId: Overload:WPC.Product.EthanL.Relay_open
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Relay_open
+  nameWithType: EthanL.Relay_open
+- uid: WPC.Product.EthanL.Relay_read(System.Int32,System.Int32)
+  name: Relay_read(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_read_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Relay_read(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Relay_read(System.Int32, System.Int32)
+  nameWithType: EthanL.Relay_read(Int32, Int32)
+- uid: WPC.Product.EthanL.Relay_read*
+  name: Relay_read
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_read_
+  commentId: Overload:WPC.Product.EthanL.Relay_read
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Relay_read
+  nameWithType: EthanL.Relay_read
 - uid: WPC.Product.EthanL.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_getDriverInfo_System_Int32_
@@ -4469,12 +4708,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanO.AO_setSamplingRate
   nameWithType: EthanO.AO_setSamplingRate
-- uid: WPC.Product.EthanO.AO_startStreaming(System.Int32,System.Int32)
-  name: AO_startStreaming(Int32, Int32)
-  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_AO_startStreaming_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EthanO.AO_startStreaming(System.Int32,System.Int32)
-  fullName: WPC.Product.EthanO.AO_startStreaming(System.Int32, System.Int32)
-  nameWithType: EthanO.AO_startStreaming(Int32, Int32)
+- uid: WPC.Product.EthanO.AO_startStreaming(System.Int32)
+  name: AO_startStreaming(Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_AO_startStreaming_System_Int32_
+  commentId: M:WPC.Product.EthanO.AO_startStreaming(System.Int32)
+  fullName: WPC.Product.EthanO.AO_startStreaming(System.Int32)
+  nameWithType: EthanO.AO_startStreaming(Int32)
 - uid: WPC.Product.EthanO.AO_startStreaming*
   name: AO_startStreaming
   href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_AO_startStreaming_
@@ -4550,6 +4789,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanO.disconnect
   nameWithType: EthanO.disconnect
+- uid: WPC.Product.EthanO.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Logger_openFile_System_String_
+  commentId: M:WPC.Product.EthanO.Logger_openFile(System.String)
+  fullName: WPC.Product.EthanO.Logger_openFile(System.String)
+  nameWithType: EthanO.Logger_openFile(String)
+- uid: WPC.Product.EthanO.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Logger_openFile_
+  commentId: Overload:WPC.Product.EthanO.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Logger_openFile
+  nameWithType: EthanO.Logger_openFile
+- uid: WPC.Product.EthanO.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.EthanO.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.EthanO.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.EthanO.Logger_writeList(List(Of System.Double))
+  nameWithType: EthanO.Logger_writeList(List<Double>)
+  nameWithType.vb: EthanO.Logger_writeList(List(Of Double))
+- uid: WPC.Product.EthanO.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.EthanO.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.EthanO.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.EthanO.Logger_writeList(List(Of System.Int32))
+  nameWithType: EthanO.Logger_writeList(List<Int32>)
+  nameWithType.vb: EthanO.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.EthanO.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.EthanO.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.EthanO.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.EthanO.Logger_writeList(List(Of System.Single))
+  nameWithType: EthanO.Logger_writeList(List<Single>)
+  nameWithType.vb: EthanO.Logger_writeList(List(Of Single))
+- uid: WPC.Product.EthanO.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Logger_writeList_
+  commentId: Overload:WPC.Product.EthanO.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Logger_writeList
+  nameWithType: EthanO.Logger_writeList
+- uid: WPC.Product.EthanO.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.EthanO.Logger_writeValue(System.String)
+  fullName: WPC.Product.EthanO.Logger_writeValue(System.String)
+  nameWithType: EthanO.Logger_writeValue(String)
+- uid: WPC.Product.EthanO.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Logger_writeValue_
+  commentId: Overload:WPC.Product.EthanO.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Logger_writeValue
+  nameWithType: EthanO.Logger_writeValue
 - uid: WPC.Product.EthanO.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_getDriverInfo_System_Int32_
@@ -4790,12 +5089,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.AI_setSamplingRate
   nameWithType: USBDAQF1AD.AI_setSamplingRate
-- uid: WPC.Product.USBDAQF1AD.AI_start(System.Int32,System.Int32)
-  name: AI_start(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_start_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AD.AI_start(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AD.AI_start(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AD.AI_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.AI_start(System.Int32)
+  name: AI_start(Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_start_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.AI_start(System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.AI_start(System.Int32)
+  nameWithType: USBDAQF1AD.AI_start(Int32)
 - uid: WPC.Product.USBDAQF1AD.AI_start*
   name: AI_start
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_start_
@@ -5155,6 +5454,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.I2C_write
   nameWithType: USBDAQF1AD.I2C_write
+- uid: WPC.Product.USBDAQF1AD.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Logger_openFile_System_String_
+  commentId: M:WPC.Product.USBDAQF1AD.Logger_openFile(System.String)
+  fullName: WPC.Product.USBDAQF1AD.Logger_openFile(System.String)
+  nameWithType: USBDAQF1AD.Logger_openFile(String)
+- uid: WPC.Product.USBDAQF1AD.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Logger_openFile_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Logger_openFile
+  nameWithType: USBDAQF1AD.Logger_openFile
+- uid: WPC.Product.USBDAQF1AD.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.USBDAQF1AD.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.USBDAQF1AD.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.USBDAQF1AD.Logger_writeList(List(Of System.Double))
+  nameWithType: USBDAQF1AD.Logger_writeList(List<Double>)
+  nameWithType.vb: USBDAQF1AD.Logger_writeList(List(Of Double))
+- uid: WPC.Product.USBDAQF1AD.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.USBDAQF1AD.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.USBDAQF1AD.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.USBDAQF1AD.Logger_writeList(List(Of System.Int32))
+  nameWithType: USBDAQF1AD.Logger_writeList(List<Int32>)
+  nameWithType.vb: USBDAQF1AD.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.USBDAQF1AD.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.USBDAQF1AD.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.USBDAQF1AD.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.USBDAQF1AD.Logger_writeList(List(Of System.Single))
+  nameWithType: USBDAQF1AD.Logger_writeList(List<Single>)
+  nameWithType.vb: USBDAQF1AD.Logger_writeList(List(Of Single))
+- uid: WPC.Product.USBDAQF1AD.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Logger_writeList_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Logger_writeList
+  nameWithType: USBDAQF1AD.Logger_writeList
+- uid: WPC.Product.USBDAQF1AD.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.USBDAQF1AD.Logger_writeValue(System.String)
+  fullName: WPC.Product.USBDAQF1AD.Logger_writeValue(System.String)
+  nameWithType: USBDAQF1AD.Logger_writeValue(String)
+- uid: WPC.Product.USBDAQF1AD.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Logger_writeValue_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Logger_writeValue
+  nameWithType: USBDAQF1AD.Logger_writeValue
 - uid: WPC.Product.USBDAQF1AD.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_SPI_close_System_Int32_System_Int32_
@@ -5609,12 +5968,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.AI_setSamplingRate
   nameWithType: USBDAQF1AOD.AI_setSamplingRate
-- uid: WPC.Product.USBDAQF1AOD.AI_start(System.Int32,System.Int32)
-  name: AI_start(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_start_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AOD.AI_start(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AOD.AI_start(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AOD.AI_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.AI_start(System.Int32)
+  name: AI_start(Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_start_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.AI_start(System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.AI_start(System.Int32)
+  nameWithType: USBDAQF1AOD.AI_start(Int32)
 - uid: WPC.Product.USBDAQF1AOD.AI_start*
   name: AI_start
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_start_
@@ -5781,12 +6140,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.AO_setSamplingRate
   nameWithType: USBDAQF1AOD.AO_setSamplingRate
-- uid: WPC.Product.USBDAQF1AOD.AO_startStreaming(System.Int32,System.Int32)
-  name: AO_startStreaming(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AO_startStreaming_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AOD.AO_startStreaming(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AOD.AO_startStreaming(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AOD.AO_startStreaming(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.AO_startStreaming(System.Int32)
+  name: AO_startStreaming(Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AO_startStreaming_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.AO_startStreaming(System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.AO_startStreaming(System.Int32)
+  nameWithType: USBDAQF1AOD.AO_startStreaming(Int32)
 - uid: WPC.Product.USBDAQF1AOD.AO_startStreaming*
   name: AO_startStreaming
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AO_startStreaming_
@@ -6162,6 +6521,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.I2C_write
   nameWithType: USBDAQF1AOD.I2C_write
+- uid: WPC.Product.USBDAQF1AOD.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Logger_openFile_System_String_
+  commentId: M:WPC.Product.USBDAQF1AOD.Logger_openFile(System.String)
+  fullName: WPC.Product.USBDAQF1AOD.Logger_openFile(System.String)
+  nameWithType: USBDAQF1AOD.Logger_openFile(String)
+- uid: WPC.Product.USBDAQF1AOD.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Logger_openFile_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Logger_openFile
+  nameWithType: USBDAQF1AOD.Logger_openFile
+- uid: WPC.Product.USBDAQF1AOD.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.USBDAQF1AOD.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.USBDAQF1AOD.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.USBDAQF1AOD.Logger_writeList(List(Of System.Double))
+  nameWithType: USBDAQF1AOD.Logger_writeList(List<Double>)
+  nameWithType.vb: USBDAQF1AOD.Logger_writeList(List(Of Double))
+- uid: WPC.Product.USBDAQF1AOD.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.USBDAQF1AOD.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.USBDAQF1AOD.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.USBDAQF1AOD.Logger_writeList(List(Of System.Int32))
+  nameWithType: USBDAQF1AOD.Logger_writeList(List<Int32>)
+  nameWithType.vb: USBDAQF1AOD.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.USBDAQF1AOD.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.USBDAQF1AOD.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.USBDAQF1AOD.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.USBDAQF1AOD.Logger_writeList(List(Of System.Single))
+  nameWithType: USBDAQF1AOD.Logger_writeList(List<Single>)
+  nameWithType.vb: USBDAQF1AOD.Logger_writeList(List(Of Single))
+- uid: WPC.Product.USBDAQF1AOD.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Logger_writeList_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Logger_writeList
+  nameWithType: USBDAQF1AOD.Logger_writeList
+- uid: WPC.Product.USBDAQF1AOD.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.USBDAQF1AOD.Logger_writeValue(System.String)
+  fullName: WPC.Product.USBDAQF1AOD.Logger_writeValue(System.String)
+  nameWithType: USBDAQF1AOD.Logger_writeValue(String)
+- uid: WPC.Product.USBDAQF1AOD.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Logger_writeValue_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Logger_writeValue
+  nameWithType: USBDAQF1AOD.Logger_writeValue
 - uid: WPC.Product.USBDAQF1AOD.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_getDriverInfo_System_Int32_
@@ -6467,12 +6886,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.CAN_setSpeed
   nameWithType: USBDAQF1CD.CAN_setSpeed
-- uid: WPC.Product.USBDAQF1CD.CAN_start(System.Int32,System.Int32)
-  name: CAN_start(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_CAN_start_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1CD.CAN_start(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1CD.CAN_start(System.Int32, System.Int32)
-  nameWithType: USBDAQF1CD.CAN_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.CAN_start(System.Int32)
+  name: CAN_start(Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_CAN_start_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.CAN_start(System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.CAN_start(System.Int32)
+  nameWithType: USBDAQF1CD.CAN_start(Int32)
 - uid: WPC.Product.USBDAQF1CD.CAN_start*
   name: CAN_start
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_CAN_start_
@@ -6848,6 +7267,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.I2C_write
   nameWithType: USBDAQF1CD.I2C_write
+- uid: WPC.Product.USBDAQF1CD.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Logger_openFile_System_String_
+  commentId: M:WPC.Product.USBDAQF1CD.Logger_openFile(System.String)
+  fullName: WPC.Product.USBDAQF1CD.Logger_openFile(System.String)
+  nameWithType: USBDAQF1CD.Logger_openFile(String)
+- uid: WPC.Product.USBDAQF1CD.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Logger_openFile_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Logger_openFile
+  nameWithType: USBDAQF1CD.Logger_openFile
+- uid: WPC.Product.USBDAQF1CD.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.USBDAQF1CD.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.USBDAQF1CD.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.USBDAQF1CD.Logger_writeList(List(Of System.Double))
+  nameWithType: USBDAQF1CD.Logger_writeList(List<Double>)
+  nameWithType.vb: USBDAQF1CD.Logger_writeList(List(Of Double))
+- uid: WPC.Product.USBDAQF1CD.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.USBDAQF1CD.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.USBDAQF1CD.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.USBDAQF1CD.Logger_writeList(List(Of System.Int32))
+  nameWithType: USBDAQF1CD.Logger_writeList(List<Int32>)
+  nameWithType.vb: USBDAQF1CD.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.USBDAQF1CD.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.USBDAQF1CD.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.USBDAQF1CD.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.USBDAQF1CD.Logger_writeList(List(Of System.Single))
+  nameWithType: USBDAQF1CD.Logger_writeList(List<Single>)
+  nameWithType.vb: USBDAQF1CD.Logger_writeList(List(Of Single))
+- uid: WPC.Product.USBDAQF1CD.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Logger_writeList_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Logger_writeList
+  nameWithType: USBDAQF1CD.Logger_writeList
+- uid: WPC.Product.USBDAQF1CD.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.USBDAQF1CD.Logger_writeValue(System.String)
+  fullName: WPC.Product.USBDAQF1CD.Logger_writeValue(System.String)
+  nameWithType: USBDAQF1CD.Logger_writeValue(String)
+- uid: WPC.Product.USBDAQF1CD.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Logger_writeValue_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Logger_writeValue
+  nameWithType: USBDAQF1CD.Logger_writeValue
 - uid: WPC.Product.USBDAQF1CD.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_SPI_close_System_Int32_System_Int32_
@@ -7550,6 +8029,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.I2C_write
   nameWithType: USBDAQF1D.I2C_write
+- uid: WPC.Product.USBDAQF1D.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Logger_openFile_System_String_
+  commentId: M:WPC.Product.USBDAQF1D.Logger_openFile(System.String)
+  fullName: WPC.Product.USBDAQF1D.Logger_openFile(System.String)
+  nameWithType: USBDAQF1D.Logger_openFile(String)
+- uid: WPC.Product.USBDAQF1D.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Logger_openFile_
+  commentId: Overload:WPC.Product.USBDAQF1D.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Logger_openFile
+  nameWithType: USBDAQF1D.Logger_openFile
+- uid: WPC.Product.USBDAQF1D.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.USBDAQF1D.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.USBDAQF1D.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.USBDAQF1D.Logger_writeList(List(Of System.Double))
+  nameWithType: USBDAQF1D.Logger_writeList(List<Double>)
+  nameWithType.vb: USBDAQF1D.Logger_writeList(List(Of Double))
+- uid: WPC.Product.USBDAQF1D.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.USBDAQF1D.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.USBDAQF1D.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.USBDAQF1D.Logger_writeList(List(Of System.Int32))
+  nameWithType: USBDAQF1D.Logger_writeList(List<Int32>)
+  nameWithType.vb: USBDAQF1D.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.USBDAQF1D.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.USBDAQF1D.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.USBDAQF1D.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.USBDAQF1D.Logger_writeList(List(Of System.Single))
+  nameWithType: USBDAQF1D.Logger_writeList(List<Single>)
+  nameWithType.vb: USBDAQF1D.Logger_writeList(List(Of Single))
+- uid: WPC.Product.USBDAQF1D.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Logger_writeList_
+  commentId: Overload:WPC.Product.USBDAQF1D.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Logger_writeList
+  nameWithType: USBDAQF1D.Logger_writeList
+- uid: WPC.Product.USBDAQF1D.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.USBDAQF1D.Logger_writeValue(System.String)
+  fullName: WPC.Product.USBDAQF1D.Logger_writeValue(System.String)
+  nameWithType: USBDAQF1D.Logger_writeValue(String)
+- uid: WPC.Product.USBDAQF1D.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Logger_writeValue_
+  commentId: Overload:WPC.Product.USBDAQF1D.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Logger_writeValue
+  nameWithType: USBDAQF1D.Logger_writeValue
 - uid: WPC.Product.USBDAQF1D.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_SPI_close_System_Int32_System_Int32_
@@ -8158,6 +8697,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.DO_writePort
   nameWithType: USBDAQF1DSNK.DO_writePort
+- uid: WPC.Product.USBDAQF1DSNK.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_openFile_System_String_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Logger_openFile(System.String)
+  fullName: WPC.Product.USBDAQF1DSNK.Logger_openFile(System.String)
+  nameWithType: USBDAQF1DSNK.Logger_openFile(String)
+- uid: WPC.Product.USBDAQF1DSNK.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_openFile_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Logger_openFile
+  nameWithType: USBDAQF1DSNK.Logger_openFile
+- uid: WPC.Product.USBDAQF1DSNK.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.USBDAQF1DSNK.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.USBDAQF1DSNK.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.USBDAQF1DSNK.Logger_writeList(List(Of System.Double))
+  nameWithType: USBDAQF1DSNK.Logger_writeList(List<Double>)
+  nameWithType.vb: USBDAQF1DSNK.Logger_writeList(List(Of Double))
+- uid: WPC.Product.USBDAQF1DSNK.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.USBDAQF1DSNK.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.USBDAQF1DSNK.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.USBDAQF1DSNK.Logger_writeList(List(Of System.Int32))
+  nameWithType: USBDAQF1DSNK.Logger_writeList(List<Int32>)
+  nameWithType.vb: USBDAQF1DSNK.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.USBDAQF1DSNK.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.USBDAQF1DSNK.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.USBDAQF1DSNK.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.USBDAQF1DSNK.Logger_writeList(List(Of System.Single))
+  nameWithType: USBDAQF1DSNK.Logger_writeList(List<Single>)
+  nameWithType.vb: USBDAQF1DSNK.Logger_writeList(List(Of Single))
+- uid: WPC.Product.USBDAQF1DSNK.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_writeList_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Logger_writeList
+  nameWithType: USBDAQF1DSNK.Logger_writeList
+- uid: WPC.Product.USBDAQF1DSNK.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Logger_writeValue(System.String)
+  fullName: WPC.Product.USBDAQF1DSNK.Logger_writeValue(System.String)
+  nameWithType: USBDAQF1DSNK.Logger_writeValue(String)
+- uid: WPC.Product.USBDAQF1DSNK.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_writeValue_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Logger_writeValue
+  nameWithType: USBDAQF1DSNK.Logger_writeValue
 - uid: WPC.Product.USBDAQF1DSNK.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_getDriverInfo_System_Int32_
@@ -8594,6 +9193,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.I2C_write
   nameWithType: USBDAQF1RD.I2C_write
+- uid: WPC.Product.USBDAQF1RD.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Logger_openFile_System_String_
+  commentId: M:WPC.Product.USBDAQF1RD.Logger_openFile(System.String)
+  fullName: WPC.Product.USBDAQF1RD.Logger_openFile(System.String)
+  nameWithType: USBDAQF1RD.Logger_openFile(String)
+- uid: WPC.Product.USBDAQF1RD.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Logger_openFile_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Logger_openFile
+  nameWithType: USBDAQF1RD.Logger_openFile
+- uid: WPC.Product.USBDAQF1RD.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.USBDAQF1RD.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.USBDAQF1RD.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.USBDAQF1RD.Logger_writeList(List(Of System.Double))
+  nameWithType: USBDAQF1RD.Logger_writeList(List<Double>)
+  nameWithType.vb: USBDAQF1RD.Logger_writeList(List(Of Double))
+- uid: WPC.Product.USBDAQF1RD.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.USBDAQF1RD.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.USBDAQF1RD.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.USBDAQF1RD.Logger_writeList(List(Of System.Int32))
+  nameWithType: USBDAQF1RD.Logger_writeList(List<Int32>)
+  nameWithType.vb: USBDAQF1RD.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.USBDAQF1RD.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.USBDAQF1RD.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.USBDAQF1RD.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.USBDAQF1RD.Logger_writeList(List(Of System.Single))
+  nameWithType: USBDAQF1RD.Logger_writeList(List<Single>)
+  nameWithType.vb: USBDAQF1RD.Logger_writeList(List(Of Single))
+- uid: WPC.Product.USBDAQF1RD.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Logger_writeList_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Logger_writeList
+  nameWithType: USBDAQF1RD.Logger_writeList
+- uid: WPC.Product.USBDAQF1RD.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.USBDAQF1RD.Logger_writeValue(System.String)
+  fullName: WPC.Product.USBDAQF1RD.Logger_writeValue(System.String)
+  nameWithType: USBDAQF1RD.Logger_writeValue(String)
+- uid: WPC.Product.USBDAQF1RD.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Logger_writeValue_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Logger_writeValue
+  nameWithType: USBDAQF1RD.Logger_writeValue
 - uid: WPC.Product.USBDAQF1RD.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_SPI_close_System_Int32_System_Int32_
@@ -9361,6 +10020,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.I2C_write
   nameWithType: USBDAQF1TD.I2C_write
+- uid: WPC.Product.USBDAQF1TD.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Logger_openFile_System_String_
+  commentId: M:WPC.Product.USBDAQF1TD.Logger_openFile(System.String)
+  fullName: WPC.Product.USBDAQF1TD.Logger_openFile(System.String)
+  nameWithType: USBDAQF1TD.Logger_openFile(String)
+- uid: WPC.Product.USBDAQF1TD.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Logger_openFile_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Logger_openFile
+  nameWithType: USBDAQF1TD.Logger_openFile
+- uid: WPC.Product.USBDAQF1TD.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.USBDAQF1TD.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.USBDAQF1TD.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.USBDAQF1TD.Logger_writeList(List(Of System.Double))
+  nameWithType: USBDAQF1TD.Logger_writeList(List<Double>)
+  nameWithType.vb: USBDAQF1TD.Logger_writeList(List(Of Double))
+- uid: WPC.Product.USBDAQF1TD.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.USBDAQF1TD.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.USBDAQF1TD.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.USBDAQF1TD.Logger_writeList(List(Of System.Int32))
+  nameWithType: USBDAQF1TD.Logger_writeList(List<Int32>)
+  nameWithType.vb: USBDAQF1TD.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.USBDAQF1TD.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.USBDAQF1TD.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.USBDAQF1TD.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.USBDAQF1TD.Logger_writeList(List(Of System.Single))
+  nameWithType: USBDAQF1TD.Logger_writeList(List<Single>)
+  nameWithType.vb: USBDAQF1TD.Logger_writeList(List(Of Single))
+- uid: WPC.Product.USBDAQF1TD.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Logger_writeList_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Logger_writeList
+  nameWithType: USBDAQF1TD.Logger_writeList
+- uid: WPC.Product.USBDAQF1TD.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.USBDAQF1TD.Logger_writeValue(System.String)
+  fullName: WPC.Product.USBDAQF1TD.Logger_writeValue(System.String)
+  nameWithType: USBDAQF1TD.Logger_writeValue(String)
+- uid: WPC.Product.USBDAQF1TD.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Logger_writeValue_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Logger_writeValue
+  nameWithType: USBDAQF1TD.Logger_writeValue
 - uid: WPC.Product.USBDAQF1TD.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_SPI_close_System_Int32_System_Int32_
@@ -9893,12 +10612,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.AI_setSamplingRate
   nameWithType: WifiDAQE3A.AI_setSamplingRate
-- uid: WPC.Product.WifiDAQE3A.AI_start(System.Int32,System.Int32)
-  name: AI_start(Int32, Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_start_System_Int32_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.AI_start(System.Int32,System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.AI_start(System.Int32, System.Int32)
-  nameWithType: WifiDAQE3A.AI_start(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.AI_start(System.Int32)
+  name: AI_start(Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_start_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AI_start(System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AI_start(System.Int32)
+  nameWithType: WifiDAQE3A.AI_start(Int32)
 - uid: WPC.Product.WifiDAQE3A.AI_start*
   name: AI_start
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_start_
@@ -9958,6 +10677,66 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.disconnect
   nameWithType: WifiDAQE3A.disconnect
+- uid: WPC.Product.WifiDAQE3A.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Logger_openFile_System_String_
+  commentId: M:WPC.Product.WifiDAQE3A.Logger_openFile(System.String)
+  fullName: WPC.Product.WifiDAQE3A.Logger_openFile(System.String)
+  nameWithType: WifiDAQE3A.Logger_openFile(String)
+- uid: WPC.Product.WifiDAQE3A.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Logger_openFile_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Logger_openFile
+  nameWithType: WifiDAQE3A.Logger_openFile
+- uid: WPC.Product.WifiDAQE3A.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.WifiDAQE3A.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.WifiDAQE3A.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.WifiDAQE3A.Logger_writeList(List(Of System.Double))
+  nameWithType: WifiDAQE3A.Logger_writeList(List<Double>)
+  nameWithType.vb: WifiDAQE3A.Logger_writeList(List(Of Double))
+- uid: WPC.Product.WifiDAQE3A.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.WifiDAQE3A.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.WifiDAQE3A.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.WifiDAQE3A.Logger_writeList(List(Of System.Int32))
+  nameWithType: WifiDAQE3A.Logger_writeList(List<Int32>)
+  nameWithType.vb: WifiDAQE3A.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.WifiDAQE3A.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.WifiDAQE3A.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.WifiDAQE3A.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.WifiDAQE3A.Logger_writeList(List(Of System.Single))
+  nameWithType: WifiDAQE3A.Logger_writeList(List<Single>)
+  nameWithType.vb: WifiDAQE3A.Logger_writeList(List(Of Single))
+- uid: WPC.Product.WifiDAQE3A.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Logger_writeList_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Logger_writeList
+  nameWithType: WifiDAQE3A.Logger_writeList
+- uid: WPC.Product.WifiDAQE3A.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.WifiDAQE3A.Logger_writeValue(System.String)
+  fullName: WPC.Product.WifiDAQE3A.Logger_writeValue(System.String)
+  nameWithType: WifiDAQE3A.Logger_writeValue(String)
+- uid: WPC.Product.WifiDAQE3A.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Logger_writeValue_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Logger_writeValue
+  nameWithType: WifiDAQE3A.Logger_writeValue
 - uid: WPC.Product.WifiDAQE3A.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_getDriverInfo_System_Int32_
