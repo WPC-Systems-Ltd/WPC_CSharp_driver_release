@@ -514,14 +514,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <a id="WPC_Product_USBDAQF1AOD_AI_start_" data-uid="WPC.Product.USBDAQF1AOD.AI_start*"></a>
-  <h4 id="WPC_Product_USBDAQF1AOD_AI_start_System_Int32_" data-uid="WPC.Product.USBDAQF1AOD.AI_start(System.Int32)">AI_start(Int32)</h4>
+  <h4 id="WPC_Product_USBDAQF1AOD_AI_start_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AOD.AI_start(System.Int32,System.Int32)">AI_start(Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Start streaming acquisition on a given AI port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int AI_start(int port)</code></pre>
+    <pre><code class="lang-csharp hljs">public int AI_start(int port, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -537,6 +537,12 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
         <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
 </td>
       </tr>
     </tbody>

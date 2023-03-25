@@ -73,7 +73,7 @@ class EthanA_AI_N_samples_once
             Console.WriteLine($"AI_setNumSamples {sampling_rate} in port{port}: {err}");
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
 
             // Wait for 1 sec

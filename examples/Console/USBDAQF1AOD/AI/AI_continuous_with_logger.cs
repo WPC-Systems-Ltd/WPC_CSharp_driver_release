@@ -99,7 +99,7 @@ class USBDAQF1AOD_DataLogger_AI_continuous
             Console.WriteLine($"AI_setSamplingRate {sampling_rate} in port{port}: {err}");
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
 
             // loop parameters

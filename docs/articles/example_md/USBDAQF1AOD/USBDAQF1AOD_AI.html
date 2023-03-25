@@ -179,7 +179,7 @@ class USBDAQF1AOD_AI_continuous
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port{port}: {err}&quot;);
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
 
             // loop parameters
@@ -306,7 +306,7 @@ class USBDAQF1AOD_AI_N_samples_in_loop
             Console.WriteLine($&quot;AI_setNumSamples {samples} in port{port}: {err}&quot;);
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
 
             // loop parameters
@@ -414,7 +414,7 @@ class USBDAQF1AOD_AI_N_samples_once
             Console.WriteLine($&quot;AI_setNumSamples {sampling_rate} in port{port}: {err}&quot;);
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
 
             // Wait for 1 sec
@@ -747,7 +747,7 @@ class USBDAQF1AOD_DataLogger_AI_continuous
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port{port}: {err}&quot;);
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
 
             // loop parameters

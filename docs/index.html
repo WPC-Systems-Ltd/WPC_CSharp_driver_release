@@ -87,7 +87,7 @@
                         <h4 class="page-header">Download here</h4>
                         <p>
                             ZIP file containing assemblies and source code:
-                            <a class="btn btn-default btn-sm" href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/releases/tag/v0.1.7" target="_blank">
+                            <a class="btn btn-default btn-sm" href="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/releases/tag/v0.1.8" target="_blank">
                                 <i class="fa fa-file-zip-o"></i> WPC CSharp driver
                             </a>
                         </p>
@@ -171,6 +171,13 @@ foreach (List&lt;string&gt; usb in usb_list)
         Console.Write(s);
     }
 }
+
+// Disconnect to device
+dev.disconnect();
+
+// Release device handle
+dev.close();
+
 </pre>
                                         <div class="carousel-caption">
                                             Basic USB list example
@@ -195,9 +202,16 @@ foreach (List&lt;string&gt; net in net_list)
         Console.Write(s);
     }
 }
+
+// Disconnect to device
+dev.disconnect();
+
+// Release device handle
+dev.close();
+
 </pre>
                                         <div class="carousel-caption">
-                                            Basic Ethernet finder example
+                                            Basic ethernet finder example
                                         </div>
                                     </div>
 

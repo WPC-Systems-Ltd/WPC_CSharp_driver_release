@@ -92,7 +92,7 @@ class USBDAQF1AOD_AI_N_samples_in_loop
             Console.WriteLine($"AI_setNumSamples {samples} in port{port}: {err}");
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port);
+            err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
 
             // loop parameters

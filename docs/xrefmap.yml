@@ -245,12 +245,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IAIModule.AI_setSamplingRate
   nameWithType: IAIModule.AI_setSamplingRate
-- uid: WPC.Module.IAIModule.AI_start(System.Int32)
-  name: AI_start(Int32)
-  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_start_System_Int32_
-  commentId: M:WPC.Module.IAIModule.AI_start(System.Int32)
-  fullName: WPC.Module.IAIModule.AI_start(System.Int32)
-  nameWithType: IAIModule.AI_start(Int32)
+- uid: WPC.Module.IAIModule.AI_start(System.Int32,System.Int32)
+  name: AI_start(Int32, Int32)
+  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_start_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAIModule.AI_start(System.Int32,System.Int32)
+  fullName: WPC.Module.IAIModule.AI_start(System.Int32, System.Int32)
+  nameWithType: IAIModule.AI_start(Int32, Int32)
 - uid: WPC.Module.IAIModule.AI_start*
   name: AI_start
   href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_start_
@@ -3341,12 +3341,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.AI_setSamplingRate
   nameWithType: EthanA.AI_setSamplingRate
-- uid: WPC.Product.EthanA.AI_start(System.Int32)
-  name: AI_start(Int32)
-  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_start_System_Int32_
-  commentId: M:WPC.Product.EthanA.AI_start(System.Int32)
-  fullName: WPC.Product.EthanA.AI_start(System.Int32)
-  nameWithType: EthanA.AI_start(Int32)
+- uid: WPC.Product.EthanA.AI_start(System.Int32,System.Int32)
+  name: AI_start(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.AI_start(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.AI_start(System.Int32, System.Int32)
+  nameWithType: EthanA.AI_start(Int32, Int32)
 - uid: WPC.Product.EthanA.AI_start*
   name: AI_start
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_start_
@@ -5089,12 +5089,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.AI_setSamplingRate
   nameWithType: USBDAQF1AD.AI_setSamplingRate
-- uid: WPC.Product.USBDAQF1AD.AI_start(System.Int32)
-  name: AI_start(Int32)
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_start_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AD.AI_start(System.Int32)
-  fullName: WPC.Product.USBDAQF1AD.AI_start(System.Int32)
-  nameWithType: USBDAQF1AD.AI_start(Int32)
+- uid: WPC.Product.USBDAQF1AD.AI_start(System.Int32,System.Int32)
+  name: AI_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.AI_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.AI_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.AI_start(Int32, Int32)
 - uid: WPC.Product.USBDAQF1AD.AI_start*
   name: AI_start
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_start_
@@ -5968,12 +5968,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.AI_setSamplingRate
   nameWithType: USBDAQF1AOD.AI_setSamplingRate
-- uid: WPC.Product.USBDAQF1AOD.AI_start(System.Int32)
-  name: AI_start(Int32)
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_start_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AOD.AI_start(System.Int32)
-  fullName: WPC.Product.USBDAQF1AOD.AI_start(System.Int32)
-  nameWithType: USBDAQF1AOD.AI_start(Int32)
+- uid: WPC.Product.USBDAQF1AOD.AI_start(System.Int32,System.Int32)
+  name: AI_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.AI_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.AI_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.AI_start(Int32, Int32)
 - uid: WPC.Product.USBDAQF1AOD.AI_start*
   name: AI_start
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_start_
@@ -10612,12 +10612,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.AI_setSamplingRate
   nameWithType: WifiDAQE3A.AI_setSamplingRate
-- uid: WPC.Product.WifiDAQE3A.AI_start(System.Int32)
-  name: AI_start(Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_start_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.AI_start(System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.AI_start(System.Int32)
-  nameWithType: WifiDAQE3A.AI_start(Int32)
+- uid: WPC.Product.WifiDAQE3A.AI_start(System.Int32,System.Int32)
+  name: AI_start(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AI_start(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AI_start(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.AI_start(Int32, Int32)
 - uid: WPC.Product.WifiDAQE3A.AI_start*
   name: AI_start
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_start_
