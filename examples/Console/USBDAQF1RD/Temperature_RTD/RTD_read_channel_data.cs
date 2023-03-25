@@ -40,7 +40,6 @@ class USBDAQF1RD_RTD_read_channel_data
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
@@ -52,27 +51,27 @@ class USBDAQF1RD_RTD_read_channel_data
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open RTD port
-            err = dev.Thermal_open(port, timeout);
+            err = dev.Thermal_open(port, timeout:timeout);
             Console.WriteLine($"Thermal_open in port{port}: {err}");
 
-            // Wait for at least 100 ms after setting type or oversampling
-            Thread.Sleep(100); // delay [ms]
+            // Wait for at least 250 ms after setting type or oversampling
+            Thread.Sleep(250); // delay [ms]
 
             // Set RTD port and read RTD in channel 0
-            data = dev.Thermal_readSensor(port, ch0, timeout);
+            data = dev.Thermal_readSensor(port, ch0, timeout:timeout);
             Console.WriteLine($"Read sensor in channel {ch0} in port{port}: {data}°C");
 
             // Set RTD port and read RTD in channel 1
-            data = dev.Thermal_readSensor(port, ch1, timeout);
+            data = dev.Thermal_readSensor(port, ch1, timeout:timeout);
             Console.WriteLine($"Read sensor in channel {ch1} in port{port}: {data}°C");
 
             // Close RTD port
-            err = dev.Thermal_close(port, timeout);
+            err = dev.Thermal_close(port, timeout:timeout);
             Console.WriteLine($"Thermal_close in port{port}: {err}");
         }
         catch (Exception ex)

@@ -40,7 +40,6 @@ class USBDAQF1CD_DO_blinky_port
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
@@ -51,12 +50,12 @@ class USBDAQF1CD_DO_blinky_port
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open all pins and set it to digital output.
-            err = dev.DO_openPort(port, timeout);
+            err = dev.DO_openPort(port, timeout:timeout);
             Console.WriteLine($"DO_openPort in port{port}: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
@@ -64,11 +63,11 @@ class USBDAQF1CD_DO_blinky_port
             {
                 if (i % 2 == 0)
                 {
-                    err = dev.DO_writePort(port, DO_even_state, timeout);
+                    err = dev.DO_writePort(port, DO_even_state, timeout:timeout);
                 }
                 else
                 {
-                    err = dev.DO_writePort(port, DO_odd_state, timeout);
+                    err = dev.DO_writePort(port, DO_odd_state, timeout:timeout);
                 }
                 Console.WriteLine($"DO_writePort in port{port}: {err}");
                 // Wait for 0.5 second to see led status
@@ -76,7 +75,7 @@ class USBDAQF1CD_DO_blinky_port
             }
 
             // Close all pins with digital output
-            err = dev.DO_closePort(port, timeout);
+            err = dev.DO_closePort(port, timeout:timeout);
             Console.WriteLine($"DO_closePort in port{port}: {err}");
         }
         catch (Exception ex)

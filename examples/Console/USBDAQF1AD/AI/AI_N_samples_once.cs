@@ -40,40 +40,40 @@ class USBDAQF1AD_AI_N_samples_once
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
             int err;
             int delay = 10;
             int port = 0;
+            int mode = Const.AI_MODE_N_SAMPLE;
             int samples = 50;
             float sampling_rate = 1000;
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            err = dev.AI_open(port, timeout);
+            err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port{port}: {err}");
 
             // Set AI port and acquisition mode to N-sample mode
-            err = dev.AI_setMode(port, Const.AI_MODE_N_SAMPLE, timeout);
-            Console.WriteLine($"AI_setMode in port{port}: {err}");
+            err = dev.AI_setMode(port, mode, timeout:timeout);
+            Console.WriteLine($"AI_setMode {mode} in port{port}: {err}");
 
-            // Set AI port and # of samples to 5 (pts)
-            err = dev.AI_setNumSamples(port, samples, timeout);
-            Console.WriteLine($"AI_setNumSamples in port{port}: {err}");
+            // Set AI port and # of samples to 50 (pts)
+            err = dev.AI_setNumSamples(port, samples, timeout:timeout);
+            Console.WriteLine($"AI_setNumSamples {samples} in port{port}: {err}");
 
             // Set AI port and sampling rate to 1k (Hz)
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
-            Console.WriteLine($"AI_setNumSamples in port{port}: {err}");
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
+            Console.WriteLine($"AI_setNumSamples {sampling_rate} in port{port}: {err}");
 
             // Set AI port and start acquisition
-            err = dev.AI_start(port, timeout);
+            err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
 
             // Wait for 1 sec
@@ -83,17 +83,17 @@ class USBDAQF1AD_AI_N_samples_once
             List<List<double>> streaming_list = dev.AI_readStreaming(port, samples, delay);
 
             // Read acquisition data
-            foreach (List<double> sample in streaming_list)
+            foreach (List<double> s in streaming_list)
             {
-                Console.WriteLine($"{sample[0]}, {sample[1]}, {sample[2]}, {sample[3]}, {sample[4]}, {sample[5]}, {sample[6]}, {sample[7]}");
+                Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
             }
 
             // Stop AI
-            err = dev.AI_stop(port, timeout);
+            err = dev.AI_stop(port, timeout:timeout);
             Console.WriteLine($"AI_stop in port{port}: {err}");
 
             // Close AI port
-            err = dev.AI_close(port, timeout);
+            err = dev.AI_close(port, timeout:timeout);
             Console.WriteLine($"AI_close in port{port}: {err}");
         }
         catch (Exception ex)

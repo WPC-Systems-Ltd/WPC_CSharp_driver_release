@@ -38,65 +38,68 @@ class EMotion_find_index
             int err;
             int port = 0;
             int timeout = 3000; // ms
+            int axis = Const.MOT_AXIS0;
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout);
+            err = dev.Motion_open(port, timeout:timeout);
             Console.WriteLine($"Motion_open in port{port}: {err}");
 
+            /*
+            // Motion open configuration file
+            err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
+            Console.WriteLine($"Motion_openCfgFile: {err}");
+
+            // Motion load configuration file
+            err = dev.Motion_loadCfgFile();
+            Console.WriteLine($"Motion_loadCfgFile: {err}");
+            */
+
             // Motion configure
-            err = dev.Motion_cfgAxis(port, Const.MOT_AXIS1, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"Motion_cfgAxis in port{port}: {err}");
+            err = dev.Motion_cfgAxis(port, axis, Const.MOT_ONE_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_HIGH, timeout:timeout);
+            Console.WriteLine($"Motion_cfgAxis in axis{axis}: {err}");
 
-            err = dev.Motion_cfgLimit(port, Const.MOT_AXIS1, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($"Motion_cfgLimit in port{port}: {err}");
+            err = dev.Motion_cfgLimit(port, axis, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout:timeout);
+            Console.WriteLine($"Motion_cfgLimit in axis{axis}: {err}");
 
-            err = dev.Motion_cfgFindRef(port, Const.MOT_AXIS1, Const.MOT_FIND_INDEX, Const.MOT_DIR_REVERSE, timeout);
-            Console.WriteLine($"Motion_cfgFindRef in port{port}: {err}");
+            err = dev.Motion_cfgEncoder(port, axis, Const.MOT_ACTIVE_HIGH, timeout:timeout);
+            Console.WriteLine($"Motion_cfgEncoder in axis{axis}: {err}");
 
-            err = dev.Motion_cfgEncoder(port, Const.MOT_AXIS1, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"Motion_cfgEncoder in port{port}: {err}");
+            err = dev.Motion_cfgFindRef(port, axis, Const.MOT_FIND_INDEX, Const.MOT_DIR_REVERSE, search_velo:10000, search_accle:100000, approach_velo_percent:20, en_reset_posi:0, offset_posi:200, timeout:timeout);
+            Console.WriteLine($"Motion_cfgFindRef in axis{axis}: {err}");
 
-            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_TRUE, timeout);
-            Console.WriteLine($"Motion_enableServoOn in port{port}: {err}");
+            // Servo on
+            err = dev.Motion_enableServoOn(port, axis, timeout:timeout);
+            Console.WriteLine($"Motion_enableServoOn in axis{axis}: {err}");
 
-            err = dev.Motion_rstEncoderPosi(port, Const.MOT_AXIS1, timeout);
-            Console.WriteLine($"Motion_rstEncoderPosi in port{port}: {err}");
+            err = dev.Motion_rstEncoderPosi(port, axis, encoder_posi:0, timeout:timeout);
+            Console.WriteLine($"Motion_rstEncoderPosi in axis{axis}: {err}");
 
             // Motion start
-            err = dev.Motion_findRef(port, Const.MOT_AXIS1, timeout);
-            Console.WriteLine($"Motion_findRef in port{port}: {err}");
+            err = dev.Motion_findRef(port, axis, timeout:timeout);
+            Console.WriteLine($"Motion_findRef in axis{axis}: {err}");
 
-            int finding = 1;
-            int found = 0;
-            while (found == 0)
+            int driving_status = 0;
+            while (driving_status == 0)
             {
-                // read forward and reverse limit
-                List<int> hit_status = dev.Motion_getLimitStatus(port, Const.MOT_AXIS1, timeout);
-                int forward_hit = hit_status[0];
-                int reverse_hit = hit_status[1];
-                if (forward_hit == 1) { Console.WriteLine($"Forward hit"); }
-                if (reverse_hit == 1) { Console.WriteLine($"Reverse hit"); }
-
-                List<int>  driving_status = dev.Motion_checkRef(port, Const.MOT_AXIS1, timeout);
-                finding = driving_status[0];
-                found = driving_status[1];
-                if (found == 1) { Console.WriteLine($"Found reference"); }
-                //if (finding_referece == 1) { Console.WriteLine($"Finding reference"); }
+                // Check reference status
+                driving_status = dev.Motion_checkRef(port, axis, timeout:timeout);
+                Console.WriteLine($"driving_status: {driving_status}");
             }
 
             // Motion stop
-            err = dev.Motion_stop(port, Const.MOT_AXIS1, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($"Motion_stop in port{port}: {err}");
+            err = dev.Motion_stop(port, axis, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            Console.WriteLine($"Motion_stop in axis{axis}: {err}");
 
-            err = dev.Motion_enableServoOn(port, Const.MOT_AXIS1, Const.MOT_FALSE, timeout);
-            Console.WriteLine($"Motion_enableServoOn in port{port}: {err}");
+            // Servo off
+            err = dev.Motion_enableServoOff(port, axis, timeout:timeout);
+            Console.WriteLine($"Motion_enableServoOff in axis{axis}: {err}");
 
             // Motion close
-            err = dev.Motion_close(port, timeout);
+            err = dev.Motion_close(port, timeout:timeout);
             Console.WriteLine($"Motion_close in port{port}: {err}");
         }
         catch (Exception ex)

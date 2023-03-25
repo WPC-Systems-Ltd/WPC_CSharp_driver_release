@@ -21,7 +21,9 @@ class DeviceFinder_find_all_devices
         // Create device handle
         DeviceFinder dev = new DeviceFinder();
 
-        // Perform device information
+        // Connect to device
+        dev.connect();
+
         try
         {
             List<List<string>> usb_list = dev.Bcst_enumerateUSBDevices();
@@ -35,7 +37,7 @@ class DeviceFinder_find_all_devices
                 Console.WriteLine();
             }
 
-            List<List<string>> net_list = dev.Bcst_enumerateNetworkDevices(2000);
+            List<List<string>> net_list = dev.Bcst_enumerateNetworkDevices(timeout:2000);
             foreach (List<string> net in net_list)
             {
                 foreach (string s in net)
@@ -50,6 +52,9 @@ class DeviceFinder_find_all_devices
         {
             Console.WriteLine(ex);
         }
+
+        // Disconnect to device
+        dev.disconnect();
 
         // Release device handle
         dev.close();

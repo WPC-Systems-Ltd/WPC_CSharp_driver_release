@@ -121,34 +121,34 @@ class USBDAQF1CD_CAN_read
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
             int err;
             int port = 1;
             int timeout = 3000; // ms
+            int num_frames = 5;
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open CAN
-            err = dev.CAN_open(port, timeout);
+            err = dev.CAN_open(port, timeout:timeout);
             Console.WriteLine($&quot;CAN_open in port{port}: {err}&quot;);
 
             // Set CAN port and set speed to 125K
-            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout);
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout:timeout);
             Console.WriteLine($&quot;CAN_setSpeed in port{port}: {err}&quot;);
 
             // Set CAN port and start CAN
-            err = dev.CAN_start(port, timeout);
+            err = dev.CAN_start(port);
             Console.WriteLine($&quot;CAN_start in port{port}: {err}&quot;);
 
             for (int i = 0; i &lt; 1000; i++)
             {
-                List&lt;CANFrame&gt; frame_list = dev.CAN_read(port, 5, timeout);
+                List&lt;CANFrame&gt; frame_list = dev.CAN_read(port, num_frames, delay:5);
                 if (frame_list.Count() &gt; 0)
                 {
                     foreach (CANFrame frame in frame_list)
@@ -164,11 +164,11 @@ class USBDAQF1CD_CAN_read
             }
 
             // Stop CAN
-            err = dev.CAN_stop(port, timeout);
+            err = dev.CAN_stop(port, timeout:timeout);
             Console.WriteLine($&quot;CAN_stop in port{port}: {err}&quot;);
 
             // Close CAN
-            err = dev.CAN_close(port, timeout);
+            err = dev.CAN_close(port, timeout:timeout);
             Console.WriteLine($&quot;CAN_close in port{port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -228,7 +228,6 @@ class USBDAQF1CD_CAN_write
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
@@ -237,42 +236,42 @@ class USBDAQF1CD_CAN_write
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open CAN
-            err = dev.CAN_open(port, timeout);
+            err = dev.CAN_open(port, timeout:timeout);
             Console.WriteLine($&quot;CAN_open in port{port}: {err}&quot;);
 
             // Set CAN port and set speed to 125K
-            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout);
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout:timeout);
             Console.WriteLine($&quot;CAN_setSpeed in port{port}: {err}&quot;);
 
             // Set CAN port and start CAN
-            err = dev.CAN_start(port, timeout);
+            err = dev.CAN_start(port);
             Console.WriteLine($&quot;CAN_start in port{port}: {err}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // ID: 10, data with 8 bytes, Standard &amp; Data
-            err = dev.CAN_write(port, 10, new List&lt;byte&gt; { 33, 22, 11, 88, 77, 55, 66, 22 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD, timeout);
+            err = dev.CAN_write(port, 10, new List&lt;byte&gt; { 33, 22, 11, 88, 77, 55, 66, 22 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD, timeout:timeout);
             Console.WriteLine($&quot;CAN_write in port{port}: {err}&quot;);
 
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
             // ID: 20, data with 8 bytes, Standard &amp; Data
-            err = dev.CAN_write(port, 20, new List&lt;byte&gt; { 1, 2, 3 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD, timeout);
+            err = dev.CAN_write(port, 20, new List&lt;byte&gt; { 1, 2, 3 }, Const.CAN_FRAME_TYPE_DATA, Const.CAN_ID_STANDARD, timeout:timeout);
             Console.WriteLine($&quot;CAN_write in port{port}: {err}&quot;);
 
             // Stop CAN
-            err = dev.CAN_stop(port, timeout);
+            err = dev.CAN_stop(port, timeout:timeout);
             Console.WriteLine($&quot;CAN_stop in port{port}: {err}&quot;);
 
             // Close CAN
-            err = dev.CAN_close(port, timeout);
+            err = dev.CAN_close(port, timeout:timeout);
             Console.WriteLine($&quot;CAN_close in port{port}: {err}&quot;);
         }
         catch (Exception ex)

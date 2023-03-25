@@ -19,7 +19,7 @@ using WPC.Product;
 
 class WifiDAQE3A_AI_on_demand_in_loop
 {
-    static void loop_func(WifiDAQE3A handle, int port, int delay= 50, int exit_loop_time= 300)
+    static void loop_func(WifiDAQE3A handle, int port, int delay=50, int exit_loop_time=300)
     {
         int time_cal = 0;
         while (time_cal < exit_loop_time)
@@ -57,38 +57,39 @@ class WifiDAQE3A_AI_on_demand_in_loop
             return;
         }
 
-        // Perform DAQ basic information
         try
         {
             // Parameters setting
             int err;
             int port = 1;
+            int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            err = dev.AI_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            err = dev.AI_open(port, timeout:timeout);
+            Console.WriteLine($"AI_open: {err}");
 
             // Set AI port and acquisition mode to on demand
-            err = dev.AI_setMode(port, Const.AI_MODE_ON_DEMAND, timeout);
-            Console.WriteLine($"setMode: {err}");
+            err = dev.AI_setMode(port, mode, timeout:timeout);
+            Console.WriteLine($"AI_setMode {mode}: {err}");
 
             // Data acquisition
-            List<double> s = dev.AI_readOnDemand(port, timeout);
+            List<double> s = dev.AI_readOnDemand(port, timeout:timeout);
 
+            // loop parameters
             int delay = 50;
             int exit_loop_time = 300;
 
             // Start loop
-            loop_func(dev, port, delay, exit_loop_time);
+            loop_func(dev, port, delay:delay, exit_loop_time:exit_loop_time);
 
             // Close AI port
-            err = dev.AI_close(port, timeout);
+            err = dev.AI_close(port, timeout:timeout);
             Console.WriteLine($"close: {err}");
         }
         catch (Exception ex)

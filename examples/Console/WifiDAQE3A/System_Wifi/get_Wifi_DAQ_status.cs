@@ -34,30 +34,29 @@ class WifiDAQE3A_get_WifiDAQ_status
             return;
         }
 
-        // Perform DAQ basic information
         try
         {
             // Parameters setting
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get RSSI, battery and thermo
 
-            int data1 = dev.Wifi_readRSSI(timeout);
+            int rssi = dev.Wifi_readRSSI(timeout:timeout);
 
-            int data2 = dev.Wifi_readBattery(timeout);
+            int battery = dev.Wifi_readBattery(timeout:timeout);
 
-            float data3 = dev.Wifi_readThermo(timeout);
+            float thermo = dev.Wifi_readThermo(timeout:timeout);
 
-            Console.WriteLine($"RSSI: {data1} dBm");
+            Console.WriteLine($"RSSI: {rssi} dBm");
 
-            Console.WriteLine($"Battery: {data2} mV");
+            Console.WriteLine($"Battery: {battery} mV");
 
-            Console.WriteLine($"Thermo: {data3} °C");
+            Console.WriteLine($"Thermo: {thermo} °C");
         }
         catch (Exception ex)
         {

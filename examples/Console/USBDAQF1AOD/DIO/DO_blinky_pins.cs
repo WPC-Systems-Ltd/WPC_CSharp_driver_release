@@ -40,7 +40,6 @@ class USBDAQF1AOD_DO_blinky_pins
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
@@ -52,12 +51,12 @@ class USBDAQF1AOD_DO_blinky_pins
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open pin0, pin1 with digital output
-            err = dev.DO_openPins(port, DO_pins, timeout);
+            err = dev.DO_openPins(port, DO_pins, timeout:timeout);
             Console.WriteLine($"DO_openPins in port{port}: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
@@ -65,11 +64,11 @@ class USBDAQF1AOD_DO_blinky_pins
             {
                 if (i%2 == 0)
                 {
-                    err = dev.DO_writePins(port, DO_pins, DO_even_state, timeout);
+                    err = dev.DO_writePins(port, DO_pins, DO_even_state, timeout:timeout);
                 }
                 else
                 {
-                    err = dev.DO_writePins(port, DO_pins, DO_odd_state, timeout);
+                    err = dev.DO_writePins(port, DO_pins, DO_odd_state, timeout:timeout);
                 }
                 Console.WriteLine($"DO_writePins in port{port}: {err}");
 
@@ -78,7 +77,7 @@ class USBDAQF1AOD_DO_blinky_pins
             }
 
             // Close pin0, pin1, pin2 and pin3 with digital output
-            err = dev.DO_closePins(port, DO_pins, timeout);
+            err = dev.DO_closePins(port, DO_pins, timeout:timeout);
             Console.WriteLine($"DO_closePins in port{port}: {err}");
         }
         catch (Exception ex)

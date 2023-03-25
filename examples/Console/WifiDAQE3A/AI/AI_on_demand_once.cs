@@ -40,36 +40,36 @@ class WifiDAQE3A_AI_on_demand_once
             return;
         }
 
-        // Perform DAQ basic information
         try
         {
             // Parameters setting
             int err;
             int port = 1;
+            int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            err = dev.AI_open(port, timeout);
-            Console.WriteLine($"open: {err}");
+            err = dev.AI_open(port, timeout:timeout);
+            Console.WriteLine($"AI_open: {err}");
 
             // Set AI port and acquisition mode to on demand
-            err = dev.AI_setMode(port, Const.AI_MODE_ON_DEMAND, timeout);
-            Console.WriteLine($"setMode: {err}");
+            err = dev.AI_setMode(port, mode, timeout:timeout);
+            Console.WriteLine($"AI_setMode {mode}: {err}");
 
             // Set AI port and data acquisition
-            List<double> s = dev.AI_readOnDemand(port, timeout);
+            List<double> s = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
             Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
             // Close AI port
-            err = dev.AI_close(port, timeout);
-            Console.WriteLine($"close: {err}");
+            err = dev.AI_close(port, timeout:timeout);
+            Console.WriteLine($"AI_close: {err}");
         }
         catch (Exception ex)
         {

@@ -1,6 +1,35 @@
 WPC CSharp driver release changelog
+
 ===================================
 
+
+v0.1.8 Date: 2023/03/25, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Release new API :
+  - Motion_enableServoOff, Motion_enableServoOn, Motion_getLogicalPosi, Motion_getEncoderPosi
+  - Relay_open, Relay_close
+- Example codes:
+  - Relay_read_counters, Relay_set_channel, Motion_servo_on, Motion_position_blending
+- Add `[0x00, 0x00, 0x55, 0x05]` packet list in _Motion_setPIOSignal1
+- Add default value in example code 
+- Add Datalogger in each product
+
+### Changed
+- Change DataloggerModule API return type to int
+- WifiDAQE3A product image 
+
+### Fixed 
+- Motion Axis value
+  - MOT_AXIS0: 0
+  - MOT_AXIS1: 1
+  - MOT_AXIS2: 2
+  - MOT_AXIS3: 3
+
+### Removed
+- Remove timeout parameter in CAN_start
+- DIO series example code in EthanL
+- DateLogger in product
 
 v0.1.7 Date: 2023/03/09, Developer: Chunglee_people 
 ---------------------------------------------------
