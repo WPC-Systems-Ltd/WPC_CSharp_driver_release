@@ -82,15 +82,41 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="WPC.Device.INetworkDevice.html">INetworkDevice</a></div>
     <div><a class="xref" href="WPC.Module.ISystemModule.html">ISystemModule</a></div>
     <div><a class="xref" href="WPC.Module.INetworkModule.html">INetworkModule</a></div>
     <div><a class="xref" href="WPC.Module.IMotionModule.html">IMotionModule</a></div>
+    <div><a class="xref" href="WPC.Module.IDataloggerModule.html">IDataloggerModule</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="WPC.Product.html">WPC.Product</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="WPC_Product_EMotion_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EMotion : INetworkDevice, ISystemModule, INetworkModule, IMotionModule</code></pre>
+    <pre><code class="lang-csharp hljs">public class EMotion : INetworkDevice, ISystemModule, INetworkModule, IMotionModule, IDataloggerModule</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -106,7 +132,8 @@
   </h3>
   <a id="WPC_Product_EMotion_close_" data-uid="WPC.Product.EMotion.close*"></a>
   <h4 id="WPC_Product_EMotion_close" data-uid="WPC.Product.EMotion.close">close()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Close network device handle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -114,7 +141,8 @@
   </div>
   <a id="WPC_Product_EMotion_connect_" data-uid="WPC.Product.EMotion.connect*"></a>
   <h4 id="WPC_Product_EMotion_connect_System_String_" data-uid="WPC.Product.EMotion.connect(System.String)">connect(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connect to network device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -133,7 +161,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">IP</span></td>
-        <td></td>
+        <td><p>IP network address.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -148,13 +177,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Connection status.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_EMotion_disconnect_" data-uid="WPC.Product.EMotion.disconnect*"></a>
   <h4 id="WPC_Product_EMotion_disconnect" data-uid="WPC.Product.EMotion.disconnect">disconnect()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnect network device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -171,7 +202,228 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Disconnection status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EMotion_Logger_openFile_" data-uid="WPC.Product.EMotion.Logger_openFile*"></a>
+  <h4 id="WPC_Product_EMotion_Logger_openFile_System_String_" data-uid="WPC.Product.EMotion.Logger_openFile(System.String)">Logger_openFile(String)</h4>
+  <div class="markdown level1 summary"><p>Open CSV file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_openFile(string file_name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">file_name</span></td>
+        <td><p>The file name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EMotion_Logger_writeList_" data-uid="WPC.Product.EMotion.Logger_writeList*"></a>
+  <h4 id="WPC_Product_EMotion_Logger_writeList_List_System_Double__" data-uid="WPC.Product.EMotion.Logger_writeList(List{System.Double})">Logger_writeList(List&lt;Double&gt;)</h4>
+  <div class="markdown level1 summary"><p>Write list into file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_writeList(List&lt;double&gt; data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The list of double data to be written.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EMotion_Logger_writeList_" data-uid="WPC.Product.EMotion.Logger_writeList*"></a>
+  <h4 id="WPC_Product_EMotion_Logger_writeList_List_System_Int32__" data-uid="WPC.Product.EMotion.Logger_writeList(List{System.Int32})">Logger_writeList(List&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Write list into file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_writeList(List&lt;int&gt; data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The list of int data to be written.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EMotion_Logger_writeList_" data-uid="WPC.Product.EMotion.Logger_writeList*"></a>
+  <h4 id="WPC_Product_EMotion_Logger_writeList_List_System_Single__" data-uid="WPC.Product.EMotion.Logger_writeList(List{System.Single})">Logger_writeList(List&lt;Single&gt;)</h4>
+  <div class="markdown level1 summary"><p>Write list into file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_writeList(List&lt;float&gt; data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The list of float data to be written.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EMotion_Logger_writeValue_" data-uid="WPC.Product.EMotion.Logger_writeValue*"></a>
+  <h4 id="WPC_Product_EMotion_Logger_writeValue_System_String_" data-uid="WPC.Product.EMotion.Logger_writeValue(System.String)">Logger_writeValue(String)</h4>
+  <div class="markdown level1 summary"><p>Write data into file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_writeValue(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The data to be written.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1054,13 +1306,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <a id="WPC_Product_EMotion_Motion_cfgFindRef_" data-uid="WPC.Product.EMotion.Motion_cfgFindRef*"></a>
-  <h4 id="WPC_Product_EMotion_Motion_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EMotion.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
+  <h4 id="WPC_Product_EMotion_Motion_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EMotion.Motion_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">Motion_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Configure find reference parameters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Motion_cfgFindRef(int port, int axis, int search_type, int search_dir, int search_velo = 10000, int approach_velo_percent = 20, int en_reset_posi = default(int), int offset_posi = 0, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int Motion_cfgFindRef(int port, int axis, int search_type, int search_dir, int search_velo = 10000, int search_accle = 10000, int approach_velo_percent = 20, int en_reset_posi = default(int), int offset_posi = 0, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1100,6 +1352,12 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">search_velo</span></td>
         <td><p>Set velocity in counts/s or steps/s.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">search_accle</span></td>
+        <td><p>Set acceleration in counts/s2 or steps/s2.</p>
 </td>
       </tr>
       <tr>
@@ -1551,7 +1809,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;int&gt; Motion_checkRef(int port, int axis, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int Motion_checkRef(int port, int axis, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1593,8 +1851,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>List int of the finding reference and found reference status.</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Status of reference. 0: finding reference, 1: found reference.</p>
 </td>
       </tr>
     </tbody>
@@ -1773,14 +2031,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Product_EMotion_Motion_enableServoOn_" data-uid="WPC.Product.EMotion.Motion_enableServoOn*"></a>
-  <h4 id="WPC_Product_EMotion_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EMotion.Motion_enableServoOn(System.Int32,System.Int32,System.Int32,System.Int32)">Motion_enableServoOn(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the servo on singal of specific axis.</p>
+  <a id="WPC_Product_EMotion_Motion_enableServoOff_" data-uid="WPC.Product.EMotion.Motion_enableServoOff*"></a>
+  <h4 id="WPC_Product_EMotion_Motion_enableServoOff_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EMotion.Motion_enableServoOff(System.Int32,System.Int32,System.Int32)">Motion_enableServoOff(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Servo off singal of specific axis.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Motion_enableServoOn(int port, int axis, int en_servo_on, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int Motion_enableServoOff(int port, int axis, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1806,8 +2064,58 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">en_servo_on</span></td>
-        <td><p>Enable/disable servo on.</p>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EMotion_Motion_enableServoOn_" data-uid="WPC.Product.EMotion.Motion_enableServoOn*"></a>
+  <h4 id="WPC_Product_EMotion_Motion_enableServoOn_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EMotion.Motion_enableServoOn(System.Int32,System.Int32,System.Int32)">Motion_enableServoOn(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Servo on singal of specific axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Motion_enableServoOn(int port, int axis, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
 </td>
       </tr>
       <tr>
@@ -1887,6 +2195,60 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><span class="xref">System.Int32</span></td>
         <td><p>Return 0 if executed successfully; return error code otherwise.<br>
 See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EMotion_Motion_getEncoderPosi_" data-uid="WPC.Product.EMotion.Motion_getEncoderPosi*"></a>
+  <h4 id="WPC_Product_EMotion_Motion_getEncoderPosi_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EMotion.Motion_getEncoderPosi(System.Int32,System.Int32,System.Int32)">Motion_getEncoderPosi(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Get encoder position for an axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Motion_getEncoderPosi(int connector, int axis, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">connector</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td><p>Axis selector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Encoder position of the axis.</p>
 </td>
       </tr>
     </tbody>
@@ -3049,7 +3411,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] Sys_getDriverInfo(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string[] Sys_getDriverInfo(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3092,7 +3454,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getGateway(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getGateway(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3135,7 +3497,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Sys_getIPAddrAndSubmask(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Sys_getIPAddrAndSubmask(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3178,7 +3540,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getMACAddr(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getMACAddr(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3221,7 +3583,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getRTC(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getRTC(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3264,7 +3626,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getSerialNumber(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getSerialNumber(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3307,7 +3669,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_reboot(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Sys_reboot(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3351,7 +3713,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_rebootOnBootloader(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Sys_rebootOnBootloader(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3526,6 +3888,9 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <h3 id="implements">Implements</h3>
   <div>
+      <a class="xref" href="WPC.Device.INetworkDevice.html">INetworkDevice</a>
+  </div>
+  <div>
       <a class="xref" href="WPC.Module.ISystemModule.html">ISystemModule</a>
   </div>
   <div>
@@ -3533,6 +3898,9 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </div>
   <div>
       <a class="xref" href="WPC.Module.IMotionModule.html">IMotionModule</a>
+  </div>
+  <div>
+      <a class="xref" href="WPC.Module.IDataloggerModule.html">IDataloggerModule</a>
   </div>
 </article>
           </div>

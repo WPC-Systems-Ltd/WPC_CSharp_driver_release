@@ -118,30 +118,29 @@ class WifiDAQE3A_get_network_info
             return;
         }
 
-        // Perform DAQ basic information
         try
         {
             // Parameters setting
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get serial number &amp; RTC Time
-            string serial_num = dev.Sys_getSerialNumber(timeout);
+            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
             string RTC = dev.Sys_getRTC(timeout);
             Console.WriteLine($&quot;Serial number: {serial_num}&quot;);
             Console.WriteLine($&quot;RTC data time: {RTC}&quot;);
 
             // Get IP &amp; submask
-            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout);
+            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout:timeout);
             Console.WriteLine($&quot;IP: {info[0]}&quot;);
             Console.WriteLine($&quot;Submask: {info[1]}&quot;);
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr(timeout);
+            string mac = dev.Sys_getMACAddr(timeout:timeout);
             Console.WriteLine($&quot;MAC: {mac}&quot;);
         }
         catch (Exception ex)
@@ -194,30 +193,29 @@ class WifiDAQE3A_get_WifiDAQ_status
             return;
         }
 
-        // Perform DAQ basic information
         try
         {
             // Parameters setting
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get RSSI, battery and thermo
 
-            int data1 = dev.Wifi_readRSSI(timeout);
+            int rssi = dev.Wifi_readRSSI(timeout:timeout);
 
-            int data2 = dev.Wifi_readBattery(timeout);
+            int battery = dev.Wifi_readBattery(timeout:timeout);
 
-            float data3 = dev.Wifi_readThermo(timeout);
+            float thermo = dev.Wifi_readThermo(timeout:timeout);
 
-            Console.WriteLine($&quot;RSSI: {data1} dBm&quot;);
+            Console.WriteLine($&quot;RSSI: {rssi} dBm&quot;);
 
-            Console.WriteLine($&quot;Battery: {data2} mV&quot;);
+            Console.WriteLine($&quot;Battery: {battery} mV&quot;);
 
-            Console.WriteLine($&quot;Thermo: {data3} °C&quot;);
+            Console.WriteLine($&quot;Thermo: {thermo} °C&quot;);
         }
         catch (Exception ex)
         {

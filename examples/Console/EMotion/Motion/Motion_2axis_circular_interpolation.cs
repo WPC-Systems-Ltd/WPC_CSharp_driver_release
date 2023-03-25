@@ -42,64 +42,61 @@ class EMotion_2axis_circular_interpolation
             int finish_point_x = 0;
             int finish_point_y = 0;
             int timeout = 3000; // ms
+            int axis_0 = Const.MOT_AXIS0;
+            int axis_1 = Const.MOT_AXIS1;
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout);
+            err = dev.Motion_open(port, timeout:timeout);
             Console.WriteLine($"Motion_open in port{port}: {err}");
 
-            // Or specify a specific name in a specific dir
-            //err = dev.Motion_openCfgFile(@"C:\Users\user\Desktop\3AxisStage_2P.ini");
-
             // Motion open configuration file
-            err = dev.Motion_openCfgFile("3AxisStage_2P.ini");
-            Console.WriteLine($"Motion_openCfgFile in port{port}: {err}");
+            err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
+            Console.WriteLine($"Motion_openCfgFile: {err}");
 
             // Motion load configuration file
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile in port{port}: {err}");
+            Console.WriteLine($"Motion_loadCfgFile: {err}");
 
             // Motion configure
-            err = dev.Motion_cfgCircularInterpo(port, Const.MOT_AXIS1, Const.MOT_AXIS2, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000, timeout: timeout);
-            Console.WriteLine($"Motion_cfgCircularInterpo in port{port}: {err}");
+            err = dev.Motion_cfgCircularInterpo(port, axis_0, axis_1, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000, accel:10000, decel:10000, timeout:timeout);
+            Console.WriteLine($"Motion_cfgCircularInterpo in axis{axis_0} and {axis_1}: {err}");
 
-            for (int i = 0; i < 4; i++)
+            for (int i=0; i<4; i++)
             {
-                err = dev.Motion_enableServoOn(port, i, Const.MOT_TRUE, timeout);
-                Console.WriteLine($"Motion_enableServoOn in axis {i} in port{port}: {err}");
+                err = dev.Motion_enableServoOn(port, i, timeout:timeout);
+                Console.WriteLine($"Motion_enableServoOn in axis{i}: {err}");
             }
 
             // Motion start
-            err = dev.Motion_startCircularInterpo(port, timeout);
+            err = dev.Motion_startCircularInterpo(port, timeout:timeout);
             Console.WriteLine($"Motion_startCircularInterpo in port{port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
             {
-                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1, timeout);
-                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2, timeout);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, axis_0, timeout:timeout);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, axis_1, timeout:timeout);
                 move_status = axis1_move_status & axis2_move_status;
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
                 else { Console.WriteLine($"Move completed"); }
             }
 
-            for (int i = 0; i < 4; i++)
+            for (int i=0; i<4; i++)
             {
                 // Motion stop
-                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-                Console.WriteLine($"Motion_open in axis {i} in port{port}: {err}");
+                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+                Console.WriteLine($"Motion_stop in axis{i}: {err}");
 
-                err = dev.Motion_enableServoOn(port, i, Const.MOT_FALSE, timeout);
-                Console.WriteLine($"Motion_enableServoOn in axis {i} in port{port}: {err}");
+                err = dev.Motion_enableServoOff(port, i, timeout:timeout);
+                Console.WriteLine($"Motion_enableServoOff in axis{i}: {err}");
             }
-            err = dev.Motion_releaseInterpoAxis(port, timeout);
-            Console.WriteLine($"Motion_releaseInterpoAxis in port{port}: {err}");
 
             // Motion close
-            err = dev.Motion_close(port, timeout);
+            err = dev.Motion_close(port, timeout:timeout);
             Console.WriteLine($"Motion_close in port{port}: {err}");
         }
         catch (Exception ex)

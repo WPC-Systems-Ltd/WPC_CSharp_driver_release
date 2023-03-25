@@ -82,9 +82,34 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="WPC.Device.INetworkDevice.html">INetworkDevice</a></div>
     <div><a class="xref" href="WPC.Module.ISystemModule.html">ISystemModule</a></div>
     <div><a class="xref" href="WPC.Module.INetworkModule.html">INetworkModule</a></div>
     <div><a class="xref" href="WPC.Module.IAOModule.html">IAOModule</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="WPC.Product.html">WPC.Product</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -718,14 +743,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <a id="WPC_Product_EthanO_AO_startStreaming_" data-uid="WPC.Product.EthanO.AO_startStreaming*"></a>
-  <h4 id="WPC_Product_EthanO_AO_startStreaming_System_Int32_System_Int32_" data-uid="WPC.Product.EthanO.AO_startStreaming(System.Int32,System.Int32)">AO_startStreaming(Int32, Int32)</h4>
+  <h4 id="WPC_Product_EthanO_AO_startStreaming_System_Int32_" data-uid="WPC.Product.EthanO.AO_startStreaming(System.Int32)">AO_startStreaming(Int32)</h4>
   <div class="markdown level1 summary"><p>Start AO signal generation.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int AO_startStreaming(int port, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int AO_startStreaming(int port)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -741,12 +766,6 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
         <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
 </td>
       </tr>
     </tbody>
@@ -864,8 +883,7 @@ This should only be used in the &quot;on demand&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -888,7 +906,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanO_close_" data-uid="WPC.Product.EthanO.close*"></a>
   <h4 id="WPC_Product_EthanO_close" data-uid="WPC.Product.EthanO.close">close()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Close network device handle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -896,7 +915,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </div>
   <a id="WPC_Product_EthanO_connect_" data-uid="WPC.Product.EthanO.connect*"></a>
   <h4 id="WPC_Product_EthanO_connect_System_String_" data-uid="WPC.Product.EthanO.connect(System.String)">connect(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connect to network device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -915,7 +935,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">IP</span></td>
-        <td></td>
+        <td><p>IP network address.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -930,13 +951,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Connection status.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_EthanO_disconnect_" data-uid="WPC.Product.EthanO.disconnect*"></a>
   <h4 id="WPC_Product_EthanO_disconnect" data-uid="WPC.Product.EthanO.disconnect">disconnect()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnect network device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -953,6 +976,207 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td><p>Disconnection status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EthanO_Logger_openFile_" data-uid="WPC.Product.EthanO.Logger_openFile*"></a>
+  <h4 id="WPC_Product_EthanO_Logger_openFile_System_String_" data-uid="WPC.Product.EthanO.Logger_openFile(System.String)">Logger_openFile(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_openFile(string file_name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">file_name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EthanO_Logger_writeList_" data-uid="WPC.Product.EthanO.Logger_writeList*"></a>
+  <h4 id="WPC_Product_EthanO_Logger_writeList_List_System_Double__" data-uid="WPC.Product.EthanO.Logger_writeList(List{System.Double})">Logger_writeList(List&lt;Double&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_writeList(List&lt;double&gt; data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EthanO_Logger_writeList_" data-uid="WPC.Product.EthanO.Logger_writeList*"></a>
+  <h4 id="WPC_Product_EthanO_Logger_writeList_List_System_Int32__" data-uid="WPC.Product.EthanO.Logger_writeList(List{System.Int32})">Logger_writeList(List&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_writeList(List&lt;int&gt; data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EthanO_Logger_writeList_" data-uid="WPC.Product.EthanO.Logger_writeList*"></a>
+  <h4 id="WPC_Product_EthanO_Logger_writeList_List_System_Single__" data-uid="WPC.Product.EthanO.Logger_writeList(List{System.Single})">Logger_writeList(List&lt;Single&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_writeList(List&lt;float&gt; data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_EthanO_Logger_writeValue_" data-uid="WPC.Product.EthanO.Logger_writeValue*"></a>
+  <h4 id="WPC_Product_EthanO_Logger_writeValue_System_String_" data-uid="WPC.Product.EthanO.Logger_writeValue(System.String)">Logger_writeValue(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Logger_writeValue(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -964,7 +1188,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] Sys_getDriverInfo(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string[] Sys_getDriverInfo(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1007,7 +1231,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getGateway(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getGateway(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1050,7 +1274,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Sys_getIPAddrAndSubmask(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Sys_getIPAddrAndSubmask(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1093,7 +1317,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getMACAddr(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getMACAddr(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1136,7 +1360,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getRTC(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getRTC(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1179,7 +1403,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getSerialNumber(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getSerialNumber(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1222,7 +1446,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_reboot(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Sys_reboot(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1266,7 +1490,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_rebootOnBootloader(int timeout = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Sys_rebootOnBootloader(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1440,6 +1664,9 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="WPC.Device.INetworkDevice.html">INetworkDevice</a>
+  </div>
   <div>
       <a class="xref" href="WPC.Module.ISystemModule.html">ISystemModule</a>
   </div>

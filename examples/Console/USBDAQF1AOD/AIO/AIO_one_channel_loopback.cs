@@ -42,7 +42,6 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             return;
         }
 
-        // Execute
         try
         {
             // Parameters setting
@@ -51,52 +50,52 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI port
-            err = dev.AI_open(port, timeout);
+            err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port{port}: {err}");
 
             // Open AO port
-            err = dev.AO_open(port, timeout);
+            err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($"AO_open in port{port}: {err}");
 
             // Set AI port and data acquisition
-            List<double> s = dev.AI_readOnDemand(port, timeout);
+            List<double> s = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
             Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
             // Set AO port and write data 1.5(V) in channel 4
-            err = dev.AO_writeOneChannel(port, 4, 1.5, timeout);
+            err = dev.AO_writeOneChannel(port, 4, 1.5, timeout:timeout);
             Console.WriteLine($"AO_writeOneChannel in ch4 in port{port}: {err}");
 
             // Set AO port and write data 2.5(V) in channel 5
-            err = dev.AO_writeOneChannel(port, 5, 2.5, timeout);
+            err = dev.AO_writeOneChannel(port, 5, 2.5, timeout:timeout);
             Console.WriteLine($"AO_writeOneChannel in ch5 in port{port}: {err}");
 
             // Set AO port and write data 3.5(V) in channel 6
-            err = dev.AO_writeOneChannel(port, 6, 3.5, timeout);
+            err = dev.AO_writeOneChannel(port, 6, 3.5, timeout:timeout);
             Console.WriteLine($"AO_writeOneChannel in ch6 in port{port}: {err}");
 
             // Set AO port and write data 4.5(V) in channel 7
-            err = dev.AO_writeOneChannel(port, 7, 4.5, timeout);
+            err = dev.AO_writeOneChannel(port, 7, 4.5, timeout:timeout);
             Console.WriteLine($"AO_writeOneChannel in ch7 in port{port}: {err}");
 
             // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port, timeout);
+            s = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
             Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
 
             // Close AI port
-            err = dev.AI_close(port, timeout);
+            err = dev.AI_close(port, timeout:timeout);
             Console.WriteLine($"AI_close in port{port}: {err}");
 
             // Close AO port
-            err = dev.AO_close(port, timeout);
+            err = dev.AO_close(port, timeout:timeout);
             Console.WriteLine($"AO_close in port{port}: {err}");
         }
         catch (Exception ex)

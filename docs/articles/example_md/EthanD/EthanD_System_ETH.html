@@ -118,28 +118,27 @@ class EthanD_get_network_info
             return;
         }
 
-        // Perform DAQ basic information
         try
         {
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
 
             // Get serial number &amp; RTC Time
-            string serial_num = dev.Sys_getSerialNumber(timeout);
+            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
             string RTC = dev.Sys_getRTC();
             Console.WriteLine($&quot;Serial number: {serial_num}&quot;);
             Console.WriteLine($&quot;RTC data time: {RTC}&quot;);
 
             // Get IP &amp; submask
-            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout);
+            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout:timeout);
             Console.WriteLine($&quot;IP: {info[0]}&quot;);
             Console.WriteLine($&quot;Submask: {info[1]}&quot;);
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr(timeout);
+            string mac = dev.Sys_getMACAddr(timeout:timeout);
             Console.WriteLine($&quot;MAC: {mac}&quot;);
         }
         catch (Exception ex)
