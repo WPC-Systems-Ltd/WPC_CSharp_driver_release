@@ -134,7 +134,7 @@ class EthanO_AO_write_all_channels
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AO port
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);
@@ -215,7 +215,7 @@ class EthanO_AO_write_one_channel
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AO port
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);
@@ -315,7 +315,7 @@ class EthanO_AO_waveform_generation
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AO port
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);

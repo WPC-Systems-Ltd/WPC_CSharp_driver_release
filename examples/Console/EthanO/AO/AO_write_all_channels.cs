@@ -51,7 +51,7 @@ class EthanO_AO_write_all_channels
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-
+            
             // Open AO port
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($"AO_open in port{port}: {err}");

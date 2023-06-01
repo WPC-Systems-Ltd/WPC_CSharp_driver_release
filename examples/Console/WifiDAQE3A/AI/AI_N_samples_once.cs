@@ -55,11 +55,11 @@ class WifiDAQE3A_AI_N_samples_once
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port{port}: {err}");
-
+            
             // Set AI port and acquisition mode to N-sample mode
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode} in port{port}: {err}");
@@ -79,13 +79,13 @@ class WifiDAQE3A_AI_N_samples_once
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
-            // Set AI port and data acquisition
+            // Data acquisition
             List<List<double>> streaming_list = dev.AI_readStreaming(port, samples, delay);
 
             // Read acquisition data
-            foreach (List<double> s in streaming_list)
+            foreach (List<double> sample in streaming_list)
             {
-                Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
+                Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
             }
 
             // Stop AI

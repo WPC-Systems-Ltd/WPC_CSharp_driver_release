@@ -25,10 +25,8 @@ class USBDAQF1AD_AI_on_demand_in_loop
         while (time_cal < exit_loop_time)
         {
             // Data acquisition
-            List<double> s = handle.AI_readOnDemand(port);
-
-            // Read acquisition data
-            Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
+            List<double> sample = handle.AI_readOnDemand(port);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
             // Wait
             Thread.Sleep(delay); // delay [ms]
@@ -69,17 +67,14 @@ class USBDAQF1AD_AI_on_demand_in_loop
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($"AI_open: {err}");
-
+            Console.WriteLine($"AI_open in port{port}: {err}");
+            
             // Set AI port and acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode}: {err}");
-
-            // Data acquisition
-            List<double> s = dev.AI_readOnDemand(port, timeout:timeout);
 
             // loop parameters
             int delay = 50;

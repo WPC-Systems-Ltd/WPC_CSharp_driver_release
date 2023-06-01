@@ -27,10 +27,9 @@ class EthanA_AI_N_samples_in_loop
             // Data acquisition
             List<List<double>> streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
-            foreach (List<double> s in streaming_list)
+            foreach (List<double> sample in streaming_list)
             {
-                // Read acquisition data
-                Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
+                Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
             }
 
             // Wait
@@ -74,11 +73,11 @@ class EthanA_AI_N_samples_in_loop
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port{port}: {err}");
-
+            
             // Set AI port and acquisition mode to N sample
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode} in port{port}: {err}");

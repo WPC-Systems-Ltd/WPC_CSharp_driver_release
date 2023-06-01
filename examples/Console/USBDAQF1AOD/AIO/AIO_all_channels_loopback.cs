@@ -47,14 +47,13 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             // Parameters setting
             int err;
             int port = 0;
-            List<double> s;
             int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port{port}: {err}");
@@ -62,12 +61,12 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             // Open AO port
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($"AO_open in port{port}: {err}");
-
-            // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port, timeout:timeout);
+            
+            // Data acquisition
+            List<double> sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
-            Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
             // Set AO port and write data simultaneously
             List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
@@ -75,10 +74,10 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             Console.WriteLine($"AO_writeAllChannels in port{port}: {err}");
 
             // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port, timeout:timeout);
+            sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
-            Console.WriteLine($"{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
             // Close AI port
             err = dev.AI_close(port, timeout:timeout);

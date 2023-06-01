@@ -130,11 +130,14 @@ class EthanD_DIO_loopback_pins
 
         try
         {
+            
             // Parameters setting
             int err;
             int port = 0;
-            List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1, 2};
-            List&lt;int&gt; DI_pins = new List&lt;int&gt; {5, 6, 7};
+            int DO_port = 0;
+            int DI_port = 1;
+            List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1, 2, 3};
+            List&lt;int&gt; DI_pins = new List&lt;int&gt; {4, 5, 6, 7};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
@@ -142,29 +145,44 @@ class EthanD_DIO_loopback_pins
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Open pin0, pin1, pin2, pin3 and pin4 with digital output
-            err = dev.DO_openPins(port, DO_pins, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPins in port{port}: {err}&quot;);
+            // Get port mode
+            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
-            // Set pin0 and pin1 to high, others to low
-            err = dev.DO_writePins(port, DO_pins, new List&lt;int&gt; {1, 1, 0}, timeout:timeout);
+            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
+            if (port_mode != &quot;DIO&quot;){
+                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
+                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
+            }
+            // Get port mode
+            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            // Get port DIO start up information
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            Console.WriteLine($&quot;enable_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[0]);
+
+            Console.WriteLine($&quot;direction_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[1]);
+
+            Console.WriteLine($&quot;state_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[2]);
+
+            // Get port mode
+            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            // Write pins to high or low
+            err = dev.DO_writePins(DO_port, DO_pins, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
-            // Open pin5, pin6 and pin7 with digital output
-            err = dev.DI_openPins(port, DI_pins, timeout:timeout);
-            Console.WriteLine($&quot;DI_openPins in port{port}: {err}&quot;);
-
-            // Read pin5, pin6 and pin7 state
-            List&lt;int&gt; pin_s = dev.DI_readPins(port, DI_pins, timeout:timeout);
-            Console.WriteLine($&quot;DI_readPins: {pin_s[5]}, {pin_s[6]}, {pin_s[7]}&quot;);
-
-            // Close pin0, pin1, pin2, pin3 and pin4 with digital output
-            err = dev.DO_closePins(port, DO_pins, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePins in port{port}: {err}&quot;);
-
-            // Close pin5, pin6 and pin7 with digital input
-            err = dev.DI_closePins(port, DI_pins, timeout:timeout);
-            Console.WriteLine($&quot;DI_closePins in port{port}: {err}&quot;);
+            // Read pins state
+            List&lt;int&gt; pin_s = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($&quot;DI_readPins: {pin_s[4]}, {pin_s[5]}, {pin_s[6]}, {pin_s[7]}&quot;);
+            
         }
         catch (Exception ex)
         {
@@ -228,38 +246,51 @@ class EthanD_DIO_loopback_port
         {
             // Parameters setting
             int err;
-            int port_DO = 0;
-            int port_DI = 1;
+            int port = 0; // Depend on your device
+            int DO_port = 0;
+            int DI_port = 1;
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
+            
+            // Get port mode
+            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
-            // Open all pins with digital output
-            err = dev.DO_openPort(port_DO, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPort in port{port_DO}: {err}&quot;);
+            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
+            if (port_mode != &quot;DIO&quot;){
+                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
+                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
+            }
 
-            // Open all pins with digital input
-            err = dev.DI_openPort(port_DI, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPort in port{port_DI}: {err}&quot;);
+            // Get port mode
+            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
-            // Set pin0, pin1 and pin2 to high, others to low
-            err = dev.DO_writePort(port_DO, new List&lt;int&gt; { 0, 0, 0, 1, 0, 0, 0, 0 }, timeout:timeout);
-            Console.WriteLine($&quot;DO_writePort in port{port_DO}: {err}&quot;);
+            // Get port DIO start up information
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
-            // Read all pins state
-            List&lt;int&gt; p = dev.DI_readPort(port_DI, timeout:timeout);
+            Console.WriteLine($&quot;enable_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[0]);
+
+            Console.WriteLine($&quot;direction_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[1]);
+
+            Console.WriteLine($&quot;state_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[2]);
+
+            // Write DO port to high or low
+            err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
+            Console.WriteLine($&quot;DO_writePort in port{DO_port}: {err}&quot;);
+
+            // Read DI port state
+            List&lt;int&gt; p = dev.DI_readPort(DI_port, timeout:timeout);
             Console.WriteLine($&quot;DI_readPort: {p[0]}, {p[1]}, {p[2]}, {p[3]}, {p[4]}, {p[5]}, {p[6]}, {p[7]}&quot;);
-
-            // Close all pins with digital output
-            err = dev.DO_closePort(port_DO, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePort in port{port_DO}: {err}&quot;);
-
-            // Close all pins with digital input
-            err = dev.DI_closePort(port_DI, timeout:timeout);
-            Console.WriteLine($&quot;DI_closePort in port{port_DI}: {err}&quot;);
+            
         }
         catch (Exception ex)
         {
@@ -319,12 +350,12 @@ class EthanD_DO_blinky_pins
 
         try
         {
+            
             // Parameters setting
             int err;
             int port = 0;
-            List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1};
-            List&lt;int&gt; DO_odd_state = new List&lt;int&gt; {0, 1};
-            List&lt;int&gt; DO_even_state = new List&lt;int&gt; {1, 0};
+            int DO_port = 1;
+            List&lt;int&gt; pinindex = new List&lt;int&gt; {1, 3, 5, 7};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
@@ -332,30 +363,42 @@ class EthanD_DO_blinky_pins
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Open pin0, pin1 with digital output
-            err = dev.DO_openPins(port, DO_pins, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPins in port{port}: {err}&quot;);
+            // Get port mode
+            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
+            if (port_mode != &quot;DIO&quot;){
+                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
+                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
+            }
+
+            // Get port mode
+            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            // Get port DIO start up information
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            Console.WriteLine($&quot;enable_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[0]);
+
+            Console.WriteLine($&quot;direction_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[1]);
+
+            Console.WriteLine($&quot;state_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[2]);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
-            for (int i = 0; i &lt; 10; i++)
+            for (int i=0; i&lt;10; i++)
             {
-                if (i%2 == 0)
-                {
-                    err = dev.DO_writePins(port, DO_pins, DO_even_state, timeout:timeout);
-                }
-                else
-                {
-                    err = dev.DO_writePins(port, DO_pins, DO_odd_state, timeout:timeout);
-                }
-                Console.WriteLine($&quot;DO_writePins in port{port}: {err}&quot;);
+                dev.DO_togglePins(DO_port, pinindex, timeout:timeout);
 
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
-
-            // Close pin0, pin1, pin2 and pin3 with digital output
-            err = dev.DO_closePins(port, DO_pins, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePins in port{port}: {err}&quot;);
+            
         }
         catch (Exception ex)
         {
@@ -415,41 +458,54 @@ class EthanD_DO_blinky_port
 
         try
         {
+            
             // Parameters setting
             int err;
-            int port = 0;
-            List&lt;int&gt; DO_odd_state = new List&lt;int&gt; { 0, 1, 0, 1, 0, 1, 0, 1 };
-            List&lt;int&gt; DO_even_state = new List&lt;int&gt; { 1, 0, 1, 0, 1, 0, 1, 0 };
-            int timeout = 3000; // ms
+            int port = 0; // Depend on your device
+            int DO_port = 0;
+            int timeout = 3000;  // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Open all pins and set it to digital output.
-            err = dev.DO_openPort(port, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPort in port{port}: {err}&quot;);
+            // Get port mode
+            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
+            if (port_mode != &quot;DIO&quot;){
+                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
+                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
+            }
+
+            // Get port mode
+            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            // Get port DIO start up information
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+
+            Console.WriteLine($&quot;enable_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[0]);
+
+            Console.WriteLine($&quot;direction_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[1]);
+
+            Console.WriteLine($&quot;state_list&quot;);
+            WPC_utilities.printByteList(pinstate_list[2]);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
-            for (int i = 0; i &lt; 10; i++)
+            for (int i=0; i&lt;10; i++)
             {
-                if (i % 2 == 0)
-                {
-                    err = dev.DO_writePort(port, DO_even_state, timeout:timeout);
-                }
-                else
-                {
-                    err = dev.DO_writePort(port, DO_odd_state, timeout:timeout);
-                }
-                Console.WriteLine($&quot;DO_writePort in port{port}: {err}&quot;);
+                dev.DO_togglePort(DO_port, timeout:timeout);
+
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
-
-            // Close all pins with digital output
-            err = dev.DO_closePort(port, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePort in port{port}: {err}&quot;);
+            
         }
         catch (Exception ex)
         {

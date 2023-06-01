@@ -52,20 +52,20 @@ class WifiDAQE3A_AI_on_demand_once
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($"AI_open: {err}");
-
+            Console.WriteLine($"AI_open in port{port}: {err}");
+            
             // Set AI port and acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode}: {err}");
 
-            // Set AI port and data acquisition
-            List<double> s = dev.AI_readOnDemand(port, timeout:timeout);
+            // Data acquisition
+            List<double> sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
-            Console.WriteLine($"data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}");
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
             // Close AI port
             err = dev.AI_close(port, timeout:timeout);

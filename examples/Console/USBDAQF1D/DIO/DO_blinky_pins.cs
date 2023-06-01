@@ -42,12 +42,11 @@ class USBDAQF1D_DO_blinky_pins
 
         try
         {
+            
             // Parameters setting
             int err;
             int port = 0;
-            List<int> DO_pins = new List<int> {0, 1};
-            List<int> DO_odd_state = new List<int> {0, 1};
-            List<int> DO_even_state = new List<int> {1, 0};
+            List<int> pinindex = new List<int> {1, 3, 5, 7};
             int timeout = 3000; // ms
 
             // Get firmware model & version
@@ -55,30 +54,23 @@ class USBDAQF1D_DO_blinky_pins
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open pin0, pin1 with digital output
-            err = dev.DO_openPins(port, DO_pins, timeout:timeout);
+            // Open pins with digital output
+            err = dev.DO_openPins(port, pinindex, timeout:timeout);
             Console.WriteLine($"DO_openPins in port{port}: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
-            for (int i = 0; i < 10; i++)
+            for (int i=0; i<10; i++)
             {
-                if (i%2 == 0)
-                {
-                    err = dev.DO_writePins(port, DO_pins, DO_even_state, timeout:timeout);
-                }
-                else
-                {
-                    err = dev.DO_writePins(port, DO_pins, DO_odd_state, timeout:timeout);
-                }
-                Console.WriteLine($"DO_writePins in port{port}: {err}");
+                dev.DO_togglePins(port, pinindex, timeout:timeout);
 
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
 
-            // Close pin0, pin1, pin2 and pin3 with digital output
-            err = dev.DO_closePins(port, DO_pins, timeout:timeout);
+            // Close pins with digital output
+            err = dev.DO_closePins(port, pinindex, timeout:timeout);
             Console.WriteLine($"DO_closePins in port{port}: {err}");
+            
         }
         catch (Exception ex)
         {

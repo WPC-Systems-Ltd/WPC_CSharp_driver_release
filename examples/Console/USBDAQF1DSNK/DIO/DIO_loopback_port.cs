@@ -46,38 +46,51 @@ class USBDAQF1DSNK_DIO_loopback_port
         {
             // Parameters setting
             int err;
-            int port_DO = 0;
-            int port_DI = 1;
+            int port = 0; // Depend on your device
+            int DO_port = 0;
+            int DI_port = 1;
             int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
+            
+            // Get port mode
+            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($"Slot mode: {port_mode}");
 
-            // Open all pins with digital output
-            err = dev.DO_openPort(port_DO, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{port_DO}: {err}");
+            // If the port mode is not set to "DIO", set the port mode to "DIO"
+            if (port_mode != "DIO"){
+                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
+                Console.WriteLine($"Sys_setPortDIOMode: {err}");
+            }
 
-            // Open all pins with digital input
-            err = dev.DI_openPort(port_DI, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{port_DI}: {err}");
+            // Get port mode
+            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
+            Console.WriteLine($"Slot mode: {port_mode}");
 
-            // Set pin0, pin1 and pin2 to high, others to low
-            err = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 1, 0, 0, 0, 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePort in port{port_DO}: {err}");
+            // Get port DIO start up information
+            List<List<byte>> pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
+            Console.WriteLine($"Slot mode: {port_mode}");
 
-            // Read all pins state
-            List<int> p = dev.DI_readPort(port_DI, timeout:timeout);
+            Console.WriteLine($"enable_list");
+            WPC_utilities.printByteList(pinstate_list[0]);
+
+            Console.WriteLine($"direction_list");
+            WPC_utilities.printByteList(pinstate_list[1]);
+
+            Console.WriteLine($"state_list");
+            WPC_utilities.printByteList(pinstate_list[2]);
+
+            // Write DO port to high or low
+            err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
+            Console.WriteLine($"DO_writePort in port{DO_port}: {err}");
+
+            // Read DI port state
+            List<int> p = dev.DI_readPort(DI_port, timeout:timeout);
             Console.WriteLine($"DI_readPort: {p[0]}, {p[1]}, {p[2]}, {p[3]}, {p[4]}, {p[5]}, {p[6]}, {p[7]}");
-
-            // Close all pins with digital output
-            err = dev.DO_closePort(port_DO, timeout:timeout);
-            Console.WriteLine($"DO_closePort in port{port_DO}: {err}");
-
-            // Close all pins with digital input
-            err = dev.DI_closePort(port_DI, timeout:timeout);
-            Console.WriteLine($"DI_closePort in port{port_DI}: {err}");
+            
         }
         catch (Exception ex)
         {

@@ -119,10 +119,9 @@ class EthanA_AI_continuous
             // Data acquisition
             List&lt;List&lt;double&gt;&gt; streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
-            foreach (List&lt;double&gt; s in streaming_list)
+            foreach (List&lt;double&gt; sample in streaming_list)
             {
-                // Read acquisition data
-                Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
             }
 
             // Wait
@@ -165,11 +164,11 @@ class EthanA_AI_continuous
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
-
+            
             // Set AI port and acquisition mode to continuous
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port{port}: {err}&quot;);
@@ -241,10 +240,9 @@ class EthanA_AI_N_samples_in_loop
             // Data acquisition
             List&lt;List&lt;double&gt;&gt; streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
-            foreach (List&lt;double&gt; s in streaming_list)
+            foreach (List&lt;double&gt; sample in streaming_list)
             {
-                // Read acquisition data
-                Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
             }
 
             // Wait
@@ -288,11 +286,11 @@ class EthanA_AI_N_samples_in_loop
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
-
+            
             // Set AI port and acquisition mode to N sample
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port{port}: {err}&quot;);
@@ -396,11 +394,11 @@ class EthanA_AI_N_samples_once
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
-
+            
             // Set AI port and acquisition mode to N-sample mode
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port{port}: {err}&quot;);
@@ -420,13 +418,13 @@ class EthanA_AI_N_samples_once
             // Wait for 1 sec
             Thread.Sleep(1000); // delay [ms]
 
-            // Set AI port and data acquisition
+            // Data acquisition
             List&lt;List&lt;double&gt;&gt; streaming_list = dev.AI_readStreaming(port, samples, delay);
 
             // Read acquisition data
-            foreach (List&lt;double&gt; s in streaming_list)
+            foreach (List&lt;double&gt; sample in streaming_list)
             {
-                Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
             }
 
             // Stop AI
@@ -478,10 +476,8 @@ class EthanA_AI_on_demand_in_loop
         while (time_cal &lt; exit_loop_time)
         {
             // Data acquisition
-            List&lt;double&gt; s = handle.AI_readOnDemand(port);
-
-            // Read acquisition data
-            Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+            List&lt;double&gt; sample = handle.AI_readOnDemand(port);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Wait
             Thread.Sleep(delay); // delay [ms]
@@ -522,17 +518,14 @@ class EthanA_AI_on_demand_in_loop
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open: {err}&quot;);
-
+            Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
+            
             // Set AI port and acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
-
-            // Data acquisition
-            List&lt;double&gt; s = dev.AI_readOnDemand(port, timeout:timeout);
 
             // loop parameters
             int delay = 50;
@@ -613,20 +606,20 @@ class EthanA_AI_on_demand_once
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open: {err}&quot;);
-
+            Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
+            
             // Set AI port and acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
 
-            // Set AI port and data acquisition
-            List&lt;double&gt; s = dev.AI_readOnDemand(port, timeout:timeout);
+            // Data acquisition
+            List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
-            Console.WriteLine($&quot;data: {s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Close AI port
             err = dev.AI_close(port, timeout:timeout);
@@ -675,13 +668,12 @@ class EthanA_DataLogger_AI_continuous
             // Data acquisition
             List&lt;List&lt;double&gt;&gt; streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
-            foreach (List&lt;double&gt; s in streaming_list)
+            foreach (List&lt;double&gt; sample in streaming_list)
             {
-                // Read acquisition data
-                Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
                 // Write data into CSV
-                handle.Logger_writeList(s);
+                handle.Logger_writeList(sample);
             }
 
             // Wait
@@ -733,11 +725,11 @@ class EthanA_DataLogger_AI_continuous
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
-
+            
             // Set AI port and acquisition mode to continuous
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port{port}: {err}&quot;);

@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IDIOModule.html",
-          "hash": "cfnIIRKKeDN+I6TTHgl+Ml+tttTO0k3XLUXYTOxP+FI="
+          "hash": "dHlAQR1J9NPJw7yNO+/LU5Q/1LI22H5r19+lwm6hv44="
         }
       },
       "is_incremental": true,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ISystemModule.html",
-          "hash": "5zSD4GeXnWVCOOBETAWozPBmHvwqI1spEQDfu1vURfo="
+          "hash": "iZiW03UIgNcaNEfgQXg64WxeVw/OWItaTFtyWlZizgg="
         }
       },
       "is_incremental": true,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EMotion.html",
-          "hash": "uTTpfYWcdTm67HFG5oMhWOJy5RWauX7TAD9uV7M/Ulc="
+          "hash": "VHzB7e27Ky6n4+rWhQuGPCiw/t7Qq/IP7M9UliqHS3o="
         }
       },
       "is_incremental": true,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanA.html",
-          "hash": "iM1yrBdePCXQVDjPi2FhVLF6JIOfEpz52Q1tSTUkfuE="
+          "hash": "TDK1W17ayOYUoPNs7H1uiMOjDaSsVGBrn7NUX8IqrLg="
         }
       },
       "is_incremental": true,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanD.html",
-          "hash": "w3lEXzXJbpWOt6+Tq0zSYVl4Rxf5Slz3qppHClPURF4="
+          "hash": "E5xxj1BYY7EBiicxpcSY9KVBmQOqujcbQ66UxAqc5xQ="
         }
       },
       "is_incremental": true,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanL.html",
-          "hash": "ghMIvX5nH/UfK2uopCFReB9mX0/O3M1MlZHeCkHYVQ4="
+          "hash": "xf8wCWUkhdOIpt7e2ACd4/NqmjXKSkzDmhDwnIkJPfo="
         }
       },
       "is_incremental": true,
@@ -333,7 +333,19 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanO.html",
-          "hash": "cuiaGQne3W/xgsQeRXyShVexnFV6cCfuyeRM2CYxXik="
+          "hash": "oh2AEZvJjT358wsYSQb+a5ScTO0LQ+V5MqOpHxQiMX8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Product.STEM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Product.STEM.html",
+          "hash": "VI3KRetDhEasVaHO4172y/pruGxiBEY5jKNsnYexcxQ="
         }
       },
       "is_incremental": true,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AD.html",
-          "hash": "nGItgaU7u687ZF5ihgxiJE+2VblIcJSkNttDnxO+QWo="
+          "hash": "WsXFohbdB5Gbhma13mp/JpwDLbC8YMHoi2eQNCyLjBw="
         }
       },
       "is_incremental": true,
@@ -357,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AOD.html",
-          "hash": "wLV57JPpCuaQfgtnqrcBE+utVpyCMyTY61gsuNvSDuM="
+          "hash": "4Bdz18u6XqvnlSOcZzWOrd/Yo64d1RrAD09yLu7ZB+A="
         }
       },
       "is_incremental": true,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1CD.html",
-          "hash": "lhLcNNfXOslXZvQ0rYis/+d5EK5RR10VqQ8+1eCf6FQ="
+          "hash": "yr7skig3URlACKbvtFpsZjSjCo56f+AeIt9q/3nUi4Y="
         }
       },
       "is_incremental": true,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1D.html",
-          "hash": "DKi8GtkPMzvyaYuCDB9WJYv1uCBpyOg+lZxJH6X49Ic="
+          "hash": "pD32MQn8cQ7NMcuOUDj9b2RQyl9S2yEQsjBz1GzSX50="
         }
       },
       "is_incremental": true,
@@ -393,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1DSNK.html",
-          "hash": "yTHQYm1Zn7+7zpgwhwgmAOJCuVHp2Rz79Nd6dz9s+rI="
+          "hash": "Mj+EzlWpIaDidM3tcrpakuqtJSUfcLEzTM5GCkWkXDI="
         }
       },
       "is_incremental": true,
@@ -405,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1RD.html",
-          "hash": "PhjSZ8yR+wpN4lcbVVJWKCg2UPGuKYuohx5Utjgsl9A="
+          "hash": "AZu6BTUEpz2WKEtAKL1m9UfoD76+gDWEU4cUMKpkJSc="
         }
       },
       "is_incremental": true,
@@ -417,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1TD.html",
-          "hash": "NwimVO6oYOXmlanG6iqlhnJL/xi4/E/s0g6LuZgKTks="
+          "hash": "Y6KBzgRPBhZZCnuqjSXGHCBy7WIaa5qls4rqHFjbi6Y="
         }
       },
       "is_incremental": true,
@@ -429,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.WifiDAQE3A.html",
-          "hash": "qpIpssjqHNw4kv+bz1he5/DEX2GZQ006oD/fCTUGjdk="
+          "hash": "q+/qEyCTMHODeOWGXlaScWmWMP7UK/FeF3un9rvmsQE="
         }
       },
       "is_incremental": true,
@@ -441,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.html",
-          "hash": "BG+X0AhaAzYmWZCzQmVE1EJlgunjnLn+dfYEbMd4Smc="
+          "hash": "ZBHklliCDK0eXLSE3t8oAJ4dbzlMleAhGH36kMajH2g="
         }
       },
       "is_incremental": true,
@@ -465,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "yOiAj74DlqgaOAbWc6YibTlrM8nSVBwqLzyi5IiNRqU="
+          "hash": "f7tQ9prsgk/Iv4Pmt6jaHgN5ROGJugFfdSJC1mhAqCM="
         }
       },
       "is_incremental": false,
@@ -477,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/README.html",
-          "hash": "Yicv9X1ji/J74Jfrab3RuPwC/k4KzHqL+dx/mf1odls="
+          "hash": "uS1a5LXEz4k0rVtGxywlv4aHAJ04aohHJyOy9z4sWoQ="
         }
       },
       "is_incremental": true,
@@ -501,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/pinout_product.html",
-          "hash": "uSq2+LPNij252778eN5aWm8zVQQqwfs9OVj0d/QhR9Q="
+          "hash": "nyEUh5zGkvlkIn14jRvFGOvGpgqBM+zYh8K+fnEybNk="
         }
       },
       "is_incremental": true,
@@ -525,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_port.html",
-          "hash": "DYAE3rNcDiM25KKjX9BCtVGqXstW5zJ61oUKrmI3gpQ="
+          "hash": "abZrCt4oz6SujnLwNXPzSyK8/yqg7axlFOWCxm5ekFU="
         }
       },
       "is_incremental": true,
@@ -585,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanA/EthanA_AI.html",
-          "hash": "KQrSdcAooXhm76QnqjKI9AxQ1L2DLCBwJow2t/F+C8M="
+          "hash": "ZQvAOtHUwKXrQRWGHsC/YVMC/qts9+AULkXObUWvhL0="
         }
       },
       "is_incremental": true,
@@ -609,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanD/EthanD_DIO.html",
-          "hash": "OyEFBAJg9l1KGioM/DdYMskf6vHZFh0kYq36Sil/oSU="
+          "hash": "BgSJsTsVDQ85bcqUbNGu1yvb8tJAhLhQvqiFeMIMLos="
         }
       },
       "is_incremental": true,
@@ -622,21 +634,6 @@
         ".html": {
           "relative_path": "articles/example_md/EthanD/EthanD_System_ETH.html",
           "hash": "0bMFeMheOpwPFks6eAbGayjFNbjRGxv4ugHqozPUspA="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "codesnippet-not-found"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/example_md/EthanL/EthanL_DIO.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/example_md/EthanL/EthanL_DIO.html",
-          "hash": "tgZsfwrxC9CURsZOKXl2pjGqf0CY4l7YitUi3qlVo0Q="
         }
       },
       "is_incremental": true,
@@ -672,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanO/EthanO_AO.html",
-          "hash": "9U8u8DfIhfT9D8SLqWmwwB8H7Fvn8Qe3q13Rf9dUI6Q="
+          "hash": "rwUy1IjPkpg+VHZoWIQZz9UWV1E296U3CMtBUaMa55A="
         }
       },
       "is_incremental": true,
@@ -692,11 +689,71 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/STEM/STEM_AI.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/STEM/STEM_AI.html",
+          "hash": "nDjKce0McQFTJO8gzeobgwtmiEb5HAEc96yDlWTc5MQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/STEM/STEM_AIO.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/STEM/STEM_AIO.html",
+          "hash": "tycvc/ygtwhZaKvXaGN+0NURbLSsyLdAGRp1H2FvE08="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/STEM/STEM_AO.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/STEM/STEM_AO.html",
+          "hash": "wXVPBW7gGh8I9JoOna1yKcHkd0FLRNpj2DHvpS+DBwQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/STEM/STEM_DIO.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/STEM/STEM_DIO.html",
+          "hash": "aBsXVXP7tK8oCR5qXMjjbZYfGTk0NxkfZMply95wG8U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/STEM/STEM_System_ETH.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/STEM/STEM_System_ETH.html",
+          "hash": "EbfQc5p/JnbfsDXCYEm2FoqFf8HscRfpYFxiK/E3OLY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_AI.md",
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_AI.html",
-          "hash": "9Wl6IpxvGVXIkpNzeAx9bg75SNYdFVTrZI1++BJmzpA="
+          "hash": "pZaWmYRWEla/rKdn18gGa5d2TZG+Z2d2MsLoJfE/lyY="
         }
       },
       "is_incremental": true,
@@ -708,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_DIO.html",
-          "hash": "QDtgUcbeJB5bgbfe9ePg7LYR93GDGVWnA49dIGAHcKs="
+          "hash": "G3MIA0V7VAb5t5nXujeaKU2htLPbDD4ZCHpioRoQSjM="
         }
       },
       "is_incremental": true,
@@ -768,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_AI.html",
-          "hash": "N1miAiNhPE5LQvF54p0oJLjW9YRmBD3NpbrFAokItdQ="
+          "hash": "mj6WyOD6Eqvu+g3xr+2gpyOrjBqmsevHZQH0SpcBooY="
         }
       },
       "is_incremental": true,
@@ -780,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_AIO.html",
-          "hash": "l1UHJbz98r6ns20aTu0ihi5hmodYST+pqUb029VzzOE="
+          "hash": "ka5A4LJPR9X2FJW4bW1HvpzSmJQLxdxdICQxTjPyoc8="
         }
       },
       "is_incremental": true,
@@ -792,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_AO.html",
-          "hash": "bncrsGc/o47zMB0AOiDiuz2dnRMOizg8A29UtsClJXM="
+          "hash": "I1NBzIW7EjTtAmIH8+QK8NqGokz4vcVwpPSs0V9sOaM="
         }
       },
       "is_incremental": true,
@@ -804,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_DIO.html",
-          "hash": "5qU6lkwR+R7+GXThPXbFgY1jeybh0mYw4Qdxv/qV5RA="
+          "hash": "HPTlfPHhXUISS0dKUixThhFFKA9HgU9TaCArNxD1fSs="
         }
       },
       "is_incremental": true,
@@ -864,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_DIO.html",
-          "hash": "TEQQ+tVTkIogWEwHRIeAk0bKVV/RKs/J7LfkSDBThqk="
+          "hash": "DJGUsCM/JRdRObzQOGGmh/5rPagy525ParbzFLw2OAI="
         }
       },
       "is_incremental": true,
@@ -924,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_DIO.html",
-          "hash": "0j0OXzQz+FqFtxohX2hniKuA3Xdp6z6q/rfT1Nr2KHQ="
+          "hash": "knuaEKzTCsoHrrGmRVBNNqNvjxjml1aUnwECv/amUyE="
         }
       },
       "is_incremental": true,
@@ -984,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_DIO.html",
-          "hash": "+dLansBkMPYZjOm1AMMK83m4rzekrbIsRShybXMFnsM="
+          "hash": "DnYYsuT6GUs6SVpRYOXAQ2YyG4NUywliBCS3ETGEXno="
         }
       },
       "is_incremental": true,
@@ -1008,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_DIO.html",
-          "hash": "t0/u8Yy+Yx8q+2bqQPuS4tgyzE7soQ/YavdSDy8zT/A="
+          "hash": "e/mw9/KmmA8kVTsuMWtakIsfSZjbzvyVBNrdqZIDGvw="
         }
       },
       "is_incremental": true,
@@ -1080,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_DIO.html",
-          "hash": "U+U0w7PBHtnKsHoF4wH5PniDq/QHZ19H7fcesu5sXSo="
+          "hash": "D8H5VgF8AevijijgmRl5TianOuR/ZBjPMRHB1hlRO4k="
         }
       },
       "is_incremental": true,
@@ -1152,7 +1209,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQE3A/WifiDAQE3A_AI.html",
-          "hash": "31ptTVqUvU54mvzT9Dlpd43IiIKClbCSyt/U8jLbhRc="
+          "hash": "/8gumiLXq0m8bHAo9ecYSWeXWBrX2Rd+pNvc3k4La9w="
         }
       },
       "is_incremental": true,
@@ -1176,7 +1233,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "LlGaB7JaW5D8BHFZ2BZsA7uB2pdohqU+uv+h+qpWdSU="
+          "hash": "5IEgIKd3Pkdf7zUJpzyRT7f9KcnvZnyM0tuMAZGLp/I="
         }
       },
       "is_incremental": false,
@@ -1232,6 +1289,17 @@
       "output": {
         "resource": {
           "relative_path": "images/Pinouts/pinout-EthanO.JPG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Pinouts/pinout-STEM.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Pinouts/pinout-STEM.JPG"
         }
       },
       "is_incremental": false,
@@ -1375,6 +1443,17 @@
       "output": {
         "resource": {
           "relative_path": "images/Products/product-EthanO.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Products/product-STEM.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Products/product-STEM.jpg"
         }
       },
       "is_incremental": false,
@@ -1548,14 +1627,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 59,
-          "skipped_file_count": 59
+          "total_file_count": 63,
+          "skipped_file_count": 63
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 37,
-          "skipped_file_count": 37
+          "total_file_count": 38,
+          "skipped_file_count": 38
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

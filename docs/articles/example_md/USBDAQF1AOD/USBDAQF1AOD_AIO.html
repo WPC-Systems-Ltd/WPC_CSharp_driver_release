@@ -127,14 +127,13 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             // Parameters setting
             int err;
             int port = 0;
-            List&lt;double&gt; s;
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
@@ -142,12 +141,12 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             // Open AO port
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);
-
-            // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port, timeout:timeout);
+            
+            // Data acquisition
+            List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
-            Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Set AO port and write data simultaneously
             List&lt;double&gt; AO_values = new List&lt;double&gt; { 0, 1, 2, 3, 4, 5, 4, 3 };
@@ -155,10 +154,10 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             Console.WriteLine($&quot;AO_writeAllChannels in port{port}: {err}&quot;);
 
             // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port, timeout:timeout);
+            sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
-            Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Close AI port
             err = dev.AI_close(port, timeout:timeout);
@@ -237,7 +236,7 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
+            
             // Open AI port
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
@@ -245,12 +244,12 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             // Open AO port
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);
-
-            // Set AI port and data acquisition
-            List&lt;double&gt; s = dev.AI_readOnDemand(port, timeout:timeout);
+            
+            // Data acquisition
+            List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
-            Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Set AO port and write data 1.5(V) in channel 4
             err = dev.AO_writeOneChannel(port, 4, 1.5, timeout:timeout);
@@ -268,11 +267,11 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             err = dev.AO_writeOneChannel(port, 7, 4.5, timeout:timeout);
             Console.WriteLine($&quot;AO_writeOneChannel in ch7 in port{port}: {err}&quot;);
 
-            // Set AI port and data acquisition
-            s = dev.AI_readOnDemand(port, timeout:timeout);
+            // Data acquisition
+            sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Read acquisition data
-            Console.WriteLine($&quot;{s[0]}, {s[1]}, {s[2]}, {s[3]}, {s[4]}, {s[5]}, {s[6]}, {s[7]}&quot;);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Close AI port
             err = dev.AI_close(port, timeout:timeout);

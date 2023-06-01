@@ -46,38 +46,40 @@ class USBDAQF1TD_DIO_loopback_port
         {
             // Parameters setting
             int err;
-            int port_DO = 0;
-            int port_DI = 1;
+            int port = 0; // Depend on your device
+            int DO_port = 0;
+            int DI_port = 1;
             int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
+            
+            // Open DO port with digital output
+            err = dev.DO_openPort(DO_port, timeout:timeout);
+            Console.WriteLine($"DO_openPort in port{DO_port}: {err}");
 
-            // Open all pins with digital output
-            err = dev.DO_openPort(port_DO, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{port_DO}: {err}");
+            // Open DI port with digital input
+            err = dev.DI_openPort(DI_port, timeout:timeout);
+            Console.WriteLine($"DO_openPort in port{DI_port}: {err}");
 
-            // Open all pins with digital input
-            err = dev.DI_openPort(port_DI, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{port_DI}: {err}");
+            // Write DO port to high or low
+            err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
+            Console.WriteLine($"DO_writePort in port{DO_port}: {err}");
 
-            // Set pin0, pin1 and pin2 to high, others to low
-            err = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 1, 0, 0, 0, 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePort in port{port_DO}: {err}");
-
-            // Read all pins state
-            List<int> p = dev.DI_readPort(port_DI, timeout:timeout);
+            // Read DI port state
+            List<int> p = dev.DI_readPort(DI_port, timeout:timeout);
             Console.WriteLine($"DI_readPort: {p[0]}, {p[1]}, {p[2]}, {p[3]}, {p[4]}, {p[5]}, {p[6]}, {p[7]}");
 
-            // Close all pins with digital output
-            err = dev.DO_closePort(port_DO, timeout:timeout);
-            Console.WriteLine($"DO_closePort in port{port_DO}: {err}");
+            // Close DO port with digital output
+            err = dev.DO_closePort(DO_port, timeout:timeout);
+            Console.WriteLine($"DO_closePort in port{DO_port}: {err}");
 
-            // Close all pins with digital input
-            err = dev.DI_closePort(port_DI, timeout:timeout);
-            Console.WriteLine($"DI_closePort in port{port_DI}: {err}");
+            // Close DI port with digital input
+            err = dev.DI_closePort(DI_port, timeout:timeout);
+            Console.WriteLine($"DI_closePort in port{DI_port}: {err}");
+            
         }
         catch (Exception ex)
         {
