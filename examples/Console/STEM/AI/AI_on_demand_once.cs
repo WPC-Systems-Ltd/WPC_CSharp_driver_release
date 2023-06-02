@@ -1,13 +1,26 @@
 /// AI_on_demand_once.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data in once in on demand mode from STEM.
+/// This example demonstrates the process of obtaining AI data in on demand mode.
+/// Additionally, it retrieve AI data from STEM.
 ///
-/// First, it shows how to open AI port.
-///
-/// Second, read AI ondemand data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading the AI on demand data.
+/// Finally, it concludes by explaining how to close the AI port.
+
+/// If your product is "STEM", please invoke the function `Sys_setPortAIOMode` and `AI_enableCS`.
+/// Example: AI_enableCS is {0, 2}
+/// Subsequently, the returned value of AI_readOnDemand and AI_readStreaming will be displayed as follows.
+/// data:
+///           CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7
+///           |                                     |                                      |
+///           |---------------- CS0-----------------|---------------- CS2------------------|
+/// [sample0]
+/// [sample1]
+///    .
+///    .
+///    .
+/// [sampleN]
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -74,14 +87,14 @@ class STEM_AI_on_demand_once
             err = dev.AI_enableCS(port, new List<int> {0, 1}, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
             
-            // Set AI port and acquisition mode to on demand
+            // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode}: {err}");
 
-            // Data acquisition
+            // Read data
             List<double> sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
             // Close AI port

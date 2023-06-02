@@ -163,13 +163,13 @@ class EthanD_DIO_loopback_pins
             Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[0]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
 
             Console.WriteLine($&quot;direction_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[1]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
 
             Console.WriteLine($&quot;state_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[2]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
             // Get port mode
             port_mode = dev.Sys_getPortMode(port, timeout:timeout);
@@ -275,13 +275,13 @@ class EthanD_DIO_loopback_port
             Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[0]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
 
             Console.WriteLine($&quot;direction_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[1]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
 
             Console.WriteLine($&quot;state_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[2]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
@@ -382,13 +382,13 @@ class EthanD_DO_blinky_pins
             Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[0]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
 
             Console.WriteLine($&quot;direction_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[1]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
 
             Console.WriteLine($&quot;state_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[2]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
@@ -489,18 +489,19 @@ class EthanD_DO_blinky_port
             Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[0]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
 
             Console.WriteLine($&quot;direction_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[1]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
 
             Console.WriteLine($&quot;state_list&quot;);
-            WPC_utilities.printByteList(pinstate_list[2]);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
             {
-                dev.DO_togglePort(DO_port, timeout:timeout);
+                List&lt;byte&gt; state = dev.DO_togglePort(DO_port, timeout:timeout);
+                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
 
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]

@@ -74,13 +74,13 @@ class USBDAQF1DSNK_DO_blinky_pins
             Console.WriteLine($"Slot mode: {port_mode}");
 
             Console.WriteLine($"enable_list");
-            WPC_utilities.printByteList(pinstate_list[0]);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[0])));
 
             Console.WriteLine($"direction_list");
-            WPC_utilities.printByteList(pinstate_list[1]);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[1])));
 
             Console.WriteLine($"state_list");
-            WPC_utilities.printByteList(pinstate_list[2]);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)

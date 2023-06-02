@@ -75,13 +75,13 @@ class USBDAQF1DSNK_DIO_loopback_port
             Console.WriteLine($"Slot mode: {port_mode}");
 
             Console.WriteLine($"enable_list");
-            WPC_utilities.printByteList(pinstate_list[0]);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[0])));
 
             Console.WriteLine($"direction_list");
-            WPC_utilities.printByteList(pinstate_list[1]);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[1])));
 
             Console.WriteLine($"state_list");
-            WPC_utilities.printByteList(pinstate_list[2]);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);

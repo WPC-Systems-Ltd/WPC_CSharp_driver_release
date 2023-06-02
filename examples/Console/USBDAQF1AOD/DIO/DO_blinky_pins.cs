@@ -61,8 +61,8 @@ class USBDAQF1AOD_DO_blinky_pins
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
             {
-                dev.DO_togglePins(port, pinindex, timeout:timeout);
-
+                List<byte> state = dev.DO_togglePins(port, pinindex, timeout:timeout);
+                Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }

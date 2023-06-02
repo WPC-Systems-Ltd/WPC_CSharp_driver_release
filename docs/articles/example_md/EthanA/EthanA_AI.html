@@ -92,14 +92,13 @@
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
 <pre><code class="lang-csharp" name="CS">/// AI_continuous.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data with loop in continuous mode from EthanA.
+/// This example demonstrates the process of obtaining AI data in continuous mode.
+/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from EthanA with a timeout of 300 ms.
 ///
-/// First, it shows how to open AI port and configure AI parameters.
-///
-/// Second, read AI streaming data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading the streaming AI data.
+/// Finally, it concludes by explaining how to close the AI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -116,7 +115,7 @@ class EthanA_AI_continuous
         int time_cal = 0;
         while (time_cal &lt; exit_loop_time)
         {
-            // Data acquisition
+            // Read data
             List&lt;List&lt;double&gt;&gt; streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
             foreach (List&lt;double&gt; sample in streaming_list)
@@ -169,15 +168,15 @@ class EthanA_AI_continuous
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
             
-            // Set AI port and acquisition mode to continuous
+            // Set AI acquisition mode to continuous
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port{port}: {err}&quot;);
 
-            // Set AI port and sampling rate to 1k (Hz)
+            // Set AI sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port{port}: {err}&quot;);
 
-            // Set AI port and start acquisition
+            // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
 
@@ -213,14 +212,13 @@ class EthanA_AI_continuous
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_N_samples_in_loop.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data with loop in N samples mode from EthanA.
+/// This example demonstrates the process of obtaining AI data in N-sample mode.
+/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from EthanA with a timeout of 300 ms.
 ///
-/// First, it shows how to open AI port and configure AI parameters.
-///
-/// Second, read AI streaming data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading the streaming AI data.
+/// Finally, it concludes by explaining how to close the AI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -237,7 +235,7 @@ class EthanA_AI_N_samples_in_loop
         int time_cal = 0;
         while (time_cal &lt; exit_loop_time)
         {
-            // Data acquisition
+            // Read data
             List&lt;List&lt;double&gt;&gt; streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
             foreach (List&lt;double&gt; sample in streaming_list)
@@ -278,7 +276,7 @@ class EthanA_AI_N_samples_in_loop
             int err;
             int port = 0;
             int mode = Const.AI_MODE_N_SAMPLE;
-            int samples = 3000;
+            int samples = 400;
             float sampling_rate = 1000;
             int timeout = 3000; // ms
 
@@ -291,19 +289,19 @@ class EthanA_AI_N_samples_in_loop
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
             
-            // Set AI port and acquisition mode to N sample
+            // Set AI acquisition mode to N sample
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port{port}: {err}&quot;);
 
-            // Set AI port and sampling rate to 1k (Hz)
+            // Set AI sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port{port}: {err}&quot;);
 
-            // Set AI port and # of samples to 3000 (pts)
+            // Set AI # of samples to 400 (pts)
             err = dev.AI_setNumSamples(port, samples, timeout:timeout);
             Console.WriteLine($&quot;AI_setNumSamples {samples} in port{port}: {err}&quot;);
 
-            // Set AI port and start acquisition
+            // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
 
@@ -339,14 +337,13 @@ class EthanA_AI_N_samples_in_loop
 <section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_N_samples_once.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data in once in N sample mode from EthanA.
+/// This example demonstrates the process of obtaining AI data in N-sample mode.
+/// Additionally, it gets AI data with 50 points in once from EthanA.
 ///
-/// First, it shows how to open AI port and configure AI parameters.
-///
-/// Second, read AI streaming data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading the streaming AI data.
+/// Finally, it concludes by explaining how to close the AI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -399,29 +396,26 @@ class EthanA_AI_N_samples_once
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
             
-            // Set AI port and acquisition mode to N-sample mode
+            // Set AI acquisition mode to N-sample mode
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port{port}: {err}&quot;);
 
-            // Set AI port and # of samples to 50 (pts)
+            // Set AI # of samples to 50 (pts)
             err = dev.AI_setNumSamples(port, samples, timeout:timeout);
             Console.WriteLine($&quot;AI_setNumSamples {samples} in port{port}: {err}&quot;);
 
-            // Set AI port and sampling rate to 1k (Hz)
+            // Set AI sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($&quot;AI_setNumSamples {sampling_rate} in port{port}: {err}&quot;);
 
-            // Set AI port and start acquisition
+            // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
 
-            // Wait for 1 sec
-            Thread.Sleep(1000); // delay [ms]
-
-            // Data acquisition
+            // Read data
             List&lt;List&lt;double&gt;&gt; streaming_list = dev.AI_readStreaming(port, samples, delay);
 
-            // Read acquisition data
+            // Print data
             foreach (List&lt;double&gt; sample in streaming_list)
             {
                 Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
@@ -451,14 +445,13 @@ class EthanA_AI_N_samples_once
 <section id="tabpanel_bHGHmlrG6S_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_on_demand_in_loop.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data with loop in ondemand mode from EthanA.
+/// This example demonstrates the process of obtaining AI data in on demand mode.
+/// Additionally, it utilizes a loop to retrieve AI data with 5 times from EthanA.
 ///
-/// First, it shows how to open AI port and configure AI parameters.
-///
-/// Second, read AI data
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading the AI on demand data.
+/// Finally, it concludes by explaining how to close the AI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -470,21 +463,6 @@ using WPC.Product;
 
 class EthanA_AI_on_demand_in_loop
 {
-    static void loop_func(EthanA handle, int port, int delay=50, int exit_loop_time=300)
-    {
-        int time_cal = 0;
-        while (time_cal &lt; exit_loop_time)
-        {
-            // Data acquisition
-            List&lt;double&gt; sample = handle.AI_readOnDemand(port);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
-
-            // Wait
-            Thread.Sleep(delay); // delay [ms]
-            time_cal += delay;
-        }
-    }
-
     static public void Main()
     {
         // Get C# driver version
@@ -523,16 +501,17 @@ class EthanA_AI_on_demand_in_loop
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
             
-            // Set AI port and acquisition mode to on demand
+            // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
 
-            // loop parameters
-            int delay = 50;
-            int exit_loop_time = 300;
-
-            // Start loop
-            loop_func(dev, port, delay:delay, exit_loop_time:exit_loop_time);
+            // Read AI data with 5 times
+            for (int i=0; i&lt;5; i++)
+            {
+                // Read data
+                List&lt;double&gt; sample = dev.AI_readOnDemand(port);
+                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
+            }
 
             // Close AI port
             err = dev.AI_close(port, timeout:timeout);
@@ -554,14 +533,13 @@ class EthanA_AI_on_demand_in_loop
 <section id="tabpanel_bHGHmlrG6S_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_on_demand_once.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data in once in on demand mode from EthanA.
+/// This example demonstrates the process of obtaining AI data in on demand mode.
+/// Additionally, it retrieve AI data from EthanA.
 ///
-/// First, it shows how to open AI port.
-///
-/// Second, read AI ondemand data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading the AI on demand data.
+/// Finally, it concludes by explaining how to close the AI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -611,14 +589,14 @@ class EthanA_AI_on_demand_once
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
             
-            // Set AI port and acquisition mode to on demand
+            // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
 
-            // Data acquisition
+            // Read data
             List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Close AI port
@@ -641,14 +619,13 @@ class EthanA_AI_on_demand_once
 <section id="tabpanel_bHGHmlrG6S_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_continuous_with_logger.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data and write to CSV file in continuous mode from EthanA.
+/// This example demonstrates the process of obtaining AI data in continuous mode and saving it into a CSV file.
+/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from EthanA with a timeout of 100 ms.
 ///
-/// First, it shows how to open AI port and configure AI parameters.
-///
-/// Second, read AI streaming data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading and saving the streaming AI data.
+/// Finally, it concludes by explaining how to close the AI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -665,7 +642,7 @@ class EthanA_DataLogger_AI_continuous
         int time_cal = 0;
         while (time_cal &lt; exit_loop_time)
         {
-            // Data acquisition
+            // Read data
             List&lt;List&lt;double&gt;&gt; streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
             foreach (List&lt;double&gt; sample in streaming_list)
@@ -730,22 +707,22 @@ class EthanA_DataLogger_AI_continuous
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
             
-            // Set AI port and acquisition mode to continuous
+            // Set AI acquisition mode to continuous
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port{port}: {err}&quot;);
 
-            // Set AI port and sampling rate to 1k (Hz)
+            // Set AI sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port{port}: {err}&quot;);
 
-            // Set AI port and start acquisition
+            // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
 
             // loop parameters
-            int num_of_samples = 600;
+            int num_of_samples = 200;
             int delay = 50;
-            int exit_loop_time = 300;
+            int exit_loop_time = 100;
 
             // Start loop
             loop_func(dev, port, num_of_samples:num_of_samples, delay:delay, exit_loop_time:exit_loop_time);

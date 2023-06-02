@@ -1,15 +1,10 @@
 /// AO_waveform_generation.cs with synchronous mode.
 ///
-/// This example demonstrates how to use AO waveform generation in specific channels from USBDAQF1AOD.
-///
-/// First, it shows how to open AO in port.
-///
-/// Second, set AO streaming parameters
-///
-/// Last, close AO in port.
-///
-/// This example demonstrates how to write AO in all channels from USBDAQF1AOD.
-///
+/// This example demonstrates the process of writing AO signal of USBDAQF1AOD.
+/// To begin with, it demonstrates the steps to open the AO port and configure the AO parameters.
+/// Next, it outlines the procedure for AO streaming.
+/// Finally, it concludes by explaining how to close the AO port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.

@@ -1,13 +1,12 @@
 /// AI_continuous.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data with loop in continuous mode from EthanA.
+/// This example demonstrates the process of obtaining AI data in continuous mode.
+/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from EthanA with a timeout of 300 ms.
 ///
-/// First, it shows how to open AI port and configure AI parameters.
-///
-/// Second, read AI streaming data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading the streaming AI data.
+/// Finally, it concludes by explaining how to close the AI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -24,7 +23,7 @@ class EthanA_AI_continuous
         int time_cal = 0;
         while (time_cal < exit_loop_time)
         {
-            // Data acquisition
+            // Read data
             List<List<double>> streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
             foreach (List<double> sample in streaming_list)
@@ -77,15 +76,15 @@ class EthanA_AI_continuous
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port{port}: {err}");
             
-            // Set AI port and acquisition mode to continuous
+            // Set AI acquisition mode to continuous
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode} in port{port}: {err}");
 
-            // Set AI port and sampling rate to 1k (Hz)
+            // Set AI sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($"AI_setSamplingRate {sampling_rate} in port{port}: {err}");
 
-            // Set AI port and start acquisition
+            // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
 

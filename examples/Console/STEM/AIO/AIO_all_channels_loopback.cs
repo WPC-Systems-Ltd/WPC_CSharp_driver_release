@@ -1,15 +1,28 @@
 /// AIO_all_channels_loopback.cs  with synchronous mode.
 ///
-/// This example demonstrates how to write AIO loopback in all channels from STEM.
+/// This example demonstrates the process of AIO loopback across all channels of STEM.
+/// It involves using AO pins to send signals and AI pins to receive signals on a single device, commonly referred to as "loopback".
+/// The AI and AO pins are connected using a wire.
 ///
-/// Use AO pins to send signals and use AI pins to receive signals on single device also called "loopback".
-///
-/// First, it shows how to open AO and AI in port.
-///
-/// Second, write all digital signals to AO and read AI ondemand data.
-///
-/// Last, close AO and AI in port.
-///
+/// Initially, the example demonstrates the steps required to open the AI and AO port
+/// Next, it reads AI data and displays its corresponding values.
+/// Following that, it writes digital signals to the AO pins and reads AI on-demand data once again.
+/// Lastly, it closes the AO and AI ports.
+
+/// If your product is "STEM", please invoke the function `Sys_setPortAIOMode` and `AI_enableCS`.
+/// Example: AI_enableCS is {0, 2}
+/// Subsequently, the returned value of AI_readOnDemand and AI_readStreaming will be displayed as follows.
+/// data:
+///           CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7
+///           |                                     |                                      |
+///           |---------------- CS0-----------------|---------------- CS2------------------|
+/// [sample0]
+/// [sample1]
+///    .
+///    .
+///    .
+/// [sampleN]
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -79,21 +92,22 @@ class STEM_AIO_all_channels_loopback
             err = dev.AI_enableCS(port, new List<int> {0, 1}, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
             
-            // Data acquisition
+            // Read data
             List<double> sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
             // Set AO port and write data simultaneously
-            List<double> AO_values = new List<double> { 0, 1, 2, 3, 4, 5, 4, 3 };
+            // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
+            List<double> AO_values = new List<double> { 5, 5, 3, 3, 2, 2, 0, 0 };
             err = dev.AO_writeAllChannels(port, AO_values, timeout:timeout);
             Console.WriteLine($"AO_writeAllChannels in port{port}: {err}");
 
-            // Set AI port and data acquisition
+            // Read data
             sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
             // Close AI port

@@ -1,13 +1,12 @@
 /// AI_on_demand_once.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data in once in on demand mode from EthanA.
+/// This example demonstrates the process of obtaining AI data in on demand mode.
+/// Additionally, it retrieve AI data from EthanA.
 ///
-/// First, it shows how to open AI port.
-///
-/// Second, read AI ondemand data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading the AI on demand data.
+/// Finally, it concludes by explaining how to close the AI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -57,14 +56,14 @@ class EthanA_AI_on_demand_once
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port{port}: {err}");
             
-            // Set AI port and acquisition mode to on demand
+            // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode}: {err}");
 
-            // Data acquisition
+            // Read data
             List<double> sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
             // Close AI port

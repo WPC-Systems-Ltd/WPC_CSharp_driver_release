@@ -1,13 +1,26 @@
 /// AI_continuous_with_logger.cs with synchronous mode.
 ///
-/// This example demonstrates how to get AI data and write to CSV file in continuous mode from STEM.
+/// This example demonstrates the process of obtaining AI data in continuous mode and saving it into a CSV file.
+/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from STEM with a timeout of 100 ms.
 ///
-/// First, it shows how to open AI port and configure AI parameters.
-///
-/// Second, read AI streaming data.
-///
-/// Last, close AI port.
-///
+/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// Next, it outlines the procedure for reading and saving the streaming AI data.
+/// Finally, it concludes by explaining how to close the AI port.
+
+/// If your product is "STEM", please invoke the function `Sys_setPortAIOMode` and `AI_enableCS`.
+/// Example: AI_enableCS is {0, 2}
+/// Subsequently, the returned value of AI_readOnDemand and AI_readStreaming will be displayed as follows.
+/// data:
+///           CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7
+///           |                                     |                                      |
+///           |---------------- CS0-----------------|---------------- CS2------------------|
+/// [sample0]
+/// [sample1]
+///    .
+///    .
+///    .
+/// [sampleN]
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -24,7 +37,7 @@ class STEM_DataLogger_AI_continuous
         int time_cal = 0;
         while (time_cal < exit_loop_time)
         {
-            // Data acquisition
+            // Read data
             List<List<double>> streaming_list = handle.AI_readStreaming(port, num_of_samples, delay);
 
             foreach (List<double> sample in streaming_list)
@@ -106,22 +119,22 @@ class STEM_DataLogger_AI_continuous
             err = dev.AI_enableCS(port, new List<int> {0, 1}, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
             
-            // Set AI port and acquisition mode to continuous
+            // Set AI acquisition mode to continuous
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode} in port{port}: {err}");
 
-            // Set AI port and sampling rate to 1k (Hz)
+            // Set AI sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($"AI_setSamplingRate {sampling_rate} in port{port}: {err}");
 
-            // Set AI port and start acquisition
+            // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port{port}: {err}");
 
             // loop parameters
-            int num_of_samples = 600;
+            int num_of_samples = 200;
             int delay = 50;
-            int exit_loop_time = 300;
+            int exit_loop_time = 100;
 
             // Start loop
             loop_func(dev, port, num_of_samples:num_of_samples, delay:delay, exit_loop_time:exit_loop_time);

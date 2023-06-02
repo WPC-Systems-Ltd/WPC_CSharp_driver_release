@@ -80,16 +80,15 @@
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
 <pre><code class="lang-csharp" name="CS">/// AIO_all_channels_loopback.cs  with synchronous mode.
 ///
-/// This example demonstrates how to write AIO loopback in all channels from USBDAQF1AOD.
+/// This example demonstrates the process of AIO loopback across all channels of USBDAQF1AOD.
+/// It involves using AO pins to send signals and AI pins to receive signals on a single device, commonly referred to as &quot;loopback&quot;.
+/// The AI and AO pins are connected using a wire.
 ///
-/// Use AO pins to send signals and use AI pins to receive signals on single device also called &quot;loopback&quot;.
-///
-/// First, it shows how to open AO and AI in port.
-///
-/// Second, write all digital signals to AO and read AI ondemand data.
-///
-/// Last, close AO and AI in port.
-///
+/// Initially, the example demonstrates the steps required to open the AI and AO port
+/// Next, it reads AI data and displays its corresponding values.
+/// Following that, it writes digital signals to the AO pins and reads AI on-demand data once again.
+/// Lastly, it closes the AO and AI ports.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -142,21 +141,22 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);
             
-            // Data acquisition
+            // Read data
             List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Set AO port and write data simultaneously
-            List&lt;double&gt; AO_values = new List&lt;double&gt; { 0, 1, 2, 3, 4, 5, 4, 3 };
+            // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
+            List&lt;double&gt; AO_values = new List&lt;double&gt; { 5, 5, 3, 3, 2, 2, 0, 0 };
             err = dev.AO_writeAllChannels(port, AO_values, timeout:timeout);
             Console.WriteLine($&quot;AO_writeAllChannels in port{port}: {err}&quot;);
 
-            // Set AI port and data acquisition
+            // Read data
             sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Close AI port
@@ -183,16 +183,15 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AIO_one_channel_loopback.cs with synchronous mode.
 ///
-/// This example demonstrates how to write AIO loopback in specific channel from USBDAQF1AOD.
+/// This example demonstrates the process of AIO loopback with specific channels of USBDAQF1AOD.
+/// It involves using AO pins to send signals and AI pins to receive signals on a single device, commonly referred to as &quot;loopback&quot;.
+/// The AI and AO pins are connected using a wire.
 ///
-/// Use AO pins to send signals and use AI pins to receive signals on single device also called &quot;loopback&quot;.
-///
-/// First, it shows how to open AO and AI in port.
-///
-/// Second, write digital signals to AO in specific channel and read AI ondemand data.
-///
-/// Last, close AO and AI in port.
-///
+/// Initially, the example demonstrates the steps required to open the AI and AO port
+/// Next, it reads AI data and displays its corresponding values.
+/// Following that, it writes digital signals to the AO pins and reads AI on-demand data once again.
+/// Lastly, it closes the AO and AI ports.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -245,32 +244,32 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             err = dev.AO_open(port, timeout:timeout);
             Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);
             
-            // Data acquisition
+            // Read data
             List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
-            // Set AO port and write data 1.5(V) in channel 4
-            err = dev.AO_writeOneChannel(port, 4, 1.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch4 in port{port}: {err}&quot;);
+            // Set AO port and write data 1.5(V) in channel 0
+            err = dev.AO_writeOneChannel(port, 0, 1.5, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeOneChannel in ch0 in port{port}: {err}&quot;);
 
-            // Set AO port and write data 2.5(V) in channel 5
-            err = dev.AO_writeOneChannel(port, 5, 2.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch5 in port{port}: {err}&quot;);
+            // Set AO port and write data 2.5(V) in channel 1
+            err = dev.AO_writeOneChannel(port, 1, 2.5, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeOneChannel in ch1 in port{port}: {err}&quot;);
 
-            // Set AO port and write data 3.5(V) in channel 6
-            err = dev.AO_writeOneChannel(port, 6, 3.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch6 in port{port}: {err}&quot;);
+            // Set AO port and write data 3.5(V) in channel 2
+            err = dev.AO_writeOneChannel(port, 2, 3.5, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeOneChannel in ch2 in port{port}: {err}&quot;);
 
-            // Set AO port and write data 4.5(V) in channel 7
-            err = dev.AO_writeOneChannel(port, 7, 4.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch7 in port{port}: {err}&quot;);
+            // Set AO port and write data 4.5(V) in channel 3
+            err = dev.AO_writeOneChannel(port, 3, 4.5, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeOneChannel in ch3 in port{port}: {err}&quot;);
 
-            // Data acquisition
+            // Read data
             sample = dev.AI_readOnDemand(port, timeout:timeout);
 
-            // Read acquisition data
+            // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Close AI port

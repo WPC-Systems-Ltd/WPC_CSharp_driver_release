@@ -1107,6 +1107,20 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region STEM_DIO
+                    case 20:
+                        STEM_DIO_loopback_pins.Main();
+                        break;
+                    case 21:
+                        STEM_DIO_loopback_port.Main();
+                        break;
+                    case 22:
+                        STEM_DO_blinky_pins.Main();
+                        break;
+                    case 23:
+                        STEM_DO_blinky_port.Main();
+                        break;
+                    #endregion
 
                     default:
                         break;

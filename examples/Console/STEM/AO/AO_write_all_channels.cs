@@ -1,13 +1,12 @@
 /// AO_write_all_channels.cs with synchronous mode.
 ///
-/// This example demonstrates how to write AO in all channels from STEM.
-///
-/// First, it shows how to open AO in port.
-///
-/// Second, write all digital signals
-///
-/// Last, close AO in port.
-///
+/// This example demonstrates the process of writing AO signal of STEM.
+/// To begin with, it demonstrates the steps to open the AO port.
+/// Next, it outlines the procedure for writing digital signals simultaneously to the AO pins.
+/// Finally, it concludes by explaining how to close the AO port.
+
+/// If your product is "STEM", please invoke the function `Sys_setPortAIOMode`.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -70,7 +69,8 @@ class STEM_AO_write_all_channels
             Console.WriteLine($"AO_open in port{port}: {err}");
 
             // Set AO port and write data simultaneously
-            List<double> AO_values = new List<double> { 0,1,2,3,4,5,4,3 };
+            // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
+            List<double> AO_values = new List<double> { 5, 5, 3, 3, 2, 2, 0, 0 };
             err = dev.AO_writeAllChannels(port, AO_values, timeout:timeout);
             Console.WriteLine($"AO_writeAllChannels in port{port}: {err}");
 

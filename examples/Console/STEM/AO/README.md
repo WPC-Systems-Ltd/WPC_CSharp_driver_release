@@ -22,7 +22,7 @@ Then, we take `STEM` for example.
 
 <img src="https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/Reference/Pinouts/pinout-STEM.JPG" alt="drawing" width="600"/>
 
-## AO interfacing SOP 
+## AO interfacing SOP
 
 Create device handle -> Connect to device -> Open AO port -> Write AO signal -> Close AO port -> Disconnect device -> Release device handle.
 
