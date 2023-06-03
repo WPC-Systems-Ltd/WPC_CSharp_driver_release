@@ -1,11 +1,10 @@
-/// DIO_loopback_port.cs with synchronous mode.
+/// DO_write_pins.cs with synchronous mode.
 ///
-/// This example demonstrates the process of DIO loopback using port from USBDAQF1DSNK.
-/// It involves using DO port to send signals and DI port to receive signals on a single device, commonly known as "loopback".
+/// This example illustrates the process of writing a high or low signal to a DO pin from EthanD.
 ///
-/// To begin with, it illustrates the steps required to open the DO and DI port.
-/// Next, it performs the operation of writing to a DO pin and reading from a DI pin.
-/// Lastly, it concludes by closing the DO and DI port.
+/// To begin with, it demonstrates the steps required to open the DO pin.
+/// Next, voltage output is written to the DO pin.
+/// Lastly, it concludes by closing the DO pin.
 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -16,7 +15,7 @@
 
 using WPC.Product;
 
-class USBDAQF1DSNK_DIO_loopback_port
+class EthanD_DO_write_pins
 {
     static public void Main()
     {
@@ -24,12 +23,12 @@ class USBDAQF1DSNK_DIO_loopback_port
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
-        USBDAQF1DSNK dev = new USBDAQF1DSNK();
+        EthanD dev = new EthanD();
 
         // Connect to device
         try
         {
-            dev.connect("default"); // Depend on your device
+            dev.connect("192.168.1.110"); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -41,18 +40,19 @@ class USBDAQF1DSNK_DIO_loopback_port
 
         try
         {
+            
             // Parameters setting
             int err;
-            int port = 0; // Depend on your device
-            int DO_port = 0;
-            int DI_port = 1;
+            int port = 0;
+            int DO_port = 1;
+            List<int> pinindex = new List<int> {0, 1, 2, 3};
             int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
+
             // Get port mode
             string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
             Console.WriteLine($"Slot mode: {port_mode}");
@@ -80,14 +80,9 @@ class USBDAQF1DSNK_DIO_loopback_port
             Console.WriteLine($"state_list");
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
 
-            // Write DO port to high or low
-            err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePort in port{DO_port}: {err}");
-
-            // Read DI port state
-            List<int> state = dev.DI_readPort(DI_port, timeout:timeout);
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
-
+            // Write pins to high or low
+            err = dev.DO_writePins(DO_port, pinindex, new List<int> {1, 1, 0, 0}, timeout:timeout);
+            Console.WriteLine($"DO_writePins in port{port}: {err}");
             
         }
         catch (Exception ex)

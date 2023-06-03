@@ -1,13 +1,11 @@
 /// DO_blinky_port.cs with synchronous mode.
 ///
-/// This example demonstrates how to write DO high or low in port from USBDAQF1D.
+/// This example illustrates the process of writing a high or low signal to a DO port from USBDAQF1D.
 ///
-/// First, it shows how to open DO in port.
-///
-/// Second, each loop has different voltage output so it will look like blinking.
-///
-/// Last, close DO in port.
-///
+/// To begin with, it demonstrates the steps required to open the DO port.
+/// Next, in each loop, a different voltage output is applied, resulting in a blinking effect.
+/// Lastly, it concludes by closing the DO port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.

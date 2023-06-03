@@ -1,11 +1,10 @@
-/// DIO_loopback_pins.cs with synchronous mode.
+/// DO_write_pins.cs with synchronous mode.
 ///
-/// This example demonstrates the process of DIO loopback using pins from USBDAQF1RD.
-/// It involves using DO pins to send signals and DI pins to receive signals on a single device, commonly known as "loopback".
+/// This example illustrates the process of writing a high or low signal to a DO pin from USBDAQF1AOD.
 ///
-/// To begin with, it illustrates the steps required to open the DO and DI pins.
-/// Next, it performs the operation of writing to a DO pin and reading from a DI pin.
-/// Lastly, it concludes by closing the DO and DI pins.
+/// To begin with, it demonstrates the steps required to open the DO pin.
+/// Next, voltage output is written to the DO pin.
+/// Lastly, it concludes by closing the DO pin.
 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -16,7 +15,7 @@
 
 using WPC.Product;
 
-class USBDAQF1RD_DIO_loopback_pins
+class USBDAQF1AOD_DO_write_pins
 {
     static public void Main()
     {
@@ -24,7 +23,7 @@ class USBDAQF1RD_DIO_loopback_pins
         Console.WriteLine($"{Const.PKG_FULL_NAME} - Version {Const.VERSION}");
 
         // Create device handle
-        USBDAQF1RD dev = new USBDAQF1RD();
+        USBDAQF1AOD dev = new USBDAQF1AOD();
 
         // Connect to device
         try
@@ -45,8 +44,7 @@ class USBDAQF1RD_DIO_loopback_pins
             // Parameters setting
             int err;
             int port = 0;
-            List<int> DO_pins = new List<int> {0, 1, 2, 3};
-            List<int> DI_pins = new List<int> {4, 5, 6, 7};
+            List<int> pinindex = new List<int> {1, 3, 5, 7};
             int timeout = 3000; // ms
 
             // Get firmware model & version
@@ -55,28 +53,16 @@ class USBDAQF1RD_DIO_loopback_pins
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open pins with digital output
-            err = dev.DO_openPins(port, DO_pins, timeout:timeout);
+            err = dev.DO_openPins(port, pinindex, timeout:timeout);
             Console.WriteLine($"DO_openPins in port{port}: {err}");
 
-            // Open pins with digital iutput
-            err = dev.DI_openPins(port, DI_pins, timeout:timeout);
-            Console.WriteLine($"DI_openPins in port{port}: {err}");
-
             // Write pins to high or low
-            err = dev.DO_writePins(port, DO_pins, new List<int> {1, 1, 0, 0}, timeout:timeout);
-            Console.WriteLine($"writePins: {err}");
-
-            // Read pins state
-            List<int> pin_s = dev.DI_readPins(port, DI_pins, timeout:timeout);
-            Console.WriteLine($"DI_readPins: {pin_s[4]}, {pin_s[5]}, {pin_s[6]}, {pin_s[7]}");
+            err = dev.DO_writePins(port, pinindex, new List<int> {1, 1, 0, 0}, timeout:timeout);
+            Console.WriteLine($"DO_writePins in port{port}: {err}");
 
             // Close pins with digital output
-            err = dev.DO_closePins(port, DO_pins, timeout:timeout);
+            err = dev.DO_closePins(port, pinindex, timeout:timeout);
             Console.WriteLine($"DO_closePins in port{port}: {err}");
-
-            // Close pins with digital input
-            err = dev.DI_closePins(port, DI_pins, timeout:timeout);
-            Console.WriteLine($"DI_closePins in port{port}: {err}");
             
         }
         catch (Exception ex)

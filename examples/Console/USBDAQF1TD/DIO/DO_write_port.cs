@@ -1,9 +1,9 @@
-/// DO_blinky_port.cs with synchronous mode.
+/// DO_write_port.cs with synchronous mode.
 ///
 /// This example illustrates the process of writing a high or low signal to a DO port from USBDAQF1TD.
 ///
 /// To begin with, it demonstrates the steps required to open the DO port.
-/// Next, in each loop, a different voltage output is applied, resulting in a blinking effect.
+/// Next, voltage output is written to the DO port.
 /// Lastly, it concludes by closing the DO port.
 
 /// For other examples please check:
@@ -15,7 +15,7 @@
 
 using WPC.Product;
 
-class USBDAQF1TD_DO_blinky_port
+class USBDAQF1TD_DO_write_port
 {
     static public void Main()
     {
@@ -49,14 +49,9 @@ class USBDAQF1TD_DO_blinky_port
             err = dev.DO_openPort(port, timeout:timeout);
             Console.WriteLine($"DO_openPort in port{port}: {err}");
 
-            // Toggle digital state for 10 times. Each times delay for 0.5 second
-            for (int i=0; i<10; i++)
-            {
-                dev.DO_togglePort(port, timeout:timeout);
-
-                // Wait for 0.5 second to see led status
-                Thread.Sleep(500); // delay [ms]
-            }
+            // Write DO port to high or low
+            err = dev.DO_writePort(port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
+            Console.WriteLine($"DO_writePort in port{port}: {err}");
 
             // Close port with digital output
             err = dev.DO_closePort(port, timeout:timeout);

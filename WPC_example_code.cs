@@ -117,6 +117,8 @@ public class WPC_example_code
         Console.WriteLine("Run DIO_loopback_port.cs, please input 21");
         Console.WriteLine("Run DO_blinky_pins.cs, please input 22");
         Console.WriteLine("Run DO_blinky_port.cs, please input 23");
+        Console.WriteLine("Run DO_write_pins.cs, please input 24");
+        Console.WriteLine("Run DO_write_port.cs, please input 25"); 
     }
     #endregion
 
@@ -526,6 +528,12 @@ public class WPC_example_code
                     case 23:
                         EthanD_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        EthanD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        EthanD_DO_write_port.Main();
+                        break;
                     #endregion
 
                     default:
@@ -625,6 +633,12 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1AD_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1AD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1AD_DO_write_port.Main();
+                        break;
                     #endregion
 
                     #region USBDAQF1AD_I2C
@@ -720,6 +734,12 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1AOD_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1AOD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1AOD_DO_write_port.Main();
+                        break;
                     #endregion
 
                     #region USBDAQF1AOD_I2C
@@ -763,6 +783,12 @@ public class WPC_example_code
                         break;
                     case 23:
                         USBDAQF1CD_DO_blinky_port.Main();
+                        break; 
+                    case 24:
+                        USBDAQF1CD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1CD_DO_write_port.Main();
                         break;
                     #endregion
 
@@ -826,6 +852,12 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1D_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1D_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1D_DO_write_port.Main();
+                        break;
                     #endregion
 
                     #region USBDAQF1D_I2C
@@ -879,6 +911,12 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1DSNK_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1DSNK_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1DSNK_DO_write_port.Main();
+                        break;
                     #endregion
 
                     default:
@@ -907,6 +945,12 @@ public class WPC_example_code
                         break;
                     case 23:
                         USBDAQF1RD_DO_blinky_port.Main();
+                        break;
+                    case 24:
+                        USBDAQF1RD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1RD_DO_write_port.Main();
                         break;
                     #endregion
 
@@ -972,6 +1016,12 @@ public class WPC_example_code
                         break;
                     case 23:
                         USBDAQF1TD_DO_blinky_port.Main();
+                        break;
+                    case 24:
+                        USBDAQF1TD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1TD_DO_write_port.Main();
                         break;
                     #endregion
 
@@ -1119,6 +1169,12 @@ public class WPC_example_code
                         break;
                     case 23:
                         STEM_DO_blinky_port.Main();
+                        break;
+                    case 24:
+                        STEM_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        STEM_DO_write_port.Main();
                         break;
                     #endregion
 

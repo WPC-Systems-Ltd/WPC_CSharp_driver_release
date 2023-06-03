@@ -1,13 +1,11 @@
 /// DO_blinky_pins.cs with synchronous mode.
 ///
-/// This example demonstrates how to write DO high or low in pins from EthanD.
+/// This example illustrates the process of writing a high or low signal to a DO pin from EthanD.
 ///
-/// First, it shows how to open DO in pins.
-///
-/// Second, each loop has different voltage output so it will look like blinking.
-///
-/// Last, close DO in pins.
-///
+/// To begin with, it demonstrates the steps required to open the DO pin.
+/// Next, in each loop, a different voltage output is applied, resulting in a blinking effect.
+/// Lastly, it concludes by closing the DO pin.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -85,8 +83,8 @@ class EthanD_DO_blinky_pins
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
             {
-                dev.DO_togglePins(DO_port, pinindex, timeout:timeout);
-
+                List<byte> state = dev.DO_togglePins(DO_port, pinindex, timeout:timeout);
+                Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }

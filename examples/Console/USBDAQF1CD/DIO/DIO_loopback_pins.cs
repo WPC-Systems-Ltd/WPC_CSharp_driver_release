@@ -1,15 +1,12 @@
 /// DIO_loopback_pins.cs with synchronous mode.
 ///
-/// This example demonstrates how to write DIO loopback in pins from USBDAQF1CD.
+/// This example demonstrates the process of DIO loopback using pins from USBDAQF1CD.
+/// It involves using DO pins to send signals and DI pins to receive signals on a single device, commonly known as "loopback".
 ///
-/// Use DO pins to send signals and use DI pins to receive signals on single device also called "loopback".
-///
-/// First, it shows how to open DO and DI in pins.
-///
-/// Second, write DO pin and read DI pin
-///
-/// Last, close DO and DI in pins.
-///
+/// To begin with, it illustrates the steps required to open the DO and DI pins.
+/// Next, it performs the operation of writing to a DO pin and reading from a DI pin.
+/// Lastly, it concludes by closing the DO and DI pins.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
