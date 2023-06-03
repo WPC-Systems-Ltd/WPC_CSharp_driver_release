@@ -503,6 +503,51 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Product_USBDAQF1TD_DIO_loadStartup_" data-uid="WPC.Product.USBDAQF1TD.DIO_loadStartup*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_DIO_loadStartup_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.DIO_loadStartup(System.Int32,System.Int32)">DIO_loadStartup(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;List&lt;byte&gt;&gt; DIO_loadStartup(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Product_USBDAQF1TD_disconnect_" data-uid="WPC.Product.USBDAQF1TD.disconnect*"></a>
   <h4 id="WPC_Product_USBDAQF1TD_disconnect" data-uid="WPC.Product.USBDAQF1TD.disconnect">disconnect()</h4>
   <div class="markdown level1 summary"><p>Disconnect from USB device.</p>
@@ -2133,6 +2178,51 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Product_USBDAQF1TD_Sys_getPortMode_" data-uid="WPC.Product.USBDAQF1TD.Sys_getPortMode*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Sys_getPortMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_getPortMode(System.Int32,System.Int32)">Sys_getPortMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Sys_getPortMode(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Product_USBDAQF1TD_Sys_getRTC_" data-uid="WPC.Product.USBDAQF1TD.Sys_getRTC*"></a>
   <h4 id="WPC_Product_USBDAQF1TD_Sys_getRTC_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_getRTC(System.Int32)">Sys_getRTC(Int32)</h4>
   <div class="markdown level1 summary"><p>Get date and time to connected WPC device.</p>
@@ -2282,6 +2372,349 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Sys_setPortAIOMode_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortAIOMode*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Sys_setPortAIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortAIOMode(System.Int32,System.Int32)">Sys_setPortAIOMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set AIO state to port in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setPortAIOMode(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Sys_setPortDIMode_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortDIMode*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Sys_setPortDIMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortDIMode(System.Int32,System.Int32)">Sys_setPortDIMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set DI state to port in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setPortDIMode(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Sys_setPortDIOMode_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortDIOMode*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Sys_setPortDIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortDIOMode(System.Int32,System.Int32)">Sys_setPortDIOMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set DIO state to port in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setPortDIOMode(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Sys_setPortDOMode_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortDOMode*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Sys_setPortDOMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortDOMode(System.Int32,System.Int32)">Sys_setPortDOMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set DO state to port in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setPortDOMode(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Sys_setPortIdleMode_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortIdleMode*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Sys_setPortIdleMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortIdleMode(System.Int32,System.Int32)">Sys_setPortIdleMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set IDLE state to port in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setPortIdleMode(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Sys_setPortMotionMode_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortMotionMode*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Sys_setPortMotionMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortMotionMode(System.Int32,System.Int32)">Sys_setPortMotionMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set motion state to port in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setPortMotionMode(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Sys_setPortSwitchMode_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortSwitchMode*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Sys_setPortSwitchMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Sys_setPortSwitchMode(System.Int32,System.Int32)">Sys_setPortSwitchMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set switch state to port in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setPortSwitchMode(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
