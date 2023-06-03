@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 public class WPC_example_code
 {
     #region ProductMessage
-    static void showProductMessage() 
-    { 
+    static void showProductMessage()
+    {
         Console.WriteLine("");
         Console.WriteLine("DeviceFinder, please input 0");
         Console.WriteLine("Emotion, please input 1");
@@ -23,6 +23,7 @@ public class WPC_example_code
         Console.WriteLine("USBDAQF1RD, please input 11");
         Console.WriteLine("USBDAQF1TD, please input 12");
         Console.WriteLine("WifiDAQE3A, please input 13");
+        Console.WriteLine("STEM, please input 14");
     }
 
     #endregion
@@ -79,7 +80,7 @@ public class WPC_example_code
         Console.WriteLine("Run AI_N_samples_in_loop.cs, please input 11");
         Console.WriteLine("Run AI_N_samples_once.cs, please input 12");
         Console.WriteLine("Run AI_on_demand_in_loop.cs, please input 13");
-        Console.WriteLine("Run AI_on_demand_once.cs, please input 14"); 
+        Console.WriteLine("Run AI_on_demand_once.cs, please input 14");
     }
     #endregion
 
@@ -90,7 +91,7 @@ public class WPC_example_code
         Console.WriteLine("For AIO");
         Console.WriteLine("-------");
         Console.WriteLine("Run AIO_all_channels_loopback.cs, please input 15");
-        Console.WriteLine("Run AIO_one_channel_loopback.cs, please input 16"); 
+        Console.WriteLine("Run AIO_one_channel_loopback.cs, please input 16");
     }
     #endregion
 
@@ -115,7 +116,9 @@ public class WPC_example_code
         Console.WriteLine("Run DIO_loopback_pins.cs, please input 20");
         Console.WriteLine("Run DIO_loopback_port.cs, please input 21");
         Console.WriteLine("Run DO_blinky_pins.cs, please input 22");
-        Console.WriteLine("Run DO_blinky_port.cs, please input 23"); 
+        Console.WriteLine("Run DO_blinky_port.cs, please input 23");
+        Console.WriteLine("Run DO_write_pins.cs, please input 24");
+        Console.WriteLine("Run DO_write_port.cs, please input 25"); 
     }
     #endregion
 
@@ -125,7 +128,7 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For I2C");
         Console.WriteLine("-------");
-        Console.WriteLine("Run I2C_write_read.cs, please input 30"); 
+        Console.WriteLine("Run I2C_write_read.cs, please input 30");
     }
     #endregion
 
@@ -185,7 +188,7 @@ public class WPC_example_code
         Console.WriteLine("Run TC_read_channel_data_with_logger.cs, please input 82");
     }
     #endregion
-     
+
     #region MotionMessage
     static void showMotionMessage()
     {
@@ -212,7 +215,7 @@ public class WPC_example_code
         Console.WriteLine("Run Motion_load_configuration_file.cs, please input 107");
         Console.WriteLine("Run Motion_save_configuration_file.cs, please input 108");
         Console.WriteLine("Run Motion_velocity_blending.cs, please input 109");
-        Console.WriteLine("Run Motion_velocity_blending_accerleration.cs, please input 110"); 
+        Console.WriteLine("Run Motion_velocity_blending_accerleration.cs, please input 110");
         Console.WriteLine("Run Motion_position_blending.cs, please input 111");
         Console.WriteLine("Run Motion_servo_on.cs, please input 112");
     }
@@ -225,7 +228,7 @@ public class WPC_example_code
         Console.WriteLine("For Relay");
         Console.WriteLine("----------------");
         Console.WriteLine("Run Relay_read_counters.cs, please input 200");
-        Console.WriteLine("Run Relay_set_channel.cs, please input 201"); 
+        Console.WriteLine("Run Relay_set_channel.cs, please input 201");
     }
     #endregion
 
@@ -244,8 +247,8 @@ public class WPC_example_code
         switch (product_code)
         {
             case 0:
-                Console.WriteLine("Get 0, show DeviceFinder series example code"); 
-                showDeviceFinderMessage(); 
+                Console.WriteLine("Get 0, show DeviceFinder series example code");
+                showDeviceFinderMessage();
                 break;
 
             case 1:
@@ -255,9 +258,9 @@ public class WPC_example_code
                 break;
 
             case 2:
-                Console.WriteLine("Get 2, show EthanA series example code"); 
+                Console.WriteLine("Get 2, show EthanA series example code");
                 showSysETHMessage();
-                showAIMessage(); 
+                showAIMessage();
                 break;
 
             case 3:
@@ -268,7 +271,7 @@ public class WPC_example_code
 
             case 4:
                 Console.WriteLine("Get 4, show EthanL series example code");
-                showSysETHMessage(); 
+                showSysETHMessage();
                 showRelayMessage();
                 break;
 
@@ -301,7 +304,7 @@ public class WPC_example_code
 
             case 8:
                 Console.WriteLine("Get 8, show USBDAQF1CD series example code");
-                showSysUSBMessage(); 
+                showSysUSBMessage();
                 showDIOMessage();
                 showI2CMessage();
                 showSPIMessage();
@@ -321,7 +324,7 @@ public class WPC_example_code
             case 10:
                 Console.WriteLine("Get 10, show USBDAQF1DSNK series example code");
                 showSysUSBMessage();
-                showDIOMessage(); 
+                showDIOMessage();
                 break;
 
             case 11:
@@ -333,7 +336,7 @@ public class WPC_example_code
                 showUARTMessage();
                 showRTDMessage();
                 break;
-            
+
             case 12:
                 Console.WriteLine("Get 12, show USBDAQF1TD series example code");
                 showSysUSBMessage();
@@ -346,19 +349,27 @@ public class WPC_example_code
 
             case 13:
                 Console.WriteLine("Get 13, show WifiDAQE3A series example code");
-                showSysWifiMessage(); 
+                showSysWifiMessage();
                 showAIMessage();
                 break;
 
-            default:
-                break; 
-        }
+            case 14:
+                Console.WriteLine("Get 14, show STEM series example code");
+                showSysETHMessage();
+                showAIMessage();
+                showAIOMessage();
+                showAOMessage();
+                showDIOMessage();
+                break;
 
+            default:
+                break;
+        }
         Console.WriteLine("===================================================");
         Console.WriteLine("example code: ");
         int example_code = Convert.ToInt32(Console.ReadLine());
 
-        switch (product_code) 
+        switch (product_code)
         {
             case 0:
                 switch (example_code)
@@ -368,7 +379,7 @@ public class WPC_example_code
                         DeviceFinder_find_all_devices.Main();
                         break;
                     #endregion
-                         
+
                     default:
                         break;
                 }
@@ -431,7 +442,7 @@ public class WPC_example_code
                         break;
                     case 105:
                         EMotion_find_limit.Main();
-                        break; 
+                        break;
                     case 106:
                         EMotion_get_logical_position.Main();
                         break;
@@ -459,13 +470,14 @@ public class WPC_example_code
                         break;
                 }
                 break;
+
             case 2:
-                switch (example_code) 
+                switch (example_code)
                 {
                     #region EthanA_Sys
                     case 1:
                         EthanA_get_network_info.Main();
-                        break; 
+                        break;
                     #endregion
 
                     #region EthanA_AI
@@ -516,13 +528,18 @@ public class WPC_example_code
                     case 23:
                         EthanD_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        EthanD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        EthanD_DO_write_port.Main();
+                        break;
                     #endregion
-                    
+
                     default:
                         break;
                 }
-                break; 
-
+                break;
 
             case 4:
                 switch (example_code)
@@ -531,7 +548,7 @@ public class WPC_example_code
                     case 1:
                         EthanL_get_network_info.Main();
                         break;
-                    #endregion 
+                    #endregion
 
                     #region EthanL_Relay
                     case 200:
@@ -540,8 +557,8 @@ public class WPC_example_code
                     case 201:
                         EthanL_Relay_set_channel.Main();
                         break;
- 
-                    #endregion 
+
+                    #endregion
                     default:
                         break;
                 }
@@ -572,7 +589,7 @@ public class WPC_example_code
                         break;
                 }
                 break;
-           
+
             case 6:
                 switch (example_code)
                 {
@@ -616,6 +633,12 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1AD_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1AD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1AD_DO_write_port.Main();
+                        break;
                     #endregion
 
                     #region USBDAQF1AD_I2C
@@ -646,7 +669,7 @@ public class WPC_example_code
                         break;
                 }
                 break;
-            
+
             case 7:
                 switch (example_code)
                 {
@@ -711,13 +734,19 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1AOD_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1AOD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1AOD_DO_write_port.Main();
+                        break;
                     #endregion
 
                     #region USBDAQF1AOD_I2C
                     case 30:
                         USBDAQF1AOD_I2C_write_read.Main();
                         break;
-                    #endregion 
+                    #endregion
 
                     #region USBDAQF1AOD_UART
                     case 50:
@@ -754,6 +783,12 @@ public class WPC_example_code
                         break;
                     case 23:
                         USBDAQF1CD_DO_blinky_port.Main();
+                        break; 
+                    case 24:
+                        USBDAQF1CD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1CD_DO_write_port.Main();
                         break;
                     #endregion
 
@@ -817,6 +852,12 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1D_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1D_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1D_DO_write_port.Main();
+                        break;
                     #endregion
 
                     #region USBDAQF1D_I2C
@@ -870,8 +911,14 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1DSNK_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1DSNK_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1DSNK_DO_write_port.Main();
+                        break;
                     #endregion
-                         
+
                     default:
                         break;
                 }
@@ -898,6 +945,12 @@ public class WPC_example_code
                         break;
                     case 23:
                         USBDAQF1RD_DO_blinky_port.Main();
+                        break;
+                    case 24:
+                        USBDAQF1RD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1RD_DO_write_port.Main();
                         break;
                     #endregion
 
@@ -964,6 +1017,12 @@ public class WPC_example_code
                     case 23:
                         USBDAQF1TD_DO_blinky_port.Main();
                         break;
+                    case 24:
+                        USBDAQF1TD_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        USBDAQF1TD_DO_write_port.Main();
+                        break;
                     #endregion
 
                     #region USBDAQF1TD_I2C
@@ -1000,7 +1059,7 @@ public class WPC_example_code
                     case 82:
                         USBDAQF1TD_TC_read_channel_data_with_logger.Main();
                         break;
- 
+
                     #endregion
 
                     default:
@@ -1046,9 +1105,86 @@ public class WPC_example_code
                 }
                 break;
 
+            case 14:
+                switch (example_code)
+                {
+                    #region STEM_Sys
+                    case 1:
+                        STEM_get_network_info.Main();
+                        break;
+                    #endregion
+
+
+                    #region STEM_AI
+                    case 9:
+                        STEM_DataLogger_AI_continuous.Main();
+                        break;
+                    case 10:
+                        STEM_AI_continuous.Main();
+                        break;
+                    case 11:
+                        STEM_AI_N_samples_in_loop.Main();
+                        break;
+                    case 12:
+                        STEM_AI_N_samples_once.Main();
+                        break;
+                    case 13:
+                        STEM_AI_on_demand_in_loop.Main();
+                        break;
+                    case 14:
+                        STEM_AI_on_demand_once.Main();
+                        break;
+                    #endregion
+
+                    #region STEM_AIO
+                    case 15:
+                        STEM_AIO_all_channels_loopback.Main();
+                        break;
+                    case 16:
+                        STEM_AIO_one_channel_loopback.Main();
+                        break;
+                    #endregion
+
+                    #region STEM_AO
+                    case 17:
+                        STEM_AO_write_all_channels.Main();
+                        break;
+                    case 18:
+                        STEM_AO_write_one_channel.Main();
+                        break;
+                    case 19:
+                        STEM_AO_waveform_generation.Main();
+                        break;
+                    #endregion
+
+                    #region STEM_DIO
+                    case 20:
+                        STEM_DIO_loopback_pins.Main();
+                        break;
+                    case 21:
+                        STEM_DIO_loopback_port.Main();
+                        break;
+                    case 22:
+                        STEM_DO_blinky_pins.Main();
+                        break;
+                    case 23:
+                        STEM_DO_blinky_port.Main();
+                        break;
+                    case 24:
+                        STEM_DO_write_pins.Main();
+                        break;
+                    case 25:
+                        STEM_DO_write_port.Main();
+                        break;
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
 
             default:
                 break;
-        }  
+        }
     }
 }

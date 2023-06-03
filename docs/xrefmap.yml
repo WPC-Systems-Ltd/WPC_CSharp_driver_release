@@ -808,6 +808,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IDIOModule.DI_readPort
   nameWithType: IDIOModule.DI_readPort
+- uid: WPC.Module.IDIOModule.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Module.IDIOModule.html#WPC_Module_IDIOModule_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDIOModule.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Module.IDIOModule.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: IDIOModule.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Module.IDIOModule.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Module.IDIOModule.html#WPC_Module_IDIOModule_DIO_loadStartup_
+  commentId: Overload:WPC.Module.IDIOModule.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Module.IDIOModule.DIO_loadStartup
+  nameWithType: IDIOModule.DIO_loadStartup
 - uid: WPC.Module.IDIOModule.DO_closePins(System.Int32,List{System.Int32},System.Int32)
   name: DO_closePins(Int32, List<Int32>, Int32)
   href: api/WPC.Module.IDIOModule.html#WPC_Module_IDIOModule_DO_closePins_System_Int32_List_System_Int32__System_Int32_
@@ -1982,6 +1995,97 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ISystemModule.Sys_rebootOnBootloader
   nameWithType: ISystemModule.Sys_rebootOnBootloader
+- uid: WPC.Module.ISystemModule.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISystemModule.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Module.ISystemModule.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: ISystemModule.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Module.ISystemModule.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Module.ISystemModule.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Module.ISystemModule.Sys_setPortAIOMode
+  nameWithType: ISystemModule.Sys_setPortAIOMode
+- uid: WPC.Module.ISystemModule.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISystemModule.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Module.ISystemModule.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: ISystemModule.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Module.ISystemModule.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortDIMode_
+  commentId: Overload:WPC.Module.ISystemModule.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Module.ISystemModule.Sys_setPortDIMode
+  nameWithType: ISystemModule.Sys_setPortDIMode
+- uid: WPC.Module.ISystemModule.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISystemModule.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Module.ISystemModule.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: ISystemModule.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Module.ISystemModule.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Module.ISystemModule.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Module.ISystemModule.Sys_setPortDIOMode
+  nameWithType: ISystemModule.Sys_setPortDIOMode
+- uid: WPC.Module.ISystemModule.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISystemModule.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Module.ISystemModule.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: ISystemModule.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Module.ISystemModule.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortDOMode_
+  commentId: Overload:WPC.Module.ISystemModule.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Module.ISystemModule.Sys_setPortDOMode
+  nameWithType: ISystemModule.Sys_setPortDOMode
+- uid: WPC.Module.ISystemModule.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISystemModule.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Module.ISystemModule.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: ISystemModule.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Module.ISystemModule.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Module.ISystemModule.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Module.ISystemModule.Sys_setPortIdleMode
+  nameWithType: ISystemModule.Sys_setPortIdleMode
+- uid: WPC.Module.ISystemModule.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISystemModule.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Module.ISystemModule.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: ISystemModule.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Module.ISystemModule.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Module.ISystemModule.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Module.ISystemModule.Sys_setPortMotionMode
+  nameWithType: ISystemModule.Sys_setPortMotionMode
+- uid: WPC.Module.ISystemModule.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISystemModule.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Module.ISystemModule.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: ISystemModule.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Module.ISystemModule.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Module.ISystemModule.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Module.ISystemModule.Sys_setPortSwitchMode
+  nameWithType: ISystemModule.Sys_setPortSwitchMode
 - uid: WPC.Module.ISystemModule.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -3153,6 +3257,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Sys_getMACAddr
   nameWithType: EMotion.Sys_getMACAddr
+- uid: WPC.Product.EMotion.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: EMotion.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.EMotion.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getPortMode_
+  commentId: Overload:WPC.Product.EMotion.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_getPortMode
+  nameWithType: EMotion.Sys_getPortMode
 - uid: WPC.Product.EMotion.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_getRTC_System_Int32_
@@ -3218,6 +3335,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Sys_setIPAddrAndSubmask
   nameWithType: EMotion.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EMotion.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: EMotion.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.EMotion.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.EMotion.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setPortAIOMode
+  nameWithType: EMotion.Sys_setPortAIOMode
+- uid: WPC.Product.EMotion.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: EMotion.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.EMotion.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.EMotion.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setPortDIMode
+  nameWithType: EMotion.Sys_setPortDIMode
+- uid: WPC.Product.EMotion.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: EMotion.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.EMotion.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.EMotion.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setPortDIOMode
+  nameWithType: EMotion.Sys_setPortDIOMode
+- uid: WPC.Product.EMotion.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: EMotion.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.EMotion.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.EMotion.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setPortDOMode
+  nameWithType: EMotion.Sys_setPortDOMode
+- uid: WPC.Product.EMotion.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: EMotion.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.EMotion.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.EMotion.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setPortIdleMode
+  nameWithType: EMotion.Sys_setPortIdleMode
+- uid: WPC.Product.EMotion.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: EMotion.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.EMotion.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.EMotion.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setPortMotionMode
+  nameWithType: EMotion.Sys_setPortMotionMode
+- uid: WPC.Product.EMotion.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EMotion.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EMotion.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: EMotion.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.EMotion.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.EMotion.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EMotion.Sys_setPortSwitchMode
+  nameWithType: EMotion.Sys_setPortSwitchMode
 - uid: WPC.Product.EMotion.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -3263,6 +3471,22 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.AI_close
   nameWithType: EthanA.AI_close
+- uid: WPC.Product.EthanA.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name: AI_enableCS(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.EthanA.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name.vb: AI_enableCS(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.EthanA.AI_enableCS(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.EthanA.AI_enableCS(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: EthanA.AI_enableCS(Int32, List<Int32>, Int32)
+  nameWithType.vb: EthanA.AI_enableCS(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.EthanA.AI_enableCS*
+  name: AI_enableCS
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_enableCS_
+  commentId: Overload:WPC.Product.EthanA.AI_enableCS
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.AI_enableCS
+  nameWithType: EthanA.AI_enableCS
 - uid: WPC.Product.EthanA.AI_open(System.Int32,System.Int32)
   name: AI_open(Int32, Int32)
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_open_System_Int32_System_Int32_
@@ -3518,6 +3742,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.Sys_getMACAddr
   nameWithType: EthanA.Sys_getMACAddr
+- uid: WPC.Product.EthanA.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: EthanA.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.EthanA.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_getPortMode_
+  commentId: Overload:WPC.Product.EthanA.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_getPortMode
+  nameWithType: EthanA.Sys_getPortMode
 - uid: WPC.Product.EthanA.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_getRTC_System_Int32_
@@ -3583,6 +3820,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.Sys_setIPAddrAndSubmask
   nameWithType: EthanA.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EthanA.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: EthanA.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.EthanA.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.EthanA.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_setPortAIOMode
+  nameWithType: EthanA.Sys_setPortAIOMode
+- uid: WPC.Product.EthanA.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: EthanA.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.EthanA.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.EthanA.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_setPortDIMode
+  nameWithType: EthanA.Sys_setPortDIMode
+- uid: WPC.Product.EthanA.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: EthanA.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.EthanA.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.EthanA.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_setPortDIOMode
+  nameWithType: EthanA.Sys_setPortDIOMode
+- uid: WPC.Product.EthanA.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: EthanA.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.EthanA.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.EthanA.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_setPortDOMode
+  nameWithType: EthanA.Sys_setPortDOMode
+- uid: WPC.Product.EthanA.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: EthanA.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.EthanA.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.EthanA.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_setPortIdleMode
+  nameWithType: EthanA.Sys_setPortIdleMode
+- uid: WPC.Product.EthanA.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: EthanA.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.EthanA.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.EthanA.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_setPortMotionMode
+  nameWithType: EthanA.Sys_setPortMotionMode
+- uid: WPC.Product.EthanA.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: EthanA.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.EthanA.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.EthanA.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_setPortSwitchMode
+  nameWithType: EthanA.Sys_setPortSwitchMode
 - uid: WPC.Product.EthanA.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -3728,6 +4056,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanD.DI_readPort
   nameWithType: EthanD.DI_readPort
+- uid: WPC.Product.EthanD.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: EthanD.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.EthanD.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_DIO_loadStartup_
+  commentId: Overload:WPC.Product.EthanD.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.DIO_loadStartup
+  nameWithType: EthanD.DIO_loadStartup
 - uid: WPC.Product.EthanD.disconnect
   name: disconnect()
   href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_disconnect
@@ -3972,6 +4313,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanD.Sys_getMACAddr
   nameWithType: EthanD.Sys_getMACAddr
+- uid: WPC.Product.EthanD.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: EthanD.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.EthanD.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_getPortMode_
+  commentId: Overload:WPC.Product.EthanD.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Sys_getPortMode
+  nameWithType: EthanD.Sys_getPortMode
 - uid: WPC.Product.EthanD.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_getRTC_System_Int32_
@@ -4037,6 +4391,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanD.Sys_setIPAddrAndSubmask
   nameWithType: EthanD.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EthanD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: EthanD.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.EthanD.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.EthanD.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Sys_setPortAIOMode
+  nameWithType: EthanD.Sys_setPortAIOMode
+- uid: WPC.Product.EthanD.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: EthanD.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.EthanD.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.EthanD.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Sys_setPortDIMode
+  nameWithType: EthanD.Sys_setPortDIMode
+- uid: WPC.Product.EthanD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: EthanD.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.EthanD.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.EthanD.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Sys_setPortDIOMode
+  nameWithType: EthanD.Sys_setPortDIOMode
+- uid: WPC.Product.EthanD.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: EthanD.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.EthanD.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.EthanD.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Sys_setPortDOMode
+  nameWithType: EthanD.Sys_setPortDOMode
+- uid: WPC.Product.EthanD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: EthanD.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.EthanD.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.EthanD.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Sys_setPortIdleMode
+  nameWithType: EthanD.Sys_setPortIdleMode
+- uid: WPC.Product.EthanD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: EthanD.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.EthanD.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.EthanD.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Sys_setPortMotionMode
+  nameWithType: EthanD.Sys_setPortMotionMode
+- uid: WPC.Product.EthanD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: EthanD.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.EthanD.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.EthanD.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.Sys_setPortSwitchMode
+  nameWithType: EthanD.Sys_setPortSwitchMode
 - uid: WPC.Product.EthanD.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -4182,6 +4627,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.DI_readPort
   nameWithType: EthanL.DI_readPort
+- uid: WPC.Product.EthanL.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: EthanL.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.EthanL.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_DIO_loadStartup_
+  commentId: Overload:WPC.Product.EthanL.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.DIO_loadStartup
+  nameWithType: EthanL.DIO_loadStartup
 - uid: WPC.Product.EthanL.disconnect
   name: disconnect()
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_disconnect
@@ -4465,6 +4923,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.Sys_getMACAddr
   nameWithType: EthanL.Sys_getMACAddr
+- uid: WPC.Product.EthanL.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: EthanL.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.EthanL.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_getPortMode_
+  commentId: Overload:WPC.Product.EthanL.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Sys_getPortMode
+  nameWithType: EthanL.Sys_getPortMode
 - uid: WPC.Product.EthanL.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_getRTC_System_Int32_
@@ -4530,6 +5001,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.Sys_setIPAddrAndSubmask
   nameWithType: EthanL.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EthanL.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: EthanL.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.EthanL.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.EthanL.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Sys_setPortAIOMode
+  nameWithType: EthanL.Sys_setPortAIOMode
+- uid: WPC.Product.EthanL.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: EthanL.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.EthanL.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.EthanL.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Sys_setPortDIMode
+  nameWithType: EthanL.Sys_setPortDIMode
+- uid: WPC.Product.EthanL.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: EthanL.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.EthanL.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.EthanL.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Sys_setPortDIOMode
+  nameWithType: EthanL.Sys_setPortDIOMode
+- uid: WPC.Product.EthanL.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: EthanL.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.EthanL.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.EthanL.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Sys_setPortDOMode
+  nameWithType: EthanL.Sys_setPortDOMode
+- uid: WPC.Product.EthanL.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: EthanL.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.EthanL.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.EthanL.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Sys_setPortIdleMode
+  nameWithType: EthanL.Sys_setPortIdleMode
+- uid: WPC.Product.EthanL.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: EthanL.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.EthanL.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.EthanL.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Sys_setPortMotionMode
+  nameWithType: EthanL.Sys_setPortMotionMode
+- uid: WPC.Product.EthanL.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: EthanL.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.EthanL.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.EthanL.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanL.Sys_setPortSwitchMode
+  nameWithType: EthanL.Sys_setPortSwitchMode
 - uid: WPC.Product.EthanL.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -4901,6 +5463,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanO.Sys_getMACAddr
   nameWithType: EthanO.Sys_getMACAddr
+- uid: WPC.Product.EthanO.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanO.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanO.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: EthanO.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.EthanO.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_getPortMode_
+  commentId: Overload:WPC.Product.EthanO.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Sys_getPortMode
+  nameWithType: EthanO.Sys_getPortMode
 - uid: WPC.Product.EthanO.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_getRTC_System_Int32_
@@ -4966,6 +5541,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanO.Sys_setIPAddrAndSubmask
   nameWithType: EthanO.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EthanO.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanO.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanO.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: EthanO.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.EthanO.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.EthanO.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Sys_setPortAIOMode
+  nameWithType: EthanO.Sys_setPortAIOMode
+- uid: WPC.Product.EthanO.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanO.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanO.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: EthanO.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.EthanO.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.EthanO.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Sys_setPortDIMode
+  nameWithType: EthanO.Sys_setPortDIMode
+- uid: WPC.Product.EthanO.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanO.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanO.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: EthanO.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.EthanO.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.EthanO.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Sys_setPortDIOMode
+  nameWithType: EthanO.Sys_setPortDIOMode
+- uid: WPC.Product.EthanO.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanO.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanO.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: EthanO.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.EthanO.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.EthanO.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Sys_setPortDOMode
+  nameWithType: EthanO.Sys_setPortDOMode
+- uid: WPC.Product.EthanO.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanO.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanO.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: EthanO.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.EthanO.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.EthanO.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Sys_setPortIdleMode
+  nameWithType: EthanO.Sys_setPortIdleMode
+- uid: WPC.Product.EthanO.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanO.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanO.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: EthanO.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.EthanO.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.EthanO.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Sys_setPortMotionMode
+  nameWithType: EthanO.Sys_setPortMotionMode
+- uid: WPC.Product.EthanO.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanO.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanO.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: EthanO.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.EthanO.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.EthanO.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanO.Sys_setPortSwitchMode
+  nameWithType: EthanO.Sys_setPortSwitchMode
 - uid: WPC.Product.EthanO.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -4979,6 +5645,898 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanO.Sys_setRTC
   nameWithType: EthanO.Sys_setRTC
+- uid: WPC.Product.STEM
+  name: STEM
+  href: api/WPC.Product.STEM.html
+  commentId: T:WPC.Product.STEM
+  fullName: WPC.Product.STEM
+  nameWithType: STEM
+- uid: WPC.Product.STEM.#ctor
+  name: STEM()
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM__ctor
+  commentId: M:WPC.Product.STEM.#ctor
+  fullName: WPC.Product.STEM.STEM()
+  nameWithType: STEM.STEM()
+- uid: WPC.Product.STEM.#ctor*
+  name: STEM
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM__ctor_
+  commentId: Overload:WPC.Product.STEM.#ctor
+  isSpec: "True"
+  fullName: WPC.Product.STEM.STEM
+  nameWithType: STEM.STEM
+- uid: WPC.Product.STEM.AI_close(System.Int32,System.Int32)
+  name: AI_close(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_close(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_close(System.Int32, System.Int32)
+  nameWithType: STEM.AI_close(Int32, Int32)
+- uid: WPC.Product.STEM.AI_close*
+  name: AI_close
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_close_
+  commentId: Overload:WPC.Product.STEM.AI_close
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_close
+  nameWithType: STEM.AI_close
+- uid: WPC.Product.STEM.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name: AI_enableCS(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name.vb: AI_enableCS(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.AI_enableCS(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.AI_enableCS(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.AI_enableCS(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.AI_enableCS(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.AI_enableCS*
+  name: AI_enableCS
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_enableCS_
+  commentId: Overload:WPC.Product.STEM.AI_enableCS
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_enableCS
+  nameWithType: STEM.AI_enableCS
+- uid: WPC.Product.STEM.AI_open(System.Int32,System.Int32)
+  name: AI_open(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_open(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_open(System.Int32, System.Int32)
+  nameWithType: STEM.AI_open(Int32, Int32)
+- uid: WPC.Product.STEM.AI_open*
+  name: AI_open
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_open_
+  commentId: Overload:WPC.Product.STEM.AI_open
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_open
+  nameWithType: STEM.AI_open
+- uid: WPC.Product.STEM.AI_readOnDemand(System.Int32,System.Int32)
+  name: AI_readOnDemand(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_readOnDemand_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_readOnDemand(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_readOnDemand(System.Int32, System.Int32)
+  nameWithType: STEM.AI_readOnDemand(Int32, Int32)
+- uid: WPC.Product.STEM.AI_readOnDemand*
+  name: AI_readOnDemand
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_readOnDemand_
+  commentId: Overload:WPC.Product.STEM.AI_readOnDemand
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_readOnDemand
+  nameWithType: STEM.AI_readOnDemand
+- uid: WPC.Product.STEM.AI_readStreaming(System.Int32,System.Int32,System.Int32)
+  name: AI_readStreaming(Int32, Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_readStreaming_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_readStreaming(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_readStreaming(System.Int32, System.Int32, System.Int32)
+  nameWithType: STEM.AI_readStreaming(Int32, Int32, Int32)
+- uid: WPC.Product.STEM.AI_readStreaming*
+  name: AI_readStreaming
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_readStreaming_
+  commentId: Overload:WPC.Product.STEM.AI_readStreaming
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_readStreaming
+  nameWithType: STEM.AI_readStreaming
+- uid: WPC.Product.STEM.AI_setMode(System.Int32,System.Int32,System.Int32)
+  name: AI_setMode(Int32, Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_setMode_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_setMode(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_setMode(System.Int32, System.Int32, System.Int32)
+  nameWithType: STEM.AI_setMode(Int32, Int32, Int32)
+- uid: WPC.Product.STEM.AI_setMode*
+  name: AI_setMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_setMode_
+  commentId: Overload:WPC.Product.STEM.AI_setMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_setMode
+  nameWithType: STEM.AI_setMode
+- uid: WPC.Product.STEM.AI_setNumSamples(System.Int32,System.Int32,System.Int32)
+  name: AI_setNumSamples(Int32, Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_setNumSamples_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_setNumSamples(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_setNumSamples(System.Int32, System.Int32, System.Int32)
+  nameWithType: STEM.AI_setNumSamples(Int32, Int32, Int32)
+- uid: WPC.Product.STEM.AI_setNumSamples*
+  name: AI_setNumSamples
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_setNumSamples_
+  commentId: Overload:WPC.Product.STEM.AI_setNumSamples
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_setNumSamples
+  nameWithType: STEM.AI_setNumSamples
+- uid: WPC.Product.STEM.AI_setSamplingRate(System.Int32,System.Double,System.Int32)
+  name: AI_setSamplingRate(Int32, Double, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_setSamplingRate_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_setSamplingRate(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.STEM.AI_setSamplingRate(System.Int32, System.Double, System.Int32)
+  nameWithType: STEM.AI_setSamplingRate(Int32, Double, Int32)
+- uid: WPC.Product.STEM.AI_setSamplingRate*
+  name: AI_setSamplingRate
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_setSamplingRate_
+  commentId: Overload:WPC.Product.STEM.AI_setSamplingRate
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_setSamplingRate
+  nameWithType: STEM.AI_setSamplingRate
+- uid: WPC.Product.STEM.AI_start(System.Int32,System.Int32)
+  name: AI_start(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_start(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_start(System.Int32, System.Int32)
+  nameWithType: STEM.AI_start(Int32, Int32)
+- uid: WPC.Product.STEM.AI_start*
+  name: AI_start
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_start_
+  commentId: Overload:WPC.Product.STEM.AI_start
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_start
+  nameWithType: STEM.AI_start
+- uid: WPC.Product.STEM.AI_stop(System.Int32,System.Int32)
+  name: AI_stop(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_stop(System.Int32, System.Int32)
+  nameWithType: STEM.AI_stop(Int32, Int32)
+- uid: WPC.Product.STEM.AI_stop*
+  name: AI_stop
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_stop_
+  commentId: Overload:WPC.Product.STEM.AI_stop
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_stop
+  nameWithType: STEM.AI_stop
+- uid: WPC.Product.STEM.AO_close(System.Int32,System.Int32)
+  name: AO_close(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_close(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AO_close(System.Int32, System.Int32)
+  nameWithType: STEM.AO_close(Int32, Int32)
+- uid: WPC.Product.STEM.AO_close*
+  name: AO_close
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_close_
+  commentId: Overload:WPC.Product.STEM.AO_close
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_close
+  nameWithType: STEM.AO_close
+- uid: WPC.Product.STEM.AO_closeStreaming(System.Int32,System.Int32)
+  name: AO_closeStreaming(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_closeStreaming_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_closeStreaming(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AO_closeStreaming(System.Int32, System.Int32)
+  nameWithType: STEM.AO_closeStreaming(Int32, Int32)
+- uid: WPC.Product.STEM.AO_closeStreaming*
+  name: AO_closeStreaming
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_closeStreaming_
+  commentId: Overload:WPC.Product.STEM.AO_closeStreaming
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_closeStreaming
+  nameWithType: STEM.AO_closeStreaming
+- uid: WPC.Product.STEM.AO_getValues(System.Int32,System.Int32)
+  name: AO_getValues(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_getValues_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_getValues(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AO_getValues(System.Int32, System.Int32)
+  nameWithType: STEM.AO_getValues(Int32, Int32)
+- uid: WPC.Product.STEM.AO_getValues*
+  name: AO_getValues
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_getValues_
+  commentId: Overload:WPC.Product.STEM.AO_getValues
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_getValues
+  nameWithType: STEM.AO_getValues
+- uid: WPC.Product.STEM.AO_open(System.Int32,System.Int32)
+  name: AO_open(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_open(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AO_open(System.Int32, System.Int32)
+  nameWithType: STEM.AO_open(Int32, Int32)
+- uid: WPC.Product.STEM.AO_open*
+  name: AO_open
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_open_
+  commentId: Overload:WPC.Product.STEM.AO_open
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_open
+  nameWithType: STEM.AO_open
+- uid: WPC.Product.STEM.AO_openStreaming(System.Int32,System.Int32)
+  name: AO_openStreaming(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_openStreaming_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_openStreaming(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AO_openStreaming(System.Int32, System.Int32)
+  nameWithType: STEM.AO_openStreaming(Int32, Int32)
+- uid: WPC.Product.STEM.AO_openStreaming*
+  name: AO_openStreaming
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_openStreaming_
+  commentId: Overload:WPC.Product.STEM.AO_openStreaming
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_openStreaming
+  nameWithType: STEM.AO_openStreaming
+- uid: WPC.Product.STEM.AO_setEnableChannels(System.Int32,List{System.Int32},System.Int32)
+  name: AO_setEnableChannels(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setEnableChannels_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.AO_setEnableChannels(System.Int32,List{System.Int32},System.Int32)
+  name.vb: AO_setEnableChannels(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.AO_setEnableChannels(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.AO_setEnableChannels(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.AO_setEnableChannels(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.AO_setEnableChannels(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.AO_setEnableChannels*
+  name: AO_setEnableChannels
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setEnableChannels_
+  commentId: Overload:WPC.Product.STEM.AO_setEnableChannels
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_setEnableChannels
+  nameWithType: STEM.AO_setEnableChannels
+- uid: WPC.Product.STEM.AO_setForm(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: AO_setForm(Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setForm_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_setForm(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AO_setForm(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: STEM.AO_setForm(Int32, Int32, Int32, Int32)
+- uid: WPC.Product.STEM.AO_setForm*
+  name: AO_setForm
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setForm_
+  commentId: Overload:WPC.Product.STEM.AO_setForm
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_setForm
+  nameWithType: STEM.AO_setForm
+- uid: WPC.Product.STEM.AO_setFormParam(System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Int32)
+  name: AO_setFormParam(Int32, Int32, Double, Double, Double, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setFormParam_System_Int32_System_Int32_System_Double_System_Double_System_Double_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_setFormParam(System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Int32)
+  fullName: WPC.Product.STEM.AO_setFormParam(System.Int32, System.Int32, System.Double, System.Double, System.Double, System.Int32)
+  nameWithType: STEM.AO_setFormParam(Int32, Int32, Double, Double, Double, Int32)
+- uid: WPC.Product.STEM.AO_setFormParam*
+  name: AO_setFormParam
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setFormParam_
+  commentId: Overload:WPC.Product.STEM.AO_setFormParam
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_setFormParam
+  nameWithType: STEM.AO_setFormParam
+- uid: WPC.Product.STEM.AO_setMode(System.Int32,System.Int32,System.Int32)
+  name: AO_setMode(Int32, Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setMode_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_setMode(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AO_setMode(System.Int32, System.Int32, System.Int32)
+  nameWithType: STEM.AO_setMode(Int32, Int32, Int32)
+- uid: WPC.Product.STEM.AO_setMode*
+  name: AO_setMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setMode_
+  commentId: Overload:WPC.Product.STEM.AO_setMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_setMode
+  nameWithType: STEM.AO_setMode
+- uid: WPC.Product.STEM.AO_setNumSamples(System.Int32,System.Int32,System.Int32)
+  name: AO_setNumSamples(Int32, Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setNumSamples_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_setNumSamples(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AO_setNumSamples(System.Int32, System.Int32, System.Int32)
+  nameWithType: STEM.AO_setNumSamples(Int32, Int32, Int32)
+- uid: WPC.Product.STEM.AO_setNumSamples*
+  name: AO_setNumSamples
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setNumSamples_
+  commentId: Overload:WPC.Product.STEM.AO_setNumSamples
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_setNumSamples
+  nameWithType: STEM.AO_setNumSamples
+- uid: WPC.Product.STEM.AO_setSamplingRate(System.Int32,System.Double,System.Int32)
+  name: AO_setSamplingRate(Int32, Double, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setSamplingRate_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_setSamplingRate(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.STEM.AO_setSamplingRate(System.Int32, System.Double, System.Int32)
+  nameWithType: STEM.AO_setSamplingRate(Int32, Double, Int32)
+- uid: WPC.Product.STEM.AO_setSamplingRate*
+  name: AO_setSamplingRate
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_setSamplingRate_
+  commentId: Overload:WPC.Product.STEM.AO_setSamplingRate
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_setSamplingRate
+  nameWithType: STEM.AO_setSamplingRate
+- uid: WPC.Product.STEM.AO_startStreaming(System.Int32)
+  name: AO_startStreaming(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_startStreaming_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_startStreaming(System.Int32)
+  fullName: WPC.Product.STEM.AO_startStreaming(System.Int32)
+  nameWithType: STEM.AO_startStreaming(Int32)
+- uid: WPC.Product.STEM.AO_startStreaming*
+  name: AO_startStreaming
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_startStreaming_
+  commentId: Overload:WPC.Product.STEM.AO_startStreaming
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_startStreaming
+  nameWithType: STEM.AO_startStreaming
+- uid: WPC.Product.STEM.AO_writeAllChannels(System.Int32,List{System.Double},System.Int32)
+  name: AO_writeAllChannels(Int32, List<Double>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_writeAllChannels_System_Int32_List_System_Double__System_Int32_
+  commentId: M:WPC.Product.STEM.AO_writeAllChannels(System.Int32,List{System.Double},System.Int32)
+  name.vb: AO_writeAllChannels(Int32, List(Of Double), Int32)
+  fullName: WPC.Product.STEM.AO_writeAllChannels(System.Int32, List<System.Double>, System.Int32)
+  fullName.vb: WPC.Product.STEM.AO_writeAllChannels(System.Int32, List(Of System.Double), System.Int32)
+  nameWithType: STEM.AO_writeAllChannels(Int32, List<Double>, Int32)
+  nameWithType.vb: STEM.AO_writeAllChannels(Int32, List(Of Double), Int32)
+- uid: WPC.Product.STEM.AO_writeAllChannels*
+  name: AO_writeAllChannels
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_writeAllChannels_
+  commentId: Overload:WPC.Product.STEM.AO_writeAllChannels
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_writeAllChannels
+  nameWithType: STEM.AO_writeAllChannels
+- uid: WPC.Product.STEM.AO_writeOneChannel(System.Int32,System.Int32,System.Double,System.Int32)
+  name: AO_writeOneChannel(Int32, Int32, Double, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_writeOneChannel_System_Int32_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.STEM.AO_writeOneChannel(System.Int32,System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.STEM.AO_writeOneChannel(System.Int32, System.Int32, System.Double, System.Int32)
+  nameWithType: STEM.AO_writeOneChannel(Int32, Int32, Double, Int32)
+- uid: WPC.Product.STEM.AO_writeOneChannel*
+  name: AO_writeOneChannel
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AO_writeOneChannel_
+  commentId: Overload:WPC.Product.STEM.AO_writeOneChannel
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AO_writeOneChannel
+  nameWithType: STEM.AO_writeOneChannel
+- uid: WPC.Product.STEM.close
+  name: close()
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_close
+  commentId: M:WPC.Product.STEM.close
+  fullName: WPC.Product.STEM.close()
+  nameWithType: STEM.close()
+- uid: WPC.Product.STEM.close*
+  name: close
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_close_
+  commentId: Overload:WPC.Product.STEM.close
+  isSpec: "True"
+  fullName: WPC.Product.STEM.close
+  nameWithType: STEM.close
+- uid: WPC.Product.STEM.connect(System.String)
+  name: connect(String)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_connect_System_String_
+  commentId: M:WPC.Product.STEM.connect(System.String)
+  fullName: WPC.Product.STEM.connect(System.String)
+  nameWithType: STEM.connect(String)
+- uid: WPC.Product.STEM.connect*
+  name: connect
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_connect_
+  commentId: Overload:WPC.Product.STEM.connect
+  isSpec: "True"
+  fullName: WPC.Product.STEM.connect
+  nameWithType: STEM.connect
+- uid: WPC.Product.STEM.DI_closePins(System.Int32,List{System.Int32},System.Int32)
+  name: DI_closePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_closePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.DI_closePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DI_closePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.DI_closePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.DI_closePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.DI_closePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.DI_closePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.DI_closePins*
+  name: DI_closePins
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_closePins_
+  commentId: Overload:WPC.Product.STEM.DI_closePins
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DI_closePins
+  nameWithType: STEM.DI_closePins
+- uid: WPC.Product.STEM.DI_closePort(System.Int32,System.Int32)
+  name: DI_closePort(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_closePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.DI_closePort(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.DI_closePort(System.Int32, System.Int32)
+  nameWithType: STEM.DI_closePort(Int32, Int32)
+- uid: WPC.Product.STEM.DI_closePort*
+  name: DI_closePort
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_closePort_
+  commentId: Overload:WPC.Product.STEM.DI_closePort
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DI_closePort
+  nameWithType: STEM.DI_closePort
+- uid: WPC.Product.STEM.DI_openPins(System.Int32,List{System.Int32},System.Int32)
+  name: DI_openPins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_openPins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.DI_openPins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DI_openPins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.DI_openPins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.DI_openPins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.DI_openPins(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.DI_openPins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.DI_openPins*
+  name: DI_openPins
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_openPins_
+  commentId: Overload:WPC.Product.STEM.DI_openPins
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DI_openPins
+  nameWithType: STEM.DI_openPins
+- uid: WPC.Product.STEM.DI_openPort(System.Int32,System.Int32)
+  name: DI_openPort(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_openPort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.DI_openPort(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.DI_openPort(System.Int32, System.Int32)
+  nameWithType: STEM.DI_openPort(Int32, Int32)
+- uid: WPC.Product.STEM.DI_openPort*
+  name: DI_openPort
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_openPort_
+  commentId: Overload:WPC.Product.STEM.DI_openPort
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DI_openPort
+  nameWithType: STEM.DI_openPort
+- uid: WPC.Product.STEM.DI_readPins(System.Int32,List{System.Int32},System.Int32)
+  name: DI_readPins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_readPins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.DI_readPins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DI_readPins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.DI_readPins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.DI_readPins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.DI_readPins(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.DI_readPins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.DI_readPins*
+  name: DI_readPins
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_readPins_
+  commentId: Overload:WPC.Product.STEM.DI_readPins
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DI_readPins
+  nameWithType: STEM.DI_readPins
+- uid: WPC.Product.STEM.DI_readPort(System.Int32,System.Int32)
+  name: DI_readPort(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_readPort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.DI_readPort(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.DI_readPort(System.Int32, System.Int32)
+  nameWithType: STEM.DI_readPort(Int32, Int32)
+- uid: WPC.Product.STEM.DI_readPort*
+  name: DI_readPort
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DI_readPort_
+  commentId: Overload:WPC.Product.STEM.DI_readPort
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DI_readPort
+  nameWithType: STEM.DI_readPort
+- uid: WPC.Product.STEM.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: STEM.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.STEM.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DIO_loadStartup_
+  commentId: Overload:WPC.Product.STEM.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DIO_loadStartup
+  nameWithType: STEM.DIO_loadStartup
+- uid: WPC.Product.STEM.disconnect
+  name: disconnect()
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_disconnect
+  commentId: M:WPC.Product.STEM.disconnect
+  fullName: WPC.Product.STEM.disconnect()
+  nameWithType: STEM.disconnect()
+- uid: WPC.Product.STEM.disconnect*
+  name: disconnect
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_disconnect_
+  commentId: Overload:WPC.Product.STEM.disconnect
+  isSpec: "True"
+  fullName: WPC.Product.STEM.disconnect
+  nameWithType: STEM.disconnect
+- uid: WPC.Product.STEM.DO_closePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_closePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_closePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.DO_closePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_closePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.DO_closePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.DO_closePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.DO_closePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.DO_closePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.DO_closePins*
+  name: DO_closePins
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_closePins_
+  commentId: Overload:WPC.Product.STEM.DO_closePins
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DO_closePins
+  nameWithType: STEM.DO_closePins
+- uid: WPC.Product.STEM.DO_closePort(System.Int32,System.Int32)
+  name: DO_closePort(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_closePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.DO_closePort(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.DO_closePort(System.Int32, System.Int32)
+  nameWithType: STEM.DO_closePort(Int32, Int32)
+- uid: WPC.Product.STEM.DO_closePort*
+  name: DO_closePort
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_closePort_
+  commentId: Overload:WPC.Product.STEM.DO_closePort
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DO_closePort
+  nameWithType: STEM.DO_closePort
+- uid: WPC.Product.STEM.DO_openPins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_openPins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_openPins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.DO_openPins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_openPins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.DO_openPins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.DO_openPins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.DO_openPins(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.DO_openPins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.DO_openPins*
+  name: DO_openPins
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_openPins_
+  commentId: Overload:WPC.Product.STEM.DO_openPins
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DO_openPins
+  nameWithType: STEM.DO_openPins
+- uid: WPC.Product.STEM.DO_openPort(System.Int32,System.Int32)
+  name: DO_openPort(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_openPort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.DO_openPort(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.DO_openPort(System.Int32, System.Int32)
+  nameWithType: STEM.DO_openPort(Int32, Int32)
+- uid: WPC.Product.STEM.DO_openPort*
+  name: DO_openPort
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_openPort_
+  commentId: Overload:WPC.Product.STEM.DO_openPort
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DO_openPort
+  nameWithType: STEM.DO_openPort
+- uid: WPC.Product.STEM.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name: DO_togglePins(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_togglePins_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.DO_togglePins(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_togglePins(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.DO_togglePins(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.DO_togglePins(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.DO_togglePins(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.DO_togglePins(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.DO_togglePins*
+  name: DO_togglePins
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_togglePins_
+  commentId: Overload:WPC.Product.STEM.DO_togglePins
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DO_togglePins
+  nameWithType: STEM.DO_togglePins
+- uid: WPC.Product.STEM.DO_togglePort(System.Int32,System.Int32)
+  name: DO_togglePort(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_togglePort_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.DO_togglePort(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.DO_togglePort(System.Int32, System.Int32)
+  nameWithType: STEM.DO_togglePort(Int32, Int32)
+- uid: WPC.Product.STEM.DO_togglePort*
+  name: DO_togglePort
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_togglePort_
+  commentId: Overload:WPC.Product.STEM.DO_togglePort
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DO_togglePort
+  nameWithType: STEM.DO_togglePort
+- uid: WPC.Product.STEM.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
+  name: DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)
+  name.vb: DO_writePins(Int32, List(Of Int32), List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.DO_writePins(System.Int32, List<System.Int32>, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.DO_writePins(System.Int32, List(Of System.Int32), List(Of System.Int32), System.Int32)
+  nameWithType: STEM.DO_writePins(Int32, List<Int32>, List<Int32>, Int32)
+  nameWithType.vb: STEM.DO_writePins(Int32, List(Of Int32), List(Of Int32), Int32)
+- uid: WPC.Product.STEM.DO_writePins*
+  name: DO_writePins
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_writePins_
+  commentId: Overload:WPC.Product.STEM.DO_writePins
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DO_writePins
+  nameWithType: STEM.DO_writePins
+- uid: WPC.Product.STEM.DO_writePort(System.Int32,List{System.Int32},System.Int32)
+  name: DO_writePort(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_writePort_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.STEM.DO_writePort(System.Int32,List{System.Int32},System.Int32)
+  name.vb: DO_writePort(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.STEM.DO_writePort(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.STEM.DO_writePort(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: STEM.DO_writePort(Int32, List<Int32>, Int32)
+  nameWithType.vb: STEM.DO_writePort(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.STEM.DO_writePort*
+  name: DO_writePort
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_DO_writePort_
+  commentId: Overload:WPC.Product.STEM.DO_writePort
+  isSpec: "True"
+  fullName: WPC.Product.STEM.DO_writePort
+  nameWithType: STEM.DO_writePort
+- uid: WPC.Product.STEM.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Logger_openFile_System_String_
+  commentId: M:WPC.Product.STEM.Logger_openFile(System.String)
+  fullName: WPC.Product.STEM.Logger_openFile(System.String)
+  nameWithType: STEM.Logger_openFile(String)
+- uid: WPC.Product.STEM.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Logger_openFile_
+  commentId: Overload:WPC.Product.STEM.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Logger_openFile
+  nameWithType: STEM.Logger_openFile
+- uid: WPC.Product.STEM.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.STEM.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.STEM.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.STEM.Logger_writeList(List(Of System.Double))
+  nameWithType: STEM.Logger_writeList(List<Double>)
+  nameWithType.vb: STEM.Logger_writeList(List(Of Double))
+- uid: WPC.Product.STEM.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.STEM.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.STEM.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.STEM.Logger_writeList(List(Of System.Int32))
+  nameWithType: STEM.Logger_writeList(List<Int32>)
+  nameWithType.vb: STEM.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.STEM.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.STEM.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.STEM.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.STEM.Logger_writeList(List(Of System.Single))
+  nameWithType: STEM.Logger_writeList(List<Single>)
+  nameWithType.vb: STEM.Logger_writeList(List(Of Single))
+- uid: WPC.Product.STEM.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Logger_writeList_
+  commentId: Overload:WPC.Product.STEM.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Logger_writeList
+  nameWithType: STEM.Logger_writeList
+- uid: WPC.Product.STEM.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.STEM.Logger_writeValue(System.String)
+  fullName: WPC.Product.STEM.Logger_writeValue(System.String)
+  nameWithType: STEM.Logger_writeValue(String)
+- uid: WPC.Product.STEM.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Logger_writeValue_
+  commentId: Overload:WPC.Product.STEM.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Logger_writeValue
+  nameWithType: STEM.Logger_writeValue
+- uid: WPC.Product.STEM.Sys_getDriverInfo(System.Int32)
+  name: Sys_getDriverInfo(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getDriverInfo_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_getDriverInfo(System.Int32)
+  fullName: WPC.Product.STEM.Sys_getDriverInfo(System.Int32)
+  nameWithType: STEM.Sys_getDriverInfo(Int32)
+- uid: WPC.Product.STEM.Sys_getDriverInfo*
+  name: Sys_getDriverInfo
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getDriverInfo_
+  commentId: Overload:WPC.Product.STEM.Sys_getDriverInfo
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_getDriverInfo
+  nameWithType: STEM.Sys_getDriverInfo
+- uid: WPC.Product.STEM.Sys_getGateway(System.Int32)
+  name: Sys_getGateway(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getGateway_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_getGateway(System.Int32)
+  fullName: WPC.Product.STEM.Sys_getGateway(System.Int32)
+  nameWithType: STEM.Sys_getGateway(Int32)
+- uid: WPC.Product.STEM.Sys_getGateway*
+  name: Sys_getGateway
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getGateway_
+  commentId: Overload:WPC.Product.STEM.Sys_getGateway
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_getGateway
+  nameWithType: STEM.Sys_getGateway
+- uid: WPC.Product.STEM.Sys_getIPAddrAndSubmask(System.Int32)
+  name: Sys_getIPAddrAndSubmask(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getIPAddrAndSubmask_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_getIPAddrAndSubmask(System.Int32)
+  fullName: WPC.Product.STEM.Sys_getIPAddrAndSubmask(System.Int32)
+  nameWithType: STEM.Sys_getIPAddrAndSubmask(Int32)
+- uid: WPC.Product.STEM.Sys_getIPAddrAndSubmask*
+  name: Sys_getIPAddrAndSubmask
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.STEM.Sys_getIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_getIPAddrAndSubmask
+  nameWithType: STEM.Sys_getIPAddrAndSubmask
+- uid: WPC.Product.STEM.Sys_getMACAddr(System.Int32)
+  name: Sys_getMACAddr(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getMACAddr_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_getMACAddr(System.Int32)
+  fullName: WPC.Product.STEM.Sys_getMACAddr(System.Int32)
+  nameWithType: STEM.Sys_getMACAddr(Int32)
+- uid: WPC.Product.STEM.Sys_getMACAddr*
+  name: Sys_getMACAddr
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getMACAddr_
+  commentId: Overload:WPC.Product.STEM.Sys_getMACAddr
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_getMACAddr
+  nameWithType: STEM.Sys_getMACAddr
+- uid: WPC.Product.STEM.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: STEM.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.STEM.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getPortMode_
+  commentId: Overload:WPC.Product.STEM.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_getPortMode
+  nameWithType: STEM.Sys_getPortMode
+- uid: WPC.Product.STEM.Sys_getRTC(System.Int32)
+  name: Sys_getRTC(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getRTC_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_getRTC(System.Int32)
+  fullName: WPC.Product.STEM.Sys_getRTC(System.Int32)
+  nameWithType: STEM.Sys_getRTC(Int32)
+- uid: WPC.Product.STEM.Sys_getRTC*
+  name: Sys_getRTC
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getRTC_
+  commentId: Overload:WPC.Product.STEM.Sys_getRTC
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_getRTC
+  nameWithType: STEM.Sys_getRTC
+- uid: WPC.Product.STEM.Sys_getSerialNumber(System.Int32)
+  name: Sys_getSerialNumber(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getSerialNumber_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_getSerialNumber(System.Int32)
+  fullName: WPC.Product.STEM.Sys_getSerialNumber(System.Int32)
+  nameWithType: STEM.Sys_getSerialNumber(Int32)
+- uid: WPC.Product.STEM.Sys_getSerialNumber*
+  name: Sys_getSerialNumber
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_getSerialNumber_
+  commentId: Overload:WPC.Product.STEM.Sys_getSerialNumber
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_getSerialNumber
+  nameWithType: STEM.Sys_getSerialNumber
+- uid: WPC.Product.STEM.Sys_reboot(System.Int32)
+  name: Sys_reboot(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_reboot_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_reboot(System.Int32)
+  fullName: WPC.Product.STEM.Sys_reboot(System.Int32)
+  nameWithType: STEM.Sys_reboot(Int32)
+- uid: WPC.Product.STEM.Sys_reboot*
+  name: Sys_reboot
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_reboot_
+  commentId: Overload:WPC.Product.STEM.Sys_reboot
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_reboot
+  nameWithType: STEM.Sys_reboot
+- uid: WPC.Product.STEM.Sys_rebootOnBootloader(System.Int32)
+  name: Sys_rebootOnBootloader(Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_rebootOnBootloader_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_rebootOnBootloader(System.Int32)
+  fullName: WPC.Product.STEM.Sys_rebootOnBootloader(System.Int32)
+  nameWithType: STEM.Sys_rebootOnBootloader(Int32)
+- uid: WPC.Product.STEM.Sys_rebootOnBootloader*
+  name: Sys_rebootOnBootloader
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_rebootOnBootloader_
+  commentId: Overload:WPC.Product.STEM.Sys_rebootOnBootloader
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_rebootOnBootloader
+  nameWithType: STEM.Sys_rebootOnBootloader
+- uid: WPC.Product.STEM.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  name: Sys_setIPAddrAndSubmask(String, String, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setIPAddrAndSubmask_System_String_System_String_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setIPAddrAndSubmask(System.String, System.String, System.Int32)
+  nameWithType: STEM.Sys_setIPAddrAndSubmask(String, String, Int32)
+- uid: WPC.Product.STEM.Sys_setIPAddrAndSubmask*
+  name: Sys_setIPAddrAndSubmask
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.STEM.Sys_setIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setIPAddrAndSubmask
+  nameWithType: STEM.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.STEM.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: STEM.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.STEM.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.STEM.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setPortAIOMode
+  nameWithType: STEM.Sys_setPortAIOMode
+- uid: WPC.Product.STEM.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: STEM.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.STEM.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.STEM.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setPortDIMode
+  nameWithType: STEM.Sys_setPortDIMode
+- uid: WPC.Product.STEM.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: STEM.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.STEM.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.STEM.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setPortDIOMode
+  nameWithType: STEM.Sys_setPortDIOMode
+- uid: WPC.Product.STEM.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: STEM.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.STEM.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.STEM.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setPortDOMode
+  nameWithType: STEM.Sys_setPortDOMode
+- uid: WPC.Product.STEM.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: STEM.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.STEM.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.STEM.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setPortIdleMode
+  nameWithType: STEM.Sys_setPortIdleMode
+- uid: WPC.Product.STEM.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: STEM.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.STEM.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.STEM.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setPortMotionMode
+  nameWithType: STEM.Sys_setPortMotionMode
+- uid: WPC.Product.STEM.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: STEM.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.STEM.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.STEM.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setPortSwitchMode
+  nameWithType: STEM.Sys_setPortSwitchMode
+- uid: WPC.Product.STEM.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Product.STEM.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Product.STEM.Sys_setRTC(System.Int32, System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: STEM.Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Product.STEM.Sys_setRTC*
+  name: Sys_setRTC
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setRTC_
+  commentId: Overload:WPC.Product.STEM.Sys_setRTC
+  isSpec: "True"
+  fullName: WPC.Product.STEM.Sys_setRTC
+  nameWithType: STEM.Sys_setRTC
 - uid: WPC.Product.USBDAQF1AD
   name: USBDAQF1AD
   href: api/WPC.Product.USBDAQF1AD.html
@@ -5011,6 +6569,22 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.AI_close
   nameWithType: USBDAQF1AD.AI_close
+- uid: WPC.Product.USBDAQF1AD.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name: AI_enableCS(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name.vb: AI_enableCS(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1AD.AI_enableCS(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1AD.AI_enableCS(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1AD.AI_enableCS(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1AD.AI_enableCS(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1AD.AI_enableCS*
+  name: AI_enableCS
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_enableCS_
+  commentId: Overload:WPC.Product.USBDAQF1AD.AI_enableCS
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.AI_enableCS
+  nameWithType: USBDAQF1AD.AI_enableCS
 - uid: WPC.Product.USBDAQF1AD.AI_open(System.Int32,System.Int32)
   name: AI_open(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_open_System_Int32_System_Int32_
@@ -5228,6 +6802,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.DI_readPort
   nameWithType: USBDAQF1AD.DI_readPort
+- uid: WPC.Product.USBDAQF1AD.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_DIO_loadStartup_
+  commentId: Overload:WPC.Product.USBDAQF1AD.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.DIO_loadStartup
+  nameWithType: USBDAQF1AD.DIO_loadStartup
 - uid: WPC.Product.USBDAQF1AD.disconnect
   name: disconnect()
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_disconnect
@@ -5663,6 +7250,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.Sys_getDriverInfo
   nameWithType: USBDAQF1AD.Sys_getDriverInfo
+- uid: WPC.Product.USBDAQF1AD.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_getPortMode_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Sys_getPortMode
+  nameWithType: USBDAQF1AD.Sys_getPortMode
 - uid: WPC.Product.USBDAQF1AD.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_getRTC_System_Int32_
@@ -5715,6 +7315,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader
   nameWithType: USBDAQF1AD.Sys_rebootOnBootloader
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortAIOMode
+  nameWithType: USBDAQF1AD.Sys_setPortAIOMode
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortDIMode
+  nameWithType: USBDAQF1AD.Sys_setPortDIMode
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortDIOMode
+  nameWithType: USBDAQF1AD.Sys_setPortDIOMode
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortDOMode
+  nameWithType: USBDAQF1AD.Sys_setPortDOMode
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortIdleMode
+  nameWithType: USBDAQF1AD.Sys_setPortIdleMode
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortMotionMode
+  nameWithType: USBDAQF1AD.Sys_setPortMotionMode
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Sys_setPortSwitchMode
+  nameWithType: USBDAQF1AD.Sys_setPortSwitchMode
 - uid: WPC.Product.USBDAQF1AD.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -5890,6 +7581,22 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.AI_close
   nameWithType: USBDAQF1AOD.AI_close
+- uid: WPC.Product.USBDAQF1AOD.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name: AI_enableCS(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name.vb: AI_enableCS(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.USBDAQF1AOD.AI_enableCS(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.USBDAQF1AOD.AI_enableCS(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: USBDAQF1AOD.AI_enableCS(Int32, List<Int32>, Int32)
+  nameWithType.vb: USBDAQF1AOD.AI_enableCS(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.USBDAQF1AOD.AI_enableCS*
+  name: AI_enableCS
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_enableCS_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.AI_enableCS
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.AI_enableCS
+  nameWithType: USBDAQF1AOD.AI_enableCS
 - uid: WPC.Product.USBDAQF1AOD.AI_open(System.Int32,System.Int32)
   name: AI_open(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_open_System_Int32_System_Int32_
@@ -6295,6 +8002,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.DI_readPort
   nameWithType: USBDAQF1AOD.DI_readPort
+- uid: WPC.Product.USBDAQF1AOD.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_DIO_loadStartup_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.DIO_loadStartup
+  nameWithType: USBDAQF1AOD.DIO_loadStartup
 - uid: WPC.Product.USBDAQF1AOD.disconnect
   name: disconnect()
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_disconnect
@@ -6594,6 +8314,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.Sys_getDriverInfo
   nameWithType: USBDAQF1AOD.Sys_getDriverInfo
+- uid: WPC.Product.USBDAQF1AOD.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_getPortMode_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Sys_getPortMode
+  nameWithType: USBDAQF1AOD.Sys_getPortMode
 - uid: WPC.Product.USBDAQF1AOD.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_getRTC_System_Int32_
@@ -6646,6 +8379,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.Sys_rebootOnBootloader
   nameWithType: USBDAQF1AOD.Sys_rebootOnBootloader
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortAIOMode
+  nameWithType: USBDAQF1AOD.Sys_setPortAIOMode
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortDIMode
+  nameWithType: USBDAQF1AOD.Sys_setPortDIMode
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortDIOMode
+  nameWithType: USBDAQF1AOD.Sys_setPortDIOMode
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortDOMode
+  nameWithType: USBDAQF1AOD.Sys_setPortDOMode
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortIdleMode
+  nameWithType: USBDAQF1AOD.Sys_setPortIdleMode
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortMotionMode
+  nameWithType: USBDAQF1AOD.Sys_setPortMotionMode
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Sys_setPortSwitchMode
+  nameWithType: USBDAQF1AOD.Sys_setPortSwitchMode
 - uid: WPC.Product.USBDAQF1AOD.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -7041,6 +8865,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.DI_readPort
   nameWithType: USBDAQF1CD.DI_readPort
+- uid: WPC.Product.USBDAQF1CD.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_DIO_loadStartup_
+  commentId: Overload:WPC.Product.USBDAQF1CD.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.DIO_loadStartup
+  nameWithType: USBDAQF1CD.DIO_loadStartup
 - uid: WPC.Product.USBDAQF1CD.disconnect
   name: disconnect()
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_disconnect
@@ -7476,6 +9313,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.Sys_getDriverInfo
   nameWithType: USBDAQF1CD.Sys_getDriverInfo
+- uid: WPC.Product.USBDAQF1CD.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_getPortMode_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Sys_getPortMode
+  nameWithType: USBDAQF1CD.Sys_getPortMode
 - uid: WPC.Product.USBDAQF1CD.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_getRTC_System_Int32_
@@ -7528,6 +9378,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.Sys_rebootOnBootloader
   nameWithType: USBDAQF1CD.Sys_rebootOnBootloader
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortAIOMode
+  nameWithType: USBDAQF1CD.Sys_setPortAIOMode
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortDIMode
+  nameWithType: USBDAQF1CD.Sys_setPortDIMode
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortDIOMode
+  nameWithType: USBDAQF1CD.Sys_setPortDIOMode
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortDOMode
+  nameWithType: USBDAQF1CD.Sys_setPortDOMode
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortIdleMode
+  nameWithType: USBDAQF1CD.Sys_setPortIdleMode
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortMotionMode
+  nameWithType: USBDAQF1CD.Sys_setPortMotionMode
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Sys_setPortSwitchMode
+  nameWithType: USBDAQF1CD.Sys_setPortSwitchMode
 - uid: WPC.Product.USBDAQF1CD.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -7803,6 +9744,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.DI_readPort
   nameWithType: USBDAQF1D.DI_readPort
+- uid: WPC.Product.USBDAQF1D.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_DIO_loadStartup_
+  commentId: Overload:WPC.Product.USBDAQF1D.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.DIO_loadStartup
+  nameWithType: USBDAQF1D.DIO_loadStartup
 - uid: WPC.Product.USBDAQF1D.disconnect
   name: disconnect()
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_disconnect
@@ -8238,6 +10192,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.Sys_getDriverInfo
   nameWithType: USBDAQF1D.Sys_getDriverInfo
+- uid: WPC.Product.USBDAQF1D.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_getPortMode_
+  commentId: Overload:WPC.Product.USBDAQF1D.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Sys_getPortMode
+  nameWithType: USBDAQF1D.Sys_getPortMode
 - uid: WPC.Product.USBDAQF1D.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_getRTC_System_Int32_
@@ -8290,6 +10257,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.Sys_rebootOnBootloader
   nameWithType: USBDAQF1D.Sys_rebootOnBootloader
+- uid: WPC.Product.USBDAQF1D.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1D.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortAIOMode
+  nameWithType: USBDAQF1D.Sys_setPortAIOMode
+- uid: WPC.Product.USBDAQF1D.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.USBDAQF1D.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortDIMode
+  nameWithType: USBDAQF1D.Sys_setPortDIMode
+- uid: WPC.Product.USBDAQF1D.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1D.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortDIOMode
+  nameWithType: USBDAQF1D.Sys_setPortDIOMode
+- uid: WPC.Product.USBDAQF1D.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.USBDAQF1D.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortDOMode
+  nameWithType: USBDAQF1D.Sys_setPortDOMode
+- uid: WPC.Product.USBDAQF1D.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.USBDAQF1D.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortIdleMode
+  nameWithType: USBDAQF1D.Sys_setPortIdleMode
+- uid: WPC.Product.USBDAQF1D.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.USBDAQF1D.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortMotionMode
+  nameWithType: USBDAQF1D.Sys_setPortMotionMode
+- uid: WPC.Product.USBDAQF1D.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.USBDAQF1D.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Sys_setPortSwitchMode
+  nameWithType: USBDAQF1D.Sys_setPortSwitchMode
 - uid: WPC.Product.USBDAQF1D.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -8565,6 +10623,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.DI_readPort
   nameWithType: USBDAQF1DSNK.DI_readPort
+- uid: WPC.Product.USBDAQF1DSNK.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_DIO_loadStartup_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.DIO_loadStartup
+  nameWithType: USBDAQF1DSNK.DIO_loadStartup
 - uid: WPC.Product.USBDAQF1DSNK.disconnect
   name: disconnect()
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_disconnect
@@ -8770,6 +10841,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.Sys_getDriverInfo
   nameWithType: USBDAQF1DSNK.Sys_getDriverInfo
+- uid: WPC.Product.USBDAQF1DSNK.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_getPortMode_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_getPortMode
+  nameWithType: USBDAQF1DSNK.Sys_getPortMode
 - uid: WPC.Product.USBDAQF1DSNK.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_getRTC_System_Int32_
@@ -8822,6 +10906,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.Sys_rebootOnBootloader
   nameWithType: USBDAQF1DSNK.Sys_rebootOnBootloader
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortAIOMode
+  nameWithType: USBDAQF1DSNK.Sys_setPortAIOMode
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortDIMode
+  nameWithType: USBDAQF1DSNK.Sys_setPortDIMode
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortDIOMode
+  nameWithType: USBDAQF1DSNK.Sys_setPortDIOMode
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortDOMode
+  nameWithType: USBDAQF1DSNK.Sys_setPortDOMode
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortIdleMode
+  nameWithType: USBDAQF1DSNK.Sys_setPortIdleMode
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortMotionMode
+  nameWithType: USBDAQF1DSNK.Sys_setPortMotionMode
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Sys_setPortSwitchMode
+  nameWithType: USBDAQF1DSNK.Sys_setPortSwitchMode
 - uid: WPC.Product.USBDAQF1DSNK.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -8967,6 +11142,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.DI_readPort
   nameWithType: USBDAQF1RD.DI_readPort
+- uid: WPC.Product.USBDAQF1RD.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_DIO_loadStartup_
+  commentId: Overload:WPC.Product.USBDAQF1RD.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.DIO_loadStartup
+  nameWithType: USBDAQF1RD.DIO_loadStartup
 - uid: WPC.Product.USBDAQF1RD.disconnect
   name: disconnect()
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_disconnect
@@ -9402,6 +11590,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.Sys_getDriverInfo
   nameWithType: USBDAQF1RD.Sys_getDriverInfo
+- uid: WPC.Product.USBDAQF1RD.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_getPortMode_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Sys_getPortMode
+  nameWithType: USBDAQF1RD.Sys_getPortMode
 - uid: WPC.Product.USBDAQF1RD.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_getRTC_System_Int32_
@@ -9454,6 +11655,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.Sys_rebootOnBootloader
   nameWithType: USBDAQF1RD.Sys_rebootOnBootloader
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortAIOMode
+  nameWithType: USBDAQF1RD.Sys_setPortAIOMode
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortDIMode
+  nameWithType: USBDAQF1RD.Sys_setPortDIMode
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortDIOMode
+  nameWithType: USBDAQF1RD.Sys_setPortDIOMode
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortDOMode
+  nameWithType: USBDAQF1RD.Sys_setPortDOMode
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortIdleMode
+  nameWithType: USBDAQF1RD.Sys_setPortIdleMode
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortMotionMode
+  nameWithType: USBDAQF1RD.Sys_setPortMotionMode
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Sys_setPortSwitchMode
+  nameWithType: USBDAQF1RD.Sys_setPortSwitchMode
 - uid: WPC.Product.USBDAQF1RD.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -9794,6 +12086,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.DI_readPort
   nameWithType: USBDAQF1TD.DI_readPort
+- uid: WPC.Product.USBDAQF1TD.DIO_loadStartup(System.Int32,System.Int32)
+  name: DIO_loadStartup(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_DIO_loadStartup_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.DIO_loadStartup(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.DIO_loadStartup(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.DIO_loadStartup(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.DIO_loadStartup*
+  name: DIO_loadStartup
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_DIO_loadStartup_
+  commentId: Overload:WPC.Product.USBDAQF1TD.DIO_loadStartup
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.DIO_loadStartup
+  nameWithType: USBDAQF1TD.DIO_loadStartup
 - uid: WPC.Product.USBDAQF1TD.disconnect
   name: disconnect()
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_disconnect
@@ -10229,6 +12534,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.Sys_getDriverInfo
   nameWithType: USBDAQF1TD.Sys_getDriverInfo
+- uid: WPC.Product.USBDAQF1TD.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_getPortMode_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Sys_getPortMode
+  nameWithType: USBDAQF1TD.Sys_getPortMode
 - uid: WPC.Product.USBDAQF1TD.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_getRTC_System_Int32_
@@ -10281,6 +12599,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.Sys_rebootOnBootloader
   nameWithType: USBDAQF1TD.Sys_rebootOnBootloader
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortAIOMode
+  nameWithType: USBDAQF1TD.Sys_setPortAIOMode
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortDIMode
+  nameWithType: USBDAQF1TD.Sys_setPortDIMode
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortDIOMode
+  nameWithType: USBDAQF1TD.Sys_setPortDIOMode
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortDOMode
+  nameWithType: USBDAQF1TD.Sys_setPortDOMode
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortIdleMode
+  nameWithType: USBDAQF1TD.Sys_setPortIdleMode
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortMotionMode
+  nameWithType: USBDAQF1TD.Sys_setPortMotionMode
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Sys_setPortSwitchMode
+  nameWithType: USBDAQF1TD.Sys_setPortSwitchMode
 - uid: WPC.Product.USBDAQF1TD.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
@@ -10534,6 +12943,22 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.AI_close
   nameWithType: WifiDAQE3A.AI_close
+- uid: WPC.Product.WifiDAQE3A.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name: AI_enableCS(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name.vb: AI_enableCS(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.WifiDAQE3A.AI_enableCS(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.WifiDAQE3A.AI_enableCS(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: WifiDAQE3A.AI_enableCS(Int32, List<Int32>, Int32)
+  nameWithType.vb: WifiDAQE3A.AI_enableCS(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.WifiDAQE3A.AI_enableCS*
+  name: AI_enableCS
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_enableCS_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AI_enableCS
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AI_enableCS
+  nameWithType: WifiDAQE3A.AI_enableCS
 - uid: WPC.Product.WifiDAQE3A.AI_open(System.Int32,System.Int32)
   name: AI_open(Int32, Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_open_System_Int32_System_Int32_
@@ -10789,6 +13214,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Sys_getMACAddr
   nameWithType: WifiDAQE3A.Sys_getMACAddr
+- uid: WPC.Product.WifiDAQE3A.Sys_getPortMode(System.Int32,System.Int32)
+  name: Sys_getPortMode(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_getPortMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Sys_getPortMode(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Sys_getPortMode(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Sys_getPortMode(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Sys_getPortMode*
+  name: Sys_getPortMode
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_getPortMode_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_getPortMode
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Sys_getPortMode
+  nameWithType: WifiDAQE3A.Sys_getPortMode
 - uid: WPC.Product.WifiDAQE3A.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_getRTC_System_Int32_
@@ -10854,6 +13292,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Sys_setIPAddrAndSubmask
   nameWithType: WifiDAQE3A.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortAIOMode(System.Int32,System.Int32)
+  name: Sys_setPortAIOMode(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Sys_setPortAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortAIOMode(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Sys_setPortAIOMode(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortAIOMode*
+  name: Sys_setPortAIOMode
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortAIOMode_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_setPortAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortAIOMode
+  nameWithType: WifiDAQE3A.Sys_setPortAIOMode
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortDIMode(System.Int32,System.Int32)
+  name: Sys_setPortDIMode(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Sys_setPortDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortDIMode(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Sys_setPortDIMode(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortDIMode*
+  name: Sys_setPortDIMode
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortDIMode_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_setPortDIMode
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortDIMode
+  nameWithType: WifiDAQE3A.Sys_setPortDIMode
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortDIOMode(System.Int32,System.Int32)
+  name: Sys_setPortDIOMode(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Sys_setPortDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortDIOMode(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Sys_setPortDIOMode(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortDIOMode*
+  name: Sys_setPortDIOMode
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortDIOMode_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_setPortDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortDIOMode
+  nameWithType: WifiDAQE3A.Sys_setPortDIOMode
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortDOMode(System.Int32,System.Int32)
+  name: Sys_setPortDOMode(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Sys_setPortDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortDOMode(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Sys_setPortDOMode(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortDOMode*
+  name: Sys_setPortDOMode
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortDOMode_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_setPortDOMode
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortDOMode
+  nameWithType: WifiDAQE3A.Sys_setPortDOMode
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortIdleMode(System.Int32,System.Int32)
+  name: Sys_setPortIdleMode(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Sys_setPortIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortIdleMode(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Sys_setPortIdleMode(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortIdleMode*
+  name: Sys_setPortIdleMode
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortIdleMode_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_setPortIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortIdleMode
+  nameWithType: WifiDAQE3A.Sys_setPortIdleMode
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortMotionMode(System.Int32,System.Int32)
+  name: Sys_setPortMotionMode(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Sys_setPortMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortMotionMode(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Sys_setPortMotionMode(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortMotionMode*
+  name: Sys_setPortMotionMode
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortMotionMode_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_setPortMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortMotionMode
+  nameWithType: WifiDAQE3A.Sys_setPortMotionMode
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  name: Sys_setPortSwitchMode(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Sys_setPortSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortSwitchMode(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Sys_setPortSwitchMode(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Sys_setPortSwitchMode*
+  name: Sys_setPortSwitchMode
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setPortSwitchMode_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_setPortSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Sys_setPortSwitchMode
+  nameWithType: WifiDAQE3A.Sys_setPortSwitchMode
 - uid: WPC.Product.WifiDAQE3A.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
   name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_

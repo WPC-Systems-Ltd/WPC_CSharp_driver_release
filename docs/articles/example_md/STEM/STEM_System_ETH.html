@@ -71,38 +71,89 @@
 <div class="tabGroup" id="tabgroup_bHGHmlrG6S">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">DIO_loopback_pins.cs</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">DIO_loopback_port.cs</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-3" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-3" data-tab="tabid-3" tabindex="-1">DO_blinky_pins.cs</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-4" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-4" data-tab="tabid-4" tabindex="-1">DO_blinky_port.cs</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">get_network_info.cs</a>
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<div class="WARNING">
-<h5>Warning</h5>
-<p>It looks like the sample you are looking for does not exist.</p>
-</div></section>
-<section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<div class="WARNING">
-<h5>Warning</h5>
-<p>It looks like the sample you are looking for does not exist.</p>
-</div></section>
-<section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
-<div class="WARNING">
-<h5>Warning</h5>
-<p>It looks like the sample you are looking for does not exist.</p>
-</div></section>
-<section id="tabpanel_bHGHmlrG6S_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
-<div class="WARNING">
-<h5>Warning</h5>
-<p>It looks like the sample you are looking for does not exist.</p>
-</div></section>
+<pre><code class="lang-csharp" name="CS">/// get_network_info.cs with synchronous mode.
+///
+/// This example demonstrates how to get hardware &amp; network information from STEM.
+///
+/// First, get hardware information such as firmware model &amp; version.
+///
+/// Last, get network information such as IP &amp; submask &amp; MAC.
+///
+/// For other examples please check:
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
+/// See README.md file to get detailed usage of this example.
+///
+/// Copyright (c) 2023 WPC Systems Ltd.
+/// All rights reserved.
+
+using WPC.Product;
+
+class STEM_get_network_info
+{
+    static public void Main()
+    {
+        // Parameters setting
+        int timeout = 3000; // ms
+
+        // Get C# driver version
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
+
+        // Create device handle
+        STEM dev = new STEM();
+
+        // Connect to device
+        try
+        {
+            dev.connect(&quot;192.168.1.110&quot;); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
+
+        try
+        {
+            // Get firmware model &amp; version
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
+            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
+
+
+            // Get serial number &amp; RTC Time
+            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
+            string RTC = dev.Sys_getRTC();
+            Console.WriteLine($&quot;Serial number: {serial_num}&quot;);
+            Console.WriteLine($&quot;RTC data time: {RTC}&quot;);
+
+            // Get IP &amp; submask
+            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout:timeout);
+            Console.WriteLine($&quot;IP: {info[0]}&quot;);
+            Console.WriteLine($&quot;Submask: {info[1]}&quot;);
+
+            // Get MAC
+            string mac = dev.Sys_getMACAddr(timeout:timeout);
+            Console.WriteLine($&quot;MAC: {mac}&quot;);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+        // Disconnect device
+        dev.disconnect();
+
+        // Release device handle
+        dev.close();
+    }
+}
+</code></pre></section>
 </div>
 </article>
           </div>

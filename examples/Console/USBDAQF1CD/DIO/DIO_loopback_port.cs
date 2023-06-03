@@ -1,15 +1,12 @@
 /// DIO_loopback_port.cs with synchronous mode.
 ///
-/// This example demonstrates how to write DIO loopback in port from USBDAQF1CD.
+/// This example demonstrates the process of DIO loopback using port from USBDAQF1CD.
+/// It involves using DO port to send signals and DI port to receive signals on a single device, commonly known as "loopback".
 ///
-/// Use DO pins to send signals and use DI pins to receive signals on single device also called "loopback".
-///
-/// First, it shows how to open DO and DI in port.
-///
-/// Second, write DO in port and read DI in port
-///
-/// Last, close DO and DI in port.
-///
+/// To begin with, it illustrates the steps required to open the DO and DI port.
+/// Next, it performs the operation of writing to a DO pin and reading from a DI pin.
+/// Lastly, it concludes by closing the DO and DI port.
+
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -44,10 +41,11 @@ class USBDAQF1CD_DIO_loopback_port
 
         try
         {
+            
             // Parameters setting
             int err;
-            int port_DO = 0;
-            int port_DI = 1;
+            int DO_port = 0;
+            int DI_port = 1;
             int timeout = 3000; // ms
 
             // Get firmware model & version
@@ -55,29 +53,30 @@ class USBDAQF1CD_DIO_loopback_port
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open all pins with digital output
-            err = dev.DO_openPort(port_DO, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{port_DO}: {err}");
+            // Open DO port with digital output
+            err = dev.DO_openPort(DO_port, timeout:timeout);
+            Console.WriteLine($"DO_openPort in port{DO_port}: {err}");
 
-            // Open all pins with digital input
-            err = dev.DI_openPort(port_DI, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{port_DI}: {err}");
+            // Open DI port with digital input
+            err = dev.DI_openPort(DI_port, timeout:timeout);
+            Console.WriteLine($"DO_openPort in port{DI_port}: {err}");
 
-            // Set pin0, pin1 and pin2 to high, others to low
-            err = dev.DO_writePort(port_DO, new List<int> { 0, 0, 0, 1, 0, 0, 0, 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePort in port{port_DO}: {err}");
+            // Write DO port to high or low
+            err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
+            Console.WriteLine($"DO_writePort in port{DO_port}: {err}");
 
-            // Read all pins state
-            List<int> p = dev.DI_readPort(port_DI, timeout:timeout);
+            // Read DI port state
+            List<int> p = dev.DI_readPort(DI_port, timeout:timeout);
             Console.WriteLine($"DI_readPort: {p[0]}, {p[1]}, {p[2]}, {p[3]}, {p[4]}, {p[5]}, {p[6]}, {p[7]}");
 
-            // Close all pins with digital output
-            err = dev.DO_closePort(port_DO, timeout:timeout);
-            Console.WriteLine($"DO_closePort in port{port_DO}: {err}");
+            // Close DO port with digital output
+            err = dev.DO_closePort(DO_port, timeout:timeout);
+            Console.WriteLine($"DO_closePort in port{DO_port}: {err}");
 
-            // Close all pins with digital input
-            err = dev.DI_closePort(port_DI, timeout:timeout);
-            Console.WriteLine($"DI_closePort in port{port_DI}: {err}");
+            // Close DI port with digital input
+            err = dev.DI_closePort(DI_port, timeout:timeout);
+            Console.WriteLine($"DI_closePort in port{DI_port}: {err}");
+            
         }
         catch (Exception ex)
         {
