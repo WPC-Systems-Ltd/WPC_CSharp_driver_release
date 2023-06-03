@@ -41,6 +41,7 @@ class EthanD_DIO_loopback_port
 
         try
         {
+            
             // Parameters setting
             int err;
             int port = 0; // Depend on your device
@@ -52,7 +53,7 @@ class EthanD_DIO_loopback_port
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
+
             // Get port mode
             string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
             Console.WriteLine($"Slot mode: {port_mode}");

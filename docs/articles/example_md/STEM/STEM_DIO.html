@@ -248,6 +248,7 @@ class STEM_DIO_loopback_port
 
         try
         {
+            
             // Parameters setting
             int err;
             int port = 1; // Depend on your device
@@ -259,7 +260,7 @@ class STEM_DIO_loopback_port
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-            
+
             // Get port mode
             string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
             Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);

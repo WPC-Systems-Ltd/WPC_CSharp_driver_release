@@ -1,6 +1,11 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.0 Date: 2023/06/03, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Add STEM product
+
 v0.1.8 Date: 2023/03/25, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

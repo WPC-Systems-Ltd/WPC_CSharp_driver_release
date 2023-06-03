@@ -228,9 +228,9 @@ class USBDAQF1AOD_DIO_loopback_port
 
         try
         {
+            
             // Parameters setting
             int err;
-            int port = 0; // Depend on your device
             int DO_port = 0;
             int DI_port = 1;
             int timeout = 3000; // ms
@@ -239,7 +239,7 @@ class USBDAQF1AOD_DIO_loopback_port
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-            
+
             // Open DO port with digital output
             err = dev.DO_openPort(DO_port, timeout:timeout);
             Console.WriteLine($&quot;DO_openPort in port{DO_port}: {err}&quot;);
