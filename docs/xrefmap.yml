@@ -1885,19 +1885,19 @@ references:
   commentId: T:WPC.Module.ISystemAnalogModule
   fullName: WPC.Module.ISystemAnalogModule
   nameWithType: ISystemAnalogModule
-- uid: WPC.Module.ISystemAnalogModule.Wifi_readAccleration(System.Int32)
-  name: Wifi_readAccleration(Int32)
-  href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readAccleration_System_Int32_
-  commentId: M:WPC.Module.ISystemAnalogModule.Wifi_readAccleration(System.Int32)
-  fullName: WPC.Module.ISystemAnalogModule.Wifi_readAccleration(System.Int32)
-  nameWithType: ISystemAnalogModule.Wifi_readAccleration(Int32)
-- uid: WPC.Module.ISystemAnalogModule.Wifi_readAccleration*
-  name: Wifi_readAccleration
-  href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readAccleration_
-  commentId: Overload:WPC.Module.ISystemAnalogModule.Wifi_readAccleration
+- uid: WPC.Module.ISystemAnalogModule.Wifi_readAcceleration(System.Int32)
+  name: Wifi_readAcceleration(Int32)
+  href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readAcceleration_System_Int32_
+  commentId: M:WPC.Module.ISystemAnalogModule.Wifi_readAcceleration(System.Int32)
+  fullName: WPC.Module.ISystemAnalogModule.Wifi_readAcceleration(System.Int32)
+  nameWithType: ISystemAnalogModule.Wifi_readAcceleration(Int32)
+- uid: WPC.Module.ISystemAnalogModule.Wifi_readAcceleration*
+  name: Wifi_readAcceleration
+  href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readAcceleration_
+  commentId: Overload:WPC.Module.ISystemAnalogModule.Wifi_readAcceleration
   isSpec: "True"
-  fullName: WPC.Module.ISystemAnalogModule.Wifi_readAccleration
-  nameWithType: ISystemAnalogModule.Wifi_readAccleration
+  fullName: WPC.Module.ISystemAnalogModule.Wifi_readAcceleration
+  nameWithType: ISystemAnalogModule.Wifi_readAcceleration
 - uid: WPC.Module.ISystemAnalogModule.Wifi_readBattery(System.Int32)
   name: Wifi_readBattery(Int32)
   href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readBattery_System_Int32_
@@ -13422,19 +13422,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Wifi_getWifiConfiguration
   nameWithType: WifiDAQE3A.Wifi_getWifiConfiguration
-- uid: WPC.Product.WifiDAQE3A.Wifi_readAccleration(System.Int32)
-  name: Wifi_readAccleration(Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readAccleration_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.Wifi_readAccleration(System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.Wifi_readAccleration(System.Int32)
-  nameWithType: WifiDAQE3A.Wifi_readAccleration(Int32)
-- uid: WPC.Product.WifiDAQE3A.Wifi_readAccleration*
-  name: Wifi_readAccleration
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readAccleration_
-  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_readAccleration
+- uid: WPC.Product.WifiDAQE3A.Wifi_readAcceleration(System.Int32)
+  name: Wifi_readAcceleration(Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readAcceleration_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_readAcceleration(System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_readAcceleration(System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_readAcceleration(Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_readAcceleration*
+  name: Wifi_readAcceleration
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readAcceleration_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_readAcceleration
   isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.Wifi_readAccleration
-  nameWithType: WifiDAQE3A.Wifi_readAccleration
+  fullName: WPC.Product.WifiDAQE3A.Wifi_readAcceleration
+  nameWithType: WifiDAQE3A.Wifi_readAcceleration
 - uid: WPC.Product.WifiDAQE3A.Wifi_readBattery(System.Int32)
   name: Wifi_readBattery(Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readBattery_System_Int32_

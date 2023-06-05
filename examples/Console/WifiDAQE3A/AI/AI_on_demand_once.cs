@@ -29,7 +29,7 @@ class WifiDAQE3A_AI_on_demand_once
         // Connect to device
         try
         {
-            dev.connect("192.168.5.79"); // Depend on your device
+            dev.connect("192.168.5.35"); // Depend on your device
         }
         catch (Exception ex)
         {
