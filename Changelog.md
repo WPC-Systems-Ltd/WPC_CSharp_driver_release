@@ -1,6 +1,21 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.1 Date: 2023/06/05, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- STEM product introduction
+- Add `STEM` in handle list
+
+### Changed
+- Wifi DAQ AI port to 0
+- STEM product images
+- API name:
+  - Wifi_readAccleration -> Wifi_readAcceleration
+
+### Fixed
+- Firmware error code
+
 v0.2.0 Date: 2023/06/03, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

@@ -90,96 +90,132 @@
 <td>Occurrence AI queue overflow.</td>
 </tr>
 <tr>
+<td>519000</td>
+<td>&quot;External library &quot;&quot;libusb-1.0.dll&quot;&quot; not found at indicated path will look at the default path instead&quot;</td>
+</tr>
+<tr>
+<td>-7000</td>
+<td>The functionality is not enabled in the firmware</td>
+</tr>
+<tr>
 <td>-7001</td>
-<td>Functionality not enabled in firmware.</td>
+<td>The pin index error in the firmware.</td>
 </tr>
 <tr>
 <td>-7002</td>
-<td>Firmware pin mode index error.</td>
+<td>The HAL handle index error in the firmware.</td>
 </tr>
 <tr>
 <td>-7003</td>
-<td>Firmware HAL handle index error.</td>
+<td>The WPC handle index error in the firmware.</td>
 </tr>
 <tr>
 <td>-7004</td>
-<td>Firmware HAL error.</td>
+<td>The RTC error in the firmware.</td>
 </tr>
 <tr>
 <td>-7005</td>
-<td>Firmware I2C error.</td>
+<td>The I2C error in the firmware.</td>
 </tr>
 <tr>
 <td>-7006</td>
-<td>Firmware SPI error.</td>
+<td>The SPI error in the firmware.</td>
 </tr>
 <tr>
 <td>-7007</td>
-<td>Firmware UART error.</td>
+<td>The UART error in the firmware.</td>
 </tr>
 <tr>
 <td>-7008</td>
-<td>Firmware error placeholder.</td>
+<td>The Time error in the firmware.</td>
 </tr>
 <tr>
 <td>-7009</td>
-<td>Firmware EEPROM error.</td>
+<td>The PWM error in the firmware.</td>
 </tr>
 <tr>
 <td>-7010</td>
-<td>Firmware OLED error.</td>
+<td>The pulse counter error in the firmware.</td>
 </tr>
 <tr>
 <td>-7011</td>
-<td>Firmware system error.</td>
+<td>The encoder counter error in the firmware.</td>
 </tr>
 <tr>
 <td>-7012</td>
-<td>Firmware error placeholder.</td>
+<td>The EEPROM error in the firmware.</td>
 </tr>
 <tr>
 <td>-7013</td>
-<td>Firmware DIO error.</td>
+<td>The OLED error in the firmware.</td>
 </tr>
 <tr>
 <td>-7014</td>
-<td>Firmware motion error.</td>
+<td>The system core error in the firmware.</td>
 </tr>
 <tr>
 <td>-7015</td>
-<td>Firmware AI error.</td>
+<td>The DIO error in the firmware.</td>
 </tr>
 <tr>
 <td>-7016</td>
-<td>Firmware AO error.</td>
+<td>The relay error in the firmware.</td>
 </tr>
 <tr>
 <td>-7017</td>
-<td>Firmware thermal error.</td>
+<td>The AI error in the firmware.</td>
 </tr>
 <tr>
 <td>-7018</td>
-<td>Firmware CAN error.</td>
+<td>The AO error in the firmware.</td>
 </tr>
 <tr>
 <td>-7019</td>
-<td>Firmware USB read/write error.</td>
+<td>The motion error in the firmware.</td>
 </tr>
 <tr>
 <td>-7020</td>
-<td>Firmware TCP read/write error.</td>
+<td>The drive error in the firmware.</td>
 </tr>
 <tr>
 <td>-7021</td>
-<td>Firmware UDP read/write error.</td>
+<td>The thermal error in the firmware.</td>
 </tr>
 <tr>
 <td>-7022</td>
-<td>Firmware bootloader error.</td>
+<td>The CAN error in the firmware.</td>
 </tr>
 <tr>
 <td>-7023</td>
-<td>Firmware commands error.</td>
+<td>The USB read/write error in the firmware.</td>
+</tr>
+<tr>
+<td>-7024</td>
+<td>The TCP read/write error in the firmware.</td>
+</tr>
+<tr>
+<td>-7025</td>
+<td>The UDP read/write error in the firmware.</td>
+</tr>
+<tr>
+<td>-7026</td>
+<td>The bootloader error in the firmware.</td>
+</tr>
+<tr>
+<td>-7027</td>
+<td>The parser error in the firmware.</td>
+</tr>
+<tr>
+<td>-7028</td>
+<td>The other error in the firmware.</td>
+</tr>
+<tr>
+<td>-7801</td>
+<td>STEM port not available or already occupied by other process.</td>
+</tr>
+<tr>
+<td>-7901</td>
+<td>Please ensure that the relay counter index is restricted to the range of 0 to 5 or -1.</td>
 </tr>
 <tr>
 <td>-8001</td>
@@ -194,8 +230,12 @@
 <td>Network DAQ connection lost.</td>
 </tr>
 <tr>
+<td>-8008</td>
+<td>Receive packet timeout.</td>
+</tr>
+<tr>
 <td>-8009</td>
-<td>Invalid pin index.</td>
+<td>The pin index is invalid</td>
 </tr>
 <tr>
 <td>-8010</td>
@@ -203,15 +243,15 @@
 </tr>
 <tr>
 <td>-8011</td>
-<td>Inconsistency between the type of pins &amp; the type of values.</td>
+<td>There is a discrepancy in the data types between the pins and the corresponding values</td>
 </tr>
 <tr>
 <td>-8012</td>
-<td>Unsupported data type.</td>
+<td>The data type is incompatible or not supported.</td>
 </tr>
 <tr>
 <td>-8014</td>
-<td>Input value not in range.</td>
+<td>The input value is not the acceptable range.</td>
 </tr>
 <tr>
 <td>-8015</td>
@@ -232,6 +272,10 @@
 <tr>
 <td>-8201</td>
 <td>AI port not available or already occupied by other process.</td>
+</tr>
+<tr>
+<td>-8202</td>
+<td>The specified AI chip select is invalid.</td>
 </tr>
 <tr>
 <td>-8204</td>
@@ -264,6 +308,10 @@
 <tr>
 <td>-8212</td>
 <td>The specified AO sampling rate is invalid.</td>
+</tr>
+<tr>
+<td>-8213</td>
+<td>Numbers of AO value must lower than 13.</td>
 </tr>
 <tr>
 <td>-8301</td>
