@@ -1,9 +1,9 @@
 /// AO_write_all_channels.cs with synchronous mode.
 ///
 /// This example demonstrates the process of writing AO signal of USBDAQF1AOD.
-/// To begin with, it demonstrates the steps to open the AO port.
+/// To begin with, it demonstrates the steps to open the AO.
 /// Next, it outlines the procedure for writing digital signals simultaneously to the AO pins.
-/// Finally, it concludes by explaining how to close the AO port.
+/// Finally, it concludes by explaining how to close the AO.
 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -48,20 +48,20 @@ class USBDAQF1AOD_AO_write_all_channels
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
-            // Open AO port
-            err = dev.AO_open(port, timeout:timeout);
-            Console.WriteLine($"AO_open in port{port}: {err}");
 
-            // Set AO port and write data simultaneously
+            // Open AO
+            err = dev.AO_open(port, timeout:timeout);
+            Console.WriteLine($"AO_open in port {port}: {err}");
+
+            // Write AO data simultaneously
             // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
             List<double> AO_values = new List<double> { 5, 5, 3, 3, 2, 2, 0, 0 };
             err = dev.AO_writeAllChannels(port, AO_values, timeout:timeout);
-            Console.WriteLine($"AO_writeAllChannels in port{port}: {err}");
+            Console.WriteLine($"AO_writeAllChannels in port {port}: {err}");
 
-            // Close AO port
+            // Close AO
             err = dev.AO_close(port, timeout:timeout);
-            Console.WriteLine($"AO_close in port{port}: {err}");
+            Console.WriteLine($"AO_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

@@ -41,10 +41,8 @@ class EthanD_DIO_loopback_pins
 
         try
         {
-            
             // Parameters setting
             int err;
-            int port = 0;
             int DO_port = 0;
             int DI_port = 1;
             List<int> DO_pins = new List<int> {0, 1, 2, 3};
@@ -56,44 +54,29 @@ class EthanD_DIO_loopback_pins
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
+            // Open pins with digital output
+            err = dev.DO_openPins(DO_port, DO_pins, timeout:timeout);
+            Console.WriteLine($"DO_openPins in DO_port {DO_port}: {err}");
 
-            // If the port mode is not set to "DIO", set the port mode to "DIO"
-            if (port_mode != "DIO"){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($"Sys_setPortDIOMode: {err}");
-            }
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-
-            // Get port DIO start up information
-            List<List<byte>> pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-
-            Console.WriteLine($"enable_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[0])));
-
-            Console.WriteLine($"direction_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[1])));
-
-            Console.WriteLine($"state_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
+            // Open pins with digital iutput
+            err = dev.DI_openPins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($"DI_openPins in DI_port {DI_port}: {err}");
 
             // Write pins to high or low
             err = dev.DO_writePins(DO_port, DO_pins, new List<int> {1, 1, 0, 0}, timeout:timeout);
             Console.WriteLine($"writePins: {err}");
 
             // Read pins state
-            List<int> state = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
-            
+            List<int> pin_s = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($"DI_readPins: {pin_s[4]}, {pin_s[5]}, {pin_s[6]}, {pin_s[7]}");
+
+            // Close pins with digital output
+            err = dev.DO_closePins(DO_port, DO_pins, timeout:timeout);
+            Console.WriteLine($"DO_closePins in DO_port {DO_port}: {err}");
+
+            // Close pins with digital input
+            err = dev.DI_closePins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($"DI_closePins in DI_port {DI_port}: {err}");
         }
         catch (Exception ex)
         {

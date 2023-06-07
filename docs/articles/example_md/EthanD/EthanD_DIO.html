@@ -133,10 +133,8 @@ class EthanD_DIO_loopback_pins
 
         try
         {
-            
             // Parameters setting
             int err;
-            int port = 0;
             int DO_port = 0;
             int DI_port = 1;
             List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1, 2, 3};
@@ -148,44 +146,29 @@ class EthanD_DIO_loopback_pins
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+            // Open pins with digital output
+            err = dev.DO_openPins(DO_port, DO_pins, timeout:timeout);
+            Console.WriteLine($&quot;DO_openPins in DO_port {DO_port}: {err}&quot;);
 
-            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
-            if (port_mode != &quot;DIO&quot;){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
-            }
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // Get port DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            Console.WriteLine($&quot;enable_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
-
-            Console.WriteLine($&quot;direction_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
-
-            Console.WriteLine($&quot;state_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+            // Open pins with digital iutput
+            err = dev.DI_openPins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($&quot;DI_openPins in DI_port {DI_port}: {err}&quot;);
 
             // Write pins to high or low
             err = dev.DO_writePins(DO_port, DO_pins, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
             // Read pins state
-            List&lt;int&gt; state = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
-            
+            List&lt;int&gt; pin_s = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($&quot;DI_readPins: {pin_s[4]}, {pin_s[5]}, {pin_s[6]}, {pin_s[7]}&quot;);
+
+            // Close pins with digital output
+            err = dev.DO_closePins(DO_port, DO_pins, timeout:timeout);
+            Console.WriteLine($&quot;DO_closePins in DO_port {DO_port}: {err}&quot;);
+
+            // Close pins with digital input
+            err = dev.DI_closePins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($&quot;DI_closePins in DI_port {DI_port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -244,10 +227,8 @@ class EthanD_DIO_loopback_port
 
         try
         {
-            
             // Parameters setting
             int err;
-            int port = 0; // Depend on your device
             int DO_port = 0;
             int DI_port = 1;
             int timeout = 3000; // ms
@@ -257,42 +238,29 @@ class EthanD_DIO_loopback_port
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
+            // Open DO port with digital output
+            err = dev.DO_openPort(DO_port, timeout:timeout);
+            Console.WriteLine($&quot;DO_openPort in DO_port {DO_port}: {err}&quot;);
 
-            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
-            if (port_mode != &quot;DIO&quot;){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
-            }
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // Get port DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            Console.WriteLine($&quot;enable_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
-
-            Console.WriteLine($&quot;direction_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
-
-            Console.WriteLine($&quot;state_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
+            // Open DI port with digital input
+            err = dev.DI_openPort(DI_port, timeout:timeout);
+            Console.WriteLine($&quot;DO_openPort in DI_port {DI_port}: {err}&quot;);
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($&quot;DO_writePort in port{DO_port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}: {err}&quot;);
 
             // Read DI port state
             List&lt;int&gt; state = dev.DI_readPort(DI_port, timeout:timeout);
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
 
-            
+            // Close DO port with digital output
+            err = dev.DO_closePort(DO_port, timeout:timeout);
+            Console.WriteLine($&quot;DO_closePort in DO_port {DO_port}: {err}&quot;);
+
+            // Close DI port with digital input
+            err = dev.DI_closePort(DI_port, timeout:timeout);
+            Console.WriteLine($&quot;DI_closePort in DI_port {DI_port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -350,11 +318,9 @@ class EthanD_DO_blinky_pins
 
         try
         {
-            
             // Parameters setting
             int err;
             int port = 0;
-            int DO_port = 1;
             List&lt;int&gt; pinindex = new List&lt;int&gt; {1, 3, 5, 7};
             int timeout = 3000; // ms
 
@@ -363,42 +329,22 @@ class EthanD_DO_blinky_pins
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
-            if (port_mode != &quot;DIO&quot;){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
-            }
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // Get port DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            Console.WriteLine($&quot;enable_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
-
-            Console.WriteLine($&quot;direction_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
-
-            Console.WriteLine($&quot;state_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
+            // Open pins with digital output
+            err = dev.DO_openPins(port, pinindex, timeout:timeout);
+            Console.WriteLine($&quot;DO_openPins in port {port}: {err}&quot;);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
             {
-                List&lt;byte&gt; state = dev.DO_togglePins(DO_port, pinindex, timeout:timeout);
+                List&lt;byte&gt; state = dev.DO_togglePins(port, pinindex, timeout:timeout);
                 Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
-            
+
+            // Close pins with digital output
+            err = dev.DO_closePins(port, pinindex, timeout:timeout);
+            Console.WriteLine($&quot;DO_closePins in port {port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -456,55 +402,26 @@ class EthanD_DO_blinky_port
 
         try
         {
-            
-            // Parameters setting
             int err;
             int port = 0; // Depend on your device
-            int DO_port = 1;
             int timeout = 3000;  // ms
 
-            // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
-            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
-            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
-            if (port_mode != &quot;DIO&quot;){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
-            }
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // Get port DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            Console.WriteLine($&quot;enable_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
-
-            Console.WriteLine($&quot;direction_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
-
-            Console.WriteLine($&quot;state_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
+            // Open port with digital output
+            err = dev.DO_openPort(port, timeout:timeout);
+            Console.WriteLine($&quot;DO_openPort in port {port}: {err}&quot;);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
             {
-                List&lt;byte&gt; state = dev.DO_togglePort(DO_port, timeout:timeout);
-                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
+                dev.DO_togglePort(port, timeout:timeout);
 
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
-            
+
+            // Close port with digital output
+            err = dev.DO_closePort(port, timeout:timeout);
+            Console.WriteLine($&quot;DO_closePort in port {port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -562,12 +479,10 @@ class EthanD_DO_write_pins
 
         try
         {
-            
             // Parameters setting
             int err;
             int port = 0;
-            int DO_port = 1;
-            List&lt;int&gt; pinindex = new List&lt;int&gt; {0, 1, 2, 3};
+            List&lt;int&gt; pinindex = new List&lt;int&gt; {1, 3, 5, 7};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
@@ -575,37 +490,18 @@ class EthanD_DO_write_pins
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
-            if (port_mode != &quot;DIO&quot;){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
-            }
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // Get port DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            Console.WriteLine($&quot;enable_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
-
-            Console.WriteLine($&quot;direction_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
-
-            Console.WriteLine($&quot;state_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
+            // Open pins with digital output
+            err = dev.DO_openPins(port, pinindex, timeout:timeout);
+            Console.WriteLine($&quot;DO_openPins in port {port}: {err}&quot;);
 
             // Write pins to high or low
-            err = dev.DO_writePins(DO_port, pinindex, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
-            Console.WriteLine($&quot;DO_writePins in port{port}: {err}&quot;);
-            
+            err = dev.DO_writePins(port, pinindex, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
+            Console.WriteLine($&quot;DO_writePins in port {port}: {err}&quot;);
+
+            // Close pins with digital output
+            err = dev.DO_closePins(port, pinindex, timeout:timeout);
+            Console.WriteLine($&quot;DO_closePins in port {port}: {err}&quot;);
+
         }
         catch (Exception ex)
         {
@@ -663,50 +559,21 @@ class EthanD_DO_write_port
 
         try
         {
-            
-            // Parameters setting
             int err;
             int port = 0; // Depend on your device
-            int DO_port = 1;
             int timeout = 3000;  // ms
 
-            // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
-            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
-            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // If the port mode is not set to &quot;DIO&quot;, set the port mode to &quot;DIO&quot;
-            if (port_mode != &quot;DIO&quot;){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($&quot;Sys_setPortDIOMode: {err}&quot;);
-            }
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            // Get port DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
-
-            Console.WriteLine($&quot;enable_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[0])));
-
-            Console.WriteLine($&quot;direction_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[1])));
-
-            Console.WriteLine($&quot;state_list&quot;);
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
+            // Open port with digital output
+            err = dev.DO_openPort(port, timeout:timeout);
+            Console.WriteLine($&quot;DO_openPort in port {port}: {err}&quot;);
 
             // Write DO port to high or low
-            err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($&quot;DO_writePort in port{DO_port}: {err}&quot;);
+            err = dev.DO_writePort(port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
+            Console.WriteLine($&quot;DO_writePort in port {port}: {err}&quot;);
 
-            
+            // Close port with digital output
+            err = dev.DO_closePort(port, timeout:timeout);
+            Console.WriteLine($&quot;DO_closePort in port {port}: {err}&quot;);
         }
         catch (Exception ex)
         {

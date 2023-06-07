@@ -46,7 +46,7 @@ class EMotion_1axis_move
 
             // Motion open
             err = dev.Motion_open(port, timeout:timeout);
-            Console.WriteLine($"Motion_open in port{port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}: {err}");
 
             /*
             // Motion open configuration file
@@ -101,7 +101,7 @@ class EMotion_1axis_move
 
             // Motion close
             err = dev.Motion_close(port, timeout:timeout);
-            Console.WriteLine($"Motion_close in port{port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

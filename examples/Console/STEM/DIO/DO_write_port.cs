@@ -6,7 +6,15 @@
 /// Next, voltage output is written to the DO port.
 /// Lastly, it concludes by closing the DO port.
 
-/// If your product is "STEM", please invoke the function `Sys_setPortDIOMode`.
+/// If your product is "STEM", please invoke the function Sys_setDIOMode.
+///
+/// The DIO ports 0 to 1 are assigned to slot 1, while ports 2 to 3 are assigned to slot 2.
+/// ---------------------------
+/// |  Slot 1    port 1 & 0   |
+/// |  Slot 2    port 3 & 2   |
+/// |  Slot 3    port 5 & 4   |
+/// |  Slot 4    port 7 & 6   |
+/// ---------------------------
 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -42,10 +50,9 @@ class STEM_DO_write_port
 
         try
         {
-            
             // Parameters setting
             int err;
-            int port = 1; // Depend on your device
+            int slot = 1; // Connect DIO module to slot
             int DO_port = 1;
             int timeout = 3000;  // ms
 
@@ -54,23 +61,23 @@ class STEM_DO_write_port
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
+            // Get slot mode
+            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
 
-            // If the port mode is not set to "DIO", set the port mode to "DIO"
-            if (port_mode != "DIO"){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($"Sys_setPortDIOMode: {err}");
+            // If the slot mode is not set to "DIO", set the slot mode to "DIO"
+            if (slot_mode != "DIO"){
+                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                Console.WriteLine($"Sys_setDIOMode: {err}");
             }
 
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
+            // Get slot mode
+            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
 
             // Get port DIO start up information
-            List<List<byte>> pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
+            List<List<byte>> pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
 
             Console.WriteLine($"enable_list");
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[0])));
@@ -83,9 +90,7 @@ class STEM_DO_write_port
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePort in port{DO_port}: {err}");
-
-            
+            Console.WriteLine($"DO_writePort in DO_port {DO_port}: {err}");
         }
         catch (Exception ex)
         {

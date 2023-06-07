@@ -50,7 +50,7 @@ class EMotion_1axis_move_with_breakpoint
 
             // Motion open
             err = dev.Motion_open(port, timeout:timeout);
-            Console.WriteLine($"Motion_open in port{port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
@@ -98,7 +98,7 @@ class EMotion_1axis_move_with_breakpoint
 
             // Motion close
             err = dev.Motion_close(port, timeout:timeout);
-            Console.WriteLine($"Motion_close in port{port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

@@ -4,7 +4,7 @@
 /// It involves using AO pins to send signals and AI pins to receive signals on a single device, commonly referred to as "loopback".
 /// The AI and AO pins are connected using a wire.
 ///
-/// Initially, the example demonstrates the steps required to open the AI and AO port
+/// Initially, the example demonstrates the steps required to open the AI and AO.
 /// Next, it reads AI data and displays its corresponding values.
 /// Following that, it writes digital signals to the AO pins and reads AI on-demand data once again.
 /// Lastly, it closes the AO and AI ports.
@@ -52,40 +52,40 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
-            // Open AI port
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($"AI_open in port{port}: {err}");
 
-            // Open AO port
+            // Open AI
+            err = dev.AI_open(port, timeout:timeout);
+            Console.WriteLine($"AI_open in port {port}: {err}");
+
+            // Open AO
             err = dev.AO_open(port, timeout:timeout);
-            Console.WriteLine($"AO_open in port{port}: {err}");
-            
-            // Read data
+            Console.WriteLine($"AO_open in port {port}: {err}");
+
+            // Read data acquisition acquisition
             List<double> sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Print data
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
-            // Set AO port and write data simultaneously
+            // Write AO value simultaneously
             // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
             List<double> AO_values = new List<double> { 5, 5, 3, 3, 2, 2, 0, 0 };
             err = dev.AO_writeAllChannels(port, AO_values, timeout:timeout);
-            Console.WriteLine($"AO_writeAllChannels in port{port}: {err}");
+            Console.WriteLine($"AO_writeAllChannels in port {port}: {err}");
 
-            // Read data
+            // Read data acquisition acquisition
             sample = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Print data
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
 
-            // Close AI port
+            // Close AI
             err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($"AI_close in port{port}: {err}");
+            Console.WriteLine($"AI_close in port {port}: {err}");
 
-            // Close AO port
+            // Close AO
             err = dev.AO_close(port, timeout:timeout);
-            Console.WriteLine($"AO_close in port{port}: {err}");
+            Console.WriteLine($"AO_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

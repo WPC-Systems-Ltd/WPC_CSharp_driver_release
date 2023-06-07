@@ -133,10 +133,10 @@ class USBDAQF1AOD_DIO_loopback_pins
 
         try
         {
-            
             // Parameters setting
             int err;
-            int port = 0;
+            int DO_port = 0;
+            int DI_port = 1;
             List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1, 2, 3};
             List&lt;int&gt; DI_pins = new List&lt;int&gt; {4, 5, 6, 7};
             int timeout = 3000; // ms
@@ -147,29 +147,28 @@ class USBDAQF1AOD_DIO_loopback_pins
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open pins with digital output
-            err = dev.DO_openPins(port, DO_pins, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPins in port{port}: {err}&quot;);
+            err = dev.DO_openPins(DO_port, DO_pins, timeout:timeout);
+            Console.WriteLine($&quot;DO_openPins in DO_port {DO_port}: {err}&quot;);
 
             // Open pins with digital iutput
-            err = dev.DI_openPins(port, DI_pins, timeout:timeout);
-            Console.WriteLine($&quot;DI_openPins in port{port}: {err}&quot;);
+            err = dev.DI_openPins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($&quot;DI_openPins in DI_port {DI_port}: {err}&quot;);
 
             // Write pins to high or low
-            err = dev.DO_writePins(port, DO_pins, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
+            err = dev.DO_writePins(DO_port, DO_pins, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
             // Read pins state
-            List&lt;int&gt; pin_s = dev.DI_readPins(port, DI_pins, timeout:timeout);
+            List&lt;int&gt; pin_s = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
             Console.WriteLine($&quot;DI_readPins: {pin_s[4]}, {pin_s[5]}, {pin_s[6]}, {pin_s[7]}&quot;);
 
             // Close pins with digital output
-            err = dev.DO_closePins(port, DO_pins, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePins in port{port}: {err}&quot;);
+            err = dev.DO_closePins(DO_port, DO_pins, timeout:timeout);
+            Console.WriteLine($&quot;DO_closePins in DO_port {DO_port}: {err}&quot;);
 
             // Close pins with digital input
-            err = dev.DI_closePins(port, DI_pins, timeout:timeout);
-            Console.WriteLine($&quot;DI_closePins in port{port}: {err}&quot;);
-            
+            err = dev.DI_closePins(DI_port, DI_pins, timeout:timeout);
+            Console.WriteLine($&quot;DI_closePins in DI_port {DI_port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -228,7 +227,6 @@ class USBDAQF1AOD_DIO_loopback_port
 
         try
         {
-            
             // Parameters setting
             int err;
             int DO_port = 0;
@@ -242,28 +240,27 @@ class USBDAQF1AOD_DIO_loopback_port
 
             // Open DO port with digital output
             err = dev.DO_openPort(DO_port, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPort in port{DO_port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPort in DO_port {DO_port}: {err}&quot;);
 
             // Open DI port with digital input
             err = dev.DI_openPort(DI_port, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPort in port{DI_port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPort in DI_port {DI_port}: {err}&quot;);
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($&quot;DO_writePort in port{DO_port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}: {err}&quot;);
 
             // Read DI port state
-            List&lt;int&gt; p = dev.DI_readPort(DI_port, timeout:timeout);
-            Console.WriteLine($&quot;DI_readPort: {p[0]}, {p[1]}, {p[2]}, {p[3]}, {p[4]}, {p[5]}, {p[6]}, {p[7]}&quot;);
+            List&lt;int&gt; state = dev.DI_readPort(DI_port, timeout:timeout);
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
 
             // Close DO port with digital output
             err = dev.DO_closePort(DO_port, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePort in port{DO_port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_closePort in DO_port {DO_port}: {err}&quot;);
 
             // Close DI port with digital input
             err = dev.DI_closePort(DI_port, timeout:timeout);
-            Console.WriteLine($&quot;DI_closePort in port{DI_port}: {err}&quot;);
-            
+            Console.WriteLine($&quot;DI_closePort in DI_port {DI_port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -321,7 +318,6 @@ class USBDAQF1AOD_DO_blinky_pins
 
         try
         {
-            
             // Parameters setting
             int err;
             int port = 0;
@@ -335,7 +331,7 @@ class USBDAQF1AOD_DO_blinky_pins
 
             // Open pins with digital output
             err = dev.DO_openPins(port, pinindex, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPins in port{port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPins in port {port}: {err}&quot;);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
@@ -348,8 +344,7 @@ class USBDAQF1AOD_DO_blinky_pins
 
             // Close pins with digital output
             err = dev.DO_closePins(port, pinindex, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePins in port{port}: {err}&quot;);
-            
+            Console.WriteLine($&quot;DO_closePins in port {port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -407,14 +402,13 @@ class USBDAQF1AOD_DO_blinky_port
 
         try
         {
-            
             int err;
             int port = 0; // Depend on your device
             int timeout = 3000;  // ms
 
-            // Open port and set it to digital output.
+            // Open port with digital output
             err = dev.DO_openPort(port, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPort in port{port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPort in port {port}: {err}&quot;);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
@@ -427,8 +421,7 @@ class USBDAQF1AOD_DO_blinky_port
 
             // Close port with digital output
             err = dev.DO_closePort(port, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePort in port{port}: {err}&quot;);
-            
+            Console.WriteLine($&quot;DO_closePort in port {port}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -486,7 +479,6 @@ class USBDAQF1AOD_DO_write_pins
 
         try
         {
-            
             // Parameters setting
             int err;
             int port = 0;
@@ -500,16 +492,16 @@ class USBDAQF1AOD_DO_write_pins
 
             // Open pins with digital output
             err = dev.DO_openPins(port, pinindex, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPins in port{port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPins in port {port}: {err}&quot;);
 
             // Write pins to high or low
             err = dev.DO_writePins(port, pinindex, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
-            Console.WriteLine($&quot;DO_writePins in port{port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePins in port {port}: {err}&quot;);
 
             // Close pins with digital output
             err = dev.DO_closePins(port, pinindex, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePins in port{port}: {err}&quot;);
-            
+            Console.WriteLine($&quot;DO_closePins in port {port}: {err}&quot;);
+
         }
         catch (Exception ex)
         {
@@ -567,23 +559,21 @@ class USBDAQF1AOD_DO_write_port
 
         try
         {
-            
             int err;
             int port = 0; // Depend on your device
             int timeout = 3000;  // ms
 
-            // Open port and set it to digital output.
+            // Open port with digital output
             err = dev.DO_openPort(port, timeout:timeout);
-            Console.WriteLine($&quot;DO_openPort in port{port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_openPort in port {port}: {err}&quot;);
 
             // Write DO port to high or low
             err = dev.DO_writePort(port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($&quot;DO_writePort in port{port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePort in port {port}: {err}&quot;);
 
             // Close port with digital output
             err = dev.DO_closePort(port, timeout:timeout);
-            Console.WriteLine($&quot;DO_closePort in port{port}: {err}&quot;);
-            
+            Console.WriteLine($&quot;DO_closePort in port {port}: {err}&quot;);
         }
         catch (Exception ex)
         {

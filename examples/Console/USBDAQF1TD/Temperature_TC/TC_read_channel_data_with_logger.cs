@@ -64,22 +64,22 @@ class USBDAQF1TD_TC_read_channel_data_with_logger
 
             // Open thermo port
             err = dev.Thermal_open(port, timeout:timeout);
-            Console.WriteLine($"Thermal_open in port{port}: {err}");
+            Console.WriteLine($"Thermal_open in port {port}: {err}");
 
             // Set thermo port and set K type in channel 1
             err = dev.Thermal_setOverSampling(port, ch, Const.THERMAL_OVERSAMPLING_NONE, timeout:timeout);
-            Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port{port}: {err}");
+            Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port {port}: {err}");
 
             // Set thermo port and set K type in channel 1
             err = dev.Thermal_setType(port, ch, Const.THERMAL_COUPLE_TYPE_K, timeout:timeout);
-            Console.WriteLine($"Thermal_setType in channel {ch} in port{port}: {err}");
+            Console.WriteLine($"Thermal_setType in channel {ch} in port {port}: {err}");
 
             // Wait for at least 500 ms after setting type or oversampling
             Thread.Sleep(500); // delay [ms]
 
             // Set thermo port and read thermo in channel 1
             float data1 = dev.Thermal_readSensor(port, ch, timeout:timeout);
-            Console.WriteLine($"Read sensor in channel {ch} in port{port}: {data1}°C");
+            Console.WriteLine($"Read sensor in channel {ch} in port {port}: {data1}°C");
 
             // Write data into CSV file
             var data = $"{data1}";
@@ -88,7 +88,7 @@ class USBDAQF1TD_TC_read_channel_data_with_logger
 
             // Close thermo port
             err = dev.Thermal_close(port, timeout:timeout);
-            Console.WriteLine($"Thermal_close in port{port}: {err}");
+            Console.WriteLine($"Thermal_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

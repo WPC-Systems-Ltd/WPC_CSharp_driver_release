@@ -41,7 +41,6 @@ class USBDAQF1AOD_DIO_loopback_port
 
         try
         {
-            
             // Parameters setting
             int err;
             int DO_port = 0;
@@ -55,28 +54,27 @@ class USBDAQF1AOD_DIO_loopback_port
 
             // Open DO port with digital output
             err = dev.DO_openPort(DO_port, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{DO_port}: {err}");
+            Console.WriteLine($"DO_openPort in DO_port {DO_port}: {err}");
 
             // Open DI port with digital input
             err = dev.DI_openPort(DI_port, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{DI_port}: {err}");
+            Console.WriteLine($"DO_openPort in DI_port {DI_port}: {err}");
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePort in port{DO_port}: {err}");
+            Console.WriteLine($"DO_writePort in DO_port {DO_port}: {err}");
 
             // Read DI port state
-            List<int> p = dev.DI_readPort(DI_port, timeout:timeout);
-            Console.WriteLine($"DI_readPort: {p[0]}, {p[1]}, {p[2]}, {p[3]}, {p[4]}, {p[5]}, {p[6]}, {p[7]}");
+            List<int> state = dev.DI_readPort(DI_port, timeout:timeout);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
 
             // Close DO port with digital output
             err = dev.DO_closePort(DO_port, timeout:timeout);
-            Console.WriteLine($"DO_closePort in port{DO_port}: {err}");
+            Console.WriteLine($"DO_closePort in DO_port {DO_port}: {err}");
 
             // Close DI port with digital input
             err = dev.DI_closePort(DI_port, timeout:timeout);
-            Console.WriteLine($"DI_closePort in port{DI_port}: {err}");
-            
+            Console.WriteLine($"DI_closePort in DI_port {DI_port}: {err}");
         }
         catch (Exception ex)
         {

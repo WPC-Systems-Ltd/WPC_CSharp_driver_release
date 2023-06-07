@@ -40,7 +40,6 @@ class USBDAQF1AD_DO_blinky_pins
 
         try
         {
-            
             // Parameters setting
             int err;
             int port = 0;
@@ -54,7 +53,7 @@ class USBDAQF1AD_DO_blinky_pins
 
             // Open pins with digital output
             err = dev.DO_openPins(port, pinindex, timeout:timeout);
-            Console.WriteLine($"DO_openPins in port{port}: {err}");
+            Console.WriteLine($"DO_openPins in port {port}: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
@@ -67,8 +66,7 @@ class USBDAQF1AD_DO_blinky_pins
 
             // Close pins with digital output
             err = dev.DO_closePins(port, pinindex, timeout:timeout);
-            Console.WriteLine($"DO_closePins in port{port}: {err}");
-            
+            Console.WriteLine($"DO_closePins in port {port}: {err}");
         }
         catch (Exception ex)
         {
