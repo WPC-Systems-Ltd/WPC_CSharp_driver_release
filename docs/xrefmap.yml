@@ -1943,6 +1943,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ISystemModule.Sys_getDriverInfo
   nameWithType: ISystemModule.Sys_getDriverInfo
+- uid: WPC.Module.ISystemModule.Sys_getMode(System.Int32,System.Int32)
+  name: Sys_getMode(Int32, Int32)
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_getMode_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISystemModule.Sys_getMode(System.Int32,System.Int32)
+  fullName: WPC.Module.ISystemModule.Sys_getMode(System.Int32, System.Int32)
+  nameWithType: ISystemModule.Sys_getMode(Int32, Int32)
+- uid: WPC.Module.ISystemModule.Sys_getMode*
+  name: Sys_getMode
+  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_getMode_
+  commentId: Overload:WPC.Module.ISystemModule.Sys_getMode
+  isSpec: "True"
+  fullName: WPC.Module.ISystemModule.Sys_getMode
+  nameWithType: ISystemModule.Sys_getMode
 - uid: WPC.Module.ISystemModule.Sys_getRTC(System.Int32)
   name: Sys_getRTC(Int32)
   href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_getRTC_System_Int32_

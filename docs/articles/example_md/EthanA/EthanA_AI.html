@@ -181,6 +181,9 @@ class EthanA_AI_continuous
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
 
+            // Wait for data
+            Thread.Sleep(1000);
+
             // loop parameters
             int get_samples = 600;
             int delay = 50;
@@ -307,6 +310,9 @@ class EthanA_AI_N_samples_in_loop
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
 
+            // Wait for data
+            Thread.Sleep(1000);
+
             // loop parameters
             int get_samples = 600;
             int delay = 50;
@@ -413,6 +419,9 @@ class EthanA_AI_N_samples_once
             // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
+
+            // Wait for data
+            Thread.Sleep(1000);
 
             // Read data acquisition
             List&lt;List&lt;double&gt;&gt; streaming_list = dev.AI_readStreaming(port, samples, delay);
@@ -722,6 +731,9 @@ class EthanA_DataLogger_AI_continuous
             // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
+
+            // Wait for data
+            Thread.Sleep(1000);
 
             // loop parameters
             int get_samples = 200;

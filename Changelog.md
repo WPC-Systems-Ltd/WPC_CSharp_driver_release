@@ -1,6 +1,16 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.2 Date: 2023/06/08, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New product: `WifiDAQF4A`
+- Add STEM port supplementary note
+
+### Fixed
+- `STEM` has not supported `AO_waveform_gen` yet
+- If the product is `STEM`, use slot instead of port
+
 v0.2.1 Date: 2023/06/05, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

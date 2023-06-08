@@ -75,6 +75,9 @@ class WifiDAQE3A_AI_N_samples_once
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port {port}: {err}");
 
+            // Wait for data
+            Thread.Sleep(1000);
+
             // Read data acquisition
             List<List<double>> streaming_list = dev.AI_readStreaming(port, samples, delay);
 

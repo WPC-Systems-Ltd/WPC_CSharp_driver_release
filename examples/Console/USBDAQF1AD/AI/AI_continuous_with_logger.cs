@@ -101,6 +101,9 @@ class USBDAQF1AD_DataLogger_AI_continuous
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port {port}: {err}");
 
+            // Wait for data
+            Thread.Sleep(1000);
+
             // loop parameters
             int get_samples = 200;
             int delay = 50;

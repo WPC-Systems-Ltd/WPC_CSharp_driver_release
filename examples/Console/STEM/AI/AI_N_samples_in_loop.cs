@@ -126,6 +126,9 @@ class STEM_AI_N_samples_in_loop
             err = dev.AI_start(slot, timeout:timeout);
             Console.WriteLine($"AI_start in slot {slot}: {err}");
 
+            // Wait for data
+            Thread.Sleep(1000);
+
             // loop parameters
             int get_samples = 600;
             int delay = 50;
