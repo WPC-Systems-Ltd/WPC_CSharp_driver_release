@@ -40,14 +40,13 @@ class USBDAQF1CD_DO_blinky_port
 
         try
         {
-            
             int err;
             int port = 0; // Depend on your device
             int timeout = 3000;  // ms
 
-            // Open port and set it to digital output.
+            // Open port with digital output
             err = dev.DO_openPort(port, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{port}: {err}");
+            Console.WriteLine($"DO_openPort in port {port}: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
@@ -60,8 +59,7 @@ class USBDAQF1CD_DO_blinky_port
 
             // Close port with digital output
             err = dev.DO_closePort(port, timeout:timeout);
-            Console.WriteLine($"DO_closePort in port{port}: {err}");
-            
+            Console.WriteLine($"DO_closePort in port {port}: {err}");
         }
         catch (Exception ex)
         {

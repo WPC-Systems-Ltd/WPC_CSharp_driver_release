@@ -49,7 +49,7 @@ class EMotion_2axis_linear_interpolation
 
             // Motion open
             err = dev.Motion_open(port, timeout:timeout);
-            Console.WriteLine($"Motion_open in port{port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
@@ -65,7 +65,7 @@ class EMotion_2axis_linear_interpolation
 
             // Motion start
             err = dev.Motion_startLinearInterpo(port, timeout:timeout);
-            Console.WriteLine($"Motion_startLinearInterpo in port{port}: {err}");
+            Console.WriteLine($"Motion_startLinearInterpo in port {port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
@@ -87,7 +87,7 @@ class EMotion_2axis_linear_interpolation
 
             // Motion close
             err = dev.Motion_close(port, timeout:timeout);
-            Console.WriteLine($"Motion_close in port{port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

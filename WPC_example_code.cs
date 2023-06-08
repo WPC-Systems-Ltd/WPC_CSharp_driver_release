@@ -24,6 +24,7 @@ public class WPC_example_code
         Console.WriteLine("USBDAQF1TD, please input 12");
         Console.WriteLine("WifiDAQE3A, please input 13");
         Console.WriteLine("STEM, please input 14");
+        Console.WriteLine("WifiDAQE3A, please input 15");
     }
 
     #endregion
@@ -118,7 +119,7 @@ public class WPC_example_code
         Console.WriteLine("Run DO_blinky_pins.cs, please input 22");
         Console.WriteLine("Run DO_blinky_port.cs, please input 23");
         Console.WriteLine("Run DO_write_pins.cs, please input 24");
-        Console.WriteLine("Run DO_write_port.cs, please input 25"); 
+        Console.WriteLine("Run DO_write_port.cs, please input 25");
     }
     #endregion
 
@@ -362,6 +363,11 @@ public class WPC_example_code
                 showDIOMessage();
                 break;
 
+            case 15:
+                Console.WriteLine("Get 15, show WifiDAQF4A series example code");
+                showSysWifiMessage();
+                showAIMessage();
+                break;
             default:
                 break;
         }
@@ -783,7 +789,7 @@ public class WPC_example_code
                         break;
                     case 23:
                         USBDAQF1CD_DO_blinky_port.Main();
-                        break; 
+                        break;
                     case 24:
                         USBDAQF1CD_DO_write_pins.Main();
                         break;
@@ -1182,7 +1188,43 @@ public class WPC_example_code
                         break;
                 }
                 break;
+            case 15:
+                switch (example_code)
+                {
+                    #region WifiDAQF4A_Sys
+                    case 1:
+                        WifiDAQF4A_get_network_info.Main();
+                        break;
+                    case 3:
+                        WifiDAQF4A_get_WifiDAQ_status.Main();
+                        break;
+                    #endregion
 
+                    #region WifiDAQF4A_AI
+                    case 9:
+                        WifiDAQF4A_DataLogger_AI_continuous.Main();
+                        break;
+                    case 10:
+                        WifiDAQF4A_AI_continuous.Main();
+                        break;
+                    case 11:
+                        WifiDAQF4A_AI_N_samples_in_loop.Main();
+                        break;
+                    case 12:
+                        WifiDAQF4A_AI_N_samples_once.Main();
+                        break;
+                    case 13:
+                        WifiDAQF4A_AI_on_demand_in_loop.Main();
+                        break;
+                    case 14:
+                        WifiDAQF4A_AI_on_demand_once.Main();
+                        break;
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
             default:
                 break;
         }

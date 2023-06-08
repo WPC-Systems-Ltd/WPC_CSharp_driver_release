@@ -97,7 +97,7 @@ class EMotion_3axis_synchronous_move
 
             // Motion open
             err = dev.Motion_open(port, timeout:timeout);
-            Console.WriteLine($"Motion_open in port{port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}: {err}");
 
             /*
             // Motion open configuration file
@@ -160,7 +160,7 @@ class EMotion_3axis_synchronous_move
             // Motion start
             List<int> axis_list = new List<int> { axis_0, axis_1, axis_2 };
             err = dev.Motion_startMultiAxisMove(port, axis_list, timeout:timeout);
-            Console.WriteLine($"Motion_startMultiAxisMove in port{port}: {err}");
+            Console.WriteLine($"Motion_startMultiAxisMove in port {port}: {err}");
 
             // Wait for thread completion
             thread_0.Join();
@@ -184,7 +184,7 @@ class EMotion_3axis_synchronous_move
 
             // Motion close
             err = dev.Motion_close(port, timeout:timeout);
-            Console.WriteLine($"Motion_close in port{port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

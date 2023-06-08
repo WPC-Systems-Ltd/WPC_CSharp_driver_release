@@ -55,7 +55,7 @@ class EMotion_3axis_helical_interpolation
 
             // Motion open
             err = dev.Motion_open(port, timeout:timeout);
-            Console.WriteLine($"Motion_open in port{port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
@@ -68,11 +68,11 @@ class EMotion_3axis_helical_interpolation
             // Motion configure
             err = dev.Motion_cfgHelicalInterpo(port, center_x, center_y, finish_x, finish_y, Const.MOT_FALSE, pitch_axis3, Const.MOT_FALSE, pitch_axis4,
             rotation_num, speed, Const.MOT_DIR_CW, cal_timeout, timeout:timeout);
-            Console.WriteLine($"Motion_cfgHelicalInterpo in port{port}: {err}");
+            Console.WriteLine($"Motion_cfgHelicalInterpo in port {port}: {err}");
 
             // Motion start
             err = dev.Motion_startHelicalInterpo(port, timeout:timeout);
-            Console.WriteLine($"Motion_startHelicalInterpo in port{port}: {err}");
+            Console.WriteLine($"Motion_startHelicalInterpo in port {port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
@@ -87,7 +87,7 @@ class EMotion_3axis_helical_interpolation
 
             // Motion close
             err = dev.Motion_close(port, timeout:timeout);
-            Console.WriteLine($"Motion_close in port{port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

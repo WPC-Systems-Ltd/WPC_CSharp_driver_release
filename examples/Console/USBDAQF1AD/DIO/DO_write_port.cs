@@ -40,23 +40,21 @@ class USBDAQF1AD_DO_write_port
 
         try
         {
-            
             int err;
             int port = 0; // Depend on your device
             int timeout = 3000;  // ms
 
-            // Open port and set it to digital output.
+            // Open port with digital output
             err = dev.DO_openPort(port, timeout:timeout);
-            Console.WriteLine($"DO_openPort in port{port}: {err}");
+            Console.WriteLine($"DO_openPort in port {port}: {err}");
 
             // Write DO port to high or low
             err = dev.DO_writePort(port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePort in port{port}: {err}");
+            Console.WriteLine($"DO_writePort in port {port}: {err}");
 
             // Close port with digital output
             err = dev.DO_closePort(port, timeout:timeout);
-            Console.WriteLine($"DO_closePort in port{port}: {err}");
-            
+            Console.WriteLine($"DO_closePort in port {port}: {err}");
         }
         catch (Exception ex)
         {

@@ -40,12 +40,10 @@ class EthanD_DO_write_pins
 
         try
         {
-            
             // Parameters setting
             int err;
             int port = 0;
-            int DO_port = 1;
-            List<int> pinindex = new List<int> {0, 1, 2, 3};
+            List<int> pinindex = new List<int> {1, 3, 5, 7};
             int timeout = 3000; // ms
 
             // Get firmware model & version
@@ -53,37 +51,18 @@ class EthanD_DO_write_pins
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-
-            // If the port mode is not set to "DIO", set the port mode to "DIO"
-            if (port_mode != "DIO"){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($"Sys_setPortDIOMode: {err}");
-            }
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-
-            // Get port DIO start up information
-            List<List<byte>> pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-
-            Console.WriteLine($"enable_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[0])));
-
-            Console.WriteLine($"direction_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[1])));
-
-            Console.WriteLine($"state_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
+            // Open pins with digital output
+            err = dev.DO_openPins(port, pinindex, timeout:timeout);
+            Console.WriteLine($"DO_openPins in port {port}: {err}");
 
             // Write pins to high or low
-            err = dev.DO_writePins(DO_port, pinindex, new List<int> {1, 1, 0, 0}, timeout:timeout);
-            Console.WriteLine($"DO_writePins in port{port}: {err}");
-            
+            err = dev.DO_writePins(port, pinindex, new List<int> {1, 1, 0, 0}, timeout:timeout);
+            Console.WriteLine($"DO_writePins in port {port}: {err}");
+
+            // Close pins with digital output
+            err = dev.DO_closePins(port, pinindex, timeout:timeout);
+            Console.WriteLine($"DO_closePins in port {port}: {err}");
+
         }
         catch (Exception ex)
         {

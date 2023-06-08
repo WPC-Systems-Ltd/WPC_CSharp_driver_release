@@ -2686,13 +2686,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Product_STEM_Sys_getPortMode_" data-uid="WPC.Product.STEM.Sys_getPortMode*"></a>
-  <h4 id="WPC_Product_STEM_Sys_getPortMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_getPortMode(System.Int32,System.Int32)">Sys_getPortMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="WPC_Product_STEM_Sys_getMode_" data-uid="WPC.Product.STEM.Sys_getMode*"></a>
+  <h4 id="WPC_Product_STEM_Sys_getMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_getMode(System.Int32,System.Int32)">Sys_getMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Get the mode of the slot from the connected WPC device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sys_getPortMode(int port, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public string Sys_getMode(int slot, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2706,13 +2707,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available slots of different WPC devices.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2727,7 +2730,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Mode of slot.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2905,6 +2909,256 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Product_STEM_Sys_setAIOMode_" data-uid="WPC.Product.STEM.Sys_setAIOMode*"></a>
+  <h4 id="WPC_Product_STEM_Sys_setAIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setAIOMode(System.Int32,System.Int32)">Sys_setAIOMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the AIO state for the slot in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setAIOMode(int slot, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available slots of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_STEM_Sys_setDIMode_" data-uid="WPC.Product.STEM.Sys_setDIMode*"></a>
+  <h4 id="WPC_Product_STEM_Sys_setDIMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setDIMode(System.Int32,System.Int32)">Sys_setDIMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the DI state for the slot in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setDIMode(int slot, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available slots of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_STEM_Sys_setDIOMode_" data-uid="WPC.Product.STEM.Sys_setDIOMode*"></a>
+  <h4 id="WPC_Product_STEM_Sys_setDIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setDIOMode(System.Int32,System.Int32)">Sys_setDIOMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the DIO state for the slot in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setDIOMode(int slot, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available slots of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_STEM_Sys_setDOMode_" data-uid="WPC.Product.STEM.Sys_setDOMode*"></a>
+  <h4 id="WPC_Product_STEM_Sys_setDOMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setDOMode(System.Int32,System.Int32)">Sys_setDOMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the DO state for the slot in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setDOMode(int slot, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available slots of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_STEM_Sys_setIdleMode_" data-uid="WPC.Product.STEM.Sys_setIdleMode*"></a>
+  <h4 id="WPC_Product_STEM_Sys_setIdleMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setIdleMode(System.Int32,System.Int32)">Sys_setIdleMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the IDLE state for the slot in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setIdleMode(int slot, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available slots of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Product_STEM_Sys_setIPAddrAndSubmask_" data-uid="WPC.Product.STEM.Sys_setIPAddrAndSubmask*"></a>
   <h4 id="WPC_Product_STEM_Sys_setIPAddrAndSubmask_System_String_System_String_System_Int32_" data-uid="WPC.Product.STEM.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)">Sys_setIPAddrAndSubmask(String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Set IP address and subnet mask to the connected network device.</p>
@@ -2961,14 +3215,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Product_STEM_Sys_setPortAIOMode_" data-uid="WPC.Product.STEM.Sys_setPortAIOMode*"></a>
-  <h4 id="WPC_Product_STEM_Sys_setPortAIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setPortAIOMode(System.Int32,System.Int32)">Sys_setPortAIOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AIO state to port in the connected WPC device.</p>
+  <a id="WPC_Product_STEM_Sys_setMotionMode_" data-uid="WPC.Product.STEM.Sys_setMotionMode*"></a>
+  <h4 id="WPC_Product_STEM_Sys_setMotionMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setMotionMode(System.Int32,System.Int32)">Sys_setMotionMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the motion state for the slot in the connected WPC device.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_setPortAIOMode(int port, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int Sys_setMotionMode(int slot, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2982,302 +3236,9 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><span class="parametername">slot</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available slots of different WPC devices.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_STEM_Sys_setPortDIMode_" data-uid="WPC.Product.STEM.Sys_setPortDIMode*"></a>
-  <h4 id="WPC_Product_STEM_Sys_setPortDIMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setPortDIMode(System.Int32,System.Int32)">Sys_setPortDIMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set DI state to port in the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_setPortDIMode(int port, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_STEM_Sys_setPortDIOMode_" data-uid="WPC.Product.STEM.Sys_setPortDIOMode*"></a>
-  <h4 id="WPC_Product_STEM_Sys_setPortDIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setPortDIOMode(System.Int32,System.Int32)">Sys_setPortDIOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set DIO state to port in the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_setPortDIOMode(int port, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_STEM_Sys_setPortDOMode_" data-uid="WPC.Product.STEM.Sys_setPortDOMode*"></a>
-  <h4 id="WPC_Product_STEM_Sys_setPortDOMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setPortDOMode(System.Int32,System.Int32)">Sys_setPortDOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set DO state to port in the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_setPortDOMode(int port, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_STEM_Sys_setPortIdleMode_" data-uid="WPC.Product.STEM.Sys_setPortIdleMode*"></a>
-  <h4 id="WPC_Product_STEM_Sys_setPortIdleMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setPortIdleMode(System.Int32,System.Int32)">Sys_setPortIdleMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set IDLE state to port in the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_setPortIdleMode(int port, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_STEM_Sys_setPortMotionMode_" data-uid="WPC.Product.STEM.Sys_setPortMotionMode*"></a>
-  <h4 id="WPC_Product_STEM_Sys_setPortMotionMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setPortMotionMode(System.Int32,System.Int32)">Sys_setPortMotionMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set motion state to port in the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_setPortMotionMode(int port, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_STEM_Sys_setPortSwitchMode_" data-uid="WPC.Product.STEM.Sys_setPortSwitchMode*"></a>
-  <h4 id="WPC_Product_STEM_Sys_setPortSwitchMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setPortSwitchMode(System.Int32,System.Int32)">Sys_setPortSwitchMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set switch state to port in the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_setPortSwitchMode(int port, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
@@ -3357,6 +3318,56 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><span class="xref">System.Byte</span></td>
         <td><span class="parametername">second</span></td>
         <td><p>second (0~59).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_STEM_Sys_setSwitchMode_" data-uid="WPC.Product.STEM.Sys_setSwitchMode*"></a>
+  <h4 id="WPC_Product_STEM_Sys_setSwitchMode_System_Int32_System_Int32_" data-uid="WPC.Product.STEM.Sys_setSwitchMode(System.Int32,System.Int32)">Sys_setSwitchMode(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the switch state for the slot in the connected WPC device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Sys_setSwitchMode(int slot, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available slots of different WPC devices.</p>
 </td>
       </tr>
       <tr>

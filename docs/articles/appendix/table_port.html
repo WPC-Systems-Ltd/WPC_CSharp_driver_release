@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>I/O Function Table | WPC_CSharp_driver </title>
+    <title>I/O port function table | WPC_CSharp_driver </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="I/O Function Table | WPC_CSharp_driver ">
+    <meta name="title" content="I/O port function table | WPC_CSharp_driver ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../images/WPC_favicon.ico">
@@ -67,7 +67,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="io-function-table">I/O Function Table</h1>
+<h1 id="io-port-function-table">I/O port function table</h1>
 
 <table>
 <thead>
@@ -88,9 +88,9 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">STEM</td>
-<td style="text-align: center;">1,3,4</td>
-<td style="text-align: center;">1,3,4</td>
+<td style="text-align: left;">*STEM</td>
+<td style="text-align: center;">1,2,4</td>
+<td style="text-align: center;">1,2,4</td>
 <td style="text-align: center;">0~7</td>
 <td style="text-align: center;">0~7</td>
 <td style="text-align: center;"></td>
@@ -271,7 +271,21 @@
 </tr>
 <tr>
 <td style="text-align: left;">Wifi-DAQ-E3-A</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Wifi-DAQ-F4-A</td>
+<td style="text-align: center;">0</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
@@ -285,6 +299,8 @@
 </tr>
 </tbody>
 </table>
+<p>In the <code>STEM</code> product, the values 1, 2, and 4 are used to represent the slots in the AIO.
+Additionally, the DIO ports 0 to 1 are assigned to slot 1, while ports 2 to 3 are assigned to slot 2.</p>
 <p>Remark: <code>TC</code> stands for <code>Thermocouple</code></p>
 <p>Take <code>USB-DAQ-F1-AOD</code> for example:</p>
 <ul>

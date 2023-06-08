@@ -84,12 +84,12 @@
 /// It involves using AO pins to send signals and AI pins to receive signals on a single device, commonly referred to as &quot;loopback&quot;.
 /// The AI and AO pins are connected using a wire.
 ///
-/// Initially, the example demonstrates the steps required to open the AI and AO port
+/// Initially, the example demonstrates the steps required to open the AI and AO.
 /// Next, it reads AI data and displays its corresponding values.
 /// Following that, it writes digital signals to the AO pins and reads AI on-demand data once again.
 /// Lastly, it closes the AO and AI ports.
 
-/// If your product is &quot;STEM&quot;, please invoke the function `Sys_setPortAIOMode` and `AI_enableCS`.
+/// If your product is &quot;STEM&quot;, please invoke the function Sys_setAIOMode and AI_enableCS.
 /// Example: AI_enableCS is {0, 2}
 /// Subsequently, the returned value of AI_readOnDemand and AI_readStreaming will be displayed as follows.
 /// data:
@@ -139,64 +139,65 @@ class STEM_AIO_all_channels_loopback
         {
             // Parameters setting
             int err;
-            int port = 1;
+            int slot = 1; // Connect AIO module to slot
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-            
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
-            // If the port mode is not set to &quot;AIO&quot;, set the port mode to &quot;AIO&quot;
-            if (port_mode != &quot;AIO&quot;){
-                err = dev.Sys_setPortAIOMode(port, timeout:timeout);
-                Console.WriteLine($&quot;Sys_setPortAIOMode: {err}&quot;);
+            // Get slot mode
+            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
+
+            // If the slot mode is not set to &quot;AIO&quot;, set the slot mode to &quot;AIO&quot;
+            if (slot_mode != &quot;AIO&quot;){
+                err = dev.Sys_setAIOMode(slot, timeout:timeout);
+                Console.WriteLine($&quot;Sys_setAIOMode: {err}&quot;);
             }
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
-            // Open AI port
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
+            // Get slot mode
+            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
-            // Open AO port
-            err = dev.AO_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);
+            // Open AI
+            err = dev.AI_open(slot, timeout:timeout);
+            Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
+
+            // Open AO
+            err = dev.AO_open(slot, timeout:timeout);
+            Console.WriteLine($&quot;AO_open in slot {slot}: {err}&quot;);
 
             // Enable CS
-            err = dev.AI_enableCS(port, new List&lt;int&gt; {0, 1}, timeout:timeout);
-            Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
-            
-            // Read data
-            List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
+            err = dev.AI_enableCS(slot, new List&lt;int&gt; {0, 1}, timeout:timeout);
+            Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
+
+            // Read data acquisition acquisition
+            List&lt;double&gt; sample = dev.AI_readOnDemand(slot, timeout:timeout);
 
             // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
-            // Set AO port and write data simultaneously
+            // Write AO value simultaneously
             // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
             List&lt;double&gt; AO_values = new List&lt;double&gt; { 5, 5, 3, 3, 2, 2, 0, 0 };
-            err = dev.AO_writeAllChannels(port, AO_values, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeAllChannels in port{port}: {err}&quot;);
+            err = dev.AO_writeAllChannels(slot, AO_values, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeAllChannels in slot {slot}: {err}&quot;);
 
-            // Read data
-            sample = dev.AI_readOnDemand(port, timeout:timeout);
+            // Read data acquisition acquisition
+            sample = dev.AI_readOnDemand(slot, timeout:timeout);
 
             // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
-            // Close AI port
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_close in port{port}: {err}&quot;);
+            // Close AI
+            err = dev.AI_close(slot, timeout:timeout);
+            Console.WriteLine($&quot;AI_close in slot {slot}: {err}&quot;);
 
-            // Close AO port
-            err = dev.AO_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AO_close in port{port}: {err}&quot;);
+            // Close AO
+            err = dev.AO_close(slot, timeout:timeout);
+            Console.WriteLine($&quot;AO_close in slot {slot}: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -218,12 +219,12 @@ class STEM_AIO_all_channels_loopback
 /// It involves using AO pins to send signals and AI pins to receive signals on a single device, commonly referred to as &quot;loopback&quot;.
 /// The AI and AO pins are connected using a wire.
 ///
-/// Initially, the example demonstrates the steps required to open the AI and AO port
+/// Initially, the example demonstrates the steps required to open the AI and AO.
 /// Next, it reads AI data and displays its corresponding values.
 /// Following that, it writes digital signals to the AO pins and reads AI on-demand data once again.
 /// Lastly, it closes the AO and AI ports.
 
-/// If your product is &quot;STEM&quot;, please invoke the function `Sys_setPortAIOMode` and `AI_enableCS`.
+/// If your product is &quot;STEM&quot;, please invoke the function Sys_setAIOMode and AI_enableCS.
 /// Example: AI_enableCS is {0, 2}
 /// Subsequently, the returned value of AI_readOnDemand and AI_readStreaming will be displayed as follows.
 /// data:
@@ -273,74 +274,75 @@ class STEM_AIO_one_channel_loopback
         {
             // Parameters setting
             int err;
-            int port = 1;
+            int slot = 1; // Connect AIO module to slot
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
-            
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
-            // If the port mode is not set to &quot;AIO&quot;, set the port mode to &quot;AIO&quot;
-            if (port_mode != &quot;AIO&quot;){
-                err = dev.Sys_setPortAIOMode(port, timeout:timeout);
-                Console.WriteLine($&quot;Sys_setPortAIOMode: {err}&quot;);
+            // Get slot mode
+            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
+
+            // If the slot mode is not set to &quot;AIO&quot;, set the slot mode to &quot;AIO&quot;
+            if (slot_mode != &quot;AIO&quot;){
+                err = dev.Sys_setAIOMode(slot, timeout:timeout);
+                Console.WriteLine($&quot;Sys_setAIOMode: {err}&quot;);
             }
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($&quot;Slot mode: {port_mode}&quot;);
 
-            // Open AI port
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open in port{port}: {err}&quot;);
+            // Get slot mode
+            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
-            // Open AO port
-            err = dev.AO_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AO_open in port{port}: {err}&quot;);
+            // Open AI
+            err = dev.AI_open(slot, timeout:timeout);
+            Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
+
+            // Open AO
+            err = dev.AO_open(slot, timeout:timeout);
+            Console.WriteLine($&quot;AO_open in slot {slot}: {err}&quot;);
 
             // Enable CS
-            err = dev.AI_enableCS(port, new List&lt;int&gt; {0, 1}, timeout:timeout);
-            Console.WriteLine($&quot;AI_start in port{port}: {err}&quot;);
-            
-            // Read data
-            List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
+            err = dev.AI_enableCS(slot, new List&lt;int&gt; {0, 1}, timeout:timeout);
+            Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
+
+            // Read data acquisition
+            List&lt;double&gt; sample = dev.AI_readOnDemand(slot, timeout:timeout);
 
             // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
-            // Set AO port and write data 1.5(V) in channel 0
-            err = dev.AO_writeOneChannel(port, 0, 1.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch0 in port{port}: {err}&quot;);
+            // Write AO vaule 1.5(V) in channel 0
+            err = dev.AO_writeOneChannel(slot, 0, 1.5, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeOneChannel in ch0 in slot {slot}: {err}&quot;);
 
-            // Set AO port and write data 2.5(V) in channel 1
-            err = dev.AO_writeOneChannel(port, 1, 2.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch1 in port{port}: {err}&quot;);
+            // Write AO vaule 2.5(V) in channel 1
+            err = dev.AO_writeOneChannel(slot, 1, 2.5, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeOneChannel in ch1 in slot {slot}: {err}&quot;);
 
-            // Set AO port and write data 3.5(V) in channel 2
-            err = dev.AO_writeOneChannel(port, 2, 3.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch2 in port{port}: {err}&quot;);
+            // Write AO vaule 3.5(V) in channel 2
+            err = dev.AO_writeOneChannel(slot, 2, 3.5, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeOneChannel in ch2 in slot {slot}: {err}&quot;);
 
-            // Set AO port and write data 4.5(V) in channel 3
-            err = dev.AO_writeOneChannel(port, 3, 4.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch3 in port{port}: {err}&quot;);
+            // Write AO vaule 4.5(V) in channel 3
+            err = dev.AO_writeOneChannel(slot, 3, 4.5, timeout:timeout);
+            Console.WriteLine($&quot;AO_writeOneChannel in ch3 in slot {slot}: {err}&quot;);
 
-            // Read data
-            sample = dev.AI_readOnDemand(port, timeout:timeout);
+            // Read data acquisition
+            sample = dev.AI_readOnDemand(slot, timeout:timeout);
 
             // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
-            // Close AI port
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_close in port{port}: {err}&quot;);
+            // Close AI
+            err = dev.AI_close(slot, timeout:timeout);
+            Console.WriteLine($&quot;AI_close in slot {slot}: {err}&quot;);
 
-            // Close AO port
-            err = dev.AO_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AO_close in port{port}: {err}&quot;);
+            // Close AO
+            err = dev.AO_close(slot, timeout:timeout);
+            Console.WriteLine($&quot;AO_close in slot {slot}: {err}&quot;);
         }
         catch (Exception ex)
         {

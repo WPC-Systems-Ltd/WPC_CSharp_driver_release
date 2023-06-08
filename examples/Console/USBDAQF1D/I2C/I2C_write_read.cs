@@ -57,26 +57,26 @@ class USBDAQF1D_I2C_write_read
 
             // Open I2C port
             err = dev.I2C_open(port, timeout:timeout);
-            Console.WriteLine($"I2C_open in port{port}: {err}");
+            Console.WriteLine($"I2C_open in port {port}: {err}");
 
             // Set I2C port and set clock rate to standard mode
             err = dev.I2C_setClockRate(port, Const.I2C_SPEED_STANDARD, timeout:timeout);
-            Console.WriteLine($"I2C_setClockRate in port{port}: {err}");
+            Console.WriteLine($"I2C_setClockRate in port {port}: {err}");
 
             // Write WREN byte
             err = dev.I2C_write(port, device_address, I2C_write_data, timeout:timeout);
-            Console.WriteLine($"I2C_write in port{port}: {err}");
+            Console.WriteLine($"I2C_write in port {port}: {err}");
 
-            // Read data via I2C
+            // Read data acquisition via I2C
             err = dev.I2C_write(port, device_address, new List<byte> {word_address}, timeout:timeout);
-            Console.WriteLine($"I2C_write in port{port}: {err}");
+            Console.WriteLine($"I2C_write in port {port}: {err}");
 
             List<byte> data = dev.I2C_read(port, device_address, 4, timeout:timeout);
-            Console.WriteLine($"I2C_read data in port{port}: {data[0]},{data[1]},{data[2]},{data[3]}");
+            Console.WriteLine($"I2C_read data in port {port}: {data[0]},{data[1]},{data[2]},{data[3]}");
 
             // Close I2C port
             err = dev.I2C_close(port, timeout:timeout);
-            Console.WriteLine($"I2C_close in port{port}: {err}");
+            Console.WriteLine($"I2C_close in port {port}: {err}");
         }
         catch (Exception ex)
         {
