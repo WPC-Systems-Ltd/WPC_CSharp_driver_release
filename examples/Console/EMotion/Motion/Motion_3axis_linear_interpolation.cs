@@ -48,7 +48,7 @@ class EMotion_3axis_linear_interpolation
 
             // Motion open
             err = dev.Motion_open(port, timeout:timeout);
-            Console.WriteLine($"Motion_open in port{port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
@@ -60,11 +60,11 @@ class EMotion_3axis_linear_interpolation
 
             // Motion configure
             err = dev.Motion_cfg3AxisLinearInterpo(port, Const.MOT_AXIS0, dest_posi0, Const.MOT_AXIS1, dest_posi1, Const.MOT_AXIS2, dest_posi2, speed:2000, accel:100000, decel:10000 ,timeout:timeout);
-            Console.WriteLine($"Motion_cfg3AxisLinearInterpo in port{port}: {err}");
+            Console.WriteLine($"Motion_cfg3AxisLinearInterpo in port {port}: {err}");
 
             // Motion configure
             err = dev.Motion_startLinearInterpo(port, timeout:timeout);
-            Console.WriteLine($"Motion_startLinearInterpo in port{port}: {err}");
+            Console.WriteLine($"Motion_startLinearInterpo in port {port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
@@ -86,7 +86,7 @@ class EMotion_3axis_linear_interpolation
 
             // Motion close
             err = dev.Motion_close(port, timeout:timeout);
-            Console.WriteLine($"Motion_close in port{port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

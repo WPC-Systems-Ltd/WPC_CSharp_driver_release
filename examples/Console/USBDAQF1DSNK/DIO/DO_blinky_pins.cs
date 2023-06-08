@@ -40,11 +40,9 @@ class USBDAQF1DSNK_DO_blinky_pins
 
         try
         {
-            
             // Parameters setting
             int err;
             int port = 0;
-            int DO_port = 1;
             List<int> pinindex = new List<int> {1, 3, 5, 7};
             int timeout = 3000; // ms
 
@@ -53,42 +51,22 @@ class USBDAQF1DSNK_DO_blinky_pins
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-
-            // If the port mode is not set to "DIO", set the port mode to "DIO"
-            if (port_mode != "DIO"){
-                err = dev.Sys_setPortDIOMode(port, timeout:timeout);
-                Console.WriteLine($"Sys_setPortDIOMode: {err}");
-            }
-
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-
-            // Get port DIO start up information
-            List<List<byte>> pinstate_list = dev.DIO_loadStartup(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-
-            Console.WriteLine($"enable_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[0])));
-
-            Console.WriteLine($"direction_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[1])));
-
-            Console.WriteLine($"state_list");
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
+            // Open pins with digital output
+            err = dev.DO_openPins(port, pinindex, timeout:timeout);
+            Console.WriteLine($"DO_openPins in port {port}: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
             {
-                List<byte> state = dev.DO_togglePins(DO_port, pinindex, timeout:timeout);
+                List<byte> state = dev.DO_togglePins(port, pinindex, timeout:timeout);
                 Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
-            
+
+            // Close pins with digital output
+            err = dev.DO_closePins(port, pinindex, timeout:timeout);
+            Console.WriteLine($"DO_closePins in port {port}: {err}");
         }
         catch (Exception ex)
         {

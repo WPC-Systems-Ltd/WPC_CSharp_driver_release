@@ -56,15 +56,15 @@ class USBDAQF1CD_CAN_read
 
             // Open CAN
             err = dev.CAN_open(port, timeout:timeout);
-            Console.WriteLine($"CAN_open in port{port}: {err}");
+            Console.WriteLine($"CAN_open in port {port}: {err}");
 
             // Set CAN port and set speed to 125K
             err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout:timeout);
-            Console.WriteLine($"CAN_setSpeed in port{port}: {err}");
+            Console.WriteLine($"CAN_setSpeed in port {port}: {err}");
 
             // Set CAN port and start CAN
             err = dev.CAN_start(port);
-            Console.WriteLine($"CAN_start in port{port}: {err}");
+            Console.WriteLine($"CAN_start in port {port}: {err}");
 
             for (int i = 0; i < 1000; i++)
             {
@@ -85,11 +85,11 @@ class USBDAQF1CD_CAN_read
 
             // Stop CAN
             err = dev.CAN_stop(port, timeout:timeout);
-            Console.WriteLine($"CAN_stop in port{port}: {err}");
+            Console.WriteLine($"CAN_stop in port {port}: {err}");
 
             // Close CAN
             err = dev.CAN_close(port, timeout:timeout);
-            Console.WriteLine($"CAN_close in port{port}: {err}");
+            Console.WriteLine($"CAN_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

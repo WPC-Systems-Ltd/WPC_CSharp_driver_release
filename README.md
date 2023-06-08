@@ -83,12 +83,13 @@ USB interface DAQ card
 
 Wifi based DAQ card
 - Wifi-DAQ-E3-A
+- Wifi-DAQ-F4-A
 
-# I/O Function Table
+# I/O port function table
 
 | Model           | AI  | AO  | DI         | DO         | CAN | UART | SPI | I2C  | RTD | TC | Motion |
 |:----------------|:---:|:---:|:----------:|:----------:|:---:|:----:|:---:|:----:|:---:|:--:|:------:|
-| STEM            |1,3,4|1,3,4|0~7		     |0~7         |     |      |     |      |     |    |        |
+| *STEM           |1,2,4|1,2,4|0~7		     |0~7         |     |      |     |      |     |    |        |
 | EMotion         | -   | -   | -          | -          |-    |-     |-    |-     | -   |-   | 0      |
 | Ethan-A         | 0   | -   | -          | -          |-    |-     |-    |-     | -   |-   |-       |
 | Ethan-D         | -   | -   | 1          | 0          |-    |-     |-    |-     | -   |-   |-       |
@@ -101,7 +102,11 @@ Wifi based DAQ card
 | USB-DAQ-F1-RD   | -   | -   | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |2    | 1, 2 | 1   |-   |-       |
 | USB-DAQ-F1-CD   | -   | -   | 0, 1, 2, 3 | 0, 1, 2, 3 |1    |1, 2  |2    | 1, 2 | -   |-   |-       |
 | USB-DAQ-F1-AOD  | 0   | 0   | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |-    | 1, 2 | -   |-   |-       |
-| Wifi-DAQ-E3-A   | 1   | -   | -          | -          |-    |-     |-    |-     | -   |-   |-       |
+| Wifi-DAQ-E3-A   | 0   | -   | -          | -          |-    |-     |-    |-     | -   |-   |-       |
+| Wifi-DAQ-F4-A   | 0   | -   | -          | -          |-    |-     |-    |-     | -   |-   |-       |
+
+In the `STEM` product, the values 1, 2, and 4 are used to represent the slots in the AIO.
+Additionally, the DIO ports 0 to 1 are assigned to slot 1, while ports 2 to 3 are assigned to slot 2.
 
 Remark: `TC` stands for `Thermocouple`
 

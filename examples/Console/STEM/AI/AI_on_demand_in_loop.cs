@@ -3,11 +3,11 @@
 /// This example demonstrates the process of obtaining AI data in on demand mode.
 /// Additionally, it utilizes a loop to retrieve AI data with 5 times from STEM.
 ///
-/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading the AI on demand data.
-/// Finally, it concludes by explaining how to close the AI port.
+/// Finally, it concludes by explaining how to close the AI.
 
-/// If your product is "STEM", please invoke the function `Sys_setPortAIOMode` and `AI_enableCS`.
+/// If your product is "STEM", please invoke the function Sys_setAIOMode and AI_enableCS.
 /// Example: AI_enableCS is {0, 2}
 /// Subsequently, the returned value of AI_readOnDemand and AI_readStreaming will be displayed as follows.
 /// data:
@@ -57,7 +57,7 @@ class STEM_AI_on_demand_in_loop
         {
             // Parameters setting
             int err;
-            int port = 1;
+            int slot = 1; // Connect AIO module to slot
             int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 
@@ -65,43 +65,44 @@ class STEM_AI_on_demand_in_loop
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
 
-            // If the port mode is not set to "AIO", set the port mode to "AIO"
-            if (port_mode != "AIO"){
-                err = dev.Sys_setPortAIOMode(port, timeout:timeout);
-                Console.WriteLine($"Sys_setPortAIOMode: {err}");
+            // Get slot mode
+            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
+
+            // If the slot mode is not set to "AIO", set the slot mode to "AIO"
+            if (slot_mode != "AIO"){
+                err = dev.Sys_setAIOMode(slot, timeout:timeout);
+                Console.WriteLine($"Sys_setAIOMode: {err}");
             }
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
 
-            // Open AI port
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($"AI_open in port{port}: {err}");
+            // Get slot mode
+            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
+
+            // Open AI
+            err = dev.AI_open(slot, timeout:timeout);
+            Console.WriteLine($"AI_open in slot {slot}: {err}");
 
             // Enable CS
-            err = dev.AI_enableCS(port, new List<int> {0, 1}, timeout:timeout);
-            Console.WriteLine($"AI_start in port{port}: {err}");
-            
+            err = dev.AI_enableCS(slot, new List<int> {0, 1}, timeout:timeout);
+            Console.WriteLine($"AI_enableCS in slot {slot}: {err}");
+
             // Set AI acquisition mode to on demand
-            err = dev.AI_setMode(port, mode, timeout:timeout);
+            err = dev.AI_setMode(slot, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode}: {err}");
 
             // Read AI data with 5 times
             for (int i=0; i<5; i++)
             {
-                // Read data
-                List<double> sample = dev.AI_readOnDemand(port);
+                // Read data acquisition acquisition
+                List<double> sample = dev.AI_readOnDemand(slot);
                 Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
             }
 
-            // Close AI port
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($"close: {err}");
+            // Close AI
+            err = dev.AI_close(slot, timeout:timeout);
+            Console.WriteLine($"AI_close in slot {slot}: {err}");
         }
         catch (Exception ex)
         {

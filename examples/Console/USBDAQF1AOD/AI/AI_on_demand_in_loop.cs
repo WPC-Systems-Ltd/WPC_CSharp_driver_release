@@ -3,9 +3,9 @@
 /// This example demonstrates the process of obtaining AI data in on demand mode.
 /// Additionally, it utilizes a loop to retrieve AI data with 5 times from USBDAQF1AOD.
 ///
-/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading the AI on demand data.
-/// Finally, it concludes by explaining how to close the AI port.
+/// Finally, it concludes by explaining how to close the AI.
 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -51,11 +51,11 @@ class USBDAQF1AOD_AI_on_demand_in_loop
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
-            // Open AI port
+
+            // Open AI
             err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($"AI_open in port{port}: {err}");
-            
+            Console.WriteLine($"AI_open in port {port}: {err}");
+
             // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode}: {err}");
@@ -63,14 +63,14 @@ class USBDAQF1AOD_AI_on_demand_in_loop
             // Read AI data with 5 times
             for (int i=0; i<5; i++)
             {
-                // Read data
+                // Read data acquisition
                 List<double> sample = dev.AI_readOnDemand(port);
                 Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
             }
 
-            // Close AI port
+            // Close AI
             err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($"close: {err}");
+            Console.WriteLine($"AI_close in port {port}: {err}");
         }
         catch (Exception ex)
         {

@@ -1,11 +1,11 @@
 /// AO_write_all_channels.cs with synchronous mode.
 ///
 /// This example demonstrates the process of writing AO signal of STEM.
-/// To begin with, it demonstrates the steps to open the AO port.
+/// To begin with, it demonstrates the steps to open the AO.
 /// Next, it outlines the procedure for writing digital signals simultaneously to the AO pins.
-/// Finally, it concludes by explaining how to close the AO port.
+/// Finally, it concludes by explaining how to close the AO.
 
-/// If your product is "STEM", please invoke the function `Sys_setPortAIOMode`.
+/// If your product is "STEM", please invoke the function `Sys_setAIOMode`.
 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -43,40 +43,41 @@ class STEM_AO_write_all_channels
         {
             // Parameters setting
             int err;
-            int port = 1;
+            int slot = 1; // Connect AIO module to slot
             int timeout = 3000; // ms
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
 
-            // If the port mode is not set to "AIO", set the port mode to "AIO"
-            if (port_mode != "AIO"){
-                err = dev.Sys_setPortAIOMode(port, timeout:timeout);
-                Console.WriteLine($"Sys_setPortAIOMode: {err}");
+            // Get slot mode
+            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
+
+            // If the slot mode is not set to "AIO", set the slot mode to "AIO"
+            if (slot_mode != "AIO"){
+                err = dev.Sys_setAIOMode(slot, timeout:timeout);
+                Console.WriteLine($"Sys_setAIOMode: {err}");
             }
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
-            
-            // Open AO port
-            err = dev.AO_open(port, timeout:timeout);
-            Console.WriteLine($"AO_open in port{port}: {err}");
 
-            // Set AO port and write data simultaneously
+            // Get slot mode
+            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
+
+            // Open AO
+            err = dev.AO_open(slot, timeout:timeout);
+            Console.WriteLine($"AO_open in slot {slot}: {err}");
+
+            // Write AO data simultaneously
             // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
             List<double> AO_values = new List<double> { 5, 5, 3, 3, 2, 2, 0, 0 };
-            err = dev.AO_writeAllChannels(port, AO_values, timeout:timeout);
-            Console.WriteLine($"AO_writeAllChannels in port{port}: {err}");
+            err = dev.AO_writeAllChannels(slot, AO_values, timeout:timeout);
+            Console.WriteLine($"AO_writeAllChannels in slot {slot}: {err}");
 
-            // Close AO port
-            err = dev.AO_close(port, timeout:timeout);
-            Console.WriteLine($"AO_close in port{port}: {err}");
+            // Close AO
+            err = dev.AO_close(slot, timeout:timeout);
+            Console.WriteLine($"AO_close in slot {slot}: {err}");
         }
         catch (Exception ex)
         {

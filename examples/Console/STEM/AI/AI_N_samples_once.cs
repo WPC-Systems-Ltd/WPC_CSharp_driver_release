@@ -3,11 +3,11 @@
 /// This example demonstrates the process of obtaining AI data in N-sample mode.
 /// Additionally, it gets AI data with 50 points in once from STEM.
 ///
-/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading the streaming AI data.
-/// Finally, it concludes by explaining how to close the AI port.
+/// Finally, it concludes by explaining how to close the AI.
 
-/// If your product is "STEM", please invoke the function `Sys_setPortAIOMode` and `AI_enableCS`.
+/// If your product is "STEM", please invoke the function Sys_setAIOMode and AI_enableCS.
 /// Example: AI_enableCS is {0, 2}
 /// Subsequently, the returned value of AI_readOnDemand and AI_readStreaming will be displayed as follows.
 /// data:
@@ -58,7 +58,7 @@ class STEM_AI_N_samples_once
             // Parameters setting
             int err;
             int delay = 10;
-            int port = 1;
+            int slot = 1; // Connect AIO module to slot
             int mode = Const.AI_MODE_N_SAMPLE;
             int samples = 50;
             float sampling_rate = 1000;
@@ -68,46 +68,50 @@ class STEM_AI_N_samples_once
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
-            // Get port mode
-            string port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
 
-            // If the port mode is not set to "AIO", set the port mode to "AIO"
-            if (port_mode != "AIO"){
-                err = dev.Sys_setPortAIOMode(port, timeout:timeout);
-                Console.WriteLine($"Sys_setPortAIOMode: {err}");
+            // Get slot mode
+            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
+
+            // If the slot mode is not set to "AIO", set the slot mode to "AIO"
+            if (slot_mode != "AIO"){
+                err = dev.Sys_setAIOMode(slot, timeout:timeout);
+                Console.WriteLine($"Sys_setAIOMode: {err}");
             }
-            // Get port mode
-            port_mode = dev.Sys_getPortMode(port, timeout:timeout);
-            Console.WriteLine($"Slot mode: {port_mode}");
 
-            // Open AI port
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($"AI_open in port{port}: {err}");
+            // Get slot mode
+            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            Console.WriteLine($"Slot mode: {slot_mode}");
+
+            // Open AI
+            err = dev.AI_open(slot, timeout:timeout);
+            Console.WriteLine($"AI_open in slot {slot}: {err}");
 
             // Enable CS
-            err = dev.AI_enableCS(port, new List<int> {0, 1}, timeout:timeout);
-            Console.WriteLine($"AI_start in port{port}: {err}");
-            
+            err = dev.AI_enableCS(slot, new List<int> {0, 1}, timeout:timeout);
+            Console.WriteLine($"AI_enableCS in slot {slot}: {err}");
+
             // Set AI acquisition mode to N-sample mode
-            err = dev.AI_setMode(port, mode, timeout:timeout);
-            Console.WriteLine($"AI_setMode {mode} in port{port}: {err}");
+            err = dev.AI_setMode(slot, mode, timeout:timeout);
+            Console.WriteLine($"AI_setMode {mode} in slot {slot}: {err}");
 
             // Set AI # of samples to 50 (pts)
-            err = dev.AI_setNumSamples(port, samples, timeout:timeout);
-            Console.WriteLine($"AI_setNumSamples {samples} in port{port}: {err}");
+            err = dev.AI_setNumSamples(slot, samples, timeout:timeout);
+            Console.WriteLine($"AI_setNumSamples {samples} in slot {slot}: {err}");
 
             // Set AI sampling rate to 1k (Hz)
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
-            Console.WriteLine($"AI_setNumSamples {sampling_rate} in port{port}: {err}");
+            err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
+            Console.WriteLine($"AI_setNumSamples {sampling_rate} in slot {slot}: {err}");
 
             // Start AI acquisition
-            err = dev.AI_start(port, timeout:timeout);
-            Console.WriteLine($"AI_start in port{port}: {err}");
+            err = dev.AI_start(slot, timeout:timeout);
+            Console.WriteLine($"AI_start in slot {slot}: {err}");
 
-            // Read data
-            List<List<double>> streaming_list = dev.AI_readStreaming(port, samples, delay);
+            // Wait for data
+            Thread.Sleep(1000);
+
+            // Read data acquisition
+            List<List<double>> streaming_list = dev.AI_readStreaming(slot, samples, delay);
 
             // Print data
             foreach (List<double> sample in streaming_list)
@@ -116,12 +120,12 @@ class STEM_AI_N_samples_once
             }
 
             // Stop AI
-            err = dev.AI_stop(port, timeout:timeout);
-            Console.WriteLine($"AI_stop in port{port}: {err}");
+            err = dev.AI_stop(slot, timeout:timeout);
+            Console.WriteLine($"AI_stop in slot {slot}: {err}");
 
-            // Close AI port
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($"AI_close in port{port}: {err}");
+            // Close AI
+            err = dev.AI_close(slot, timeout:timeout);
+            Console.WriteLine($"AI_close in slot {slot}: {err}");
         }
         catch (Exception ex)
         {

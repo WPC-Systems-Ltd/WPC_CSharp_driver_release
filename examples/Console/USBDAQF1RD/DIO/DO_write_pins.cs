@@ -40,7 +40,6 @@ class USBDAQF1RD_DO_write_pins
 
         try
         {
-            
             // Parameters setting
             int err;
             int port = 0;
@@ -54,16 +53,16 @@ class USBDAQF1RD_DO_write_pins
 
             // Open pins with digital output
             err = dev.DO_openPins(port, pinindex, timeout:timeout);
-            Console.WriteLine($"DO_openPins in port{port}: {err}");
+            Console.WriteLine($"DO_openPins in port {port}: {err}");
 
             // Write pins to high or low
             err = dev.DO_writePins(port, pinindex, new List<int> {1, 1, 0, 0}, timeout:timeout);
-            Console.WriteLine($"DO_writePins in port{port}: {err}");
+            Console.WriteLine($"DO_writePins in port {port}: {err}");
 
             // Close pins with digital output
             err = dev.DO_closePins(port, pinindex, timeout:timeout);
-            Console.WriteLine($"DO_closePins in port{port}: {err}");
-            
+            Console.WriteLine($"DO_closePins in port {port}: {err}");
+
         }
         catch (Exception ex)
         {

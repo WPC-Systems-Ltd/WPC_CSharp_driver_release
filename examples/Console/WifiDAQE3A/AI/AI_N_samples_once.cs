@@ -3,9 +3,9 @@
 /// This example demonstrates the process of obtaining AI data in N-sample mode.
 /// Additionally, it gets AI data with 50 points in once from WifiDAQE3A.
 ///
-/// To begin with, it demonstrates the steps to open the AI port and configure the AI parameters.
+/// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading the streaming AI data.
-/// Finally, it concludes by explaining how to close the AI port.
+/// Finally, it concludes by explaining how to close the AI.
 
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
@@ -44,7 +44,7 @@ class WifiDAQE3A_AI_N_samples_once
             // Parameters setting
             int err;
             int delay = 10;
-            int port = 1;
+            int port = 0;
             int mode = Const.AI_MODE_N_SAMPLE;
             int samples = 50;
             float sampling_rate = 1000;
@@ -54,28 +54,31 @@ class WifiDAQE3A_AI_N_samples_once
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
-            
-            // Open AI port
+
+            // Open AI
             err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($"AI_open in port{port}: {err}");
-            
+            Console.WriteLine($"AI_open in port {port}: {err}");
+
             // Set AI acquisition mode to N-sample mode
             err = dev.AI_setMode(port, mode, timeout:timeout);
-            Console.WriteLine($"AI_setMode {mode} in port{port}: {err}");
+            Console.WriteLine($"AI_setMode {mode} in port {port}: {err}");
 
             // Set AI # of samples to 50 (pts)
             err = dev.AI_setNumSamples(port, samples, timeout:timeout);
-            Console.WriteLine($"AI_setNumSamples {samples} in port{port}: {err}");
+            Console.WriteLine($"AI_setNumSamples {samples} in port {port}: {err}");
 
             // Set AI sampling rate to 1k (Hz)
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
-            Console.WriteLine($"AI_setNumSamples {sampling_rate} in port{port}: {err}");
+            Console.WriteLine($"AI_setNumSamples {sampling_rate} in port {port}: {err}");
 
             // Start AI acquisition
             err = dev.AI_start(port, timeout:timeout);
-            Console.WriteLine($"AI_start in port{port}: {err}");
+            Console.WriteLine($"AI_start in port {port}: {err}");
 
-            // Read data
+            // Wait for data
+            Thread.Sleep(1000);
+
+            // Read data acquisition
             List<List<double>> streaming_list = dev.AI_readStreaming(port, samples, delay);
 
             // Print data
@@ -86,11 +89,11 @@ class WifiDAQE3A_AI_N_samples_once
 
             // Stop AI
             err = dev.AI_stop(port, timeout:timeout);
-            Console.WriteLine($"AI_stop in port{port}: {err}");
+            Console.WriteLine($"AI_stop in port {port}: {err}");
 
-            // Close AI port
+            // Close AI
             err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($"AI_close in port{port}: {err}");
+            Console.WriteLine($"AI_close in port {port}: {err}");
         }
         catch (Exception ex)
         {
