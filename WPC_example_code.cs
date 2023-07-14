@@ -23,8 +23,10 @@ public class WPC_example_code
         Console.WriteLine("USBDAQF1RD, please input 11");
         Console.WriteLine("USBDAQF1TD, please input 12");
         Console.WriteLine("WifiDAQE3A, please input 13");
-        Console.WriteLine("STEM, please input 14");
-        Console.WriteLine("WifiDAQE3A, please input 15");
+        Console.WriteLine("WifiDAQF4A, please input 14");
+        Console.WriteLine("STEM, please input 15");
+        Console.WriteLine("EDrive_ST, please input 16");
+
     }
 
     #endregion
@@ -234,6 +236,19 @@ public class WPC_example_code
     #endregion
 
 
+    static void showDriveMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For Drive");
+        Console.WriteLine("--------");
+        Console.WriteLine("Run Drive_1axis_move.cs, please input 300");
+        Console.WriteLine("Run Drive_find_limit.cs, please input 301");
+        Console.WriteLine("Run Drive_servo_on.cs.cs, please input 302");
+        Console.WriteLine("Run Drive_position_blending.cs.cs, please input 302");
+        Console.WriteLine("Run Drive_velocity_blending.cs.cs, please input 304");
+        Console.WriteLine("Run Drive_velocity_blending_acceleration.cs.cs, please input 305");
+    }
+
     static void Main()
     {
         Console.WriteLine("Welcome to WPC C# driver example code.");
@@ -355,7 +370,14 @@ public class WPC_example_code
                 break;
 
             case 14:
-                Console.WriteLine("Get 14, show STEM series example code");
+                Console.WriteLine("Get 14, show WifiDAQF4A series example code");
+                showSysWifiMessage();
+                showAIMessage();
+
+                break;
+
+            case 15:
+                Console.WriteLine("Get 15, show STEM series example code");
                 showSysETHMessage();
                 showAIMessage();
                 showAIOMessage();
@@ -363,10 +385,11 @@ public class WPC_example_code
                 showDIOMessage();
                 break;
 
-            case 15:
-                Console.WriteLine("Get 15, show WifiDAQF4A series example code");
-                showSysWifiMessage();
-                showAIMessage();
+
+            case 16:
+                Console.WriteLine("Get 5, show EDrive_ST series example code");
+                showSysETHMessage();
+                showDriveMessage();
                 break;
             default:
                 break;
@@ -1113,13 +1136,51 @@ public class WPC_example_code
 
             case 14:
                 switch (example_code)
+                { 
+                    #region WifiDAQF4A_Sys
+                    case 1:
+                        WifiDAQF4A_get_network_info.Main();
+                        break;
+                    case 3:
+                        WifiDAQF4A_get_WifiDAQ_status.Main();
+                        break;
+                    #endregion
+
+                    #region WifiDAQF4A_AI
+                    case 9:
+                        WifiDAQF4A_DataLogger_AI_continuous.Main();
+                        break;
+                    case 10:
+                        WifiDAQF4A_AI_continuous.Main();
+                        break;
+                    case 11:
+                        WifiDAQF4A_AI_N_samples_in_loop.Main();
+                        break;
+                    case 12:
+                        WifiDAQF4A_AI_N_samples_once.Main();
+                        break;
+                    case 13:
+                        WifiDAQF4A_AI_on_demand_in_loop.Main();
+                        break;
+                    case 14:
+                        WifiDAQF4A_AI_on_demand_once.Main();
+                        break;
+                    #endregion 
+
+                    default:
+                        break;
+                }
+                break;
+
+            case 15:
+                switch (example_code)
                 {
+                    
                     #region STEM_Sys
                     case 1:
                         STEM_get_network_info.Main();
                         break;
                     #endregion
-
 
                     #region STEM_AI
                     case 9:
@@ -1188,36 +1249,37 @@ public class WPC_example_code
                         break;
                 }
                 break;
-            case 15:
+
+            
+            case 16:
                 switch (example_code)
                 {
-                    #region WifiDAQF4A_Sys
+                    
+                    #region EDrive_ST_Sys
                     case 1:
-                        WifiDAQF4A_get_network_info.Main();
-                        break;
-                    case 3:
-                        WifiDAQF4A_get_WifiDAQ_status.Main();
+                        EDrive_ST_get_network_info.Main();
                         break;
                     #endregion
+                         
 
-                    #region WifiDAQF4A_AI
-                    case 9:
-                        WifiDAQF4A_DataLogger_AI_continuous.Main();
+                    #region EDrive_ST_Drive
+                    case 300:
+                        EDrive_ST_Drive_1axis.Main();
                         break;
-                    case 10:
-                        WifiDAQF4A_AI_continuous.Main();
+                    case 301:
+                        EDrive_ST_Drive_find_limit.Main();
                         break;
-                    case 11:
-                        WifiDAQF4A_AI_N_samples_in_loop.Main();
+                    case 302:
+                        EDrive_ST_Drive_servo_on.Main();
                         break;
-                    case 12:
-                        WifiDAQF4A_AI_N_samples_once.Main();
+                    case 303:
+                        EDrive_ST_Drive_position_blending.Main();
                         break;
-                    case 13:
-                        WifiDAQF4A_AI_on_demand_in_loop.Main();
+                    case 304:
+                        EDrive_ST_Drive_velocity_blending.Main();
                         break;
-                    case 14:
-                        WifiDAQF4A_AI_on_demand_once.Main();
+                    case 305:
+                        EDrive_ST_Drive_velocity_blending_acceleration.Main();
                         break;
                     #endregion
 

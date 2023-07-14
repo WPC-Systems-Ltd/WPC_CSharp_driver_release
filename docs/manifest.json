@@ -125,6 +125,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Module.IDriveModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Module.IDriveModule.html",
+          "hash": "Tr2V/jUZOx1hwbi6M9Qdr6llkHy90crE/mk0oQ5D+RE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WPC.Module.II2CModule.yml",
       "output": {
         ".html": {
@@ -261,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.html",
-          "hash": "Ux3rDuVqwHxpz7im2uAPUxNUwqPdrr1RWgXIR1M+8Wo="
+          "hash": "HvI+CpW7bjr9RTFZtTZQBwRqO7a0DtksMAr4inS4uIU="
         }
       },
       "is_incremental": true,
@@ -274,6 +286,18 @@
         ".html": {
           "relative_path": "api/WPC.Product.DeviceFinder.html",
           "hash": "ber3gnCeXnyy1Jq9is2l32op3HnUNCWf7u643LM8Dvk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Product.EDrive_ST.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Product.EDrive_ST.html",
+          "hash": "Jt2dGZF/0+OOt/KyLK8g7WWpSx82S3F5crl1bCVMQF4="
         }
       },
       "is_incremental": true,
@@ -465,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.html",
-          "hash": "dB5We0caEYccP+vge5o/RUN1s6nPcvlJS0D8K+3YHZ4="
+          "hash": "xfHqKNm1h7B4GfXlynRWPGtxlplwoZ31i8tpZzBnp5c="
         }
       },
       "is_incremental": true,
@@ -489,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "bB8Glr6PgEkChXrw5JsZGUQFYkS0zxZHq4GWzcevl+I="
+          "hash": "JQIjVtPcYPaMetT4Btb+lJGbwUwS3+ZVrdwZfx5UQ40="
         }
       },
       "is_incremental": false,
@@ -501,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/README.html",
-          "hash": "mmfTMTBGXUOEsfKxM91En4aewL1bdvvbWLhEe9vB12U="
+          "hash": "t/3GwiNhaLBnr8xgvQvCOhxHEESv8U8uc6UwJaXMk2Y="
         }
       },
       "is_incremental": true,
@@ -513,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/feature_product.html",
-          "hash": "UaP6OqAxtr/MkLdhkFmhw8mhA0SNAb0lGUuwMczGBao="
+          "hash": "9+tE6F/fJYUKpUpLgYFX2vCOBUDpE6LROXYlwiHI7VY="
         }
       },
       "is_incremental": true,
@@ -525,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/pinout_product.html",
-          "hash": "bHX3GIwcZ/Eee1Yc/XAkP5afo4xrP1GgkC/IjmO97Oo="
+          "hash": "3XI0bo3A4EeyNmijh1LE8ub2PnPC+9uW+LjunwRdDFQ="
         }
       },
       "is_incremental": true,
@@ -549,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_port.html",
-          "hash": "u3497T1zhNdSKxu6X25r5IsUp3mMRhGb8/eIcReANIo="
+          "hash": "V894nOZXyZRAuu0sLhO71GqsofA+dvXspGNLI7AtAU4="
         }
       },
       "is_incremental": true,
@@ -561,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_setting.html",
-          "hash": "sUbHenq84FiQZnrpHOFb1gOVTdNd4V0X8lXa1/mVVNY="
+          "hash": "y29tm05HMiZpt85FFpVifOArluJmRhhNUpueszsic68="
         }
       },
       "is_incremental": true,
@@ -598,6 +622,30 @@
         ".html": {
           "relative_path": "articles/example_md/EMotion/EMotion_System_ETH.html",
           "hash": "a+QQ9RGG7Uk7VaBxtvxpFArGfrZFgP+w74iHRBojcQw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/Edrive_ST/Edrive_ST_Drive.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/Edrive_ST/Edrive_ST_Drive.html",
+          "hash": "fXPqMrxzl2upfAvINDuO0NnTS3p+V9n8VZ2YsmE/uD0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/Edrive_ST/Edrive_ST_System_ETH.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/Edrive_ST/Edrive_ST_System_ETH.html",
+          "hash": "fNAL7JnekkbOp1LHh3vhk6jkqHn1cHf5kHZHPE/qVoc="
         }
       },
       "is_incremental": true,
@@ -1269,7 +1317,18 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "5nrKw8bQoPMU3+VvPNCoLamut5eZvoyBvjkE1rXVQi0="
+          "hash": "Fn7gB6/cwz7Gc9W22+f9wRm57mp2oYBGg0nD3dCcL0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Pinouts/pinout-EDrive_ST.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Pinouts/pinout-EDrive_ST.jpg"
         }
       },
       "is_incremental": false,
@@ -1435,6 +1494,17 @@
       "output": {
         "resource": {
           "relative_path": "images/Pinouts/pinout-WifiDAQF4A.JPG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Products/product-EDrive_ST.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Products/product-EDrive_ST.jpg"
         }
       },
       "is_incremental": false,
@@ -1685,14 +1755,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 65,
-          "skipped_file_count": 65
+          "total_file_count": 67,
+          "skipped_file_count": 67
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 39,
-          "skipped_file_count": 39
+          "total_file_count": 41,
+          "skipped_file_count": 41
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

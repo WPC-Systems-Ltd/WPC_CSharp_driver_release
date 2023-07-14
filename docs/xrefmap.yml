@@ -940,6 +940,298 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IDIOModule.DO_writePort
   nameWithType: IDIOModule.DO_writePort
+- uid: WPC.Module.IDriveModule
+  name: IDriveModule
+  href: api/WPC.Module.IDriveModule.html
+  commentId: T:WPC.Module.IDriveModule
+  fullName: WPC.Module.IDriveModule
+  nameWithType: IDriveModule
+- uid: WPC.Module.IDriveModule.Drive_cfgAxisDirection(System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgAxisDirection(Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgAxisDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_cfgAxisDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_cfgAxisDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_cfgAxisDirection(Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_cfgAxisDirection*
+  name: Drive_cfgAxisDirection
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgAxisDirection_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_cfgAxisDirection
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_cfgAxisDirection
+  nameWithType: IDriveModule.Drive_cfgAxisDirection
+- uid: WPC.Module.IDriveModule.Drive_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgAxisMove_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_cfgAxisMove(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_cfgAxisMove*
+  name: Drive_cfgAxisMove
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgAxisMove_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_cfgAxisMove
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_cfgAxisMove
+  nameWithType: IDriveModule.Drive_cfgAxisMove
+- uid: WPC.Module.IDriveModule.Drive_cfgEncoder(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgEncoder(Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgEncoder_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_cfgEncoder(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_cfgEncoder(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_cfgEncoder(Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_cfgEncoder*
+  name: Drive_cfgEncoder
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgEncoder_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_cfgEncoder
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_cfgEncoder
+  nameWithType: IDriveModule.Drive_cfgEncoder
+- uid: WPC.Module.IDriveModule.Drive_cfgEncoderDirection(System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgEncoderDirection(Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgEncoderDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_cfgEncoderDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_cfgEncoderDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_cfgEncoderDirection(Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_cfgEncoderDirection*
+  name: Drive_cfgEncoderDirection
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgEncoderDirection_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_cfgEncoderDirection
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_cfgEncoderDirection
+  nameWithType: IDriveModule.Drive_cfgEncoderDirection
+- uid: WPC.Module.IDriveModule.Drive_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_cfgFindRef(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_cfgFindRef*
+  name: Drive_cfgFindRef
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgFindRef_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_cfgFindRef
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_cfgFindRef
+  nameWithType: IDriveModule.Drive_cfgFindRef
+- uid: WPC.Module.IDriveModule.Drive_cfgLimit(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgLimit(Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgLimit_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_cfgLimit(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_cfgLimit(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_cfgLimit(Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_cfgLimit*
+  name: Drive_cfgLimit
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_cfgLimit_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_cfgLimit
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_cfgLimit
+  nameWithType: IDriveModule.Drive_cfgLimit
+- uid: WPC.Module.IDriveModule.Drive_close(System.Int32,System.Int32)
+  name: Drive_close(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_close_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_close(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_close(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_close(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_close*
+  name: Drive_close
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_close_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_close
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_close
+  nameWithType: IDriveModule.Drive_close
+- uid: WPC.Module.IDriveModule.Drive_enableServoOff(System.Int32,System.Int32)
+  name: Drive_enableServoOff(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_enableServoOff_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_enableServoOff(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_enableServoOff(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_enableServoOff(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_enableServoOff*
+  name: Drive_enableServoOff
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_enableServoOff_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_enableServoOff
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_enableServoOff
+  nameWithType: IDriveModule.Drive_enableServoOff
+- uid: WPC.Module.IDriveModule.Drive_enableServoOn(System.Int32,System.Int32)
+  name: Drive_enableServoOn(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_enableServoOn_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_enableServoOn(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_enableServoOn(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_enableServoOn(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_enableServoOn*
+  name: Drive_enableServoOn
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_enableServoOn_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_enableServoOn
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_enableServoOn
+  nameWithType: IDriveModule.Drive_enableServoOn
+- uid: WPC.Module.IDriveModule.Drive_findReference(System.Int32,System.Int32)
+  name: Drive_findReference(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_findReference_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_findReference(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_findReference(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_findReference(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_findReference*
+  name: Drive_findReference
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_findReference_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_findReference
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_findReference
+  nameWithType: IDriveModule.Drive_findReference
+- uid: WPC.Module.IDriveModule.Drive_getAlarmStatus(System.Int32,System.Int32)
+  name: Drive_getAlarmStatus(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_getAlarmStatus_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_getAlarmStatus(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_getAlarmStatus(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_getAlarmStatus(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_getAlarmStatus*
+  name: Drive_getAlarmStatus
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_getAlarmStatus_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_getAlarmStatus
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_getAlarmStatus
+  nameWithType: IDriveModule.Drive_getAlarmStatus
+- uid: WPC.Module.IDriveModule.Drive_getLimitStatus(System.Int32,System.Int32)
+  name: Drive_getLimitStatus(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_getLimitStatus_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_getLimitStatus(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_getLimitStatus(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_getLimitStatus(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_getLimitStatus*
+  name: Drive_getLimitStatus
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_getLimitStatus_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_getLimitStatus
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_getLimitStatus
+  nameWithType: IDriveModule.Drive_getLimitStatus
+- uid: WPC.Module.IDriveModule.Drive_getMoveStatus(System.Int32,System.Int32)
+  name: Drive_getMoveStatus(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_getMoveStatus_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_getMoveStatus(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_getMoveStatus(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_getMoveStatus(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_getMoveStatus*
+  name: Drive_getMoveStatus
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_getMoveStatus_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_getMoveStatus
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_getMoveStatus
+  nameWithType: IDriveModule.Drive_getMoveStatus
+- uid: WPC.Module.IDriveModule.Drive_open(System.Int32,System.Int32)
+  name: Drive_open(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_open_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_open(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_open(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_open(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_open*
+  name: Drive_open
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_open_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_open
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_open
+  nameWithType: IDriveModule.Drive_open
+- uid: WPC.Module.IDriveModule.Drive_overrideAccel(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_overrideAccel(Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_overrideAccel_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_overrideAccel(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_overrideAccel(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_overrideAccel(Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_overrideAccel*
+  name: Drive_overrideAccel
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_overrideAccel_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_overrideAccel
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_overrideAccel
+  nameWithType: IDriveModule.Drive_overrideAccel
+- uid: WPC.Module.IDriveModule.Drive_overridePosition(System.Int32,System.Int32,System.Int32)
+  name: Drive_overridePosition(Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_overridePosition_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_overridePosition(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_overridePosition(System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_overridePosition(Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_overridePosition*
+  name: Drive_overridePosition
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_overridePosition_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_overridePosition
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_overridePosition
+  nameWithType: IDriveModule.Drive_overridePosition
+- uid: WPC.Module.IDriveModule.Drive_overrideVelocity(System.Int32,System.Int32,System.Int32)
+  name: Drive_overrideVelocity(Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_overrideVelocity_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_overrideVelocity(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_overrideVelocity(System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_overrideVelocity(Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_overrideVelocity*
+  name: Drive_overrideVelocity
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_overrideVelocity_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_overrideVelocity
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_overrideVelocity
+  nameWithType: IDriveModule.Drive_overrideVelocity
+- uid: WPC.Module.IDriveModule.Drive_readCurrentVelocity(System.Int32,System.Int32)
+  name: Drive_readCurrentVelocity(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_readCurrentVelocity_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_readCurrentVelocity(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_readCurrentVelocity(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_readCurrentVelocity(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_readCurrentVelocity*
+  name: Drive_readCurrentVelocity
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_readCurrentVelocity_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_readCurrentVelocity
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_readCurrentVelocity
+  nameWithType: IDriveModule.Drive_readCurrentVelocity
+- uid: WPC.Module.IDriveModule.Drive_readEncoderPosition(System.Int32,System.Int32)
+  name: Drive_readEncoderPosition(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_readEncoderPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_readEncoderPosition(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_readEncoderPosition(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_readEncoderPosition(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_readEncoderPosition*
+  name: Drive_readEncoderPosition
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_readEncoderPosition_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_readEncoderPosition
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_readEncoderPosition
+  nameWithType: IDriveModule.Drive_readEncoderPosition
+- uid: WPC.Module.IDriveModule.Drive_rstEncoderPosi(System.Int32,System.Int32,System.Int32)
+  name: Drive_rstEncoderPosi(Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_rstEncoderPosi_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_rstEncoderPosi(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_rstEncoderPosi(System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_rstEncoderPosi(Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_rstEncoderPosi*
+  name: Drive_rstEncoderPosi
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_rstEncoderPosi_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_rstEncoderPosi
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_rstEncoderPosi
+  nameWithType: IDriveModule.Drive_rstEncoderPosi
+- uid: WPC.Module.IDriveModule.Drive_start(System.Int32,System.Int32)
+  name: Drive_start(Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_start_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_start(System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_start(System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_start(Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_start*
+  name: Drive_start
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_start_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_start
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_start
+  nameWithType: IDriveModule.Drive_start
+- uid: WPC.Module.IDriveModule.Drive_stop(System.Int32,System.Int32,System.Int32)
+  name: Drive_stop(Int32, Int32, Int32)
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_stop_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDriveModule.Drive_stop(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDriveModule.Drive_stop(System.Int32, System.Int32, System.Int32)
+  nameWithType: IDriveModule.Drive_stop(Int32, Int32, Int32)
+- uid: WPC.Module.IDriveModule.Drive_stop*
+  name: Drive_stop
+  href: api/WPC.Module.IDriveModule.html#WPC_Module_IDriveModule_Drive_stop_
+  commentId: Overload:WPC.Module.IDriveModule.Drive_stop
+  isSpec: "True"
+  fullName: WPC.Module.IDriveModule.Drive_stop
+  nameWithType: IDriveModule.Drive_stop
 - uid: WPC.Module.II2CModule
   name: II2CModule
   href: api/WPC.Module.II2CModule.html
@@ -2499,6 +2791,584 @@ references:
   isSpec: "True"
   fullName: WPC.Product.DeviceFinder.disconnect
   nameWithType: DeviceFinder.disconnect
+- uid: WPC.Product.EDrive_ST
+  name: EDrive_ST
+  href: api/WPC.Product.EDrive_ST.html
+  commentId: T:WPC.Product.EDrive_ST
+  fullName: WPC.Product.EDrive_ST
+  nameWithType: EDrive_ST
+- uid: WPC.Product.EDrive_ST.#ctor
+  name: EDrive_ST()
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST__ctor
+  commentId: M:WPC.Product.EDrive_ST.#ctor
+  fullName: WPC.Product.EDrive_ST.EDrive_ST()
+  nameWithType: EDrive_ST.EDrive_ST()
+- uid: WPC.Product.EDrive_ST.#ctor*
+  name: EDrive_ST
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST__ctor_
+  commentId: Overload:WPC.Product.EDrive_ST.#ctor
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.EDrive_ST
+  nameWithType: EDrive_ST.EDrive_ST
+- uid: WPC.Product.EDrive_ST.close
+  name: close()
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_close
+  commentId: M:WPC.Product.EDrive_ST.close
+  fullName: WPC.Product.EDrive_ST.close()
+  nameWithType: EDrive_ST.close()
+- uid: WPC.Product.EDrive_ST.close*
+  name: close
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_close_
+  commentId: Overload:WPC.Product.EDrive_ST.close
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.close
+  nameWithType: EDrive_ST.close
+- uid: WPC.Product.EDrive_ST.connect(System.String)
+  name: connect(String)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_connect_System_String_
+  commentId: M:WPC.Product.EDrive_ST.connect(System.String)
+  fullName: WPC.Product.EDrive_ST.connect(System.String)
+  nameWithType: EDrive_ST.connect(String)
+- uid: WPC.Product.EDrive_ST.connect*
+  name: connect
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_connect_
+  commentId: Overload:WPC.Product.EDrive_ST.connect
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.connect
+  nameWithType: EDrive_ST.connect
+- uid: WPC.Product.EDrive_ST.disconnect
+  name: disconnect()
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_disconnect
+  commentId: M:WPC.Product.EDrive_ST.disconnect
+  fullName: WPC.Product.EDrive_ST.disconnect()
+  nameWithType: EDrive_ST.disconnect()
+- uid: WPC.Product.EDrive_ST.disconnect*
+  name: disconnect
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_disconnect_
+  commentId: Overload:WPC.Product.EDrive_ST.disconnect
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.disconnect
+  nameWithType: EDrive_ST.disconnect
+- uid: WPC.Product.EDrive_ST.Drive_cfgAxisDirection(System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgAxisDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgAxisDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_cfgAxisDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_cfgAxisDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_cfgAxisDirection(Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_cfgAxisDirection*
+  name: Drive_cfgAxisDirection
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgAxisDirection_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_cfgAxisDirection
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_cfgAxisDirection
+  nameWithType: EDrive_ST.Drive_cfgAxisDirection
+- uid: WPC.Product.EDrive_ST.Drive_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgAxisMove_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_cfgAxisMove(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_cfgAxisMove(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_cfgAxisMove(Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_cfgAxisMove*
+  name: Drive_cfgAxisMove
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgAxisMove_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_cfgAxisMove
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_cfgAxisMove
+  nameWithType: EDrive_ST.Drive_cfgAxisMove
+- uid: WPC.Product.EDrive_ST.Drive_cfgEncoder(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgEncoder(Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgEncoder_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_cfgEncoder(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_cfgEncoder(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_cfgEncoder(Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_cfgEncoder*
+  name: Drive_cfgEncoder
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgEncoder_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_cfgEncoder
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_cfgEncoder
+  nameWithType: EDrive_ST.Drive_cfgEncoder
+- uid: WPC.Product.EDrive_ST.Drive_cfgEncoderDirection(System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgEncoderDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgEncoderDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_cfgEncoderDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_cfgEncoderDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_cfgEncoderDirection(Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_cfgEncoderDirection*
+  name: Drive_cfgEncoderDirection
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgEncoderDirection_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_cfgEncoderDirection
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_cfgEncoderDirection
+  nameWithType: EDrive_ST.Drive_cfgEncoderDirection
+- uid: WPC.Product.EDrive_ST.Drive_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgFindRef_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_cfgFindRef(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_cfgFindRef(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_cfgFindRef(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_cfgFindRef*
+  name: Drive_cfgFindRef
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgFindRef_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_cfgFindRef
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_cfgFindRef
+  nameWithType: EDrive_ST.Drive_cfgFindRef
+- uid: WPC.Product.EDrive_ST.Drive_cfgLimit(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_cfgLimit(Int32, Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgLimit_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_cfgLimit(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_cfgLimit(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_cfgLimit(Int32, Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_cfgLimit*
+  name: Drive_cfgLimit
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_cfgLimit_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_cfgLimit
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_cfgLimit
+  nameWithType: EDrive_ST.Drive_cfgLimit
+- uid: WPC.Product.EDrive_ST.Drive_close(System.Int32,System.Int32)
+  name: Drive_close(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_close(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_close(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_close(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_close*
+  name: Drive_close
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_close_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_close
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_close
+  nameWithType: EDrive_ST.Drive_close
+- uid: WPC.Product.EDrive_ST.Drive_enableServoOff(System.Int32,System.Int32)
+  name: Drive_enableServoOff(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_enableServoOff_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_enableServoOff(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_enableServoOff(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_enableServoOff(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_enableServoOff*
+  name: Drive_enableServoOff
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_enableServoOff_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_enableServoOff
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_enableServoOff
+  nameWithType: EDrive_ST.Drive_enableServoOff
+- uid: WPC.Product.EDrive_ST.Drive_enableServoOn(System.Int32,System.Int32)
+  name: Drive_enableServoOn(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_enableServoOn_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_enableServoOn(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_enableServoOn(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_enableServoOn(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_enableServoOn*
+  name: Drive_enableServoOn
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_enableServoOn_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_enableServoOn
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_enableServoOn
+  nameWithType: EDrive_ST.Drive_enableServoOn
+- uid: WPC.Product.EDrive_ST.Drive_findReference(System.Int32,System.Int32)
+  name: Drive_findReference(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_findReference_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_findReference(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_findReference(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_findReference(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_findReference*
+  name: Drive_findReference
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_findReference_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_findReference
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_findReference
+  nameWithType: EDrive_ST.Drive_findReference
+- uid: WPC.Product.EDrive_ST.Drive_getAlarmStatus(System.Int32,System.Int32)
+  name: Drive_getAlarmStatus(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_getAlarmStatus_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_getAlarmStatus(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_getAlarmStatus(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_getAlarmStatus(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_getAlarmStatus*
+  name: Drive_getAlarmStatus
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_getAlarmStatus_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_getAlarmStatus
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_getAlarmStatus
+  nameWithType: EDrive_ST.Drive_getAlarmStatus
+- uid: WPC.Product.EDrive_ST.Drive_getLimitStatus(System.Int32,System.Int32)
+  name: Drive_getLimitStatus(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_getLimitStatus_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_getLimitStatus(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_getLimitStatus(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_getLimitStatus(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_getLimitStatus*
+  name: Drive_getLimitStatus
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_getLimitStatus_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_getLimitStatus
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_getLimitStatus
+  nameWithType: EDrive_ST.Drive_getLimitStatus
+- uid: WPC.Product.EDrive_ST.Drive_getMoveStatus(System.Int32,System.Int32)
+  name: Drive_getMoveStatus(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_getMoveStatus_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_getMoveStatus(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_getMoveStatus(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_getMoveStatus(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_getMoveStatus*
+  name: Drive_getMoveStatus
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_getMoveStatus_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_getMoveStatus
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_getMoveStatus
+  nameWithType: EDrive_ST.Drive_getMoveStatus
+- uid: WPC.Product.EDrive_ST.Drive_open(System.Int32,System.Int32)
+  name: Drive_open(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_open(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_open(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_open(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_open*
+  name: Drive_open
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_open_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_open
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_open
+  nameWithType: EDrive_ST.Drive_open
+- uid: WPC.Product.EDrive_ST.Drive_overrideAccel(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Drive_overrideAccel(Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_overrideAccel_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_overrideAccel(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_overrideAccel(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_overrideAccel(Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_overrideAccel*
+  name: Drive_overrideAccel
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_overrideAccel_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_overrideAccel
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_overrideAccel
+  nameWithType: EDrive_ST.Drive_overrideAccel
+- uid: WPC.Product.EDrive_ST.Drive_overridePosition(System.Int32,System.Int32,System.Int32)
+  name: Drive_overridePosition(Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_overridePosition_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_overridePosition(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_overridePosition(System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_overridePosition(Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_overridePosition*
+  name: Drive_overridePosition
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_overridePosition_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_overridePosition
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_overridePosition
+  nameWithType: EDrive_ST.Drive_overridePosition
+- uid: WPC.Product.EDrive_ST.Drive_overrideVelocity(System.Int32,System.Int32,System.Int32)
+  name: Drive_overrideVelocity(Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_overrideVelocity_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_overrideVelocity(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_overrideVelocity(System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_overrideVelocity(Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_overrideVelocity*
+  name: Drive_overrideVelocity
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_overrideVelocity_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_overrideVelocity
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_overrideVelocity
+  nameWithType: EDrive_ST.Drive_overrideVelocity
+- uid: WPC.Product.EDrive_ST.Drive_readCurrentVelocity(System.Int32,System.Int32)
+  name: Drive_readCurrentVelocity(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_readCurrentVelocity_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_readCurrentVelocity(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_readCurrentVelocity(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_readCurrentVelocity(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_readCurrentVelocity*
+  name: Drive_readCurrentVelocity
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_readCurrentVelocity_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_readCurrentVelocity
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_readCurrentVelocity
+  nameWithType: EDrive_ST.Drive_readCurrentVelocity
+- uid: WPC.Product.EDrive_ST.Drive_readEncoderPosition(System.Int32,System.Int32)
+  name: Drive_readEncoderPosition(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_readEncoderPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_readEncoderPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_readEncoderPosition(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_readEncoderPosition(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_readEncoderPosition*
+  name: Drive_readEncoderPosition
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_readEncoderPosition_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_readEncoderPosition
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_readEncoderPosition
+  nameWithType: EDrive_ST.Drive_readEncoderPosition
+- uid: WPC.Product.EDrive_ST.Drive_rstEncoderPosi(System.Int32,System.Int32,System.Int32)
+  name: Drive_rstEncoderPosi(Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_rstEncoderPosi_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_rstEncoderPosi(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_rstEncoderPosi(System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_rstEncoderPosi(Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_rstEncoderPosi*
+  name: Drive_rstEncoderPosi
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_rstEncoderPosi_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_rstEncoderPosi
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_rstEncoderPosi
+  nameWithType: EDrive_ST.Drive_rstEncoderPosi
+- uid: WPC.Product.EDrive_ST.Drive_start(System.Int32,System.Int32)
+  name: Drive_start(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_start(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_start(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_start(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_start*
+  name: Drive_start
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_start_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_start
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_start
+  nameWithType: EDrive_ST.Drive_start
+- uid: WPC.Product.EDrive_ST.Drive_stop(System.Int32,System.Int32,System.Int32)
+  name: Drive_stop(Int32, Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_stop_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Drive_stop(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Drive_stop(System.Int32, System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Drive_stop(Int32, Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Drive_stop*
+  name: Drive_stop
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Drive_stop_
+  commentId: Overload:WPC.Product.EDrive_ST.Drive_stop
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Drive_stop
+  nameWithType: EDrive_ST.Drive_stop
+- uid: WPC.Product.EDrive_ST.Sys_getDriverInfo(System.Int32)
+  name: Sys_getDriverInfo(Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getDriverInfo_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_getDriverInfo(System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_getDriverInfo(System.Int32)
+  nameWithType: EDrive_ST.Sys_getDriverInfo(Int32)
+- uid: WPC.Product.EDrive_ST.Sys_getDriverInfo*
+  name: Sys_getDriverInfo
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getDriverInfo_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_getDriverInfo
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_getDriverInfo
+  nameWithType: EDrive_ST.Sys_getDriverInfo
+- uid: WPC.Product.EDrive_ST.Sys_getGateway(System.Int32)
+  name: Sys_getGateway(Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getGateway_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_getGateway(System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_getGateway(System.Int32)
+  nameWithType: EDrive_ST.Sys_getGateway(Int32)
+- uid: WPC.Product.EDrive_ST.Sys_getGateway*
+  name: Sys_getGateway
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getGateway_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_getGateway
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_getGateway
+  nameWithType: EDrive_ST.Sys_getGateway
+- uid: WPC.Product.EDrive_ST.Sys_getIPAddrAndSubmask(System.Int32)
+  name: Sys_getIPAddrAndSubmask(Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getIPAddrAndSubmask_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_getIPAddrAndSubmask(System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_getIPAddrAndSubmask(System.Int32)
+  nameWithType: EDrive_ST.Sys_getIPAddrAndSubmask(Int32)
+- uid: WPC.Product.EDrive_ST.Sys_getIPAddrAndSubmask*
+  name: Sys_getIPAddrAndSubmask
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_getIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_getIPAddrAndSubmask
+  nameWithType: EDrive_ST.Sys_getIPAddrAndSubmask
+- uid: WPC.Product.EDrive_ST.Sys_getMACAddr(System.Int32)
+  name: Sys_getMACAddr(Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getMACAddr_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_getMACAddr(System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_getMACAddr(System.Int32)
+  nameWithType: EDrive_ST.Sys_getMACAddr(Int32)
+- uid: WPC.Product.EDrive_ST.Sys_getMACAddr*
+  name: Sys_getMACAddr
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getMACAddr_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_getMACAddr
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_getMACAddr
+  nameWithType: EDrive_ST.Sys_getMACAddr
+- uid: WPC.Product.EDrive_ST.Sys_getMode(System.Int32,System.Int32)
+  name: Sys_getMode(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_getMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_getMode(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Sys_getMode(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_getMode*
+  name: Sys_getMode
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getMode_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_getMode
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_getMode
+  nameWithType: EDrive_ST.Sys_getMode
+- uid: WPC.Product.EDrive_ST.Sys_getRTC(System.Int32)
+  name: Sys_getRTC(Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getRTC_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_getRTC(System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_getRTC(System.Int32)
+  nameWithType: EDrive_ST.Sys_getRTC(Int32)
+- uid: WPC.Product.EDrive_ST.Sys_getRTC*
+  name: Sys_getRTC
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getRTC_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_getRTC
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_getRTC
+  nameWithType: EDrive_ST.Sys_getRTC
+- uid: WPC.Product.EDrive_ST.Sys_getSerialNumber(System.Int32)
+  name: Sys_getSerialNumber(Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getSerialNumber_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_getSerialNumber(System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_getSerialNumber(System.Int32)
+  nameWithType: EDrive_ST.Sys_getSerialNumber(Int32)
+- uid: WPC.Product.EDrive_ST.Sys_getSerialNumber*
+  name: Sys_getSerialNumber
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_getSerialNumber_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_getSerialNumber
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_getSerialNumber
+  nameWithType: EDrive_ST.Sys_getSerialNumber
+- uid: WPC.Product.EDrive_ST.Sys_reboot(System.Int32)
+  name: Sys_reboot(Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_reboot_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_reboot(System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_reboot(System.Int32)
+  nameWithType: EDrive_ST.Sys_reboot(Int32)
+- uid: WPC.Product.EDrive_ST.Sys_reboot*
+  name: Sys_reboot
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_reboot_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_reboot
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_reboot
+  nameWithType: EDrive_ST.Sys_reboot
+- uid: WPC.Product.EDrive_ST.Sys_rebootOnBootloader(System.Int32)
+  name: Sys_rebootOnBootloader(Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_rebootOnBootloader_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_rebootOnBootloader(System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_rebootOnBootloader(System.Int32)
+  nameWithType: EDrive_ST.Sys_rebootOnBootloader(Int32)
+- uid: WPC.Product.EDrive_ST.Sys_rebootOnBootloader*
+  name: Sys_rebootOnBootloader
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_rebootOnBootloader_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_rebootOnBootloader
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_rebootOnBootloader
+  nameWithType: EDrive_ST.Sys_rebootOnBootloader
+- uid: WPC.Product.EDrive_ST.Sys_setAIOMode(System.Int32,System.Int32)
+  name: Sys_setAIOMode(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setAIOMode(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Sys_setAIOMode(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setAIOMode*
+  name: Sys_setAIOMode
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setAIOMode_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setAIOMode
+  nameWithType: EDrive_ST.Sys_setAIOMode
+- uid: WPC.Product.EDrive_ST.Sys_setDIMode(System.Int32,System.Int32)
+  name: Sys_setDIMode(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setDIMode(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Sys_setDIMode(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setDIMode*
+  name: Sys_setDIMode
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setDIMode_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setDIMode
+  nameWithType: EDrive_ST.Sys_setDIMode
+- uid: WPC.Product.EDrive_ST.Sys_setDIOMode(System.Int32,System.Int32)
+  name: Sys_setDIOMode(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setDIOMode(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Sys_setDIOMode(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setDIOMode*
+  name: Sys_setDIOMode
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setDIOMode_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setDIOMode
+  nameWithType: EDrive_ST.Sys_setDIOMode
+- uid: WPC.Product.EDrive_ST.Sys_setDOMode(System.Int32,System.Int32)
+  name: Sys_setDOMode(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setDOMode(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Sys_setDOMode(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setDOMode*
+  name: Sys_setDOMode
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setDOMode_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setDOMode
+  nameWithType: EDrive_ST.Sys_setDOMode
+- uid: WPC.Product.EDrive_ST.Sys_setIdleMode(System.Int32,System.Int32)
+  name: Sys_setIdleMode(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setIdleMode(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Sys_setIdleMode(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setIdleMode*
+  name: Sys_setIdleMode
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setIdleMode_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setIdleMode
+  nameWithType: EDrive_ST.Sys_setIdleMode
+- uid: WPC.Product.EDrive_ST.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  name: Sys_setIPAddrAndSubmask(String, String, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setIPAddrAndSubmask_System_String_System_String_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setIPAddrAndSubmask(System.String, System.String, System.Int32)
+  nameWithType: EDrive_ST.Sys_setIPAddrAndSubmask(String, String, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setIPAddrAndSubmask*
+  name: Sys_setIPAddrAndSubmask
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setIPAddrAndSubmask
+  nameWithType: EDrive_ST.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EDrive_ST.Sys_setMotionMode(System.Int32,System.Int32)
+  name: Sys_setMotionMode(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setMotionMode(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Sys_setMotionMode(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setMotionMode*
+  name: Sys_setMotionMode
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setMotionMode_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setMotionMode
+  nameWithType: EDrive_ST.Sys_setMotionMode
+- uid: WPC.Product.EDrive_ST.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setRTC(System.Int32, System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: EDrive_ST.Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setRTC*
+  name: Sys_setRTC
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setRTC_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setRTC
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setRTC
+  nameWithType: EDrive_ST.Sys_setRTC
+- uid: WPC.Product.EDrive_ST.Sys_setSwitchMode(System.Int32,System.Int32)
+  name: Sys_setSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EDrive_ST.Sys_setSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EDrive_ST.Sys_setSwitchMode(System.Int32, System.Int32)
+  nameWithType: EDrive_ST.Sys_setSwitchMode(Int32, Int32)
+- uid: WPC.Product.EDrive_ST.Sys_setSwitchMode*
+  name: Sys_setSwitchMode
+  href: api/WPC.Product.EDrive_ST.html#WPC_Product_EDrive_ST_Sys_setSwitchMode_
+  commentId: Overload:WPC.Product.EDrive_ST.Sys_setSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EDrive_ST.Sys_setSwitchMode
+  nameWithType: EDrive_ST.Sys_setSwitchMode
 - uid: WPC.Product.EMotion
   name: EMotion
   href: api/WPC.Product.EMotion.html
