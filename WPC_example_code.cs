@@ -244,7 +244,7 @@ public class WPC_example_code
         Console.WriteLine("Run Drive_1axis_move.cs, please input 300");
         Console.WriteLine("Run Drive_find_limit.cs, please input 301");
         Console.WriteLine("Run Drive_servo_on.cs.cs, please input 302");
-        Console.WriteLine("Run Drive_position_blending.cs.cs, please input 302");
+        Console.WriteLine("Run Drive_position_blending.cs.cs, please input 303");
         Console.WriteLine("Run Drive_velocity_blending.cs.cs, please input 304");
         Console.WriteLine("Run Drive_velocity_blending_acceleration.cs.cs, please input 305");
     }
