@@ -136,6 +136,10 @@ foreach (var item in Constant.HANDLE_LIST)
 <ul>
 <li>STEM</li>
 </ul>
+<p>Ethernet motor drive</p>
+<ul>
+<li>Edrive-ST</li>
+</ul>
 <p>Ethernet based motion card</p>
 <ul>
 <li>EMotion</li>
@@ -163,10 +167,112 @@ foreach (var item in Constant.HANDLE_LIST)
 <li>Wifi-DAQ-F4-A</li>
 </ul>
 <h1 id="io-port-function-table">I/O port function table</h1>
+<h3 id="emotion--motor-driver-series">EMotion &amp; Motor driver series</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Model</th>
+<th style="text-align: left;">Product/module</th>
+<th style="text-align: left;">Motion</th>
+<th style="text-align: left;">Drive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">EMotion</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Edrive-ST</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stem-series">STEM series</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Product/module</th>
+<th style="text-align: left;">AI</th>
+<th style="text-align: left;">AO</th>
+<th style="text-align: left;">DI</th>
+<th style="text-align: left;">DO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">STEM</td>
+<td style="text-align: left;">1,2,4</td>
+<td style="text-align: left;">1,2,4</td>
+<td style="text-align: left;">0~7</td>
+<td style="text-align: left;">0~7</td>
+</tr>
+</tbody>
+</table>
+<p>In the <code>STEM</code> product, the values 1, 2, and 4 are used to represent the slots in the AIO.
+Additionally, the DIO ports 0 to 1 are assigned to slot 1, while ports 2 to 3 are assigned to slot 2.</p>
+<h3 id="ethan--wifi-series">Ethan &amp; Wifi series</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Product/module</th>
+<th style="text-align: left;">AI</th>
+<th style="text-align: left;">AO</th>
+<th style="text-align: left;">DI</th>
+<th style="text-align: left;">DO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ethan-A</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ethan-D</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ethan-L</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ethan-O</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Wifi-DAQ-E3-A</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Wifi-DAQ-F4-A</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usb-series">USB series</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Product/module</th>
 <th style="text-align: center;">AI</th>
 <th style="text-align: center;">AO</th>
 <th style="text-align: center;">DI</th>
@@ -177,94 +283,9 @@ foreach (var item in Constant.HANDLE_LIST)
 <th style="text-align: center;">I2C</th>
 <th style="text-align: center;">RTD</th>
 <th style="text-align: center;">TC</th>
-<th style="text-align: center;">Motion</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align: left;">*STEM</td>
-<td style="text-align: center;">1,2,4</td>
-<td style="text-align: center;">1,2,4</td>
-<td style="text-align: center;">0~7</td>
-<td style="text-align: center;">0~7</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">EMotion</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">Ethan-A</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-</tr>
-<tr>
-<td style="text-align: left;">Ethan-D</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-</tr>
-<tr>
-<td style="text-align: left;">Ethan-L</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-</tr>
-<tr>
-<td style="text-align: left;">Ethan-O</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-</tr>
 <tr>
 <td style="text-align: left;">USB-DAQ-F1-D</td>
 <td style="text-align: center;">-</td>
@@ -277,7 +298,6 @@ foreach (var item in Constant.HANDLE_LIST)
 <td style="text-align: center;">1, 2</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">USB-DAQ-F1-DSNK</td>
@@ -285,7 +305,6 @@ foreach (var item in Constant.HANDLE_LIST)
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">0, 1</td>
 <td style="text-align: center;">2, 3</td>
-<td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
@@ -305,7 +324,6 @@ foreach (var item in Constant.HANDLE_LIST)
 <td style="text-align: center;">1, 2</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">USB-DAQ-F1-TD</td>
@@ -319,7 +337,6 @@ foreach (var item in Constant.HANDLE_LIST)
 <td style="text-align: center;">1, 2</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">USB-DAQ-F1-RD</td>
@@ -333,7 +350,6 @@ foreach (var item in Constant.HANDLE_LIST)
 <td style="text-align: center;">1, 2</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">USB-DAQ-F1-CD</td>
@@ -345,7 +361,6 @@ foreach (var item in Constant.HANDLE_LIST)
 <td style="text-align: center;">1, 2</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 </tr>
@@ -361,40 +376,9 @@ foreach (var item in Constant.HANDLE_LIST)
 <td style="text-align: center;">1, 2</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-</tr>
-<tr>
-<td style="text-align: left;">Wifi-DAQ-E3-A</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-</tr>
-<tr>
-<td style="text-align: left;">Wifi-DAQ-F4-A</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">-</td>
 </tr>
 </tbody>
 </table>
-<p>In the <code>STEM</code> product, the values 1, 2, and 4 are used to represent the slots in the AIO.
-Additionally, the DIO ports 0 to 1 are assigned to slot 1, while ports 2 to 3 are assigned to slot 2.</p>
 <p>Remark: <code>TC</code> stands for <code>Thermocouple</code></p>
 <p>Take <code>USB-DAQ-F1-AOD</code> for example:</p>
 <ul>

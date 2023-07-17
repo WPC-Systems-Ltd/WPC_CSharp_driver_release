@@ -1,6 +1,11 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.3 Date: 2023/07/17, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New product: `EDrive_ST`
+
 v0.2.2 Date: 2023/06/08, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
