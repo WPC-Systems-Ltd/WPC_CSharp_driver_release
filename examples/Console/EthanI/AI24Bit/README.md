@@ -4,9 +4,8 @@
 
 ## Overview
 
-This example project demonstrates how to use WPC CSharp driver to acquire multi-channel AI data simultaneously.
-Also, we show how to perform data acquisition in on-demand, N samples and continuous mode individually.
-
+This example project demonstrates how to use WPC Python driver to acquire AI current value.
+ 
 In order to use API correctly, please refer [documentation](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/).
 
 If you want to build your own AI application, try to use this as a basic template, then add your own code.
