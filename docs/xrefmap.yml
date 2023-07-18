@@ -148,6 +148,51 @@ references:
   commentId: N:WPC.Module
   fullName: WPC.Module
   nameWithType: WPC.Module
+- uid: WPC.Module.IAI24BitModule
+  name: IAI24BitModule
+  href: api/WPC.Module.IAI24BitModule.html
+  commentId: T:WPC.Module.IAI24BitModule
+  fullName: WPC.Module.IAI24BitModule
+  nameWithType: IAI24BitModule
+- uid: WPC.Module.IAI24BitModule.AI_close(System.Int32,System.Int32)
+  name: AI_close(Int32, Int32)
+  href: api/WPC.Module.IAI24BitModule.html#WPC_Module_IAI24BitModule_AI_close_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAI24BitModule.AI_close(System.Int32,System.Int32)
+  fullName: WPC.Module.IAI24BitModule.AI_close(System.Int32, System.Int32)
+  nameWithType: IAI24BitModule.AI_close(Int32, Int32)
+- uid: WPC.Module.IAI24BitModule.AI_close*
+  name: AI_close
+  href: api/WPC.Module.IAI24BitModule.html#WPC_Module_IAI24BitModule_AI_close_
+  commentId: Overload:WPC.Module.IAI24BitModule.AI_close
+  isSpec: "True"
+  fullName: WPC.Module.IAI24BitModule.AI_close
+  nameWithType: IAI24BitModule.AI_close
+- uid: WPC.Module.IAI24BitModule.AI_open(System.Int32,System.Int32)
+  name: AI_open(Int32, Int32)
+  href: api/WPC.Module.IAI24BitModule.html#WPC_Module_IAI24BitModule_AI_open_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAI24BitModule.AI_open(System.Int32,System.Int32)
+  fullName: WPC.Module.IAI24BitModule.AI_open(System.Int32, System.Int32)
+  nameWithType: IAI24BitModule.AI_open(Int32, Int32)
+- uid: WPC.Module.IAI24BitModule.AI_open*
+  name: AI_open
+  href: api/WPC.Module.IAI24BitModule.html#WPC_Module_IAI24BitModule_AI_open_
+  commentId: Overload:WPC.Module.IAI24BitModule.AI_open
+  isSpec: "True"
+  fullName: WPC.Module.IAI24BitModule.AI_open
+  nameWithType: IAI24BitModule.AI_open
+- uid: WPC.Module.IAI24BitModule.AI_readOnDemand(System.Int32,System.Int32)
+  name: AI_readOnDemand(Int32, Int32)
+  href: api/WPC.Module.IAI24BitModule.html#WPC_Module_IAI24BitModule_AI_readOnDemand_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAI24BitModule.AI_readOnDemand(System.Int32,System.Int32)
+  fullName: WPC.Module.IAI24BitModule.AI_readOnDemand(System.Int32, System.Int32)
+  nameWithType: IAI24BitModule.AI_readOnDemand(Int32, Int32)
+- uid: WPC.Module.IAI24BitModule.AI_readOnDemand*
+  name: AI_readOnDemand
+  href: api/WPC.Module.IAI24BitModule.html#WPC_Module_IAI24BitModule_AI_readOnDemand_
+  commentId: Overload:WPC.Module.IAI24BitModule.AI_readOnDemand
+  isSpec: "True"
+  fullName: WPC.Module.IAI24BitModule.AI_readOnDemand
+  nameWithType: IAI24BitModule.AI_readOnDemand
 - uid: WPC.Module.IAIModule
   name: IAIModule
   href: api/WPC.Module.IAIModule.html
@@ -5378,6 +5423,337 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanD.Sys_setSwitchMode
   nameWithType: EthanD.Sys_setSwitchMode
+- uid: WPC.Product.EthanI
+  name: EthanI
+  href: api/WPC.Product.EthanI.html
+  commentId: T:WPC.Product.EthanI
+  fullName: WPC.Product.EthanI
+  nameWithType: EthanI
+- uid: WPC.Product.EthanI.#ctor
+  name: EthanI()
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI__ctor
+  commentId: M:WPC.Product.EthanI.#ctor
+  fullName: WPC.Product.EthanI.EthanI()
+  nameWithType: EthanI.EthanI()
+- uid: WPC.Product.EthanI.#ctor*
+  name: EthanI
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI__ctor_
+  commentId: Overload:WPC.Product.EthanI.#ctor
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.EthanI
+  nameWithType: EthanI.EthanI
+- uid: WPC.Product.EthanI.AI_close(System.Int32,System.Int32)
+  name: AI_close(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_AI_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.AI_close(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.AI_close(System.Int32, System.Int32)
+  nameWithType: EthanI.AI_close(Int32, Int32)
+- uid: WPC.Product.EthanI.AI_close*
+  name: AI_close
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_AI_close_
+  commentId: Overload:WPC.Product.EthanI.AI_close
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.AI_close
+  nameWithType: EthanI.AI_close
+- uid: WPC.Product.EthanI.AI_open(System.Int32,System.Int32)
+  name: AI_open(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_AI_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.AI_open(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.AI_open(System.Int32, System.Int32)
+  nameWithType: EthanI.AI_open(Int32, Int32)
+- uid: WPC.Product.EthanI.AI_open*
+  name: AI_open
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_AI_open_
+  commentId: Overload:WPC.Product.EthanI.AI_open
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.AI_open
+  nameWithType: EthanI.AI_open
+- uid: WPC.Product.EthanI.AI_readOnDemand(System.Int32,System.Int32)
+  name: AI_readOnDemand(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_AI_readOnDemand_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.AI_readOnDemand(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.AI_readOnDemand(System.Int32, System.Int32)
+  nameWithType: EthanI.AI_readOnDemand(Int32, Int32)
+- uid: WPC.Product.EthanI.AI_readOnDemand*
+  name: AI_readOnDemand
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_AI_readOnDemand_
+  commentId: Overload:WPC.Product.EthanI.AI_readOnDemand
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.AI_readOnDemand
+  nameWithType: EthanI.AI_readOnDemand
+- uid: WPC.Product.EthanI.close
+  name: close()
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_close
+  commentId: M:WPC.Product.EthanI.close
+  fullName: WPC.Product.EthanI.close()
+  nameWithType: EthanI.close()
+- uid: WPC.Product.EthanI.close*
+  name: close
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_close_
+  commentId: Overload:WPC.Product.EthanI.close
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.close
+  nameWithType: EthanI.close
+- uid: WPC.Product.EthanI.connect(System.String)
+  name: connect(String)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_connect_System_String_
+  commentId: M:WPC.Product.EthanI.connect(System.String)
+  fullName: WPC.Product.EthanI.connect(System.String)
+  nameWithType: EthanI.connect(String)
+- uid: WPC.Product.EthanI.connect*
+  name: connect
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_connect_
+  commentId: Overload:WPC.Product.EthanI.connect
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.connect
+  nameWithType: EthanI.connect
+- uid: WPC.Product.EthanI.disconnect
+  name: disconnect()
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_disconnect
+  commentId: M:WPC.Product.EthanI.disconnect
+  fullName: WPC.Product.EthanI.disconnect()
+  nameWithType: EthanI.disconnect()
+- uid: WPC.Product.EthanI.disconnect*
+  name: disconnect
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_disconnect_
+  commentId: Overload:WPC.Product.EthanI.disconnect
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.disconnect
+  nameWithType: EthanI.disconnect
+- uid: WPC.Product.EthanI.Sys_getDriverInfo(System.Int32)
+  name: Sys_getDriverInfo(Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getDriverInfo_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_getDriverInfo(System.Int32)
+  fullName: WPC.Product.EthanI.Sys_getDriverInfo(System.Int32)
+  nameWithType: EthanI.Sys_getDriverInfo(Int32)
+- uid: WPC.Product.EthanI.Sys_getDriverInfo*
+  name: Sys_getDriverInfo
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getDriverInfo_
+  commentId: Overload:WPC.Product.EthanI.Sys_getDriverInfo
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_getDriverInfo
+  nameWithType: EthanI.Sys_getDriverInfo
+- uid: WPC.Product.EthanI.Sys_getGateway(System.Int32)
+  name: Sys_getGateway(Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getGateway_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_getGateway(System.Int32)
+  fullName: WPC.Product.EthanI.Sys_getGateway(System.Int32)
+  nameWithType: EthanI.Sys_getGateway(Int32)
+- uid: WPC.Product.EthanI.Sys_getGateway*
+  name: Sys_getGateway
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getGateway_
+  commentId: Overload:WPC.Product.EthanI.Sys_getGateway
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_getGateway
+  nameWithType: EthanI.Sys_getGateway
+- uid: WPC.Product.EthanI.Sys_getIPAddrAndSubmask(System.Int32)
+  name: Sys_getIPAddrAndSubmask(Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getIPAddrAndSubmask_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_getIPAddrAndSubmask(System.Int32)
+  fullName: WPC.Product.EthanI.Sys_getIPAddrAndSubmask(System.Int32)
+  nameWithType: EthanI.Sys_getIPAddrAndSubmask(Int32)
+- uid: WPC.Product.EthanI.Sys_getIPAddrAndSubmask*
+  name: Sys_getIPAddrAndSubmask
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EthanI.Sys_getIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_getIPAddrAndSubmask
+  nameWithType: EthanI.Sys_getIPAddrAndSubmask
+- uid: WPC.Product.EthanI.Sys_getMACAddr(System.Int32)
+  name: Sys_getMACAddr(Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getMACAddr_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_getMACAddr(System.Int32)
+  fullName: WPC.Product.EthanI.Sys_getMACAddr(System.Int32)
+  nameWithType: EthanI.Sys_getMACAddr(Int32)
+- uid: WPC.Product.EthanI.Sys_getMACAddr*
+  name: Sys_getMACAddr
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getMACAddr_
+  commentId: Overload:WPC.Product.EthanI.Sys_getMACAddr
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_getMACAddr
+  nameWithType: EthanI.Sys_getMACAddr
+- uid: WPC.Product.EthanI.Sys_getMode(System.Int32,System.Int32)
+  name: Sys_getMode(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_getMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_getMode(System.Int32, System.Int32)
+  nameWithType: EthanI.Sys_getMode(Int32, Int32)
+- uid: WPC.Product.EthanI.Sys_getMode*
+  name: Sys_getMode
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getMode_
+  commentId: Overload:WPC.Product.EthanI.Sys_getMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_getMode
+  nameWithType: EthanI.Sys_getMode
+- uid: WPC.Product.EthanI.Sys_getRTC(System.Int32)
+  name: Sys_getRTC(Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getRTC_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_getRTC(System.Int32)
+  fullName: WPC.Product.EthanI.Sys_getRTC(System.Int32)
+  nameWithType: EthanI.Sys_getRTC(Int32)
+- uid: WPC.Product.EthanI.Sys_getRTC*
+  name: Sys_getRTC
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getRTC_
+  commentId: Overload:WPC.Product.EthanI.Sys_getRTC
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_getRTC
+  nameWithType: EthanI.Sys_getRTC
+- uid: WPC.Product.EthanI.Sys_getSerialNumber(System.Int32)
+  name: Sys_getSerialNumber(Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getSerialNumber_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_getSerialNumber(System.Int32)
+  fullName: WPC.Product.EthanI.Sys_getSerialNumber(System.Int32)
+  nameWithType: EthanI.Sys_getSerialNumber(Int32)
+- uid: WPC.Product.EthanI.Sys_getSerialNumber*
+  name: Sys_getSerialNumber
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_getSerialNumber_
+  commentId: Overload:WPC.Product.EthanI.Sys_getSerialNumber
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_getSerialNumber
+  nameWithType: EthanI.Sys_getSerialNumber
+- uid: WPC.Product.EthanI.Sys_reboot(System.Int32)
+  name: Sys_reboot(Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_reboot_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_reboot(System.Int32)
+  fullName: WPC.Product.EthanI.Sys_reboot(System.Int32)
+  nameWithType: EthanI.Sys_reboot(Int32)
+- uid: WPC.Product.EthanI.Sys_reboot*
+  name: Sys_reboot
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_reboot_
+  commentId: Overload:WPC.Product.EthanI.Sys_reboot
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_reboot
+  nameWithType: EthanI.Sys_reboot
+- uid: WPC.Product.EthanI.Sys_rebootOnBootloader(System.Int32)
+  name: Sys_rebootOnBootloader(Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_rebootOnBootloader_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_rebootOnBootloader(System.Int32)
+  fullName: WPC.Product.EthanI.Sys_rebootOnBootloader(System.Int32)
+  nameWithType: EthanI.Sys_rebootOnBootloader(Int32)
+- uid: WPC.Product.EthanI.Sys_rebootOnBootloader*
+  name: Sys_rebootOnBootloader
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_rebootOnBootloader_
+  commentId: Overload:WPC.Product.EthanI.Sys_rebootOnBootloader
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_rebootOnBootloader
+  nameWithType: EthanI.Sys_rebootOnBootloader
+- uid: WPC.Product.EthanI.Sys_setAIOMode(System.Int32,System.Int32)
+  name: Sys_setAIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setAIOMode(System.Int32, System.Int32)
+  nameWithType: EthanI.Sys_setAIOMode(Int32, Int32)
+- uid: WPC.Product.EthanI.Sys_setAIOMode*
+  name: Sys_setAIOMode
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setAIOMode_
+  commentId: Overload:WPC.Product.EthanI.Sys_setAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setAIOMode
+  nameWithType: EthanI.Sys_setAIOMode
+- uid: WPC.Product.EthanI.Sys_setDIMode(System.Int32,System.Int32)
+  name: Sys_setDIMode(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setDIMode(System.Int32, System.Int32)
+  nameWithType: EthanI.Sys_setDIMode(Int32, Int32)
+- uid: WPC.Product.EthanI.Sys_setDIMode*
+  name: Sys_setDIMode
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setDIMode_
+  commentId: Overload:WPC.Product.EthanI.Sys_setDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setDIMode
+  nameWithType: EthanI.Sys_setDIMode
+- uid: WPC.Product.EthanI.Sys_setDIOMode(System.Int32,System.Int32)
+  name: Sys_setDIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setDIOMode(System.Int32, System.Int32)
+  nameWithType: EthanI.Sys_setDIOMode(Int32, Int32)
+- uid: WPC.Product.EthanI.Sys_setDIOMode*
+  name: Sys_setDIOMode
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setDIOMode_
+  commentId: Overload:WPC.Product.EthanI.Sys_setDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setDIOMode
+  nameWithType: EthanI.Sys_setDIOMode
+- uid: WPC.Product.EthanI.Sys_setDOMode(System.Int32,System.Int32)
+  name: Sys_setDOMode(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setDOMode(System.Int32, System.Int32)
+  nameWithType: EthanI.Sys_setDOMode(Int32, Int32)
+- uid: WPC.Product.EthanI.Sys_setDOMode*
+  name: Sys_setDOMode
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setDOMode_
+  commentId: Overload:WPC.Product.EthanI.Sys_setDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setDOMode
+  nameWithType: EthanI.Sys_setDOMode
+- uid: WPC.Product.EthanI.Sys_setIdleMode(System.Int32,System.Int32)
+  name: Sys_setIdleMode(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setIdleMode(System.Int32, System.Int32)
+  nameWithType: EthanI.Sys_setIdleMode(Int32, Int32)
+- uid: WPC.Product.EthanI.Sys_setIdleMode*
+  name: Sys_setIdleMode
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setIdleMode_
+  commentId: Overload:WPC.Product.EthanI.Sys_setIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setIdleMode
+  nameWithType: EthanI.Sys_setIdleMode
+- uid: WPC.Product.EthanI.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  name: Sys_setIPAddrAndSubmask(String, String, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setIPAddrAndSubmask_System_String_System_String_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setIPAddrAndSubmask(System.String, System.String, System.Int32)
+  nameWithType: EthanI.Sys_setIPAddrAndSubmask(String, String, Int32)
+- uid: WPC.Product.EthanI.Sys_setIPAddrAndSubmask*
+  name: Sys_setIPAddrAndSubmask
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EthanI.Sys_setIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setIPAddrAndSubmask
+  nameWithType: EthanI.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EthanI.Sys_setMotionMode(System.Int32,System.Int32)
+  name: Sys_setMotionMode(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setMotionMode(System.Int32, System.Int32)
+  nameWithType: EthanI.Sys_setMotionMode(Int32, Int32)
+- uid: WPC.Product.EthanI.Sys_setMotionMode*
+  name: Sys_setMotionMode
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setMotionMode_
+  commentId: Overload:WPC.Product.EthanI.Sys_setMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setMotionMode
+  nameWithType: EthanI.Sys_setMotionMode
+- uid: WPC.Product.EthanI.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setRTC(System.Int32, System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: EthanI.Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Product.EthanI.Sys_setRTC*
+  name: Sys_setRTC
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setRTC_
+  commentId: Overload:WPC.Product.EthanI.Sys_setRTC
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setRTC
+  nameWithType: EthanI.Sys_setRTC
+- uid: WPC.Product.EthanI.Sys_setSwitchMode(System.Int32,System.Int32)
+  name: Sys_setSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanI.Sys_setSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanI.Sys_setSwitchMode(System.Int32, System.Int32)
+  nameWithType: EthanI.Sys_setSwitchMode(Int32, Int32)
+- uid: WPC.Product.EthanI.Sys_setSwitchMode*
+  name: Sys_setSwitchMode
+  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setSwitchMode_
+  commentId: Overload:WPC.Product.EthanI.Sys_setSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanI.Sys_setSwitchMode
+  nameWithType: EthanI.Sys_setSwitchMode
 - uid: WPC.Product.EthanL
   name: EthanL
   href: api/WPC.Product.EthanL.html
@@ -6528,6 +6904,436 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanO.Sys_setSwitchMode
   nameWithType: EthanO.Sys_setSwitchMode
+- uid: WPC.Product.EthanT
+  name: EthanT
+  href: api/WPC.Product.EthanT.html
+  commentId: T:WPC.Product.EthanT
+  fullName: WPC.Product.EthanT
+  nameWithType: EthanT
+- uid: WPC.Product.EthanT.#ctor
+  name: EthanT()
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT__ctor
+  commentId: M:WPC.Product.EthanT.#ctor
+  fullName: WPC.Product.EthanT.EthanT()
+  nameWithType: EthanT.EthanT()
+- uid: WPC.Product.EthanT.#ctor*
+  name: EthanT
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT__ctor_
+  commentId: Overload:WPC.Product.EthanT.#ctor
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.EthanT
+  nameWithType: EthanT.EthanT
+- uid: WPC.Product.EthanT.close
+  name: close()
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_close
+  commentId: M:WPC.Product.EthanT.close
+  fullName: WPC.Product.EthanT.close()
+  nameWithType: EthanT.close()
+- uid: WPC.Product.EthanT.close*
+  name: close
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_close_
+  commentId: Overload:WPC.Product.EthanT.close
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.close
+  nameWithType: EthanT.close
+- uid: WPC.Product.EthanT.connect(System.String)
+  name: connect(String)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_connect_System_String_
+  commentId: M:WPC.Product.EthanT.connect(System.String)
+  fullName: WPC.Product.EthanT.connect(System.String)
+  nameWithType: EthanT.connect(String)
+- uid: WPC.Product.EthanT.connect*
+  name: connect
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_connect_
+  commentId: Overload:WPC.Product.EthanT.connect
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.connect
+  nameWithType: EthanT.connect
+- uid: WPC.Product.EthanT.disconnect
+  name: disconnect()
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_disconnect
+  commentId: M:WPC.Product.EthanT.disconnect
+  fullName: WPC.Product.EthanT.disconnect()
+  nameWithType: EthanT.disconnect()
+- uid: WPC.Product.EthanT.disconnect*
+  name: disconnect
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_disconnect_
+  commentId: Overload:WPC.Product.EthanT.disconnect
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.disconnect
+  nameWithType: EthanT.disconnect
+- uid: WPC.Product.EthanT.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Logger_openFile_System_String_
+  commentId: M:WPC.Product.EthanT.Logger_openFile(System.String)
+  fullName: WPC.Product.EthanT.Logger_openFile(System.String)
+  nameWithType: EthanT.Logger_openFile(String)
+- uid: WPC.Product.EthanT.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Logger_openFile_
+  commentId: Overload:WPC.Product.EthanT.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Logger_openFile
+  nameWithType: EthanT.Logger_openFile
+- uid: WPC.Product.EthanT.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.EthanT.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.EthanT.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.EthanT.Logger_writeList(List(Of System.Double))
+  nameWithType: EthanT.Logger_writeList(List<Double>)
+  nameWithType.vb: EthanT.Logger_writeList(List(Of Double))
+- uid: WPC.Product.EthanT.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.EthanT.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.EthanT.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.EthanT.Logger_writeList(List(Of System.Int32))
+  nameWithType: EthanT.Logger_writeList(List<Int32>)
+  nameWithType.vb: EthanT.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.EthanT.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.EthanT.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.EthanT.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.EthanT.Logger_writeList(List(Of System.Single))
+  nameWithType: EthanT.Logger_writeList(List<Single>)
+  nameWithType.vb: EthanT.Logger_writeList(List(Of Single))
+- uid: WPC.Product.EthanT.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Logger_writeList_
+  commentId: Overload:WPC.Product.EthanT.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Logger_writeList
+  nameWithType: EthanT.Logger_writeList
+- uid: WPC.Product.EthanT.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.EthanT.Logger_writeValue(System.String)
+  fullName: WPC.Product.EthanT.Logger_writeValue(System.String)
+  nameWithType: EthanT.Logger_writeValue(String)
+- uid: WPC.Product.EthanT.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Logger_writeValue_
+  commentId: Overload:WPC.Product.EthanT.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Logger_writeValue
+  nameWithType: EthanT.Logger_writeValue
+- uid: WPC.Product.EthanT.Sys_getDriverInfo(System.Int32)
+  name: Sys_getDriverInfo(Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getDriverInfo_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_getDriverInfo(System.Int32)
+  fullName: WPC.Product.EthanT.Sys_getDriverInfo(System.Int32)
+  nameWithType: EthanT.Sys_getDriverInfo(Int32)
+- uid: WPC.Product.EthanT.Sys_getDriverInfo*
+  name: Sys_getDriverInfo
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getDriverInfo_
+  commentId: Overload:WPC.Product.EthanT.Sys_getDriverInfo
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_getDriverInfo
+  nameWithType: EthanT.Sys_getDriverInfo
+- uid: WPC.Product.EthanT.Sys_getGateway(System.Int32)
+  name: Sys_getGateway(Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getGateway_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_getGateway(System.Int32)
+  fullName: WPC.Product.EthanT.Sys_getGateway(System.Int32)
+  nameWithType: EthanT.Sys_getGateway(Int32)
+- uid: WPC.Product.EthanT.Sys_getGateway*
+  name: Sys_getGateway
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getGateway_
+  commentId: Overload:WPC.Product.EthanT.Sys_getGateway
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_getGateway
+  nameWithType: EthanT.Sys_getGateway
+- uid: WPC.Product.EthanT.Sys_getIPAddrAndSubmask(System.Int32)
+  name: Sys_getIPAddrAndSubmask(Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getIPAddrAndSubmask_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_getIPAddrAndSubmask(System.Int32)
+  fullName: WPC.Product.EthanT.Sys_getIPAddrAndSubmask(System.Int32)
+  nameWithType: EthanT.Sys_getIPAddrAndSubmask(Int32)
+- uid: WPC.Product.EthanT.Sys_getIPAddrAndSubmask*
+  name: Sys_getIPAddrAndSubmask
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EthanT.Sys_getIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_getIPAddrAndSubmask
+  nameWithType: EthanT.Sys_getIPAddrAndSubmask
+- uid: WPC.Product.EthanT.Sys_getMACAddr(System.Int32)
+  name: Sys_getMACAddr(Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getMACAddr_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_getMACAddr(System.Int32)
+  fullName: WPC.Product.EthanT.Sys_getMACAddr(System.Int32)
+  nameWithType: EthanT.Sys_getMACAddr(Int32)
+- uid: WPC.Product.EthanT.Sys_getMACAddr*
+  name: Sys_getMACAddr
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getMACAddr_
+  commentId: Overload:WPC.Product.EthanT.Sys_getMACAddr
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_getMACAddr
+  nameWithType: EthanT.Sys_getMACAddr
+- uid: WPC.Product.EthanT.Sys_getMode(System.Int32,System.Int32)
+  name: Sys_getMode(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_getMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_getMode(System.Int32, System.Int32)
+  nameWithType: EthanT.Sys_getMode(Int32, Int32)
+- uid: WPC.Product.EthanT.Sys_getMode*
+  name: Sys_getMode
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getMode_
+  commentId: Overload:WPC.Product.EthanT.Sys_getMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_getMode
+  nameWithType: EthanT.Sys_getMode
+- uid: WPC.Product.EthanT.Sys_getRTC(System.Int32)
+  name: Sys_getRTC(Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getRTC_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_getRTC(System.Int32)
+  fullName: WPC.Product.EthanT.Sys_getRTC(System.Int32)
+  nameWithType: EthanT.Sys_getRTC(Int32)
+- uid: WPC.Product.EthanT.Sys_getRTC*
+  name: Sys_getRTC
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getRTC_
+  commentId: Overload:WPC.Product.EthanT.Sys_getRTC
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_getRTC
+  nameWithType: EthanT.Sys_getRTC
+- uid: WPC.Product.EthanT.Sys_getSerialNumber(System.Int32)
+  name: Sys_getSerialNumber(Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getSerialNumber_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_getSerialNumber(System.Int32)
+  fullName: WPC.Product.EthanT.Sys_getSerialNumber(System.Int32)
+  nameWithType: EthanT.Sys_getSerialNumber(Int32)
+- uid: WPC.Product.EthanT.Sys_getSerialNumber*
+  name: Sys_getSerialNumber
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_getSerialNumber_
+  commentId: Overload:WPC.Product.EthanT.Sys_getSerialNumber
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_getSerialNumber
+  nameWithType: EthanT.Sys_getSerialNumber
+- uid: WPC.Product.EthanT.Sys_reboot(System.Int32)
+  name: Sys_reboot(Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_reboot_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_reboot(System.Int32)
+  fullName: WPC.Product.EthanT.Sys_reboot(System.Int32)
+  nameWithType: EthanT.Sys_reboot(Int32)
+- uid: WPC.Product.EthanT.Sys_reboot*
+  name: Sys_reboot
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_reboot_
+  commentId: Overload:WPC.Product.EthanT.Sys_reboot
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_reboot
+  nameWithType: EthanT.Sys_reboot
+- uid: WPC.Product.EthanT.Sys_rebootOnBootloader(System.Int32)
+  name: Sys_rebootOnBootloader(Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_rebootOnBootloader_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_rebootOnBootloader(System.Int32)
+  fullName: WPC.Product.EthanT.Sys_rebootOnBootloader(System.Int32)
+  nameWithType: EthanT.Sys_rebootOnBootloader(Int32)
+- uid: WPC.Product.EthanT.Sys_rebootOnBootloader*
+  name: Sys_rebootOnBootloader
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_rebootOnBootloader_
+  commentId: Overload:WPC.Product.EthanT.Sys_rebootOnBootloader
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_rebootOnBootloader
+  nameWithType: EthanT.Sys_rebootOnBootloader
+- uid: WPC.Product.EthanT.Sys_setAIOMode(System.Int32,System.Int32)
+  name: Sys_setAIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setAIOMode(System.Int32, System.Int32)
+  nameWithType: EthanT.Sys_setAIOMode(Int32, Int32)
+- uid: WPC.Product.EthanT.Sys_setAIOMode*
+  name: Sys_setAIOMode
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setAIOMode_
+  commentId: Overload:WPC.Product.EthanT.Sys_setAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setAIOMode
+  nameWithType: EthanT.Sys_setAIOMode
+- uid: WPC.Product.EthanT.Sys_setDIMode(System.Int32,System.Int32)
+  name: Sys_setDIMode(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setDIMode(System.Int32, System.Int32)
+  nameWithType: EthanT.Sys_setDIMode(Int32, Int32)
+- uid: WPC.Product.EthanT.Sys_setDIMode*
+  name: Sys_setDIMode
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setDIMode_
+  commentId: Overload:WPC.Product.EthanT.Sys_setDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setDIMode
+  nameWithType: EthanT.Sys_setDIMode
+- uid: WPC.Product.EthanT.Sys_setDIOMode(System.Int32,System.Int32)
+  name: Sys_setDIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setDIOMode(System.Int32, System.Int32)
+  nameWithType: EthanT.Sys_setDIOMode(Int32, Int32)
+- uid: WPC.Product.EthanT.Sys_setDIOMode*
+  name: Sys_setDIOMode
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setDIOMode_
+  commentId: Overload:WPC.Product.EthanT.Sys_setDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setDIOMode
+  nameWithType: EthanT.Sys_setDIOMode
+- uid: WPC.Product.EthanT.Sys_setDOMode(System.Int32,System.Int32)
+  name: Sys_setDOMode(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setDOMode(System.Int32, System.Int32)
+  nameWithType: EthanT.Sys_setDOMode(Int32, Int32)
+- uid: WPC.Product.EthanT.Sys_setDOMode*
+  name: Sys_setDOMode
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setDOMode_
+  commentId: Overload:WPC.Product.EthanT.Sys_setDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setDOMode
+  nameWithType: EthanT.Sys_setDOMode
+- uid: WPC.Product.EthanT.Sys_setIdleMode(System.Int32,System.Int32)
+  name: Sys_setIdleMode(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setIdleMode(System.Int32, System.Int32)
+  nameWithType: EthanT.Sys_setIdleMode(Int32, Int32)
+- uid: WPC.Product.EthanT.Sys_setIdleMode*
+  name: Sys_setIdleMode
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setIdleMode_
+  commentId: Overload:WPC.Product.EthanT.Sys_setIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setIdleMode
+  nameWithType: EthanT.Sys_setIdleMode
+- uid: WPC.Product.EthanT.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  name: Sys_setIPAddrAndSubmask(String, String, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setIPAddrAndSubmask_System_String_System_String_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setIPAddrAndSubmask(System.String, System.String, System.Int32)
+  nameWithType: EthanT.Sys_setIPAddrAndSubmask(String, String, Int32)
+- uid: WPC.Product.EthanT.Sys_setIPAddrAndSubmask*
+  name: Sys_setIPAddrAndSubmask
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EthanT.Sys_setIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setIPAddrAndSubmask
+  nameWithType: EthanT.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EthanT.Sys_setMotionMode(System.Int32,System.Int32)
+  name: Sys_setMotionMode(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setMotionMode(System.Int32, System.Int32)
+  nameWithType: EthanT.Sys_setMotionMode(Int32, Int32)
+- uid: WPC.Product.EthanT.Sys_setMotionMode*
+  name: Sys_setMotionMode
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setMotionMode_
+  commentId: Overload:WPC.Product.EthanT.Sys_setMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setMotionMode
+  nameWithType: EthanT.Sys_setMotionMode
+- uid: WPC.Product.EthanT.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setRTC(System.Int32, System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: EthanT.Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Product.EthanT.Sys_setRTC*
+  name: Sys_setRTC
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setRTC_
+  commentId: Overload:WPC.Product.EthanT.Sys_setRTC
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setRTC
+  nameWithType: EthanT.Sys_setRTC
+- uid: WPC.Product.EthanT.Sys_setSwitchMode(System.Int32,System.Int32)
+  name: Sys_setSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Sys_setSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Sys_setSwitchMode(System.Int32, System.Int32)
+  nameWithType: EthanT.Sys_setSwitchMode(Int32, Int32)
+- uid: WPC.Product.EthanT.Sys_setSwitchMode*
+  name: Sys_setSwitchMode
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setSwitchMode_
+  commentId: Overload:WPC.Product.EthanT.Sys_setSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Sys_setSwitchMode
+  nameWithType: EthanT.Sys_setSwitchMode
+- uid: WPC.Product.EthanT.Thermal_close(System.Int32,System.Int32)
+  name: Thermal_close(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Thermal_close(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Thermal_close(System.Int32, System.Int32)
+  nameWithType: EthanT.Thermal_close(Int32, Int32)
+- uid: WPC.Product.EthanT.Thermal_close*
+  name: Thermal_close
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_close_
+  commentId: Overload:WPC.Product.EthanT.Thermal_close
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Thermal_close
+  nameWithType: EthanT.Thermal_close
+- uid: WPC.Product.EthanT.Thermal_getStatus(System.Int32,System.Int32,System.Int32)
+  name: Thermal_getStatus(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_getStatus_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Thermal_getStatus(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Thermal_getStatus(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanT.Thermal_getStatus(Int32, Int32, Int32)
+- uid: WPC.Product.EthanT.Thermal_getStatus*
+  name: Thermal_getStatus
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_getStatus_
+  commentId: Overload:WPC.Product.EthanT.Thermal_getStatus
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Thermal_getStatus
+  nameWithType: EthanT.Thermal_getStatus
+- uid: WPC.Product.EthanT.Thermal_open(System.Int32,System.Int32)
+  name: Thermal_open(Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Thermal_open(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Thermal_open(System.Int32, System.Int32)
+  nameWithType: EthanT.Thermal_open(Int32, Int32)
+- uid: WPC.Product.EthanT.Thermal_open*
+  name: Thermal_open
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_open_
+  commentId: Overload:WPC.Product.EthanT.Thermal_open
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Thermal_open
+  nameWithType: EthanT.Thermal_open
+- uid: WPC.Product.EthanT.Thermal_readSensor(System.Int32,System.Int32,System.Int32)
+  name: Thermal_readSensor(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_readSensor_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Thermal_readSensor(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Thermal_readSensor(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanT.Thermal_readSensor(Int32, Int32, Int32)
+- uid: WPC.Product.EthanT.Thermal_readSensor*
+  name: Thermal_readSensor
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_readSensor_
+  commentId: Overload:WPC.Product.EthanT.Thermal_readSensor
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Thermal_readSensor
+  nameWithType: EthanT.Thermal_readSensor
+- uid: WPC.Product.EthanT.Thermal_setOverSampling(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Thermal_setOverSampling(Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_setOverSampling_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Thermal_setOverSampling(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Thermal_setOverSampling(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanT.Thermal_setOverSampling(Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EthanT.Thermal_setOverSampling*
+  name: Thermal_setOverSampling
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_setOverSampling_
+  commentId: Overload:WPC.Product.EthanT.Thermal_setOverSampling
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Thermal_setOverSampling
+  nameWithType: EthanT.Thermal_setOverSampling
+- uid: WPC.Product.EthanT.Thermal_setType(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Thermal_setType(Int32, Int32, Int32, Int32)
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_setType_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanT.Thermal_setType(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanT.Thermal_setType(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanT.Thermal_setType(Int32, Int32, Int32, Int32)
+- uid: WPC.Product.EthanT.Thermal_setType*
+  name: Thermal_setType
+  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Thermal_setType_
+  commentId: Overload:WPC.Product.EthanT.Thermal_setType
+  isSpec: "True"
+  fullName: WPC.Product.EthanT.Thermal_setType
+  nameWithType: EthanT.Thermal_setType
 - uid: WPC.Product.STEM
   name: STEM
   href: api/WPC.Product.STEM.html
