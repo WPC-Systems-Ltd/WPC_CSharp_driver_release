@@ -53,6 +53,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Module.IAI24BitModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Module.IAI24BitModule.html",
+          "hash": "7NQ4gstNHZrcHSVzXJVtrSiPbRfJ62CnYH4KjR8sNqE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WPC.Module.IAIModule.yml",
       "output": {
         ".html": {
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.html",
-          "hash": "HvI+CpW7bjr9RTFZtTZQBwRqO7a0DtksMAr4inS4uIU="
+          "hash": "jMwXgdz6BWmZBS9OB0dGHw8egMWcoez3X0jpAzb1pnk="
         }
       },
       "is_incremental": true,
@@ -341,6 +353,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Product.EthanI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Product.EthanI.html",
+          "hash": "TDDGyUP9566CNbs5U5T3hoiKqkc3CdTSGmbVnIWfLrY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WPC.Product.EthanL.yml",
       "output": {
         ".html": {
@@ -358,6 +382,18 @@
         ".html": {
           "relative_path": "api/WPC.Product.EthanO.html",
           "hash": "4JNw5gzimM+PhSZuJqK8osgiUAxyCG3zdp1Y47h7n1w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Product.EthanT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Product.EthanT.html",
+          "hash": "oSrTQJ0epT1ECkb2XZ97klqw/AXlZMu3xlZhwlLsnPs="
         }
       },
       "is_incremental": true,
@@ -489,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.html",
-          "hash": "xfHqKNm1h7B4GfXlynRWPGtxlplwoZ31i8tpZzBnp5c="
+          "hash": "3qOCqP2YFj/XsqLaHk1C3+e+/KHz1pKubaFtQCq82sc="
         }
       },
       "is_incremental": true,
@@ -513,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "JQIjVtPcYPaMetT4Btb+lJGbwUwS3+ZVrdwZfx5UQ40="
+          "hash": "miQBnl5RvMP/og+Vi3sN+sy/4fwaOIDiQAsPt2hfTHg="
         }
       },
       "is_incremental": false,
@@ -525,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/README.html",
-          "hash": "t/3GwiNhaLBnr8xgvQvCOhxHEESv8U8uc6UwJaXMk2Y="
+          "hash": "SuCvuuxd8kUoQWmsD3yTH00P2uYKDvR+kOg0p/ljnlk="
         }
       },
       "is_incremental": true,
@@ -537,19 +573,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/feature_product.html",
-          "hash": "9+tE6F/fJYUKpUpLgYFX2vCOBUDpE6LROXYlwiHI7VY="
+          "hash": "Sl86fY6j3Di4zc8uzO8PjAJixnLdd7X8f9FwYK4MgFw="
         }
       },
       "is_incremental": true,
       "version": ""
     },
     {
+      "log_codes": [
+        "invalid-tab-group"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/appendix/pinout_product.md",
       "output": {
         ".html": {
           "relative_path": "articles/appendix/pinout_product.html",
-          "hash": "3XI0bo3A4EeyNmijh1LE8ub2PnPC+9uW+LjunwRdDFQ="
+          "hash": "ZFarl55PiQpI8SvQop9EtxTReRiPM6Puol3vGnQWym0="
         }
       },
       "is_incremental": true,
@@ -573,7 +612,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_port.html",
-          "hash": "V894nOZXyZRAuu0sLhO71GqsofA+dvXspGNLI7AtAU4="
+          "hash": "z5dL6aHpFChmyEkSiWYcH2BvRZ6cpjmz928pQYTzoto="
         }
       },
       "is_incremental": true,
@@ -701,6 +740,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/EthanI/EthanI_AI.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/EthanI/EthanI_AI.html",
+          "hash": "4DrNneSQc0SD73Xed7UJYZ7hWQLTxGxwQP5emIK8x/o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/EthanI/EthanI_System_ETH.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/EthanI/EthanI_System_ETH.html",
+          "hash": "g4YoeLDiwNHtrbcqv6WU94+vSuHND4aZ1FJvNReFXxQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/EthanL/EthanL_Relay.md",
       "output": {
         ".html": {
@@ -742,6 +805,30 @@
         ".html": {
           "relative_path": "articles/example_md/EthanO/EthanO_System_ETH.html",
           "hash": "qvxQ5GzY/9LpcruOjuiHrRKMLfXOZ8ooTDvhQCX8ln8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/EthanT/EthanT_System_ETH.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/EthanT/EthanT_System_ETH.html",
+          "hash": "wXD94su05HZtOkVL7VK7pRSUNHs4EjHERsWwqlZEnpQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/EthanT/EthanT_Temperature_TC.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/EthanT/EthanT_Temperature_TC.html",
+          "hash": "B/x1UQDAoMFQaLE9Vj0gqot0fkOOT76zuEAHQZz7WNU="
         }
       },
       "is_incremental": true,
@@ -1317,7 +1404,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "Fn7gB6/cwz7Gc9W22+f9wRm57mp2oYBGg0nD3dCcL0I="
+          "hash": "tvSwYOGS4ntUBaI0kZQVAX/ApYGKrRIRAkBV+oeIA8c="
         }
       },
       "is_incremental": false,
@@ -1369,6 +1456,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Pinouts/pinout-EthanI.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Pinouts/pinout-EthanI.JPG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/Pinouts/pinout-EthanL.jpg",
       "output": {
         "resource": {
@@ -1384,6 +1482,17 @@
       "output": {
         "resource": {
           "relative_path": "images/Pinouts/pinout-EthanO.JPG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Pinouts/pinout-EthanT.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Pinouts/pinout-EthanT.JPG"
         }
       },
       "is_incremental": false,
@@ -1545,6 +1654,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Products/product-EthanI.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Products/product-EthanI.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/Products/product-EthanL.jpg",
       "output": {
         "resource": {
@@ -1560,6 +1680,17 @@
       "output": {
         "resource": {
           "relative_path": "images/Products/product-EthanO.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Products/product-EthanT.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Products/product-EthanT.jpg"
         }
       },
       "is_incremental": false,
@@ -1755,14 +1886,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 67,
-          "skipped_file_count": 67
+          "total_file_count": 71,
+          "skipped_file_count": 71
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 41,
-          "skipped_file_count": 41
+          "total_file_count": 44,
+          "skipped_file_count": 44
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

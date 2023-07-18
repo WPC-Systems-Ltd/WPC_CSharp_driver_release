@@ -1,6 +1,11 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.4 Date: 2023/07/18, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New product: `EthanI` & `EthanT`
+
 v0.2.3 Date: 2023/07/17, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
