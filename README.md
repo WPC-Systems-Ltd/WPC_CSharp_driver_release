@@ -1,11 +1,15 @@
 # Overview
 
-**WPC CSharp driver**, also known as cswpc, supports .NET 6.0 with compatibility and completeness.
+Welcome to **WPC CSharp driver release** API documentation. It is an easy-to-use open-source tool for beginners. 
 
-It contains APIs for interacting with basically WPC DAQ cards or any other WPC USB, WiFi and Ethernet based devices.
+We provide excellent example codes to help you quickly get started with our products, connecting code to real-world usage. This makes it a great way to learn.
 
-Some API functions in the package may not compatible with earlier versions of WPC DAQ firmware. To update device firmware to the latest version, please use WPC Device Manager and [LabVIEW Run-time engine](https://drive.google.com/file/d/1Uj6r65KhNxvuApiqrMkZp-NWyq-Eek-k/view).
-You can download WPC Device Manager by visiting [WPC Systems Ltd. official website](http://www.wpc.com.tw/36039260092584721462-daq1.html).
+Therefore, we highly recommend using our driver because it is simple to use. Just open, read/write, and close - allowing you to access or update data with ease. 
+
+Adding WPC CSharp driver to your toolkit not only simplifies tasks but also provides a practical learning experience that bridges theory and real-world application.
+
+Last but not least, it is a valuable resource for both learning and working efficiently.
+ 
 
 [![nuget](https://img.shields.io/nuget/v/cswpc)](https://www.nuget.org/packages/cswpc)
 [![Downloads](https://img.shields.io/nuget/dt/cswpc?color=%20)](https://www.nuget.org/packages/cswpc)
@@ -15,14 +19,6 @@ You can download WPC Device Manager by visiting [WPC Systems Ltd. official websi
 
 > [!Note]
 > Make sure the latest version of firmware is up to date with your products.
-
-|                   |                 Link                                                            |
-|:------------------|:--------------------------------------------------------------------------------|
-| WPC official site | http://www.wpc.com.tw/                                                          |
-| GitHub			      | https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release                    |
-| User guide        | https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/                    |
-| Example code      | https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples |
-
 
 # Install toolkit
 
@@ -57,94 +53,10 @@ foreach (var item in Constant.HANDLE_LIST)
   Console.WriteLine($"{item}");
 }
 ```
-
-# Products
-
-Controller
-- STEM
-
-Ethernet motor drive
-- Edrive-ST
-
-Ethernet based motion card
-- EMotion
-
-Ethernet based DAQ card
-- Ethan-A
-- Ethan-D
-- Ethan-I
-- Ethan-L
-- Ethan-O
-- Ethan-T
-
-USB interface DAQ card
-- USB-DAQ-F1-D (Digital)
-- USB-DAQ-F1-DSNK (24V Digital)
-- USB-DAQ-F1-AD (Digital + AI)
-- USB-DAQ-F1-TD (Digital + Thermocouple)
-- USB-DAQ-F1-RD (Digital + RTD)
-- USB-DAQ-F1-CD (Digital + CAN)
-- USB-DAQ-F1-AOD (Digital + AI + AO)
-
-Wifi based DAQ card
-- Wifi-DAQ-E3-A
-- Wifi-DAQ-F4-A
-
-# I/O port function table
-
-### EMotion & Motor driver series
-
-| Product/module  | Motion | Drive |
-|:----------------|:-------|:------|
-| EMotion         | 0      | -     |
-| Edrive-ST       | -      | 0     |
-
-
-### STEM series
-
-| Product/module  | AI  | AO  | DI | DO |
-|:----------------|:----|:----|:---|:---|
-| STEM            |1,2,4|1,2,4|0~7 |0~7 |
-
-In the `STEM` product, the values 1, 2, and 4 are used to represent the slots in the AIO.
-Additionally, the DIO ports 0 to 1 are assigned to slot 1, while ports 2 to 3 are assigned to slot 2.
-
-### Ethan & Wifi series 
-
-| Product/module  | AI  | AO  | DI | DO | TC |
-|:----------------|:----|:----|:---|:---|:--:|
-| Ethan-A         | 0   | -   | -  | -  |-   |
-| Ethan-D         | -   | -   | 1  | 0  |-   |
-| Ethan-I         | 0   | -   | -  | -  |-   |
-| Ethan-L         | -   | -   | -  | 0  |-   |
-| Ethan-O         | -   | 0   | -  | -  |-   |
-| Ethan-T         | -   | -   | -  | -  |1   |
-| Wifi-DAQ-E3-A   | 0   | -   | -  | -  |-   |
-| Wifi-DAQ-F4-A   | 0   | -   | -  | -  |-   |
-
-
-### USB series
-
-| Product/module  | AI  | AO  | DI         | DO         | CAN | UART | SPI | I2C  | RTD | TC |
-|:----------------|:---:|:---:|:----------:|:----------:|:---:|:----:|:---:|:----:|:---:|:--:|
-| USB-DAQ-F1-D    | -   | -   | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |1, 2 | 1, 2 | -   |-   |
-| USB-DAQ-F1-DSNK | -   | -   | 0, 1       | 2, 3       |-    |-     |-    |-     | -   |-   |
-| USB-DAQ-F1-AD   | 0   | -   | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |2    | 1, 2 | -   |-   |
-| USB-DAQ-F1-TD   | -   | -   | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |2    | 1, 2 | -   |1   |
-| USB-DAQ-F1-RD   | -   | -   | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |2    | 1, 2 | 1   |-   |
-| USB-DAQ-F1-CD   | -   | -   | 0, 1, 2, 3 | 0, 1, 2, 3 |1    |1, 2  |2    | 1, 2 | -   |-   |
-| USB-DAQ-F1-AOD  | 0   | 0   | 0, 1, 2, 3 | 0, 1, 2, 3 |-    |1, 2  |-    | 1, 2 | -   |-   |
-
-Remark: `TC` stands for `Thermocouple`
-
-Take `USB-DAQ-F1-AOD` for example:
-- Port 0 is available for `AI`
-- Port 2 is available for `DI`
-- Ports 0 & 1 are available for `DO`
-- Port 2 is available for `UART`
-
+ 
 # References
-- [User manual - WPC CSharp driver](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/)
+- [GitHub](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release) 
+- [Documentation - WPC CSharp driver](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/)
 - [How to install Visual Studio IDE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-install-Visual-Studio-IDE)
 - [How to start up a new project with cswpc package](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-start-up-a-new-project-with-cswpc-package)
 - [How to build your own C# codes into EXE files](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-build-your-own-C%23-codes-into-EXE-files)
