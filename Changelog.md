@@ -1,6 +1,14 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.5 Date: 2023/09/06, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- API: Wifi_setBandwidth
+
+### Fixed
+- README.md
+ 
 v0.2.4 Date: 2023/07/18, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

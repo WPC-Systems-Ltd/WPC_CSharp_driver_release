@@ -2720,6 +2720,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IWifiModule.Wifi_readRSSI
   nameWithType: IWifiModule.Wifi_readRSSI
+- uid: WPC.Module.IWifiModule.Wifi_setWifiBandWidth(System.Int32,System.Int32)
+  name: Wifi_setWifiBandWidth(Int32, Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setWifiBandWidth_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_setWifiBandWidth(System.Int32,System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_setWifiBandWidth(System.Int32, System.Int32)
+  nameWithType: IWifiModule.Wifi_setWifiBandWidth(Int32, Int32)
+- uid: WPC.Module.IWifiModule.Wifi_setWifiBandWidth*
+  name: Wifi_setWifiBandWidth
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setWifiBandWidth_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_setWifiBandWidth
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_setWifiBandWidth
+  nameWithType: IWifiModule.Wifi_setWifiBandWidth
 - uid: WPC.Product
   name: WPC.Product
   href: api/WPC.Product.html
@@ -15163,6 +15176,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Wifi_readThermo
   nameWithType: WifiDAQE3A.Wifi_readThermo
+- uid: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
+  name: Wifi_setWifiBandWidth(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setWifiBandWidth_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_setWifiBandWidth(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth*
+  name: Wifi_setWifiBandWidth
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setWifiBandWidth_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth
+  nameWithType: WifiDAQE3A.Wifi_setWifiBandWidth
 - uid: WPC.Product.WifiDAQF4A
   name: WifiDAQF4A
   href: api/WPC.Product.WifiDAQF4A.html
@@ -15726,3 +15752,16 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Wifi_readThermo
   nameWithType: WifiDAQF4A.Wifi_readThermo
+- uid: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
+  name: Wifi_setWifiBandWidth(Int32, Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setWifiBandWidth_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth(System.Int32, System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_setWifiBandWidth(Int32, Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth*
+  name: Wifi_setWifiBandWidth
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setWifiBandWidth_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth
+  nameWithType: WifiDAQF4A.Wifi_setWifiBandWidth
