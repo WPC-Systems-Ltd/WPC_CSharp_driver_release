@@ -1,6 +1,16 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.6 Date: 2023/09/26, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New modules: Counter and PWM
+- New example code: Counter and PWM
+- table_channel.md
+
+### Changed
+- USB DAQ series's pinout with PWM & channel supported
+
 v0.2.5 Date: 2023/09/06, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
@@ -8,7 +18,7 @@ v0.2.5 Date: 2023/09/06, Developer: Chunglee_people
 
 ### Fixed
 - README.md
- 
+
 v0.2.4 Date: 2023/07/18, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

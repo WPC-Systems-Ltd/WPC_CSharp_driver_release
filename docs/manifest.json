@@ -113,6 +113,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Module.ICounterModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Module.ICounterModule.html",
+          "hash": "kHDI8hZ9HygldaEo+2/sYt+8kQKI9KgAQcDbeWCsMvo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WPC.Module.IDIOModule.yml",
       "output": {
         ".html": {
@@ -178,6 +190,18 @@
         ".html": {
           "relative_path": "api/WPC.Module.INetworkModule.html",
           "hash": "AYLBXEFoibJnb/5mh9yUavyatNaZpzjW+pM1rciCyAo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Module.IPWMModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Module.IPWMModule.html",
+          "hash": "UNX3O7+a3sZiDKsjf5JqK5t5RN+6PYfiMatPCMBAGmo="
         }
       },
       "is_incremental": true,
@@ -285,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.html",
-          "hash": "jMwXgdz6BWmZBS9OB0dGHw8egMWcoez3X0jpAzb1pnk="
+          "hash": "Ne0AfPGnQcFQiYno0Y+WNoypI3z16sQ1ybDBV8l53+Y="
         }
       },
       "is_incremental": true,
@@ -345,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanD.html",
-          "hash": "t2PYP3uvvKKSe+Uo8zYtpp2c4Y5RiGyhQIin6ZU8tgo="
+          "hash": "Dl/96s9utxz5cuB7bt2YfMXdP+hJCTwyJus0HK0G0Uc="
         }
       },
       "is_incremental": true,
@@ -417,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AD.html",
-          "hash": "4ht9erhGGQE99fM9Lu0Qbgc32+r/NgQJ5iyArpOuVvY="
+          "hash": "javMElV6CmPHClmdMlxkFy6ynp+BvcX0KUeu0pmzkUU="
         }
       },
       "is_incremental": true,
@@ -429,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AOD.html",
-          "hash": "iq979ANyNqSr0C7F9XG3chEm+6dF+XgFKyhUjKxZJbM="
+          "hash": "QjxKGDnkFTLUFeqoajjUJg9FIq0FB4MUr9yI3w7AjqM="
         }
       },
       "is_incremental": true,
@@ -441,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1CD.html",
-          "hash": "BE/pJFrgcDBGbmiV+2DBZaA6XsvdrRB30K7qVvTJDYo="
+          "hash": "hNVeKyAFHMUeL+Jjy4fNRJgLDSsvm2t63t4C0ypbLyc="
         }
       },
       "is_incremental": true,
@@ -453,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1D.html",
-          "hash": "9nqUgVGJS49SOexYSsVVugTir/6FZrwjThC0HwKYU/s="
+          "hash": "tFT/g/kj7H3vm5+rj1ZpKrLSXwoueM0wnvsvyl0UFuU="
         }
       },
       "is_incremental": true,
@@ -465,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1DSNK.html",
-          "hash": "3QtI6LGXANBlbCxCX6oSQJ70NEddrW0/mq+EQekqE8Y="
+          "hash": "dCJEB9NstABiRpALjPGWj6PmV0lVDI/jadvWklQDRbk="
         }
       },
       "is_incremental": true,
@@ -477,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1RD.html",
-          "hash": "1GRjnBtZG9gIDsc3F+wUUKscpDptfaDpG+TrhYjB7+Q="
+          "hash": "75GyTc76kxu6Lih8yQFWn3kDAbrAakvLw5HT0b6lUSk="
         }
       },
       "is_incremental": true,
@@ -489,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1TD.html",
-          "hash": "RrzLxLTEvxsKlQUyYvP8rXiANaEOpfoMCoAZq64ss+A="
+          "hash": "mzSP4EZ0rqTQWMlLXjSg8rm2PEmTBRvZDWUw5TL3XHY="
         }
       },
       "is_incremental": true,
@@ -549,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "miQBnl5RvMP/og+Vi3sN+sy/4fwaOIDiQAsPt2hfTHg="
+          "hash": "T7st0wNm5DGhLv60oV8yDG26H24fJ8Ot8/3L/VuJuLo="
         }
       },
       "is_incremental": false,
@@ -561,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/README.html",
-          "hash": "V7MJ0AoJh4SXHCUGgQOdczE/Q8F4YseHbtul4SFHNtI="
+          "hash": "qr2DEjlY76IjAV1/V9qcXXnbIveFBfFx5cxOlHn2RCE="
         }
       },
       "is_incremental": true,
@@ -588,7 +612,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/pinout_product.html",
-          "hash": "ZFarl55PiQpI8SvQop9EtxTReRiPM6Puol3vGnQWym0="
+          "hash": "fXUf0IHBnCXj4VSfaa+9iKE6LM7N7dYj00ETqjqiwRA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/appendix/table_channel.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/appendix/table_channel.html",
+          "hash": "uMKt72myaW0HWeZNQ9zgNIBu6KrFvS0Dsa/VzGNoEIM="
         }
       },
       "is_incremental": true,
@@ -728,6 +764,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/EthanD/EthanD_PWM.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/EthanD/EthanD_PWM.html",
+          "hash": "Ocp0cZXNVUqqvXFpYEVlZ8frKXmAFAjfNZXJ6SNPhzo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/EthanD/EthanD_System_ETH.md",
       "output": {
         ".html": {
@@ -740,11 +788,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/example_md/EthanI/EthanI_AI.md",
+      "source_relative_path": "articles/example_md/EthanI/EthanI_AI24.md",
       "output": {
         ".html": {
-          "relative_path": "articles/example_md/EthanI/EthanI_AI.html",
-          "hash": "4DrNneSQc0SD73Xed7UJYZ7hWQLTxGxwQP5emIK8x/o="
+          "relative_path": "articles/example_md/EthanI/EthanI_AI24.html",
+          "hash": "8oUz1La03Xy3tjRe4JXVWbeLYxelLBdCupWqUTOAPuc="
         }
       },
       "is_incremental": true,
@@ -908,6 +956,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_Counter.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_Counter.html",
+          "hash": "PxoR9MzTYwPoYU2wpM7C7cbOC3KwUHvb4YKFkSCygBU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_DIO.md",
       "output": {
         ".html": {
@@ -925,6 +985,18 @@
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_I2C.html",
           "hash": "3bx2lrKwmwonvOvr5e0MN2hubN5W+1yA+2dHKySEyhU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_PWM.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_PWM.html",
+          "hash": "CcbDuoL1R6HBV7M7M6j1VFrPvUeHvZ9WDdaYXiB6QbQ="
         }
       },
       "is_incremental": true,
@@ -1004,6 +1076,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_Counter.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_Counter.html",
+          "hash": "eTJ9tHVQ2lK2Nrq1ld+1/cF9tGoopL6lZPF/n+xdhfo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_DIO.md",
       "output": {
         ".html": {
@@ -1021,6 +1105,18 @@
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_I2C.html",
           "hash": "t2okyyXE5YTwwvZytabPdvRVe2L0M6Md1sTHVf4MIZg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_PWM.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_PWM.html",
+          "hash": "b5MxgKR1GftU/vdP1w8Q/Ml0fEZKVNjxxQ8j8SyqiHI="
         }
       },
       "is_incremental": true,
@@ -1064,6 +1160,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_Counter.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_Counter.html",
+          "hash": "3u4WVtb2pCIaG6fFv7r5QJiSB9WxJ5eQjDe2Fy4jBcQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_DIO.md",
       "output": {
         ".html": {
@@ -1081,6 +1189,18 @@
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_I2C.html",
           "hash": "h6clWHiacgJ1WP1REVDagAWH+vFDdajAL1pIAYdp5CA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_PWM.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_PWM.html",
+          "hash": "cAv20HJcZwXtOv9oHi6hxK11n4kUuX5kpZHihWL08qc="
         }
       },
       "is_incremental": true,
@@ -1124,6 +1244,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_Counter.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_Counter.html",
+          "hash": "8aYemz5PrFasHEmwHXBOsb4aL0dBineVomlr39Cfdkk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_DIO.md",
       "output": {
         ".html": {
@@ -1141,6 +1273,18 @@
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_I2C.html",
           "hash": "7so+oQMFJYS2NrZjs+nQyOQAPtxgnWlDZYtZlPweLbM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_PWM.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_PWM.html",
+          "hash": "Ii+HUufcVi0WvTfNduQUEDQt946butS0fyWdiBa6TWE="
         }
       },
       "is_incremental": true,
@@ -1184,6 +1328,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_Counter.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_Counter.html",
+          "hash": "69yUZKDRodLOp9fnGWFwzQb45W6bk30iG+NKF4ibwwQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_DIO.md",
       "output": {
         ".html": {
@@ -1196,11 +1352,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_PWM.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_PWM.html",
+          "hash": "0t6wXEhh7IhxWmu6/LQ/vLlhbAsDD0Q6FcmEyQkNTNk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_System_USB.md",
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_System_USB.html",
           "hash": "S/dwnIDVDyItsngUti7Z4nitQJbxj5xvI56NX5jQhBE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_Counter.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_Counter.html",
+          "hash": "n0TeA3BmEh5mKjWB6YD96I5jLQarOmRhFTdrrfcNHEE="
         }
       },
       "is_incremental": true,
@@ -1225,6 +1405,18 @@
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_I2C.html",
           "hash": "sMcf83oz3r89AI18mu/jSi6fcd3GXGpuyHHcFcIDCsI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_PWM.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_PWM.html",
+          "hash": "fk57XXfKGJ1KNNgdADwCR3W4CxubDEjiRv5RtRD0T7U="
         }
       },
       "is_incremental": true,
@@ -1280,6 +1472,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_Counter.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_Counter.html",
+          "hash": "z7WUtkFiD6AT2+z8X+5grPdaeHyw+zdq7Ad6IIKudzo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_DIO.md",
       "output": {
         ".html": {
@@ -1297,6 +1501,18 @@
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_I2C.html",
           "hash": "NDPF3RnxC5nIZmjODXXl3uYzLuvmuCVyOiAb3yjF3xI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_PWM.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_PWM.html",
+          "hash": "9u6zHnKWWVlVqLwaSnE+2sBw6Qe48WtbDPmdJccPW4Y="
         }
       },
       "is_incremental": true,
@@ -1399,12 +1615,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "tvSwYOGS4ntUBaI0kZQVAX/ApYGKrRIRAkBV+oeIA8c="
+          "hash": "Fsu7DThmJsOcg4ue/iVaop+3HmNsdC7/PuhinYsXHpM="
         }
       },
       "is_incremental": false,
@@ -1511,10 +1730,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQF1AD.jpg",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1AD.JPG",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQF1AD.jpg"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1AD.JPG"
         }
       },
       "is_incremental": false,
@@ -1886,14 +2105,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 71,
-          "skipped_file_count": 71
+          "total_file_count": 87,
+          "skipped_file_count": 87
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 44,
-          "skipped_file_count": 44
+          "total_file_count": 46,
+          "skipped_file_count": 46
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
