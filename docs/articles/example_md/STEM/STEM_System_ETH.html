@@ -125,7 +125,6 @@ class STEM_get_network_info
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-
             // Get serial number &amp; RTC Time
             string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
             string RTC = dev.Sys_getRTC();

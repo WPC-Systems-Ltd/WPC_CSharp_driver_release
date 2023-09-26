@@ -48,7 +48,6 @@ class EthanO_get_network_info
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-
             // Get serial number & RTC Time
             string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
             string RTC = dev.Sys_getRTC();
