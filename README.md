@@ -1,15 +1,15 @@
 # Overview
 
-Welcome to **WPC CSharp driver release** API documentation. It is an easy-to-use open-source tool for beginners. 
+Welcome to **WPC CSharp driver** API documentation. It is an easy-to-use open-source tool for beginners.
 
 We provide excellent example codes to help you quickly get started with our products, connecting code to real-world usage. This makes it a great way to learn.
 
-Therefore, we highly recommend using our driver because it is simple to use. Just open, read/write, and close - allowing you to access or update data with ease. 
+Therefore, we highly recommend using our driver because it is simple to use. Just open, read/write, and close - allowing you to access or update data with ease.
 
 Adding WPC CSharp driver to your toolkit not only simplifies tasks but also provides a practical learning experience that bridges theory and real-world application.
 
 Last but not least, it is a valuable resource for both learning and working efficiently.
- 
+
 
 [![nuget](https://img.shields.io/nuget/v/cswpc)](https://www.nuget.org/packages/cswpc)
 [![Downloads](https://img.shields.io/nuget/dt/cswpc?color=%20)](https://www.nuget.org/packages/cswpc)
@@ -53,9 +53,9 @@ foreach (var item in Constant.HANDLE_LIST)
   Console.WriteLine($"{item}");
 }
 ```
- 
+
 # References
-- [GitHub](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release) 
+- [GitHub](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release)
 - [Documentation - WPC CSharp driver](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/)
 - [How to install Visual Studio IDE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-install-Visual-Studio-IDE)
 - [How to start up a new project with cswpc package](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/wiki/How-to-start-up-a-new-project-with-cswpc-package)
@@ -63,6 +63,6 @@ foreach (var item in Constant.HANDLE_LIST)
 
 # License
 
-**WPC CSharp driver release** is licensed under an MIT-style license see
+**WPC CSharp driver** is licensed under an MIT-style license see
 [LICENSE](https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/blob/main/LICENSE). Other incorporated projects may be licensed under different licenses.
 All licenses allow for non-commercial and commercial use.
