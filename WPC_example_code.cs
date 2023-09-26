@@ -10,25 +10,25 @@ public class WPC_example_code
     {
         Console.WriteLine("");
         Console.WriteLine("DeviceFinder, please input 0");
-        Console.WriteLine("STEM, please input 1");  
+        Console.WriteLine("STEM, please input 1");
         Console.WriteLine("Emotion, please input 2");
-        Console.WriteLine("EDrive_ST, please input 3"); 
+        Console.WriteLine("EDrive_ST, please input 3");
         Console.WriteLine("EthanA, please input 10");
         Console.WriteLine("EthanD, please input 11");
         Console.WriteLine("EthanI, please input 12");
         Console.WriteLine("EthanL, please input 13");
         Console.WriteLine("EthanO, please input 14");
         //Console.WriteLine("EthanP, please input 15");
-        Console.WriteLine("EthanT, please input 16"); 
+        Console.WriteLine("EthanT, please input 16");
         Console.WriteLine("USBDAQF1AD, please input 20");
         Console.WriteLine("USBDAQF1AOD, please input 21");
         Console.WriteLine("USBDAQF1CD, please input 22");
         Console.WriteLine("USBDAQF1D, please input 23");
         Console.WriteLine("USBDAQF1DSNK, please input 24");
         Console.WriteLine("USBDAQF1RD, please input 25");
-        Console.WriteLine("USBDAQF1TD, please input 26"); 
+        Console.WriteLine("USBDAQF1TD, please input 26");
         Console.WriteLine("WifiDAQE3A, please input 30");
-        Console.WriteLine("WifiDAQF4A, please input 31"); 
+        Console.WriteLine("WifiDAQF4A, please input 31");
     }
 
     #endregion
@@ -79,7 +79,7 @@ public class WPC_example_code
     {
         Console.WriteLine("");
         Console.WriteLine("For AI");
-        Console.WriteLine("------"); 
+        Console.WriteLine("------");
         Console.WriteLine("Run AI_on_demand_once.cs, please input 8");
     }
 
@@ -258,7 +258,20 @@ public class WPC_example_code
         Console.WriteLine("Run Drive_velocity_blending.cs.cs, please input 304");
         Console.WriteLine("Run Drive_velocity_blending_acceleration.cs.cs, please input 305");
     }
-
+    static void showPWMMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For PWM");
+        Console.WriteLine("--------");
+        Console.WriteLine("Run PWM_generate.cs, please input 400");
+    }
+    static void showCounterMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For counter");
+        Console.WriteLine("--------");
+        Console.WriteLine("Run Counter_read.cs, please input 500");
+    }
     static void Main()
     {
         Console.WriteLine("Welcome to WPC C# driver example code.");
@@ -299,17 +312,18 @@ public class WPC_example_code
                 showDriveMessage();
                 break;
 
-                 
+
             case 10:
                 Console.WriteLine("Get 10, show EthanA series example code");
                 showSysETHMessage();
                 showAIMessage();
                 break;
-               
+
             case 11:
                 Console.WriteLine("Get 11, show EthanD series example code");
                 showSysETHMessage();
                 showDIOMessage();
+                showPWMMessage();
                 break;
 
             case 12:
@@ -344,6 +358,8 @@ public class WPC_example_code
                 showI2CMessage();
                 showSPIMessage();
                 showUARTMessage();
+                showPWMMessage();
+                showCounterMessage();
                 break;
 
             case 21:
@@ -355,6 +371,8 @@ public class WPC_example_code
                 showDIOMessage();
                 showI2CMessage();
                 showUARTMessage();
+                showPWMMessage();
+                showCounterMessage();
                 break;
 
             case 22:
@@ -365,6 +383,8 @@ public class WPC_example_code
                 showSPIMessage();
                 showUARTMessage();
                 showCANMessage();
+                showPWMMessage();
+                showCounterMessage();
                 break;
 
             case 23:
@@ -374,12 +394,16 @@ public class WPC_example_code
                 showI2CMessage();
                 showSPIMessage();
                 showUARTMessage();
+                showPWMMessage();
+                showCounterMessage();
                 break;
 
             case 24:
                 Console.WriteLine("Get 24, show USBDAQF1DSNK series example code");
                 showSysUSBMessage();
                 showDIOMessage();
+                showPWMMessage();
+                showCounterMessage();
                 break;
 
             case 25:
@@ -390,6 +414,8 @@ public class WPC_example_code
                 showSPIMessage();
                 showUARTMessage();
                 showRTDMessage();
+                showPWMMessage();
+                showCounterMessage();
                 break;
 
             case 26:
@@ -400,6 +426,8 @@ public class WPC_example_code
                 showSPIMessage();
                 showUARTMessage();
                 showTCMessage();
+                showPWMMessage();
+                showCounterMessage();
                 break;
 
             case 30:
@@ -411,9 +439,9 @@ public class WPC_example_code
             case 31:
                 Console.WriteLine("Get 31, show WifiDAQF4A series example code");
                 showSysWifiMessage();
-                showAIMessage(); 
+                showAIMessage();
                 break;
-                 
+
             default:
                 break;
         }
@@ -440,7 +468,7 @@ public class WPC_example_code
             case 1:
                 switch (example_code)
                 {
-                    
+
                     #region STEM_Sys
                     case 1:
                         STEM_get_network_info.Main();
@@ -604,13 +632,13 @@ public class WPC_example_code
             case 3:
                 switch (example_code)
                 {
-                    
+
                     #region EDrive_ST_Sys
                     case 1:
                         EDrive_ST_get_network_info.Main();
                         break;
                     #endregion
-                         
+
 
                     #region EDrive_ST_Drive
                     case 300:
@@ -703,6 +731,12 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region EthanD_PWM
+                    case 400:
+                        EthanD_PWM_generate.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -721,7 +755,7 @@ public class WPC_example_code
                     case 8:
                         EthanI_AI_on_demand_once.Main();
                         break;
- 
+
                     #endregion
 
                     default:
@@ -879,6 +913,18 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1AD_PWM
+                    case 400:
+                        USBDAQF1AD_PWM_generate.Main();
+                        break;
+                    #endregion
+
+                    #region USBDAQF1AD_Counter
+                    case 500:
+                        USBDAQF1AD_Counter_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -971,6 +1017,18 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1AOD_PWM
+                    case 400:
+                        USBDAQF1AOD_PWM_generate.Main();
+                        break;
+                    #endregion
+
+                    #region USBDAQF1AOD_Counter
+                    case 500:
+                        USBDAQF1AOD_Counter_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -1039,6 +1097,18 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1CD_PWM
+                    case 400:
+                        USBDAQF1CD_PWM_generate.Main();
+                        break;
+                    #endregion
+
+                    #region USBDAQF1CD_Counter
+                    case 500:
+                        USBDAQF1CD_Counter_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -1098,6 +1168,18 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1D_PWM
+                    case 400:
+                        USBDAQF1D_PWM_generate.Main();
+                        break;
+                    #endregion
+
+                    #region USBDAQF1D_Counter
+                    case 500:
+                        USBDAQF1D_Counter_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -1130,6 +1212,18 @@ public class WPC_example_code
                         break;
                     case 25:
                         USBDAQF1DSNK_DO_write_port.Main();
+                        break;
+                    #endregion
+
+                    #region USBDAQF1DSNK_PWM
+                    case 400:
+                        USBDAQF1DSNK_PWM_generate.Main();
+                        break;
+                    #endregion
+
+                    #region USBDAQF1DSNK_Counter
+                    case 500:
+                        USBDAQF1DSNK_Counter_read.Main();
                         break;
                     #endregion
 
@@ -1204,6 +1298,18 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1RD_PWM
+                    case 400:
+                        USBDAQF1RD_PWM_generate.Main();
+                        break;
+                    #endregion
+
+                    #region USBDAQF1RD_Counter
+                    case 500:
+                        USBDAQF1RD_Counter_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -1273,7 +1379,18 @@ public class WPC_example_code
                     case 82:
                         USBDAQF1TD_TC_read_channel_data_with_logger.Main();
                         break;
+                    #endregion
 
+                    #region USBDAQF1TD_PWM
+                    case 400:
+                        USBDAQF1TD_PWM_generate.Main();
+                        break;
+                    #endregion
+
+                    #region USBDAQF1TD_Counter
+                    case 500:
+                        USBDAQF1TD_Counter_read.Main();
+                        break;
                     #endregion
 
                     default:
@@ -1321,7 +1438,7 @@ public class WPC_example_code
 
             case 31:
                 switch (example_code)
-                { 
+                {
                     #region WifiDAQF4A_Sys
                     case 1:
                         WifiDAQF4A_get_network_info.Main();
@@ -1350,13 +1467,13 @@ public class WPC_example_code
                     case 14:
                         WifiDAQF4A_AI_on_demand_once.Main();
                         break;
-                    #endregion 
+                    #endregion
 
                     default:
                         break;
                 }
                 break;
-                  
+
             default:
                 break;
         }

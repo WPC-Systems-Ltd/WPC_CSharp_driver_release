@@ -694,6 +694,77 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ICANModule.CAN_write
   nameWithType: ICANModule.CAN_write
+- uid: WPC.Module.ICounterModule
+  name: ICounterModule
+  href: api/WPC.Module.ICounterModule.html
+  commentId: T:WPC.Module.ICounterModule
+  fullName: WPC.Module.ICounterModule
+  nameWithType: ICounterModule
+- uid: WPC.Module.ICounterModule.Counter_close(System.Int32,System.Int32)
+  name: Counter_close(Int32, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_close_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_close(System.Int32,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_close(System.Int32, System.Int32)
+  nameWithType: ICounterModule.Counter_close(Int32, Int32)
+- uid: WPC.Module.ICounterModule.Counter_close*
+  name: Counter_close
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_close_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_close
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_close
+  nameWithType: ICounterModule.Counter_close
+- uid: WPC.Module.ICounterModule.Counter_open(System.Int32,System.Int32)
+  name: Counter_open(Int32, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_open_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_open(System.Int32,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_open(System.Int32, System.Int32)
+  nameWithType: ICounterModule.Counter_open(Int32, Int32)
+- uid: WPC.Module.ICounterModule.Counter_open*
+  name: Counter_open
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_open_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_open
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_open
+  nameWithType: ICounterModule.Counter_open
+- uid: WPC.Module.ICounterModule.Counter_read(System.Int32,System.Int32)
+  name: Counter_read(Int32, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_read_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_read(System.Int32,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_read(System.Int32, System.Int32)
+  nameWithType: ICounterModule.Counter_read(Int32, Int32)
+- uid: WPC.Module.ICounterModule.Counter_read*
+  name: Counter_read
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_read_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_read
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_read
+  nameWithType: ICounterModule.Counter_read
+- uid: WPC.Module.ICounterModule.Counter_start(System.Int32,System.Int32)
+  name: Counter_start(Int32, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_start_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_start(System.Int32,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_start(System.Int32, System.Int32)
+  nameWithType: ICounterModule.Counter_start(Int32, Int32)
+- uid: WPC.Module.ICounterModule.Counter_start*
+  name: Counter_start
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_start_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_start
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_start
+  nameWithType: ICounterModule.Counter_start
+- uid: WPC.Module.ICounterModule.Counter_stop(System.Int32,System.Int32)
+  name: Counter_stop(Int32, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_stop(System.Int32,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_stop(System.Int32, System.Int32)
+  nameWithType: ICounterModule.Counter_stop(Int32, Int32)
+- uid: WPC.Module.ICounterModule.Counter_stop*
+  name: Counter_stop
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_stop_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_stop
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_stop
+  nameWithType: ICounterModule.Counter_stop
 - uid: WPC.Module.IDataloggerModule
   name: IDataloggerModule
   href: api/WPC.Module.IDataloggerModule.html
@@ -2029,6 +2100,90 @@ references:
   isSpec: "True"
   fullName: WPC.Module.INetworkModule.Sys_setIPAddrAndSubmask
   nameWithType: INetworkModule.Sys_setIPAddrAndSubmask
+- uid: WPC.Module.IPWMModule
+  name: IPWMModule
+  href: api/WPC.Module.IPWMModule.html
+  commentId: T:WPC.Module.IPWMModule
+  fullName: WPC.Module.IPWMModule
+  nameWithType: IPWMModule
+- uid: WPC.Module.IPWMModule.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IPWMModule.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Module.IPWMModule.PWM_close(System.Int32, System.Int32)
+  nameWithType: IPWMModule.PWM_close(Int32, Int32)
+- uid: WPC.Module.IPWMModule.PWM_close*
+  name: PWM_close
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_close_
+  commentId: Overload:WPC.Module.IPWMModule.PWM_close
+  isSpec: "True"
+  fullName: WPC.Module.IPWMModule.PWM_close
+  nameWithType: IPWMModule.PWM_close
+- uid: WPC.Module.IPWMModule.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IPWMModule.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Module.IPWMModule.PWM_open(System.Int32, System.Int32)
+  nameWithType: IPWMModule.PWM_open(Int32, Int32)
+- uid: WPC.Module.IPWMModule.PWM_open*
+  name: PWM_open
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_open_
+  commentId: Overload:WPC.Module.IPWMModule.PWM_open
+  isSpec: "True"
+  fullName: WPC.Module.IPWMModule.PWM_open
+  nameWithType: IPWMModule.PWM_open
+- uid: WPC.Module.IPWMModule.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Module.IPWMModule.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Module.IPWMModule.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: IPWMModule.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Module.IPWMModule.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_setDutyCycle_
+  commentId: Overload:WPC.Module.IPWMModule.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Module.IPWMModule.PWM_setDutyCycle
+  nameWithType: IPWMModule.PWM_setDutyCycle
+- uid: WPC.Module.IPWMModule.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Module.IPWMModule.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Module.IPWMModule.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: IPWMModule.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Module.IPWMModule.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_setFrequency_
+  commentId: Overload:WPC.Module.IPWMModule.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Module.IPWMModule.PWM_setFrequency
+  nameWithType: IPWMModule.PWM_setFrequency
+- uid: WPC.Module.IPWMModule.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IPWMModule.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Module.IPWMModule.PWM_start(System.Int32, System.Int32)
+  nameWithType: IPWMModule.PWM_start(Int32, Int32)
+- uid: WPC.Module.IPWMModule.PWM_start*
+  name: PWM_start
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_start_
+  commentId: Overload:WPC.Module.IPWMModule.PWM_start
+  isSpec: "True"
+  fullName: WPC.Module.IPWMModule.PWM_start
+  nameWithType: IPWMModule.PWM_start
+- uid: WPC.Module.IPWMModule.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IPWMModule.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Module.IPWMModule.PWM_stop(System.Int32, System.Int32)
+  nameWithType: IPWMModule.PWM_stop(Int32, Int32)
+- uid: WPC.Module.IPWMModule.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Module.IPWMModule.html#WPC_Module_IPWMModule_PWM_stop_
+  commentId: Overload:WPC.Module.IPWMModule.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Module.IPWMModule.PWM_stop
+  nameWithType: IPWMModule.PWM_stop
 - uid: WPC.Module.IRelayModule
   name: IRelayModule
   href: api/WPC.Module.IRelayModule.html
@@ -5202,6 +5357,84 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanD.Logger_writeValue
   nameWithType: EthanD.Logger_writeValue
+- uid: WPC.Product.EthanD.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.PWM_close(System.Int32, System.Int32)
+  nameWithType: EthanD.PWM_close(Int32, Int32)
+- uid: WPC.Product.EthanD.PWM_close*
+  name: PWM_close
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_close_
+  commentId: Overload:WPC.Product.EthanD.PWM_close
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.PWM_close
+  nameWithType: EthanD.PWM_close
+- uid: WPC.Product.EthanD.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.PWM_open(System.Int32, System.Int32)
+  nameWithType: EthanD.PWM_open(Int32, Int32)
+- uid: WPC.Product.EthanD.PWM_open*
+  name: PWM_open
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_open_
+  commentId: Overload:WPC.Product.EthanD.PWM_open
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.PWM_open
+  nameWithType: EthanD.PWM_open
+- uid: WPC.Product.EthanD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.EthanD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.EthanD.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: EthanD.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Product.EthanD.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_setDutyCycle_
+  commentId: Overload:WPC.Product.EthanD.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.PWM_setDutyCycle
+  nameWithType: EthanD.PWM_setDutyCycle
+- uid: WPC.Product.EthanD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.EthanD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.EthanD.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: EthanD.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Product.EthanD.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_setFrequency_
+  commentId: Overload:WPC.Product.EthanD.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.PWM_setFrequency
+  nameWithType: EthanD.PWM_setFrequency
+- uid: WPC.Product.EthanD.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.PWM_start(System.Int32, System.Int32)
+  nameWithType: EthanD.PWM_start(Int32, Int32)
+- uid: WPC.Product.EthanD.PWM_start*
+  name: PWM_start
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_start_
+  commentId: Overload:WPC.Product.EthanD.PWM_start
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.PWM_start
+  nameWithType: EthanD.PWM_start
+- uid: WPC.Product.EthanD.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanD.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanD.PWM_stop(System.Int32, System.Int32)
+  nameWithType: EthanD.PWM_stop(Int32, Int32)
+- uid: WPC.Product.EthanD.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_PWM_stop_
+  commentId: Overload:WPC.Product.EthanD.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Product.EthanD.PWM_stop
+  nameWithType: EthanD.PWM_stop
 - uid: WPC.Product.EthanD.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_getDriverInfo_System_Int32_
@@ -8417,6 +8650,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.connect
   nameWithType: USBDAQF1AD.connect
+- uid: WPC.Product.USBDAQF1AD.Counter_close(System.Int32,System.Int32)
+  name: Counter_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_close*
+  name: Counter_close
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_close_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_close
+  nameWithType: USBDAQF1AD.Counter_close
+- uid: WPC.Product.USBDAQF1AD.Counter_open(System.Int32,System.Int32)
+  name: Counter_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_open*
+  name: Counter_open
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_open_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_open
+  nameWithType: USBDAQF1AD.Counter_open
+- uid: WPC.Product.USBDAQF1AD.Counter_read(System.Int32,System.Int32)
+  name: Counter_read(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_read_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_read(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_read(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_read(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_read*
+  name: Counter_read
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_read_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_read
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_read
+  nameWithType: USBDAQF1AD.Counter_read
+- uid: WPC.Product.USBDAQF1AD.Counter_start(System.Int32,System.Int32)
+  name: Counter_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_start*
+  name: Counter_start
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_start_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_start
+  nameWithType: USBDAQF1AD.Counter_start
+- uid: WPC.Product.USBDAQF1AD.Counter_stop(System.Int32,System.Int32)
+  name: Counter_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_stop*
+  name: Counter_stop
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_stop_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_stop
+  nameWithType: USBDAQF1AD.Counter_stop
 - uid: WPC.Product.USBDAQF1AD.DI_closePins(System.Int32,List{System.Int32},System.Int32)
   name: DI_closePins(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_DI_closePins_System_Int32_List_System_Int32__System_Int32_
@@ -8803,6 +9101,84 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.Logger_writeValue
   nameWithType: USBDAQF1AD.Logger_writeValue
+- uid: WPC.Product.USBDAQF1AD.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.PWM_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.PWM_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.PWM_close*
+  name: PWM_close
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_close_
+  commentId: Overload:WPC.Product.USBDAQF1AD.PWM_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.PWM_close
+  nameWithType: USBDAQF1AD.PWM_close
+- uid: WPC.Product.USBDAQF1AD.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.PWM_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.PWM_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.PWM_open*
+  name: PWM_open
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_open_
+  commentId: Overload:WPC.Product.USBDAQF1AD.PWM_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.PWM_open
+  nameWithType: USBDAQF1AD.PWM_open
+- uid: WPC.Product.USBDAQF1AD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1AD.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1AD.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_setDutyCycle_
+  commentId: Overload:WPC.Product.USBDAQF1AD.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.PWM_setDutyCycle
+  nameWithType: USBDAQF1AD.PWM_setDutyCycle
+- uid: WPC.Product.USBDAQF1AD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1AD.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1AD.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_setFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1AD.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.PWM_setFrequency
+  nameWithType: USBDAQF1AD.PWM_setFrequency
+- uid: WPC.Product.USBDAQF1AD.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.PWM_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.PWM_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.PWM_start*
+  name: PWM_start
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_start_
+  commentId: Overload:WPC.Product.USBDAQF1AD.PWM_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.PWM_start
+  nameWithType: USBDAQF1AD.PWM_start
+- uid: WPC.Product.USBDAQF1AD.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.PWM_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.PWM_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_PWM_stop_
+  commentId: Overload:WPC.Product.USBDAQF1AD.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.PWM_stop
+  nameWithType: USBDAQF1AD.PWM_stop
 - uid: WPC.Product.USBDAQF1AD.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_SPI_close_System_Int32_System_Int32_
@@ -9617,6 +9993,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.connect
   nameWithType: USBDAQF1AOD.connect
+- uid: WPC.Product.USBDAQF1AOD.Counter_close(System.Int32,System.Int32)
+  name: Counter_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_close*
+  name: Counter_close
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_close_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_close
+  nameWithType: USBDAQF1AOD.Counter_close
+- uid: WPC.Product.USBDAQF1AOD.Counter_open(System.Int32,System.Int32)
+  name: Counter_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_open*
+  name: Counter_open
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_open_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_open
+  nameWithType: USBDAQF1AOD.Counter_open
+- uid: WPC.Product.USBDAQF1AOD.Counter_read(System.Int32,System.Int32)
+  name: Counter_read(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_read_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_read(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_read(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_read(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_read*
+  name: Counter_read
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_read_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_read
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_read
+  nameWithType: USBDAQF1AOD.Counter_read
+- uid: WPC.Product.USBDAQF1AOD.Counter_start(System.Int32,System.Int32)
+  name: Counter_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_start*
+  name: Counter_start
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_start_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_start
+  nameWithType: USBDAQF1AOD.Counter_start
+- uid: WPC.Product.USBDAQF1AOD.Counter_stop(System.Int32,System.Int32)
+  name: Counter_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_stop*
+  name: Counter_stop
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_stop_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_stop
+  nameWithType: USBDAQF1AOD.Counter_stop
 - uid: WPC.Product.USBDAQF1AOD.DI_closePins(System.Int32,List{System.Int32},System.Int32)
   name: DI_closePins(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_DI_closePins_System_Int32_List_System_Int32__System_Int32_
@@ -10003,6 +10444,84 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.Logger_writeValue
   nameWithType: USBDAQF1AOD.Logger_writeValue
+- uid: WPC.Product.USBDAQF1AOD.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.PWM_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.PWM_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.PWM_close*
+  name: PWM_close
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_close_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.PWM_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.PWM_close
+  nameWithType: USBDAQF1AOD.PWM_close
+- uid: WPC.Product.USBDAQF1AOD.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.PWM_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.PWM_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.PWM_open*
+  name: PWM_open
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_open_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.PWM_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.PWM_open
+  nameWithType: USBDAQF1AOD.PWM_open
+- uid: WPC.Product.USBDAQF1AOD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1AOD.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1AOD.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_setDutyCycle_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.PWM_setDutyCycle
+  nameWithType: USBDAQF1AOD.PWM_setDutyCycle
+- uid: WPC.Product.USBDAQF1AOD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1AOD.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1AOD.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_setFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.PWM_setFrequency
+  nameWithType: USBDAQF1AOD.PWM_setFrequency
+- uid: WPC.Product.USBDAQF1AOD.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.PWM_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.PWM_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.PWM_start*
+  name: PWM_start
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_start_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.PWM_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.PWM_start
+  nameWithType: USBDAQF1AOD.PWM_start
+- uid: WPC.Product.USBDAQF1AOD.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.PWM_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.PWM_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_PWM_stop_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.PWM_stop
+  nameWithType: USBDAQF1AOD.PWM_stop
 - uid: WPC.Product.USBDAQF1AOD.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_getDriverInfo_System_Int32_
@@ -10480,6 +10999,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.connect
   nameWithType: USBDAQF1CD.connect
+- uid: WPC.Product.USBDAQF1CD.Counter_close(System.Int32,System.Int32)
+  name: Counter_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_close*
+  name: Counter_close
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_close_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_close
+  nameWithType: USBDAQF1CD.Counter_close
+- uid: WPC.Product.USBDAQF1CD.Counter_open(System.Int32,System.Int32)
+  name: Counter_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_open*
+  name: Counter_open
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_open_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_open
+  nameWithType: USBDAQF1CD.Counter_open
+- uid: WPC.Product.USBDAQF1CD.Counter_read(System.Int32,System.Int32)
+  name: Counter_read(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_read_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_read(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_read(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_read(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_read*
+  name: Counter_read
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_read_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_read
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_read
+  nameWithType: USBDAQF1CD.Counter_read
+- uid: WPC.Product.USBDAQF1CD.Counter_start(System.Int32,System.Int32)
+  name: Counter_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_start*
+  name: Counter_start
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_start_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_start
+  nameWithType: USBDAQF1CD.Counter_start
+- uid: WPC.Product.USBDAQF1CD.Counter_stop(System.Int32,System.Int32)
+  name: Counter_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_stop*
+  name: Counter_stop
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_stop_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_stop
+  nameWithType: USBDAQF1CD.Counter_stop
 - uid: WPC.Product.USBDAQF1CD.DI_closePins(System.Int32,List{System.Int32},System.Int32)
   name: DI_closePins(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_DI_closePins_System_Int32_List_System_Int32__System_Int32_
@@ -10866,6 +11450,84 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.Logger_writeValue
   nameWithType: USBDAQF1CD.Logger_writeValue
+- uid: WPC.Product.USBDAQF1CD.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.PWM_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.PWM_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.PWM_close*
+  name: PWM_close
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_close_
+  commentId: Overload:WPC.Product.USBDAQF1CD.PWM_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.PWM_close
+  nameWithType: USBDAQF1CD.PWM_close
+- uid: WPC.Product.USBDAQF1CD.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.PWM_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.PWM_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.PWM_open*
+  name: PWM_open
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_open_
+  commentId: Overload:WPC.Product.USBDAQF1CD.PWM_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.PWM_open
+  nameWithType: USBDAQF1CD.PWM_open
+- uid: WPC.Product.USBDAQF1CD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1CD.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1CD.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_setDutyCycle_
+  commentId: Overload:WPC.Product.USBDAQF1CD.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.PWM_setDutyCycle
+  nameWithType: USBDAQF1CD.PWM_setDutyCycle
+- uid: WPC.Product.USBDAQF1CD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1CD.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1CD.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_setFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1CD.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.PWM_setFrequency
+  nameWithType: USBDAQF1CD.PWM_setFrequency
+- uid: WPC.Product.USBDAQF1CD.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.PWM_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.PWM_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.PWM_start*
+  name: PWM_start
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_start_
+  commentId: Overload:WPC.Product.USBDAQF1CD.PWM_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.PWM_start
+  nameWithType: USBDAQF1CD.PWM_start
+- uid: WPC.Product.USBDAQF1CD.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.PWM_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.PWM_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_PWM_stop_
+  commentId: Overload:WPC.Product.USBDAQF1CD.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.PWM_stop
+  nameWithType: USBDAQF1CD.PWM_stop
 - uid: WPC.Product.USBDAQF1CD.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_SPI_close_System_Int32_System_Int32_
@@ -11359,6 +12021,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.connect
   nameWithType: USBDAQF1D.connect
+- uid: WPC.Product.USBDAQF1D.Counter_close(System.Int32,System.Int32)
+  name: Counter_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Counter_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_close*
+  name: Counter_close
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_close_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_close
+  nameWithType: USBDAQF1D.Counter_close
+- uid: WPC.Product.USBDAQF1D.Counter_open(System.Int32,System.Int32)
+  name: Counter_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Counter_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_open*
+  name: Counter_open
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_open_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_open
+  nameWithType: USBDAQF1D.Counter_open
+- uid: WPC.Product.USBDAQF1D.Counter_read(System.Int32,System.Int32)
+  name: Counter_read(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_read_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_read(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_read(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Counter_read(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_read*
+  name: Counter_read
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_read_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_read
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_read
+  nameWithType: USBDAQF1D.Counter_read
+- uid: WPC.Product.USBDAQF1D.Counter_start(System.Int32,System.Int32)
+  name: Counter_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Counter_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_start*
+  name: Counter_start
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_start_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_start
+  nameWithType: USBDAQF1D.Counter_start
+- uid: WPC.Product.USBDAQF1D.Counter_stop(System.Int32,System.Int32)
+  name: Counter_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Counter_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_stop*
+  name: Counter_stop
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_stop_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_stop
+  nameWithType: USBDAQF1D.Counter_stop
 - uid: WPC.Product.USBDAQF1D.DI_closePins(System.Int32,List{System.Int32},System.Int32)
   name: DI_closePins(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_DI_closePins_System_Int32_List_System_Int32__System_Int32_
@@ -11745,6 +12472,84 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.Logger_writeValue
   nameWithType: USBDAQF1D.Logger_writeValue
+- uid: WPC.Product.USBDAQF1D.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.PWM_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.PWM_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.PWM_close*
+  name: PWM_close
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_close_
+  commentId: Overload:WPC.Product.USBDAQF1D.PWM_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.PWM_close
+  nameWithType: USBDAQF1D.PWM_close
+- uid: WPC.Product.USBDAQF1D.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.PWM_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.PWM_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.PWM_open*
+  name: PWM_open
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_open_
+  commentId: Overload:WPC.Product.USBDAQF1D.PWM_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.PWM_open
+  nameWithType: USBDAQF1D.PWM_open
+- uid: WPC.Product.USBDAQF1D.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1D.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1D.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_setDutyCycle_
+  commentId: Overload:WPC.Product.USBDAQF1D.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.PWM_setDutyCycle
+  nameWithType: USBDAQF1D.PWM_setDutyCycle
+- uid: WPC.Product.USBDAQF1D.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1D.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1D.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_setFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1D.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.PWM_setFrequency
+  nameWithType: USBDAQF1D.PWM_setFrequency
+- uid: WPC.Product.USBDAQF1D.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.PWM_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.PWM_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.PWM_start*
+  name: PWM_start
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_start_
+  commentId: Overload:WPC.Product.USBDAQF1D.PWM_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.PWM_start
+  nameWithType: USBDAQF1D.PWM_start
+- uid: WPC.Product.USBDAQF1D.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.PWM_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.PWM_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_PWM_stop_
+  commentId: Overload:WPC.Product.USBDAQF1D.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.PWM_stop
+  nameWithType: USBDAQF1D.PWM_stop
 - uid: WPC.Product.USBDAQF1D.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_SPI_close_System_Int32_System_Int32_
@@ -12238,6 +13043,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.connect
   nameWithType: USBDAQF1DSNK.connect
+- uid: WPC.Product.USBDAQF1DSNK.Counter_close(System.Int32,System.Int32)
+  name: Counter_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_close*
+  name: Counter_close
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_close_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_close
+  nameWithType: USBDAQF1DSNK.Counter_close
+- uid: WPC.Product.USBDAQF1DSNK.Counter_open(System.Int32,System.Int32)
+  name: Counter_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_open*
+  name: Counter_open
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_open_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_open
+  nameWithType: USBDAQF1DSNK.Counter_open
+- uid: WPC.Product.USBDAQF1DSNK.Counter_read(System.Int32,System.Int32)
+  name: Counter_read(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_read_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_read(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_read(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_read(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_read*
+  name: Counter_read
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_read_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_read
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_read
+  nameWithType: USBDAQF1DSNK.Counter_read
+- uid: WPC.Product.USBDAQF1DSNK.Counter_start(System.Int32,System.Int32)
+  name: Counter_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_start*
+  name: Counter_start
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_start_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_start
+  nameWithType: USBDAQF1DSNK.Counter_start
+- uid: WPC.Product.USBDAQF1DSNK.Counter_stop(System.Int32,System.Int32)
+  name: Counter_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_stop*
+  name: Counter_stop
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_stop_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_stop
+  nameWithType: USBDAQF1DSNK.Counter_stop
 - uid: WPC.Product.USBDAQF1DSNK.DI_closePins(System.Int32,List{System.Int32},System.Int32)
   name: DI_closePins(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_DI_closePins_System_Int32_List_System_Int32__System_Int32_
@@ -12530,6 +13400,84 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.Logger_writeValue
   nameWithType: USBDAQF1DSNK.Logger_writeValue
+- uid: WPC.Product.USBDAQF1DSNK.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.PWM_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.PWM_close*
+  name: PWM_close
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_close_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.PWM_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_close
+  nameWithType: USBDAQF1DSNK.PWM_close
+- uid: WPC.Product.USBDAQF1DSNK.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.PWM_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.PWM_open*
+  name: PWM_open
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_open_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.PWM_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_open
+  nameWithType: USBDAQF1DSNK.PWM_open
+- uid: WPC.Product.USBDAQF1DSNK.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1DSNK.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_setDutyCycle_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_setDutyCycle
+  nameWithType: USBDAQF1DSNK.PWM_setDutyCycle
+- uid: WPC.Product.USBDAQF1DSNK.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1DSNK.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_setFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_setFrequency
+  nameWithType: USBDAQF1DSNK.PWM_setFrequency
+- uid: WPC.Product.USBDAQF1DSNK.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.PWM_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.PWM_start*
+  name: PWM_start
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_start_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.PWM_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_start
+  nameWithType: USBDAQF1DSNK.PWM_start
+- uid: WPC.Product.USBDAQF1DSNK.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.PWM_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_PWM_stop_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.PWM_stop
+  nameWithType: USBDAQF1DSNK.PWM_stop
 - uid: WPC.Product.USBDAQF1DSNK.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_getDriverInfo_System_Int32_
@@ -12757,6 +13705,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.connect
   nameWithType: USBDAQF1RD.connect
+- uid: WPC.Product.USBDAQF1RD.Counter_close(System.Int32,System.Int32)
+  name: Counter_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_close*
+  name: Counter_close
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_close_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_close
+  nameWithType: USBDAQF1RD.Counter_close
+- uid: WPC.Product.USBDAQF1RD.Counter_open(System.Int32,System.Int32)
+  name: Counter_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_open*
+  name: Counter_open
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_open_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_open
+  nameWithType: USBDAQF1RD.Counter_open
+- uid: WPC.Product.USBDAQF1RD.Counter_read(System.Int32,System.Int32)
+  name: Counter_read(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_read_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_read(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_read(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_read(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_read*
+  name: Counter_read
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_read_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_read
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_read
+  nameWithType: USBDAQF1RD.Counter_read
+- uid: WPC.Product.USBDAQF1RD.Counter_start(System.Int32,System.Int32)
+  name: Counter_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_start*
+  name: Counter_start
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_start_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_start
+  nameWithType: USBDAQF1RD.Counter_start
+- uid: WPC.Product.USBDAQF1RD.Counter_stop(System.Int32,System.Int32)
+  name: Counter_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_stop*
+  name: Counter_stop
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_stop_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_stop
+  nameWithType: USBDAQF1RD.Counter_stop
 - uid: WPC.Product.USBDAQF1RD.DI_closePins(System.Int32,List{System.Int32},System.Int32)
   name: DI_closePins(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_DI_closePins_System_Int32_List_System_Int32__System_Int32_
@@ -13143,6 +14156,84 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.Logger_writeValue
   nameWithType: USBDAQF1RD.Logger_writeValue
+- uid: WPC.Product.USBDAQF1RD.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.PWM_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.PWM_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.PWM_close*
+  name: PWM_close
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_close_
+  commentId: Overload:WPC.Product.USBDAQF1RD.PWM_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.PWM_close
+  nameWithType: USBDAQF1RD.PWM_close
+- uid: WPC.Product.USBDAQF1RD.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.PWM_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.PWM_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.PWM_open*
+  name: PWM_open
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_open_
+  commentId: Overload:WPC.Product.USBDAQF1RD.PWM_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.PWM_open
+  nameWithType: USBDAQF1RD.PWM_open
+- uid: WPC.Product.USBDAQF1RD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1RD.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1RD.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_setDutyCycle_
+  commentId: Overload:WPC.Product.USBDAQF1RD.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.PWM_setDutyCycle
+  nameWithType: USBDAQF1RD.PWM_setDutyCycle
+- uid: WPC.Product.USBDAQF1RD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1RD.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1RD.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_setFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1RD.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.PWM_setFrequency
+  nameWithType: USBDAQF1RD.PWM_setFrequency
+- uid: WPC.Product.USBDAQF1RD.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.PWM_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.PWM_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.PWM_start*
+  name: PWM_start
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_start_
+  commentId: Overload:WPC.Product.USBDAQF1RD.PWM_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.PWM_start
+  nameWithType: USBDAQF1RD.PWM_start
+- uid: WPC.Product.USBDAQF1RD.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.PWM_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.PWM_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_PWM_stop_
+  commentId: Overload:WPC.Product.USBDAQF1RD.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.PWM_stop
+  nameWithType: USBDAQF1RD.PWM_stop
 - uid: WPC.Product.USBDAQF1RD.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_SPI_close_System_Int32_System_Int32_
@@ -13701,6 +14792,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.connect
   nameWithType: USBDAQF1TD.connect
+- uid: WPC.Product.USBDAQF1TD.Counter_close(System.Int32,System.Int32)
+  name: Counter_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_close*
+  name: Counter_close
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_close_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_close
+  nameWithType: USBDAQF1TD.Counter_close
+- uid: WPC.Product.USBDAQF1TD.Counter_open(System.Int32,System.Int32)
+  name: Counter_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_open*
+  name: Counter_open
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_open_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_open
+  nameWithType: USBDAQF1TD.Counter_open
+- uid: WPC.Product.USBDAQF1TD.Counter_read(System.Int32,System.Int32)
+  name: Counter_read(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_read_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_read(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_read(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_read(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_read*
+  name: Counter_read
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_read_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_read
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_read
+  nameWithType: USBDAQF1TD.Counter_read
+- uid: WPC.Product.USBDAQF1TD.Counter_start(System.Int32,System.Int32)
+  name: Counter_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_start*
+  name: Counter_start
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_start_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_start
+  nameWithType: USBDAQF1TD.Counter_start
+- uid: WPC.Product.USBDAQF1TD.Counter_stop(System.Int32,System.Int32)
+  name: Counter_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_stop*
+  name: Counter_stop
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_stop_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_stop
+  nameWithType: USBDAQF1TD.Counter_stop
 - uid: WPC.Product.USBDAQF1TD.DI_closePins(System.Int32,List{System.Int32},System.Int32)
   name: DI_closePins(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_DI_closePins_System_Int32_List_System_Int32__System_Int32_
@@ -14087,6 +15243,84 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.Logger_writeValue
   nameWithType: USBDAQF1TD.Logger_writeValue
+- uid: WPC.Product.USBDAQF1TD.PWM_close(System.Int32,System.Int32)
+  name: PWM_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.PWM_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.PWM_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.PWM_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.PWM_close*
+  name: PWM_close
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_close_
+  commentId: Overload:WPC.Product.USBDAQF1TD.PWM_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.PWM_close
+  nameWithType: USBDAQF1TD.PWM_close
+- uid: WPC.Product.USBDAQF1TD.PWM_open(System.Int32,System.Int32)
+  name: PWM_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.PWM_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.PWM_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.PWM_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.PWM_open*
+  name: PWM_open
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_open_
+  commentId: Overload:WPC.Product.USBDAQF1TD.PWM_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.PWM_open
+  nameWithType: USBDAQF1TD.PWM_open
+- uid: WPC.Product.USBDAQF1TD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  name: PWM_setDutyCycle(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.PWM_setDutyCycle(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1TD.PWM_setDutyCycle(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1TD.PWM_setDutyCycle*
+  name: PWM_setDutyCycle
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_setDutyCycle_
+  commentId: Overload:WPC.Product.USBDAQF1TD.PWM_setDutyCycle
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.PWM_setDutyCycle
+  nameWithType: USBDAQF1TD.PWM_setDutyCycle
+- uid: WPC.Product.USBDAQF1TD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  name: PWM_setFrequency(Int32, Double, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_setFrequency_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.PWM_setFrequency(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.PWM_setFrequency(System.Int32, System.Double, System.Int32)
+  nameWithType: USBDAQF1TD.PWM_setFrequency(Int32, Double, Int32)
+- uid: WPC.Product.USBDAQF1TD.PWM_setFrequency*
+  name: PWM_setFrequency
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_setFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1TD.PWM_setFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.PWM_setFrequency
+  nameWithType: USBDAQF1TD.PWM_setFrequency
+- uid: WPC.Product.USBDAQF1TD.PWM_start(System.Int32,System.Int32)
+  name: PWM_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.PWM_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.PWM_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.PWM_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.PWM_start*
+  name: PWM_start
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_start_
+  commentId: Overload:WPC.Product.USBDAQF1TD.PWM_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.PWM_start
+  nameWithType: USBDAQF1TD.PWM_start
+- uid: WPC.Product.USBDAQF1TD.PWM_stop(System.Int32,System.Int32)
+  name: PWM_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.PWM_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.PWM_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.PWM_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.PWM_stop*
+  name: PWM_stop
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_PWM_stop_
+  commentId: Overload:WPC.Product.USBDAQF1TD.PWM_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.PWM_stop
+  nameWithType: USBDAQF1TD.PWM_stop
 - uid: WPC.Product.USBDAQF1TD.SPI_close(System.Int32,System.Int32)
   name: SPI_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_SPI_close_System_Int32_System_Int32_
