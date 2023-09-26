@@ -1,6 +1,11 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.7 Date: 2023/09/26, Developer: Chunglee_people
+---------------------------------------------------
+### Fixed
+- AO function generation code
+
 v0.2.6 Date: 2023/09/26, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
