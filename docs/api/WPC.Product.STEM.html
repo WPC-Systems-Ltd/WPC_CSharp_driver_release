@@ -1040,7 +1040,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int AO_setFormParam(int port, int channel, double amplitude, double offset, double period, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int AO_setFormParam(int port, int channel, double amplitude, double offset, double frequency, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1078,8 +1078,8 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">period</span></td>
-        <td><p>Signal period in seconds.</p>
+        <td><span class="parametername">frequency</span></td>
+        <td><p>Signal frequency in Hz.</p>
 </td>
       </tr>
       <tr>
