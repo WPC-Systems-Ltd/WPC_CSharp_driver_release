@@ -4,7 +4,7 @@ Welcome to **WPC CSharp driver** API documentation. It is an easy-to-use open-so
 
 We provide excellent example codes to help you quickly get started with our products, connecting code to real-world usage. This makes it a great way to learn.
 
-Therefore, we highly recommend use our driver because it is simple to use. Just open, read/write, and close - allowing you to access or update data with ease.
+Therefore, we highly recommend using our driver because it is simple to use. Just open, read/write, and close - allowing you to access or update data with ease.
 
 Adding WPC CSharp driver to your toolkit not only simplifies tasks but also provides a practical learning experience that bridges theory and real-world application.
 

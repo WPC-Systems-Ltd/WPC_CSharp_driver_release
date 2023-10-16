@@ -1,6 +1,11 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.8 Date: 2023/10/16, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Add reboot example code in hello_world.cs
+
 v0.2.7 Date: 2023/09/26, Developer: Chunglee_people
 ---------------------------------------------------
 ### Fixed
