@@ -134,7 +134,7 @@ class USBDAQF1AD_SPI_read_and_write
             err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout:timeout);
             Console.WriteLine($"writePins: {err}");
 
-            // Read data acquisition byte 0x0A from address 0x0001
+            // Read the written byte from the generated address
             List<byte> data = dev.SPI_readAndWrite(port, new List<byte> { READ, 0x00, 0x01, DUMMY }, timeout:timeout);
 
             WPC_utilities.printByteArray(data.ToArray());
