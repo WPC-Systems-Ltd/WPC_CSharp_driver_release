@@ -148,6 +148,103 @@ references:
   commentId: N:WPC.Module
   fullName: WPC.Module
   nameWithType: WPC.Module
+- uid: WPC.Module.IAHRSModule
+  name: IAHRSModule
+  href: api/WPC.Module.IAHRSModule.html
+  commentId: T:WPC.Module.IAHRSModule
+  fullName: WPC.Module.IAHRSModule
+  nameWithType: IAHRSModule
+- uid: WPC.Module.IAHRSModule.AHRS_close(System.Int32,System.Int32)
+  name: AHRS_close(Int32, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_close_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_close(System.Int32,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_close(System.Int32, System.Int32)
+  nameWithType: IAHRSModule.AHRS_close(Int32, Int32)
+- uid: WPC.Module.IAHRSModule.AHRS_close*
+  name: AHRS_close
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_close_
+  commentId: Overload:WPC.Module.IAHRSModule.AHRS_close
+  isSpec: "True"
+  fullName: WPC.Module.IAHRSModule.AHRS_close
+  nameWithType: IAHRSModule.AHRS_close
+- uid: WPC.Module.IAHRSModule.AHRS_open(System.Int32,System.Int32)
+  name: AHRS_open(Int32, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_open_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_open(System.Int32,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_open(System.Int32, System.Int32)
+  nameWithType: IAHRSModule.AHRS_open(Int32, Int32)
+- uid: WPC.Module.IAHRSModule.AHRS_open*
+  name: AHRS_open
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_open_
+  commentId: Overload:WPC.Module.IAHRSModule.AHRS_open
+  isSpec: "True"
+  fullName: WPC.Module.IAHRSModule.AHRS_open
+  nameWithType: IAHRSModule.AHRS_open
+- uid: WPC.Module.IAHRSModule.AHRS_readStreaming(System.Int32,System.Int32)
+  name: AHRS_readStreaming(Int32, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_readStreaming_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_readStreaming(System.Int32,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_readStreaming(System.Int32, System.Int32)
+  nameWithType: IAHRSModule.AHRS_readStreaming(Int32, Int32)
+- uid: WPC.Module.IAHRSModule.AHRS_readStreaming*
+  name: AHRS_readStreaming
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_readStreaming_
+  commentId: Overload:WPC.Module.IAHRSModule.AHRS_readStreaming
+  isSpec: "True"
+  fullName: WPC.Module.IAHRSModule.AHRS_readStreaming
+  nameWithType: IAHRSModule.AHRS_readStreaming
+- uid: WPC.Module.IAHRSModule.AHRS_reset(System.Int32,System.Int32)
+  name: AHRS_reset(Int32, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_reset_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_reset(System.Int32,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_reset(System.Int32, System.Int32)
+  nameWithType: IAHRSModule.AHRS_reset(Int32, Int32)
+- uid: WPC.Module.IAHRSModule.AHRS_reset*
+  name: AHRS_reset
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_reset_
+  commentId: Overload:WPC.Module.IAHRSModule.AHRS_reset
+  isSpec: "True"
+  fullName: WPC.Module.IAHRSModule.AHRS_reset
+  nameWithType: IAHRSModule.AHRS_reset
+- uid: WPC.Module.IAHRSModule.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)
+  name: AHRS_setGeneral(Int32, Double, Double, Double, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_setGeneral_System_Int32_System_Double_System_Double_System_Double_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_setGeneral(System.Int32, System.Double, System.Double, System.Double, System.Int32)
+  nameWithType: IAHRSModule.AHRS_setGeneral(Int32, Double, Double, Double, Int32)
+- uid: WPC.Module.IAHRSModule.AHRS_setGeneral*
+  name: AHRS_setGeneral
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_setGeneral_
+  commentId: Overload:WPC.Module.IAHRSModule.AHRS_setGeneral
+  isSpec: "True"
+  fullName: WPC.Module.IAHRSModule.AHRS_setGeneral
+  nameWithType: IAHRSModule.AHRS_setGeneral
+- uid: WPC.Module.IAHRSModule.AHRS_start(System.Int32,System.Byte,System.Int32)
+  name: AHRS_start(Int32, Byte, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_start_System_Int32_System_Byte_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_start(System.Int32,System.Byte,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_start(System.Int32, System.Byte, System.Int32)
+  nameWithType: IAHRSModule.AHRS_start(Int32, Byte, Int32)
+- uid: WPC.Module.IAHRSModule.AHRS_start*
+  name: AHRS_start
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_start_
+  commentId: Overload:WPC.Module.IAHRSModule.AHRS_start
+  isSpec: "True"
+  fullName: WPC.Module.IAHRSModule.AHRS_start
+  nameWithType: IAHRSModule.AHRS_start
+- uid: WPC.Module.IAHRSModule.AHRS_stop(System.Int32,System.Int32)
+  name: AHRS_stop(Int32, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_stop(System.Int32,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_stop(System.Int32, System.Int32)
+  nameWithType: IAHRSModule.AHRS_stop(Int32, Int32)
+- uid: WPC.Module.IAHRSModule.AHRS_stop*
+  name: AHRS_stop
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_stop_
+  commentId: Overload:WPC.Module.IAHRSModule.AHRS_stop
+  isSpec: "True"
+  fullName: WPC.Module.IAHRSModule.AHRS_stop
+  nameWithType: IAHRSModule.AHRS_stop
 - uid: WPC.Module.IAI24BitModule
   name: IAI24BitModule
   href: api/WPC.Module.IAI24BitModule.html
@@ -15866,6 +15963,97 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.WifiDAQE3A
   nameWithType: WifiDAQE3A.WifiDAQE3A
+- uid: WPC.Product.WifiDAQE3A.AHRS_close(System.Int32,System.Int32)
+  name: AHRS_close(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_close(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_close(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_close(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.AHRS_close*
+  name: AHRS_close
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_close_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_close
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AHRS_close
+  nameWithType: WifiDAQE3A.AHRS_close
+- uid: WPC.Product.WifiDAQE3A.AHRS_open(System.Int32,System.Int32)
+  name: AHRS_open(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_open(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_open(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_open(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.AHRS_open*
+  name: AHRS_open
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_open_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_open
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AHRS_open
+  nameWithType: WifiDAQE3A.AHRS_open
+- uid: WPC.Product.WifiDAQE3A.AHRS_readStreaming(System.Int32,System.Int32)
+  name: AHRS_readStreaming(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_readStreaming_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_readStreaming(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_readStreaming(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_readStreaming(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.AHRS_readStreaming*
+  name: AHRS_readStreaming
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_readStreaming_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_readStreaming
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AHRS_readStreaming
+  nameWithType: WifiDAQE3A.AHRS_readStreaming
+- uid: WPC.Product.WifiDAQE3A.AHRS_reset(System.Int32,System.Int32)
+  name: AHRS_reset(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_reset_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_reset(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_reset(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_reset(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.AHRS_reset*
+  name: AHRS_reset
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_reset_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_reset
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AHRS_reset
+  nameWithType: WifiDAQE3A.AHRS_reset
+- uid: WPC.Product.WifiDAQE3A.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)
+  name: AHRS_setGeneral(Int32, Double, Double, Double, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_setGeneral_System_Int32_System_Double_System_Double_System_Double_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_setGeneral(System.Int32, System.Double, System.Double, System.Double, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_setGeneral(Int32, Double, Double, Double, Int32)
+- uid: WPC.Product.WifiDAQE3A.AHRS_setGeneral*
+  name: AHRS_setGeneral
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_setGeneral_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_setGeneral
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AHRS_setGeneral
+  nameWithType: WifiDAQE3A.AHRS_setGeneral
+- uid: WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Byte,System.Int32)
+  name: AHRS_start(Int32, Byte, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_start_System_Int32_System_Byte_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Byte,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_start(System.Int32, System.Byte, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_start(Int32, Byte, Int32)
+- uid: WPC.Product.WifiDAQE3A.AHRS_start*
+  name: AHRS_start
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_start_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_start
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AHRS_start
+  nameWithType: WifiDAQE3A.AHRS_start
+- uid: WPC.Product.WifiDAQE3A.AHRS_stop(System.Int32,System.Int32)
+  name: AHRS_stop(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_stop(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_stop(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.AHRS_stop*
+  name: AHRS_stop
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_stop_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_stop
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AHRS_stop
+  nameWithType: WifiDAQE3A.AHRS_stop
 - uid: WPC.Product.WifiDAQE3A.AI_close(System.Int32,System.Int32)
   name: AI_close(Int32, Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_close_System_Int32_System_Int32_

@@ -281,7 +281,7 @@ class WifiDAQE3A_hello_world
             }
 
             Console.WriteLine($&quot;Restarting now&quot;);
-            dev.Sys_reboot(timeout=timeout);
+            dev.Sys_reboot(timeout:timeout);
         }
         catch (Exception ex)
         {

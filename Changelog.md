@@ -1,6 +1,11 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.9 Date: 2023/11/16, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- Add example code: AHRS_read.cs
+
 v0.2.8 Date: 2023/10/16, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

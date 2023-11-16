@@ -272,6 +272,16 @@ public class WPC_example_code
         Console.WriteLine("--------");
         Console.WriteLine("Run Counter_read.cs, please input 500");
     }
+    static void showAHRSMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For AHRS");
+        Console.WriteLine("--------");
+        Console.WriteLine("Run AHRS_read.cs, please input 600");
+    }
+
+
+    
     static void Main()
     {
         Console.WriteLine("Welcome to WPC C# driver example code.");
@@ -434,6 +444,7 @@ public class WPC_example_code
                 Console.WriteLine("Get 30, show WifiDAQE3A series example code");
                 showSysWifiMessage();
                 showAIMessage();
+                showAHRSMessage();
                 break;
 
             case 31:
@@ -1430,6 +1441,13 @@ public class WPC_example_code
                         WifiDAQE3A_AI_on_demand_once.Main();
                         break;
                     #endregion
+
+                    #region
+                    case 600:
+                        WifiDAQE3A_AHRS_read.Main();
+                        break;
+                    #endregion
+
 
                     default:
                         break;
