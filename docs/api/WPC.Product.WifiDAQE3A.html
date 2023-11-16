@@ -84,6 +84,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="WPC.Device.INetworkDevice.html">INetworkDevice</a></div>
     <div><a class="xref" href="WPC.Module.IAIModule.html">IAIModule</a></div>
+    <div><a class="xref" href="WPC.Module.IAHRSModule.html">IAHRSModule</a></div>
     <div><a class="xref" href="WPC.Module.INetworkModule.html">INetworkModule</a></div>
     <div><a class="xref" href="WPC.Module.ISystemModule.html">ISystemModule</a></div>
     <div><a class="xref" href="WPC.Module.ISystemAnalogModule.html">ISystemAnalogModule</a></div>
@@ -118,7 +119,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="WPC_Product_WifiDAQE3A_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WifiDAQE3A : INetworkDevice, IAIModule, INetworkModule, ISystemModule, ISystemAnalogModule, IWifiModule, IDataloggerModule</code></pre>
+    <pre><code class="lang-csharp hljs">public class WifiDAQE3A : INetworkDevice, IAIModule, IAHRSModule, INetworkModule, ISystemModule, ISystemAnalogModule, IWifiModule, IDataloggerModule</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -132,6 +133,346 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <a id="WPC_Product_WifiDAQE3A_AHRS_close_" data-uid="WPC.Product.WifiDAQE3A.AHRS_close*"></a>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_close_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_close(System.Int32,System.Int32)">AHRS_close(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AHRS_close(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3A_AHRS_open_" data-uid="WPC.Product.WifiDAQE3A.AHRS_open*"></a>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_open_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_open(System.Int32,System.Int32)">AHRS_open(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Open AHRS module on a given port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AHRS_open(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3A_AHRS_readStreaming_" data-uid="WPC.Product.WifiDAQE3A.AHRS_readStreaming*"></a>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_readStreaming_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_readStreaming(System.Int32,System.Int32)">AHRS_readStreaming(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;float&gt; AHRS_readStreaming(int port, int delay = 5)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">delay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3A_AHRS_reset_" data-uid="WPC.Product.WifiDAQE3A.AHRS_reset*"></a>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_reset_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_reset(System.Int32,System.Int32)">AHRS_reset(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AHRS_reset(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3A_AHRS_setGeneral_" data-uid="WPC.Product.WifiDAQE3A.AHRS_setGeneral*"></a>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_setGeneral_System_Int32_System_Double_System_Double_System_Double_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)">AHRS_setGeneral(Int32, Double, Double, Double, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AHRS_setGeneral(int port, double gravity, double dt, double z_offset, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">gravity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">z_offset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3A_AHRS_start_" data-uid="WPC.Product.WifiDAQE3A.AHRS_start*"></a>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_start_System_Int32_System_Byte_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Byte,System.Int32)">AHRS_start(Int32, Byte, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AHRS_start(int port, byte mask, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">mask</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3A_AHRS_stop_" data-uid="WPC.Product.WifiDAQE3A.AHRS_stop*"></a>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_stop_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_stop(System.Int32,System.Int32)">AHRS_stop(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AHRS_stop(int port, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Product_WifiDAQE3A_AI_close_" data-uid="WPC.Product.WifiDAQE3A.AI_close*"></a>
   <h4 id="WPC_Product_WifiDAQE3A_AI_close_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AI_close(System.Int32,System.Int32)">AI_close(Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Close AI module on a given port.</p>
@@ -2159,6 +2500,9 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </div>
   <div>
       <a class="xref" href="WPC.Module.IAIModule.html">IAIModule</a>
+  </div>
+  <div>
+      <a class="xref" href="WPC.Module.IAHRSModule.html">IAHRSModule</a>
   </div>
   <div>
       <a class="xref" href="WPC.Module.INetworkModule.html">INetworkModule</a>
