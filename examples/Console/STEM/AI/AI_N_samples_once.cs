@@ -1,7 +1,7 @@
 /// AI_N_samples_once.cs with synchronous mode.
 ///
 /// This example demonstrates the process of obtaining AI data in N-sample mode.
-/// Additionally, it gets AI data with 50 points in once from STEM.
+/// Additionally, it gets AI data with points in once from STEM.
 ///
 /// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading the streaming AI data.
@@ -57,12 +57,14 @@ class STEM_AI_N_samples_once
         {
             // Parameters setting
             int err;
-            int delay = 10;
             int slot = 1; // Connect AIO module to slot
             int mode = Const.AI_MODE_N_SAMPLE;
-            int samples = 50;
-            float sampling_rate = 1000;
+            float sampling_rate = 200;
+            int samples = 200;
+            int read_points = 200;
+            int delay = 200;   // ms
             int timeout = 3000; // ms
+            List<int> chip_select = new List<int>() {0, 1};
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
@@ -88,36 +90,45 @@ class STEM_AI_N_samples_once
             Console.WriteLine($"AI_open in slot {slot}: {err}");
 
             // Enable CS
-            err = dev.AI_enableCS(slot, new List<int> {0, 1}, timeout:timeout);
+            err = dev.AI_enableCS(slot, chip_select, timeout:timeout);
             Console.WriteLine($"AI_enableCS in slot {slot}: {err}");
 
             // Set AI acquisition mode to N-sample mode
             err = dev.AI_setMode(slot, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode} in slot {slot}: {err}");
 
-            // Set AI # of samples to 50 (pts)
-            err = dev.AI_setNumSamples(slot, samples, timeout:timeout);
-            Console.WriteLine($"AI_setNumSamples {samples} in slot {slot}: {err}");
-
-            // Set AI sampling rate to 1k (Hz)
+            // Set AI sampling rate
             err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
             Console.WriteLine($"AI_setNumSamples {sampling_rate} in slot {slot}: {err}");
 
-            // Start AI acquisition
+            // Set AI # of samples
+            err = dev.AI_setNumSamples(slot, samples, timeout:timeout);
+            Console.WriteLine($"AI_setNumSamples {samples} in slot {slot}: {err}");
+
+            // Start AI
             err = dev.AI_start(slot, timeout:timeout);
             Console.WriteLine($"AI_start in slot {slot}: {err}");
 
-            // Wait for data
-            Thread.Sleep(1000);
+            // Wait a while for data acquisition
+            Thread.Sleep(1000); // delay [ms]
 
             // Read data acquisition
-            List<List<double>> streaming_list = dev.AI_readStreaming(slot, samples, delay);
+            List<List<double>> ai_2Dlist = dev.AI_readStreaming(slot, read_points, delay:delay);
+            Console.WriteLine($"number of samples = {ai_2Dlist.Count}");
 
-            // Print data
-            foreach (List<double> sample in streaming_list)
+            bool ok = true;
+            foreach (List<double> ai_list in ai_2Dlist)
             {
-                Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
+                if (ai_list.Count != chip_select.Count*8){
+                    Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
+                    ok = false;
+                }
             }
+
+            if (ok)
+                Console.WriteLine("OK");
+            else
+                Console.WriteLine("NG");
 
             // Stop AI
             err = dev.AI_stop(slot, timeout:timeout);

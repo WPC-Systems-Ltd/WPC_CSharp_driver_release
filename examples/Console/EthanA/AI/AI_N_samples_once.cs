@@ -1,7 +1,7 @@
 /// AI_N_samples_once.cs with synchronous mode.
 ///
 /// This example demonstrates the process of obtaining AI data in N-sample mode.
-/// Additionally, it gets AI data with 50 points in once from EthanA.
+/// Additionally, it gets AI data with points in once from EthanA.
 ///
 /// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading the streaming AI data.
@@ -43,11 +43,12 @@ class EthanA_AI_N_samples_once
         {
             // Parameters setting
             int err;
-            int delay = 10;
             int port = 0;
             int mode = Const.AI_MODE_N_SAMPLE;
-            int samples = 50;
-            float sampling_rate = 1000;
+            float sampling_rate = 200;
+            int samples = 200;
+            int read_points = 200;
+            int delay = 200;   // ms
             int timeout = 3000; // ms
 
             // Get firmware model & version
@@ -63,29 +64,38 @@ class EthanA_AI_N_samples_once
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode} in port {port}: {err}");
 
-            // Set AI # of samples to 50 (pts)
-            err = dev.AI_setNumSamples(port, samples, timeout:timeout);
-            Console.WriteLine($"AI_setNumSamples {samples} in port {port}: {err}");
-
-            // Set AI sampling rate to 1k (Hz)
+            // Set AI sampling rate
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($"AI_setNumSamples {sampling_rate} in port {port}: {err}");
 
-            // Start AI acquisition
+            // Set AI # of samples
+            err = dev.AI_setNumSamples(port, samples, timeout:timeout);
+            Console.WriteLine($"AI_setNumSamples {samples} in port {port}: {err}");
+
+            // Start AI
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port {port}: {err}");
 
-            // Wait for data
-            Thread.Sleep(1000);
+            // Wait a while for data acquisition
+            Thread.Sleep(1000); // delay [ms]
 
             // Read data acquisition
-            List<List<double>> streaming_list = dev.AI_readStreaming(port, samples, delay);
+            List<List<double>> ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
+            Console.WriteLine($"number of samples = {ai_2Dlist.Count}");
 
-            // Print data
-            foreach (List<double> sample in streaming_list)
+            bool ok = true;
+            foreach (List<double> ai_list in ai_2Dlist)
             {
-                Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
+                if (ai_list.Count != 8){
+                    Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
+                    ok = false;
+                }
             }
+
+            if (ok)
+                Console.WriteLine("OK");
+            else
+                Console.WriteLine("NG");
 
             // Stop AI
             err = dev.AI_stop(port, timeout:timeout);
