@@ -1,6 +1,20 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.10 Date: 2023/12/04, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- example code: AI_continuous_multi_slot, AO_output_while_AI_streaming.
+- Channel count vs. sampling rate in AI README.md
+- The limitation of the sampling rate in AIO README.md
+- AO output range in AO README.md
+
+### Fixed
+- Each slot has it own chip_select variable
+- Fix module reopen issue
+- Hide ``AI_N_samples_in_loop`` example code
+- Fix AI readStreaming's returned data length
+ 
 v0.2.9 Date: 2023/11/16, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

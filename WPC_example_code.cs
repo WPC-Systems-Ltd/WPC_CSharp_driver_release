@@ -80,7 +80,7 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For AI");
         Console.WriteLine("------");
-        Console.WriteLine("Run AI_on_demand_once.cs, please input 8");
+        Console.WriteLine("Run AI_on_demand_once.cs, please input 120");
     }
 
     static void showAIMessage()
@@ -88,12 +88,13 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For AI");
         Console.WriteLine("------");
-        Console.WriteLine("Run AI_continuous_with_logger.cs, please input 9");
-        Console.WriteLine("Run AI_continuous.cs, please input 10");
-        Console.WriteLine("Run AI_N_samples_in_loop.cs, please input 11");
-        Console.WriteLine("Run AI_N_samples_once.cs, please input 12");
-        Console.WriteLine("Run AI_on_demand_in_loop.cs, please input 13");
-        Console.WriteLine("Run AI_on_demand_once.cs, please input 14");
+        Console.WriteLine("Run AI_continuous_multi_slot.cs, please input 121"); 
+        Console.WriteLine("Run AI_continuous_with_logger.cs, please input 122");
+        Console.WriteLine("Run AI_continuous.cs, please input 123");
+        Console.WriteLine("Run AI_N_samples_once.cs, please input 124");
+        Console.WriteLine("Run AI_on_demand_in_loop.cs, please input 125");
+        Console.WriteLine("Run AI_on_demand_once.cs, please input 126");
+
     }
     #endregion
 
@@ -103,8 +104,10 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For AIO");
         Console.WriteLine("-------");
-        Console.WriteLine("Run AIO_all_channels_loopback.cs, please input 15");
-        Console.WriteLine("Run AIO_one_channel_loopback.cs, please input 16");
+        Console.WriteLine("Run AIO_all_channels_loopback.cs, please input 130");
+        Console.WriteLine("Run AIO_one_channel_loopback.cs, please input 131");
+        Console.WriteLine("Run AO_output_while_AI_streaming.cs, please input 132");
+
     }
     #endregion
 
@@ -114,9 +117,9 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For AO");
         Console.WriteLine("-------");
-        Console.WriteLine("Run AO_write_all_channels.cs, please input 17");
-        Console.WriteLine("Run AO_write_one_channel.cs, please input 18");
-        Console.WriteLine("Run AO_waveform_generation.cs, please input 19");
+        Console.WriteLine("Run AO_write_all_channels.cs, please input 133");
+        Console.WriteLine("Run AO_write_one_channel.cs, please input 134");
+        Console.WriteLine("Run AO_waveform_generation.cs, please input 135");
     }
     #endregion
 
@@ -126,12 +129,12 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For DIO");
         Console.WriteLine("-------");
-        Console.WriteLine("Run DIO_loopback_pins.cs, please input 20");
-        Console.WriteLine("Run DIO_loopback_port.cs, please input 21");
-        Console.WriteLine("Run DO_blinky_pins.cs, please input 22");
-        Console.WriteLine("Run DO_blinky_port.cs, please input 23");
-        Console.WriteLine("Run DO_write_pins.cs, please input 24");
-        Console.WriteLine("Run DO_write_port.cs, please input 25");
+        Console.WriteLine("Run DIO_loopback_pins.cs, please input 140");
+        Console.WriteLine("Run DIO_loopback_port.cs, please input 141");
+        Console.WriteLine("Run DO_blinky_pins.cs, please input 142");
+        Console.WriteLine("Run DO_blinky_port.cs, please input 143");
+        Console.WriteLine("Run DO_write_pins.cs, please input 144");
+        Console.WriteLine("Run DO_write_port.cs, please input 145");
     }
     #endregion
 
@@ -278,10 +281,7 @@ public class WPC_example_code
         Console.WriteLine("For AHRS");
         Console.WriteLine("--------");
         Console.WriteLine("Run AHRS_read.cs, please input 600");
-    }
-
-
-    
+    } 
     static void Main()
     {
         Console.WriteLine("Welcome to WPC C# driver example code.");
@@ -353,7 +353,7 @@ public class WPC_example_code
                 showSysETHMessage();
                 showAOMessage();
                 break;
-
+  
             case 16:
                 Console.WriteLine("Get 16, show EthanT series example code");
                 showSysETHMessage();
@@ -487,64 +487,67 @@ public class WPC_example_code
                     #endregion
 
                     #region STEM_AI
-                    case 9:
+                    case 121:
+                        STEM_AI_continuous_multi_slot.Main();
+                        break;
+                    case 122:
                         STEM_DataLogger_AI_continuous.Main();
                         break;
-                    case 10:
+                    case 123:
                         STEM_AI_continuous.Main();
                         break;
-                    case 11:
-                        STEM_AI_N_samples_in_loop.Main();
-                        break;
-                    case 12:
+                    case 124:
                         STEM_AI_N_samples_once.Main();
                         break;
-                    case 13:
+                    case 125:
                         STEM_AI_on_demand_in_loop.Main();
                         break;
-                    case 14:
+                    case 126:
                         STEM_AI_on_demand_once.Main();
                         break;
                     #endregion
 
                     #region STEM_AIO
-                    case 15:
+                    case 130:
                         STEM_AIO_all_channels_loopback.Main();
                         break;
-                    case 16:
+                    case 131:
                         STEM_AIO_one_channel_loopback.Main();
+                        break;
+                    case 132:
+                        STEM_AO_output_while_AI_streaming.Main();
                         break;
                     #endregion
 
                     #region STEM_AO
-                    case 17:
+                    case 133:
                         STEM_AO_write_all_channels.Main();
                         break;
-                    case 18:
+                    case 134:
                         STEM_AO_write_one_channel.Main();
                         break;
-                    case 19:
+                    case 135:
                         STEM_AO_waveform_generation.Main();
                         break;
                     #endregion
 
                     #region STEM_DIO
-                    case 20:
+                    case 140:
                         STEM_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         STEM_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         STEM_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         STEM_DO_blinky_port.Main();
                         break;
-                    case 24:
+                    case 144:
                         STEM_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         STEM_DO_write_port.Main();
                         break;
                     #endregion
@@ -687,22 +690,22 @@ public class WPC_example_code
                     #endregion
 
                     #region EthanA_AI
-                    case 9:
+                    case 121:
+                        Console.WriteLine("It did not support");
+                        break;
+                    case 122:
                         EthanA_DataLogger_AI_continuous.Main();
                         break;
-                    case 10:
+                    case 123:
                         EthanA_AI_continuous.Main();
                         break;
-                    case 11:
-                        EthanA_AI_N_samples_in_loop.Main();
-                        break;
-                    case 12:
+                    case 124:
                         EthanA_AI_N_samples_once.Main();
                         break;
-                    case 13:
+                    case 125:
                         EthanA_AI_on_demand_in_loop.Main();
                         break;
-                    case 14:
+                    case 126:
                         EthanA_AI_on_demand_once.Main();
                         break;
                     #endregion
@@ -722,22 +725,22 @@ public class WPC_example_code
                     #endregion
 
                     #region EthanD_DIO
-                    case 20:
+                    case 140:
                         EthanD_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         EthanD_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         EthanD_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         EthanD_DO_blinky_port.Main();
                         break;
-                    case 24:
+                    case 144:
                         EthanD_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         EthanD_DO_write_port.Main();
                         break;
                     #endregion
@@ -763,7 +766,7 @@ public class WPC_example_code
                     #endregion
 
                     #region EthanI_AI24Bit
-                    case 8:
+                    case 120:
                         EthanI_AI_on_demand_once.Main();
                         break;
 
@@ -807,13 +810,13 @@ public class WPC_example_code
                     #endregion
 
                     #region EthanO_AO
-                    case 17:
+                    case 133:
                         EthanO_AO_write_all_channels.Main();
                         break;
-                    case 18:
+                    case 134:
                         EthanO_AO_write_one_channel.Main();
                         break;
-                    case 19:
+                    case 135:
                         EthanO_AO_waveform_generation.Main();
                         break;
                     #endregion
@@ -859,43 +862,43 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1AD_AI
-                    case 9:
+                    case 121:
+                        Console.WriteLine("It did not support");
+                        break;
+                    case 122:
                         USBDAQF1AD_DataLogger_AI_continuous.Main();
                         break;
-                    case 10:
+                    case 123:
                         USBDAQF1AD_AI_continuous.Main();
                         break;
-                    case 11:
-                        USBDAQF1AD_AI_N_samples_in_loop.Main();
-                        break;
-                    case 12:
+                    case 124:
                         USBDAQF1AD_AI_N_samples_once.Main();
                         break;
-                    case 13:
+                    case 125:
                         USBDAQF1AD_AI_on_demand_in_loop.Main();
                         break;
-                    case 14:
+                    case 126:
                         USBDAQF1AD_AI_on_demand_once.Main();
                         break;
                     #endregion
 
                     #region USBDAQF1AD_DIO
-                    case 20:
+                    case 140:
                         USBDAQF1AD_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         USBDAQF1AD_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         USBDAQF1AD_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         USBDAQF1AD_DO_blinky_port.Main();
                         break;
-                    case 24:
+                    case 144:
                         USBDAQF1AD_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         USBDAQF1AD_DO_write_port.Main();
                         break;
                     #endregion
@@ -951,64 +954,67 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1AOD_AI
-                    case 9:
+                    case 121:
+                        Console.WriteLine("It did not support");
+                        break;
+                    case 122:
                         USBDAQF1AOD_DataLogger_AI_continuous.Main();
                         break;
-                    case 10:
+                    case 123:
                         USBDAQF1AOD_AI_continuous.Main();
                         break;
-                    case 11:
-                        USBDAQF1AOD_AI_N_samples_in_loop.Main();
-                        break;
-                    case 12:
+                    case 124:
                         USBDAQF1AOD_AI_N_samples_once.Main();
                         break;
-                    case 13:
+                    case 125:
                         USBDAQF1AOD_AI_on_demand_in_loop.Main();
                         break;
-                    case 14:
+                    case 126:
                         USBDAQF1AOD_AI_on_demand_once.Main();
                         break;
                     #endregion
 
                     #region USBDAQF1AOD_AIO
-                    case 15:
+                    case 130:
                         USBDAQF1AOD_AIO_all_channels_loopback.Main();
                         break;
-                    case 16:
+                    case 131:
                         USBDAQF1AOD_AIO_one_channel_loopback.Main();
+                        break;
+                    case 132:
+                        Console.WriteLine("It did not support");
                         break;
                     #endregion
 
                     #region USBDAQF1AOD_AO
-                    case 17:
+                    case 133:
                         USBDAQF1AOD_AO_write_all_channels.Main();
                         break;
-                    case 18:
+                    case 134:
                         USBDAQF1AOD_AO_write_one_channel.Main();
                         break;
-                    case 19:
+                    case 135:
                         USBDAQF1AOD_AO_waveform_generation.Main();
                         break;
                     #endregion
 
                     #region USBDAQF1AOD_DIO
-                    case 20:
+                    case 140:
                         USBDAQF1AOD_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         USBDAQF1AOD_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         USBDAQF1AOD_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         USBDAQF1AOD_DO_blinky_port.Main();
                         break;
-                    case 24:
+                    case 144:
                         USBDAQF1AOD_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         USBDAQF1AOD_DO_write_port.Main();
                         break;
                     #endregion
@@ -1055,22 +1061,22 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1CD_DIO
-                    case 20:
+                    case 140:
                         USBDAQF1CD_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         USBDAQF1CD_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         USBDAQF1CD_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         USBDAQF1CD_DO_blinky_port.Main();
                         break;
-                    case 24:
+                    case 144:
                         USBDAQF1CD_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         USBDAQF1CD_DO_write_port.Main();
                         break;
                     #endregion
@@ -1135,22 +1141,22 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1D_DIO
-                    case 20:
+                    case 140:
                         USBDAQF1D_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         USBDAQF1D_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         USBDAQF1D_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         USBDAQF1D_DO_blinky_port.Main();
                         break;
-                    case 24:
+                    case 144:
                         USBDAQF1D_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         USBDAQF1D_DO_write_port.Main();
                         break;
                     #endregion
@@ -1206,22 +1212,22 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1DSNK_DIO
-                    case 20:
+                    case 140:
                         USBDAQF1DSNK_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         USBDAQF1DSNK_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         USBDAQF1DSNK_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         USBDAQF1DSNK_DO_blinky_port.Main();
                         break;
-                    case 24:
+                    case 144:
                         USBDAQF1DSNK_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         USBDAQF1DSNK_DO_write_port.Main();
                         break;
                     #endregion
@@ -1253,22 +1259,22 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1RD_DIO
-                    case 20:
+                    case 140:
                         USBDAQF1RD_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         USBDAQF1RD_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         USBDAQF1RD_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         USBDAQF1RD_DO_blinky_port.Main();
                         break;
-                    case 24:
+                    case 144:
                         USBDAQF1RD_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         USBDAQF1RD_DO_write_port.Main();
                         break;
                     #endregion
@@ -1336,22 +1342,22 @@ public class WPC_example_code
                     #endregion
 
                     #region USBDAQF1TD_DIO
-                    case 20:
+                    case 140:
                         USBDAQF1TD_DIO_loopback_pins.Main();
                         break;
-                    case 21:
+                    case 141:
                         USBDAQF1TD_DIO_loopback_port.Main();
                         break;
-                    case 22:
+                    case 142:
                         USBDAQF1TD_DO_blinky_pins.Main();
                         break;
-                    case 23:
+                    case 143:
                         USBDAQF1TD_DO_blinky_port.Main();
                         break;
                     case 24:
                         USBDAQF1TD_DO_write_pins.Main();
                         break;
-                    case 25:
+                    case 145:
                         USBDAQF1TD_DO_write_port.Main();
                         break;
                     #endregion
@@ -1422,22 +1428,22 @@ public class WPC_example_code
                     #endregion
 
                     #region WifiDAQE3A_AI
-                    case 9:
+                    case 121:
+                        Console.WriteLine("It did not support");
+                        break;
+                    case 122:
                         WifiDAQE3A_DataLogger_AI_continuous.Main();
                         break;
-                    case 10:
+                    case 123:
                         WifiDAQE3A_AI_continuous.Main();
                         break;
-                    case 11:
-                        WifiDAQE3A_AI_N_samples_in_loop.Main();
-                        break;
-                    case 12:
+                    case 124:
                         WifiDAQE3A_AI_N_samples_once.Main();
                         break;
-                    case 13:
+                    case 125:
                         WifiDAQE3A_AI_on_demand_in_loop.Main();
                         break;
-                    case 14:
+                    case 126:
                         WifiDAQE3A_AI_on_demand_once.Main();
                         break;
                     #endregion
@@ -1447,7 +1453,6 @@ public class WPC_example_code
                         WifiDAQE3A_AHRS_read.Main();
                         break;
                     #endregion
-
 
                     default:
                         break;
@@ -1467,22 +1472,22 @@ public class WPC_example_code
                     #endregion
 
                     #region WifiDAQF4A_AI
-                    case 9:
+                    case 121:
+                        Console.WriteLine("It did not support");
+                        break;
+                    case 122:
                         WifiDAQF4A_DataLogger_AI_continuous.Main();
                         break;
-                    case 10:
+                    case 123:
                         WifiDAQF4A_AI_continuous.Main();
                         break;
-                    case 11:
-                        WifiDAQF4A_AI_N_samples_in_loop.Main();
-                        break;
-                    case 12:
+                    case 124:
                         WifiDAQF4A_AI_N_samples_once.Main();
                         break;
-                    case 13:
+                    case 125:
                         WifiDAQF4A_AI_on_demand_in_loop.Main();
                         break;
-                    case 14:
+                    case 126:
                         WifiDAQF4A_AI_on_demand_once.Main();
                         break;
                     #endregion

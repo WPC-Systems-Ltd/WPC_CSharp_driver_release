@@ -96,8 +96,8 @@ class STEM_AI_on_demand_in_loop
             for (int i=0; i<5; i++)
             {
                 // Read data acquisition acquisition
-                List<double> sample = dev.AI_readOnDemand(slot);
-                Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
+                List<double> ai_list = dev.AI_readOnDemand(slot);
+                Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
             }
 
             // Close AI

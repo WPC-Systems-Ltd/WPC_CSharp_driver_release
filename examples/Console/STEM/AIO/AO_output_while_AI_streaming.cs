@@ -1,13 +1,12 @@
-/// AI_N_samples_in_loop.cs with synchronous mode.
-///
-/// This example demonstrates the process of obtaining AI data in N-sample mode.
-/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from STEM.
-///
-/// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
-/// Next, it outlines the procedure for reading the streaming AI data.
-/// Finally, it concludes by explaining how to close the AI.
 
-/// If your product is "STEM", please invoke the function Sys_setAIOMode and AI_enableCS.
+
+/// AO_output_while_AI_streaming.cs with synchronous mode.
+///
+/// This example demonstrates the process of AI streaming and AO output from STEM.
+/// Not all of sampling rate can alter the output values of AO.
+/// Its limitation is that the AI sampling rate and the number of CS must be less than or equal to 3000 Hz.
+///
+/// Please invoke the function `Sys_setAIOMode_async` and `AI_enableCS_async`.
 /// Example: AI_enableCS is {0, 2}
 /// Subsequently, the returned value of AI_readOnDemand and AI_readStreaming will be displayed as follows.
 /// data:
@@ -20,7 +19,7 @@
 ///    .
 ///    .
 /// [sampleN]
-
+///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
@@ -30,28 +29,8 @@
 
 using WPC.Product;
 
-class STEM_AI_N_samples_in_loop
+class STEM_AO_output_while_AI_streaming
 {
-    static void loop_func(STEM handle, int slot, int samples, int delay, int exit_time)
-    {
-        List<List<double>> streaming_list;
-        int time_cal = 0;
-        while (time_cal < exit_time)
-        {
-            // Read data acquisition
-            streaming_list = handle.AI_readStreaming(slot, samples, delay);
-
-            foreach (List<double> sample in streaming_list)
-            {
-                Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
-            }
-
-            // Wait
-            Thread.Sleep(delay); // delay [ms]
-            time_cal += delay;
-        }
-    }
-
     static public void Main()
     {
         // Get C# driver version
@@ -73,16 +52,18 @@ class STEM_AI_N_samples_in_loop
             return;
         }
 
+        // Parameters setting
+        int err;
+        int slot = 1; // Connect AIO module to slot
+        int mode = Const.AI_MODE_CONTINUOUS;
+        float sampling_rate = 200;
+        int read_points = 200;
+        int delay = 200;    // ms
+        int timeout = 3000; // ms
+        List<int> chip_select = new List<int>() {0, 1};
+
         try
         {
-            // Parameters setting
-            int err;
-            int slot = 1; // Connect AIO module to slot
-            int mode = Const.AI_MODE_N_SAMPLE;
-            int samples = 400;
-            float sampling_rate = 1000;
-            int timeout = 3000; // ms
-
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
@@ -107,36 +88,53 @@ class STEM_AI_N_samples_in_loop
             Console.WriteLine($"AI_open in slot {slot}: {err}");
 
             // Enable CS
-            err = dev.AI_enableCS(slot, new List<int> {0, 1}, timeout:timeout);
+            err = dev.AI_enableCS(slot, chip_select, timeout:timeout);
             Console.WriteLine($"AI_enableCS in slot {slot}: {err}");
 
-            // Set AI acquisition mode to N sample
+            // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(slot, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode} in slot {slot}: {err}");
 
-            // Set AI sampling rate to 1k (Hz)
+            // Set AI sampling rate
             err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
             Console.WriteLine($"AI_setSamplingRate {sampling_rate} in slot {slot}: {err}");
 
-            // Set AI # of samples to 400 (pts)
-            err = dev.AI_setNumSamples(slot, samples, timeout:timeout);
-            Console.WriteLine($"AI_setNumSamples {samples} in slot {slot}: {err}");
-
-            // Start AI acquisition
+            // Start AI
             err = dev.AI_start(slot, timeout:timeout);
             Console.WriteLine($"AI_start in slot {slot}: {err}");
 
-            // Wait for data
-            Thread.Sleep(1000);
+            // Wait a while for data acquisition
+            Thread.Sleep(1000); // delay [ms]
 
-            // loop parameters
-            int get_samples = 600;
-            int delay = 50;
-            int exit_time = 300;
+            List<double> ao_value_list = new List<double>() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
+            int data_len = 1;
+            int counter = 0;
+            Random rnd = new Random();
+            while (data_len > 0 && counter < 30){
+                // Read data acquisition
+                List<List<double>> ai_2Dlist = dev.AI_readStreaming(slot, read_points, delay:delay);
+                Console.WriteLine($"In slot {slot}, number of samples = {ai_2Dlist.Count}");
 
-            // Start loop
-            loop_func(dev, slot, get_samples, delay, exit_time);
+                // Update data len
+                data_len = ai_2Dlist.Count;
 
+                counter++;
+                if (counter % 10 == 0){
+                    // Get random number
+                    int random_num = rnd.Next(0, 7);
+
+                    // Write AO vaule in channel 0
+                    err = dev.AO_writeOneChannel(slot, 0, ao_value_list[random_num], timeout:timeout);
+                    Console.WriteLine($"In slot {slot} channel 0, the AO value is {ao_value_list[random_num]}: {err}");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+        finally
+        {
             // Stop AI
             err = dev.AI_stop(slot, timeout:timeout);
             Console.WriteLine($"AI_stop in slot {slot}: {err}");
@@ -144,10 +142,10 @@ class STEM_AI_N_samples_in_loop
             // Close AI
             err = dev.AI_close(slot, timeout:timeout);
             Console.WriteLine($"AI_close in slot {slot}: {err}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex);
+
+            // Close AO
+            err = dev.AO_close(slot, timeout:timeout);
+            Console.WriteLine($"AO_close in slot {slot}: {err}");
         }
 
         // Disconnect device
@@ -157,3 +155,4 @@ class STEM_AI_N_samples_in_loop
         dev.close();
     }
 }
+

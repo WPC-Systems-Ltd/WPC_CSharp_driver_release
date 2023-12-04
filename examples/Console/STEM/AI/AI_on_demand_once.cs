@@ -93,10 +93,10 @@ class STEM_AI_on_demand_once
             Console.WriteLine($"AI_setMode {mode}: {err}");
 
             // Read data acquisition acquisition
-            List<double> sample = dev.AI_readOnDemand(slot, timeout:timeout);
+            List<double> ai_list = dev.AI_readOnDemand(slot, timeout:timeout);
 
             // Print data
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
 
             // Close AI
             err = dev.AI_close(slot, timeout:timeout);

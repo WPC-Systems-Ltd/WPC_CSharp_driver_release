@@ -1,7 +1,7 @@
 /// AI_continuous_with_logger.cs with synchronous mode.
 ///
-/// This example demonstrates the process of obtaining AI data in continuous mode and saving it into a CSV file.
-/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from USBDAQF1AD.
+/// This example demonstrates the process of obtaining AI data in continuous mode with 8 channels from USBDAQF1AD.
+/// Then, save data into CSV file.
 ///
 /// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading and saving the streaming AI data.
@@ -18,29 +18,6 @@ using WPC.Product;
 
 class USBDAQF1AD_DataLogger_AI_continuous
 {
-    static void loop_func(USBDAQF1AD handle, int port, int samples, int delay, int exit_time)
-    {
-        List<List<double>> streaming_list;
-        int time_cal = 0;
-        while (time_cal < exit_time)
-        {
-            // Read data acquisition
-            streaming_list = handle.AI_readStreaming(port, samples, delay);
-
-            foreach (List<double> sample in streaming_list)
-            {
-                Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
-
-                // Write data into CSV
-                handle.Logger_writeList(sample);
-            }
-
-            // Wait
-            Thread.Sleep(delay); // delay [ms]
-            time_cal += delay;
-        }
-    }
-
     static public void Main()
     {
         // Get C# driver version
@@ -68,8 +45,15 @@ class USBDAQF1AD_DataLogger_AI_continuous
             int err;
             int port = 0;
             int mode = Const.AI_MODE_CONTINUOUS;
-            float sampling_rate = 1000;
+            float sampling_rate = 200;
+            int read_points = 200;
+            int delay = 200;    // ms
             int timeout = 3000; // ms
+
+            // Get firmware model & version
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            Console.WriteLine($"Model name: {driver_info[0]}");
+            Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open file with CSV file
             err = dev.Logger_openFile("WPC_tester_USBDAQF1AD_AI.csv");
@@ -80,41 +64,44 @@ class USBDAQF1AD_DataLogger_AI_continuous
             err = dev.Logger_writeValue(header);
             Console.WriteLine($"Logger_writeValue: {err}");
 
-            // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
-            Console.WriteLine($"Model name: {driver_info[0]}");
-            Console.WriteLine($"Firmware version: {driver_info.Last()}");
-
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port {port}: {err}");
 
-            // Set AI acquisition mode to continuous
+            // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(port, mode, timeout:timeout);
             Console.WriteLine($"AI_setMode {mode} in port {port}: {err}");
 
-            // Set AI sampling rate to 1k (Hz)
+            // Set AI sampling rate
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
             Console.WriteLine($"AI_setSamplingRate {sampling_rate} in port {port}: {err}");
 
-            // Start AI acquisition
+            // Start AI
             err = dev.AI_start(port, timeout:timeout);
             Console.WriteLine($"AI_start in port {port}: {err}");
 
-            // Wait for data
-            Thread.Sleep(1000);
-
-            // loop parameters
-            int get_samples = 200;
-            int delay = 50;
-            int exit_time = 100;
-
-            // Start loop
-            loop_func(dev, port, get_samples, delay, exit_time);
+            // Wait a while for data acquisition
+            Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
             err = dev.AI_stop(port, timeout:timeout);
             Console.WriteLine($"AI_stop in port {port}: {err}");
+
+            int data_len = 1;
+            while (data_len > 0){
+                // Read data acquisition
+                List<List<double>> ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
+                Console.WriteLine($"number of samples = {ai_2Dlist.Count}");
+
+                foreach (List<double> ai_list in ai_2Dlist)
+                {
+                    // Write data into CSV file
+                    dev.Logger_writeList(ai_list);
+                }
+
+                // Update data len
+                data_len = ai_2Dlist.Count;
+            }
 
             // Close AI
             err = dev.AI_close(port, timeout:timeout);

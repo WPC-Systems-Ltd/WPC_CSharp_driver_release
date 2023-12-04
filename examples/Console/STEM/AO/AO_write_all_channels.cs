@@ -45,6 +45,7 @@ class STEM_AO_write_all_channels
             int err;
             int slot = 1; // Connect AIO module to slot
             int timeout = 3000; // ms
+            List<double> ao_value_list = new List<double>() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
@@ -69,10 +70,8 @@ class STEM_AO_write_all_channels
             err = dev.AO_open(slot, timeout:timeout);
             Console.WriteLine($"AO_open in slot {slot}: {err}");
 
-            // Write AO data simultaneously
-            // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
-            List<double> AO_values = new List<double> { 5, 5, 3, 3, 2, 2, 0, 0 };
-            err = dev.AO_writeAllChannels(slot, AO_values, timeout:timeout);
+            // Write AO value simultaneously
+            err = dev.AO_writeAllChannels(slot, ao_value_list, timeout:timeout);
             Console.WriteLine($"AO_writeAllChannels in slot {slot}: {err}");
 
             // Close AO
