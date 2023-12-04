@@ -47,6 +47,7 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             int err;
             int port = 0;
             int timeout = 3000; // ms
+            List<double> ao_value_list = new List<double>() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
@@ -62,32 +63,32 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             Console.WriteLine($"AO_open in port {port}: {err}");
 
             // Read data acquisition
-            List<double> sample = dev.AI_readOnDemand(port, timeout:timeout);
+            List<double> ai_list = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Print data
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
 
-            // Write AO vaule 1.5(V) in channel 0
-            err = dev.AO_writeOneChannel(port, 0, 1.5, timeout:timeout);
-            Console.WriteLine($"AO_writeOneChannel in ch0 in port {port}: {err}");
+            // Write AO vaule in channel 0
+            err = dev.AO_writeOneChannel(port, 0, ao_value_list[0], timeout:timeout);
+            Console.WriteLine($"In port {port} channel 0, the AO value is {ao_value_list[0]}: {err}");
 
-            // Write AO vaule 2.5(V) in channel 1
-            err = dev.AO_writeOneChannel(port, 1, 2.5, timeout:timeout);
-            Console.WriteLine($"AO_writeOneChannel in ch1 in port {port}: {err}");
+            // Write AO vaule in channel 1
+            err = dev.AO_writeOneChannel(port, 1, ao_value_list[1], timeout:timeout);
+            Console.WriteLine($"In port {port} channel 1, the AO value is {ao_value_list[1]}: {err}");
 
-            // Write AO vaule 3.5(V) in channel 2
-            err = dev.AO_writeOneChannel(port, 2, 3.5, timeout:timeout);
-            Console.WriteLine($"AO_writeOneChannel in ch2 in port {port}: {err}");
+            // Write AO vaule in channel 2
+            err = dev.AO_writeOneChannel(port, 2, ao_value_list[2], timeout:timeout);
+            Console.WriteLine($"In port {port} channel 2, the AO value is {ao_value_list[2]}: {err}");
 
-            // Write AO vaule 4.5(V) in channel 3
-            err = dev.AO_writeOneChannel(port, 3, 4.5, timeout:timeout);
-            Console.WriteLine($"AO_writeOneChannel in ch3 in port {port}: {err}");
+            // Write AO vaule in channel 3
+            err = dev.AO_writeOneChannel(port, 3, ao_value_list[3], timeout:timeout);
+            Console.WriteLine($"In port {port} channel 3, the AO value is {ao_value_list[3]}: {err}");
 
             // Read data acquisition
-            sample = dev.AI_readOnDemand(port, timeout:timeout);
+            ai_list = dev.AI_readOnDemand(port, timeout:timeout);
 
             // Print data
-            Console.WriteLine(string.Format("[{0}]", string.Join(", ", sample)));
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
 
             // Close AI
             err = dev.AI_close(port, timeout:timeout);

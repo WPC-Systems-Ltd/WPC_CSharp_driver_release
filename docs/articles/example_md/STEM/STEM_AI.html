@@ -74,7 +74,7 @@
 <a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">AI_continuous.cs</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">AI_N_samples_in_loop.cs</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">AI_continuous_with_logger.cs</a>
 </li>
 <li role="presentation">
 <a href="#tabpanel_bHGHmlrG6S_tabid-3" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-3" data-tab="tabid-3" tabindex="-1">AI_N_samples_once.cs</a>
@@ -92,8 +92,7 @@
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
 <pre><code class="lang-csharp" name="CS">/// AI_continuous.cs with synchronous mode.
 ///
-/// This example demonstrates the process of obtaining AI data in continuous mode.
-/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from STEM.
+/// This example demonstrates the process of obtaining AI data in continuous mode with 8 channels from STEM.
 ///
 /// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading the streaming AI data.
@@ -124,26 +123,6 @@ using WPC.Product;
 
 class STEM_AI_continuous
 {
-    static void loop_func(STEM handle, int slot, int samples, int delay, int exit_time)
-    {
-        List&lt;List&lt;double&gt;&gt; streaming_list;
-        int time_cal = 0;
-        while (time_cal &lt; exit_time)
-        {
-            // Read data acquisition
-            streaming_list = handle.AI_readStreaming(slot, samples, delay);
-
-            foreach (List&lt;double&gt; sample in streaming_list)
-            {
-                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
-            }
-
-            // Wait
-            Thread.Sleep(delay); // delay [ms]
-            time_cal += delay;
-        }
-    }
-
     static public void Main()
     {
         // Get C# driver version
@@ -171,8 +150,11 @@ class STEM_AI_continuous
             int err;
             int slot = 1; // Connect AIO module to slot
             int mode = Const.AI_MODE_CONTINUOUS;
-            float sampling_rate = 1000;
+            float sampling_rate = 200;
+            int read_points = 200;
+            int delay = 200;   // ms
             int timeout = 3000; // ms
+            List&lt;int&gt; chip_select = new List&lt;int&gt;() {0, 1};
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
@@ -198,35 +180,37 @@ class STEM_AI_continuous
             Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
 
             // Enable CS
-            err = dev.AI_enableCS(slot, new List&lt;int&gt; {0, 1}, timeout:timeout);
+            err = dev.AI_enableCS(slot, chip_select, timeout:timeout);
             Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
 
-            // Set AI acquisition mode to continuous
+            // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(slot, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in slot {slot}: {err}&quot;);
 
-            // Set AI sampling rate to 1k (Hz)
+            // Set AI sampling rate
             err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in slot {slot}: {err}&quot;);
 
-            // Start AI acquisition
+            // Start AI
             err = dev.AI_start(slot, timeout:timeout);
             Console.WriteLine($&quot;AI_start in slot {slot}: {err}&quot;);
 
-            // Wait for data
-            Thread.Sleep(1000);
-
-            // loop parameters
-            int get_samples = 600;
-            int delay = 50;
-            int exit_time = 300;
-
-            // Start loop
-            loop_func(dev, slot, get_samples, delay, exit_time);
+            // Wait a while for data acquisition
+            Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
             err = dev.AI_stop(slot, timeout:timeout);
             Console.WriteLine($&quot;AI_stop in slot {slot}: {err}&quot;);
+
+            int data_len = 1;
+            while (data_len &gt; 0){
+                // Read data acquisition
+                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(slot, read_points, delay:delay);
+                Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
+
+                // Update data len
+                data_len = ai_2Dlist.Count;
+            }
 
             // Close AI
             err = dev.AI_close(slot, timeout:timeout);
@@ -246,13 +230,13 @@ class STEM_AI_continuous
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// AI_N_samples_in_loop.cs with synchronous mode.
+<pre><code class="lang-csharp" name="CS">/// AI_continuous_with_logger.cs with synchronous mode.
 ///
-/// This example demonstrates the process of obtaining AI data in N-sample mode.
-/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from STEM.
+/// This example demonstrates the process of obtaining AI data in continuous mode with 8 channels from STEM.
+/// Then, save data into CSV file.
 ///
 /// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
-/// Next, it outlines the procedure for reading the streaming AI data.
+/// Next, it outlines the procedure for reading and saving the streaming AI data.
 /// Finally, it concludes by explaining how to close the AI.
 
 /// If your product is &quot;STEM&quot;, please invoke the function Sys_setAIOMode and AI_enableCS.
@@ -278,28 +262,8 @@ class STEM_AI_continuous
 
 using WPC.Product;
 
-class STEM_AI_N_samples_in_loop
+class STEM_DataLogger_AI_continuous
 {
-    static void loop_func(STEM handle, int slot, int samples, int delay, int exit_time)
-    {
-        List&lt;List&lt;double&gt;&gt; streaming_list;
-        int time_cal = 0;
-        while (time_cal &lt; exit_time)
-        {
-            // Read data acquisition
-            streaming_list = handle.AI_readStreaming(slot, samples, delay);
-
-            foreach (List&lt;double&gt; sample in streaming_list)
-            {
-                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
-            }
-
-            // Wait
-            Thread.Sleep(delay); // delay [ms]
-            time_cal += delay;
-        }
-    }
-
     static public void Main()
     {
         // Get C# driver version
@@ -326,15 +290,26 @@ class STEM_AI_N_samples_in_loop
             // Parameters setting
             int err;
             int slot = 1; // Connect AIO module to slot
-            int mode = Const.AI_MODE_N_SAMPLE;
-            int samples = 400;
-            float sampling_rate = 1000;
+            int mode = Const.AI_MODE_CONTINUOUS;
+            float sampling_rate = 200;
+            int read_points = 200;
+            int delay = 200;    // ms
             int timeout = 3000; // ms
+            List&lt;int&gt; chip_select = new List&lt;int&gt;() {0, 1};
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
+
+            // Open file with CSV file
+            err = dev.Logger_openFile(&quot;WPC_test_STEM_AI.csv&quot;);
+            Console.WriteLine($&quot;Logger_openFile: {err}&quot;);
+
+            // Write header into CSV file
+            var header = $&quot;CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7&quot;;
+            err = dev.Logger_writeValue(header);
+            Console.WriteLine($&quot;Logger_writeValue: {err}&quot;);
 
             // Get slot mode
             string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
@@ -355,39 +330,43 @@ class STEM_AI_N_samples_in_loop
             Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
 
             // Enable CS
-            err = dev.AI_enableCS(slot, new List&lt;int&gt; {0, 1}, timeout:timeout);
+            err = dev.AI_enableCS(slot, chip_select, timeout:timeout);
             Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
 
-            // Set AI acquisition mode to N sample
+            // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(slot, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in slot {slot}: {err}&quot;);
 
-            // Set AI sampling rate to 1k (Hz)
+            // Set AI sampling rate
             err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in slot {slot}: {err}&quot;);
 
-            // Set AI # of samples to 400 (pts)
-            err = dev.AI_setNumSamples(slot, samples, timeout:timeout);
-            Console.WriteLine($&quot;AI_setNumSamples {samples} in slot {slot}: {err}&quot;);
-
-            // Start AI acquisition
+            // Start AI
             err = dev.AI_start(slot, timeout:timeout);
             Console.WriteLine($&quot;AI_start in slot {slot}: {err}&quot;);
 
-            // Wait for data
-            Thread.Sleep(1000);
-
-            // loop parameters
-            int get_samples = 600;
-            int delay = 50;
-            int exit_time = 300;
-
-            // Start loop
-            loop_func(dev, slot, get_samples, delay, exit_time);
+            // Wait a while for data acquisition
+            Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
             err = dev.AI_stop(slot, timeout:timeout);
             Console.WriteLine($&quot;AI_stop in slot {slot}: {err}&quot;);
+
+            int data_len = 1;
+            while (data_len &gt; 0){
+                // Read data acquisition
+                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(slot, read_points, delay:delay);
+                Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
+
+                foreach (List&lt;double&gt; ai_list in ai_2Dlist)
+                {
+                    // Write data into CSV file
+                    dev.Logger_writeList(ai_list);
+                }
+
+                // Update data len
+                data_len = ai_2Dlist.Count;
+            }
 
             // Close AI
             err = dev.AI_close(slot, timeout:timeout);
@@ -410,7 +389,7 @@ class STEM_AI_N_samples_in_loop
 <pre><code class="lang-csharp" name="CS">/// AI_N_samples_once.cs with synchronous mode.
 ///
 /// This example demonstrates the process of obtaining AI data in N-sample mode.
-/// Additionally, it gets AI data with 50 points in once from STEM.
+/// Additionally, it gets AI data with points in once from STEM.
 ///
 /// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading the streaming AI data.
@@ -466,12 +445,14 @@ class STEM_AI_N_samples_once
         {
             // Parameters setting
             int err;
-            int delay = 10;
             int slot = 1; // Connect AIO module to slot
             int mode = Const.AI_MODE_N_SAMPLE;
-            int samples = 50;
-            float sampling_rate = 1000;
+            float sampling_rate = 200;
+            int samples = 200;
+            int read_points = 200;
+            int delay = 200;   // ms
             int timeout = 3000; // ms
+            List&lt;int&gt; chip_select = new List&lt;int&gt;() {0, 1};
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
@@ -497,36 +478,45 @@ class STEM_AI_N_samples_once
             Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
 
             // Enable CS
-            err = dev.AI_enableCS(slot, new List&lt;int&gt; {0, 1}, timeout:timeout);
+            err = dev.AI_enableCS(slot, chip_select, timeout:timeout);
             Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
 
             // Set AI acquisition mode to N-sample mode
             err = dev.AI_setMode(slot, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in slot {slot}: {err}&quot;);
 
-            // Set AI # of samples to 50 (pts)
-            err = dev.AI_setNumSamples(slot, samples, timeout:timeout);
-            Console.WriteLine($&quot;AI_setNumSamples {samples} in slot {slot}: {err}&quot;);
-
-            // Set AI sampling rate to 1k (Hz)
+            // Set AI sampling rate
             err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
             Console.WriteLine($&quot;AI_setNumSamples {sampling_rate} in slot {slot}: {err}&quot;);
 
-            // Start AI acquisition
+            // Set AI # of samples
+            err = dev.AI_setNumSamples(slot, samples, timeout:timeout);
+            Console.WriteLine($&quot;AI_setNumSamples {samples} in slot {slot}: {err}&quot;);
+
+            // Start AI
             err = dev.AI_start(slot, timeout:timeout);
             Console.WriteLine($&quot;AI_start in slot {slot}: {err}&quot;);
 
-            // Wait for data
-            Thread.Sleep(1000);
+            // Wait a while for data acquisition
+            Thread.Sleep(1000); // delay [ms]
 
             // Read data acquisition
-            List&lt;List&lt;double&gt;&gt; streaming_list = dev.AI_readStreaming(slot, samples, delay);
+            List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(slot, read_points, delay:delay);
+            Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
 
-            // Print data
-            foreach (List&lt;double&gt; sample in streaming_list)
+            bool ok = true;
+            foreach (List&lt;double&gt; ai_list in ai_2Dlist)
             {
-                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
+                if (ai_list.Count != chip_select.Count*8){
+                    Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, ai_list)));
+                    ok = false;
+                }
             }
+
+            if (ok)
+                Console.WriteLine(&quot;OK&quot;);
+            else
+                Console.WriteLine(&quot;NG&quot;);
 
             // Stop AI
             err = dev.AI_stop(slot, timeout:timeout);
@@ -648,8 +638,8 @@ class STEM_AI_on_demand_in_loop
             for (int i=0; i&lt;5; i++)
             {
                 // Read data acquisition acquisition
-                List&lt;double&gt; sample = dev.AI_readOnDemand(slot);
-                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
+                List&lt;double&gt; ai_list = dev.AI_readOnDemand(slot);
+                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, ai_list)));
             }
 
             // Close AI
@@ -765,10 +755,10 @@ class STEM_AI_on_demand_once
             Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
 
             // Read data acquisition acquisition
-            List&lt;double&gt; sample = dev.AI_readOnDemand(slot, timeout:timeout);
+            List&lt;double&gt; ai_list = dev.AI_readOnDemand(slot, timeout:timeout);
 
             // Print data
-            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
+            Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, ai_list)));
 
             // Close AI
             err = dev.AI_close(slot, timeout:timeout);
@@ -791,8 +781,8 @@ class STEM_AI_on_demand_once
 <section id="tabpanel_bHGHmlrG6S_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="CS">/// AI_continuous_with_logger.cs with synchronous mode.
 ///
-/// This example demonstrates the process of obtaining AI data in continuous mode and saving it into a CSV file.
-/// Additionally, it utilizes a loop to retrieve AI data with 8 channels from STEM.
+/// This example demonstrates the process of obtaining AI data in continuous mode with 8 channels from STEM.
+/// Then, save data into CSV file.
 ///
 /// To begin with, it demonstrates the steps to open the AI and configure the AI parameters.
 /// Next, it outlines the procedure for reading and saving the streaming AI data.
@@ -823,29 +813,6 @@ using WPC.Product;
 
 class STEM_DataLogger_AI_continuous
 {
-    static void loop_func(STEM handle, int slot, int samples, int delay, int exit_time)
-    {
-        List&lt;List&lt;double&gt;&gt; streaming_list;
-        int time_cal = 0;
-        while (time_cal &lt; exit_time)
-        {
-            // Read data acquisition
-            streaming_list = handle.AI_readStreaming(slot, samples, delay);
-
-            foreach (List&lt;double&gt; sample in streaming_list)
-            {
-                Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
-
-                // Write data into CSV
-                handle.Logger_writeList(sample);
-            }
-
-            // Wait
-            Thread.Sleep(delay); // delay [ms]
-            time_cal += delay;
-        }
-    }
-
     static public void Main()
     {
         // Get C# driver version
@@ -873,22 +840,25 @@ class STEM_DataLogger_AI_continuous
             int err;
             int slot = 1; // Connect AIO module to slot
             int mode = Const.AI_MODE_CONTINUOUS;
-            float sampling_rate = 1000;
+            float sampling_rate = 200;
+            int read_points = 200;
+            int delay = 200;    // ms
             int timeout = 3000; // ms
+            List&lt;int&gt; chip_select = new List&lt;int&gt;() {0, 1};
+
+            // Get firmware model &amp; version
+            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
+            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open file with CSV file
-            err = dev.Logger_openFile(&quot;WPC_tester_STEM_AI.csv&quot;);
+            err = dev.Logger_openFile(&quot;WPC_test_STEM_AI.csv&quot;);
             Console.WriteLine($&quot;Logger_openFile: {err}&quot;);
 
             // Write header into CSV file
             var header = $&quot;CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7&quot;;
             err = dev.Logger_writeValue(header);
             Console.WriteLine($&quot;Logger_writeValue: {err}&quot;);
-
-            // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
-            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
-            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get slot mode
             string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
@@ -909,35 +879,43 @@ class STEM_DataLogger_AI_continuous
             Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
 
             // Enable CS
-            err = dev.AI_enableCS(slot, new List&lt;int&gt; {0, 1}, timeout:timeout);
+            err = dev.AI_enableCS(slot, chip_select, timeout:timeout);
             Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
 
-            // Set AI acquisition mode to continuous
+            // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(slot, mode, timeout:timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in slot {slot}: {err}&quot;);
 
-            // Set AI sampling rate to 1k (Hz)
+            // Set AI sampling rate
             err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in slot {slot}: {err}&quot;);
 
-            // Start AI acquisition
+            // Start AI
             err = dev.AI_start(slot, timeout:timeout);
             Console.WriteLine($&quot;AI_start in slot {slot}: {err}&quot;);
 
-            // Wait for data
-            Thread.Sleep(1000);
-
-            // loop parameters
-            int get_samples = 200;
-            int delay = 50;
-            int exit_time = 100;
-
-            // Start loop
-            loop_func(dev, slot, get_samples, delay, exit_time);
+            // Wait a while for data acquisition
+            Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
             err = dev.AI_stop(slot, timeout:timeout);
             Console.WriteLine($&quot;AI_stop in slot {slot}: {err}&quot;);
+
+            int data_len = 1;
+            while (data_len &gt; 0){
+                // Read data acquisition
+                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(slot, read_points, delay:delay);
+                Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
+
+                foreach (List&lt;double&gt; ai_list in ai_2Dlist)
+                {
+                    // Write data into CSV file
+                    dev.Logger_writeList(ai_list);
+                }
+
+                // Update data len
+                data_len = ai_2Dlist.Count;
+            }
 
             // Close AI
             err = dev.AI_close(slot, timeout:timeout);

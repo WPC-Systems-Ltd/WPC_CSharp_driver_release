@@ -128,6 +128,7 @@ class STEM_AO_write_all_channels
             int err;
             int slot = 1; // Connect AIO module to slot
             int timeout = 3000; // ms
+            List&lt;double&gt; ao_value_list = new List&lt;double&gt;() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
@@ -152,10 +153,8 @@ class STEM_AO_write_all_channels
             err = dev.AO_open(slot, timeout:timeout);
             Console.WriteLine($&quot;AO_open in slot {slot}: {err}&quot;);
 
-            // Write AO data simultaneously
-            // CH0~CH1 5V, CH2~CH3 3V, CH4~CH5 2V, CH6~CH7 0V
-            List&lt;double&gt; AO_values = new List&lt;double&gt; { 5, 5, 3, 3, 2, 2, 0, 0 };
-            err = dev.AO_writeAllChannels(slot, AO_values, timeout:timeout);
+            // Write AO value simultaneously
+            err = dev.AO_writeAllChannels(slot, ao_value_list, timeout:timeout);
             Console.WriteLine($&quot;AO_writeAllChannels in slot {slot}: {err}&quot;);
 
             // Close AO
@@ -223,6 +222,7 @@ class STEM_AO_write_one_channel
             int err;
             int slot = 1; // Connect AIO module to slot
             int timeout = 3000; // ms
+            List&lt;double&gt; ao_value_list = new List&lt;double&gt;() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
@@ -247,21 +247,21 @@ class STEM_AO_write_one_channel
             err = dev.AO_open(slot, timeout:timeout);
             Console.WriteLine($&quot;AO_open in slot {slot}: {err}&quot;);
 
-            // Write AO 1.5(V) in channel 0
-            err = dev.AO_writeOneChannel(slot, 0, 1.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch0 in slot {slot}: {err}&quot;);
+            // Write AO vaule in channel 0
+            err = dev.AO_writeOneChannel(slot, 0, ao_value_list[0], timeout:timeout);
+            Console.WriteLine($&quot;In slot {slot} channel 0, the AO value is {ao_value_list[0]}: {err}&quot;);
 
-            // Write AO 2.5(V) in channel 1
-            err = dev.AO_writeOneChannel(slot, 1, 2.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch1 in slot {slot}: {err}&quot;);
+            // Write AO vaule in channel 1
+            err = dev.AO_writeOneChannel(slot, 1, ao_value_list[1], timeout:timeout);
+            Console.WriteLine($&quot;In slot {slot} channel 1, the AO value is {ao_value_list[1]}: {err}&quot;);
 
-            // Write AO 3.5(V) in channel 2
-            err = dev.AO_writeOneChannel(slot, 2, 3.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch2 in slot {slot}: {err}&quot;);
+            // Write AO vaule in channel 2
+            err = dev.AO_writeOneChannel(slot, 2, ao_value_list[2], timeout:timeout);
+            Console.WriteLine($&quot;In slot {slot} channel 2, the AO value is {ao_value_list[2]}: {err}&quot;);
 
-            // Write AO 4.5(V) in channel 3
-            err = dev.AO_writeOneChannel(slot, 3, 4.5, timeout:timeout);
-            Console.WriteLine($&quot;AO_writeOneChannel in ch3 in slot {slot}: {err}&quot;);
+            // Write AO vaule in channel 3
+            err = dev.AO_writeOneChannel(slot, 3, ao_value_list[3], timeout:timeout);
+            Console.WriteLine($&quot;In slot {slot} channel 3, the AO value is {ao_value_list[3]}: {err}&quot;);
 
             // Close AO
             err = dev.AO_close(slot, timeout:timeout);
