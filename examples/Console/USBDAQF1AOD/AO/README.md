@@ -14,7 +14,7 @@ If you'd like to create your own application, start by using this simple templat
 
 ### AO output range
 
-| Product/module  |AO range    |
+| Product         |AO range    |
 |:---------------:|:----------:|
 | USB-DAQ-F1-AOD  | 0 ~ 5 V    |
 | Ethan-O         | -10 ~ 10 V |

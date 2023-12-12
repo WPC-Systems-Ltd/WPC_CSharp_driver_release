@@ -13,20 +13,28 @@ If you'd like to create your own application, start by using this simple templat
 
 ## How to use this example
 
-### Channel count vs. sampling rate
+### Sampling rate
 
-| Product/module  |chan 0:0|chan 0:1|chan 0:2|chan 0:3|chan 0:4|chan 0:5|chan 0:6|chan 0:7|
-|:---------------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| USB-DAQ-F1-AD   | 16k    | 8k     | 5.3k   | 4k     | 3.2k   | 2.6k   | 2.2k   | 2.0k   |
-| USB-DAQ-F1-AOD  | 16k    | 8k     | 5.3k   | 4k     | 3.2k   | 2.6k   | 2.2k   | 2.0k   |
-| Wifi-DAQ        | 10k    | 10k    | 10k    | 10k    | 10k    | 10k    | 10k    | 10k    |
-| Ethan-A         | 20k    | 20k    | 20k    | 20k    | 20k    | 20k    | 20k    | 20k    |
+#### The sampling rate is dependent on the channel.
 
-### Chip select vs. sampling rate
+| Product/channel | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
+|:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| USB-DAQ-F1-AD   | 16k | 8k  | 5.3k| 4k  | 3.2k| 2.6k| 2.2k| 2.0k|
+| USB-DAQ-F1-AOD  | 16k | 8k  | 5.3k| 4k  | 3.2k| 2.6k| 2.2k| 2.0k|
 
-| Product/module  |1 CS|2 CS|3 CS|
-|:---------------:|:--:|:--:|:--:|
-| STEM            |12k |6k  |4k  |
+#### The sampling rate is dependent on the chip select.
+
+| Product/CS  | 1  | 2  |3   |
+|:-----------:|:--:|:--:|:--:|
+| STEM        |12k |6k  |4k  |
+
+#### The sampling rate is independent.
+
+| Product       |Sampling rate|
+|:-------------:|:-----------:|
+| Wifi-DAQ-E3-A | 10k         |
+| Wifi-DAQ-F4-A | 20k         |
+| Ethan-A       | 20k         |
 
 ### Hardware requirement
 
