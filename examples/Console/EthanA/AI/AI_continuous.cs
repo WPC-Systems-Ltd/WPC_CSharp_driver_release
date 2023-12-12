@@ -43,6 +43,7 @@ class EthanA_AI_continuous
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 2;
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
@@ -57,6 +58,7 @@ class EthanA_AI_continuous
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port {port}: {err}");
+            
 
             // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(port, mode, timeout:timeout);

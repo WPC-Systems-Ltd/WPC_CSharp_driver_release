@@ -4,9 +4,9 @@
 
 ## Overview
 
-This example project demonstrates how to use WPC CSharp driver to acquire AHRS data. 
+This example project demonstrates how to use WPC CSharp driver to acquire AHRS data.
 
-In order to use API correctly, please refer [documentation](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/).
+In order to use API correctly, please refer to the [documentation](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/).
 
 If you want to build your own AHRS application, try to use this as a basic template, then add your own code.
 

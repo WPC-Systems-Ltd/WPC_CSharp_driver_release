@@ -309,6 +309,35 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IAIModule.AI_close
   nameWithType: IAIModule.AI_close
+- uid: WPC.Module.IAIModule.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  name: AI_enableChannel(Int32, Int32, Int32)
+  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_enableChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAIModule.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IAIModule.AI_enableChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: IAIModule.AI_enableChannel(Int32, Int32, Int32)
+- uid: WPC.Module.IAIModule.AI_enableChannel*
+  name: AI_enableChannel
+  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_enableChannel_
+  commentId: Overload:WPC.Module.IAIModule.AI_enableChannel
+  isSpec: "True"
+  fullName: WPC.Module.IAIModule.AI_enableChannel
+  nameWithType: IAIModule.AI_enableChannel
+- uid: WPC.Module.IAIModule.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name: AI_enableCS(Int32, List<Int32>, Int32)
+  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Module.IAIModule.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name.vb: AI_enableCS(Int32, List(Of Int32), Int32)
+  fullName: WPC.Module.IAIModule.AI_enableCS(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Module.IAIModule.AI_enableCS(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: IAIModule.AI_enableCS(Int32, List<Int32>, Int32)
+  nameWithType.vb: IAIModule.AI_enableCS(Int32, List(Of Int32), Int32)
+- uid: WPC.Module.IAIModule.AI_enableCS*
+  name: AI_enableCS
+  href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_enableCS_
+  commentId: Overload:WPC.Module.IAIModule.AI_enableCS
+  isSpec: "True"
+  fullName: WPC.Module.IAIModule.AI_enableCS
+  nameWithType: IAIModule.AI_enableCS
 - uid: WPC.Module.IAIModule.AI_open(System.Int32,System.Int32)
   name: AI_open(Int32, Int32)
   href: api/WPC.Module.IAIModule.html#WPC_Module_IAIModule_AI_open_System_Int32_System_Int32_
@@ -2933,6 +2962,32 @@ references:
   commentId: T:WPC.Module.IWifiModule
   fullName: WPC.Module.IWifiModule
   nameWithType: IWifiModule
+- uid: WPC.Module.IWifiModule.Wifi_getChargeStatus(System.Int32)
+  name: Wifi_getChargeStatus(Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getChargeStatus_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_getChargeStatus(System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_getChargeStatus(System.Int32)
+  nameWithType: IWifiModule.Wifi_getChargeStatus(Int32)
+- uid: WPC.Module.IWifiModule.Wifi_getChargeStatus*
+  name: Wifi_getChargeStatus
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getChargeStatus_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_getChargeStatus
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_getChargeStatus
+  nameWithType: IWifiModule.Wifi_getChargeStatus
+- uid: WPC.Module.IWifiModule.Wifi_getPowerGoodStatus(System.Int32)
+  name: Wifi_getPowerGoodStatus(Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getPowerGoodStatus_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_getPowerGoodStatus(System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_getPowerGoodStatus(System.Int32)
+  nameWithType: IWifiModule.Wifi_getPowerGoodStatus(Int32)
+- uid: WPC.Module.IWifiModule.Wifi_getPowerGoodStatus*
+  name: Wifi_getPowerGoodStatus
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getPowerGoodStatus_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_getPowerGoodStatus
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_getPowerGoodStatus
+  nameWithType: IWifiModule.Wifi_getPowerGoodStatus
 - uid: WPC.Module.IWifiModule.Wifi_getWifiBandwidth(System.Int32)
   name: Wifi_getWifiBandwidth(Int32)
   href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getWifiBandwidth_System_Int32_
@@ -2972,6 +3027,58 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IWifiModule.Wifi_readRSSI
   nameWithType: IWifiModule.Wifi_readRSSI
+- uid: WPC.Module.IWifiModule.Wifi_resetLED(System.Int32)
+  name: Wifi_resetLED(Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_resetLED_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_resetLED(System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_resetLED(System.Int32)
+  nameWithType: IWifiModule.Wifi_resetLED(Int32)
+- uid: WPC.Module.IWifiModule.Wifi_resetLED*
+  name: Wifi_resetLED
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_resetLED_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_resetLED
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_resetLED
+  nameWithType: IWifiModule.Wifi_resetLED
+- uid: WPC.Module.IWifiModule.Wifi_setBlueLED(System.Int32,System.Int32)
+  name: Wifi_setBlueLED(Int32, Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setBlueLED_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_setBlueLED(System.Int32,System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_setBlueLED(System.Int32, System.Int32)
+  nameWithType: IWifiModule.Wifi_setBlueLED(Int32, Int32)
+- uid: WPC.Module.IWifiModule.Wifi_setBlueLED*
+  name: Wifi_setBlueLED
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setBlueLED_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_setBlueLED
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_setBlueLED
+  nameWithType: IWifiModule.Wifi_setBlueLED
+- uid: WPC.Module.IWifiModule.Wifi_setGreenLED(System.Int32,System.Int32)
+  name: Wifi_setGreenLED(Int32, Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setGreenLED_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_setGreenLED(System.Int32,System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_setGreenLED(System.Int32, System.Int32)
+  nameWithType: IWifiModule.Wifi_setGreenLED(Int32, Int32)
+- uid: WPC.Module.IWifiModule.Wifi_setGreenLED*
+  name: Wifi_setGreenLED
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setGreenLED_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_setGreenLED
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_setGreenLED
+  nameWithType: IWifiModule.Wifi_setGreenLED
+- uid: WPC.Module.IWifiModule.Wifi_setRedLED(System.Int32,System.Int32)
+  name: Wifi_setRedLED(Int32, Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setRedLED_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_setRedLED(System.Int32,System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_setRedLED(System.Int32, System.Int32)
+  nameWithType: IWifiModule.Wifi_setRedLED(Int32, Int32)
+- uid: WPC.Module.IWifiModule.Wifi_setRedLED*
+  name: Wifi_setRedLED
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setRedLED_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_setRedLED
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_setRedLED
+  nameWithType: IWifiModule.Wifi_setRedLED
 - uid: WPC.Module.IWifiModule.Wifi_setWifiBandWidth(System.Int32,System.Int32)
   name: Wifi_setWifiBandWidth(Int32, Int32)
   href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setWifiBandWidth_System_Int32_System_Int32_
@@ -4664,6 +4771,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.AI_close
   nameWithType: EthanA.AI_close
+- uid: WPC.Product.EthanA.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  name: AI_enableChannel(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_enableChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA.AI_enableChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanA.AI_enableChannel(Int32, Int32, Int32)
+- uid: WPC.Product.EthanA.AI_enableChannel*
+  name: AI_enableChannel
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_enableChannel_
+  commentId: Overload:WPC.Product.EthanA.AI_enableChannel
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.AI_enableChannel
+  nameWithType: EthanA.AI_enableChannel
 - uid: WPC.Product.EthanA.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
   name: AI_enableCS(Int32, List<Int32>, Int32)
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
@@ -7709,6 +7829,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.STEM.AI_close
   nameWithType: STEM.AI_close
+- uid: WPC.Product.STEM.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  name: AI_enableChannel(Int32, Int32, Int32)
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_enableChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.STEM.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.STEM.AI_enableChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: STEM.AI_enableChannel(Int32, Int32, Int32)
+- uid: WPC.Product.STEM.AI_enableChannel*
+  name: AI_enableChannel
+  href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_enableChannel_
+  commentId: Overload:WPC.Product.STEM.AI_enableChannel
+  isSpec: "True"
+  fullName: WPC.Product.STEM.AI_enableChannel
+  nameWithType: STEM.AI_enableChannel
 - uid: WPC.Product.STEM.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
   name: AI_enableCS(Int32, List<Int32>, Int32)
   href: api/WPC.Product.STEM.html#WPC_Product_STEM_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
@@ -8601,6 +8734,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.AI_close
   nameWithType: USBDAQF1AD.AI_close
+- uid: WPC.Product.USBDAQF1AD.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  name: AI_enableChannel(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_enableChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.AI_enableChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.AI_enableChannel(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.AI_enableChannel*
+  name: AI_enableChannel
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_enableChannel_
+  commentId: Overload:WPC.Product.USBDAQF1AD.AI_enableChannel
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.AI_enableChannel
+  nameWithType: USBDAQF1AD.AI_enableChannel
 - uid: WPC.Product.USBDAQF1AD.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
   name: AI_enableCS(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
@@ -9756,6 +9902,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.AI_close
   nameWithType: USBDAQF1AOD.AI_close
+- uid: WPC.Product.USBDAQF1AOD.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  name: AI_enableChannel(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_enableChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.AI_enableChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.AI_enableChannel(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.AI_enableChannel*
+  name: AI_enableChannel
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_enableChannel_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.AI_enableChannel
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.AI_enableChannel
+  nameWithType: USBDAQF1AOD.AI_enableChannel
 - uid: WPC.Product.USBDAQF1AOD.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
   name: AI_enableCS(Int32, List<Int32>, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
@@ -16067,6 +16226,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.AI_close
   nameWithType: WifiDAQE3A.AI_close
+- uid: WPC.Product.WifiDAQE3A.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  name: AI_enableChannel(Int32, Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_enableChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AI_enableChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.AI_enableChannel(Int32, Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.AI_enableChannel*
+  name: AI_enableChannel
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_enableChannel_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AI_enableChannel
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.AI_enableChannel
+  nameWithType: WifiDAQE3A.AI_enableChannel
 - uid: WPC.Product.WifiDAQE3A.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
   name: AI_enableCS(Int32, List<Int32>, Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
@@ -16520,6 +16692,32 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Sys_setSwitchMode
   nameWithType: WifiDAQE3A.Sys_setSwitchMode
+- uid: WPC.Product.WifiDAQE3A.Wifi_getChargeStatus(System.Int32)
+  name: Wifi_getChargeStatus(Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getChargeStatus_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_getChargeStatus(System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_getChargeStatus(System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_getChargeStatus(Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_getChargeStatus*
+  name: Wifi_getChargeStatus
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getChargeStatus_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_getChargeStatus
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_getChargeStatus
+  nameWithType: WifiDAQE3A.Wifi_getChargeStatus
+- uid: WPC.Product.WifiDAQE3A.Wifi_getPowerGoodStatus(System.Int32)
+  name: Wifi_getPowerGoodStatus(Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getPowerGoodStatus_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_getPowerGoodStatus(System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_getPowerGoodStatus(System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_getPowerGoodStatus(Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_getPowerGoodStatus*
+  name: Wifi_getPowerGoodStatus
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getPowerGoodStatus_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_getPowerGoodStatus
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_getPowerGoodStatus
+  nameWithType: WifiDAQE3A.Wifi_getPowerGoodStatus
 - uid: WPC.Product.WifiDAQE3A.Wifi_getWifiBandwidth(System.Int32)
   name: Wifi_getWifiBandwidth(Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getWifiBandwidth_System_Int32_
@@ -16598,6 +16796,58 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Wifi_readThermo
   nameWithType: WifiDAQE3A.Wifi_readThermo
+- uid: WPC.Product.WifiDAQE3A.Wifi_resetLED(System.Int32)
+  name: Wifi_resetLED(Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_resetLED_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_resetLED(System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_resetLED(System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_resetLED(Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_resetLED*
+  name: Wifi_resetLED
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_resetLED_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_resetLED
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_resetLED
+  nameWithType: WifiDAQE3A.Wifi_resetLED
+- uid: WPC.Product.WifiDAQE3A.Wifi_setBlueLED(System.Int32,System.Int32)
+  name: Wifi_setBlueLED(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setBlueLED_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_setBlueLED(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_setBlueLED(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_setBlueLED(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_setBlueLED*
+  name: Wifi_setBlueLED
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setBlueLED_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_setBlueLED
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_setBlueLED
+  nameWithType: WifiDAQE3A.Wifi_setBlueLED
+- uid: WPC.Product.WifiDAQE3A.Wifi_setGreenLED(System.Int32,System.Int32)
+  name: Wifi_setGreenLED(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setGreenLED_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_setGreenLED(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_setGreenLED(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_setGreenLED(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_setGreenLED*
+  name: Wifi_setGreenLED
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setGreenLED_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_setGreenLED
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_setGreenLED
+  nameWithType: WifiDAQE3A.Wifi_setGreenLED
+- uid: WPC.Product.WifiDAQE3A.Wifi_setRedLED(System.Int32,System.Int32)
+  name: Wifi_setRedLED(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setRedLED_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_setRedLED(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_setRedLED(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_setRedLED(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_setRedLED*
+  name: Wifi_setRedLED
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setRedLED_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_setRedLED
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_setRedLED
+  nameWithType: WifiDAQE3A.Wifi_setRedLED
 - uid: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
   name: Wifi_setWifiBandWidth(Int32, Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setWifiBandWidth_System_Int32_System_Int32_
@@ -16643,6 +16893,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.AI_close
   nameWithType: WifiDAQF4A.AI_close
+- uid: WPC.Product.WifiDAQF4A.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  name: AI_enableChannel(Int32, Int32, Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_AI_enableChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.AI_enableChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: WifiDAQF4A.AI_enableChannel(Int32, Int32, Int32)
+- uid: WPC.Product.WifiDAQF4A.AI_enableChannel*
+  name: AI_enableChannel
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_AI_enableChannel_
+  commentId: Overload:WPC.Product.WifiDAQF4A.AI_enableChannel
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.AI_enableChannel
+  nameWithType: WifiDAQF4A.AI_enableChannel
 - uid: WPC.Product.WifiDAQF4A.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
   name: AI_enableCS(Int32, List<Int32>, Int32)
   href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
@@ -17096,6 +17359,32 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Sys_setSwitchMode
   nameWithType: WifiDAQF4A.Sys_setSwitchMode
+- uid: WPC.Product.WifiDAQF4A.Wifi_getChargeStatus(System.Int32)
+  name: Wifi_getChargeStatus(Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getChargeStatus_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_getChargeStatus(System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_getChargeStatus(System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_getChargeStatus(Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_getChargeStatus*
+  name: Wifi_getChargeStatus
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getChargeStatus_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_getChargeStatus
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_getChargeStatus
+  nameWithType: WifiDAQF4A.Wifi_getChargeStatus
+- uid: WPC.Product.WifiDAQF4A.Wifi_getPowerGoodStatus(System.Int32)
+  name: Wifi_getPowerGoodStatus(Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getPowerGoodStatus_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_getPowerGoodStatus(System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_getPowerGoodStatus(System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_getPowerGoodStatus(Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_getPowerGoodStatus*
+  name: Wifi_getPowerGoodStatus
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getPowerGoodStatus_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_getPowerGoodStatus
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_getPowerGoodStatus
+  nameWithType: WifiDAQF4A.Wifi_getPowerGoodStatus
 - uid: WPC.Product.WifiDAQF4A.Wifi_getWifiBandwidth(System.Int32)
   name: Wifi_getWifiBandwidth(Int32)
   href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getWifiBandwidth_System_Int32_
@@ -17174,6 +17463,58 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Wifi_readThermo
   nameWithType: WifiDAQF4A.Wifi_readThermo
+- uid: WPC.Product.WifiDAQF4A.Wifi_resetLED(System.Int32)
+  name: Wifi_resetLED(Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_resetLED_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_resetLED(System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_resetLED(System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_resetLED(Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_resetLED*
+  name: Wifi_resetLED
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_resetLED_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_resetLED
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_resetLED
+  nameWithType: WifiDAQF4A.Wifi_resetLED
+- uid: WPC.Product.WifiDAQF4A.Wifi_setBlueLED(System.Int32,System.Int32)
+  name: Wifi_setBlueLED(Int32, Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setBlueLED_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_setBlueLED(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_setBlueLED(System.Int32, System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_setBlueLED(Int32, Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_setBlueLED*
+  name: Wifi_setBlueLED
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setBlueLED_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_setBlueLED
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_setBlueLED
+  nameWithType: WifiDAQF4A.Wifi_setBlueLED
+- uid: WPC.Product.WifiDAQF4A.Wifi_setGreenLED(System.Int32,System.Int32)
+  name: Wifi_setGreenLED(Int32, Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setGreenLED_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_setGreenLED(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_setGreenLED(System.Int32, System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_setGreenLED(Int32, Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_setGreenLED*
+  name: Wifi_setGreenLED
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setGreenLED_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_setGreenLED
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_setGreenLED
+  nameWithType: WifiDAQF4A.Wifi_setGreenLED
+- uid: WPC.Product.WifiDAQF4A.Wifi_setRedLED(System.Int32,System.Int32)
+  name: Wifi_setRedLED(Int32, Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setRedLED_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_setRedLED(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_setRedLED(System.Int32, System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_setRedLED(Int32, Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_setRedLED*
+  name: Wifi_setRedLED
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setRedLED_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_setRedLED
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_setRedLED
+  nameWithType: WifiDAQF4A.Wifi_setRedLED
 - uid: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
   name: Wifi_setWifiBandWidth(Int32, Int32)
   href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setWifiBandWidth_System_Int32_System_Int32_

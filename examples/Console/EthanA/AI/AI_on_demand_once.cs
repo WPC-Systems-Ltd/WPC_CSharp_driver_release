@@ -44,6 +44,7 @@ class EthanA_AI_on_demand_once
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 2;
             int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 
@@ -55,6 +56,7 @@ class EthanA_AI_on_demand_once
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port {port}: {err}");
+            
 
             // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
