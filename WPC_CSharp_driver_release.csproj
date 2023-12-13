@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="cswpc" Version="0.2.10" />
+    <PackageReference Include="cswpc" Version="0.2.11" />
     <PackageReference Include="hidlibrary" Version="3.3.40" />
   </ItemGroup>
 
