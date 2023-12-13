@@ -83,6 +83,92 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <a id="WPC_Module_IWifiModule_Wifi_getChargeStatus_" data-uid="WPC.Module.IWifiModule.Wifi_getChargeStatus*"></a>
+  <h4 id="WPC_Module_IWifiModule_Wifi_getChargeStatus_System_Int32_" data-uid="WPC.Module.IWifiModule.Wifi_getChargeStatus(System.Int32)">Wifi_getChargeStatus(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get charge status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Wifi_getChargeStatus(int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Charge status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IWifiModule_Wifi_getPowerGoodStatus_" data-uid="WPC.Module.IWifiModule.Wifi_getPowerGoodStatus*"></a>
+  <h4 id="WPC_Module_IWifiModule_Wifi_getPowerGoodStatus_System_Int32_" data-uid="WPC.Module.IWifiModule.Wifi_getPowerGoodStatus(System.Int32)">Wifi_getPowerGoodStatus(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get power good status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Wifi_getPowerGoodStatus(int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Power good status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Module_IWifiModule_Wifi_getWifiBandwidth_" data-uid="WPC.Module.IWifiModule.Wifi_getWifiBandwidth*"></a>
   <h4 id="WPC_Module_IWifiModule_Wifi_getWifiBandwidth_System_Int32_" data-uid="WPC.Module.IWifiModule.Wifi_getWifiBandwidth(System.Int32)">Wifi_getWifiBandwidth(Int32)</h4>
   <div class="markdown level1 summary"><p>Get bandwidth from Wifi device.</p>
@@ -211,6 +297,197 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><p>RSSI signal in dBm.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IWifiModule_Wifi_resetLED_" data-uid="WPC.Module.IWifiModule.Wifi_resetLED*"></a>
+  <h4 id="WPC_Module_IWifiModule_Wifi_resetLED_System_Int32_" data-uid="WPC.Module.IWifiModule.Wifi_resetLED(System.Int32)">Wifi_resetLED(Int32)</h4>
+  <div class="markdown level1 summary"><p>Reset LED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Wifi_resetLED(int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IWifiModule_Wifi_setBlueLED_" data-uid="WPC.Module.IWifiModule.Wifi_setBlueLED*"></a>
+  <h4 id="WPC_Module_IWifiModule_Wifi_setBlueLED_System_Int32_System_Int32_" data-uid="WPC.Module.IWifiModule.Wifi_setBlueLED(System.Int32,System.Int32)">Wifi_setBlueLED(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set blue LED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Wifi_setBlueLED(int value, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IWifiModule_Wifi_setGreenLED_" data-uid="WPC.Module.IWifiModule.Wifi_setGreenLED*"></a>
+  <h4 id="WPC_Module_IWifiModule_Wifi_setGreenLED_System_Int32_System_Int32_" data-uid="WPC.Module.IWifiModule.Wifi_setGreenLED(System.Int32,System.Int32)">Wifi_setGreenLED(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set green LED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Wifi_setGreenLED(int value, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_IWifiModule_Wifi_setRedLED_" data-uid="WPC.Module.IWifiModule.Wifi_setRedLED*"></a>
+  <h4 id="WPC_Module_IWifiModule_Wifi_setRedLED_System_Int32_System_Int32_" data-uid="WPC.Module.IWifiModule.Wifi_setRedLED(System.Int32,System.Int32)">Wifi_setRedLED(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set red LED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Wifi_setRedLED(int value, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>

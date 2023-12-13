@@ -5,10 +5,10 @@
 ## Overview
 
 This example project demonstrates how to use WPC Python driver to acquire AI current value.
- 
-In order to use API correctly, please refer [documentation](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/).
 
-If you want to build your own AI application, try to use this as a basic template, then add your own code.
+In order to use API correctly, please refer to the [documentation](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/).
+
+If you'd like to create your own application, start by using this simple template, and then include your own code.
 
 ## How to use this example
 

@@ -44,6 +44,7 @@ class WifiDAQF4A_AI_N_samples_once
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 8;
             int mode = Const.AI_MODE_N_SAMPLE;
             float sampling_rate = 200;
             int samples = 200;
@@ -59,6 +60,7 @@ class WifiDAQF4A_AI_N_samples_once
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port {port}: {err}");
+            
 
             // Set AI acquisition mode to N-sample mode
             err = dev.AI_setMode(port, mode, timeout:timeout);
@@ -86,7 +88,7 @@ class WifiDAQF4A_AI_N_samples_once
             bool ok = true;
             foreach (List<double> ai_list in ai_2Dlist)
             {
-                if (ai_list.Count != 8){
+                if (ai_list.Count != channel){
                     Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
                     ok = false;
                 }
