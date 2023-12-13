@@ -132,6 +132,7 @@ class EthanA_AI_continuous
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 8;
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
@@ -146,6 +147,7 @@ class EthanA_AI_continuous
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            
 
             // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(port, mode, timeout:timeout);
@@ -240,6 +242,7 @@ class EthanA_AI_N_samples_once
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 8;
             int mode = Const.AI_MODE_N_SAMPLE;
             float sampling_rate = 200;
             int samples = 200;
@@ -255,6 +258,7 @@ class EthanA_AI_N_samples_once
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            
 
             // Set AI acquisition mode to N-sample mode
             err = dev.AI_setMode(port, mode, timeout:timeout);
@@ -282,7 +286,7 @@ class EthanA_AI_N_samples_once
             bool ok = true;
             foreach (List&lt;double&gt; ai_list in ai_2Dlist)
             {
-                if (ai_list.Count != 8){
+                if (ai_list.Count != channel){
                     Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, ai_list)));
                     ok = false;
                 }
@@ -361,6 +365,7 @@ class EthanA_AI_on_demand_in_loop
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 8;
             int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 
@@ -372,6 +377,7 @@ class EthanA_AI_on_demand_in_loop
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            
 
             // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
@@ -449,6 +455,7 @@ class EthanA_AI_on_demand_once
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 8;
             int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 
@@ -460,6 +467,7 @@ class EthanA_AI_on_demand_once
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            
 
             // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout:timeout);
@@ -536,6 +544,7 @@ class EthanA_DataLogger_AI_continuous
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 8;
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
@@ -559,6 +568,7 @@ class EthanA_DataLogger_AI_continuous
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            
 
             // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(port, mode, timeout:timeout);

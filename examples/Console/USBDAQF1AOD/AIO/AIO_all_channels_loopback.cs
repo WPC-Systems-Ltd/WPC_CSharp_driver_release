@@ -46,6 +46,7 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             // Parameters setting
             int err;
             int port = 0;
+            int channel = 8;
             int timeout = 3000; // ms
             List<double> ao_value_list = new List<double>() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
@@ -57,6 +58,10 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             // Open AI
             err = dev.AI_open(port, timeout:timeout);
             Console.WriteLine($"AI_open in port {port}: {err}");
+            
+            // Set AI channel
+            err = dev.AI_enableChannel(port, channel, timeout:timeout);
+            Console.WriteLine($"AI_enableChannel in port {port}: {err}");
 
             // Open AO
             err = dev.AO_open(port, timeout:timeout);

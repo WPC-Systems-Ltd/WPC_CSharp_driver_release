@@ -1,6 +1,20 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.11 Date: 2023/12/13, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- table_samplingRate.md
+- example code: set_LED_status
+- API: AI_enableChannel, Wifi_getPowerGoodStatus, Wifi_getChargeStatus
+Wifi_resetLED, Wifi_setBlueLED, Wifi_setRedLED, Wifi_setGreenLED,
+
+### Fixed
+- Synchronize error code with Python
+
+### Removed
+- example code: AI_N_samples_in_loop
+
 v0.2.10 Date: 2023/12/04, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>I/O Channel Function Table | WPC_CSharp_driver </title>
+    <title>AI Max Sampling Rate Table | WPC_CSharp_driver </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="I/O Channel Function Table | WPC_CSharp_driver ">
+    <meta name="title" content="AI Max Sampling Rate Table | WPC_CSharp_driver ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../images/WPC_favicon.ico">
@@ -67,73 +67,115 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="io-channel-function-table">I/O Channel Function Table</h1>
+<h2 id="ai-max-sampling-rate-table">AI Max Sampling Rate Table</h2>
 
-<ul>
-<li>PWM and counter channel</li>
-<li>If you set the PWM channel to 0, then CTR has to be set to 1</li>
-</ul>
-<h3 id="ethan-series">Ethan series</h3>
+<h3 id="the-max-sampling-rate-is-dependent-on-the-number-of-enabled-channels">The max sampling rate is dependent on the number of enabled channels.</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Product/module</th>
-<th style="text-align: left;">PWM</th>
-<th style="text-align: left;">Counter</th>
+<th style="text-align: center;">Product/channel</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+<th style="text-align: center;">8</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Ethan-D</td>
-<td style="text-align: left;">0,1</td>
-<td style="text-align: left;">-</td>
+<td style="text-align: center;">USB-DAQ-F1-AD</td>
+<td style="text-align: center;">16k</td>
+<td style="text-align: center;">8k</td>
+<td style="text-align: center;">5.3k</td>
+<td style="text-align: center;">4k</td>
+<td style="text-align: center;">3.2k</td>
+<td style="text-align: center;">2.6k</td>
+<td style="text-align: center;">2.2k</td>
+<td style="text-align: center;">2.0k</td>
+</tr>
+<tr>
+<td style="text-align: center;">USB-DAQ-F1-AOD</td>
+<td style="text-align: center;">16k</td>
+<td style="text-align: center;">8k</td>
+<td style="text-align: center;">5.3k</td>
+<td style="text-align: center;">4k</td>
+<td style="text-align: center;">3.2k</td>
+<td style="text-align: center;">2.6k</td>
+<td style="text-align: center;">2.2k</td>
+<td style="text-align: center;">2.0k</td>
 </tr>
 </tbody>
 </table>
-<h3 id="usb-series">USB series</h3>
+<h3 id="the-max-sampling-rate-is-dependent-on-the-number-of-enabled-chip-selects">The max sampling rate is dependent on the number of enabled chip-selects.</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Product/module</th>
-<th style="text-align: left;">PWM</th>
-<th style="text-align: left;">Counter</th>
+<th style="text-align: center;">Product/CS</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">USB-DAQ-F1-AD</td>
-<td style="text-align: left;">0,1</td>
-<td style="text-align: left;">0,1</td>
+<td style="text-align: center;">STEM</td>
+<td style="text-align: center;">12k</td>
+<td style="text-align: center;">6k</td>
+<td style="text-align: center;">4k</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-max-sampling-rate-is-fixed">The max sampling rate is fixed.</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Product</th>
+<th style="text-align: center;">Sampling rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Wifi-DAQ-E3-A</td>
+<td style="text-align: center;">10k</td>
 </tr>
 <tr>
-<td style="text-align: left;">USB-DAQ-F1-AOD</td>
-<td style="text-align: left;">0,1</td>
-<td style="text-align: left;">0,1</td>
+<td style="text-align: center;">Wifi-DAQ-F4-A</td>
+<td style="text-align: center;">20k</td>
 </tr>
 <tr>
-<td style="text-align: left;">USB-DAQ-F1-CD</td>
-<td style="text-align: left;">0,1</td>
-<td style="text-align: left;">0,1</td>
+<td style="text-align: center;">Ethan-A</td>
+<td style="text-align: center;">20k</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stem">STEM</h3>
+<ul>
+<li>For STEM, AO writing can be called while AI is streaming under a specific speed.</li>
+<li>This speed depends on the number of enabled chip-selects.</li>
+<li>Below is the table indicating the max AI sampling rate that allows AO writing.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">CS number</th>
+<th style="text-align: center;">Sampling rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1K</td>
 </tr>
 <tr>
-<td style="text-align: left;">USB-DAQ-F1-D</td>
-<td style="text-align: left;">0,1</td>
-<td style="text-align: left;">0,1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.5K</td>
 </tr>
 <tr>
-<td style="text-align: left;">USB-DAQ-F1-DSNK</td>
-<td style="text-align: left;">0,1</td>
-<td style="text-align: left;">0,1</td>
-</tr>
-<tr>
-<td style="text-align: left;">USB-DAQ-F1-RD</td>
-<td style="text-align: left;">0,1</td>
-<td style="text-align: left;">0,1</td>
-</tr>
-<tr>
-<td style="text-align: left;">USB-DAQ-F1-TD</td>
-<td style="text-align: left;">0,1</td>
-<td style="text-align: left;">0,1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3K</td>
 </tr>
 </tbody>
 </table>
