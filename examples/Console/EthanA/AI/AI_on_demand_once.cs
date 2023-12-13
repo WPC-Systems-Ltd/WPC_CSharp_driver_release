@@ -44,7 +44,7 @@ class EthanA_AI_on_demand_once
             // Parameters setting
             int err;
             int port = 0;
-            int channel = 2;
+            int channel = 8;
             int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 

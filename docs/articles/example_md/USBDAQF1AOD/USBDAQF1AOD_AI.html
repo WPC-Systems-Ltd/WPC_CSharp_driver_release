@@ -132,7 +132,7 @@ class USBDAQF1AOD_AI_continuous
             // Parameters setting
             int err;
             int port = 0;
-            int channel = 2;
+            int channel = 8;
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
@@ -245,7 +245,7 @@ class USBDAQF1AOD_AI_N_samples_once
             // Parameters setting
             int err;
             int port = 0;
-            int channel = 2;
+            int channel = 8;
             int mode = Const.AI_MODE_N_SAMPLE;
             float sampling_rate = 200;
             int samples = 200;
@@ -292,7 +292,7 @@ class USBDAQF1AOD_AI_N_samples_once
             bool ok = true;
             foreach (List&lt;double&gt; ai_list in ai_2Dlist)
             {
-                if (ai_list.Count != 8){
+                if (ai_list.Count != channel){
                     Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, ai_list)));
                     ok = false;
                 }
@@ -371,7 +371,7 @@ class USBDAQF1AOD_AI_on_demand_in_loop
             // Parameters setting
             int err;
             int port = 0;
-            int channel = 2;
+            int channel = 8;
             int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 
@@ -464,7 +464,7 @@ class USBDAQF1AOD_AI_on_demand_once
             // Parameters setting
             int err;
             int port = 0;
-            int channel = 2;
+            int channel = 8;
             int mode = Const.AI_MODE_ON_DEMAND;
             int timeout = 3000; // ms
 
@@ -556,7 +556,7 @@ class USBDAQF1AOD_DataLogger_AI_continuous
             // Parameters setting
             int err;
             int port = 0;
-            int channel = 2;
+            int channel = 8;
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;

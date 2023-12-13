@@ -46,7 +46,7 @@ class USBDAQF1AOD_AIO_one_channel_loopback
             // Parameters setting
             int err;
             int port = 0;
-            int channel = 2;
+            int channel = 8;
             int timeout = 3000; // ms
             List<double> ao_value_list = new List<double>() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 

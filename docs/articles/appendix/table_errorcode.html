@@ -72,26 +72,30 @@
 <table>
 <thead>
 <tr>
-<th>Error code</th>
-<th>Error message</th>
+<th>Code</th>
+<th>Message</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>570002</td>
+<td>520003</td>
+<td>Occurrence AHRS queue overflow.</td>
+</tr>
+<tr>
+<td>520002</td>
 <td>Occurrence CAN queue overflow.</td>
 </tr>
 <tr>
-<td>560001</td>
+<td>520001</td>
 <td>Occurrence UART queue overflow.</td>
 </tr>
 <tr>
-<td>520003</td>
+<td>520000</td>
 <td>Occurrence AI queue overflow.</td>
 </tr>
 <tr>
 <td>519000</td>
-<td>&quot;External library &quot;&quot;libusb-1.0.dll&quot;&quot; not found at indicated path will look at the default path instead&quot;</td>
+<td>External library &quot;libusb-1.0.dll&quot; not found at indicated path will look at the default path instead</td>
 </tr>
 <tr>
 <td>-7000</td>
@@ -107,7 +111,7 @@
 </tr>
 <tr>
 <td>-7003</td>
-<td>The WPC handle index error in the firmware.</td>
+<td>The HAL error in the firmware.</td>
 </tr>
 <tr>
 <td>-7004</td>
@@ -151,7 +155,7 @@
 </tr>
 <tr>
 <td>-7014</td>
-<td>The system core error in the firmware.</td>
+<td>The Core error in the firmware.</td>
 </tr>
 <tr>
 <td>-7015</td>
@@ -210,12 +214,8 @@
 <td>The other error in the firmware.</td>
 </tr>
 <tr>
-<td>-7801</td>
-<td>STEM port not available or already occupied by other process.</td>
-</tr>
-<tr>
-<td>-7901</td>
-<td>Please ensure that the relay counter index is restricted to the range of 0 to 5 or -1.</td>
+<td>-8000</td>
+<td>In this product, there is no support for this API.</td>
 </tr>
 <tr>
 <td>-8001</td>
@@ -226,244 +226,268 @@
 <td>Failed to connect to WPC DAQ. Please check network status and IP address.</td>
 </tr>
 <tr>
-<td>-8007</td>
+<td>-8003</td>
 <td>Network DAQ connection lost.</td>
 </tr>
 <tr>
-<td>-8008</td>
+<td>-8004</td>
 <td>Receive packet timeout.</td>
 </tr>
 <tr>
-<td>-8009</td>
-<td>The pin index is invalid</td>
+<td>-8005</td>
+<td>The pin index is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8010</td>
+<td>-8006</td>
 <td>Inconsistency between the number of pins &amp; the number of values.</td>
 </tr>
 <tr>
-<td>-8011</td>
-<td>There is a discrepancy in the data types between the pins and the corresponding values</td>
+<td>-8007</td>
+<td>Inconsistency between the type of pins &amp; the type of values.</td>
 </tr>
 <tr>
-<td>-8012</td>
-<td>The data type is incompatible or not supported.</td>
+<td>-8008</td>
+<td>The data type is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8014</td>
+<td>-8009</td>
 <td>The input value is not the acceptable range.</td>
 </tr>
 <tr>
-<td>-8015</td>
+<td>-8010</td>
 <td>The Ini file extension name is not correct.</td>
 </tr>
 <tr>
-<td>-8016</td>
+<td>-8011</td>
 <td>No such file or directory.</td>
 </tr>
 <tr>
+<td>-8100</td>
+<td>The DI port is not available or is already occupied by another process.</td>
+</tr>
+<tr>
 <td>-8101</td>
-<td>DI port not avaliable or already occupied by other process.</td>
+<td>The DO port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
 <td>-8102</td>
-<td>DO port not available or already occupied by other process.</td>
+<td>The PWM channel is not available.</td>
+</tr>
+<tr>
+<td>-8103</td>
+<td>The counter channel is not available.</td>
+</tr>
+<tr>
+<td>-8104</td>
+<td>The relay counter index error is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-8200</td>
+<td>The AI channel is not available.</td>
 </tr>
 <tr>
 <td>-8201</td>
-<td>AI port not available or already occupied by other process.</td>
+<td>The AI port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
 <td>-8202</td>
-<td>The specified AI chip select is invalid.</td>
+<td>The AI chip is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-8203</td>
+<td>The AI mode is not valid or is not recognized.</td>
 </tr>
 <tr>
 <td>-8204</td>
-<td>AO port not available or already occupied by other process.</td>
+<td>The AI sampling rate is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8206</td>
-<td>The specified AO generation mode is invalid.</td>
-</tr>
-<tr>
-<td>-8207</td>
-<td>The specified AO span mode is invalid.</td>
-</tr>
-<tr>
-<td>-8208</td>
-<td>The specified AI acquisition mode is invalid.</td>
-</tr>
-<tr>
-<td>-8209</td>
-<td>AO channel not avaliable or already occupied by other process.</td>
-</tr>
-<tr>
-<td>-8210</td>
-<td>The specified AI sampling rate is invalid.</td>
-</tr>
-<tr>
-<td>-8211</td>
-<td>The specified AO form is invalid.</td>
-</tr>
-<tr>
-<td>-8212</td>
-<td>The specified AO sampling rate is invalid.</td>
-</tr>
-<tr>
-<td>-8213</td>
-<td>Numbers of AO value must lower than 13.</td>
+<td>-8300</td>
+<td>The AO port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
 <td>-8301</td>
-<td>Thermal port not avaliable or already occupied by other process.</td>
+<td>The AO generation mode is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-8302</td>
+<td>The AO span mode is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-8303</td>
+<td>The AO channel is not available.</td>
 </tr>
 <tr>
 <td>-8304</td>
-<td>Thermal channel not avaliable or already occupied by other process.</td>
+<td>The AO form is not valid or is not recognized.</td>
 </tr>
 <tr>
 <td>-8305</td>
-<td>The specified thermal filter mode is invalid.</td>
+<td>The AO sampling rate is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8306</td>
-<td>The specified thermal type mode is invalid.</td>
+<td>-8400</td>
+<td>The AHRS port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
-<td>-8401</td>
-<td>I2C port not avaliable or already occupied by other process.</td>
-</tr>
-<tr>
-<td>-8403</td>
-<td>The specified I2C clock mode is invalid.</td>
-</tr>
-<tr>
-<td>-8404</td>
-<td>The specified I2C address mode is invalid.</td>
+<td>-8500</td>
+<td>The thermal port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
 <td>-8501</td>
-<td>SPI port not avaliable or already occupied by other process.</td>
+<td>The thermal channel is not available.</td>
 </tr>
 <tr>
 <td>-8502</td>
-<td>The length of data exceeds maximum transfer length of SPI.</td>
+<td>The thermal filter mode is not valid or is not recognized.</td>
 </tr>
 <tr>
 <td>-8503</td>
-<td>The specified SPI data size mode is invalid.</td>
+<td>The thermal type mode is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8504</td>
-<td>The specified SPI first bit mode is invalid.</td>
-</tr>
-<tr>
-<td>-8505</td>
-<td>The specified SPI prescaler mode is invalid.</td>
-</tr>
-<tr>
-<td>-8506</td>
-<td>The specified SPI mode is invalid.</td>
+<td>-8600</td>
+<td>The I2C port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
 <td>-8601</td>
-<td>UART port not avaliable or already occupied by other process.</td>
+<td>The I2C clock mode is not available.</td>
 </tr>
 <tr>
 <td>-8602</td>
-<td>The length of data exceeds maximum transfer length of UART.</td>
+<td>The I2C address mode is not available.</td>
 </tr>
 <tr>
-<td>-8603</td>
-<td>The specified UART baud rate is invalid.</td>
-</tr>
-<tr>
-<td>-8604</td>
-<td>The specified UART stop bit mode is invalid.</td>
-</tr>
-<tr>
-<td>-8605</td>
-<td>The specified UART parity mode is invalid.</td>
-</tr>
-<tr>
-<td>-8606</td>
-<td>The specified UART data bit mode is invalid.</td>
+<td>-8700</td>
+<td>The SPI port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
 <td>-8701</td>
-<td>CAN port not avaliable or already occupied by other process.</td>
+<td>The length of data exceeds maximum transfer length of SPI.</td>
 </tr>
 <tr>
 <td>-8702</td>
-<td>The specified CAN speed mode from WPC DAQ is invalid.</td>
+<td>TThe SPI data size mode is not valid or is not recognized.</td>
 </tr>
 <tr>
 <td>-8703</td>
-<td>The length of the specified CAN data is invalid.</td>
+<td>TThe SPI first bit mode is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8793</td>
-<td>The specified CAN TX is invalid.</td>
+<td>-8704</td>
+<td>The SPI prescaler mode is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8794</td>
-<td>The specified CAN TX priority is invalid.</td>
+<td>-8705</td>
+<td>The SPI mode is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-8800</td>
+<td>The UART port is not available or is already occupied by another process.</td>
+</tr>
+<tr>
+<td>-8801</td>
+<td>The length of data exceeds maximum transfer length of UART.</td>
+</tr>
+<tr>
+<td>-8802</td>
+<td>The UART baud rate is not valid or is not recognized.</td>
 </tr>
 <tr>
 <td>-8803</td>
-<td>The specified motion axis is invalid</td>
+<td>The UART stop bit mode is not valid or is not recognized.</td>
 </tr>
 <tr>
 <td>-8804</td>
-<td>Motion port not avaliable or already occupied by other process.</td>
+<td>The UART parity mode is not valid or is not recognized.</td>
 </tr>
 <tr>
 <td>-8805</td>
-<td>The specified motion stop mode is invalid.</td>
+<td>The UART data bit mode is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8806</td>
-<td>The specified motion search type is invalid.</td>
+<td>-8900</td>
+<td>The drive port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
-<td>-8807</td>
-<td>The specified motion search direction is invalid.</td>
+<td>-8900</td>
+<td>The CAN port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
-<td>-8808</td>
-<td>The specified motion enable is invalid.</td>
+<td>-8901</td>
+<td>The CAN speed mode is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8809</td>
-<td>The specified motion stepper output is invalid.</td>
+<td>-8902</td>
+<td>The length of the specified CAN data is invalid.</td>
 </tr>
 <tr>
-<td>-8810</td>
-<td>The specified motion direction is invalid.</td>
+<td>-8903</td>
+<td>The CAN TX is not valid or is not recognized</td>
 </tr>
 <tr>
-<td>-8811</td>
-<td>The specified motion polarity is invalid.</td>
+<td>-8904</td>
+<td>The CAN TX priority is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8812</td>
-<td>The specified motion capture type is invalid.</td>
+<td>-9100</td>
+<td>The motion axis is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8813</td>
-<td>The specified motion capture mode is invalid.</td>
+<td>-9101</td>
+<td>The motion port is not available or is already occupied by another process.</td>
 </tr>
 <tr>
-<td>-8814</td>
-<td>The specified motion breakpoint mode is invalid.</td>
+<td>-9102</td>
+<td>The motion stop mode is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8815</td>
-<td>The specified motion operation mode is invalid.</td>
+<td>-9103</td>
+<td>The motion search type is not valid or is not recognized.</td>
 </tr>
 <tr>
-<td>-8816</td>
-<td>The specified motion acceleration mode is invalid.</td>
+<td>-9104</td>
+<td>The motion search direction is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9105</td>
+<td>The motion enable is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9106</td>
+<td>The motion stepper output is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9107</td>
+<td>The motion direction is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9108</td>
+<td>The motion polarity is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9109</td>
+<td>The motion capture type is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9110</td>
+<td>The motion capture mode is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9111</td>
+<td>The motion breakpoint mode is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9112</td>
+<td>The motion operation mode is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9113</td>
+<td>The motion acceleration mode is not valid or is not recognized.</td>
+</tr>
+<tr>
+<td>-9200</td>
+<td>The STEM slot is not available or is already occupied by another process.</td>
 </tr>
 </tbody>
 </table>

@@ -15,20 +15,20 @@ If you'd like to create your own application, start by using this simple templat
 
 ### Sampling rate
 
-#### The sampling rate is dependent on the channel.
+#### The max sampling rate is dependent on the number of enabled channels.
 
 | Product/channel | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
 |:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | USB-DAQ-F1-AD   | 16k | 8k  | 5.3k| 4k  | 3.2k| 2.6k| 2.2k| 2.0k|
 | USB-DAQ-F1-AOD  | 16k | 8k  | 5.3k| 4k  | 3.2k| 2.6k| 2.2k| 2.0k|
 
-#### The sampling rate is dependent on the chip select.
+#### The max sampling rate is dependent on the number of enabled chip-selects.
 
 | Product/CS  | 1  | 2  |3   |
 |:-----------:|:--:|:--:|:--:|
 | STEM        |12k |6k  |4k  |
 
-#### The sampling rate is independent.
+#### The max sampling rate is fixed.
 
 | Product       |Sampling rate|
 |:-------------:|:-----------:|
