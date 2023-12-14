@@ -51,44 +51,44 @@ class USBDAQF1AOD_AIO_all_channels_loopback
             List<double> ao_value_list = new List<double>() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($"AI_open in port {port}: {err}");
             
             // Set AI channel
-            err = dev.AI_enableChannel(port, channel, timeout:timeout);
+            err = dev.AI_enableChannel(port, channel, timeout);
             Console.WriteLine($"AI_enableChannel in port {port}: {err}");
 
             // Open AO
-            err = dev.AO_open(port, timeout:timeout);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($"AO_open in port {port}: {err}");
 
             // Read data acquisition acquisition
-            List<double> ai_list = dev.AI_readOnDemand(port, timeout:timeout);
+            List<double> ai_list = dev.AI_readOnDemand(port, timeout);
 
             // Print data
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
 
             // Write AO value simultaneously
-            err = dev.AO_writeAllChannels(port, ao_value_list, timeout:timeout);
+            err = dev.AO_writeAllChannels(port, ao_value_list, timeout);
             Console.WriteLine($"AO_writeAllChannels in port {port}: {err}");
 
             // Read data acquisition acquisition
-            ai_list = dev.AI_readOnDemand(port, timeout:timeout);
+            ai_list = dev.AI_readOnDemand(port, timeout);
 
             // Print data
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", ai_list)));
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($"AI_close in port {port}: {err}");
 
             // Close AO
-            err = dev.AO_close(port, timeout:timeout);
+            err = dev.AO_close(port, timeout);
             Console.WriteLine($"AO_close in port {port}: {err}");
         }
         catch (Exception ex)

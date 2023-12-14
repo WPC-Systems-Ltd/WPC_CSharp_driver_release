@@ -47,34 +47,34 @@ class EthanD_PWM_generate
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open PWM
-            err = dev.PWM_open(channel, timeout:timeout);
+            err = dev.PWM_open(channel, timeout);
             Console.WriteLine($"PWM_open in channel {channel}: {err}");
 
             // Set frequency and duty_cycle
-            err = dev.PWM_setFrequency(channel, frequency, timeout:timeout);
+            err = dev.PWM_setFrequency(channel, frequency, timeout);
             Console.WriteLine($"PWM_setFrequency in channel {channel}: {err}");
 
-            err = dev.PWM_setDutyCycle(channel, duty_cycle, timeout:timeout);
+            err = dev.PWM_setDutyCycle(channel, duty_cycle, timeout);
             Console.WriteLine($"PWM_setDutyCycle in channel {channel}: {err}");
 
             // Start PWM
-            err = dev.PWM_start(channel, timeout:timeout);
+            err = dev.PWM_start(channel, timeout);
             Console.WriteLine($"PWM_start in channel {channel}: {err}");
 
             // Wait for data [ms]
             Thread.Sleep(5000);
 
             // Stop PWM
-            err = dev.PWM_stop(channel, timeout:timeout);
+            err = dev.PWM_stop(channel, timeout);
             Console.WriteLine($"PWM_stop in channel {channel}: {err}");
 
             // Close PWM
-            err = dev.PWM_close(channel, timeout:timeout);
+            err = dev.PWM_close(channel, timeout);
             Console.WriteLine($"PWM_close in channel {channel}: {err}");
         }
         catch (Exception ex)

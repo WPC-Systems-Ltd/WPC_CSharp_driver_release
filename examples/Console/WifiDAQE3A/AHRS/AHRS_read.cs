@@ -44,42 +44,39 @@ class WifiDAQE3A_AHRS_read
             // Parameters setting
             int err;
             int port = 0;
-            byte mask = 0x01; // data mask
-            double theo_grav = 9.81;
-            double dt = 0.003;
-            double offset_z = 0.003;
-            int delay = 100;
+            double sampling_period = 0.003;
+            int read_delay = 100;
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AHRS
-            err = dev.AHRS_open(port, timeout:timeout);
+            err = dev.AHRS_open(port, timeout);
             Console.WriteLine($"AHRS_open in port {port}: {err}");
 
-            // Set Set general setting
-            err = dev.AHRS_setGeneral(port, theo_grav, dt, offset_z, timeout:timeout);
-            Console.WriteLine($"AHRS_setGeneral {port}: {err}");
+            // Set period
+            err = dev.AHRS_setSamplingPeriod(port, sampling_period, timeout);
+            Console.WriteLine($"AHRS_setSamplingPeriod {port}: {err}");
 
             // Start AHRS
-            err = dev.AHRS_start(port, mask, timeout:timeout);
+            err = dev.AHRS_start(port, timeout);
             Console.WriteLine($"AHRS_start in port {port}: {err}");
 
             // Read AHRS estimation
-            for (int i = 0; i < 5; i++) {
-                List<float> ahrs_list = dev.AHRS_readStreaming(port, delay:delay);
-                Console.WriteLine($"x_esti {ahrs_list[0]}, y_esti {ahrs_list[1]}, z_esti {ahrs_list[2]}");
+            for (int i=0; i<5; i++) {
+                List<float> ahrs_list = dev.AHRS_readStreaming(port, read_delay);
+                Console.WriteLine($"Roll: {ahrs_list[0]}, Pitch: {ahrs_list[1]}, Yaw: {ahrs_list[2]}");
             }
 
             // Stop AHRS
-            err = dev.AHRS_stop(port, timeout:timeout);
+            err = dev.AHRS_stop(port, timeout);
             Console.WriteLine($"AHRS_stop in port {port}: {err}");
 
             // Close AHRS
-            err = dev.AHRS_close(port, timeout:timeout);
+            err = dev.AHRS_close(port, timeout);
             Console.WriteLine($"AHRS_close in port {port}: {err}");
         }
         catch (Exception ex)

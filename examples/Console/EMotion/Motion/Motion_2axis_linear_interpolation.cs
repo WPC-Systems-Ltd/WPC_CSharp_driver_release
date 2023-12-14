@@ -43,12 +43,12 @@ class EMotion_2axis_linear_interpolation
             int axis_0 = Const.MOT_AXIS0;
             int axis_1 = Const.MOT_AXIS1;
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout:timeout);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
@@ -64,14 +64,14 @@ class EMotion_2axis_linear_interpolation
             Console.WriteLine($"Motion_cfg2AxisLinearInterpo in axis {axis_0} and {axis_1}: {err}");
 
             // Motion start
-            err = dev.Motion_startLinearInterpo(port, timeout:timeout);
+            err = dev.Motion_startLinearInterpo(port, timeout);
             Console.WriteLine($"Motion_startLinearInterpo in port {port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
             {
-                int axis1_move_status = dev.Motion_getMoveStatus(port, axis_0, timeout:timeout);
-                int axis2_move_status = dev.Motion_getMoveStatus(port, axis_1, timeout:timeout);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, axis_0, timeout);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, axis_1, timeout);
 
                 move_status = axis1_move_status & axis2_move_status;
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
@@ -79,14 +79,14 @@ class EMotion_2axis_linear_interpolation
             }
 
             // Motion stop
-            err = dev.Motion_stop(port, axis_0, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Motion_stop(port, axis_0, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($"Motion_stop in axis{axis_0}: {err}");
 
-            err = dev.Motion_stop(port, axis_1, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Motion_stop(port, axis_1, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($"Motion_stop in axis{axis_1}: {err}");
 
             // Motion close
-            err = dev.Motion_close(port, timeout:timeout);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)

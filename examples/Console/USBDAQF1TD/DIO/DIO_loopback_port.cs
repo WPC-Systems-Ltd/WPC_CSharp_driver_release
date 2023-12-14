@@ -45,35 +45,36 @@ class USBDAQF1TD_DIO_loopback_port
             int err;
             int DO_port = 0;
             int DI_port = 1;
+            List<int> DO_value = new List<int> {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open DO port with digital output
-            err = dev.DO_openPort(DO_port, timeout:timeout);
+            err = dev.DO_openPort(DO_port, timeout);
             Console.WriteLine($"DO_openPort in DO_port {DO_port}: {err}");
 
             // Open DI port with digital input
-            err = dev.DI_openPort(DI_port, timeout:timeout);
+            err = dev.DI_openPort(DI_port, timeout);
             Console.WriteLine($"DO_openPort in DI_port {DI_port}: {err}");
 
             // Write DO port to high or low
-            err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
+            err = dev.DO_writePort(DO_port, DO_value, timeout);
             Console.WriteLine($"DO_writePort in DO_port {DO_port}: {err}");
 
             // Read DI port state
-            List<int> state = dev.DI_readPort(DI_port, timeout:timeout);
+            List<int> state = dev.DI_readPort(DI_port, timeout);
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
 
             // Close DO port with digital output
-            err = dev.DO_closePort(DO_port, timeout:timeout);
+            err = dev.DO_closePort(DO_port, timeout);
             Console.WriteLine($"DO_closePort in DO_port {DO_port}: {err}");
 
             // Close DI port with digital input
-            err = dev.DI_closePort(DI_port, timeout:timeout);
+            err = dev.DI_closePort(DI_port, timeout);
             Console.WriteLine($"DI_closePort in DI_port {DI_port}: {err}");
         }
         catch (Exception ex)

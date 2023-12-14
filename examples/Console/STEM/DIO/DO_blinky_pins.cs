@@ -58,26 +58,26 @@ class STEM_DO_blinky_pins
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             // If the slot mode is not set to "DIO", set the slot mode to "DIO"
             if (slot_mode != "DIO"){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                err = dev.Sys_setDIOMode(slot, timeout);
                 Console.WriteLine($"Sys_setDIOMode: {err}");
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             // Get DIO start up information
-            List<List<byte>> pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List<List<byte>> pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             Console.WriteLine($"enable_list");
@@ -92,7 +92,7 @@ class STEM_DO_blinky_pins
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
             {
-                List<byte> state = dev.DO_togglePins(DO_port, pinindex, timeout:timeout);
+                List<byte> state = dev.DO_togglePins(DO_port, pinindex, timeout);
                 Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]

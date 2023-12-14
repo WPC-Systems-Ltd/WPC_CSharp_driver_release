@@ -39,12 +39,12 @@ class EMotion_load_configuration_file
             int port = 0;
             int timeout = 3000; // ms
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout:timeout);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
@@ -56,7 +56,7 @@ class EMotion_load_configuration_file
             Console.WriteLine($"Motion_loadCfgFile: {err}");
 
             // Motion close
-            err = dev.Motion_close(port, timeout:timeout);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)

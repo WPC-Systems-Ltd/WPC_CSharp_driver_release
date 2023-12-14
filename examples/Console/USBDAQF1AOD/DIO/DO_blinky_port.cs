@@ -45,20 +45,20 @@ class USBDAQF1AOD_DO_blinky_port
             int timeout = 3000;  // ms
 
             // Open port with digital output
-            err = dev.DO_openPort(port, timeout:timeout);
+            err = dev.DO_openPort(port, timeout);
             Console.WriteLine($"DO_openPort in port {port}: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
             {
-                dev.DO_togglePort(port, timeout:timeout);
+                dev.DO_togglePort(port, timeout);
 
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
 
             // Close port with digital output
-            err = dev.DO_closePort(port, timeout:timeout);
+            err = dev.DO_closePort(port, timeout);
             Console.WriteLine($"DO_closePort in port {port}: {err}");
         }
         catch (Exception ex)

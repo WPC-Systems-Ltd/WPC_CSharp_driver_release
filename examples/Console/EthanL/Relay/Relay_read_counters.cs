@@ -42,12 +42,12 @@ class EthanL_Relay_read_counters
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open Relay open
-            err = dev.Relay_open(timeout:timeout);
+            err = dev.Relay_open(timeout);
             Console.WriteLine($"Relay_open: {err}");
 
             // Read counters
@@ -57,7 +57,7 @@ class EthanL_Relay_read_counters
             {
                 Console.WriteLine($"Relay_read: {c}");
             }
-            err = dev.Relay_close(timeout:timeout);
+            err = dev.Relay_close(timeout);
             Console.WriteLine($"Relay_close: {err}");
         }
         catch (Exception ex)

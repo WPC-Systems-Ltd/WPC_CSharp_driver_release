@@ -41,12 +41,12 @@ class EMotion_velocity_blending
             int timeout = 3000; // ms
             int axis = Const.MOT_AXIS0;
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout:timeout);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"Motion_open in port {port}: {err}");
 
             /*
@@ -60,13 +60,13 @@ class EMotion_velocity_blending
             */
 
             // Motion configure
-            err = dev.Motion_cfgAxis(port, axis, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout:timeout);
+            err = dev.Motion_cfgAxis(port, axis, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($"Motion_cfgAxis in axis{axis}: {err}");
 
-            err = dev.Motion_cfgLimit(port, axis, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_LOW, timeout:timeout);
+            err = dev.Motion_cfgLimit(port, axis, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($"Motion_cfgLimit in axis{axis}: {err}");
 
-            err = dev.Motion_cfgEncoder(port, axis, Const.MOT_ACTIVE_LOW, timeout:timeout);
+            err = dev.Motion_cfgEncoder(port, axis, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($"Motion_cfgEncoder in axis{axis}: {err}");
 
             err = dev.Motion_rstEncoderPosi(port, axis, encoder_posi:0, timeout:timeout);
@@ -76,11 +76,11 @@ class EMotion_velocity_blending
             Console.WriteLine($"Motion_cfgAxisMove in axis{axis}: {err}");
 
             // Servo on
-            err = dev.Motion_enableServoOn(port, axis, timeout:timeout);
+            err = dev.Motion_enableServoOn(port, axis, timeout);
             Console.WriteLine($"Motion_enableServoOn in axis{axis}: {err}");
 
             // Motion start
-            err = dev.Motion_startSingleAxisMove(port, axis, timeout:timeout);
+            err = dev.Motion_startSingleAxisMove(port, axis, timeout);
             Console.WriteLine($"Motion_startSingleAxisMove in axis{axis}: {err}");
 
             // Wait for 3 seconds for moving
@@ -88,7 +88,7 @@ class EMotion_velocity_blending
 
             // Motion override velocity
             new_velo = 5000;
-            err = dev.Motion_overrideAxisVelocity(port, axis, new_velo, timeout:timeout);
+            err = dev.Motion_overrideAxisVelocity(port, axis, new_velo, timeout);
             Console.WriteLine($"Motion_overrideAxisVelocity in axis{axis}: {err}");
 
             // Wait for 3 seconds for moving
@@ -96,22 +96,22 @@ class EMotion_velocity_blending
 
             // Motion override velocity
             new_velo = -3000;
-            err = dev.Motion_overrideAxisVelocity(port, axis, new_velo, timeout:timeout);
+            err = dev.Motion_overrideAxisVelocity(port, axis, new_velo, timeout);
             Console.WriteLine($"Motion_overrideAxisVelocity in axis{axis}: {err}");
 
             // Wait for 3 seconds for moving
             Thread.Sleep(3000); // delay [ms]
 
             // Motion stop
-            err = dev.Motion_stop(port, axis, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Motion_stop(port, axis, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($"Motion_stop in axis{axis}: {err}");
 
             // Servo off
-            err = dev.Motion_enableServoOff(port, axis, timeout:timeout);
+            err = dev.Motion_enableServoOff(port, axis, timeout);
             Console.WriteLine($"Motion_enableServoOff in axis{axis}: {err}");
 
             // Motion close
-            err = dev.Motion_close(port, timeout:timeout);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)

@@ -42,12 +42,12 @@ class EMotion_3axis_linear_interpolation
             int dest_posi2 = 3000;
             int timeout = 3000; // ms
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout:timeout);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
@@ -63,15 +63,15 @@ class EMotion_3axis_linear_interpolation
             Console.WriteLine($"Motion_cfg3AxisLinearInterpo in port {port}: {err}");
 
             // Motion configure
-            err = dev.Motion_startLinearInterpo(port, timeout:timeout);
+            err = dev.Motion_startLinearInterpo(port, timeout);
             Console.WriteLine($"Motion_startLinearInterpo in port {port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
             {
-                int axis0_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS0, timeout:timeout);
-                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1, timeout:timeout);
-                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2, timeout:timeout);
+                int axis0_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS0, timeout);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS1, timeout);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, Const.MOT_AXIS2, timeout);
                 move_status = axis0_move_status & axis1_move_status & axis2_move_status;
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
                 else { Console.WriteLine($"Move completed"); }
@@ -80,12 +80,12 @@ class EMotion_3axis_linear_interpolation
             // Motion stop
             for (int i=0; i<3; i++)
             {
-                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout);
                 Console.WriteLine($"Motion_stop in axis{i}: {err}");
             }
 
             // Motion close
-            err = dev.Motion_close(port, timeout:timeout);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)

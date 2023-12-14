@@ -44,23 +44,24 @@ class USBDAQF1RD_DO_write_pins
             int err;
             int port = 0;
             List<int> pinindex = new List<int> {1, 3, 5, 7};
+            List<int> DO_value = new List<int> {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open pins with digital output
-            err = dev.DO_openPins(port, pinindex, timeout:timeout);
+            err = dev.DO_openPins(port, pinindex, timeout);
             Console.WriteLine($"DO_openPins in port {port}: {err}");
 
             // Write pins to high or low
-            err = dev.DO_writePins(port, pinindex, new List<int> {1, 1, 0, 0}, timeout:timeout);
+            err = dev.DO_writePins(port, pinindex, DO_value, timeout);
             Console.WriteLine($"DO_writePins in port {port}: {err}");
 
             // Close pins with digital output
-            err = dev.DO_closePins(port, pinindex, timeout:timeout);
+            err = dev.DO_closePins(port, pinindex, timeout);
             Console.WriteLine($"DO_closePins in port {port}: {err}");
 
         }

@@ -133,56 +133,56 @@ class EDrive_ST_Drive_1axis
             int target_position = 10000;
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // EDrive-ST open
-            err = dev.Drive_open(port, timeout:timeout);
+            err = dev.Drive_open(port, timeout);
             Console.WriteLine($&quot;Drive_open: {err}&quot;);
 
             // EDrive-ST configure
-            err = dev.Drive_cfgAxisMove(port, Const.MOT_RELATIVE_POSITION, target_position, timeout:timeout);
+            err = dev.Drive_cfgAxisMove(port, Const.MOT_RELATIVE_POSITION, target_position, timeout);
             Console.WriteLine($&quot;Drive_cfgAxisMove: {err}&quot;);
 
-            err = dev.Drive_cfgAxisDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout:timeout);
+            err = dev.Drive_cfgAxisDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout);
             Console.WriteLine($&quot;Drive_cfgAxisDirection: {err}&quot;);
 
-            err = dev.Drive_cfgEncoderDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout:timeout);
+            err = dev.Drive_cfgEncoderDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout);
             Console.WriteLine($&quot;Drive_cfgEncoderDirection: {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout:timeout);
+            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout:timeout);
+            err = dev.Drive_rstEncoderPosi(port, timeout);
             Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
 
             // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout:timeout);
+            err = dev.Drive_enableServoOn(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
 
             // EDrive-ST start
-            err = dev.Drive_start(port, timeout:timeout);
+            err = dev.Drive_start(port, timeout);
             Console.WriteLine($&quot;Drive_start {err}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Drive_getMoveStatus(port, timeout:timeout);
-                List&lt;int&gt; posi = dev.Drive_readEncoderPosition(port, timeout:timeout);
+                move_status = dev.Drive_getMoveStatus(port, timeout);
+                List&lt;int&gt; posi = dev.Drive_readEncoderPosition(port, timeout);
                 Console.WriteLine($&quot;encoder_posi: {posi[0]}, logical_posi: {posi[1]}&quot;);
             }
 
             // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($&quot;Drive_stop: {err}&quot;);
 
             // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout:timeout);
+            err = dev.Drive_enableServoOff(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
 
             // EDrive-ST close
-            err = dev.Drive_close(port, timeout:timeout);
+            err = dev.Drive_close(port, timeout);
             Console.WriteLine($&quot;Drive_close: {err}&quot;);
         }
         catch (Exception ex)
@@ -241,55 +241,55 @@ class EDrive_ST_Drive_find_limit
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // EDrive-ST open
-            err = dev.Drive_open(port, timeout:timeout);
+            err = dev.Drive_open(port, timeout);
             Console.WriteLine($&quot;Drive_open: {err}&quot;);
 
             // EDrive-ST configure
-            err = dev.Drive_cfgAxisDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout:timeout);
+            err = dev.Drive_cfgAxisDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout);
             Console.WriteLine($&quot;Drive_cfgAxisDirection: {err}&quot;);
 
-            err = dev.Drive_cfgEncoderDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout:timeout);
+            err = dev.Drive_cfgEncoderDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout);
             Console.WriteLine($&quot;Drive_cfgEncoderDirection: {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout:timeout);
+            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
 
-            err = dev.Drive_cfgFindRef(port, Const.MOT_DIR_REVERSE, timeout:timeout);
+            err = dev.Drive_cfgFindRef(port, Const.MOT_DIR_REVERSE, timeout);
             Console.WriteLine($&quot;Drive_cfgFindRef {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout:timeout);
+            err = dev.Drive_rstEncoderPosi(port, timeout);
             Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
 
             // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout:timeout);
+            err = dev.Drive_enableServoOn(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
 
             // EDrive-ST find reference
-            err = dev.Drive_findReference(port, timeout:timeout);
+            err = dev.Drive_findReference(port, timeout);
             Console.WriteLine($&quot;Drive_findReference {err}&quot;);
 
             // Get limit status
-            List&lt;int&gt; hit = dev.Drive_getLimitStatus(port, timeout:timeout);
+            List&lt;int&gt; hit = dev.Drive_getLimitStatus(port, timeout);
             Console.WriteLine($&quot;reverse_hit: {hit[0]}, forward_hit: {hit[1]}&quot;);
 
             // Wait for 3 seconds for moving
             Thread.Sleep(3000);
 
             // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($&quot;Drive_stop: {err}&quot;);
 
             // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout:timeout);
+            err = dev.Drive_enableServoOff(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
 
             // EDrive-ST close
-            err = dev.Drive_close(port, timeout:timeout);
+            err = dev.Drive_close(port, timeout);
             Console.WriteLine($&quot;Drive_close: {err}&quot;);
         }
         catch (Exception ex)
@@ -348,27 +348,27 @@ class EDrive_ST_Drive_servo_on
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // EDrive-ST open
-            err = dev.Drive_open(port, timeout:timeout);
+            err = dev.Drive_open(port, timeout);
             Console.WriteLine($&quot;Drive_open: {err}&quot;);
 
             // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout:timeout);
+            err = dev.Drive_enableServoOn(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
 
             // Wait for 5 seconds
             Thread.Sleep(3000);
 
             // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout:timeout);
+            err = dev.Drive_enableServoOff(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
 
             // EDrive-ST close
-            err = dev.Drive_close(port, timeout:timeout);
+            err = dev.Drive_close(port, timeout);
             Console.WriteLine($&quot;Drive_close: {err}&quot;);
         }
         catch (Exception ex)
@@ -429,61 +429,61 @@ class EDrive_ST_Drive_position_blending
             int new_position = 0;
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // EDrive-ST open
-            err = dev.Drive_open(port, timeout:timeout);
+            err = dev.Drive_open(port, timeout);
             Console.WriteLine($&quot;Drive_open: {err}&quot;);
 
             // EDrive-ST configure
-            err = dev.Drive_cfgAxisMove(port, Const.MOT_RELATIVE_POSITION, target_position, timeout:timeout);
+            err = dev.Drive_cfgAxisMove(port, Const.MOT_RELATIVE_POSITION, target_position, timeout);
             Console.WriteLine($&quot;Drive_cfgAxisMove: {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout:timeout);
+            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout:timeout);
+            err = dev.Drive_rstEncoderPosi(port, timeout);
             Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
 
             // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout:timeout);
+            err = dev.Drive_enableServoOn(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
 
             // EDrive-ST start
-            err = dev.Drive_start(port, timeout:timeout);
+            err = dev.Drive_start(port, timeout);
             Console.WriteLine($&quot;Drive_start {err}&quot;);
 
             // Wait for 3 seconds for moving
             Thread.Sleep(3000);
 
             // Read encoder position
-            List&lt;int&gt; posi = dev.Drive_readEncoderPosition(port, timeout:timeout);
+            List&lt;int&gt; posi = dev.Drive_readEncoderPosition(port, timeout);
             Console.WriteLine($&quot;encoder_posi: {posi[0]}, logical_posi: {posi[1]}&quot;);
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Drive_getMoveStatus(port, timeout:timeout);
-                posi = dev.Drive_readEncoderPosition(port, timeout:timeout);
+                move_status = dev.Drive_getMoveStatus(port, timeout);
+                posi = dev.Drive_readEncoderPosition(port, timeout);
                 Console.WriteLine($&quot;encoder_posi: {posi[0]}, logical_posi: {posi[1]}&quot;);
 
                 // EDrive-ST overwrite position
-                err = dev.Drive_overridePosition(port, new_position, timeout:timeout);
+                err = dev.Drive_overridePosition(port, new_position, timeout);
                 Console.WriteLine($&quot;Drive_overridePosition {err}&quot;);
             }
 
             // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($&quot;Drive_stop: {err}&quot;);
 
             // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout:timeout);
+            err = dev.Drive_enableServoOff(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
 
             // EDrive-ST close
-            err = dev.Drive_close(port, timeout:timeout);
+            err = dev.Drive_close(port, timeout);
             Console.WriteLine($&quot;Drive_close: {err}&quot;);
         }
         catch (Exception ex)
@@ -542,30 +542,30 @@ class EDrive_ST_Drive_velocity_blending_acceleration
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // EDrive-ST open
-            err = dev.Drive_open(port, timeout:timeout);
+            err = dev.Drive_open(port, timeout);
             Console.WriteLine($&quot;Drive_open: {err}&quot;);
 
             // EDrive-ST configure
-            err = dev.Drive_cfgAxisMove(port, Const.MOT_VELOCITY, timeout:timeout);
+            err = dev.Drive_cfgAxisMove(port, Const.MOT_VELOCITY, timeout);
             Console.WriteLine($&quot;Drive_cfgAxisMove: {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout:timeout);
+            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout:timeout);
+            err = dev.Drive_rstEncoderPosi(port, timeout);
             Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
 
             // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout:timeout);
+            err = dev.Drive_enableServoOn(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
 
             // EDrive-ST start
-            err = dev.Drive_start(port, timeout:timeout);
+            err = dev.Drive_start(port, timeout);
             Console.WriteLine($&quot;Drive_start {err}&quot;);
 
             // Wait for 5 seconds for moving
@@ -574,10 +574,10 @@ class EDrive_ST_Drive_velocity_blending_acceleration
             int new_velo = -3000;
             int new_accel = 100;
             int new_decel = 100;
-            err = dev.Drive_overrideVelocity(port, new_velo, timeout:timeout);
+            err = dev.Drive_overrideVelocity(port, new_velo, timeout);
             Console.WriteLine($&quot;Drive_overrideVelocity {err}&quot;);
 
-            err = dev.Drive_overrideAccel(port, new_accel, new_decel, timeout:timeout);
+            err = dev.Drive_overrideAccel(port, new_accel, new_decel, timeout);
             Console.WriteLine($&quot;Drive_overrideAccel {err}&quot;);
 
             // Wait for 5 seconds for moving
@@ -586,25 +586,25 @@ class EDrive_ST_Drive_velocity_blending_acceleration
             new_velo = 6000;
             new_accel = 100000;
             new_decel = 100000;
-            err = dev.Drive_overrideVelocity(port, new_velo, timeout:timeout);
+            err = dev.Drive_overrideVelocity(port, new_velo, timeout);
             Console.WriteLine($&quot;Drive_overrideVelocity {err}&quot;);
 
-            err = dev.Drive_overrideAccel(port, new_accel, new_decel, timeout:timeout);
+            err = dev.Drive_overrideAccel(port, new_accel, new_decel, timeout);
             Console.WriteLine($&quot;Drive_overrideAccel {err}&quot;);
 
             // Wait for 5 seconds for moving
             Thread.Sleep(5000);
 
             // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($&quot;Drive_stop: {err}&quot;);
 
             // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout:timeout);
+            err = dev.Drive_enableServoOff(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
 
             // EDrive-ST close
-            err = dev.Drive_close(port, timeout:timeout);
+            err = dev.Drive_close(port, timeout);
             Console.WriteLine($&quot;Drive_close: {err}&quot;);
         }
         catch (Exception ex)
@@ -663,59 +663,59 @@ class EDrive_ST_Drive_velocity_blending
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // EDrive-ST open
-            err = dev.Drive_open(port, timeout:timeout);
+            err = dev.Drive_open(port, timeout);
             Console.WriteLine($&quot;Drive_open: {err}&quot;);
 
             // EDrive-ST configure
-            err = dev.Drive_cfgAxisMove(port, Const.MOT_VELOCITY, timeout:timeout);
+            err = dev.Drive_cfgAxisMove(port, Const.MOT_VELOCITY, timeout);
             Console.WriteLine($&quot;Drive_cfgAxisMove: {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout:timeout);
+            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
             Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout:timeout);
+            err = dev.Drive_rstEncoderPosi(port, timeout);
             Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
 
             // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout:timeout);
+            err = dev.Drive_enableServoOn(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
 
             // EDrive-ST start
-            err = dev.Drive_start(port, timeout:timeout);
+            err = dev.Drive_start(port, timeout);
             Console.WriteLine($&quot;Drive_start {err}&quot;);
 
             // Wait for 3 seconds for moving
             Thread.Sleep(3000);
 
             int new_velo = 5000;
-            err = dev.Drive_overrideVelocity(port, new_velo, timeout:timeout);
+            err = dev.Drive_overrideVelocity(port, new_velo, timeout);
             Console.WriteLine($&quot;Drive_overrideVelocity {err}&quot;);
 
             // Wait for 3 seconds for moving
             Thread.Sleep(3000);
 
             new_velo = -3000;
-            err = dev.Drive_overrideVelocity(port, new_velo, timeout:timeout);
+            err = dev.Drive_overrideVelocity(port, new_velo, timeout);
             Console.WriteLine($&quot;Drive_overrideVelocity {err}&quot;);
 
             // Wait for 3 seconds for moving
             Thread.Sleep(3000);
 
             // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($&quot;Drive_stop: {err}&quot;);
 
             // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout:timeout);
+            err = dev.Drive_enableServoOff(port, timeout);
             Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
 
             // EDrive-ST close
-            err = dev.Drive_close(port, timeout:timeout);
+            err = dev.Drive_close(port, timeout);
             Console.WriteLine($&quot;Drive_close: {err}&quot;);
         }
         catch (Exception ex)

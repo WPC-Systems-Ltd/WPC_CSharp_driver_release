@@ -124,23 +124,23 @@ class STEM_get_network_info
         try
         {
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get serial number &amp; RTC Time
-            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
+            string serial_num = dev.Sys_getSerialNumber(timeout);
             string RTC = dev.Sys_getRTC();
             Console.WriteLine($&quot;Serial number: {serial_num}&quot;);
             Console.WriteLine($&quot;RTC data time: {RTC}&quot;);
 
             // Get IP &amp; submask
-            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout:timeout);
+            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout);
             Console.WriteLine($&quot;IP: {info[0]}&quot;);
             Console.WriteLine($&quot;Submask: {info[1]}&quot;);
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr(timeout:timeout);
+            string mac = dev.Sys_getMACAddr(timeout);
             Console.WriteLine($&quot;MAC: {mac}&quot;);
         }
         catch (Exception ex)
@@ -204,7 +204,7 @@ class STEM_hello_world
             }
 
             Console.WriteLine($&quot;Restarting now&quot;);
-            dev.Sys_reboot(timeout:timeout);
+            dev.Sys_reboot(timeout);
         }
         catch (Exception ex)
         {

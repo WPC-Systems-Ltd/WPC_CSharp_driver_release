@@ -136,42 +136,42 @@ class WifiDAQF4A_AI_continuous
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
-            int delay = 200;   // ms
+            int read_delay = 200; // ms
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
             
 
             // Set AI acquisition mode to continuous mode
-            err = dev.AI_setMode(port, mode, timeout:timeout);
+            err = dev.AI_setMode(port, mode, timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port {port}: {err}&quot;);
 
             // Set AI sampling rate
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port {port}: {err}&quot;);
 
             // Start AI
-            err = dev.AI_start(port, timeout:timeout);
+            err = dev.AI_start(port, timeout);
             Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
-            err = dev.AI_stop(port, timeout:timeout);
+            err = dev.AI_stop(port, timeout);
             Console.WriteLine($&quot;AI_stop in port {port}: {err}&quot;);
 
             int data_len = 1;
             while (data_len &gt; 0){
                 // Read data acquisition
-                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
+                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, read_delay);
                 Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
 
                 // Update data len
@@ -179,7 +179,7 @@ class WifiDAQF4A_AI_continuous
             }
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -247,40 +247,40 @@ class WifiDAQF4A_AI_N_samples_once
             float sampling_rate = 200;
             int samples = 200;
             int read_points = 200;
-            int delay = 200;   // ms
+            int read_delay = 200; // ms
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
             
 
             // Set AI acquisition mode to N-sample mode
-            err = dev.AI_setMode(port, mode, timeout:timeout);
+            err = dev.AI_setMode(port, mode, timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port {port}: {err}&quot;);
 
             // Set AI sampling rate
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
             Console.WriteLine($&quot;AI_setNumSamples {sampling_rate} in port {port}: {err}&quot;);
 
             // Set AI # of samples
-            err = dev.AI_setNumSamples(port, samples, timeout:timeout);
+            err = dev.AI_setNumSamples(port, samples, timeout);
             Console.WriteLine($&quot;AI_setNumSamples {samples} in port {port}: {err}&quot;);
 
             // Start AI
-            err = dev.AI_start(port, timeout:timeout);
+            err = dev.AI_start(port, timeout);
             Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Read data acquisition
-            List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
+            List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, read_delay);
             Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
 
             bool ok = true;
@@ -298,11 +298,11 @@ class WifiDAQF4A_AI_N_samples_once
                 Console.WriteLine(&quot;NG&quot;);
 
             // Stop AI
-            err = dev.AI_stop(port, timeout:timeout);
+            err = dev.AI_stop(port, timeout);
             Console.WriteLine($&quot;AI_stop in port {port}: {err}&quot;);
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -370,17 +370,17 @@ class WifiDAQF4A_AI_on_demand_in_loop
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
             
 
             // Set AI acquisition mode to on demand
-            err = dev.AI_setMode(port, mode, timeout:timeout);
+            err = dev.AI_setMode(port, mode, timeout);
             Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
 
             // Read AI data with 5 times
@@ -392,7 +392,7 @@ class WifiDAQF4A_AI_on_demand_in_loop
             }
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -460,27 +460,27 @@ class WifiDAQF4A_AI_on_demand_once
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
             
 
             // Set AI acquisition mode to on demand
-            err = dev.AI_setMode(port, mode, timeout:timeout);
+            err = dev.AI_setMode(port, mode, timeout);
             Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
 
             // Read data acquisition acquisition
-            List&lt;double&gt; ai_list = dev.AI_readOnDemand(port, timeout:timeout);
+            List&lt;double&gt; ai_list = dev.AI_readOnDemand(port, timeout);
 
             // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, ai_list)));
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
 
         }
@@ -548,11 +548,11 @@ class WifiDAQF4A_DataLogger_AI_continuous
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
-            int delay = 200;    // ms
+            int read_delay = 200; // ms
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
@@ -566,33 +566,33 @@ class WifiDAQF4A_DataLogger_AI_continuous
             Console.WriteLine($&quot;Logger_writeValue: {err}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
+            err = dev.AI_open(port, timeout);
             Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
             
 
             // Set AI acquisition mode to continuous mode
-            err = dev.AI_setMode(port, mode, timeout:timeout);
+            err = dev.AI_setMode(port, mode, timeout);
             Console.WriteLine($&quot;AI_setMode {mode} in port {port}: {err}&quot;);
 
             // Set AI sampling rate
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
             Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port {port}: {err}&quot;);
 
             // Start AI
-            err = dev.AI_start(port, timeout:timeout);
+            err = dev.AI_start(port, timeout);
             Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
-            err = dev.AI_stop(port, timeout:timeout);
+            err = dev.AI_stop(port, timeout);
             Console.WriteLine($&quot;AI_stop in port {port}: {err}&quot;);
 
             int data_len = 1;
             while (data_len &gt; 0){
                 // Read data acquisition
-                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
+                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, read_delay);
                 Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
 
                 foreach (List&lt;double&gt; ai_list in ai_2Dlist)
@@ -606,7 +606,7 @@ class WifiDAQF4A_DataLogger_AI_continuous
             }
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
+            err = dev.AI_close(port, timeout);
             Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
         }
         catch (Exception ex)

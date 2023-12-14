@@ -318,13 +318,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Product_WifiDAQE3A_AHRS_setGeneral_" data-uid="WPC.Product.WifiDAQE3A.AHRS_setGeneral*"></a>
-  <h4 id="WPC_Product_WifiDAQE3A_AHRS_setGeneral_System_Int32_System_Double_System_Double_System_Double_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)">AHRS_setGeneral(Int32, Double, Double, Double, Int32)</h4>
+  <a id="WPC_Product_WifiDAQE3A_AHRS_setSamplingPeriod_" data-uid="WPC.Product.WifiDAQE3A.AHRS_setSamplingPeriod*"></a>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_setSamplingPeriod_System_Int32_System_Double_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_setSamplingPeriod(System.Int32,System.Double,System.Int32)">AHRS_setSamplingPeriod(Int32, Double, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int AHRS_setGeneral(int port, double gravity, double dt, double z_offset, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int AHRS_setSamplingPeriod(int port, double sampling_period, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,17 +343,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">gravity</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">dt</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">z_offset</span></td>
+        <td><span class="parametername">sampling_period</span></td>
         <td></td>
       </tr>
       <tr>
@@ -379,12 +369,12 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <a id="WPC_Product_WifiDAQE3A_AHRS_start_" data-uid="WPC.Product.WifiDAQE3A.AHRS_start*"></a>
-  <h4 id="WPC_Product_WifiDAQE3A_AHRS_start_System_Int32_System_Byte_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Byte,System.Int32)">AHRS_start(Int32, Byte, Int32)</h4>
+  <h4 id="WPC_Product_WifiDAQE3A_AHRS_start_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Int32)">AHRS_start(Int32, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int AHRS_start(int port, byte mask, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int AHRS_start(int port, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -399,11 +389,6 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">port</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Byte</span></td>
-        <td><span class="parametername">mask</span></td>
         <td></td>
       </tr>
       <tr>

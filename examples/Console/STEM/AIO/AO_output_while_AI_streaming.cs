@@ -58,49 +58,49 @@ class STEM_AO_output_while_AI_streaming
         int mode = Const.AI_MODE_CONTINUOUS;
         float sampling_rate = 200;
         int read_points = 200;
-        int delay = 200;    // ms
+        int read_delay = 200; // ms
         int timeout = 3000; // ms
         List<int> chip_select = new List<int>() {0, 1};
 
         try
         {
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             // If the slot mode is not set to "AIO", set the slot mode to "AIO"
             if (slot_mode != "AIO"){
-                err = dev.Sys_setAIOMode(slot, timeout:timeout);
+                err = dev.Sys_setAIOMode(slot, timeout);
                 Console.WriteLine($"Sys_setAIOMode: {err}");
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             // Open AI
-            err = dev.AI_open(slot, timeout:timeout);
+            err = dev.AI_open(slot, timeout);
             Console.WriteLine($"AI_open in slot {slot}: {err}");
 
             // Enable CS
-            err = dev.AI_enableCS(slot, chip_select, timeout:timeout);
+            err = dev.AI_enableCS(slot, chip_select, timeout);
             Console.WriteLine($"AI_enableCS in slot {slot}: {err}");
 
             // Set AI acquisition mode to continuous mode
-            err = dev.AI_setMode(slot, mode, timeout:timeout);
+            err = dev.AI_setMode(slot, mode, timeout);
             Console.WriteLine($"AI_setMode {mode} in slot {slot}: {err}");
 
             // Set AI sampling rate
-            err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
+            err = dev.AI_setSamplingRate(slot, sampling_rate, timeout);
             Console.WriteLine($"AI_setSamplingRate {sampling_rate} in slot {slot}: {err}");
 
             // Start AI
-            err = dev.AI_start(slot, timeout:timeout);
+            err = dev.AI_start(slot, timeout);
             Console.WriteLine($"AI_start in slot {slot}: {err}");
 
             // Wait a while for data acquisition
@@ -112,7 +112,7 @@ class STEM_AO_output_while_AI_streaming
             Random rnd = new Random();
             while (data_len > 0 && counter < 30){
                 // Read data acquisition
-                List<List<double>> ai_2Dlist = dev.AI_readStreaming(slot, read_points, delay:delay);
+                List<List<double>> ai_2Dlist = dev.AI_readStreaming(slot, read_points, read_delay);
                 Console.WriteLine($"In slot {slot}, number of samples = {ai_2Dlist.Count}");
 
                 // Update data len
@@ -124,7 +124,7 @@ class STEM_AO_output_while_AI_streaming
                     int random_num = rnd.Next(0, 7);
 
                     // Write AO vaule in channel 0
-                    err = dev.AO_writeOneChannel(slot, 0, ao_value_list[random_num], timeout:timeout);
+                    err = dev.AO_writeOneChannel(slot, 0, ao_value_list[random_num], timeout);
                     Console.WriteLine($"In slot {slot} channel 0, the AO value is {ao_value_list[random_num]}: {err}");
                 }
             }
@@ -136,15 +136,15 @@ class STEM_AO_output_while_AI_streaming
         finally
         {
             // Stop AI
-            err = dev.AI_stop(slot, timeout:timeout);
+            err = dev.AI_stop(slot, timeout);
             Console.WriteLine($"AI_stop in slot {slot}: {err}");
 
             // Close AI
-            err = dev.AI_close(slot, timeout:timeout);
+            err = dev.AI_close(slot, timeout);
             Console.WriteLine($"AI_close in slot {slot}: {err}");
 
             // Close AO
-            err = dev.AO_close(slot, timeout:timeout);
+            err = dev.AO_close(slot, timeout);
             Console.WriteLine($"AO_close in slot {slot}: {err}");
         }
 

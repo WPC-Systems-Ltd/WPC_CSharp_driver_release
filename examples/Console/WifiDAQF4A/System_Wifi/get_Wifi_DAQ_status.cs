@@ -40,17 +40,17 @@ class WifiDAQF4A_get_WifiDAQ_status
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get RSSI, battery and thermo
 
-            int rssi = dev.Wifi_readRSSI(timeout:timeout);
+            int rssi = dev.Wifi_readRSSI(timeout);
 
-            int battery = dev.Wifi_readBattery(timeout:timeout);
+            int battery = dev.Wifi_readBattery(timeout);
 
-            float thermo = dev.Wifi_readThermo(timeout:timeout);
+            float thermo = dev.Wifi_readThermo(timeout);
 
             Console.WriteLine($"RSSI: {rssi} dBm");
 

@@ -45,7 +45,7 @@ class USBDAQF1RD_hello_world
             }
 
             Console.WriteLine($"Restarting now");
-            dev.Sys_reboot(timeout:timeout);
+            dev.Sys_reboot(timeout);
         }
         catch (Exception ex)
         {

@@ -52,48 +52,48 @@ class EthanO_AO_waveform_generation
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AO
-            err = dev.AO_open(port, timeout:timeout);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($"AO_open in port {port}: {err}");
 
             // Set AO generation mode
-            err = dev.AO_setMode(port, Const.AO_MODE_CONTINOUS, timeout:timeout);
+            err = dev.AO_setMode(port, Const.AO_MODE_CONTINOUS, timeout);
             Console.WriteLine($"AO_setMode in port {port}: {err}");
 
             // Set AO sampling rate to 10k (Hz)
-            err = dev.AO_setSamplingRate(port, sampling_rate, timeout:timeout);
+            err = dev.AO_setSamplingRate(port, sampling_rate, timeout);
             Console.WriteLine($"AO_setSamplingRate in port {port}: {err}");
 
             // Set AO NumSamples to 10k (Hz)
-            err = dev.AO_setNumSamples(port, number_of_sample, timeout:timeout);
+            err = dev.AO_setNumSamples(port, number_of_sample, timeout);
             Console.WriteLine($"AO_setNumSamples in port {port}: {err}");
 
             // Set AO enabled channels
-            err = dev.AO_setEnableChannels(port, AO_pins_enabled, timeout:timeout);
+            err = dev.AO_setEnableChannels(port, AO_pins_enabled, timeout);
             Console.WriteLine($"AO_setEnableChannels in port {port}: {err}");
 
             // Set AO form in channel 0
-            err = dev.AO_setForm(port, 0, Const.AO_FORM_SINE, timeout:timeout);
+            err = dev.AO_setForm(port, 0, Const.AO_FORM_SINE, timeout);
             Console.WriteLine($"AO_setForm in channel 0 in port {port}: {err}");
 
             // Set AO form in channel 1
-            err = dev.AO_setForm(port, 1, Const.AO_FORM_TRIANGULAR, timeout:timeout);
+            err = dev.AO_setForm(port, 1, Const.AO_FORM_TRIANGULAR, timeout);
             Console.WriteLine($"AO_setForm in channel 1 in port {port}: {err}");
 
             // Set Channel 0 form parameters
-            err = dev.AO_setFormParam(port, 0, amplitude, offset, freq_0, timeout:timeout);
+            err = dev.AO_setFormParam(port, 0, amplitude, offset, freq_0, timeout);
             Console.WriteLine($"AO_setFormParam in channel 0 in port {port}: {err}");
 
             // Set Channel 1 form parameters
-            err = dev.AO_setFormParam(port, 1, amplitude, offset, freq_1, timeout:timeout);
+            err = dev.AO_setFormParam(port, 1, amplitude, offset, freq_1, timeout);
             Console.WriteLine($"AO_setFormParam in channel 1 in port {port}: {err}");
 
             // Open AO streaming
-            List<int> AO_info = dev.AO_openStreaming(port, timeout:timeout);
+            List<int> AO_info = dev.AO_openStreaming(port, timeout);
             Console.WriteLine($"AO mode {AO_info[0]}, sampling rate {AO_info[1]}");
 
             // Start AO streaming
@@ -104,7 +104,7 @@ class EthanO_AO_waveform_generation
             Thread.Sleep(10000); // delay [ms]
 
             // Close AO streaming
-            err = dev.AO_closeStreaming(port, timeout:timeout);
+            err = dev.AO_closeStreaming(port, timeout);
             Console.WriteLine($"AO_closeStreaming in port {port}: {err}");
 
             // Close AO

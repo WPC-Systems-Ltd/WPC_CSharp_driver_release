@@ -130,23 +130,23 @@ class WifiDAQE3A_get_network_info
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get serial number &amp; RTC Time
-            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
+            string serial_num = dev.Sys_getSerialNumber(timeout);
             string RTC = dev.Sys_getRTC(timeout);
             Console.WriteLine($&quot;Serial number: {serial_num}&quot;);
             Console.WriteLine($&quot;RTC data time: {RTC}&quot;);
 
             // Get IP &amp; submask
-            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout:timeout);
+            List&lt;string&gt; info = dev.Sys_getIPAddrAndSubmask(timeout);
             Console.WriteLine($&quot;IP: {info[0]}&quot;);
             Console.WriteLine($&quot;Submask: {info[1]}&quot;);
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr(timeout:timeout);
+            string mac = dev.Sys_getMACAddr(timeout);
             Console.WriteLine($&quot;MAC: {mac}&quot;);
         }
         catch (Exception ex)
@@ -205,17 +205,17 @@ class WifiDAQE3A_get_WifiDAQ_status
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get RSSI, battery and thermo
 
-            int rssi = dev.Wifi_readRSSI(timeout:timeout);
+            int rssi = dev.Wifi_readRSSI(timeout);
 
-            int battery = dev.Wifi_readBattery(timeout:timeout);
+            int battery = dev.Wifi_readBattery(timeout);
 
-            float thermo = dev.Wifi_readThermo(timeout:timeout);
+            float thermo = dev.Wifi_readThermo(timeout);
 
             Console.WriteLine($&quot;RSSI: {rssi} dBm&quot;);
 
@@ -284,7 +284,7 @@ class WifiDAQE3A_hello_world
             }
 
             Console.WriteLine($&quot;Restarting now&quot;);
-            dev.Sys_reboot(timeout:timeout);
+            dev.Sys_reboot(timeout);
         }
         catch (Exception ex)
         {
@@ -344,35 +344,35 @@ class WifiDAQE3A_set_LED_status
         try
         {
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             for (int i=3; i&lt;=0; i--){
                 // Reset LED status
-                err = dev.Wifi_resetLED(timeout:timeout);
+                err = dev.Wifi_resetLED(timeout);
                 Console.WriteLine($&quot;Wifi_resetLED: {err}&quot;);
 
                 // Set green LED status
-                err = dev.Wifi_setGreenLED(value, timeout:timeout);
+                err = dev.Wifi_setGreenLED(value, timeout);
                 Console.WriteLine($&quot;Wifi_setGreenLED: {err}&quot;);
                 Thread.Sleep(1000); // delay [s]
 
                 // Reset LED status
-                err = dev.Wifi_resetLED(timeout:timeout);
+                err = dev.Wifi_resetLED(timeout);
                 Console.WriteLine($&quot;Wifi_resetLED: {err}&quot;);
 
                 // Set blue LED status
-                err = dev.Wifi_setBlueLED(value, timeout:timeout);
+                err = dev.Wifi_setBlueLED(value, timeout);
                 Console.WriteLine($&quot;Wifi_setBlueLED: {err}&quot;);
                 Thread.Sleep(1000); // delay [s]
 
                 // Reset LED status
-                err = dev.Wifi_resetLED(timeout:timeout);
+                err = dev.Wifi_resetLED(timeout);
                 Console.WriteLine($&quot;Wifi_resetLED: {err}&quot;);
 
                 // Set red LED status
-                err = dev.Wifi_setRedLED(value, timeout:timeout);
+                err = dev.Wifi_setRedLED(value, timeout);
                 Console.WriteLine($&quot;Wifi_setRedLED: {err}&quot;);
                 Thread.Sleep(1000); // delay [s]
             }

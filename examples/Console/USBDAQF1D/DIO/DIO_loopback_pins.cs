@@ -47,35 +47,36 @@ class USBDAQF1D_DIO_loopback_pins
             int DI_port = 1;
             List<int> DO_pins = new List<int> {0, 1, 2, 3};
             List<int> DI_pins = new List<int> {4, 5, 6, 7};
+            List<int> DO_value = new List<int> {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open pins with digital output
-            err = dev.DO_openPins(DO_port, DO_pins, timeout:timeout);
+            err = dev.DO_openPins(DO_port, DO_pins, timeout);
             Console.WriteLine($"DO_openPins in DO_port {DO_port}: {err}");
 
             // Open pins with digital iutput
-            err = dev.DI_openPins(DI_port, DI_pins, timeout:timeout);
+            err = dev.DI_openPins(DI_port, DI_pins, timeout);
             Console.WriteLine($"DI_openPins in DI_port {DI_port}: {err}");
 
             // Write pins to high or low
-            err = dev.DO_writePins(DO_port, DO_pins, new List<int> {1, 1, 0, 0}, timeout:timeout);
+            err = dev.DO_writePins(DO_port, DO_pins, DO_value, timeout);
             Console.WriteLine($"writePins: {err}");
 
             // Read pins state
-            List<int> pin_s = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
+            List<int> pin_s = dev.DI_readPins(DI_port, DI_pins, timeout);
             Console.WriteLine($"DI_readPins: {pin_s[4]}, {pin_s[5]}, {pin_s[6]}, {pin_s[7]}");
 
             // Close pins with digital output
-            err = dev.DO_closePins(DO_port, DO_pins, timeout:timeout);
+            err = dev.DO_closePins(DO_port, DO_pins, timeout);
             Console.WriteLine($"DO_closePins in DO_port {DO_port}: {err}");
 
             // Close pins with digital input
-            err = dev.DI_closePins(DI_port, DI_pins, timeout:timeout);
+            err = dev.DI_closePins(DI_port, DI_pins, timeout);
             Console.WriteLine($"DI_closePins in DI_port {DI_port}: {err}");
         }
         catch (Exception ex)

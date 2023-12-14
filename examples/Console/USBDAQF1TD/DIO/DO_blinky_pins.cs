@@ -47,25 +47,25 @@ class USBDAQF1TD_DO_blinky_pins
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open pins with digital output
-            err = dev.DO_openPins(port, pinindex, timeout:timeout);
+            err = dev.DO_openPins(port, pinindex, timeout);
             Console.WriteLine($"DO_openPins in port {port}: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
             {
-                List<byte> state = dev.DO_togglePins(port, pinindex, timeout:timeout);
+                List<byte> state = dev.DO_togglePins(port, pinindex, timeout);
                 Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
 
             // Close pins with digital output
-            err = dev.DO_closePins(port, pinindex, timeout:timeout);
+            err = dev.DO_closePins(port, pinindex, timeout);
             Console.WriteLine($"DO_closePins in port {port}: {err}");
         }
         catch (Exception ex)

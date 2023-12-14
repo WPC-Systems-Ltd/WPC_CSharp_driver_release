@@ -44,23 +44,23 @@ class EthanD_get_network_info
         try
         {
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get serial number & RTC Time
-            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
+            string serial_num = dev.Sys_getSerialNumber(timeout);
             string RTC = dev.Sys_getRTC();
             Console.WriteLine($"Serial number: {serial_num}");
             Console.WriteLine($"RTC data time: {RTC}");
 
             // Get IP & submask
-            List<string> info = dev.Sys_getIPAddrAndSubmask(timeout:timeout);
+            List<string> info = dev.Sys_getIPAddrAndSubmask(timeout);
             Console.WriteLine($"IP: {info[0]}");
             Console.WriteLine($"Submask: {info[1]}");
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr(timeout:timeout);
+            string mac = dev.Sys_getMACAddr(timeout);
             Console.WriteLine($"MAC: {mac}");
         }
         catch (Exception ex)

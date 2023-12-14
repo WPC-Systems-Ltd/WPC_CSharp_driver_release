@@ -45,12 +45,12 @@ class EMotion_2axis_circular_interpolation
             int axis_0 = Const.MOT_AXIS0;
             int axis_1 = Const.MOT_AXIS1;
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout:timeout);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
@@ -67,19 +67,19 @@ class EMotion_2axis_circular_interpolation
 
             for (int i=0; i<4; i++)
             {
-                err = dev.Motion_enableServoOn(port, i, timeout:timeout);
+                err = dev.Motion_enableServoOn(port, i, timeout);
                 Console.WriteLine($"Motion_enableServoOn in axis{i}: {err}");
             }
 
             // Motion start
-            err = dev.Motion_startCircularInterpo(port, timeout:timeout);
+            err = dev.Motion_startCircularInterpo(port, timeout);
             Console.WriteLine($"Motion_startCircularInterpo in port {port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
             {
-                int axis1_move_status = dev.Motion_getMoveStatus(port, axis_0, timeout:timeout);
-                int axis2_move_status = dev.Motion_getMoveStatus(port, axis_1, timeout:timeout);
+                int axis1_move_status = dev.Motion_getMoveStatus(port, axis_0, timeout);
+                int axis2_move_status = dev.Motion_getMoveStatus(port, axis_1, timeout);
                 move_status = axis1_move_status & axis2_move_status;
                 if (move_status == 0) { Console.WriteLine($"Moving......"); }
                 else { Console.WriteLine($"Move completed"); }
@@ -88,15 +88,15 @@ class EMotion_2axis_circular_interpolation
             for (int i=0; i<4; i++)
             {
                 // Motion stop
-                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+                err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout);
                 Console.WriteLine($"Motion_stop in axis{i}: {err}");
 
-                err = dev.Motion_enableServoOff(port, i, timeout:timeout);
+                err = dev.Motion_enableServoOff(port, i, timeout);
                 Console.WriteLine($"Motion_enableServoOff in axis{i}: {err}");
             }
 
             // Motion close
-            err = dev.Motion_close(port, timeout:timeout);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)

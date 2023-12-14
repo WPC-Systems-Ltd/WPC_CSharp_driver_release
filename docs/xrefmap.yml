@@ -206,25 +206,25 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IAHRSModule.AHRS_reset
   nameWithType: IAHRSModule.AHRS_reset
-- uid: WPC.Module.IAHRSModule.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)
-  name: AHRS_setGeneral(Int32, Double, Double, Double, Int32)
-  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_setGeneral_System_Int32_System_Double_System_Double_System_Double_System_Int32_
-  commentId: M:WPC.Module.IAHRSModule.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)
-  fullName: WPC.Module.IAHRSModule.AHRS_setGeneral(System.Int32, System.Double, System.Double, System.Double, System.Int32)
-  nameWithType: IAHRSModule.AHRS_setGeneral(Int32, Double, Double, Double, Int32)
-- uid: WPC.Module.IAHRSModule.AHRS_setGeneral*
-  name: AHRS_setGeneral
-  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_setGeneral_
-  commentId: Overload:WPC.Module.IAHRSModule.AHRS_setGeneral
+- uid: WPC.Module.IAHRSModule.AHRS_setSamplingPeriod(System.Int32,System.Double,System.Int32)
+  name: AHRS_setSamplingPeriod(Int32, Double, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_setSamplingPeriod_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_setSamplingPeriod(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_setSamplingPeriod(System.Int32, System.Double, System.Int32)
+  nameWithType: IAHRSModule.AHRS_setSamplingPeriod(Int32, Double, Int32)
+- uid: WPC.Module.IAHRSModule.AHRS_setSamplingPeriod*
+  name: AHRS_setSamplingPeriod
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_setSamplingPeriod_
+  commentId: Overload:WPC.Module.IAHRSModule.AHRS_setSamplingPeriod
   isSpec: "True"
-  fullName: WPC.Module.IAHRSModule.AHRS_setGeneral
-  nameWithType: IAHRSModule.AHRS_setGeneral
-- uid: WPC.Module.IAHRSModule.AHRS_start(System.Int32,System.Byte,System.Int32)
-  name: AHRS_start(Int32, Byte, Int32)
-  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_start_System_Int32_System_Byte_System_Int32_
-  commentId: M:WPC.Module.IAHRSModule.AHRS_start(System.Int32,System.Byte,System.Int32)
-  fullName: WPC.Module.IAHRSModule.AHRS_start(System.Int32, System.Byte, System.Int32)
-  nameWithType: IAHRSModule.AHRS_start(Int32, Byte, Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_setSamplingPeriod
+  nameWithType: IAHRSModule.AHRS_setSamplingPeriod
+- uid: WPC.Module.IAHRSModule.AHRS_start(System.Int32,System.Int32)
+  name: AHRS_start(Int32, Int32)
+  href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_start_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IAHRSModule.AHRS_start(System.Int32,System.Int32)
+  fullName: WPC.Module.IAHRSModule.AHRS_start(System.Int32, System.Int32)
+  nameWithType: IAHRSModule.AHRS_start(Int32, Int32)
 - uid: WPC.Module.IAHRSModule.AHRS_start*
   name: AHRS_start
   href: api/WPC.Module.IAHRSModule.html#WPC_Module_IAHRSModule_AHRS_start_
@@ -16174,25 +16174,25 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.AHRS_reset
   nameWithType: WifiDAQE3A.AHRS_reset
-- uid: WPC.Product.WifiDAQE3A.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)
-  name: AHRS_setGeneral(Int32, Double, Double, Double, Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_setGeneral_System_Int32_System_Double_System_Double_System_Double_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.AHRS_setGeneral(System.Int32,System.Double,System.Double,System.Double,System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.AHRS_setGeneral(System.Int32, System.Double, System.Double, System.Double, System.Int32)
-  nameWithType: WifiDAQE3A.AHRS_setGeneral(Int32, Double, Double, Double, Int32)
-- uid: WPC.Product.WifiDAQE3A.AHRS_setGeneral*
-  name: AHRS_setGeneral
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_setGeneral_
-  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_setGeneral
+- uid: WPC.Product.WifiDAQE3A.AHRS_setSamplingPeriod(System.Int32,System.Double,System.Int32)
+  name: AHRS_setSamplingPeriod(Int32, Double, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_setSamplingPeriod_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_setSamplingPeriod(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_setSamplingPeriod(System.Int32, System.Double, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_setSamplingPeriod(Int32, Double, Int32)
+- uid: WPC.Product.WifiDAQE3A.AHRS_setSamplingPeriod*
+  name: AHRS_setSamplingPeriod
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_setSamplingPeriod_
+  commentId: Overload:WPC.Product.WifiDAQE3A.AHRS_setSamplingPeriod
   isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.AHRS_setGeneral
-  nameWithType: WifiDAQE3A.AHRS_setGeneral
-- uid: WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Byte,System.Int32)
-  name: AHRS_start(Int32, Byte, Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_start_System_Int32_System_Byte_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Byte,System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.AHRS_start(System.Int32, System.Byte, System.Int32)
-  nameWithType: WifiDAQE3A.AHRS_start(Int32, Byte, Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_setSamplingPeriod
+  nameWithType: WifiDAQE3A.AHRS_setSamplingPeriod
+- uid: WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Int32)
+  name: AHRS_start(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.AHRS_start(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.AHRS_start(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3A.AHRS_start(Int32, Int32)
 - uid: WPC.Product.WifiDAQE3A.AHRS_start*
   name: AHRS_start
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_AHRS_start_

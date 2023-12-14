@@ -51,31 +51,31 @@ class USBDAQF1AD_I2C_write_read
             List<byte> I2C_write_data = new List<byte> { word_address, 0xAA, 0x55, 0xAA, 0x55};
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open I2C port
-            err = dev.I2C_open(port, timeout:timeout);
+            err = dev.I2C_open(port, timeout);
             Console.WriteLine($"I2C_open in port {port}: {err}");
 
             // Set I2C port and set clock rate to standard mode
-            err = dev.I2C_setClockRate(port, Const.I2C_SPEED_STANDARD, timeout:timeout);
+            err = dev.I2C_setClockRate(port, Const.I2C_SPEED_STANDARD, timeout);
             Console.WriteLine($"I2C_setClockRate in port {port}: {err}");
 
             // Write WREN byte
-            err = dev.I2C_write(port, device_address, I2C_write_data, timeout:timeout);
+            err = dev.I2C_write(port, device_address, I2C_write_data, timeout);
             Console.WriteLine($"I2C_write in port {port}: {err}");
 
             // Read data acquisition via I2C
-            err = dev.I2C_write(port, device_address, new List<byte> {word_address}, timeout:timeout);
+            err = dev.I2C_write(port, device_address, new List<byte> {word_address}, timeout);
             Console.WriteLine($"I2C_write in port {port}: {err}");
 
-            List<byte> data = dev.I2C_read(port, device_address, 4, timeout:timeout);
+            List<byte> data = dev.I2C_read(port, device_address, 4, timeout);
             Console.WriteLine($"I2C_read data in port {port}: {data[0]},{data[1]},{data[2]},{data[3]}");
 
             // Close I2C port
-            err = dev.I2C_close(port, timeout:timeout);
+            err = dev.I2C_close(port, timeout);
             Console.WriteLine($"I2C_close in port {port}: {err}");
         }
         catch (Exception ex)

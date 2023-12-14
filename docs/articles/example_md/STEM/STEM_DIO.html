@@ -150,29 +150,30 @@ class STEM_DIO_loopback_pins
             int DI_port = 1;
             List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1, 2, 3};
             List&lt;int&gt; DI_pins = new List&lt;int&gt; {4, 5, 6, 7};
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                err = dev.Sys_setDIOMode(slot, timeout);
                 Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // Get DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
@@ -185,11 +186,11 @@ class STEM_DIO_loopback_pins
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
             // Write pins to high or low
-            err = dev.DO_writePins(DO_port, DO_pins, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
+            err = dev.DO_writePins(DO_port, DO_pins, DO_value, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
             // Read pins state
-            List&lt;int&gt; state = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
+            List&lt;int&gt; state = dev.DI_readPins(DI_port, DI_pins, timeout);
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
         }
         catch (Exception ex)
@@ -264,29 +265,31 @@ class STEM_DIO_loopback_port
             int slot = 1; // Connect DIO module to slot
             int DO_port = 0;
             int DI_port = 1;
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
+
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                err = dev.Sys_setDIOMode(slot, timeout);
                 Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // Get DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
@@ -299,11 +302,11 @@ class STEM_DIO_loopback_port
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
             // Write DO port to high or low
-            err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
+            err = dev.DO_writePort(DO_port, DO_value, timeout);
             Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}: {err}&quot;);
 
             // Read DI port state
-            List&lt;int&gt; state = dev.DI_readPort(DI_port, timeout:timeout);
+            List&lt;int&gt; state = dev.DI_readPort(DI_port, timeout);
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
         }
         catch (Exception ex)
@@ -380,26 +383,26 @@ class STEM_DO_blinky_pins
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                err = dev.Sys_setDIOMode(slot, timeout);
                 Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // Get DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
@@ -414,7 +417,7 @@ class STEM_DO_blinky_pins
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
             {
-                List&lt;byte&gt; state = dev.DO_togglePins(DO_port, pinindex, timeout:timeout);
+                List&lt;byte&gt; state = dev.DO_togglePins(DO_port, pinindex, timeout);
                 Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
@@ -493,26 +496,26 @@ class STEM_DO_blinky_port
             int timeout = 3000;  // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                err = dev.Sys_setDIOMode(slot, timeout);
                 Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // Get port DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
@@ -527,7 +530,7 @@ class STEM_DO_blinky_port
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
             {
-                List&lt;byte&gt; state = dev.DO_togglePort(DO_port, timeout:timeout);
+                List&lt;byte&gt; state = dev.DO_togglePort(DO_port, timeout);
                 Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
 
                 // Wait for 0.5 second to see led status
@@ -605,29 +608,30 @@ class STEM_DO_write_pins
             int slot = 1; // Connect DIO module to slot
             int DO_port = 1;
             List&lt;int&gt; pinindex = new List&lt;int&gt; {0, 1, 2, 3};
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                err = dev.Sys_setDIOMode(slot, timeout);
                 Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // Get DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
@@ -640,7 +644,7 @@ class STEM_DO_write_pins
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
             // Write pins to high or low
-            err = dev.DO_writePins(DO_port, pinindex, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
+            err = dev.DO_writePins(DO_port, pinindex, DO_value, timeout);
             Console.WriteLine($&quot;DO_writePins in DO_port{DO_port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -713,29 +717,30 @@ class STEM_DO_write_port
             int err;
             int slot = 1; // Connect DIO module to slot
             int DO_port = 1;
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
             int timeout = 3000;  // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                err = dev.Sys_setDIOMode(slot, timeout);
                 Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             // Get port DIO start up information
-            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List&lt;List&lt;byte&gt;&gt; pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($&quot;Slot mode: {slot_mode}&quot;);
 
             Console.WriteLine($&quot;enable_list&quot;);
@@ -748,7 +753,7 @@ class STEM_DO_write_port
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
             // Write DO port to high or low
-            err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
+            err = dev.DO_writePort(DO_port, DO_value, timeout);
             Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}: {err}&quot;);
         }
         catch (Exception ex)

@@ -139,35 +139,36 @@ class USBDAQF1AOD_DIO_loopback_pins
             int DI_port = 1;
             List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1, 2, 3};
             List&lt;int&gt; DI_pins = new List&lt;int&gt; {4, 5, 6, 7};
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open pins with digital output
-            err = dev.DO_openPins(DO_port, DO_pins, timeout:timeout);
+            err = dev.DO_openPins(DO_port, DO_pins, timeout);
             Console.WriteLine($&quot;DO_openPins in DO_port {DO_port}: {err}&quot;);
 
             // Open pins with digital iutput
-            err = dev.DI_openPins(DI_port, DI_pins, timeout:timeout);
+            err = dev.DI_openPins(DI_port, DI_pins, timeout);
             Console.WriteLine($&quot;DI_openPins in DI_port {DI_port}: {err}&quot;);
 
             // Write pins to high or low
-            err = dev.DO_writePins(DO_port, DO_pins, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
+            err = dev.DO_writePins(DO_port, DO_pins, DO_value, timeout);
             Console.WriteLine($&quot;writePins: {err}&quot;);
 
             // Read pins state
-            List&lt;int&gt; pin_s = dev.DI_readPins(DI_port, DI_pins, timeout:timeout);
+            List&lt;int&gt; pin_s = dev.DI_readPins(DI_port, DI_pins, timeout);
             Console.WriteLine($&quot;DI_readPins: {pin_s[4]}, {pin_s[5]}, {pin_s[6]}, {pin_s[7]}&quot;);
 
             // Close pins with digital output
-            err = dev.DO_closePins(DO_port, DO_pins, timeout:timeout);
+            err = dev.DO_closePins(DO_port, DO_pins, timeout);
             Console.WriteLine($&quot;DO_closePins in DO_port {DO_port}: {err}&quot;);
 
             // Close pins with digital input
-            err = dev.DI_closePins(DI_port, DI_pins, timeout:timeout);
+            err = dev.DI_closePins(DI_port, DI_pins, timeout);
             Console.WriteLine($&quot;DI_closePins in DI_port {DI_port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -231,35 +232,36 @@ class USBDAQF1AOD_DIO_loopback_port
             int err;
             int DO_port = 0;
             int DI_port = 1;
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open DO port with digital output
-            err = dev.DO_openPort(DO_port, timeout:timeout);
+            err = dev.DO_openPort(DO_port, timeout);
             Console.WriteLine($&quot;DO_openPort in DO_port {DO_port}: {err}&quot;);
 
             // Open DI port with digital input
-            err = dev.DI_openPort(DI_port, timeout:timeout);
+            err = dev.DI_openPort(DI_port, timeout);
             Console.WriteLine($&quot;DO_openPort in DI_port {DI_port}: {err}&quot;);
 
             // Write DO port to high or low
-            err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
+            err = dev.DO_writePort(DO_port, DO_value, timeout);
             Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}: {err}&quot;);
 
             // Read DI port state
-            List&lt;int&gt; state = dev.DI_readPort(DI_port, timeout:timeout);
+            List&lt;int&gt; state = dev.DI_readPort(DI_port, timeout);
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
 
             // Close DO port with digital output
-            err = dev.DO_closePort(DO_port, timeout:timeout);
+            err = dev.DO_closePort(DO_port, timeout);
             Console.WriteLine($&quot;DO_closePort in DO_port {DO_port}: {err}&quot;);
 
             // Close DI port with digital input
-            err = dev.DI_closePort(DI_port, timeout:timeout);
+            err = dev.DI_closePort(DI_port, timeout);
             Console.WriteLine($&quot;DI_closePort in DI_port {DI_port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -325,25 +327,25 @@ class USBDAQF1AOD_DO_blinky_pins
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open pins with digital output
-            err = dev.DO_openPins(port, pinindex, timeout:timeout);
+            err = dev.DO_openPins(port, pinindex, timeout);
             Console.WriteLine($&quot;DO_openPins in port {port}: {err}&quot;);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
             {
-                List&lt;byte&gt; state = dev.DO_togglePins(port, pinindex, timeout:timeout);
+                List&lt;byte&gt; state = dev.DO_togglePins(port, pinindex, timeout);
                 Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
 
             // Close pins with digital output
-            err = dev.DO_closePins(port, pinindex, timeout:timeout);
+            err = dev.DO_closePins(port, pinindex, timeout);
             Console.WriteLine($&quot;DO_closePins in port {port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -407,20 +409,20 @@ class USBDAQF1AOD_DO_blinky_port
             int timeout = 3000;  // ms
 
             // Open port with digital output
-            err = dev.DO_openPort(port, timeout:timeout);
+            err = dev.DO_openPort(port, timeout);
             Console.WriteLine($&quot;DO_openPort in port {port}: {err}&quot;);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i&lt;10; i++)
             {
-                dev.DO_togglePort(port, timeout:timeout);
+                dev.DO_togglePort(port, timeout);
 
                 // Wait for 0.5 second to see led status
                 Thread.Sleep(500); // delay [ms]
             }
 
             // Close port with digital output
-            err = dev.DO_closePort(port, timeout:timeout);
+            err = dev.DO_closePort(port, timeout);
             Console.WriteLine($&quot;DO_closePort in port {port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -483,23 +485,24 @@ class USBDAQF1AOD_DO_write_pins
             int err;
             int port = 0;
             List&lt;int&gt; pinindex = new List&lt;int&gt; {1, 3, 5, 7};
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open pins with digital output
-            err = dev.DO_openPins(port, pinindex, timeout:timeout);
+            err = dev.DO_openPins(port, pinindex, timeout);
             Console.WriteLine($&quot;DO_openPins in port {port}: {err}&quot;);
 
             // Write pins to high or low
-            err = dev.DO_writePins(port, pinindex, new List&lt;int&gt; {1, 1, 0, 0}, timeout:timeout);
+            err = dev.DO_writePins(port, pinindex, DO_value, timeout);
             Console.WriteLine($&quot;DO_writePins in port {port}: {err}&quot;);
 
             // Close pins with digital output
-            err = dev.DO_closePins(port, pinindex, timeout:timeout);
+            err = dev.DO_closePins(port, pinindex, timeout);
             Console.WriteLine($&quot;DO_closePins in port {port}: {err}&quot;);
 
         }
@@ -561,18 +564,19 @@ class USBDAQF1AOD_DO_write_port
         {
             int err;
             int port = 0; // Depend on your device
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
             int timeout = 3000;  // ms
 
             // Open port with digital output
-            err = dev.DO_openPort(port, timeout:timeout);
+            err = dev.DO_openPort(port, timeout);
             Console.WriteLine($&quot;DO_openPort in port {port}: {err}&quot;);
 
             // Write DO port to high or low
-            err = dev.DO_writePort(port, new List&lt;int&gt; { 1, 0, 1, 0 }, timeout:timeout);
+            err = dev.DO_writePort(port, DO_value, timeout);
             Console.WriteLine($&quot;DO_writePort in port {port}: {err}&quot;);
 
             // Close port with digital output
-            err = dev.DO_closePort(port, timeout:timeout);
+            err = dev.DO_closePort(port, timeout);
             Console.WriteLine($&quot;DO_closePort in port {port}: {err}&quot;);
         }
         catch (Exception ex)

@@ -55,29 +55,30 @@ class STEM_DO_write_pins
             int slot = 1; // Connect DIO module to slot
             int DO_port = 1;
             List<int> pinindex = new List<int> {0, 1, 2, 3};
+            List<int> DO_value = new List<int> {0, 1, 0, 1};
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             // If the slot mode is not set to "DIO", set the slot mode to "DIO"
             if (slot_mode != "DIO"){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
+                err = dev.Sys_setDIOMode(slot, timeout);
                 Console.WriteLine($"Sys_setDIOMode: {err}");
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             // Get DIO start up information
-            List<List<byte>> pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List<List<byte>> pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             Console.WriteLine($"enable_list");
@@ -90,7 +91,7 @@ class STEM_DO_write_pins
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
 
             // Write pins to high or low
-            err = dev.DO_writePins(DO_port, pinindex, new List<int> {1, 1, 0, 0}, timeout:timeout);
+            err = dev.DO_writePins(DO_port, pinindex, DO_value, timeout);
             Console.WriteLine($"DO_writePins in DO_port{DO_port}: {err}");
         }
         catch (Exception ex)

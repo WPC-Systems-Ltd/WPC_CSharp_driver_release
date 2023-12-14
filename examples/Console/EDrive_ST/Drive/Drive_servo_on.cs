@@ -40,27 +40,27 @@ class EDrive_ST_Drive_servo_on
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // EDrive-ST open
-            err = dev.Drive_open(port, timeout:timeout);
+            err = dev.Drive_open(port, timeout);
             Console.WriteLine($"Drive_open: {err}");
 
             // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout:timeout);
+            err = dev.Drive_enableServoOn(port, timeout);
             Console.WriteLine($"Drive_enableServoOn {err}");
 
             // Wait for 5 seconds
             Thread.Sleep(3000);
 
             // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout:timeout);
+            err = dev.Drive_enableServoOff(port, timeout);
             Console.WriteLine($"Drive_enableServoOff: {err}");
 
             // EDrive-ST close
-            err = dev.Drive_close(port, timeout:timeout);
+            err = dev.Drive_close(port, timeout);
             Console.WriteLine($"Drive_close: {err}");
         }
         catch (Exception ex)

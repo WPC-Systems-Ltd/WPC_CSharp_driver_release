@@ -42,35 +42,35 @@ class WifiDAQF4A_set_LED_status
         try
         {
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             for (int i=3; i<=0; i--){
                 // Reset LED status
-                err = dev.Wifi_resetLED(timeout:timeout);
+                err = dev.Wifi_resetLED(timeout);
                 Console.WriteLine($"Wifi_resetLED: {err}");
 
                 // Set green LED status
-                err = dev.Wifi_setGreenLED(value, timeout:timeout);
+                err = dev.Wifi_setGreenLED(value, timeout);
                 Console.WriteLine($"Wifi_setGreenLED: {err}");
                 Thread.Sleep(1000); // delay [s]
 
                 // Reset LED status
-                err = dev.Wifi_resetLED(timeout:timeout);
+                err = dev.Wifi_resetLED(timeout);
                 Console.WriteLine($"Wifi_resetLED: {err}");
 
                 // Set blue LED status
-                err = dev.Wifi_setBlueLED(value, timeout:timeout);
+                err = dev.Wifi_setBlueLED(value, timeout);
                 Console.WriteLine($"Wifi_setBlueLED: {err}");
                 Thread.Sleep(1000); // delay [s]
 
                 // Reset LED status
-                err = dev.Wifi_resetLED(timeout:timeout);
+                err = dev.Wifi_resetLED(timeout);
                 Console.WriteLine($"Wifi_resetLED: {err}");
 
                 // Set red LED status
-                err = dev.Wifi_setRedLED(value, timeout:timeout);
+                err = dev.Wifi_setRedLED(value, timeout);
                 Console.WriteLine($"Wifi_setRedLED: {err}");
                 Thread.Sleep(1000); // delay [s]
             }

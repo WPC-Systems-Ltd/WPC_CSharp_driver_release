@@ -46,20 +46,20 @@ class USBDAQF1AOD_AO_write_all_channels
             List<double> ao_value_list = new List<double>() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AO
-            err = dev.AO_open(port, timeout:timeout);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($"AO_open in port {port}: {err}");
 
             // Write AO value simultaneously
-            err = dev.AO_writeAllChannels(port, ao_value_list, timeout:timeout);
+            err = dev.AO_writeAllChannels(port, ao_value_list, timeout);
             Console.WriteLine($"AO_writeAllChannels in port {port}: {err}");
 
             // Close AO
-            err = dev.AO_close(port, timeout:timeout);
+            err = dev.AO_close(port, timeout);
             Console.WriteLine($"AO_close in port {port}: {err}");
         }
         catch (Exception ex)

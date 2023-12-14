@@ -129,20 +129,20 @@ class EthanO_AO_write_all_channels
             List&lt;double&gt; ao_value_list = new List&lt;double&gt;() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AO
-            err = dev.AO_open(port, timeout:timeout);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($&quot;AO_open in port {port}: {err}&quot;);
 
             // Write AO value simultaneously
-            err = dev.AO_writeAllChannels(port, ao_value_list, timeout:timeout);
+            err = dev.AO_writeAllChannels(port, ao_value_list, timeout);
             Console.WriteLine($&quot;AO_writeAllChannels in port {port}: {err}&quot;);
 
             // Close AO
-            err = dev.AO_close(port, timeout:timeout);
+            err = dev.AO_close(port, timeout);
             Console.WriteLine($&quot;AO_close in port {port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -207,32 +207,32 @@ class EthanO_AO_write_one_channel
             List&lt;double&gt; ao_value_list = new List&lt;double&gt;() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AO
-            err = dev.AO_open(port, timeout:timeout);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($&quot;AO_open in port {port}: {err}&quot;);
 
             // Write AO vaule in channel 0
-            err = dev.AO_writeOneChannel(port, 0, ao_value_list[0], timeout:timeout);
+            err = dev.AO_writeOneChannel(port, 0, ao_value_list[0], timeout);
             Console.WriteLine($&quot;In port {port} channel 0, the AO value is {ao_value_list[0]}: {err}&quot;);
 
             // Write AO vaule in channel 1
-            err = dev.AO_writeOneChannel(port, 1, ao_value_list[1], timeout:timeout);
+            err = dev.AO_writeOneChannel(port, 1, ao_value_list[1], timeout);
             Console.WriteLine($&quot;In port {port} channel 1, the AO value is {ao_value_list[1]}: {err}&quot;);
 
             // Write AO vaule in channel 2
-            err = dev.AO_writeOneChannel(port, 2, ao_value_list[2], timeout:timeout);
+            err = dev.AO_writeOneChannel(port, 2, ao_value_list[2], timeout);
             Console.WriteLine($&quot;In port {port} channel 2, the AO value is {ao_value_list[2]}: {err}&quot;);
 
             // Write AO vaule in channel 3
-            err = dev.AO_writeOneChannel(port, 3, ao_value_list[3], timeout:timeout);
+            err = dev.AO_writeOneChannel(port, 3, ao_value_list[3], timeout);
             Console.WriteLine($&quot;In port {port} channel 3, the AO value is {ao_value_list[3]}: {err}&quot;);
 
             // Close AO
-            err = dev.AO_close(port, timeout:timeout);
+            err = dev.AO_close(port, timeout);
             Console.WriteLine($&quot;AO_close in port {port}: {err}&quot;);
         }
         catch (Exception ex)
@@ -303,48 +303,48 @@ class EthanO_AO_waveform_generation
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AO
-            err = dev.AO_open(port, timeout:timeout);
+            err = dev.AO_open(port, timeout);
             Console.WriteLine($&quot;AO_open in port {port}: {err}&quot;);
 
             // Set AO generation mode
-            err = dev.AO_setMode(port, Const.AO_MODE_CONTINOUS, timeout:timeout);
+            err = dev.AO_setMode(port, Const.AO_MODE_CONTINOUS, timeout);
             Console.WriteLine($&quot;AO_setMode in port {port}: {err}&quot;);
 
             // Set AO sampling rate to 10k (Hz)
-            err = dev.AO_setSamplingRate(port, sampling_rate, timeout:timeout);
+            err = dev.AO_setSamplingRate(port, sampling_rate, timeout);
             Console.WriteLine($&quot;AO_setSamplingRate in port {port}: {err}&quot;);
 
             // Set AO NumSamples to 10k (Hz)
-            err = dev.AO_setNumSamples(port, number_of_sample, timeout:timeout);
+            err = dev.AO_setNumSamples(port, number_of_sample, timeout);
             Console.WriteLine($&quot;AO_setNumSamples in port {port}: {err}&quot;);
 
             // Set AO enabled channels
-            err = dev.AO_setEnableChannels(port, AO_pins_enabled, timeout:timeout);
+            err = dev.AO_setEnableChannels(port, AO_pins_enabled, timeout);
             Console.WriteLine($&quot;AO_setEnableChannels in port {port}: {err}&quot;);
 
             // Set AO form in channel 0
-            err = dev.AO_setForm(port, 0, Const.AO_FORM_SINE, timeout:timeout);
+            err = dev.AO_setForm(port, 0, Const.AO_FORM_SINE, timeout);
             Console.WriteLine($&quot;AO_setForm in channel 0 in port {port}: {err}&quot;);
 
             // Set AO form in channel 1
-            err = dev.AO_setForm(port, 1, Const.AO_FORM_TRIANGULAR, timeout:timeout);
+            err = dev.AO_setForm(port, 1, Const.AO_FORM_TRIANGULAR, timeout);
             Console.WriteLine($&quot;AO_setForm in channel 1 in port {port}: {err}&quot;);
 
             // Set Channel 0 form parameters
-            err = dev.AO_setFormParam(port, 0, amplitude, offset, freq_0, timeout:timeout);
+            err = dev.AO_setFormParam(port, 0, amplitude, offset, freq_0, timeout);
             Console.WriteLine($&quot;AO_setFormParam in channel 0 in port {port}: {err}&quot;);
 
             // Set Channel 1 form parameters
-            err = dev.AO_setFormParam(port, 1, amplitude, offset, freq_1, timeout:timeout);
+            err = dev.AO_setFormParam(port, 1, amplitude, offset, freq_1, timeout);
             Console.WriteLine($&quot;AO_setFormParam in channel 1 in port {port}: {err}&quot;);
 
             // Open AO streaming
-            List&lt;int&gt; AO_info = dev.AO_openStreaming(port, timeout:timeout);
+            List&lt;int&gt; AO_info = dev.AO_openStreaming(port, timeout);
             Console.WriteLine($&quot;AO mode {AO_info[0]}, sampling rate {AO_info[1]}&quot;);
 
             // Start AO streaming
@@ -355,7 +355,7 @@ class EthanO_AO_waveform_generation
             Thread.Sleep(10000); // delay [ms]
 
             // Close AO streaming
-            err = dev.AO_closeStreaming(port, timeout:timeout);
+            err = dev.AO_closeStreaming(port, timeout);
             Console.WriteLine($&quot;AO_closeStreaming in port {port}: {err}&quot;);
 
             // Close AO

@@ -122,12 +122,12 @@ class EthanL_Relay_set_channel
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open Relay open
-            err = dev.Relay_open(timeout:timeout);
+            err = dev.Relay_open(timeout);
             Console.WriteLine($&quot;Relay_open: {err}&quot;);
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
@@ -135,18 +135,18 @@ class EthanL_Relay_set_channel
             {
                 if (i % 2 == 0)
                 {
-                    err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 0, 0, 0, 0, 0, 0 }, timeout:timeout);
+                    err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 0, 0, 0, 0, 0, 0 }, timeout);
                 }
                 else
                 {
-                    err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 1, 1, 1, 1, 1 }, timeout:timeout);
+                    err = dev.DO_writePort(DO_port, new List&lt;int&gt; { 1, 1, 1, 1, 1, 1 }, timeout);
                 }
                 Console.WriteLine($&quot;DO_writePort in port {DO_port}: {err}&quot;);
 
                 // Wait
                 Thread.Sleep(500); // delay [ms]
             }
-            err = dev.Relay_close(timeout:timeout);
+            err = dev.Relay_close(timeout);
             Console.WriteLine($&quot;Relay_close: {err}&quot;);
         }
         catch (Exception ex)
@@ -207,12 +207,12 @@ class EthanL_Relay_read_counters
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open Relay open
-            err = dev.Relay_open(timeout:timeout);
+            err = dev.Relay_open(timeout);
             Console.WriteLine($&quot;Relay_open: {err}&quot;);
 
             // Read counters
@@ -222,7 +222,7 @@ class EthanL_Relay_read_counters
             {
                 Console.WriteLine($&quot;Relay_read: {c}&quot;);
             }
-            err = dev.Relay_close(timeout:timeout);
+            err = dev.Relay_close(timeout);
             Console.WriteLine($&quot;Relay_close: {err}&quot;);
         }
         catch (Exception ex)

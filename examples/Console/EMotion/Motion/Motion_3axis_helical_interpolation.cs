@@ -49,12 +49,12 @@ class EMotion_3axis_helical_interpolation
             int timeout = 3000; // ms
             int axis = Const.MOT_AXIS0;
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout:timeout);
+            err = dev.Motion_open(port, timeout);
             Console.WriteLine($"Motion_open in port {port}: {err}");
 
             // Motion open configuration file
@@ -67,26 +67,26 @@ class EMotion_3axis_helical_interpolation
 
             // Motion configure
             err = dev.Motion_cfgHelicalInterpo(port, center_x, center_y, finish_x, finish_y, Const.MOT_FALSE, pitch_axis3, Const.MOT_FALSE, pitch_axis4,
-            rotation_num, speed, Const.MOT_DIR_CW, cal_timeout, timeout:timeout);
+            rotation_num, speed, Const.MOT_DIR_CW, cal_timeout, timeout);
             Console.WriteLine($"Motion_cfgHelicalInterpo in port {port}: {err}");
 
             // Motion start
-            err = dev.Motion_startHelicalInterpo(port, timeout:timeout);
+            err = dev.Motion_startHelicalInterpo(port, timeout);
             Console.WriteLine($"Motion_startHelicalInterpo in port {port}: {err}");
 
             int move_status = 0;
             while (move_status == 0)
             {
-                move_status = dev.Motion_getMoveStatus(port, axis, timeout:timeout);
+                move_status = dev.Motion_getMoveStatus(port, axis, timeout);
                 Console.WriteLine($"Motion_getMoveStatus in axis{axis}: {move_status}");
             }
 
             // Motion stop
-            err = dev.Motion_stop(port, axis, Const.MOT_STOP_TYPE_DECELERATION, timeout:timeout);
+            err = dev.Motion_stop(port, axis, Const.MOT_STOP_TYPE_DECELERATION, timeout);
             Console.WriteLine($"Motion_stop in axis{axis}: {err}");
 
             // Motion close
-            err = dev.Motion_close(port, timeout:timeout);
+            err = dev.Motion_close(port, timeout);
             Console.WriteLine($"Motion_close in port {port}: {err}");
         }
         catch (Exception ex)

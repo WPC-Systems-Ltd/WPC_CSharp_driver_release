@@ -124,16 +124,16 @@ class USBDAQF1DSNK_get_USB_info
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Get serial number
-            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
+            string serial_num = dev.Sys_getSerialNumber(timeout);
             Console.WriteLine($&quot;Serial number: {serial_num}&quot;);
 
             // Get RTC Time
-            string RTC = dev.Sys_getRTC(timeout:timeout);
+            string RTC = dev.Sys_getRTC(timeout);
             Console.WriteLine($&quot;RTC data time: {RTC}&quot;);
         }
         catch (Exception ex)
@@ -197,7 +197,7 @@ class USBDAQF1DSNK_hello_world
             }
 
             Console.WriteLine($&quot;Restarting now&quot;);
-            dev.Sys_reboot(timeout:timeout);
+            dev.Sys_reboot(timeout);
         }
         catch (Exception ex)
         {
