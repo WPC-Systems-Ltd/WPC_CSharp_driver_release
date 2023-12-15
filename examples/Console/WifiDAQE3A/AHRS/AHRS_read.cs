@@ -64,11 +64,19 @@ class WifiDAQE3A_AHRS_read
             // Start AHRS
             err = dev.AHRS_start(port, timeout);
             Console.WriteLine($"AHRS_start in port {port}: {err}");
-
-            // Read AHRS estimation
-            for (int i=0; i<5; i++) {
+              
+            // Read AHRS estimation 
+            int data_len = 1;
+            while (data_len>0){
                 List<float> ahrs_list = dev.AHRS_readStreaming(port, read_delay);
-                Console.WriteLine($"Roll: {ahrs_list[0]}, Pitch: {ahrs_list[1]}, Yaw: {ahrs_list[2]}");
+                 
+                // Update data len
+                data_len = ahrs_list.Count;
+                if (data_len>0)
+                {
+                    for (int i=0; i<(data_len/3); i++)
+                        Console.WriteLine($"Roll: {ahrs_list[3*i]}, Pitch: {ahrs_list[3*i+1]}, Yaw: {ahrs_list[3*i+2]}");
+                }
             }
 
             // Stop AHRS
