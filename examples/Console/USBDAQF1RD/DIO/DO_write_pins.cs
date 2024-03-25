@@ -10,7 +10,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -42,9 +42,10 @@ class USBDAQF1RD_DO_write_pins
         {
             // Parameters setting
             int err;
-            int port = 0;
-            List<int> pinindex = new List<int> {1, 3, 5, 7};
-            List<int> DO_value = new List<int> {0, 1, 0, 1};
+            int port = 0; // Depend on your device
+
+            List<int> pinindex = new List<int> {0, 1, 2, 3};
+            List<int> DO_value = new List<int> {1, 0, 1, 0};
             int timeout = 3000; // ms
 
             // Get firmware model & version
@@ -59,6 +60,9 @@ class USBDAQF1RD_DO_write_pins
             // Write pins to high or low
             err = dev.DO_writePins(port, pinindex, DO_value, timeout);
             Console.WriteLine($"DO_writePins in port {port}: {err}");
+
+            // Wait for seconds to see led status
+            Thread.Sleep(3000); // delay [ms]
 
             // Close pins with digital output
             err = dev.DO_closePins(port, pinindex, timeout);

@@ -12,7 +12,7 @@ public class WPC_example_code
         Console.WriteLine("DeviceFinder, please input 0");
         Console.WriteLine("STEM, please input 1");
         Console.WriteLine("Emotion, please input 2");
-        Console.WriteLine("EDrive_ST, please input 3");
+        Console.WriteLine("EDriveST, please input 3");
         Console.WriteLine("EthanA, please input 10");
         Console.WriteLine("EthanD, please input 11");
         Console.WriteLine("EthanI, please input 12");
@@ -20,6 +20,8 @@ public class WPC_example_code
         Console.WriteLine("EthanO, please input 14");
         //Console.WriteLine("EthanP, please input 15");
         Console.WriteLine("EthanT, please input 16");
+        Console.WriteLine("EthanIA, please input 17");
+        Console.WriteLine("EthanEXD, please input 18");
         Console.WriteLine("USBDAQF1AD, please input 20");
         Console.WriteLine("USBDAQF1AOD, please input 21");
         Console.WriteLine("USBDAQF1CD, please input 22");
@@ -28,7 +30,8 @@ public class WPC_example_code
         Console.WriteLine("USBDAQF1RD, please input 25");
         Console.WriteLine("USBDAQF1TD, please input 26");
         Console.WriteLine("WifiDAQE3A, please input 30");
-        Console.WriteLine("WifiDAQF4A, please input 31");
+        Console.WriteLine("WifiDAQE3AH, please input 31");
+        Console.WriteLine("WifiDAQF4A, please input 32");
     }
 
     #endregion
@@ -50,6 +53,10 @@ public class WPC_example_code
         Console.WriteLine("For System_ETH");
         Console.WriteLine("----------------");
         Console.WriteLine("Run get_network_info.cs, please input 1");
+        Console.WriteLine("Run get_serial_number.cs, please input 2");
+        Console.WriteLine("Run hello_world.cs, please input 3");
+        Console.WriteLine("Run set_and_get_RTC.cs, please input 4");
+
     }
     #endregion
 
@@ -59,7 +66,9 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For System_USB");
         Console.WriteLine("----------------");
-        Console.WriteLine("Run get_USB_info.cs, please input 2");
+        Console.WriteLine("Run get_serial_number.cs, please input 2");
+        Console.WriteLine("Run hello_world.cs, please input 3");
+        Console.WriteLine("Run set_and_get_RTC.cs, please input 4");
     }
     #endregion
 
@@ -69,8 +78,13 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For System_Wifi");
         Console.WriteLine("----------------");
-        Console.WriteLine("Run get_network_info.cs, please input 3");
-        Console.WriteLine("Run get_Wifi_DAQ_status.cs, please input 4");
+        Console.WriteLine("Run get_network_info.cs, please input 1");
+        Console.WriteLine("Run get_serial_number.cs, please input 2");
+        Console.WriteLine("Run hello_world.cs, please input 3");
+        Console.WriteLine("Run set_and_get_RTC.cs, please input 4");
+        Console.WriteLine("Run get_Wifi_DAQ_status.cs, please input 5");
+        Console.WriteLine("Run set_LED_status.cs, please input 6");
+
     }
     #endregion
 
@@ -88,7 +102,7 @@ public class WPC_example_code
         Console.WriteLine("");
         Console.WriteLine("For AI");
         Console.WriteLine("------");
-        Console.WriteLine("Run AI_continuous_multi_slot.cs, please input 121"); 
+        Console.WriteLine("Run AI_continuous_multi_slot.cs, please input 121");
         Console.WriteLine("Run AI_continuous_with_logger.cs, please input 122");
         Console.WriteLine("Run AI_continuous.cs, please input 123");
         Console.WriteLine("Run AI_N_samples_once.cs, please input 124");
@@ -248,19 +262,24 @@ public class WPC_example_code
     }
     #endregion
 
-
+    #region DriveMessage
     static void showDriveMessage()
     {
         Console.WriteLine("");
         Console.WriteLine("For Drive");
         Console.WriteLine("--------");
-        Console.WriteLine("Run Drive_1axis_move.cs, please input 300");
+        Console.WriteLine("Run Drive_find_home.cs, please input 300");
         Console.WriteLine("Run Drive_find_limit.cs, please input 301");
-        Console.WriteLine("Run Drive_servo_on.cs.cs, please input 302");
-        Console.WriteLine("Run Drive_position_blending.cs.cs, please input 303");
-        Console.WriteLine("Run Drive_velocity_blending.cs.cs, please input 304");
-        Console.WriteLine("Run Drive_velocity_blending_acceleration.cs.cs, please input 305");
+        Console.WriteLine("Run Drive_position_blending.cs, please input 302");
+        Console.WriteLine("Run Drive_position_move.cs, please input 303");
+        Console.WriteLine("Run Drive_scan_move.cs, please input 304");
+        Console.WriteLine("Run Drive_servo_on.cs, please input 305");
+        Console.WriteLine("Run Drive_velocity_blending_acceleration.cs, please input 306");
+        Console.WriteLine("Run Drive_velocity_move.cs, please input 307");
     }
+    #endregion
+
+    #region PWMMessage
     static void showPWMMessage()
     {
         Console.WriteLine("");
@@ -268,6 +287,9 @@ public class WPC_example_code
         Console.WriteLine("--------");
         Console.WriteLine("Run PWM_generate.cs, please input 400");
     }
+    #endregion
+
+    #region CounterMessage
     static void showCounterMessage()
     {
         Console.WriteLine("");
@@ -275,13 +297,22 @@ public class WPC_example_code
         Console.WriteLine("--------");
         Console.WriteLine("Run Counter_read.cs, please input 500");
     }
+    #endregion
+
+    #region AHRSMessage
     static void showAHRSMessage()
     {
         Console.WriteLine("");
         Console.WriteLine("For AHRS");
         Console.WriteLine("--------");
-        Console.WriteLine("Run AHRS_read.cs, please input 600");
-    } 
+        Console.WriteLine("Run AHRS_getOrientation.cs, please input 600");
+        Console.WriteLine("Run AHRS_getAngularVelocity.cs, please input 601");
+        Console.WriteLine("Run AHRS_getAcceleration.cs, please input 602");
+        Console.WriteLine("Run AHRS_getEstimation.cs, please input 603");
+
+    }
+    #endregion
+
     static void Main()
     {
         Console.WriteLine("Welcome to WPC C# driver example code.");
@@ -317,7 +348,7 @@ public class WPC_example_code
                 break;
 
             case 3:
-                Console.WriteLine("Get 3, show EDrive_ST series example code");
+                Console.WriteLine("Get 3, show EDriveST series example code");
                 showSysETHMessage();
                 showDriveMessage();
                 break;
@@ -353,11 +384,23 @@ public class WPC_example_code
                 showSysETHMessage();
                 showAOMessage();
                 break;
-  
+
             case 16:
                 Console.WriteLine("Get 16, show EthanT series example code");
                 showSysETHMessage();
                 showTCMessage();
+                break;
+
+            case 17:
+                Console.WriteLine("Get 17, show EthanIA series example code");
+                showSysETHMessage();
+                showAI24BitMessage();
+                break;
+
+            case 18:
+                Console.WriteLine("Get 18, show EthanEXD series example code");
+                showSysETHMessage();
+                showDIOMessage();
                 break;
 
             case 20:
@@ -444,15 +487,20 @@ public class WPC_example_code
                 Console.WriteLine("Get 30, show WifiDAQE3A series example code");
                 showSysWifiMessage();
                 showAIMessage();
-                showAHRSMessage();
                 break;
 
             case 31:
-                Console.WriteLine("Get 31, show WifiDAQF4A series example code");
+                Console.WriteLine("Get 31, show WifiDAQE3AH series example code");
+                showSysWifiMessage();
+                showAIMessage();
+                showAHRSMessage();
+                break;
+
+            case 32:
+                Console.WriteLine("Get 32, show WifiDAQF4A series example code");
                 showSysWifiMessage();
                 showAIMessage();
                 break;
-
             default:
                 break;
         }
@@ -483,6 +531,15 @@ public class WPC_example_code
                     #region STEM_Sys
                     case 1:
                         STEM_get_network_info.Main();
+                        break;
+                    case 2:
+                        STEM_get_serial_number.Main();
+                        break;
+                    case 3:
+                        STEM_hello_world.Main();
+                        break;
+                    case 4:
+                        STEM_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -563,6 +620,15 @@ public class WPC_example_code
                     #region Emotion_Sys
                     case 1:
                         EMotion_get_network_info.Main();
+                        break;
+                    case 2:
+                        EMotion_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EMotion_hello_world.Main();
+                        break;
+                    case 4:
+                        EMotion_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -647,31 +713,49 @@ public class WPC_example_code
                 switch (example_code)
                 {
 
-                    #region EDrive_ST_Sys
+                    #region EDriveST_Sys
                     case 1:
-                        EDrive_ST_get_network_info.Main();
+                        EDriveST_get_network_info.Main();
+                        break;
+                    case 2:
+                        EDriveST_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EDriveST_hello_world.Main();
+                        break;
+                    case 4:
+                        EDriveST_set_and_get_RTC.Main();
                         break;
                     #endregion
 
 
-                    #region EDrive_ST_Drive
+                    #region EDriveST_Drive
                     case 300:
-                        EDrive_ST_Drive_1axis.Main();
+                        EDriveST_Drive_find_home.Main();
                         break;
                     case 301:
-                        EDrive_ST_Drive_find_limit.Main();
+                        EDriveST_Drive_find_limit.Main();
                         break;
                     case 302:
-                        EDrive_ST_Drive_servo_on.Main();
+                        EDriveST_Drive_position_blending.Main();
                         break;
                     case 303:
-                        EDrive_ST_Drive_position_blending.Main();
+                        EDriveST_Drive_position_blending.Main();
                         break;
                     case 304:
-                        EDrive_ST_Drive_velocity_blending.Main();
+                        EDriveST_Drive_position_move.Main();
                         break;
                     case 305:
-                        EDrive_ST_Drive_velocity_blending_acceleration.Main();
+                        EDriveST_Drive_scan_move.Main();
+                        break;
+                    case 306:
+                        EDriveST_Drive_servo_on.Main();
+                        break;
+                    case 307:
+                        EDriveST_Drive_velocity_blending_acceleration.Main();
+                        break;
+                    case 308:
+                        EDriveST_Drive_velocity_move.Main();
                         break;
                     #endregion
 
@@ -686,6 +770,15 @@ public class WPC_example_code
                     #region EthanA_Sys
                     case 1:
                         EthanA_get_network_info.Main();
+                        break;
+                    case 2:
+                        EthanA_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanA_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanA_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -721,6 +814,15 @@ public class WPC_example_code
                     #region EthanD_Sys
                     case 1:
                         EthanD_get_network_info.Main();
+                        break;
+                    case 2:
+                        EthanD_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanD_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanD_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -763,6 +865,15 @@ public class WPC_example_code
                     case 1:
                         EthanI_get_network_info.Main();
                         break;
+                    case 2:
+                        EthanI_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanI_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanI_set_and_get_RTC.Main();
+                        break;
                     #endregion
 
                     #region EthanI_AI24Bit
@@ -783,6 +894,15 @@ public class WPC_example_code
                     #region EthanL_Sys
                     case 1:
                         EthanL_get_network_info.Main();
+                        break;
+                    case 2:
+                        EthanL_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanL_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanL_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -807,6 +927,15 @@ public class WPC_example_code
                     case 1:
                         EthanO_get_network_info.Main();
                         break;
+                    case 2:
+                        EthanO_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanO_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanO_set_and_get_RTC.Main();
+                        break;
                     #endregion
 
                     #region EthanO_AO
@@ -826,12 +955,21 @@ public class WPC_example_code
                 }
                 break;
 
-             case 16:
+            case 16:
                 switch (example_code)
                 {
                     #region EthanT_Sys
                     case 1:
                         EthanT_get_network_info.Main();
+                        break;
+                    case 2:
+                        EthanT_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanT_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanT_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -852,12 +990,92 @@ public class WPC_example_code
                 }
                 break;
 
+            case 17:
+                switch (example_code)
+                {
+                    #region EthanIA_Sys
+                    case 1:
+                        EthanIA_get_network_info.Main();
+                        break;
+                    case 2:
+                        EthanIA_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanIA_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanIA_set_and_get_RTC.Main();
+                        break;
+                    #endregion
+
+                    #region EthanIA_AI24Bit
+                    case 120:
+                        EthanIA_AI_on_demand_once.Main();
+                        break;
+
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
+
+            case 18:
+                switch (example_code)
+                {
+                    #region EthanEXD_Sys
+                    case 1:
+                        EthanEXD_get_network_info.Main();
+                        break;
+                    case 2:
+                        EthanEXD_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanEXD_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanEXD_set_and_get_RTC.Main();
+                        break;
+                    #endregion
+
+                    #region EthanEXD_DIO
+                    case 140:
+                        EthanEXD_DIO_loopback_pins.Main();
+                        break;
+                    case 141:
+                        EthanEXD_DIO_loopback_port.Main();
+                        break;
+                    case 142:
+                        EthanEXD_DO_blinky_pins.Main();
+                        break;
+                    case 143:
+                        EthanEXD_DO_blinky_port.Main();
+                        break;
+                    case 144:
+                        EthanEXD_DO_write_pins.Main();
+                        break;
+                    case 145:
+                        EthanEXD_DO_write_port.Main();
+                        break;
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
+
             case 20:
                 switch (example_code)
                 {
                     #region USBDAQF1AD_Sys
                     case 2:
-                        USBDAQF1AD_get_USB_info.Main();
+                        USBDAQF1AD_get_serial_number.Main();
+                        break;
+                    case 3:
+                        USBDAQF1AD_hello_world.Main();
+                        break;
+                    case 4:
+                        USBDAQF1AD_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -949,7 +1167,13 @@ public class WPC_example_code
                 {
                     #region USBDAQF1AOD_Sys
                     case 2:
-                        USBDAQF1AOD_get_USB_info.Main();
+                        USBDAQF1AOD_get_serial_number.Main();
+                        break;
+                    case 3:
+                        USBDAQF1AOD_hello_world.Main();
+                        break;
+                    case 4:
+                        USBDAQF1AOD_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -1056,7 +1280,13 @@ public class WPC_example_code
                 {
                     #region USBDAQF1CD_Sys
                     case 2:
-                        USBDAQF1CD_get_USB_info.Main();
+                        USBDAQF1CD_get_serial_number.Main();
+                        break;
+                    case 3:
+                        USBDAQF1CD_hello_world.Main();
+                        break;
+                    case 4:
+                        USBDAQF1CD_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -1136,7 +1366,13 @@ public class WPC_example_code
                 {
                     #region USBDAQF1D_Sys
                     case 2:
-                        USBDAQF1D_get_USB_info.Main();
+                        USBDAQF1D_get_serial_number.Main();
+                        break;
+                    case 3:
+                        USBDAQF1D_hello_world.Main();
+                        break;
+                    case 4:
+                        USBDAQF1D_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -1207,7 +1443,13 @@ public class WPC_example_code
                 {
                     #region USBDAQF1DSNK_Sys
                     case 2:
-                        USBDAQF1DSNK_get_USB_info.Main();
+                        USBDAQF1DSNK_get_serial_number.Main();
+                        break;
+                    case 3:
+                        USBDAQF1DSNK_hello_world.Main();
+                        break;
+                    case 4:
+                        USBDAQF1DSNK_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -1254,7 +1496,13 @@ public class WPC_example_code
                 {
                     #region USBDAQF1RD_Sys
                     case 2:
-                        USBDAQF1RD_get_USB_info.Main();
+                        USBDAQF1RD_get_serial_number.Main();
+                        break;
+                    case 3:
+                        USBDAQF1RD_hello_world.Main();
+                        break;
+                    case 4:
+                        USBDAQF1RD_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -1337,7 +1585,13 @@ public class WPC_example_code
                 {
                     #region USBDAQF1TD_Sys
                     case 2:
-                        USBDAQF1TD_get_USB_info.Main();
+                        USBDAQF1TD_get_serial_number.Main();
+                        break;
+                    case 3:
+                        USBDAQF1TD_hello_world.Main();
+                        break;
+                    case 4:
+                        USBDAQF1TD_set_and_get_RTC.Main();
                         break;
                     #endregion
 
@@ -1422,10 +1676,23 @@ public class WPC_example_code
                     case 1:
                         WifiDAQE3A_get_network_info.Main();
                         break;
+                    case 2:
+                        WifiDAQE3A_get_serial_number.Main();
+                        break;
                     case 3:
+                        WifiDAQE3A_hello_world.Main();
+                        break;
+                    case 4:
+                        WifiDAQE3A_set_and_get_RTC.Main();
+                        break;
+                    case 5:
                         WifiDAQE3A_get_WifiDAQ_status.Main();
                         break;
+                    case 6:
+                        WifiDAQE3A_set_LED_status.Main();
+                        break;
                     #endregion
+
 
                     #region WifiDAQE3A_AI
                     case 121:
@@ -1448,12 +1715,6 @@ public class WPC_example_code
                         break;
                     #endregion
 
-                    #region
-                    case 600:
-                        WifiDAQE3A_AHRS_read.Main();
-                        break;
-                    #endregion
-
                     default:
                         break;
                 }
@@ -1462,12 +1723,90 @@ public class WPC_example_code
             case 31:
                 switch (example_code)
                 {
+                    #region WifiDAQE3AH_Sys
+                    case 1:
+                        WifiDAQE3AH_get_network_info.Main();
+                        break;
+                    case 2:
+                        WifiDAQE3AH_get_serial_number.Main();
+                        break;
+                    case 3:
+                        WifiDAQE3AH_hello_world.Main();
+                        break;
+                    case 4:
+                        WifiDAQE3AH_set_and_get_RTC.Main();
+                        break;
+                    case 5:
+                        WifiDAQE3AH_get_WifiDAQ_status.Main();
+                        break;
+                    case 6:
+                        WifiDAQE3AH_set_LED_status.Main();
+                        break;
+                    #endregion
+
+
+                    #region WifiDAQE3AH_AI
+                    case 121:
+                        Console.WriteLine("It did not support");
+                        break;
+                    case 122:
+                        WifiDAQE3AH_DataLogger_AI_continuous.Main();
+                        break;
+                    case 123:
+                        WifiDAQE3AH_AI_continuous.Main();
+                        break;
+                    case 124:
+                        WifiDAQE3AH_AI_N_samples_once.Main();
+                        break;
+                    case 125:
+                        WifiDAQE3AH_AI_on_demand_in_loop.Main();
+                        break;
+                    case 126:
+                        WifiDAQE3AH_AI_on_demand_once.Main();
+                        break;
+                    #endregion
+
+                    #region
+                    case 600:
+                        WifiDAQE3AH_AHRS_getOrientation.Main();
+                        break;
+                    case 601:
+                        WifiDAQE3AH_AHRS_getAngularVelocity.Main();
+                        break;
+                    case 602:
+                        WifiDAQE3AH_AHRS_getAcceleration.Main();
+                        break;
+                    case 603:
+                        WifiDAQE3AH_AHRS_getEstimation.Main();
+                        break;
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
+
+            case 32:
+                switch (example_code)
+                {
                     #region WifiDAQF4A_Sys
                     case 1:
                         WifiDAQF4A_get_network_info.Main();
                         break;
+                    case 2:
+                        WifiDAQF4A_get_serial_number.Main();
+                        break;
                     case 3:
+                        WifiDAQF4A_hello_world.Main();
+                        break;
+                    case 4:
+                        WifiDAQF4A_set_and_get_RTC.Main();
+                        break;
+                    case 5:
                         WifiDAQF4A_get_WifiDAQ_status.Main();
+                        break;
+                    case 6:
+                        WifiDAQF4A_set_LED_status.Main();
                         break;
                     #endregion
 

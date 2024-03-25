@@ -71,37 +71,43 @@
 <div class="tabGroup" id="tabgroup_bHGHmlrG6S">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Drive_1axis_move.cs</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Drive_find_home.cs</a>
 </li>
 <li role="presentation">
 <a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">Drive_find_limit.cs</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-3" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-3" data-tab="tabid-3" tabindex="-1">Drive_servo_on.cs</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-3" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-3" data-tab="tabid-3" tabindex="-1">Drive_position_blending.cs</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-4" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-4" data-tab="tabid-4" tabindex="-1">Drive_position_blending.cs</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-4" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-4" data-tab="tabid-4" tabindex="-1">Drive_position_move.cs</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-5" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-5" data-tab="tabid-5" tabindex="-1">Drive_velocity_blending_acceleration.cs</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-5" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-5" data-tab="tabid-5" tabindex="-1">Drive_scan_move.cs</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_bHGHmlrG6S_tabid-6" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-6" data-tab="tabid-6" tabindex="-1">Drive_velocity_blending.cs</a>
+<a href="#tabpanel_bHGHmlrG6S_tabid-6" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-6" data-tab="tabid-6" tabindex="-1">Drive_servo_on.cs</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-7" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-7" data-tab="tabid-7" tabindex="-1">Drive_velocity_blending_acceleration.cs</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-8" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-8" data-tab="tabid-8" tabindex="-1">Drive_velocity_move.cs</a>
 </li>
 </ul>
 <section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-csharp" name="CS">/// Drive_1axis_move.cs with synchronous mode.
+<pre><code class="lang-csharp" name="CS">/// Drive_find_home.cs with synchronous mode.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
 
-class EDrive_ST_Drive_1axis
+class EDriveST_Drive_find_home
 {
     static public void Main()
     {
@@ -109,7 +115,7 @@ class EDrive_ST_Drive_1axis
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
-        EDrive_ST dev = new EDrive_ST();
+        EDriveST dev = new EDriveST();
 
         // Connect to device
         try
@@ -130,60 +136,61 @@ class EDrive_ST_Drive_1axis
             int err;
             int port = 0;
             int timeout = 3000; // ms
-            int target_position = 10000;
+            int searching_speed = 50000;
+            int approaching_speed = 10000;
+            int acceleration = 10000;
+            int offset = 0;
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // EDrive-ST open
-            err = dev.Drive_open(port, timeout);
-            Console.WriteLine($&quot;Drive_open: {err}&quot;);
+            // Motion open
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($&quot;Motion_open: {err}&quot;);
 
-            // EDrive-ST configure
-            err = dev.Drive_cfgAxisMove(port, Const.MOT_RELATIVE_POSITION, target_position, timeout);
-            Console.WriteLine($&quot;Drive_cfgAxisMove: {err}&quot;);
+            // Motion configure
+            err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
+            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
 
-            err = dev.Drive_cfgAxisDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout);
-            Console.WriteLine($&quot;Drive_cfgAxisDirection: {err}&quot;);
+            // Motion reset
+            err = dev.Motion_rstEncoderPosi(port, timeout);
+            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
 
-            err = dev.Drive_cfgEncoderDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout);
-            Console.WriteLine($&quot;Drive_cfgEncoderDirection: {err}&quot;);
+            // Motion servo on
+            err = dev.Motion_enableServoOn(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
+            // Motion find home
+            err = dev.Motion_startFindHome(port, searching_speed, approaching_speed, acceleration, Const.MOT_POINT_TO_FORWARD, Const.MOT_POINT_TO_FORWARD, offset, Const.MOT_FALSE, timeout);
+            Console.WriteLine($&quot;Motion_startFindHome {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
-
-            // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
-
-            // EDrive-ST start
-            err = dev.Drive_start(port, timeout);
-            Console.WriteLine($&quot;Drive_start {err}&quot;);
-
-            int move_status = 0;
-            while (move_status == 0)
-            {
-                move_status = dev.Drive_getMoveStatus(port, timeout);
-                List&lt;int&gt; posi = dev.Drive_readEncoderPosition(port, timeout);
-                Console.WriteLine($&quot;encoder_posi: {posi[0]}, logical_posi: {posi[1]}&quot;);
+            int status = 1;
+            while (status != 0) {
+                status = dev.Motion_getProcessState(port, timeout);
+                if (status == 0){
+                    Console.WriteLine($&quot;Motion_getProcessState {status}&quot;);
+                }
             }
 
-            // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($&quot;Drive_stop: {err}&quot;);
+            // Motion get limit status
+            List&lt;int&gt; state_list = dev.Motion_getLimitStatus(port, timeout);
+            Console.WriteLine($&quot;Forward limit status: {state_list[0]}&quot;);
+            Console.WriteLine($&quot;Reverse limit status: {state_list[1]}&quot;);
+            Console.WriteLine($&quot;Home status: {state_list[2]}&quot;);
 
-            // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
+            // Motion stop
+            err = dev.Motion_stopProcess(port, timeout);
+            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
 
-            // EDrive-ST close
-            err = dev.Drive_close(port, timeout);
-            Console.WriteLine($&quot;Drive_close: {err}&quot;);
+            // Motion Servo off
+            err = dev.Motion_enableServoOff(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+
+            // Motion close
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($&quot;Motion_close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -205,12 +212,12 @@ class EDrive_ST_Drive_1axis
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
 
-class EDrive_ST_Drive_find_limit
+class EDriveST_Drive_find_limit
 {
     static public void Main()
     {
@@ -218,7 +225,7 @@ class EDrive_ST_Drive_find_limit
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
-        EDrive_ST dev = new EDrive_ST();
+        EDriveST dev = new EDriveST();
 
         // Connect to device
         try
@@ -239,58 +246,61 @@ class EDrive_ST_Drive_find_limit
             int err;
             int port = 0;
             int timeout = 3000; // ms
+            int searching_speed = 50000;
+            int approaching_speed = 10000;
+            int acceleration = 10000;
+            int offset = 0;
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // EDrive-ST open
-            err = dev.Drive_open(port, timeout);
-            Console.WriteLine($&quot;Drive_open: {err}&quot;);
+            // Motion open
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($&quot;Motion_open: {err}&quot;);
 
-            // EDrive-ST configure
-            err = dev.Drive_cfgAxisDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout);
-            Console.WriteLine($&quot;Drive_cfgAxisDirection: {err}&quot;);
+            // Motion config
+            err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
+            Console.WriteLine($&quot;Motion_cfgLimit {err}&quot;);
 
-            err = dev.Drive_cfgEncoderDirection(port, Const.MOT_ORIGINAL_DIRECTION, timeout);
-            Console.WriteLine($&quot;Drive_cfgEncoderDirection: {err}&quot;);
+            // Motion reset
+            err = dev.Motion_rstEncoderPosi(port, timeout);
+            Console.WriteLine($&quot;Motion_rstEncoderPosi {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
+            // Motion servo on
+            err = dev.Motion_enableServoOn(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
 
-            err = dev.Drive_cfgFindRef(port, Const.MOT_DIR_REVERSE, timeout);
-            Console.WriteLine($&quot;Drive_cfgFindRef {err}&quot;);
+            // Motion find limit
+            err = dev.Motion_startFindLimit(port, Const.MOT_FORWARD, searching_speed, approaching_speed, acceleration, offset, Const.MOT_FALSE, timeout);
+            Console.WriteLine($&quot;Motion_startFindLimit {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
+            int status = 1;
+            while (status != 0) {
+                status = dev.Motion_getProcessState(port, timeout);
+                if (status == 0){
+                    Console.WriteLine($&quot;Motion_getProcessState {status}&quot;);
+                }
+            }
 
-            // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
+            // Motion get limit status
+            List&lt;int&gt; state_list = dev.Motion_getLimitStatus(port, timeout);
+            Console.WriteLine($&quot;Forward limit status: {state_list[0]}&quot;);
+            Console.WriteLine($&quot;Reverse limit status: {state_list[1]}&quot;);
+            Console.WriteLine($&quot;Home status: {state_list[2]}&quot;);
 
-            // EDrive-ST find reference
-            err = dev.Drive_findReference(port, timeout);
-            Console.WriteLine($&quot;Drive_findReference {err}&quot;);
+            // Motion stop
+            err = dev.Motion_stopProcess(port, timeout);
+            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
 
-            // Get limit status
-            List&lt;int&gt; hit = dev.Drive_getLimitStatus(port, timeout);
-            Console.WriteLine($&quot;reverse_hit: {hit[0]}, forward_hit: {hit[1]}&quot;);
+            // Motion Servo off
+            err = dev.Motion_enableServoOff(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
 
-            // Wait for 3 seconds for moving
-            Thread.Sleep(3000);
-
-            // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($&quot;Drive_stop: {err}&quot;);
-
-            // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
-
-            // EDrive-ST close
-            err = dev.Drive_close(port, timeout);
-            Console.WriteLine($&quot;Drive_close: {err}&quot;);
+            // Motion close
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($&quot;Motion_close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -306,18 +316,18 @@ class EDrive_ST_Drive_find_limit
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// Drive_servo_on.cs with synchronous mode.
+<pre><code class="lang-csharp" name="CS">/// Drive_position_blending.cs with synchronous mode.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
 
-class EDrive_ST_Drive_servo_on
+class EDriveST_Drive_position_blending
 {
     static public void Main()
     {
@@ -325,7 +335,7 @@ class EDrive_ST_Drive_servo_on
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
-        EDrive_ST dev = new EDrive_ST();
+        EDriveST dev = new EDriveST();
 
         // Connect to device
         try
@@ -346,30 +356,81 @@ class EDrive_ST_Drive_servo_on
             int err;
             int port = 0;
             int timeout = 3000; // ms
+            int position = -80000;
+            int position1 = 80000;
+            int position2 = -80000;
+            int speed = 50000;
+            int acceleration = 10000;
+            int deceleration = 10000;
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // EDrive-ST open
-            err = dev.Drive_open(port, timeout);
-            Console.WriteLine($&quot;Drive_open: {err}&quot;);
+            // Motion open
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($&quot;Motion_open: {err}&quot;);
 
-            // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
+            // Motion configure
+            err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
+            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
 
-            // Wait for 5 seconds
-            Thread.Sleep(3000);
+            // Motion reset
+            err = dev.Motion_rstEncoderPosi(port, timeout);
+            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
 
-            // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
+            // Motion servo on
+            err = dev.Motion_enableServoOn(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
 
-            // EDrive-ST close
-            err = dev.Drive_close(port, timeout);
-            Console.WriteLine($&quot;Drive_close: {err}&quot;);
+            // Motion start
+            err = dev.Motion_startPositionMove(port, position, speed, acceleration, deceleration, Const.MOT_RELATIVE_POSITION, timeout);
+            Console.WriteLine($&quot;Motion_startPositionMove {err}&quot;);
+
+            int status = 1;
+            while (status != 0) {
+                status = dev.Motion_getProcessState(port, timeout);
+                if (status == 0){
+                    Console.WriteLine($&quot;Motion_getProcessState {status}&quot;);
+                }
+            }
+
+            // Motion start
+            err = dev.Motion_startPositionMove(port, position1, speed, acceleration, deceleration, Const.MOT_RELATIVE_POSITION, timeout);
+            Console.WriteLine($&quot;Motion_startPositionMove {err}&quot;);
+
+            status = 1;
+            while (status != 0) {
+                status = dev.Motion_getProcessState(port, timeout);
+                if (status == 0){
+                    Console.WriteLine($&quot;Motion_getProcessState {status}&quot;);
+                }
+            }
+
+            // Motion start
+            err = dev.Motion_startPositionMove(port, position2, speed, acceleration, deceleration, Const.MOT_RELATIVE_POSITION, timeout);
+            Console.WriteLine($&quot;Motion_startPositionMove {err}&quot;);
+
+            status = 1;
+            while (status != 0) {
+                status = dev.Motion_getProcessState(port, timeout);
+                if (status == 0){
+                    Console.WriteLine($&quot;Motion_getProcessState {status}&quot;);
+                }
+            }
+
+            // Motion stop
+            err = dev.Motion_stopProcess(port, timeout);
+            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+
+            // Motion Servo off
+            err = dev.Motion_enableServoOff(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+
+            // Motion close
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($&quot;Motion_close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -385,18 +446,18 @@ class EDrive_ST_Drive_servo_on
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// Drive_position_blending.cs with synchronous mode.
+<pre><code class="lang-csharp" name="CS">/// Drive_position_move.cs with synchronous mode.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
 
-class EDrive_ST_Drive_position_blending
+class EDriveST_Drive_position_move
 {
     static public void Main()
     {
@@ -404,7 +465,7 @@ class EDrive_ST_Drive_position_blending
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
-        EDrive_ST dev = new EDrive_ST();
+        EDriveST dev = new EDriveST();
 
         // Connect to device
         try
@@ -425,66 +486,55 @@ class EDrive_ST_Drive_position_blending
             int err;
             int port = 0;
             int timeout = 3000; // ms
-            int target_position = 30000;
-            int new_position = 0;
+            int position = 50000;
+            int speed = 50000;
+            int acceleration = 10000;
+            int deceleration = 10000;
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // EDrive-ST open
-            err = dev.Drive_open(port, timeout);
-            Console.WriteLine($&quot;Drive_open: {err}&quot;);
+            // Motion open
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($&quot;Motion_open: {err}&quot;);
 
-            // EDrive-ST configure
-            err = dev.Drive_cfgAxisMove(port, Const.MOT_RELATIVE_POSITION, target_position, timeout);
-            Console.WriteLine($&quot;Drive_cfgAxisMove: {err}&quot;);
+            // Motion configure
+            err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
+            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
+            // Motion reset
+            err = dev.Motion_rstEncoderPosi(port, timeout);
+            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
+            // Motion servo on
+            err = dev.Motion_enableServoOn(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
 
-            // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
+            // Motion start
+            err = dev.Motion_startPositionMove(port, position, speed, acceleration, deceleration, Const.MOT_RELATIVE_POSITION, timeout);
+            Console.WriteLine($&quot;Motion_startPositionMove {err}&quot;);
 
-            // EDrive-ST start
-            err = dev.Drive_start(port, timeout);
-            Console.WriteLine($&quot;Drive_start {err}&quot;);
-
-            // Wait for 3 seconds for moving
-            Thread.Sleep(3000);
-
-            // Read encoder position
-            List&lt;int&gt; posi = dev.Drive_readEncoderPosition(port, timeout);
-            Console.WriteLine($&quot;encoder_posi: {posi[0]}, logical_posi: {posi[1]}&quot;);
-
-            int move_status = 0;
-            while (move_status == 0)
-            {
-                move_status = dev.Drive_getMoveStatus(port, timeout);
-                posi = dev.Drive_readEncoderPosition(port, timeout);
-                Console.WriteLine($&quot;encoder_posi: {posi[0]}, logical_posi: {posi[1]}&quot;);
-
-                // EDrive-ST overwrite position
-                err = dev.Drive_overridePosition(port, new_position, timeout);
-                Console.WriteLine($&quot;Drive_overridePosition {err}&quot;);
+            int status = 1;
+            while (status != 0) {
+                status = dev.Motion_getProcessState(port, timeout);
+                if (status == 0){
+                    Console.WriteLine($&quot;Motion_getProcessState {status}&quot;);
+                }
             }
 
-            // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($&quot;Drive_stop: {err}&quot;);
+            // Motion stop
+            err = dev.Motion_stopProcess(port, timeout);
+            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
 
-            // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
+            // Motion Servo off
+            err = dev.Motion_enableServoOff(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
 
-            // EDrive-ST close
-            err = dev.Drive_close(port, timeout);
-            Console.WriteLine($&quot;Drive_close: {err}&quot;);
+            // Motion close
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($&quot;Motion_close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -500,18 +550,18 @@ class EDrive_ST_Drive_position_blending
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// Drive_velocity_blending_acceleration.cs with synchronous mode.
+<pre><code class="lang-csharp" name="CS">/// Drive_scan_move.cs with synchronous mode.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
 
-class EDrive_ST_Drive_velocity_blending_acceleration
+class EDriveST_Drive_scan_move
 {
     static public void Main()
     {
@@ -519,7 +569,7 @@ class EDrive_ST_Drive_velocity_blending_acceleration
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
-        EDrive_ST dev = new EDrive_ST();
+        EDriveST dev = new EDriveST();
 
         // Connect to device
         try
@@ -540,72 +590,46 @@ class EDrive_ST_Drive_velocity_blending_acceleration
             int err;
             int port = 0;
             int timeout = 3000; // ms
+            int position_0 = 30000;
+            int position_1 = -30000;
+            int speed = 30000;
+            int acceleration = 10000;
 
             // Get firmware model &amp; version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // EDrive-ST open
-            err = dev.Drive_open(port, timeout);
-            Console.WriteLine($&quot;Drive_open: {err}&quot;);
+            // Motion open
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($&quot;Motion_open: {err}&quot;);
 
-            // EDrive-ST configure
-            err = dev.Drive_cfgAxisMove(port, Const.MOT_VELOCITY, timeout);
-            Console.WriteLine($&quot;Drive_cfgAxisMove: {err}&quot;);
+            // Motion configure
+            err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
+            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
+            // Motion servo on
+            err = dev.Motion_enableServoOn(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
+            // Motion start scanning
+            err = dev.Motion_startScanMove(port, position_0, position_1, speed, acceleration, timeout);
+            Console.WriteLine($&quot;Motion_startScanMove {err}&quot;);
 
-            // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
+            // Wait for moving
+            Thread.Sleep(10000); // delay [ms]
 
-            // EDrive-ST start
-            err = dev.Drive_start(port, timeout);
-            Console.WriteLine($&quot;Drive_start {err}&quot;);
+            // Motion stop
+            err = dev.Motion_stopProcess(port, timeout);
+            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
 
-            // Wait for 5 seconds for moving
-            Thread.Sleep(5000);
+            // Motion Servo off
+            err = dev.Motion_enableServoOff(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
 
-            int new_velo = -3000;
-            int new_accel = 100;
-            int new_decel = 100;
-            err = dev.Drive_overrideVelocity(port, new_velo, timeout);
-            Console.WriteLine($&quot;Drive_overrideVelocity {err}&quot;);
-
-            err = dev.Drive_overrideAccel(port, new_accel, new_decel, timeout);
-            Console.WriteLine($&quot;Drive_overrideAccel {err}&quot;);
-
-            // Wait for 5 seconds for moving
-            Thread.Sleep(5000);
-
-            new_velo = 6000;
-            new_accel = 100000;
-            new_decel = 100000;
-            err = dev.Drive_overrideVelocity(port, new_velo, timeout);
-            Console.WriteLine($&quot;Drive_overrideVelocity {err}&quot;);
-
-            err = dev.Drive_overrideAccel(port, new_accel, new_decel, timeout);
-            Console.WriteLine($&quot;Drive_overrideAccel {err}&quot;);
-
-            // Wait for 5 seconds for moving
-            Thread.Sleep(5000);
-
-            // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($&quot;Drive_stop: {err}&quot;);
-
-            // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
-
-            // EDrive-ST close
-            err = dev.Drive_close(port, timeout);
-            Console.WriteLine($&quot;Drive_close: {err}&quot;);
+            // Motion close
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($&quot;Motion_close: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -621,18 +645,18 @@ class EDrive_ST_Drive_velocity_blending_acceleration
 }
 </code></pre></section>
 <section id="tabpanel_bHGHmlrG6S_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="CS">/// Drive_velocity_blending.cs with synchronous mode.
+<pre><code class="lang-csharp" name="CS">/// Drive_servo_on.cs with synchronous mode.
 ///
 /// For other examples please check:
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
 
-class EDrive_ST_Drive_velocity_blending
+class EDriveST_Drive_servo_on
 {
     static public void Main()
     {
@@ -640,7 +664,7 @@ class EDrive_ST_Drive_velocity_blending
         Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
         // Create device handle
-        EDrive_ST dev = new EDrive_ST();
+        EDriveST dev = new EDriveST();
 
         // Connect to device
         try
@@ -667,56 +691,232 @@ class EDrive_ST_Drive_velocity_blending
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // EDrive-ST open
-            err = dev.Drive_open(port, timeout);
-            Console.WriteLine($&quot;Drive_open: {err}&quot;);
+            // Motion open
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($&quot;Motion_open: {err}&quot;);
 
-            // EDrive-ST configure
-            err = dev.Drive_cfgAxisMove(port, Const.MOT_VELOCITY, timeout);
-            Console.WriteLine($&quot;Drive_cfgAxisMove: {err}&quot;);
+            // Motion servo on
+            err = dev.Motion_enableServoOn(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
 
-            err = dev.Drive_cfgLimit(port, Const.MOT_FALSE, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($&quot;Drive_cfgLimit {err}&quot;);
+            // Motion stop
+            err = dev.Motion_stopProcess(port, timeout);
+            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
 
-            err = dev.Drive_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Drive_rstEncoderPosi {err}&quot;);
+            // Motion Servo off
+            err = dev.Motion_enableServoOff(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
 
-            // EDrive-ST servo on
-            err = dev.Drive_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOn {err}&quot;);
+            // Motion close
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
 
-            // EDrive-ST start
-            err = dev.Drive_start(port, timeout);
-            Console.WriteLine($&quot;Drive_start {err}&quot;);
+        // Disconnect device
+        dev.disconnect();
 
-            // Wait for 3 seconds for moving
-            Thread.Sleep(3000);
+        // Release device handle
+        dev.close();
+    }
+}
+</code></pre></section>
+<section id="tabpanel_bHGHmlrG6S_tabid-7" role="tabpanel" data-tab="tabid-7" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-csharp" name="CS">/// Drive_velocity_blending_acceleration.cs with synchronous mode.
+///
+/// For other examples please check:
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
+/// See README.md file to get detailed usage of this example.
+///
+/// Copyright (c) 2024 WPC Systems Ltd.
+/// All rights reserved.
 
-            int new_velo = 5000;
-            err = dev.Drive_overrideVelocity(port, new_velo, timeout);
-            Console.WriteLine($&quot;Drive_overrideVelocity {err}&quot;);
+using WPC.Product;
 
-            // Wait for 3 seconds for moving
-            Thread.Sleep(3000);
+class EDriveST_Drive_velocity_blending_acceleration
+{
+    static public void Main()
+    {
+        // Get C# driver version
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
 
-            new_velo = -3000;
-            err = dev.Drive_overrideVelocity(port, new_velo, timeout);
-            Console.WriteLine($&quot;Drive_overrideVelocity {err}&quot;);
+        // Create device handle
+        EDriveST dev = new EDriveST();
 
-            // Wait for 3 seconds for moving
-            Thread.Sleep(3000);
+        // Connect to device
+        try
+        {
+            dev.connect(&quot;192.168.1.110&quot;); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
 
-            // EDrive-ST stop
-            err = dev.Drive_stop(port, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($&quot;Drive_stop: {err}&quot;);
+        try
+        {
+            // Parameters setting
+            int err;
+            int port = 0;
+            int timeout = 3000; // ms
+            int speed = 50000;
+            int acceleration = 10000;
+            int deceleration = 10000;
 
-            // EDrive-ST servo off
-            err = dev.Drive_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Drive_enableServoOff: {err}&quot;);
+            // Get firmware model &amp; version
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
+            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
-            // EDrive-ST close
-            err = dev.Drive_close(port, timeout);
-            Console.WriteLine($&quot;Drive_close: {err}&quot;);
+            // Motion open
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+
+            // Motion configure
+            err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
+            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
+
+            // Motion reset
+            err = dev.Motion_rstEncoderPosi(port, timeout);
+            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
+
+            // Motion servo on
+            err = dev.Motion_enableServoOn(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+
+            // Motion start
+            err = dev.Motion_startVelocticyMove(port, speed, Const.MOT_POINT_TO_FORWARD, acceleration, deceleration, timeout);
+            Console.WriteLine($&quot;Motion_startVelocticyMove {err}&quot;);
+
+            // Wait for moving
+            Thread.Sleep(3000); // delay [ms]
+
+            // Motion start
+            int new_speed = 10000;
+            int new_acceleration = 10000;
+            int new_deceleration = 10000;
+
+            err = dev.Motion_startVelocticyMove(port, new_speed, Const.MOT_POINT_TO_REVERSE, new_acceleration, new_deceleration, timeout);
+            Console.WriteLine($&quot;Motion_startVelocticyMove {err}&quot;);
+
+            // Wait for moving
+            Thread.Sleep(3000); // delay [ms]
+
+            // Motion stop
+            err = dev.Motion_stopProcess(port, timeout);
+            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+
+            // Motion Servo off
+            err = dev.Motion_enableServoOff(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+
+            // Motion close
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+        // Disconnect device
+        dev.disconnect();
+
+        // Release device handle
+        dev.close();
+    }
+}
+</code></pre></section>
+<section id="tabpanel_bHGHmlrG6S_tabid-8" role="tabpanel" data-tab="tabid-8" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-csharp" name="CS">/// Drive_velocity_move.cs with synchronous mode.
+///
+/// For other examples please check:
+/// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
+/// See README.md file to get detailed usage of this example.
+///
+/// Copyright (c) 2024 WPC Systems Ltd.
+/// All rights reserved.
+
+using WPC.Product;
+
+class EDriveST_Drive_velocity_move
+{
+    static public void Main()
+    {
+        // Get C# driver version
+        Console.WriteLine($&quot;{Const.PKG_FULL_NAME} - Version {Const.VERSION}&quot;);
+
+        // Create device handle
+        EDriveST dev = new EDriveST();
+
+        // Connect to device
+        try
+        {
+            dev.connect(&quot;192.168.1.110&quot;); // Depend on your device
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            // Release device handle
+            dev.close();
+            return;
+        }
+
+        try
+        {
+            // Parameters setting
+            int err;
+            int port = 0;
+            int timeout = 3000; // ms
+            int speed = 50000;
+            int acceleration = 10000;
+            int deceleration = 10000;
+
+            // Get firmware model &amp; version
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
+            Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
+            Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
+
+            // Motion open
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+
+            // Motion configure
+            err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
+            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
+
+            // Motion reset
+            err = dev.Motion_rstEncoderPosi(port, timeout);
+            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
+
+            // Motion servo on
+            err = dev.Motion_enableServoOn(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+
+            // Motion start
+            err = dev.Motion_startVelocticyMove(port, speed, Const.MOT_POINT_TO_FORWARD, acceleration, deceleration, timeout);
+            Console.WriteLine($&quot;Motion_startVelocticyMove {err}&quot;);
+
+            // Wait for moving
+            Thread.Sleep(3000); // delay [ms]
+
+            // Motion stop
+            err = dev.Motion_stopProcess(port, timeout);
+            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+
+            // Motion Servo off
+            err = dev.Motion_enableServoOff(port, timeout);
+            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+
+            // Motion close
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($&quot;Motion_close: {err}&quot;);
         }
         catch (Exception ex)
         {

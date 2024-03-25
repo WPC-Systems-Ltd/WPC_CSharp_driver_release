@@ -1,6 +1,15 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.14 Date: 2024/03/25, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New product: EthanIA, EthanEXD, WifiDAQE3AH
+- Example code: get_serial_number.cs, set_and_get_RTC.cs
+
+### Fixed
+- Update example code: EDriveST
+
 v0.2.11 Date: 2023/12/13, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
@@ -28,7 +37,7 @@ v0.2.10 Date: 2023/12/04, Developer: Chunglee_people
 - Fix module reopen issue
 - Hide ``AI_N_samples_in_loop`` example code
 - Fix AI readStreaming's returned data length
- 
+
 v0.2.9 Date: 2023/11/16, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added

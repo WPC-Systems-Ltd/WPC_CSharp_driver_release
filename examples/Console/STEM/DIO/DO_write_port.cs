@@ -20,7 +20,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -53,8 +53,8 @@ class STEM_DO_write_port
             // Parameters setting
             int err;
             int slot = 1; // Connect DIO module to slot
-            int DO_port = 1;
-            List<int> DO_value = new List<int> {0, 1, 0, 1};
+            int DO_port = 0;
+            List<int> DO_value = new List<int> {1, 0, 1, 0};
             int timeout = 3000;  // ms
 
             // Get firmware model & version

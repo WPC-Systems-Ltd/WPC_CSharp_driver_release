@@ -9,7 +9,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -67,7 +67,7 @@ class USBDAQF1RD_PWM_generate
             Console.WriteLine($"PWM_start in channel {channel}: {err}");
 
             // Wait for data [ms]
-            Thread.Sleep(5000);
+            Thread.Sleep(5000); // delay [ms]
 
             // Stop PWM
             err = dev.PWM_stop(channel, timeout);

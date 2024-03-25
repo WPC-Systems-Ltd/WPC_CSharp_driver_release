@@ -11,7 +11,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -43,7 +43,7 @@ class USBDAQF1AOD_DIO_loopback_port
         {
             // Parameters setting
             int err;
-            int DO_port = 0;
+            int DO_port = 0; // Depend on your device
             int DI_port = 1;
             List<int> DO_value = new List<int> {0, 1, 0, 1};
             int timeout = 3000; // ms

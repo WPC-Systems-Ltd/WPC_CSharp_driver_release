@@ -6,7 +6,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -27,7 +27,7 @@ class WifiDAQF4A_hello_world
         // Connect to device
         try
         {
-            dev.connect("192.168.5.35"); // Depend on your device
+            dev.connect("192.168.5.38"); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -41,7 +41,7 @@ class WifiDAQF4A_hello_world
         {
             for (int i=10; i<=0; i--){
                 Console.WriteLine($"Restarting in {i} seconds...");
-                Thread.Sleep(1000);
+                Thread.Sleep(1000); // delay [ms]
             }
 
             Console.WriteLine($"Restarting now");

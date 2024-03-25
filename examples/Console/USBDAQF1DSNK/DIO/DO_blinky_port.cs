@@ -10,7 +10,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -41,7 +41,7 @@ class USBDAQF1DSNK_DO_blinky_port
         try
         {
             int err;
-            int port = 0; // Depend on your device
+            int port = 2;  // Depend on your device
             int timeout = 3000;  // ms
 
             // Open port with digital output

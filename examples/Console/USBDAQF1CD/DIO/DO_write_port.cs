@@ -10,7 +10,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -42,7 +42,8 @@ class USBDAQF1CD_DO_write_port
         {
             int err;
             int port = 0; // Depend on your device
-            List<int> DO_value = new List<int> {0, 1, 0, 1};
+
+            List<int> DO_value = new List<int> {1, 0, 1, 0};
             int timeout = 3000;  // ms
 
             // Open port with digital output
@@ -52,6 +53,9 @@ class USBDAQF1CD_DO_write_port
             // Write DO port to high or low
             err = dev.DO_writePort(port, DO_value, timeout);
             Console.WriteLine($"DO_writePort in port {port}: {err}");
+
+            // Wait for seconds to see led status
+            Thread.Sleep(3000); // delay [ms]
 
             // Close port with digital output
             err = dev.DO_closePort(port, timeout);

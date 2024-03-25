@@ -103,7 +103,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -135,7 +135,7 @@ class USBDAQF1D_DIO_loopback_pins
         {
             // Parameters setting
             int err;
-            int DO_port = 0;
+            int DO_port = 0; // Depend on your device
             int DI_port = 1;
             List&lt;int&gt; DO_pins = new List&lt;int&gt; {0, 1, 2, 3};
             List&lt;int&gt; DI_pins = new List&lt;int&gt; {4, 5, 6, 7};
@@ -198,7 +198,7 @@ class USBDAQF1D_DIO_loopback_pins
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -230,7 +230,7 @@ class USBDAQF1D_DIO_loopback_port
         {
             // Parameters setting
             int err;
-            int DO_port = 0;
+            int DO_port = 0; // Depend on your device
             int DI_port = 1;
             List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
             int timeout = 3000; // ms
@@ -290,7 +290,7 @@ class USBDAQF1D_DIO_loopback_port
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -322,7 +322,7 @@ class USBDAQF1D_DO_blinky_pins
         {
             // Parameters setting
             int err;
-            int port = 0;
+            int port = 0; // Depend on your device
             List&lt;int&gt; pinindex = new List&lt;int&gt; {1, 3, 5, 7};
             int timeout = 3000; // ms
 
@@ -374,7 +374,7 @@ class USBDAQF1D_DO_blinky_pins
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -451,7 +451,7 @@ class USBDAQF1D_DO_blinky_port
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -483,9 +483,10 @@ class USBDAQF1D_DO_write_pins
         {
             // Parameters setting
             int err;
-            int port = 0;
-            List&lt;int&gt; pinindex = new List&lt;int&gt; {1, 3, 5, 7};
-            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
+            int port = 0; // Depend on your device
+
+            List&lt;int&gt; pinindex = new List&lt;int&gt; {0, 1, 2, 3};
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {1, 0, 1, 0};
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
@@ -500,6 +501,9 @@ class USBDAQF1D_DO_write_pins
             // Write pins to high or low
             err = dev.DO_writePins(port, pinindex, DO_value, timeout);
             Console.WriteLine($&quot;DO_writePins in port {port}: {err}&quot;);
+
+            // Wait for seconds to see led status
+            Thread.Sleep(3000); // delay [ms]
 
             // Close pins with digital output
             err = dev.DO_closePins(port, pinindex, timeout);
@@ -532,7 +536,7 @@ class USBDAQF1D_DO_write_pins
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -564,7 +568,8 @@ class USBDAQF1D_DO_write_port
         {
             int err;
             int port = 0; // Depend on your device
-            List&lt;int&gt; DO_value = new List&lt;int&gt; {0, 1, 0, 1};
+
+            List&lt;int&gt; DO_value = new List&lt;int&gt; {1, 0, 1, 0};
             int timeout = 3000;  // ms
 
             // Open port with digital output
@@ -574,6 +579,9 @@ class USBDAQF1D_DO_write_port
             // Write DO port to high or low
             err = dev.DO_writePort(port, DO_value, timeout);
             Console.WriteLine($&quot;DO_writePort in port {port}: {err}&quot;);
+
+            // Wait for seconds to see led status
+            Thread.Sleep(3000); // delay [ms]
 
             // Close port with digital output
             err = dev.DO_closePort(port, timeout);

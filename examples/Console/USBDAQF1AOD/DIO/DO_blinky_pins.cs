@@ -10,7 +10,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -42,7 +42,7 @@ class USBDAQF1AOD_DO_blinky_pins
         {
             // Parameters setting
             int err;
-            int port = 0;
+            int port = 0; // Depend on your device
             List<int> pinindex = new List<int> {1, 3, 5, 7};
             int timeout = 3000; // ms
 
