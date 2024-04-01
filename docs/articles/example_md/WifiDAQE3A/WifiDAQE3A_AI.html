@@ -99,7 +99,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -117,7 +117,7 @@ class WifiDAQE3A_AI_continuous
         // Connect to device
         try
         {
-            dev.connect(&quot;192.168.5.35&quot;); // Depend on your device
+            dev.connect(&quot;192.168.5.38&quot;); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -136,51 +136,51 @@ class WifiDAQE3A_AI_continuous
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
-            int delay = 200;   // ms
+            int read_delay = 200; // ms
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            err = dev.AI_open(port, timeout);
+            Console.WriteLine($&quot;AI_open in port {port}, status: {err}&quot;);
             
 
             // Set AI acquisition mode to continuous mode
-            err = dev.AI_setMode(port, mode, timeout:timeout);
-            Console.WriteLine($&quot;AI_setMode {mode} in port {port}: {err}&quot;);
+            err = dev.AI_setMode(port, mode, timeout);
+            Console.WriteLine($&quot;AI_setMode {mode} in port {port}, status: {err}&quot;);
 
             // Set AI sampling rate
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
-            Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port {port}: {err}&quot;);
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
+            Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port {port}, status: {err}&quot;);
 
             // Start AI
-            err = dev.AI_start(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
+            err = dev.AI_start(port, timeout);
+            Console.WriteLine($&quot;AI_start in port {port}, status: {err}&quot;);
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
-            err = dev.AI_stop(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_stop in port {port}: {err}&quot;);
+            err = dev.AI_stop(port, timeout);
+            Console.WriteLine($&quot;AI_stop in port {port}, status: {err}&quot;);
 
             int data_len = 1;
             while (data_len &gt; 0){
                 // Read data acquisition
-                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
-                Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
+                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, read_delay);
+                Console.WriteLine($&quot;Number of samples = {ai_2Dlist.Count}&quot;);
 
                 // Update data len
                 data_len = ai_2Dlist.Count;
             }
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
+            err = dev.AI_close(port, timeout);
+            Console.WriteLine($&quot;AI_close in port {port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -209,7 +209,7 @@ class WifiDAQE3A_AI_continuous
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -227,7 +227,7 @@ class WifiDAQE3A_AI_N_samples_once
         // Connect to device
         try
         {
-            dev.connect(&quot;192.168.5.35&quot;); // Depend on your device
+            dev.connect(&quot;192.168.5.38&quot;); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -247,41 +247,41 @@ class WifiDAQE3A_AI_N_samples_once
             float sampling_rate = 200;
             int samples = 200;
             int read_points = 200;
-            int delay = 200;   // ms
+            int read_delay = 200; // ms
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            err = dev.AI_open(port, timeout);
+            Console.WriteLine($&quot;AI_open in port {port}, status: {err}&quot;);
             
 
             // Set AI acquisition mode to N-sample mode
-            err = dev.AI_setMode(port, mode, timeout:timeout);
-            Console.WriteLine($&quot;AI_setMode {mode} in port {port}: {err}&quot;);
+            err = dev.AI_setMode(port, mode, timeout);
+            Console.WriteLine($&quot;AI_setMode {mode} in port {port}, status: {err}&quot;);
 
             // Set AI sampling rate
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
-            Console.WriteLine($&quot;AI_setNumSamples {sampling_rate} in port {port}: {err}&quot;);
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
+            Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port {port}, status: {err}&quot;);
 
             // Set AI # of samples
-            err = dev.AI_setNumSamples(port, samples, timeout:timeout);
-            Console.WriteLine($&quot;AI_setNumSamples {samples} in port {port}: {err}&quot;);
+            err = dev.AI_setNumSamples(port, samples, timeout);
+            Console.WriteLine($&quot;AI_setNumSamples {samples} in port {port}, status: {err}&quot;);
 
             // Start AI
-            err = dev.AI_start(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
+            err = dev.AI_start(port, timeout);
+            Console.WriteLine($&quot;AI_start in port {port}, status: {err}&quot;);
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Read data acquisition
-            List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
-            Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
+            List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, read_delay);
+            Console.WriteLine($&quot;Number of samples = {ai_2Dlist.Count}&quot;);
 
             bool ok = true;
             foreach (List&lt;double&gt; ai_list in ai_2Dlist)
@@ -298,12 +298,12 @@ class WifiDAQE3A_AI_N_samples_once
                 Console.WriteLine(&quot;NG&quot;);
 
             // Stop AI
-            err = dev.AI_stop(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_stop in port {port}: {err}&quot;);
+            err = dev.AI_stop(port, timeout);
+            Console.WriteLine($&quot;AI_stop in port {port}, status: {err}&quot;);
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
+            err = dev.AI_close(port, timeout);
+            Console.WriteLine($&quot;AI_close in port {port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -332,7 +332,7 @@ class WifiDAQE3A_AI_N_samples_once
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -350,7 +350,7 @@ class WifiDAQE3A_AI_on_demand_in_loop
         // Connect to device
         try
         {
-            dev.connect(&quot;192.168.5.35&quot;); // Depend on your device
+            dev.connect(&quot;192.168.5.38&quot;); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -370,18 +370,18 @@ class WifiDAQE3A_AI_on_demand_in_loop
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            err = dev.AI_open(port, timeout);
+            Console.WriteLine($&quot;AI_open in port {port}, status: {err}&quot;);
             
 
             // Set AI acquisition mode to on demand
-            err = dev.AI_setMode(port, mode, timeout:timeout);
-            Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
+            err = dev.AI_setMode(port, mode, timeout);
+            Console.WriteLine($&quot;AI_setMode {mode} in port {port}, status: {err}&quot;);
 
             // Read AI data with 5 times
             for (int i=0; i&lt;5; i++)
@@ -392,8 +392,8 @@ class WifiDAQE3A_AI_on_demand_in_loop
             }
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
+            err = dev.AI_close(port, timeout);
+            Console.WriteLine($&quot;AI_close in port {port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -422,7 +422,7 @@ class WifiDAQE3A_AI_on_demand_in_loop
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -440,7 +440,7 @@ class WifiDAQE3A_AI_on_demand_once
         // Connect to device
         try
         {
-            dev.connect(&quot;192.168.5.35&quot;); // Depend on your device
+            dev.connect(&quot;192.168.5.38&quot;); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -460,28 +460,28 @@ class WifiDAQE3A_AI_on_demand_once
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            err = dev.AI_open(port, timeout);
+            Console.WriteLine($&quot;AI_open in port {port}, status: {err}&quot;);
             
 
             // Set AI acquisition mode to on demand
-            err = dev.AI_setMode(port, mode, timeout:timeout);
-            Console.WriteLine($&quot;AI_setMode {mode}: {err}&quot;);
+            err = dev.AI_setMode(port, mode, timeout);
+            Console.WriteLine($&quot;AI_setMode {mode} in port {port}, status: {err}&quot;);
 
             // Read data acquisition acquisition
-            List&lt;double&gt; ai_list = dev.AI_readOnDemand(port, timeout:timeout);
+            List&lt;double&gt; ai_list = dev.AI_readOnDemand(port, timeout);
 
             // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, ai_list)));
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
+            err = dev.AI_close(port, timeout);
+            Console.WriteLine($&quot;AI_close in port {port}, status: {err}&quot;);
 
         }
         catch (Exception ex)
@@ -511,7 +511,7 @@ class WifiDAQE3A_AI_on_demand_once
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -529,7 +529,7 @@ class WifiDAQE3A_DataLogger_AI_continuous
         // Connect to device
         try
         {
-            dev.connect(&quot;192.168.5.35&quot;); // Depend on your device
+            dev.connect(&quot;192.168.5.38&quot;); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -548,52 +548,52 @@ class WifiDAQE3A_DataLogger_AI_continuous
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
-            int delay = 200;    // ms
+            int read_delay = 200; // ms
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open file with CSV file
             err = dev.Logger_openFile(&quot;WPC_tester_WifiDAQE3A_AI.csv&quot;);
-            Console.WriteLine($&quot;Logger_openFile: {err}&quot;);
+            Console.WriteLine($&quot;Logger_openFile, status: {err}&quot;);
 
             // Write header into CSV file
             var header = $&quot;CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7&quot;;
             err = dev.Logger_writeValue(header);
-            Console.WriteLine($&quot;Logger_writeValue: {err}&quot;);
+            Console.WriteLine($&quot;Logger_writeValue, status: {err}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            err = dev.AI_open(port, timeout);
+            Console.WriteLine($&quot;AI_open in port {port}, status: {err}&quot;);
             
 
             // Set AI acquisition mode to continuous mode
-            err = dev.AI_setMode(port, mode, timeout:timeout);
-            Console.WriteLine($&quot;AI_setMode {mode} in port {port}: {err}&quot;);
+            err = dev.AI_setMode(port, mode, timeout);
+            Console.WriteLine($&quot;AI_setMode {mode} in port {port}, status: {err}&quot;);
 
             // Set AI sampling rate
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
-            Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port {port}: {err}&quot;);
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
+            Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in port {port}, status: {err}&quot;);
 
             // Start AI
-            err = dev.AI_start(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_start in port {port}: {err}&quot;);
+            err = dev.AI_start(port, timeout);
+            Console.WriteLine($&quot;AI_start in port {port}, status: {err}&quot;);
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
-            err = dev.AI_stop(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_stop in port {port}: {err}&quot;);
+            err = dev.AI_stop(port, timeout);
+            Console.WriteLine($&quot;AI_stop in port {port}, status: {err}&quot;);
 
             int data_len = 1;
             while (data_len &gt; 0){
                 // Read data acquisition
-                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
-                Console.WriteLine($&quot;number of samples = {ai_2Dlist.Count}&quot;);
+                List&lt;List&lt;double&gt;&gt; ai_2Dlist = dev.AI_readStreaming(port, read_points, read_delay);
+                Console.WriteLine($&quot;Number of samples = {ai_2Dlist.Count}&quot;);
 
                 foreach (List&lt;double&gt; ai_list in ai_2Dlist)
                 {
@@ -606,8 +606,8 @@ class WifiDAQE3A_DataLogger_AI_continuous
             }
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
+            err = dev.AI_close(port, timeout);
+            Console.WriteLine($&quot;AI_close in port {port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {

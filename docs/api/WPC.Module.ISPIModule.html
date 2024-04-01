@@ -85,7 +85,7 @@
   </h3>
   <a id="WPC_Module_ISPIModule_SPI_close_" data-uid="WPC.Module.ISPIModule.SPI_close*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_close_System_Int32_System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_close(System.Int32,System.Int32)">SPI_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close SPI port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close SPI on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -111,7 +111,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -135,7 +135,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_ISPIModule_SPI_open_" data-uid="WPC.Module.ISPIModule.SPI_open*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_open_System_Int32_System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_open(System.Int32,System.Int32)">SPI_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open SPI port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open SPI on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,7 +161,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -185,7 +185,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_ISPIModule_SPI_read_" data-uid="WPC.Module.ISPIModule.SPI_read*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_read_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_read(System.Int32,System.Int32,System.Int32)">SPI_read(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read data acquisition from SPI port.</p>
+  <div class="markdown level1 summary"><p>Read data acquisition via SPI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -217,7 +217,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -233,14 +233,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>The received data.</p>
+        <td><p>The list of received data.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ISPIModule_SPI_readAndWrite_" data-uid="WPC.Module.ISPIModule.SPI_readAndWrite*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_readAndWrite_System_Int32_List_System_Byte__System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_readAndWrite(System.Int32,List{System.Byte},System.Int32)">SPI_readAndWrite(Int32, List&lt;Byte&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write and read data simultaneously to SPI port.</p>
+  <div class="markdown level1 summary"><p>Write and read data via SPI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -272,7 +272,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -288,14 +288,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>The received data.</p>
+        <td><p>The list of received data.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_ISPIModule_SPI_reset_" data-uid="WPC.Module.ISPIModule.SPI_reset*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_reset_System_Int32_System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_reset(System.Int32,System.Int32)">SPI_reset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Reset SPI to default settings.</p>
+  <div class="markdown level1 summary"><p>Reset SPI to the default setting on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -321,7 +321,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -345,7 +345,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_ISPIModule_SPI_setDataSize_" data-uid="WPC.Module.ISPIModule.SPI_setDataSize*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_setDataSize_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_setDataSize(System.Int32,System.Int32,System.Int32)">SPI_setDataSize(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set data frame format.</p>
+  <div class="markdown level1 summary"><p>Set data frame format on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -371,13 +371,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer SPI_Data_Size in WPC_basic.cs</p>
+        <td><p>0: 8-bit address.<br>
+1: 16-bit address.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -401,7 +403,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_ISPIModule_SPI_setFirstBit_" data-uid="WPC.Module.ISPIModule.SPI_setFirstBit*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_setFirstBit_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_setFirstBit(System.Int32,System.Int32,System.Int32)">SPI_setFirstBit(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set LSB first or MSB first.</p>
+  <div class="markdown level1 summary"><p>Set SPI first bit on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -427,13 +429,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer SPI_First_Bit in WPC_basic.cs</p>
+        <td><p>0: MSB first.<br>
+1: LSB first.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -457,7 +461,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_ISPIModule_SPI_setMode_" data-uid="WPC.Module.ISPIModule.SPI_setMode*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_setMode_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_setMode(System.Int32,System.Int32,System.Int32)">SPI_setMode(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set clock phase and clock polarity.</p>
+  <div class="markdown level1 summary"><p>Set clock phase and polarity with mode on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -483,13 +487,17 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer SPI_Mode in WPC_basic.cs</p>
+        <td><p>0: CPOL= 0, CPHA= 0.<br>
+1: CPOL= 0, CPHA= 1.<br>
+2: CPOL= 1, CPHA= 0.<br>
+3: CPOL= 1, CPHA= 1.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -513,7 +521,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_ISPIModule_SPI_setPrescaler_" data-uid="WPC.Module.ISPIModule.SPI_setPrescaler*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_setPrescaler_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_setPrescaler(System.Int32,System.Int32,System.Int32)">SPI_setPrescaler(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the maximum speed of SPI communication.</p>
+  <div class="markdown level1 summary"><p>Set SPI prescaler on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -539,13 +547,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">prescaler</span></td>
-        <td><p>Please refer SPI_Prescaler in WPC_basic.cs</p>
+        <td><p>2, 4, 8, 16, 32, 64, 128, 256.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -569,7 +578,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_ISPIModule_SPI_write_" data-uid="WPC.Module.ISPIModule.SPI_write*"></a>
   <h4 id="WPC_Module_ISPIModule_SPI_write_System_Int32_List_System_Byte__System_Int32_" data-uid="WPC.Module.ISPIModule.SPI_write(System.Int32,List{System.Byte},System.Int32)">SPI_write(Int32, List&lt;Byte&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write data to SPI port.</p>
+  <div class="markdown level1 summary"><p>Write data via SPI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -595,13 +604,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">data_to_write</span></td>
-        <td><p>Data to be transferred.</p>
+        <td><p>The list of data to be transferred.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>

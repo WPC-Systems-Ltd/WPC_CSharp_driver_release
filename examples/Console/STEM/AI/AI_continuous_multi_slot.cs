@@ -26,7 +26,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -60,51 +60,50 @@ class STEM_AI_continuous_multi_slot
         int mode = Const.AI_MODE_CONTINUOUS;
         float sampling_rate = 200;
         int read_points = 200;
-        int delay = 200;    // ms
+        int read_delay = 200; // ms
         int timeout = 3000; // ms
         List<int> chip_select = new List<int>() {0, 1};
 
         try
         {
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             foreach (var slot in slot_list){
                 // Get slot mode
-                string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+                string slot_mode = dev.Sys_getMode(slot, timeout);
                 Console.WriteLine($"Slot mode: {slot_mode}");
 
                 // If the slot mode is not set to "AIO", set the slot mode to "AIO"
                 if (slot_mode != "AIO"){
-                    err = dev.Sys_setAIOMode(slot, timeout:timeout);
-                    Console.WriteLine($"Sys_setAIOMode: {err}");
+                    err = dev.Sys_setAIOMode(slot, timeout);
+                    Console.WriteLine($"Sys_setAIOMode in slot {slot}, status: {err}");
                 }
 
                 // Get slot mode
-                slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+                slot_mode = dev.Sys_getMode(slot, timeout);
                 Console.WriteLine($"Slot mode: {slot_mode}");
 
                 // Open AI
-                err = dev.AI_open(slot, timeout:timeout);
-                Console.WriteLine($"AI_open in slot {slot}: {err}");
-
+                err = dev.AI_open(slot, timeout);
+                Console.WriteLine($"AI_open in slot {slot}, status: {err}");
                 // Enable CS
-                err = dev.AI_enableCS(slot, chip_select, timeout:timeout);
-                Console.WriteLine($"AI_enableCS in slot {slot}: {err}");
+                err = dev.AI_enableCS(slot, chip_select, timeout);
+                Console.WriteLine($"AI_enableCS in slot {slot}, status: {err}");
 
                 // Set AI acquisition mode to continuous mode
-                err = dev.AI_setMode(slot, mode, timeout:timeout);
-                Console.WriteLine($"AI_setMode {mode} in slot {slot}: {err}");
+                err = dev.AI_setMode(slot, mode, timeout);
+                Console.WriteLine($"AI_setMode {mode} in slot {slot}, status: {err}");
 
                 // Set AI sampling rate
-                err = dev.AI_setSamplingRate(slot, sampling_rate, timeout:timeout);
-                Console.WriteLine($"AI_setSamplingRate {sampling_rate} in slot {slot}: {err}");
+                err = dev.AI_setSamplingRate(slot, sampling_rate, timeout);
+                Console.WriteLine($"AI_setSamplingRate {sampling_rate} in slot {slot}, status: {err}");
 
                 // Start AI
-                err = dev.AI_start(slot, timeout:timeout);
-                Console.WriteLine($"AI_start in slot {slot}: {err}");
+                err = dev.AI_start(slot, timeout);
+                Console.WriteLine($"AI_start in slot {slot}, status: {err}");
             }
 
             // Wait a while for data acquisition
@@ -112,16 +111,16 @@ class STEM_AI_continuous_multi_slot
 
             foreach (var slot in slot_list){
                 // Stop AI
-                err = dev.AI_stop(slot, timeout:timeout);
-                Console.WriteLine($"AI_stop in slot {slot}: {err}");
+                err = dev.AI_stop(slot, timeout);
+                Console.WriteLine($"AI_stop in slot {slot}, status: {err}");
             }
 
             int data_len = 1;
             while (data_len > 0){
                 // Read data acquisition
                 foreach (var slot in slot_list){
-                    List<List<double>> ai_2Dlist = dev.AI_readStreaming(slot, read_points, delay:delay);
-                    Console.WriteLine($"In slot {slot}, number of samples = {ai_2Dlist.Count}");
+                    List<List<double>> ai_2Dlist = dev.AI_readStreaming(slot, read_points, read_delay);
+                    Console.WriteLine($"Slot{slot}: data len {ai_2Dlist.Count}");
 
                     // Update data len
                     data_len = ai_2Dlist.Count;
@@ -136,8 +135,8 @@ class STEM_AI_continuous_multi_slot
         {
             foreach (var slot in slot_list){
                 // Close AI
-                err = dev.AI_close(slot, timeout:timeout);
-                Console.WriteLine($"AI_close in slot {slot}: {err}");
+                err = dev.AI_close(slot, timeout);
+                Console.WriteLine($"AI_close in slot {slot}, status: {err}");
             }
         }
 

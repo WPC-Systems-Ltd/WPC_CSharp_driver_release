@@ -85,7 +85,7 @@
   </h3>
   <a id="WPC_Module_IThermalModule_Thermal_close_" data-uid="WPC.Module.IThermalModule.Thermal_close*"></a>
   <h4 id="WPC_Module_IThermalModule_Thermal_close_System_Int32_System_Int32_" data-uid="WPC.Module.IThermalModule.Thermal_close(System.Int32,System.Int32)">Thermal_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close thermocouple or RTD port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close thermocouple or RTD on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -111,7 +111,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -135,7 +135,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IThermalModule_Thermal_getStatus_" data-uid="WPC.Module.IThermalModule.Thermal_getStatus*"></a>
   <h4 id="WPC_Module_IThermalModule_Thermal_getStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IThermalModule.Thermal_getStatus(System.Int32,System.Int32,System.Int32)">Thermal_getStatus(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Get thermocouple or RTD status from specific channel.</p>
+  <div class="markdown level1 summary"><p>Get thermocouple or RTD status from the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,13 +161,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Please refer Thermal_Channel in WPC_basic.cs</p>
+        <td><p>The channel could be set 0 or 1.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -183,15 +183,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+        <td><p>Status (TC): Bit 0 = open-circuit fault.<br>
+Status (RTD): See user manual.<br></p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IThermalModule_Thermal_open_" data-uid="WPC.Module.IThermalModule.Thermal_open*"></a>
   <h4 id="WPC_Module_IThermalModule_Thermal_open_System_Int32_System_Int32_" data-uid="WPC.Module.IThermalModule.Thermal_open(System.Int32,System.Int32)">Thermal_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open thermocouple or RTD port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open thermocouple or RTD on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -217,7 +217,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -241,7 +241,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IThermalModule_Thermal_readSensor_" data-uid="WPC.Module.IThermalModule.Thermal_readSensor*"></a>
   <h4 id="WPC_Module_IThermalModule_Thermal_readSensor_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IThermalModule.Thermal_readSensor(System.Int32,System.Int32,System.Int32)">Thermal_readSensor(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read thermocouple or RTD sensor temperature from specific channel.</p>
+  <div class="markdown level1 summary"><p>Read thermocouple or RTD sensor temperature from the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -267,13 +267,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Please refer Thermal_Channel in WPC_basic.cs</p>
+        <td><p>The channel could be set 0 or 1.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -289,70 +289,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Module_IThermalModule_Thermal_setType_" data-uid="WPC.Module.IThermalModule.Thermal_setType*"></a>
-  <h4 id="WPC_Module_IThermalModule_Thermal_setType_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IThermalModule.Thermal_setType(System.Int32,System.Int32,System.Int32,System.Int32)">Thermal_setType(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set thermocouple type on specific thermocouple or RTD channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Thermal_setType(int port, int channel, int thermal_type, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">channel</span></td>
-        <td><p>Please refer Thermal_Channel in WPC_basic.cs</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">thermal_type</span></td>
-        <td><p>Please refer Thermal_Filter in WPC_basic.cs</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+        <td><p>Temperature in Celsius.</p>
 </td>
       </tr>
     </tbody>

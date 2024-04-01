@@ -12,7 +12,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -54,7 +54,7 @@ class USBDAQF1TD_SPI_read_and_write
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
@@ -63,97 +63,97 @@ class USBDAQF1TD_SPI_read_and_write
             */
 
             // Open pin0 in port0 with digital output
-            err = dev.DO_openPins(DO_port, new List<int> {DO_pin}, timeout:timeout);
-            Console.WriteLine($"DO_openPins in port {DO_port}: {err}");
+            err = dev.DO_openPins(DO_port, new List<int> {DO_pin}, timeout);
+            Console.WriteLine($"DO_openPins in port {DO_port}, status: {err}");
 
-            // Open SPI port
-            err = dev.SPI_open(port, timeout:timeout);
-            Console.WriteLine($"SPI_open in port {port}: {err}");
+            // Open SPI
+            err = dev.SPI_open(port, timeout);
+            Console.WriteLine($"SPI_open in port {port}, status: {err}");
 
             // Set CS(pin0) to high
-            err = dev.DO_writePins(DO_port, new List<int> {DO_pin}, new List<int> {1}, timeout:timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            err = dev.DO_writePins(DO_port, new List<int> {DO_pin}, new List<int> {1}, timeout);
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             /*
             Set SPI parameter
             */
 
             // Set SPI port and set datasize to 8-bits data
-            err = dev.SPI_setDataSize(port, Const.SPI_DATA_SIZE_8_BITS, timeout:timeout);
-            Console.WriteLine($"SPI_setDataSize in port {port}: {err}");
+            err = dev.SPI_setDataSize(port, Const.SPI_DATA_SIZE_8_BITS, timeout);
+            Console.WriteLine($"SPI_setDataSize in port {port}, status: {err}");
 
             // Set SPI port and set first_bit to MSB first
-            err = dev.SPI_setFirstBit(port, Const.SPI_FIRST_BIT_MSB, timeout:timeout);
-            Console.WriteLine($"SPI_setFirstBit in port {port}: {err}");
+            err = dev.SPI_setFirstBit(port, Const.SPI_FIRST_BIT_MSB, timeout);
+            Console.WriteLine($"SPI_setFirstBit in port {port}, status: {err}");
 
             // Set SPI port and set prescaler to 64
-            err = dev.SPI_setPrescaler(port, Const.SPI_PRESCALER_64, timeout:timeout);
-            Console.WriteLine($"SPI_setPrescaler in port {port}: {err}");
+            err = dev.SPI_setPrescaler(port, Const.SPI_PRESCALER_64, timeout);
+            Console.WriteLine($"SPI_setPrescaler in port {port}, status: {err}");
 
             // Set SPI port and set CPOL and CPHA to mode 0
-            err = dev.SPI_setMode(port, Const.SPI_MODE_0, timeout:timeout);
-            Console.WriteLine($"SPI_setMode in port {port}: {err}");
+            err = dev.SPI_setMode(port, Const.SPI_MODE_0, timeout);
+            Console.WriteLine($"SPI_setMode in port {port}, status: {err}");
 
             /*
             Write data via SPI
             */
 
             // Set CS(pin0) to low
-            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout);
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             // Write WREN byte
-            err = dev.SPI_write(port, new List<byte> { WREN }, timeout:timeout);
-            Console.WriteLine($"SPI_write in port {port}: {err}");
+            err = dev.SPI_write(port, new List<byte> { WREN }, timeout);
+            Console.WriteLine($"SPI_write in port {port}, status: {err}");
 
             // Set CS(pin0) to high
-            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout:timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout);
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             /*
             Write data via SPI
             */
 
             // Set CS(pin0) to low
-            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");;
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout);
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");;
 
             // Write data byte 0x0A in to address 0x0001
-            err = dev.SPI_write(port, new List<byte> { WRITE, 0x00, 0x01, 0x0A }, timeout:timeout);
-            Console.WriteLine($"SPI_write in port {port}: {err}");
+            err = dev.SPI_write(port, new List<byte> { WRITE, 0x00, 0x01, 0x0A }, timeout);
+            Console.WriteLine($"SPI_write in port {port}, status: {err}");
 
             // Set CS(pin0) to high
-            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout:timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout);
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             /*
             Read data via SPI
             */
 
             // Set CS(pin0) to low
-            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout:timeout);
-            Console.WriteLine($"writePins: {err}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout);
+            Console.WriteLine($"DO_writePins in {DO_port}, status: {err}");
 
             // Read the written byte from the generated address
-            List<byte> data = dev.SPI_readAndWrite(port, new List<byte> { READ, 0x00, 0x01, DUMMY }, timeout:timeout);
+            List<byte> data = dev.SPI_readAndWrite(port, new List<byte> { READ, 0x00, 0x01, DUMMY }, timeout);
 
             WPC_utilities.printByteArray(data.ToArray());
 
             // Set CS(pin0) to high
-            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout:timeout);
-            Console.WriteLine($"writePins: {err}");
+            err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout);
+            Console.WriteLine($"DO_writePins in {DO_port}, status: {err}");
 
             /*
             Close DO pins and SPI port
             */
 
             // Close SPI port
-            err = dev.SPI_close(port, timeout:timeout);
-            Console.WriteLine($"SPI_close in port {port}: {err}");
+            err = dev.SPI_close(port, timeout);
+            Console.WriteLine($"SPI_close in port {port}, status: {err}");
 
             // Close pin0 in port0 with digital output
-            err = dev.DO_closePins(DO_port, new List<int> { DO_pin }, timeout:timeout);
-            Console.WriteLine($"DO_closePins in port {DO_port}: {err}");
+            err = dev.DO_closePins(DO_port, new List<int> { DO_pin }, timeout);
+            Console.WriteLine($"DO_closePins in port {DO_port}, status: {err}");
         }
         catch (Exception ex)
         {

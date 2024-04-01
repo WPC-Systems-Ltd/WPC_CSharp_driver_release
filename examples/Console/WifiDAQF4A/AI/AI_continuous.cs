@@ -10,7 +10,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -28,7 +28,7 @@ class WifiDAQF4A_AI_continuous
         // Connect to device
         try
         {
-            dev.connect("192.168.5.35"); // Depend on your device
+            dev.connect("192.168.5.38"); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -47,51 +47,51 @@ class WifiDAQF4A_AI_continuous
             int mode = Const.AI_MODE_CONTINUOUS;
             float sampling_rate = 200;
             int read_points = 200;
-            int delay = 200;   // ms
+            int read_delay = 200; // ms
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($"AI_open in port {port}: {err}");
+            err = dev.AI_open(port, timeout);
+            Console.WriteLine($"AI_open in port {port}, status: {err}");
             
 
             // Set AI acquisition mode to continuous mode
-            err = dev.AI_setMode(port, mode, timeout:timeout);
-            Console.WriteLine($"AI_setMode {mode} in port {port}: {err}");
+            err = dev.AI_setMode(port, mode, timeout);
+            Console.WriteLine($"AI_setMode {mode} in port {port}, status: {err}");
 
             // Set AI sampling rate
-            err = dev.AI_setSamplingRate(port, sampling_rate, timeout:timeout);
-            Console.WriteLine($"AI_setSamplingRate {sampling_rate} in port {port}: {err}");
+            err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
+            Console.WriteLine($"AI_setSamplingRate {sampling_rate} in port {port}, status: {err}");
 
             // Start AI
-            err = dev.AI_start(port, timeout:timeout);
-            Console.WriteLine($"AI_start in port {port}: {err}");
+            err = dev.AI_start(port, timeout);
+            Console.WriteLine($"AI_start in port {port}, status: {err}");
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Stop AI
-            err = dev.AI_stop(port, timeout:timeout);
-            Console.WriteLine($"AI_stop in port {port}: {err}");
+            err = dev.AI_stop(port, timeout);
+            Console.WriteLine($"AI_stop in port {port}, status: {err}");
 
             int data_len = 1;
             while (data_len > 0){
                 // Read data acquisition
-                List<List<double>> ai_2Dlist = dev.AI_readStreaming(port, read_points, delay:delay);
-                Console.WriteLine($"number of samples = {ai_2Dlist.Count}");
+                List<List<double>> ai_2Dlist = dev.AI_readStreaming(port, read_points, read_delay);
+                Console.WriteLine($"Number of samples = {ai_2Dlist.Count}");
 
                 // Update data len
                 data_len = ai_2Dlist.Count;
             }
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($"AI_close in port {port}: {err}");
+            err = dev.AI_close(port, timeout);
+            Console.WriteLine($"AI_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

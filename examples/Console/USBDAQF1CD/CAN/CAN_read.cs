@@ -12,7 +12,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -47,28 +47,29 @@ class USBDAQF1CD_CAN_read
             int err;
             int port = 1;
             int timeout = 3000; // ms
+            int read_delay = 200; // ms
             int num_frames = 5;
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open CAN
-            err = dev.CAN_open(port, timeout:timeout);
-            Console.WriteLine($"CAN_open in port {port}: {err}");
+            err = dev.CAN_open(port, timeout);
+            Console.WriteLine($"CAN_open in port {port}, status: {err}");
 
-            // Set CAN port and set speed to 125K
-            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout:timeout);
-            Console.WriteLine($"CAN_setSpeed in port {port}: {err}");
+            // Set CAN speed to 125K
+            err = dev.CAN_setSpeed(port, Const.CAN_SPEED_125K, timeout);
+            Console.WriteLine($"CAN_setSpeed in port {port}, status: {err}");
 
-            // Set CAN port and start CAN
+            // Start CAN
             err = dev.CAN_start(port);
-            Console.WriteLine($"CAN_start in port {port}: {err}");
+            Console.WriteLine($"CAN_start in port {port}, status: {err}");
 
-            for (int i = 0; i < 1000; i++)
+            for (int i=0; i<1000; i++)
             {
-                List<CANFrame> frame_list = dev.CAN_read(port, num_frames, delay:5);
+                List<CANFrame> frame_list = dev.CAN_read(port, num_frames, read_delay);
                 if (frame_list.Count() > 0)
                 {
                     foreach (CANFrame frame in frame_list)
@@ -84,12 +85,12 @@ class USBDAQF1CD_CAN_read
             }
 
             // Stop CAN
-            err = dev.CAN_stop(port, timeout:timeout);
-            Console.WriteLine($"CAN_stop in port {port}: {err}");
+            err = dev.CAN_stop(port, timeout);
+            Console.WriteLine($"CAN_stop in port {port}, status: {err}");
 
             // Close CAN
-            err = dev.CAN_close(port, timeout:timeout);
-            Console.WriteLine($"CAN_close in port {port}: {err}");
+            err = dev.CAN_close(port, timeout);
+            Console.WriteLine($"CAN_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

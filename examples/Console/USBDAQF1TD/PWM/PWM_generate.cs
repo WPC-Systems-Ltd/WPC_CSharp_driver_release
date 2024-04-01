@@ -9,7 +9,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -47,35 +47,36 @@ class USBDAQF1TD_PWM_generate
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open PWM
-            err = dev.PWM_open(channel, timeout:timeout);
-            Console.WriteLine($"PWM_open in channel {channel}: {err}");
+            err = dev.PWM_open(channel, timeout);
+            Console.WriteLine($"PWM_open in channel {channel}, status: {err}");
 
-            // Set frequency and duty_cycle
-            err = dev.PWM_setFrequency(channel, frequency, timeout:timeout);
-            Console.WriteLine($"PWM_setFrequency in channel {channel}: {err}");
+            // Set frequency
+            err = dev.PWM_setFrequency(channel, frequency, timeout);
+            Console.WriteLine($"PWM_setFrequency in channel {channel}, status: {err}");
 
-            err = dev.PWM_setDutyCycle(channel, duty_cycle, timeout:timeout);
-            Console.WriteLine($"PWM_setDutyCycle in channel {channel}: {err}");
+            // Set duty cycle
+            err = dev.PWM_setDutyCycle(channel, duty_cycle, timeout);
+            Console.WriteLine($"PWM_setDutyCycle in channel {channel}, status: {err}");
 
             // Start PWM
-            err = dev.PWM_start(channel, timeout:timeout);
-            Console.WriteLine($"PWM_start in channel {channel}: {err}");
+            err = dev.PWM_start(channel, timeout);
+            Console.WriteLine($"PWM_start in channel {channel}, status: {err}");
 
-            // Wait for data [ms]
-            Thread.Sleep(5000);
+            // Wait for while for generating signal [ms]
+            Thread.Sleep(5000); // delay [ms]
 
             // Stop PWM
-            err = dev.PWM_stop(channel, timeout:timeout);
-            Console.WriteLine($"PWM_stop in channel {channel}: {err}");
+            err = dev.PWM_stop(channel, timeout);
+            Console.WriteLine($"PWM_stop in channel {channel}, status: {err}");
 
             // Close PWM
-            err = dev.PWM_close(channel, timeout:timeout);
-            Console.WriteLine($"PWM_close in channel {channel}: {err}");
+            err = dev.PWM_close(channel, timeout);
+            Console.WriteLine($"PWM_close in channel {channel}, status: {err}");
         }
         catch (Exception ex)
         {

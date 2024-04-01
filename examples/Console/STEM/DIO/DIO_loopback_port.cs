@@ -21,7 +21,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -55,30 +55,32 @@ class STEM_DIO_loopback_port
             int err;
             int slot = 1; // Connect DIO module to slot
             int DO_port = 0;
-            int DI_port = 1;
+            int DI_port =  1;
+            List<int> DO_value = new List<int> {0, 1, 0, 1};
+
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get slot mode
-            string slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            string slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             // If the slot mode is not set to "DIO", set the slot mode to "DIO"
             if (slot_mode != "DIO"){
-                err = dev.Sys_setDIOMode(slot, timeout:timeout);
-                Console.WriteLine($"Sys_setDIOMode: {err}");
+                err = dev.Sys_setDIOMode(slot, timeout);
+                Console.WriteLine($"Sys_setDIOMode in slot {slot}, status: {err}");
             }
 
             // Get slot mode
-            slot_mode = dev.Sys_getMode(slot, timeout:timeout);
+            slot_mode = dev.Sys_getMode(slot, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             // Get DIO start up information
-            List<List<byte>> pinstate_list = dev.DIO_loadStartup(DO_port, timeout:timeout);
+            List<List<byte>> pinstate_list = dev.DIO_loadStartup(DO_port, timeout);
             Console.WriteLine($"Slot mode: {slot_mode}");
 
             Console.WriteLine($"enable_list");
@@ -91,11 +93,11 @@ class STEM_DIO_loopback_port
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
 
             // Write DO port to high or low
-            err = dev.DO_writePort(DO_port, new List<int> { 1, 0, 1, 0 }, timeout:timeout);
-            Console.WriteLine($"DO_writePort in DO_port {DO_port}: {err}");
+            err = dev.DO_writePort(DO_port, DO_value, timeout);
+            Console.WriteLine($"DO_writePort in DO_port {DO_port}, status: {err}");
 
             // Read DI port state
-            List<int> state = dev.DI_readPort(DI_port, timeout:timeout);
+            List<int> state = dev.DI_readPort(DI_port, timeout);
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
         }
         catch (Exception ex)

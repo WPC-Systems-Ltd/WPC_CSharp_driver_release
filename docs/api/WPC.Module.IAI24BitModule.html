@@ -111,7 +111,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -161,7 +161,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -185,8 +185,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAI24BitModule_AI_readOnDemand_" data-uid="WPC.Module.IAI24BitModule.AI_readOnDemand*"></a>
   <h4 id="WPC_Module_IAI24BitModule_AI_readOnDemand_System_Int32_System_Int32_" data-uid="WPC.Module.IAI24BitModule.AI_readOnDemand(System.Int32,System.Int32)">AI_readOnDemand(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read one sample from a given AI port.<br>
-This should only be used in the &quot;on demand&quot; mode.</p>
+  <div class="markdown level1 summary"><p>If your product is <code>EthanI</code>, port 0 will return current (mA).<br>
+If your product is <code>EthanIA</code>, it depends on your port. Port 0 will return current (mA), and port 1 will return voltage(V).<br></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -212,7 +212,7 @@ This should only be used in the &quot;on demand&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -228,7 +228,7 @@ This should only be used in the &quot;on demand&quot; mode.</p>
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Single</span>&gt;</td>
-        <td><p>List of AI values in mA that are measured on enabled channels.</p>
+        <td><p>The list of Current/Voltage. Based on the port, return the corresponding data.</p>
 </td>
       </tr>
     </tbody>

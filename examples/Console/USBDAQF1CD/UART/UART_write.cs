@@ -12,7 +12,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -49,41 +49,41 @@ class USBDAQF1CD_UART_write
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open UART port
-            err = dev.UART_open(port, timeout:timeout);
-            Console.WriteLine($"UART_open in port {port}: {err}");
+            // Open UART
+            err = dev.UART_open(port, timeout);
+            Console.WriteLine($"UART_open in port {port}, status: {err}");
 
             // Set UART port and set baudrate to 9600
-            err = dev.UART_setBaudRate(port, baudrate, timeout:timeout);
-            Console.WriteLine($"UART_setBaudRate in port {port}: {err}");
+            err = dev.UART_setBaudRate(port, baudrate, timeout);
+            Console.WriteLine($"UART_setBaudRate in port {port}, status: {err}");
 
             // Set UART port and set data bit to 8-bit data
-            err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS, timeout:timeout);
-            Console.WriteLine($"UART_setDataBit in port {port}: {err}");
+            err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS, timeout);
+            Console.WriteLine($"UART_setDataBit in port {port}, status: {err}");
 
             // Set UART port and set parity to None
-            err = dev.UART_setParity(port, Const.UART_PARITY_NONE, timeout:timeout);
-            Console.WriteLine($"UART_setParity in port {port}: {err}");
+            err = dev.UART_setParity(port, Const.UART_PARITY_NONE, timeout);
+            Console.WriteLine($"UART_setParity in port {port}, status: {err}");
 
             // Set UART port and set stop bit to 1 bit
-            err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1, timeout:timeout);
-            Console.WriteLine($"UART_setNumStopBit in port {port}: {err}");
+            err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1, timeout);
+            Console.WriteLine($"UART_setNumStopBit in port {port}, status: {err}");
 
             // Set UART port and and write "chunglee people" to device
-            err = dev.UART_write(port, "chunglee_people", timeout:timeout);
-            Console.WriteLine($"UART_write in port {port}: {err}");;
+            err = dev.UART_write(port, "chunglee_people", timeout);
+            Console.WriteLine($"UART_write in port {port}, status: {err}");
 
             // Set UART port and and write "WPC_systems" to device
-            err = dev.UART_write(port, "WPC_systems", timeout:timeout);
-            Console.WriteLine($"UART_write in port {port}: {err}");;
+            err = dev.UART_write(port, "WPC_systems", timeout);
+            Console.WriteLine($"UART_write in port {port}, status: {err}");
 
-            // Close UART port
-            err = dev.UART_close(port, timeout:timeout);
-            Console.WriteLine($"UART_close in port {port}: {err}");;
+            // Close UART
+            err = dev.UART_close(port, timeout);
+            Console.WriteLine($"UART_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

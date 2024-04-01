@@ -1,6 +1,24 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.18 Date: 2024/04/01, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New product: EthanIA, EthanP, EthanEXD, WifiDAQE3AH
+- Verify EDriveST example code
+- Add the argument of `port` in relay relatie API
+- Example code: get_serial_number.cs, set_and_get_RTC.cs, DPOT_readByChannel.cs, DPOT_writeAllChannels.cs
+- Error code: -8401 (AHRS mode), -8105 (relay port), -9300 (DPOT port), -9301 (DPOT channel)
+- image: product-EthanIA.jpg, product-EthanEXD.jpg, product-EthanP.jpg
+- image: pinmap-EthanIA.jpg, pinmap-EthanEXD.jpg, pinmap-EthanP.jpg
+
+### Fixed
+- Update example code: EDriveST
+- Sync API description with Python
+- Unify example code's printf style
+- Modify the API description of Motion_cfgLimit `en_forward` and `en_reverse`
+- Modify the API description of Motion_getProcessState
+
 v0.2.11 Date: 2023/12/13, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
@@ -28,7 +46,7 @@ v0.2.10 Date: 2023/12/04, Developer: Chunglee_people
 - Fix module reopen issue
 - Hide ``AI_N_samples_in_loop`` example code
 - Fix AI readStreaming's returned data length
- 
+
 v0.2.9 Date: 2023/11/16, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
