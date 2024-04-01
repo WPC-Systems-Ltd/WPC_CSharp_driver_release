@@ -6,7 +6,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -24,7 +24,7 @@ class WifiDAQF4A_get_WifiDAQ_status
         // Connect to device
         try
         {
-            dev.connect("192.168.5.35"); // Depend on your device
+            dev.connect("192.168.5.38"); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -40,23 +40,19 @@ class WifiDAQF4A_get_WifiDAQ_status
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Get RSSI, battery and thermo
 
-            int rssi = dev.Wifi_readRSSI(timeout:timeout);
+            int rssi = dev.Wifi_readRSSI(timeout);
 
-            int battery = dev.Wifi_readBattery(timeout:timeout);
-
-            float thermo = dev.Wifi_readThermo(timeout:timeout);
+            int battery = dev.Wifi_readBattery(timeout);
 
             Console.WriteLine($"RSSI: {rssi} dBm");
 
             Console.WriteLine($"Battery: {battery} mV");
-
-            Console.WriteLine($"Thermo: {thermo} °C");
         }
         catch (Exception ex)
         {

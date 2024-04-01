@@ -85,7 +85,7 @@
   </h3>
   <a id="WPC_Module_IUARTModule_UART_close_" data-uid="WPC.Module.IUARTModule.UART_close*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_close_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_close(System.Int32,System.Int32)">UART_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close UART port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close UART on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -111,7 +111,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -135,7 +135,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IUARTModule_UART_open_" data-uid="WPC.Module.IUARTModule.UART_open*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_open_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_open(System.Int32,System.Int32)">UART_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open UART port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open UART on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,7 +161,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -185,7 +185,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IUARTModule_UART_read_" data-uid="WPC.Module.IUARTModule.UART_read*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_read_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_read(System.Int32,System.Int32,System.Int32)">UART_read(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read data acquisition from UART port.</p>
+  <div class="markdown level1 summary"><p>Read data via UART.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -217,7 +217,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">delay</span></td>
-        <td><p>Time delay before getting data.</p>
+        <td><p>Time in milliseconds to wait for the indicated amount of data to arrive.</p>
 </td>
       </tr>
     </tbody>
@@ -233,14 +233,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>The list of UART received data.</p>
+        <td><p>The list of received data.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IUARTModule_UART_reset_" data-uid="WPC.Module.IUARTModule.UART_reset*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_reset_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_reset(System.Int32,System.Int32)">UART_reset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Reset UART to default settings.</p>
+  <div class="markdown level1 summary"><p>Reset UART to the default setting on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -266,7 +266,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -290,7 +290,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IUARTModule_UART_setBaudRate_" data-uid="WPC.Module.IUARTModule.UART_setBaudRate*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_setBaudRate_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_setBaudRate(System.Int32,System.Int32,System.Int32)">UART_setBaudRate(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the data rate in bits per second.</p>
+  <div class="markdown level1 summary"><p>Set UART baudrate on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -322,7 +322,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -346,7 +346,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IUARTModule_UART_setDataBit_" data-uid="WPC.Module.IUARTModule.UART_setDataBit*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_setDataBit_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_setDataBit(System.Int32,System.Int32,System.Int32)">UART_setDataBit(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set data size in mode.</p>
+  <div class="markdown level1 summary"><p>Set UART data size on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -372,13 +372,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer UART_Data_Size in WPC_basic.cs</p>
+        <td><p>0: 8-bit data.<br>
+1: 9-bit data.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -402,7 +404,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IUARTModule_UART_setNumStopBit_" data-uid="WPC.Module.IUARTModule.UART_setNumStopBit*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_setNumStopBit_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_setNumStopBit(System.Int32,System.Int32,System.Int32)">UART_setNumStopBit(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set number of stop bits in mode.</p>
+  <div class="markdown level1 summary"><p>Set UART stop bits on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -428,13 +430,17 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer UART_Stop_Bit in WPC_basic.cs</p>
+        <td><p>0: 1 bit.<br>
+1: 0.5 bits.<br>
+2: 2 bits.<br>
+3: 1.5 bits.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -458,7 +464,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IUARTModule_UART_setParity_" data-uid="WPC.Module.IUARTModule.UART_setParity*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_setParity_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_setParity(System.Int32,System.Int32,System.Int32)">UART_setParity(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set parity in mode.</p>
+  <div class="markdown level1 summary"><p>Set UART parity on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -484,63 +490,16 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer UART_Parity in WPC_basic.cs</p>
+        <td><p>0: none.<br>
+1: reserved.<br>
+2: even parity.<br>
+3: odd parity.<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Module_IUARTModule_UART_stopReading_" data-uid="WPC.Module.IUARTModule.UART_stopReading*"></a>
-  <h4 id="WPC_Module_IUARTModule_UART_stopReading_System_Int32_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_stopReading(System.Int32,System.Int32)">UART_stopReading(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Stop reading a stream via UART.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int UART_stopReading(int port, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -564,7 +523,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IUARTModule_UART_write_" data-uid="WPC.Module.IUARTModule.UART_write*"></a>
   <h4 id="WPC_Module_IUARTModule_UART_write_System_Int32_System_String_System_Int32_" data-uid="WPC.Module.IUARTModule.UART_write(System.Int32,System.String,System.Int32)">UART_write(Int32, String, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write data to UART port.</p>
+  <div class="markdown level1 summary"><p>Write data via UART.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -596,7 +555,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>

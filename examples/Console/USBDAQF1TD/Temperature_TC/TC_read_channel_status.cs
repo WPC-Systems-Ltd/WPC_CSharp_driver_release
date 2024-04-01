@@ -12,7 +12,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -51,24 +51,24 @@ class USBDAQF1TD_TC_read_channel_status
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open thermo port
-            err = dev.Thermal_open(port, timeout:timeout);
+            // Open thermo
+            err = dev.Thermal_open(port, timeout);
             Console.WriteLine($"Thermal_open: {err}");
 
             // Set thermo port and get status in channel 0
-            status = dev.Thermal_getStatus(port, channel_0, timeout:timeout);
+            status = dev.Thermal_getStatus(port, channel_0, timeout);
             Console.WriteLine($"Thermal_getStatus in channel 0: {status}");
 
             // Set thermo port and get status in channel 1
-            status = dev.Thermal_getStatus(port, channel_1, timeout:timeout);
+            status = dev.Thermal_getStatus(port, channel_1, timeout);
             Console.WriteLine($"Thermal_getStatus in channel 1: {status}");
 
-            // Close thermo port
-            err = dev.Thermal_close(port, timeout:timeout);
+            // Close thermo
+            err = dev.Thermal_close(port, timeout);
             Console.WriteLine($"Thermal_close: {err}");
         }
         catch (Exception ex)

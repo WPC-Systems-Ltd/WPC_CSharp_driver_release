@@ -10,7 +10,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -28,7 +28,7 @@ class WifiDAQE3A_get_network_info
         // Connect to device
         try
         {
-            dev.connect("192.168.5.35"); // Depend on your device
+            dev.connect("192.168.5.38"); // Depend on your device
         }
         catch (Exception ex)
         {
@@ -44,23 +44,17 @@ class WifiDAQE3A_get_network_info
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Get serial number & RTC Time
-            string serial_num = dev.Sys_getSerialNumber(timeout:timeout);
-            string RTC = dev.Sys_getRTC(timeout);
-            Console.WriteLine($"Serial number: {serial_num}");
-            Console.WriteLine($"RTC data time: {RTC}");
-
             // Get IP & submask
-            List<string> info = dev.Sys_getIPAddrAndSubmask(timeout:timeout);
+            List<string> info = dev.Sys_getIPAddrAndSubmask(timeout);
             Console.WriteLine($"IP: {info[0]}");
             Console.WriteLine($"Submask: {info[1]}");
 
             // Get MAC
-            string mac = dev.Sys_getMACAddr(timeout:timeout);
+            string mac = dev.Sys_getMACAddr(timeout);
             Console.WriteLine($"MAC: {mac}");
         }
         catch (Exception ex)

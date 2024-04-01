@@ -111,7 +111,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -135,8 +135,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_closeStreaming_" data-uid="WPC.Module.IAOModule.AO_closeStreaming*"></a>
   <h4 id="WPC_Module_IAOModule_AO_closeStreaming_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_closeStreaming(System.Int32,System.Int32)">AO_closeStreaming(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close AO signal generation functionality.<br>
-This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
+  <div class="markdown level1 summary"><p>Close AO signal generation functionality on a given port.<br>
+This parameter is only effective for the <code>N-samples</code> and <code>continuous</code> modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -162,7 +162,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -186,7 +186,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_getValues_" data-uid="WPC.Module.IAOModule.AO_getValues*"></a>
   <h4 id="WPC_Module_IAOModule_AO_getValues_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_getValues(System.Int32,System.Int32)">AO_getValues(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Get current voltages on an AO port.</p>
+  <div class="markdown level1 summary"><p>Get current voltages on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -212,7 +212,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -261,7 +261,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -285,8 +285,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_openStreaming_" data-uid="WPC.Module.IAOModule.AO_openStreaming*"></a>
   <h4 id="WPC_Module_IAOModule_AO_openStreaming_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_openStreaming(System.Int32,System.Int32)">AO_openStreaming(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open AO signal generation functionality.<br>
-This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
+  <div class="markdown level1 summary"><p>Open AO signal generation functionality on a given port.<br>
+This parameter is only effective for the <code>N-samples</code> and <code>continuous</code> modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -312,7 +312,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -336,7 +336,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
   <a id="WPC_Module_IAOModule_AO_setEnableChannels_" data-uid="WPC.Module.IAOModule.AO_setEnableChannels*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setEnableChannels_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IAOModule.AO_setEnableChannels(System.Int32,List{System.Int32},System.Int32)">AO_setEnableChannels(Int32, List&lt;Int32&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Set which AO channels to enable.<br>
-This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
+This parameter is only effective for the <code>N-samples</code> and <code>continuous</code> modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -362,13 +362,14 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">channel_list</span></td>
-        <td><p>List of channels to enable.<br> The channels that are not in the lists will be disabled accordingly.</p>
+        <td><p>List of channels to enable.<br>
+The channels that are not in the lists will be disabled accordingly.<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -392,8 +393,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_setForm_" data-uid="WPC.Module.IAOModule.AO_setForm*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setForm_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setForm(System.Int32,System.Int32,System.Int32,System.Int32)">AO_setForm(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set form of signal generation to an AO channel.<br>
-This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
+  <div class="markdown level1 summary"><p>Set form of signal generation to the specific channel.<br>
+This parameter is only effective for the <code>N-samples</code> and <code>continuous</code> modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -425,13 +426,17 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">form</span></td>
-        <td><p>Form of the signal to generate.<br> 1: retangular, 2: triangular, 3: sine.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+        <td><p>Form of the signal to generate.<br>
+1: retangular.<br>
+2: triangular.<br>
+3: sine.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -455,8 +460,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_setFormParam_" data-uid="WPC.Module.IAOModule.AO_setFormParam*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setFormParam_System_Int32_System_Int32_System_Double_System_Double_System_Double_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setFormParam(System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Int32)">AO_setFormParam(Int32, Int32, Double, Double, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set parameters of signal generation to an AO channel.<br>
-This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
+  <div class="markdown level1 summary"><p>Set parameters of signal generation to the specific channel.<br>
+This parameter is only effective for the <code>N-samples</code> and <code>continuous</code> modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -482,7 +487,8 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Channel number. <br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+        <td><p>Channel number. <br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
@@ -506,7 +512,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -530,7 +536,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_setMode_" data-uid="WPC.Module.IAOModule.AO_setMode*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setMode_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setMode(System.Int32,System.Int32,System.Int32)">AO_setMode(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AO generation mode.</p>
+  <div class="markdown level1 summary"><p>Set AO generation mode on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -556,13 +562,17 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Generation mode.<br> 0: on demand, 1: N-samples, 2: continuous.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+        <td><p>Generation mode.<br>
+0: on demand. <br>
+1: N-samples.<br>
+2: continuous.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -586,8 +596,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_setNumSamples_" data-uid="WPC.Module.IAOModule.AO_setNumSamples*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setNumSamples_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setNumSamples(System.Int32,System.Int32,System.Int32)">AO_setNumSamples(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set number of AO samples to generate.<br>
-This parameter is only effective for the &quot;N-samples&quot; mode.</p>
+  <div class="markdown level1 summary"><p>Set number of AO samples to generate on a given port.<br>
+This parameter is only effective for the <code>N-samples</code> mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -613,13 +623,15 @@ This parameter is only effective for the &quot;N-samples&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">num_samples</span></td>
-        <td><p>Number of samples.<br> A sample is a list of values generated simultaneously on different channels.<br> If N channels have been enabled, then a sample is made of N values.</p>
+        <td><p>Number of samples.<br>
+A sample is a list of values generated simultaneously on different channels.<br>
+If N channels have been enabled, then a sample is made of N values.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -643,8 +655,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_setSamplingRate_" data-uid="WPC.Module.IAOModule.AO_setSamplingRate*"></a>
   <h4 id="WPC_Module_IAOModule_AO_setSamplingRate_System_Int32_System_Double_System_Int32_" data-uid="WPC.Module.IAOModule.AO_setSamplingRate(System.Int32,System.Double,System.Int32)">AO_setSamplingRate(Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AO sampling rate.<br>
-This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
+  <div class="markdown level1 summary"><p>Set AO sampling rate on a given port.<br>
+This parameter is only effective for the <code>N-samples</code> and <code>continuous</code> modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -676,7 +688,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -700,8 +712,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_startStreaming_" data-uid="WPC.Module.IAOModule.AO_startStreaming*"></a>
   <h4 id="WPC_Module_IAOModule_AO_startStreaming_System_Int32_" data-uid="WPC.Module.IAOModule.AO_startStreaming(System.Int32)">AO_startStreaming(Int32)</h4>
-  <div class="markdown level1 summary"><p>Start AO signal generation.<br>
-This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
+  <div class="markdown level1 summary"><p>Start AO signal generation on a given port.<br>
+This parameter is only effective for the <code>N-samples</code> and <code>continuous</code> modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -745,8 +757,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_writeAllChannels_" data-uid="WPC.Module.IAOModule.AO_writeAllChannels*"></a>
   <h4 id="WPC_Module_IAOModule_AO_writeAllChannels_System_Int32_List_System_Double__System_Int32_" data-uid="WPC.Module.IAOModule.AO_writeAllChannels(System.Int32,List{System.Double},System.Int32)">AO_writeAllChannels(Int32, List&lt;Double&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write voltages to all channels of an AO port.<br>
-This should only be used in the &quot;on demand&quot; mode.</p>
+  <div class="markdown level1 summary"><p>Write voltages to all channels on a given port.<br>
+This should only be used in the <code>on demand</code> mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -772,13 +784,13 @@ This should only be used in the &quot;on demand&quot; mode.</p>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td><span class="parametername">value_list</span></td>
-        <td><p>List of voltages in volt where <code>value_list[i]</code> is written to Channel i.</p>
+        <td><p>The list of voltages in volts.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -802,8 +814,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAOModule_AO_writeOneChannel_" data-uid="WPC.Module.IAOModule.AO_writeOneChannel*"></a>
   <h4 id="WPC_Module_IAOModule_AO_writeOneChannel_System_Int32_System_Int32_System_Double_System_Int32_" data-uid="WPC.Module.IAOModule.AO_writeOneChannel(System.Int32,System.Int32,System.Double,System.Int32)">AO_writeOneChannel(Int32, Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write voltage to a specific AO channel.<br>
-This should only be used in the &quot;on demand&quot; mode.</p>
+  <div class="markdown level1 summary"><p>Write voltage to the specific channel.<br>
+This should only be used in the <code>on demand</code> mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -829,19 +841,20 @@ This should only be used in the &quot;on demand&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Channel number.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+        <td><p>Channel number.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">value</span></td>
-        <td><p>Voltage in volt.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+        <td><p>Voltage in volts.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
       </tr>
     </tbody>
   </table>

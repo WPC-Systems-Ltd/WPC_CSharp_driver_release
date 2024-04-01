@@ -14,7 +14,7 @@ If you'd like to create your own application, start by using this simple templat
 
 ### Hardware Requirement
 
-In order to run this example, you should get USBDAQF1RD product.
+In order to run this example, you should get USBDAQF1RD product, which contains PWM function.
 
 Then, we take `USBDAQF1RD` for example.
 

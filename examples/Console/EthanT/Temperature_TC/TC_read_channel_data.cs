@@ -12,7 +12,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -49,32 +49,32 @@ class EthanT_TC_read_channel_data
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open thermo port
-            err = dev.Thermal_open(port, timeout:timeout);
-            Console.WriteLine($"Thermal_open in port {port}: {err}");
+            // Open thermo
+            err = dev.Thermal_open(port, timeout);
+            Console.WriteLine($"Thermal_open in port {port}, status: {err}");
 
             // Set thermo port and set K type in channel 1
-            err = dev.Thermal_setOverSampling(port, ch, Const.THERMAL_OVERSAMPLING_NONE, timeout:timeout);
-            Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port {port}: {err}");
+            err = dev.Thermal_setOverSampling(port, ch, Const.THERMAL_OVERSAMPLING_NONE, timeout);
+            Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port {port}, status: {err}");
 
             // Set thermo port and set K type in channel 1
-            err = dev.Thermal_setType(port, ch, Const.THERMAL_COUPLE_TYPE_K, timeout:timeout);
-            Console.WriteLine($"Thermal_setType in channel {ch} in port {port}: {err}");
+            err = dev.Thermal_setType(port, ch, Const.THERMAL_COUPLE_TYPE_K, timeout);
+            Console.WriteLine($"Thermal_setType in channel {ch} in port {port}, status: {err}");
 
             // Wait for at least 500 ms after setting type or oversampling
             Thread.Sleep(500); // delay [ms]
 
             // Set thermo port and read thermo in channel 1
-            float data = dev.Thermal_readSensor(port, ch, timeout:timeout);
+            float data = dev.Thermal_readSensor(port, ch, timeout);
             Console.WriteLine($"Read sensor in channel {ch} in port {port}: {data}°C");
 
-            // Close thermo port
-            err = dev.Thermal_close(port, timeout:timeout);
-            Console.WriteLine($"Thermal_close in port {port}: {err}");
+            // Close thermo
+            err = dev.Thermal_close(port, timeout);
+            Console.WriteLine($"Thermal_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

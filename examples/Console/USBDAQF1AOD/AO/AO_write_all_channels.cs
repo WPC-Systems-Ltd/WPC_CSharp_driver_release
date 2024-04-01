@@ -9,7 +9,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -46,21 +46,21 @@ class USBDAQF1AOD_AO_write_all_channels
             List<double> ao_value_list = new List<double>() {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5};
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open AO
-            err = dev.AO_open(port, timeout:timeout);
-            Console.WriteLine($"AO_open in port {port}: {err}");
+            err = dev.AO_open(port, timeout);
+            Console.WriteLine($"AO_open in port {port}, status: {err}");
 
             // Write AO value simultaneously
-            err = dev.AO_writeAllChannels(port, ao_value_list, timeout:timeout);
-            Console.WriteLine($"AO_writeAllChannels in port {port}: {err}");
+            err = dev.AO_writeAllChannels(port, ao_value_list, timeout);
+            Console.WriteLine($"AO_writeAllChannels in port {port}, status: {err}");
 
             // Close AO
-            err = dev.AO_close(port, timeout:timeout);
-            Console.WriteLine($"AO_close in port {port}: {err}");
+            err = dev.AO_close(port, timeout);
+            Console.WriteLine($"AO_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

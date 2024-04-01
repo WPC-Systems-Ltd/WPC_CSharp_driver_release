@@ -111,7 +111,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -135,8 +135,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAIModule_AI_enableChannel_" data-uid="WPC.Module.IAIModule.AI_enableChannel*"></a>
   <h4 id="WPC_Module_IAIModule_AI_enableChannel_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAIModule.AI_enableChannel(System.Int32,System.Int32,System.Int32)">AI_enableChannel(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI channel.<br>
-This API is only effective for USBDAQF1AD and USBDAQF1AOD.</p>
+  <div class="markdown level1 summary"><p>Set AI channel on a given port.<br>
+This API is only effective for <code>USBDAQF1AD</code> and <code>USBDAQF1AOD</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -162,13 +162,14 @@ This API is only effective for USBDAQF1AD and USBDAQF1AOD.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>The number of channels that you want to enable.<br>If this parameter is set to 4, it means the AI channel is open from channel 0 to 3.</p>
+        <td><p>The number of channels that you want to enable.<br>
+If this parameter is set to 4, it means the AI channel is open from channel 0 to 3.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -193,7 +194,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <a id="WPC_Module_IAIModule_AI_enableCS_" data-uid="WPC.Module.IAIModule.AI_enableCS*"></a>
   <h4 id="WPC_Module_IAIModule_AI_enableCS_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IAIModule.AI_enableCS(System.Int32,List{System.Int32},System.Int32)">AI_enableCS(Int32, List&lt;Int32&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Set AI chip selection on a given slot.<br>
-This API is only effective for STEM.</p>
+This API is only effective for <code>STEM</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -219,12 +220,13 @@ This API is only effective for STEM.</p>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">chip_select</span></td>
-        <td></td>
+        <td><p>Chip-number.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -274,7 +276,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -298,8 +300,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAIModule_AI_readOnDemand_" data-uid="WPC.Module.IAIModule.AI_readOnDemand*"></a>
   <h4 id="WPC_Module_IAIModule_AI_readOnDemand_System_Int32_System_Int32_" data-uid="WPC.Module.IAIModule.AI_readOnDemand(System.Int32,System.Int32)">AI_readOnDemand(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read one sample from a given AI port.<br>
-This should only be used in the &quot;on demand&quot; mode.</p>
+  <div class="markdown level1 summary"><p>Read one sample from a given port.<br>
+This should only be used in the <code>on demand</code> mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -325,7 +327,7 @@ This should only be used in the &quot;on demand&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -377,13 +379,16 @@ Users should call this function to retrieve them from the queue.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">num_samples</span></td>
-        <td><p>Number of samples to get out from the queue.<br> A sample is a list of values measured simultaneously from different channels.<br> If there are fewer samples than the expected number, the function will return all available ones after <code>delay</code> seconds expire.</p>
+        <td><p>Number of samples to get out from the queue.<br>
+A sample is a list of values measured simultaneously from different channels.<br>
+If there are fewer samples than the expected number, the function will return all available ones after <code>delay</code> seconds expire.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">delay</span></td>
-        <td><p>Time in seconds to wait for the indicated amount of data to arrive.<br> This becomes ineffective if there are already <code>num_samples</code> samples in the queue.</p>
+        <td><p>Time in seconds to wait for the indicated amount of data to arrive.<br>
+This becomes ineffective if there are already <code>num_samples</code> samples in the queue.</p>
 </td>
       </tr>
     </tbody>
@@ -410,7 +415,7 @@ For each <code>i</code>, <code>len(sample_list[i])</code> should be equal to the
   </table>
   <a id="WPC_Module_IAIModule_AI_setMode_" data-uid="WPC.Module.IAIModule.AI_setMode*"></a>
   <h4 id="WPC_Module_IAIModule_AI_setMode_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAIModule.AI_setMode(System.Int32,System.Int32,System.Int32)">AI_setMode(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI acquisition mode.</p>
+  <div class="markdown level1 summary"><p>Set AI acquisition mode on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -436,13 +441,17 @@ For each <code>i</code>, <code>len(sample_list[i])</code> should be equal to the
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Acquisition mode.<br> 0: on demand, 1: N-samples, 2: continuous.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+        <td><p>Acquisition mode.<br>
+0: on demand.<br>
+1: N-samples.<br>
+2: continuous.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -466,7 +475,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAIModule_AI_setNumSamples_" data-uid="WPC.Module.IAIModule.AI_setNumSamples*"></a>
   <h4 id="WPC_Module_IAIModule_AI_setNumSamples_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IAIModule.AI_setNumSamples(System.Int32,System.Int32,System.Int32)">AI_setNumSamples(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set number of AI samples to acquire.<br>
+  <div class="markdown level1 summary"><p>Set number of AI samples to acquire on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -499,7 +508,7 @@ This parameter is only effective for the &quot;N-samples&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -523,7 +532,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAIModule_AI_setSamplingRate_" data-uid="WPC.Module.IAIModule.AI_setSamplingRate*"></a>
   <h4 id="WPC_Module_IAIModule_AI_setSamplingRate_System_Int32_System_Double_System_Int32_" data-uid="WPC.Module.IAIModule.AI_setSamplingRate(System.Int32,System.Double,System.Int32)">AI_setSamplingRate(Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI sampling rate.<br>
+  <div class="markdown level1 summary"><p>Set AI sampling rate on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -556,7 +565,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -580,7 +589,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAIModule_AI_start_" data-uid="WPC.Module.IAIModule.AI_start*"></a>
   <h4 id="WPC_Module_IAIModule_AI_start_System_Int32_System_Int32_" data-uid="WPC.Module.IAIModule.AI_start(System.Int32,System.Int32)">AI_start(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Start streaming acquisition on a given AI port.<br>
+  <div class="markdown level1 summary"><p>Start streaming acquisition on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -607,7 +616,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -631,7 +640,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IAIModule_AI_stop_" data-uid="WPC.Module.IAIModule.AI_stop*"></a>
   <h4 id="WPC_Module_IAIModule_AI_stop_System_Int32_System_Int32_" data-uid="WPC.Module.IAIModule.AI_stop(System.Int32,System.Int32)">AI_stop(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Stop streaming acquisition on a given AI port.<br>
+  <div class="markdown level1 summary"><p>Stop streaming acquisition on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -658,7 +667,8 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
       </tr>
     </tbody>
   </table>

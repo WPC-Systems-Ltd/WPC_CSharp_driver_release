@@ -83,7 +83,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -119,23 +119,23 @@ class EthanI_AI_on_demand_once
             int timeout = 3000; // ms
 
             // Get firmware model &amp; version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($&quot;Model name: {driver_info[0]}&quot;);
             Console.WriteLine($&quot;Firmware version: {driver_info.Last()}&quot;);
 
             // Open AI
-            err = dev.AI_open(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_open in port {port}: {err}&quot;);
+            err = dev.AI_open(port, timeout);
+            Console.WriteLine($&quot;AI_open in port {port}, status: {err}&quot;);
 
             // Read data acquisition acquisition
-            List&lt;float&gt; sample = dev.AI_readOnDemand(port, timeout:timeout);
+            List&lt;float&gt; sample = dev.AI_readOnDemand(port, timeout);
 
             // Print data
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Close AI
-            err = dev.AI_close(port, timeout:timeout);
-            Console.WriteLine($&quot;AI_close in port {port}: {err}&quot;);
+            err = dev.AI_close(port, timeout);
+            Console.WriteLine($&quot;AI_close in port {port}, status: {err}&quot;);
 
         }
         catch (Exception ex)

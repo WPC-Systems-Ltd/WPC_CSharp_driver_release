@@ -14,7 +14,7 @@ If you'd like to create your own application, start by using this simple templat
 
 ### Hardware Requirement
 
-In order to run this example, you should get EthanD product.
+In order to run this example, you should get EthanD product, which contains PWM function.
 
 Then, we take `EthanD` for example.
 

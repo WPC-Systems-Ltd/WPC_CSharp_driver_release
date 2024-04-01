@@ -10,7 +10,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -42,26 +42,31 @@ class USBDAQF1D_DO_write_pins
         {
             // Parameters setting
             int err;
-            int port = 0;
-            List<int> pinindex = new List<int> {1, 3, 5, 7};
+            int port = 0; // Depend on your device
+
+            List<int> pinindex = new List<int> {0, 1, 2, 3};
+            List<int> DO_value = new List<int> {1, 0, 1, 0};
             int timeout = 3000; // ms
 
             // Get firmware model & version
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Open pins with digital output
-            err = dev.DO_openPins(port, pinindex, timeout:timeout);
-            Console.WriteLine($"DO_openPins in port {port}: {err}");
+            err = dev.DO_openPins(port, pinindex, timeout);
+            Console.WriteLine($"DO_openPins in port {port}, status: {err}");
 
             // Write pins to high or low
-            err = dev.DO_writePins(port, pinindex, new List<int> {1, 1, 0, 0}, timeout:timeout);
-            Console.WriteLine($"DO_writePins in port {port}: {err}");
+            err = dev.DO_writePins(port, pinindex, DO_value, timeout);
+            Console.WriteLine($"DO_writePins in port {port}, status: {err}");
+
+            // Wait for ms to see led status
+            Thread.Sleep(3000); // delay [ms]
 
             // Close pins with digital output
-            err = dev.DO_closePins(port, pinindex, timeout:timeout);
-            Console.WriteLine($"DO_closePins in port {port}: {err}");
+            err = dev.DO_closePins(port, pinindex, timeout);
+            Console.WriteLine($"DO_closePins in port {port}, status: {err}");
 
         }
         catch (Exception ex)

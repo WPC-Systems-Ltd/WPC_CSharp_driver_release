@@ -4,7 +4,7 @@
 /// https://github.com/WPC-Systems-Ltd/WPC_CSharp_driver_release/tree/main/examples
 /// See README.md file to get detailed usage of this example.
 ///
-/// Copyright (c) 2023 WPC Systems Ltd.
+/// Copyright (c) 2024 WPC Systems Ltd.
 /// All rights reserved.
 
 using WPC.Product;
@@ -38,28 +38,28 @@ class EMotion_get_logical_position
             int port = 0;
             int timeout = 3000; // ms
 
-            string[] driver_info = dev.Sys_getDriverInfo(timeout:timeout);
+            string[] driver_info = dev.Sys_getDriverInfo(timeout);
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
             // Motion open
-            err = dev.Motion_open(port, timeout:timeout);
-            Console.WriteLine($"Motion_open in port {port}: {err}");
+            err = dev.Motion_open(port, timeout);
+            Console.WriteLine($"Motion_open in port {port}, status: {err}");
 
             for (int i=0; i<100; i++)
             {
-                err = dev.Motion_setLogicalPosi(port, Const.MOT_AXIS1, i, timeout:timeout);
+                err = dev.Motion_setLogicalPosi(port, Const.MOT_AXIS1, i, timeout);
                 if (err != 0)
                 {
                     Console.WriteLine($"setLogicalPosi: {err}");
                 }
-                int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1, timeout:timeout);
+                int posi = dev.Motion_getLogicalPosi(port, Const.MOT_AXIS1, timeout);
                 Console.WriteLine($"getLogicalPosi: {posi}");
             }
 
             // Motion close
-            err = dev.Motion_close(port, timeout:timeout);
-            Console.WriteLine($"Motion_close in port {port}: {err}");
+            err = dev.Motion_close(port, timeout);
+            Console.WriteLine($"Motion_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

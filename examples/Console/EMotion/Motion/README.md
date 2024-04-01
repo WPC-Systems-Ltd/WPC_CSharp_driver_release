@@ -4,7 +4,7 @@
 
 ## Overview
 
-This example project demonstrates how to use WPC CSharp driver to communication with EMotion
+This example project demonstrates how to use WPC CSharp driver to communication with motion
 
 In order to use API correctly, please refer to the [documentation](https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/).
 
