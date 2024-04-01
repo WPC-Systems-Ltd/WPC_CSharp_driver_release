@@ -8,7 +8,9 @@ v0.2.18 Date: 2024/04/01, Developer: Chunglee_people
 - Verify EDriveST example code
 - Add the argument of `port` in relay relatie API
 - Example code: get_serial_number.cs, set_and_get_RTC.cs, DPOT_readByChannel.cs, DPOT_writeAllChannels.cs
-- Error code: -8105 (relay port), -9300 (DPOT port), -9301 (DPOT channel)
+- Error code: -8401 (AHRS mode), -8105 (relay port), -9300 (DPOT port), -9301 (DPOT channel)
+- image: product-EthanIA.jpg, product-EthanEXD.jpg, product-EthanP.jpg
+- image: pinmap-EthanIA.jpg, pinmap-EthanEXD.jpg, pinmap-EthanP.jpg
 
 ### Fixed
 - Update example code: EDriveST
