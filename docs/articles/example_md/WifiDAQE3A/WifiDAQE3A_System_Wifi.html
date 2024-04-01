@@ -215,13 +215,9 @@ class WifiDAQE3A_get_WifiDAQ_status
 
             int battery = dev.Wifi_readBattery(timeout);
 
-            float thermo = dev.Wifi_readThermo(timeout);
-
             Console.WriteLine($&quot;RSSI: {rssi} dBm&quot;);
 
             Console.WriteLine($&quot;Battery: {battery} mV&quot;);
-
-            Console.WriteLine($&quot;Thermo: {thermo} °C&quot;);
         }
         catch (Exception ex)
         {
@@ -502,7 +498,7 @@ class WifiDAQE3A_set_and_get_RTC
 
             // Set RTC
             int err = dev.Sys_setRTC(2023, 5, 8, 15, 8, 7, timeout);
-            Console.WriteLine($&quot;Sys_setRTC: {err}&quot;);
+            Console.WriteLine($&quot;Set RTC to 2023-05-08, 15:08:07 , status: {err}&quot;);
 
             for(int i=0; i&lt;10; i++){
                 string rtc_time = dev.Sys_getRTC(timeout);

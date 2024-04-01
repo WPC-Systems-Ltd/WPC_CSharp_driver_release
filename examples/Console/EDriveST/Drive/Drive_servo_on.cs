@@ -46,23 +46,23 @@ class EDriveST_Drive_servo_on
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"Motion_open: {err}");
+            Console.WriteLine($"Motion_open, status: {err}");
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($"Motion_enableServoOn {err}");
+            Console.WriteLine($"Motion_enableServoOn, status: {err}");
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($"Motion_stopProcess: {err}");
+            Console.WriteLine($"Motion_stopProcess, status: {err}");
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($"Motion_enableServoOff: {err}");
+            Console.WriteLine($"Motion_enableServoOff, status: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"Motion_close: {err}");
+            Console.WriteLine($"Motion_close, status: {err}");
         }
         catch (Exception ex)
         {

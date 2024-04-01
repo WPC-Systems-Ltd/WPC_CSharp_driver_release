@@ -53,11 +53,11 @@ class WifiDAQE3AH_AHRS_getOrientation
 
             // Open AHRS and update rate is 333 HZ
             err = dev.AHRS_open(port, timeout);
-            Console.WriteLine($"AHRS_open in port {port}: {err}");
+            Console.WriteLine($"AHRS_open in port {port}, status: {err}");
 
             // Start AHRS
             err = dev.AHRS_start(port, timeout);
-            Console.WriteLine($"AHRS_start in port {port}: {err}");
+            Console.WriteLine($"AHRS_start in port {port}, status: {err}");
 
             // Get three axis orientation
             int counter = 0;
@@ -70,11 +70,11 @@ class WifiDAQE3AH_AHRS_getOrientation
 
             // Stop AHRS
             err = dev.AHRS_stop(port, timeout);
-            Console.WriteLine($"AHRS_stop in port {port}: {err}");
+            Console.WriteLine($"AHRS_stop in port {port}, status: {err}");
 
             // Close AHRS
             err = dev.AHRS_close(port, timeout);
-            Console.WriteLine($"AHRS_close in port {port}: {err}");
+            Console.WriteLine($"AHRS_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

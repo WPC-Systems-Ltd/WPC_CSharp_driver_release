@@ -38,7 +38,8 @@ class EthanL_Relay_read_counters
         {
             // Parameters setting
             int err;
-            int index = -1;
+            int port = 0;
+            int index = -1; // Read all the relay counters
             int timeout = 3000; // ms
 
             // Get firmware model & version
@@ -46,19 +47,17 @@ class EthanL_Relay_read_counters
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open Relay open
-            err = dev.Relay_open(timeout);
-            Console.WriteLine($"Relay_open: {err}");
+            // Open relay
+            err = dev.Relay_open(port, timeout);
+            Console.WriteLine($"Relay_open in port {port}, status: {err}");
 
             // Read counters
-            List<int> counter = dev.Relay_read(index:index, timeout:timeout);
+            List<int> counter = dev.Relay_read(port, index, timeout);
+            Console.WriteLine(string.Format("[{0}]", string.Join(", ", counter)));
 
-            foreach (int c in counter)
-            {
-                Console.WriteLine($"Relay_read: {c}");
-            }
-            err = dev.Relay_close(timeout);
-            Console.WriteLine($"Relay_close: {err}");
+            // Close relay
+            err = dev.Relay_close(port, timeout);
+            Console.WriteLine($"Relay_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

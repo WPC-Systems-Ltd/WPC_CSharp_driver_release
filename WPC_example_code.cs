@@ -18,7 +18,7 @@ public class WPC_example_code
         Console.WriteLine("EthanI, please input 12");
         Console.WriteLine("EthanL, please input 13");
         Console.WriteLine("EthanO, please input 14");
-        //Console.WriteLine("EthanP, please input 15");
+        Console.WriteLine("EthanP, please input 15");
         Console.WriteLine("EthanT, please input 16");
         Console.WriteLine("EthanIA, please input 17");
         Console.WriteLine("EthanEXD, please input 18");
@@ -313,6 +313,17 @@ public class WPC_example_code
     }
     #endregion
 
+    #region DPOTMessage
+    static void showDPOTMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For DPOT");
+        Console.WriteLine("--------");
+        Console.WriteLine("Run DPOT_readByChannel.cs, please input 700");
+        Console.WriteLine("Run DPOT_writeAllChannels.cs, please input 701");
+
+    }
+    #endregion
     static void Main()
     {
         Console.WriteLine("Welcome to WPC C# driver example code.");
@@ -353,7 +364,6 @@ public class WPC_example_code
                 showDriveMessage();
                 break;
 
-
             case 10:
                 Console.WriteLine("Get 10, show EthanA series example code");
                 showSysETHMessage();
@@ -381,6 +391,12 @@ public class WPC_example_code
 
             case 14:
                 Console.WriteLine("Get 14, show EthanO series example code");
+                showSysETHMessage();
+                showDPOTMessage();
+                break;
+
+            case 15:
+                Console.WriteLine("Get 15, show EthanP series example code");
                 showSysETHMessage();
                 showAOMessage();
                 break;
@@ -947,6 +963,38 @@ public class WPC_example_code
                         break;
                     case 135:
                         EthanO_AO_waveform_generation.Main();
+                        break;
+                    #endregion
+
+                    default:
+                        break;
+                }
+                break;
+
+            case 15:
+                switch (example_code)
+                {
+                    #region EthanP_Sys
+                    case 1:
+                        EthanP_get_network_info.Main();
+                        break;
+                    case 2:
+                        EthanP_get_serial_number.Main();
+                        break;
+                    case 3:
+                        EthanP_hello_world.Main();
+                        break;
+                    case 4:
+                        EthanP_set_and_get_RTC.Main();
+                        break;
+                    #endregion
+
+                    #region EthanP_DPOT
+                    case 700:
+                        EthanP_DPOT_readByChannel.Main();
+                        break;
+                    case 701:
+                        EthanP_DPOT_writeAllChannels.Main();
                         break;
                     #endregion
 

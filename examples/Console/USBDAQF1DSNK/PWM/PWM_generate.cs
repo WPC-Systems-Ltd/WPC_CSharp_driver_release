@@ -53,29 +53,30 @@ class USBDAQF1DSNK_PWM_generate
 
             // Open PWM
             err = dev.PWM_open(channel, timeout);
-            Console.WriteLine($"PWM_open in channel {channel}: {err}");
+            Console.WriteLine($"PWM_open in channel {channel}, status: {err}");
 
-            // Set frequency and duty_cycle
+            // Set frequency
             err = dev.PWM_setFrequency(channel, frequency, timeout);
-            Console.WriteLine($"PWM_setFrequency in channel {channel}: {err}");
+            Console.WriteLine($"PWM_setFrequency in channel {channel}, status: {err}");
 
+            // Set duty cycle
             err = dev.PWM_setDutyCycle(channel, duty_cycle, timeout);
-            Console.WriteLine($"PWM_setDutyCycle in channel {channel}: {err}");
+            Console.WriteLine($"PWM_setDutyCycle in channel {channel}, status: {err}");
 
             // Start PWM
             err = dev.PWM_start(channel, timeout);
-            Console.WriteLine($"PWM_start in channel {channel}: {err}");
+            Console.WriteLine($"PWM_start in channel {channel}, status: {err}");
 
-            // Wait for data [ms]
+            // Wait for while for generating signal [ms]
             Thread.Sleep(5000); // delay [ms]
 
             // Stop PWM
             err = dev.PWM_stop(channel, timeout);
-            Console.WriteLine($"PWM_stop in channel {channel}: {err}");
+            Console.WriteLine($"PWM_stop in channel {channel}, status: {err}");
 
             // Close PWM
             err = dev.PWM_close(channel, timeout);
-            Console.WriteLine($"PWM_close in channel {channel}: {err}");
+            Console.WriteLine($"PWM_close in channel {channel}, status: {err}");
         }
         catch (Exception ex)
         {

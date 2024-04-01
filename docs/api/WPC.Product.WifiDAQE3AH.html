@@ -391,7 +391,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -576,7 +576,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -600,8 +600,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_AI_enableChannel_" data-uid="WPC.Product.WifiDAQE3AH.AI_enableChannel*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_AI_enableChannel_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.AI_enableChannel(System.Int32,System.Int32,System.Int32)">AI_enableChannel(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI channel.<br>
-This API is only effective for USBDAQF1AD and USBDAQF1AOD.</p>
+  <div class="markdown level1 summary"><p>Set AI channel on a given port.<br>
+This API is only effective for <code>USBDAQF1AD</code> and <code>USBDAQF1AOD</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -627,13 +627,14 @@ This API is only effective for USBDAQF1AD and USBDAQF1AOD.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>The number of channels that you want to enable.<br>If this parameter is set to 4, it means the AI channel is open from channel 0 to 3.</p>
+        <td><p>The number of channels that you want to enable.<br>
+If this parameter is set to 4, it means the AI channel is open from channel 0 to 3.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -658,7 +659,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <a id="WPC_Product_WifiDAQE3AH_AI_enableCS_" data-uid="WPC.Product.WifiDAQE3AH.AI_enableCS*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_AI_enableCS_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.AI_enableCS(System.Int32,List{System.Int32},System.Int32)">AI_enableCS(Int32, List&lt;Int32&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Set AI chip selection on a given slot.<br>
-This API is only effective for STEM.</p>
+This API is only effective for <code>STEM</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -684,12 +685,13 @@ This API is only effective for STEM.</p>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">chip_select</span></td>
-        <td></td>
+        <td><p>Chip-number.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -739,7 +741,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -763,8 +765,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_AI_readOnDemand_" data-uid="WPC.Product.WifiDAQE3AH.AI_readOnDemand*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_AI_readOnDemand_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.AI_readOnDemand(System.Int32,System.Int32)">AI_readOnDemand(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read one sample from a given AI port.<br>
-This should only be used in the &quot;on demand&quot; mode.</p>
+  <div class="markdown level1 summary"><p>Read one sample from a given port.<br>
+This should only be used in the <code>on demand</code> mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -790,7 +792,7 @@ This should only be used in the &quot;on demand&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -842,13 +844,16 @@ Users should call this function to retrieve them from the queue.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">num_samples</span></td>
-        <td><p>Number of samples to get out from the queue.<br> A sample is a list of values measured simultaneously from different channels.<br> If there are fewer samples than the expected number, the function will return all available ones after <code>delay</code> seconds expire.</p>
+        <td><p>Number of samples to get out from the queue.<br>
+A sample is a list of values measured simultaneously from different channels.<br>
+If there are fewer samples than the expected number, the function will return all available ones after <code>delay</code> seconds expire.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">delay</span></td>
-        <td><p>Time in seconds to wait for the indicated amount of data to arrive.<br> This becomes ineffective if there are already <code>num_samples</code> samples in the queue.</p>
+        <td><p>Time in seconds to wait for the indicated amount of data to arrive.<br>
+This becomes ineffective if there are already <code>num_samples</code> samples in the queue.</p>
 </td>
       </tr>
     </tbody>
@@ -875,7 +880,7 @@ For each <code>i</code>, <code>len(sample_list[i])</code> should be equal to the
   </table>
   <a id="WPC_Product_WifiDAQE3AH_AI_setMode_" data-uid="WPC.Product.WifiDAQE3AH.AI_setMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_AI_setMode_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.AI_setMode(System.Int32,System.Int32,System.Int32)">AI_setMode(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI acquisition mode.</p>
+  <div class="markdown level1 summary"><p>Set AI acquisition mode on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -901,13 +906,17 @@ For each <code>i</code>, <code>len(sample_list[i])</code> should be equal to the
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Acquisition mode.<br> 0: on demand, 1: N-samples, 2: continuous.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+        <td><p>Acquisition mode.<br>
+0: on demand.<br>
+1: N-samples.<br>
+2: continuous.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -931,7 +940,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_AI_setNumSamples_" data-uid="WPC.Product.WifiDAQE3AH.AI_setNumSamples*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_AI_setNumSamples_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.AI_setNumSamples(System.Int32,System.Int32,System.Int32)">AI_setNumSamples(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set number of AI samples to acquire.<br>
+  <div class="markdown level1 summary"><p>Set number of AI samples to acquire on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -963,7 +972,7 @@ This parameter is only effective for the &quot;N-samples&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -987,7 +996,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_AI_setSamplingRate_" data-uid="WPC.Product.WifiDAQE3AH.AI_setSamplingRate*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_AI_setSamplingRate_System_Int32_System_Double_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.AI_setSamplingRate(System.Int32,System.Double,System.Int32)">AI_setSamplingRate(Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI sampling rate.<br>
+  <div class="markdown level1 summary"><p>Set AI sampling rate on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1020,7 +1029,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1044,7 +1053,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_AI_start_" data-uid="WPC.Product.WifiDAQE3AH.AI_start*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_AI_start_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.AI_start(System.Int32,System.Int32)">AI_start(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Start streaming acquisition on a given AI port.<br>
+  <div class="markdown level1 summary"><p>Start streaming acquisition on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1071,7 +1080,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1095,7 +1104,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_AI_stop_" data-uid="WPC.Product.WifiDAQE3AH.AI_stop*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_AI_stop_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.AI_stop(System.Int32,System.Int32)">AI_stop(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Stop streaming acquisition on a given AI port.<br>
+  <div class="markdown level1 summary"><p>Stop streaming acquisition on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1122,7 +1131,8 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1462,7 +1472,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1505,7 +1515,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1548,7 +1558,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1591,7 +1601,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1614,7 +1624,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_getMode_" data-uid="WPC.Product.WifiDAQE3AH.Sys_getMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_getMode_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_getMode(System.Int32,System.Int32)">Sys_getMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Get the mode of the slot from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get the mode from a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1640,7 +1650,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1663,7 +1673,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_getRTC_" data-uid="WPC.Product.WifiDAQE3AH.Sys_getRTC*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_getRTC_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_getRTC(System.Int32)">Sys_getRTC(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get date and time to connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get RTC date and time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1683,7 +1693,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1706,7 +1716,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_getSerialNumber_" data-uid="WPC.Product.WifiDAQE3AH.Sys_getSerialNumber*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_getSerialNumber_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_getSerialNumber(System.Int32)">Sys_getSerialNumber(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get serial number from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get serial number.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1726,7 +1736,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1749,7 +1759,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_reboot_" data-uid="WPC.Product.WifiDAQE3AH.Sys_reboot*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_reboot_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_reboot(System.Int32)">Sys_reboot(Int32)</h4>
-  <div class="markdown level1 summary"><p>Reboot from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Reboot the device.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1769,51 +1779,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_WifiDAQE3AH_Sys_rebootOnBootloader_" data-uid="WPC.Product.WifiDAQE3AH.Sys_rebootOnBootloader*"></a>
-  <h4 id="WPC_Product_WifiDAQE3AH_Sys_rebootOnBootloader_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_rebootOnBootloader(System.Int32)">Sys_rebootOnBootloader(Int32)</h4>
-  <div class="markdown level1 summary"><p>Reboot on bootloader from the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_rebootOnBootloader(int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1837,7 +1803,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_setAIOMode_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setAIOMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_setAIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setAIOMode(System.Int32,System.Int32)">Sys_setAIOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the AIO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the AIO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1863,7 +1829,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1887,7 +1853,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_setDIMode_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setDIMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_setDIMode_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setDIMode(System.Int32,System.Int32)">Sys_setDIMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DI state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DI state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1913,7 +1879,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1937,7 +1903,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_setDIOMode_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setDIOMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_setDIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setDIOMode(System.Int32,System.Int32)">Sys_setDIOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DIO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DIO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1963,7 +1929,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1987,7 +1953,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_setDOMode_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setDOMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_setDOMode_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setDOMode(System.Int32,System.Int32)">Sys_setDOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2013,7 +1979,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2037,7 +2003,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_setIdleMode_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setIdleMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_setIdleMode_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setIdleMode(System.Int32,System.Int32)">Sys_setIdleMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the IDLE state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the IDLE state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2063,7 +2029,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2119,7 +2085,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2143,7 +2109,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_setMotionMode_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setMotionMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_setMotionMode_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setMotionMode(System.Int32,System.Int32)">Sys_setMotionMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the motion state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the motion state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2169,7 +2135,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2193,7 +2159,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_setRTC_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setRTC*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)">Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set date and time to connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set RTC date and time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2249,7 +2215,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2273,7 +2239,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_setSwitchMode_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setSwitchMode*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_setSwitchMode_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_setSwitchMode(System.Int32,System.Int32)">Sys_setSwitchMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the switch state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the switch state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2299,7 +2265,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2321,9 +2287,55 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Product_WifiDAQE3AH_Wifi_getBandwidth_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getBandwidth*"></a>
+  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_getBandwidth_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getBandwidth(System.Int32)">Wifi_getBandwidth(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get the bandwidth from WifiDAQ.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Wifi_getBandwidth(int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><ul>
+<li>1: Bandwidth is HT20.</li>
+<li>2: Bandwidth is HT40.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Product_WifiDAQE3AH_Wifi_getChargeStatus_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getChargeStatus*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Wifi_getChargeStatus_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getChargeStatus(System.Int32)">Wifi_getChargeStatus(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get charge status.</p>
+  <div class="markdown level1 summary"><p>Get status about the battery being charged from WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2343,7 +2355,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2364,14 +2376,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Product_WifiDAQE3AH_Wifi_getPowerGoodStatus_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getPowerGoodStatus*"></a>
-  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_getPowerGoodStatus_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getPowerGoodStatus(System.Int32)">Wifi_getPowerGoodStatus(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get power good status.</p>
+  <a id="WPC_Product_WifiDAQE3AH_Wifi_getConfiguration_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getConfiguration*"></a>
+  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_getConfiguration_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getConfiguration(System.Int32)">Wifi_getConfiguration(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get reconnection times and AP stay time from WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Wifi_getPowerGoodStatus(int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;int&gt; Wifi_getConfiguration(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2386,96 +2398,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Power good status.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_WifiDAQE3AH_Wifi_getWifiBandwidth_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getWifiBandwidth*"></a>
-  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_getWifiBandwidth_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getWifiBandwidth(System.Int32)">Wifi_getWifiBandwidth(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get bandwidth from Wifi device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Wifi_getWifiBandwidth(int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><ul>
-<li>1 : Bandwidth is HT20.</li>
-<li>2 : Bandwidth is HT40.</li>
-</ul>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_WifiDAQE3AH_Wifi_getWifiConfiguration_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getWifiConfiguration*"></a>
-  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_getWifiConfiguration_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getWifiConfiguration(System.Int32)">Wifi_getWifiConfiguration(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get Wifi reconnection times and AP stay time.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;int&gt; Wifi_getWifiConfiguration(int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2496,14 +2419,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Product_WifiDAQE3AH_Wifi_readAcceleration_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_readAcceleration*"></a>
-  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_readAcceleration_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_readAcceleration(System.Int32)">Wifi_readAcceleration(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get acceleration from sensor if the Wifi device has one.</p>
+  <a id="WPC_Product_WifiDAQE3AH_Wifi_getPowerGoodStatus_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getPowerGoodStatus*"></a>
+  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_getPowerGoodStatus_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_getPowerGoodStatus(System.Int32)">Wifi_getPowerGoodStatus(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get status about the battery being fully charged from WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;int&gt; Wifi_readAcceleration(int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public int Wifi_getPowerGoodStatus(int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2518,7 +2441,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2533,15 +2456,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>List of accelerations in x-, y-, and z-axis.</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Battery status.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Wifi_readBattery_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_readBattery*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Wifi_readBattery_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_readBattery(System.Int32)">Wifi_readBattery(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get volatge status of battery if the Wifi device has one.</p>
+  <div class="markdown level1 summary"><p>Get volatge of battery from WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2561,7 +2484,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2584,7 +2507,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Wifi_readRSSI_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_readRSSI*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Wifi_readRSSI_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_readRSSI(System.Int32)">Wifi_readRSSI(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get Wifi RSSI signal of the connected Wifi device.</p>
+  <div class="markdown level1 summary"><p>Read the signal strength from WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2604,7 +2527,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2625,52 +2548,9 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Product_WifiDAQE3AH_Wifi_readThermo_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_readThermo*"></a>
-  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_readThermo_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_readThermo(System.Int32)">Wifi_readThermo(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get temperature from thermal sensor if the Wifi device has one.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Wifi_readThermo(int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><p>Temperature in Celsius.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="WPC_Product_WifiDAQE3AH_Wifi_resetLED_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_resetLED*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Wifi_resetLED_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_resetLED(System.Int32)">Wifi_resetLED(Int32)</h4>
-  <div class="markdown level1 summary"><p>Reset LED.</p>
+  <div class="markdown level1 summary"><p>Reset LED to WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2690,7 +2570,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2714,7 +2594,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Wifi_setBlueLED_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_setBlueLED*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Wifi_setBlueLED_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_setBlueLED(System.Int32,System.Int32)">Wifi_setBlueLED(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set blue LED.</p>
+  <div class="markdown level1 summary"><p>Set the blue LED status, while turning off the others to WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2734,12 +2614,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>High(1) or low(0) value.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2763,7 +2644,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Wifi_setGreenLED_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_setGreenLED*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Wifi_setGreenLED_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_setGreenLED(System.Int32,System.Int32)">Wifi_setGreenLED(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set green LED.</p>
+  <div class="markdown level1 summary"><p>Set the green LED status, while turning off the others to WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2783,12 +2664,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>High(1) or low(0) value.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2812,7 +2694,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_WifiDAQE3AH_Wifi_setRedLED_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_setRedLED*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Wifi_setRedLED_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_setRedLED(System.Int32,System.Int32)">Wifi_setRedLED(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set red LED.</p>
+  <div class="markdown level1 summary"><p>Set the red LED status, while turning off the others to WifiDAQ.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2832,62 +2714,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_WifiDAQE3AH_Wifi_setWifiBandWidth_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_setWifiBandWidth*"></a>
-  <h4 id="WPC_Product_WifiDAQE3AH_Wifi_setWifiBandWidth_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Wifi_setWifiBandWidth(System.Int32,System.Int32)">Wifi_setWifiBandWidth(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set bandwidth to Wifi Device.It recommend bandwidth configure to 1.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Wifi_setWifiBandWidth(int bandwidth, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">bandwidth</span></td>
-        <td><p>1: bandwidth is HT20, 2: bandwidth is HT40.</p>
+        <td><p>High(1) or low(0) value.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>

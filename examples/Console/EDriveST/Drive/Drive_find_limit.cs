@@ -50,23 +50,23 @@ class EDriveST_Drive_find_limit
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"Motion_open: {err}");
+            Console.WriteLine($"Motion_open, status: {err}");
 
             // Motion config
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($"Motion_cfgLimit {err}");
+            Console.WriteLine($"Motion_cfgLimit, status: {err}");
 
             // Motion reset
             err = dev.Motion_rstEncoderPosi(port, timeout);
-            Console.WriteLine($"Motion_rstEncoderPosi {err}");
+            Console.WriteLine($"Motion_resetEncoderPosi, status: {err}");
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($"Motion_enableServoOn {err}");
+            Console.WriteLine($"Motion_enableServoOn, status: {err}");
 
             // Motion find limit
             err = dev.Motion_startFindLimit(port, Const.MOT_FORWARD, searching_speed, approaching_speed, acceleration, offset, Const.MOT_FALSE, timeout);
-            Console.WriteLine($"Motion_startFindLimit {err}");
+            Console.WriteLine($"Motion_startFindLimit, status: {err}");
 
             int status = 1;
             while (status != 0) {
@@ -84,15 +84,15 @@ class EDriveST_Drive_find_limit
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($"Motion_stopProcess: {err}");
+            Console.WriteLine($"Motion_stopProcess, status: {err}");
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($"Motion_enableServoOff: {err}");
+            Console.WriteLine($"Motion_enableServoOff, status: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"Motion_close: {err}");
+            Console.WriteLine($"Motion_close, status: {err}");
         }
         catch (Exception ex)
         {

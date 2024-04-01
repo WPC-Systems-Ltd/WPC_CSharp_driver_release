@@ -48,11 +48,11 @@ class USBDAQF1AOD_Counter_read
 
             // Open counter
             err = dev.Counter_open(channel, timeout);
-            Console.WriteLine($"Counter_open in channel {channel}: {err}");
+            Console.WriteLine($"Counter_open in channel {channel}, status: {err}");
 
             // Start counter
             err = dev.Counter_start(channel, timeout);
-            Console.WriteLine($"Counter_start in channel {channel}: {err}");
+            Console.WriteLine($"Counter_start in channel {channel}, status: {err}");
 
             // Read counter
             for (int i=0; i<10; i++)
@@ -64,11 +64,11 @@ class USBDAQF1AOD_Counter_read
 
             // Stop counter
             err = dev.Counter_stop(channel, timeout);
-            Console.WriteLine($"Counter_stop in channel {channel}: {err}");
+            Console.WriteLine($"Counter_stop in channel {channel}, status: {err}");
 
             // Close counter
             err = dev.Counter_close(channel, timeout);
-            Console.WriteLine($"Counter_close in channel {channel}: {err}");
+            Console.WriteLine($"Counter_close in channel {channel}, status: {err}");
         }
         catch (Exception ex)
         {

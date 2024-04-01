@@ -85,7 +85,7 @@
   </h3>
   <a id="WPC_Module_IDIOModule_DI_closePins_" data-uid="WPC.Module.IDIOModule.DI_closePins*"></a>
   <h4 id="WPC_Module_IDIOModule_DI_closePins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IDIOModule.DI_closePins(System.Int32,List{System.Int32},System.Int32)">DI_closePins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close specific pin to digital intput.</p>
+  <div class="markdown level1 summary"><p>Close the specific pin to digital intput.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -111,13 +111,15 @@
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to close.<br> For example, you want to close pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to close.<br>
+For example, you want to close pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -141,7 +143,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DI_closePort_" data-uid="WPC.Module.IDIOModule.DI_closePort*"></a>
   <h4 id="WPC_Module_IDIOModule_DI_closePort_System_Int32_System_Int32_" data-uid="WPC.Module.IDIOModule.DI_closePort(System.Int32,System.Int32)">DI_closePort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close all pins in specific port with digital input.</p>
+  <div class="markdown level1 summary"><p>Close all pins in the specific port to digital input.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -167,7 +169,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -191,7 +193,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DI_openPins_" data-uid="WPC.Module.IDIOModule.DI_openPins*"></a>
   <h4 id="WPC_Module_IDIOModule_DI_openPins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IDIOModule.DI_openPins(System.Int32,List{System.Int32},System.Int32)">DI_openPins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open specific pin to digital intput.</p>
+  <div class="markdown level1 summary"><p>Open the specific pin to digital intput.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -217,15 +219,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to set to digital intput.
-For example, you want to open pin 0, pin 1 and pin 5.
-pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -249,7 +251,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DI_openPort_" data-uid="WPC.Module.IDIOModule.DI_openPort*"></a>
   <h4 id="WPC_Module_IDIOModule_DI_openPort_System_Int32_System_Int32_" data-uid="WPC.Module.IDIOModule.DI_openPort(System.Int32,System.Int32)">DI_openPort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open all pins in specific port with digital input.</p>
+  <div class="markdown level1 summary"><p>Open all pins in specific port to digital input.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -275,7 +277,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -299,7 +301,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DI_readPins_" data-uid="WPC.Module.IDIOModule.DI_readPins*"></a>
   <h4 id="WPC_Module_IDIOModule_DI_readPins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IDIOModule.DI_readPins(System.Int32,List{System.Int32},System.Int32)">DI_readPins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read digital pin state in specific pin.</p>
+  <div class="markdown level1 summary"><p>Read the specefic pin state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -325,13 +327,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to read.<br> For example, you want to read pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to close.<br>
+For example, you want to close pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -354,7 +358,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DI_readPort_" data-uid="WPC.Module.IDIOModule.DI_readPort*"></a>
   <h4 id="WPC_Module_IDIOModule_DI_readPort_System_Int32_System_Int32_" data-uid="WPC.Module.IDIOModule.DI_readPort(System.Int32,System.Int32)">DI_readPort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read all digital pins state in specific port.</p>
+  <div class="markdown level1 summary"><p>Read all pins state in the specific port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -380,7 +384,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -448,7 +452,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DO_closePins_" data-uid="WPC.Module.IDIOModule.DO_closePins*"></a>
   <h4 id="WPC_Module_IDIOModule_DO_closePins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IDIOModule.DO_closePins(System.Int32,List{System.Int32},System.Int32)">DO_closePins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close specific pin with digital output.</p>
+  <div class="markdown level1 summary"><p>Close the specific pin to digital output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -474,13 +478,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to close.<br> For example, you want to close pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -530,7 +536,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -554,7 +560,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DO_openPins_" data-uid="WPC.Module.IDIOModule.DO_openPins*"></a>
   <h4 id="WPC_Module_IDIOModule_DO_openPins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IDIOModule.DO_openPins(System.Int32,List{System.Int32},System.Int32)">DO_openPins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open specific pin to digital output.</p>
+  <div class="markdown level1 summary"><p>Open the specific pin to digital output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -580,13 +586,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to set to digital output.<br> For example, you want to open pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -610,7 +618,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DO_openPort_" data-uid="WPC.Module.IDIOModule.DO_openPort*"></a>
   <h4 id="WPC_Module_IDIOModule_DO_openPort_System_Int32_System_Int32_" data-uid="WPC.Module.IDIOModule.DO_openPort(System.Int32,System.Int32)">DO_openPort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open all pins in specific port with digital output.</p>
+  <div class="markdown level1 summary"><p>Open all pins in the specific port to digital output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -636,7 +644,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -660,7 +668,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DO_togglePins_" data-uid="WPC.Module.IDIOModule.DO_togglePins*"></a>
   <h4 id="WPC_Module_IDIOModule_DO_togglePins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IDIOModule.DO_togglePins(System.Int32,List{System.Int32},System.Int32)">DO_togglePins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Toggle digital pin state in specific pin.</p>
+  <div class="markdown level1 summary"><p>Toggle the specific pin.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -686,13 +694,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to set to digital intput.<br> For example, you want to open pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -708,14 +718,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>Get status about pin state.</p>
+        <td><p>The list of pins state.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IDIOModule_DO_togglePort_" data-uid="WPC.Module.IDIOModule.DO_togglePort*"></a>
   <h4 id="WPC_Module_IDIOModule_DO_togglePort_System_Int32_System_Int32_" data-uid="WPC.Module.IDIOModule.DO_togglePort(System.Int32,System.Int32)">DO_togglePort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Toggle all digital pins state in specific port.</p>
+  <div class="markdown level1 summary"><p>Toggle all pins in the specific port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -741,7 +751,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -757,14 +767,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>Get status about pin state.</p>
+        <td><p>The list of pins state.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Module_IDIOModule_DO_writePins_" data-uid="WPC.Module.IDIOModule.DO_writePins*"></a>
   <h4 id="WPC_Module_IDIOModule_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_" data-uid="WPC.Module.IDIOModule.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)">DO_writePins(Int32, List&lt;Int32&gt;, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open specific pin to digital output.</p>
+  <div class="markdown level1 summary"><p>Write high or low value to the specific pin.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -790,21 +800,23 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to set.<br> For example, you want to open pin 0, pin 1 and pin 5.<br>pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">value</span></td>
-        <td><p>Pin number you want to set high(1) or low(0).
-For example, set pin 0 and pin 1 to high, and pin 5 to low.
-value = [1,1,0].</p>
+        <td><p>Pin number you want to set high(1) or low(0).<br>
+For example, set pin 0 and pin 1 to high, and pin 5 to low.<br>
+value will be [1, 1, 0].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -828,7 +840,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_IDIOModule_DO_writePort_" data-uid="WPC.Module.IDIOModule.DO_writePort*"></a>
   <h4 id="WPC_Module_IDIOModule_DO_writePort_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Module.IDIOModule.DO_writePort(System.Int32,List{System.Int32},System.Int32)">DO_writePort(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write all pins state in specific port with digital output.</p>
+  <div class="markdown level1 summary"><p>Write high or low value to all pins in the specefic port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -854,13 +866,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">value</span></td>
-        <td><p>Pin number you want to set digital high(1) or low(0).<br>For example, you want to write pin 0 and pin 2 to high, others to low.<br> [0,0,0,0,0,1,0,1] in LSB.</p>
+        <td><p>Pin number you want to set high(1) or low(0).<br>
+For example, set pin 0 and pin 2 to high<br>
+value will be [1, 0, 1, 0, 0, 0, 0, 0] in LSB.<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>

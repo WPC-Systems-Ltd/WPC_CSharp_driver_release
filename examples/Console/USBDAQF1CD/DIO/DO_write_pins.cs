@@ -55,18 +55,18 @@ class USBDAQF1CD_DO_write_pins
 
             // Open pins with digital output
             err = dev.DO_openPins(port, pinindex, timeout);
-            Console.WriteLine($"DO_openPins in port {port}: {err}");
+            Console.WriteLine($"DO_openPins in port {port}, status: {err}");
 
             // Write pins to high or low
             err = dev.DO_writePins(port, pinindex, DO_value, timeout);
-            Console.WriteLine($"DO_writePins in port {port}: {err}");
+            Console.WriteLine($"DO_writePins in port {port}, status: {err}");
 
-            // Wait for seconds to see led status
+            // Wait for ms to see led status
             Thread.Sleep(3000); // delay [ms]
 
             // Close pins with digital output
             err = dev.DO_closePins(port, pinindex, timeout);
-            Console.WriteLine($"DO_closePins in port {port}: {err}");
+            Console.WriteLine($"DO_closePins in port {port}, status: {err}");
 
         }
         catch (Exception ex)

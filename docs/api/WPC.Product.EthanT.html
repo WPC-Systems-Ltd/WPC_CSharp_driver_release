@@ -429,7 +429,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -472,7 +472,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -515,7 +515,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -558,7 +558,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -581,7 +581,7 @@
   </table>
   <a id="WPC_Product_EthanT_Sys_getMode_" data-uid="WPC.Product.EthanT.Sys_getMode*"></a>
   <h4 id="WPC_Product_EthanT_Sys_getMode_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Sys_getMode(System.Int32,System.Int32)">Sys_getMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Get the mode of the slot from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get the mode from a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -607,7 +607,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -630,7 +630,7 @@
   </table>
   <a id="WPC_Product_EthanT_Sys_getRTC_" data-uid="WPC.Product.EthanT.Sys_getRTC*"></a>
   <h4 id="WPC_Product_EthanT_Sys_getRTC_System_Int32_" data-uid="WPC.Product.EthanT.Sys_getRTC(System.Int32)">Sys_getRTC(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get date and time to connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get RTC date and time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -650,7 +650,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -673,7 +673,7 @@
   </table>
   <a id="WPC_Product_EthanT_Sys_getSerialNumber_" data-uid="WPC.Product.EthanT.Sys_getSerialNumber*"></a>
   <h4 id="WPC_Product_EthanT_Sys_getSerialNumber_System_Int32_" data-uid="WPC.Product.EthanT.Sys_getSerialNumber(System.Int32)">Sys_getSerialNumber(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get serial number from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get serial number.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -693,7 +693,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -716,7 +716,7 @@
   </table>
   <a id="WPC_Product_EthanT_Sys_reboot_" data-uid="WPC.Product.EthanT.Sys_reboot*"></a>
   <h4 id="WPC_Product_EthanT_Sys_reboot_System_Int32_" data-uid="WPC.Product.EthanT.Sys_reboot(System.Int32)">Sys_reboot(Int32)</h4>
-  <div class="markdown level1 summary"><p>Reboot from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Reboot the device.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -736,51 +736,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_EthanT_Sys_rebootOnBootloader_" data-uid="WPC.Product.EthanT.Sys_rebootOnBootloader*"></a>
-  <h4 id="WPC_Product_EthanT_Sys_rebootOnBootloader_System_Int32_" data-uid="WPC.Product.EthanT.Sys_rebootOnBootloader(System.Int32)">Sys_rebootOnBootloader(Int32)</h4>
-  <div class="markdown level1 summary"><p>Reboot on bootloader from the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_rebootOnBootloader(int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -804,7 +760,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Sys_setAIOMode_" data-uid="WPC.Product.EthanT.Sys_setAIOMode*"></a>
   <h4 id="WPC_Product_EthanT_Sys_setAIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Sys_setAIOMode(System.Int32,System.Int32)">Sys_setAIOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the AIO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the AIO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -830,7 +786,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -854,7 +810,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Sys_setDIMode_" data-uid="WPC.Product.EthanT.Sys_setDIMode*"></a>
   <h4 id="WPC_Product_EthanT_Sys_setDIMode_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Sys_setDIMode(System.Int32,System.Int32)">Sys_setDIMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DI state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DI state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -880,7 +836,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -904,7 +860,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Sys_setDIOMode_" data-uid="WPC.Product.EthanT.Sys_setDIOMode*"></a>
   <h4 id="WPC_Product_EthanT_Sys_setDIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Sys_setDIOMode(System.Int32,System.Int32)">Sys_setDIOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DIO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DIO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -930,7 +886,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -954,7 +910,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Sys_setDOMode_" data-uid="WPC.Product.EthanT.Sys_setDOMode*"></a>
   <h4 id="WPC_Product_EthanT_Sys_setDOMode_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Sys_setDOMode(System.Int32,System.Int32)">Sys_setDOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -980,7 +936,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1004,7 +960,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Sys_setIdleMode_" data-uid="WPC.Product.EthanT.Sys_setIdleMode*"></a>
   <h4 id="WPC_Product_EthanT_Sys_setIdleMode_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Sys_setIdleMode(System.Int32,System.Int32)">Sys_setIdleMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the IDLE state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the IDLE state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1030,7 +986,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1086,7 +1042,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1110,7 +1066,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Sys_setMotionMode_" data-uid="WPC.Product.EthanT.Sys_setMotionMode*"></a>
   <h4 id="WPC_Product_EthanT_Sys_setMotionMode_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Sys_setMotionMode(System.Int32,System.Int32)">Sys_setMotionMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the motion state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the motion state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1136,7 +1092,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1160,7 +1116,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Sys_setRTC_" data-uid="WPC.Product.EthanT.Sys_setRTC*"></a>
   <h4 id="WPC_Product_EthanT_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_" data-uid="WPC.Product.EthanT.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)">Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set date and time to connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set RTC date and time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1216,7 +1172,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1240,7 +1196,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Sys_setSwitchMode_" data-uid="WPC.Product.EthanT.Sys_setSwitchMode*"></a>
   <h4 id="WPC_Product_EthanT_Sys_setSwitchMode_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Sys_setSwitchMode(System.Int32,System.Int32)">Sys_setSwitchMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the switch state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the switch state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1266,7 +1222,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1290,7 +1246,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Thermal_close_" data-uid="WPC.Product.EthanT.Thermal_close*"></a>
   <h4 id="WPC_Product_EthanT_Thermal_close_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Thermal_close(System.Int32,System.Int32)">Thermal_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close thermocouple or RTD port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close thermocouple or RTD on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1316,7 +1272,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1340,7 +1296,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Thermal_getStatus_" data-uid="WPC.Product.EthanT.Thermal_getStatus*"></a>
   <h4 id="WPC_Product_EthanT_Thermal_getStatus_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Thermal_getStatus(System.Int32,System.Int32,System.Int32)">Thermal_getStatus(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Get thermocouple or RTD status from specific channel.</p>
+  <div class="markdown level1 summary"><p>Get thermocouple or RTD status from the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1366,13 +1322,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Please refer Thermal_Channel in WPC_basic.cs</p>
+        <td><p>The channel could be set 0 or 1.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1388,15 +1344,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+        <td><p>Status (TC): Bit 0 = open-circuit fault.<br>
+Status (RTD): See user manual.<br></p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_EthanT_Thermal_open_" data-uid="WPC.Product.EthanT.Thermal_open*"></a>
   <h4 id="WPC_Product_EthanT_Thermal_open_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Thermal_open(System.Int32,System.Int32)">Thermal_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open thermocouple or RTD port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open thermocouple or RTD on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1422,7 +1378,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1446,7 +1402,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Thermal_readSensor_" data-uid="WPC.Product.EthanT.Thermal_readSensor*"></a>
   <h4 id="WPC_Product_EthanT_Thermal_readSensor_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Thermal_readSensor(System.Int32,System.Int32,System.Int32)">Thermal_readSensor(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read thermocouple or RTD sensor temperature from specific channel.</p>
+  <div class="markdown level1 summary"><p>Read thermocouple or RTD sensor temperature from the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1472,13 +1428,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Please refer Thermal_Channel in WPC_basic.cs</p>
+        <td><p>The channel could be set 0 or 1.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1494,15 +1450,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+        <td><p>Temperature in Celsius.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_EthanT_Thermal_setOverSampling_" data-uid="WPC.Product.EthanT.Thermal_setOverSampling*"></a>
   <h4 id="WPC_Product_EthanT_Thermal_setOverSampling_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Thermal_setOverSampling(System.Int32,System.Int32,System.Int32,System.Int32)">Thermal_setOverSampling(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set oversampling on specific thermocouple channel.</p>
+  <div class="markdown level1 summary"><p>Set oversampling on the specific thermocouple channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1528,19 +1483,27 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Please refer Thermal_Channel in WPC_basic.cs</p>
+        <td><p>The channel could be set 0 or 1.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer Thermal_OverSampling in WPC_basic.cs</p>
+        <td><p>Over-sampling mode.:<br></p>
+<ul>
+<li>0: 1 sample (default).<br></li>
+<li>1: 2 samples.<br></li>
+<li>2: 4 samples.<br></li>
+<li>3: 8 samples.<br></li>
+<li>4: 16 samples.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</li>
+</ul>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1564,7 +1527,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_EthanT_Thermal_setType_" data-uid="WPC.Product.EthanT.Thermal_setType*"></a>
   <h4 id="WPC_Product_EthanT_Thermal_setType_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.EthanT.Thermal_setType(System.Int32,System.Int32,System.Int32,System.Int32)">Thermal_setType(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set thermocouple type on specific thermocouple or RTD channel.</p>
+  <div class="markdown level1 summary"><p>Set thermocouple type on the specific thermocouple or RTD channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1590,19 +1553,30 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>Please refer Thermal_Channel in WPC_basic.cs</p>
+        <td><p>The channel could be set 0 or 1.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">thermal_type</span></td>
-        <td><p>Please refer Thermal_Filter in WPC_basic.cs</p>
+        <td><p>Type (TC):<br></p>
+<ul>
+<li>0 = B type.<br></li>
+<li>1 = E type.<br></li>
+<li>2 = J type.<br></li>
+<li>3 = K type (default).<br></li>
+<li>4 = N type.<br></li>
+<li>5 = R type.<br></li>
+<li>6 = S type.<br></li>
+<li>7 = T type.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</li>
+</ul>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>

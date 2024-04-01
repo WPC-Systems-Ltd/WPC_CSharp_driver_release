@@ -62,15 +62,15 @@ class USBDAQF1AD_SPI_write
 
             // Open pin0 in port0 with digital output
             err = dev.DO_openPins(DO_port, new List<int> { DO_pin }, timeout);
-            Console.WriteLine($"DO_openPins in port {DO_port}: {err}");
+            Console.WriteLine($"DO_openPins in port {DO_port}, status: {err}");
 
-            // Open SPI port
+            // Open SPI
             err = dev.SPI_open(port, timeout);
-            Console.WriteLine($"SPI_open in port {DO_port}: {err}");
+            Console.WriteLine($"SPI_open in port {port}, status: {err}");
 
             // Set CS(pin0) to high
             err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             /*
             Set SPI parameter
@@ -78,19 +78,19 @@ class USBDAQF1AD_SPI_write
 
             // Set SPI port and set datasize to 8-bits data
             err = dev.SPI_setDataSize(port, Const.SPI_DATA_SIZE_8_BITS, timeout);
-            Console.WriteLine($"SPI_setDataSize in port {port}: {err}");
+            Console.WriteLine($"SPI_setDataSize in port {port}, status: {err}");
 
             // Set SPI port and set first_bit to MSB first
             err = dev.SPI_setFirstBit(port, Const.SPI_FIRST_BIT_MSB, timeout);
-            Console.WriteLine($"SPI_setFirstBit in port {port}: {err}");
+            Console.WriteLine($"SPI_setFirstBit in port {port}, status: {err}");
 
             // Set SPI port and set prescaler to 64
             err = dev.SPI_setPrescaler(port, Const.SPI_PRESCALER_64, timeout);
-            Console.WriteLine($"SPI_setPrescaler in port {port}: {err}");
+            Console.WriteLine($"SPI_setPrescaler in port {port}, status: {err}");
 
             // Set SPI port and set CPOL and CPHA to mode 0
             err = dev.SPI_setMode(port, Const.SPI_MODE_0, timeout);
-            Console.WriteLine($"SPI_setMode in port {port}: {err}");
+            Console.WriteLine($"SPI_setMode in port {port}, status: {err}");
 
             /*
             Write data via SPI
@@ -98,15 +98,15 @@ class USBDAQF1AD_SPI_write
 
             // Set CS(pin0) to low
             err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             // Write WREN byte
             err = dev.SPI_write(port, new List<byte> { WREN }, timeout);
-            Console.WriteLine($"SPI_write in port {port}: {err}");
+            Console.WriteLine($"SPI_write in port {port}, status: {err}");
 
             // Set CS(pin0) to high
             err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             /*
             Write data via SPI
@@ -114,15 +114,15 @@ class USBDAQF1AD_SPI_write
 
             // Set CS(pin0) to low
             err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 0 }, timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             // Write data byte 0x55 in to address 0x0002
             err = dev.SPI_write(port, new List<byte> { WRITE, 0x00, 0x02, 0x55 }, timeout);
-            Console.WriteLine($"SPI_write in port {port}: {err}");
+            Console.WriteLine($"SPI_write in port {port}, status: {err}");
 
             // Set CS(pin0) to high
             err = dev.DO_writePins(DO_port, new List<int> { DO_pin }, new List<int> { 1 }, timeout);
-            Console.WriteLine($"DO_writePins in port {DO_port}: {err}");
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
 
             /*
             Close DO pins and SPI port
@@ -130,11 +130,11 @@ class USBDAQF1AD_SPI_write
 
             // Close SPI port
             err = dev.SPI_close(port, timeout);
-            Console.WriteLine($"SPI_close in port {port}: {err}");
+            Console.WriteLine($"SPI_close in port {port}, status: {err}");
 
             // Close pin0 in port0 with digital output
             err = dev.DO_closePins(DO_port, new List<int> { DO_pin }, timeout);
-            Console.WriteLine($"DO_closePins in port {DO_port}: {err}");
+            Console.WriteLine($"DO_closePins in port {DO_port}, status: {err}");
         }
         catch (Exception ex)
         {

@@ -53,20 +53,21 @@ class USBDAQF1AD_DO_blinky_pins
 
             // Open pins with digital output
             err = dev.DO_openPins(port, pinindex, timeout);
-            Console.WriteLine($"DO_openPins in port {port}: {err}");
+            Console.WriteLine($"DO_openPins in port {port}, status: {err}");
 
-            // Toggle digital state for 10 times. Each times delay for 0.5 second
+            // Toggle digital state for 10 times. Each times delay for 500 ms
             for (int i=0; i<10; i++)
             {
                 List<byte> state = dev.DO_togglePins(port, pinindex, timeout);
                 Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
-                // Wait for 0.5 second to see led status
+
+                // Wait for 500 ms to see led status
                 Thread.Sleep(500); // delay [ms]
             }
 
             // Close pins with digital output
             err = dev.DO_closePins(port, pinindex, timeout);
-            Console.WriteLine($"DO_closePins in port {port}: {err}");
+            Console.WriteLine($"DO_closePins in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

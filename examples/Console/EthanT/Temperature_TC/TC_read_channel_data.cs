@@ -53,17 +53,17 @@ class EthanT_TC_read_channel_data
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open thermo port
+            // Open thermo
             err = dev.Thermal_open(port, timeout);
-            Console.WriteLine($"Thermal_open in port {port}: {err}");
+            Console.WriteLine($"Thermal_open in port {port}, status: {err}");
 
             // Set thermo port and set K type in channel 1
             err = dev.Thermal_setOverSampling(port, ch, Const.THERMAL_OVERSAMPLING_NONE, timeout);
-            Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port {port}: {err}");
+            Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port {port}, status: {err}");
 
             // Set thermo port and set K type in channel 1
             err = dev.Thermal_setType(port, ch, Const.THERMAL_COUPLE_TYPE_K, timeout);
-            Console.WriteLine($"Thermal_setType in channel {ch} in port {port}: {err}");
+            Console.WriteLine($"Thermal_setType in channel {ch} in port {port}, status: {err}");
 
             // Wait for at least 500 ms after setting type or oversampling
             Thread.Sleep(500); // delay [ms]
@@ -72,9 +72,9 @@ class EthanT_TC_read_channel_data
             float data = dev.Thermal_readSensor(port, ch, timeout);
             Console.WriteLine($"Read sensor in channel {ch} in port {port}: {data}°C");
 
-            // Close thermo port
+            // Close thermo
             err = dev.Thermal_close(port, timeout);
-            Console.WriteLine($"Thermal_close in port {port}: {err}");
+            Console.WriteLine($"Thermal_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

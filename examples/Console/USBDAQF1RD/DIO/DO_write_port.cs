@@ -48,18 +48,18 @@ class USBDAQF1RD_DO_write_port
 
             // Open port with digital output
             err = dev.DO_openPort(port, timeout);
-            Console.WriteLine($"DO_openPort in port {port}: {err}");
+            Console.WriteLine($"DO_openPort in port {port}, status: {err}");
 
             // Write DO port to high or low
             err = dev.DO_writePort(port, DO_value, timeout);
-            Console.WriteLine($"DO_writePort in port {port}: {err}");
+            Console.WriteLine($"DO_writePort in DO_port {port}, status: {err}");
 
-            // Wait for seconds to see led status
+            // Wait for ms to see led status
             Thread.Sleep(3000); // delay [ms]
 
             // Close port with digital output
             err = dev.DO_closePort(port, timeout);
-            Console.WriteLine($"DO_closePort in port {port}: {err}");
+            Console.WriteLine($"DO_closePort in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

@@ -1208,6 +1208,67 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IDIOModule.DO_writePort
   nameWithType: IDIOModule.DO_writePort
+- uid: WPC.Module.IDPOTModule
+  name: IDPOTModule
+  href: api/WPC.Module.IDPOTModule.html
+  commentId: T:WPC.Module.IDPOTModule
+  fullName: WPC.Module.IDPOTModule
+  nameWithType: IDPOTModule
+- uid: WPC.Module.IDPOTModule.DPOT_close(System.Int32,System.Int32)
+  name: DPOT_close(Int32, Int32)
+  href: api/WPC.Module.IDPOTModule.html#WPC_Module_IDPOTModule_DPOT_close_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDPOTModule.DPOT_close(System.Int32,System.Int32)
+  fullName: WPC.Module.IDPOTModule.DPOT_close(System.Int32, System.Int32)
+  nameWithType: IDPOTModule.DPOT_close(Int32, Int32)
+- uid: WPC.Module.IDPOTModule.DPOT_close*
+  name: DPOT_close
+  href: api/WPC.Module.IDPOTModule.html#WPC_Module_IDPOTModule_DPOT_close_
+  commentId: Overload:WPC.Module.IDPOTModule.DPOT_close
+  isSpec: "True"
+  fullName: WPC.Module.IDPOTModule.DPOT_close
+  nameWithType: IDPOTModule.DPOT_close
+- uid: WPC.Module.IDPOTModule.DPOT_open(System.Int32,System.Int32)
+  name: DPOT_open(Int32, Int32)
+  href: api/WPC.Module.IDPOTModule.html#WPC_Module_IDPOTModule_DPOT_open_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDPOTModule.DPOT_open(System.Int32,System.Int32)
+  fullName: WPC.Module.IDPOTModule.DPOT_open(System.Int32, System.Int32)
+  nameWithType: IDPOTModule.DPOT_open(Int32, Int32)
+- uid: WPC.Module.IDPOTModule.DPOT_open*
+  name: DPOT_open
+  href: api/WPC.Module.IDPOTModule.html#WPC_Module_IDPOTModule_DPOT_open_
+  commentId: Overload:WPC.Module.IDPOTModule.DPOT_open
+  isSpec: "True"
+  fullName: WPC.Module.IDPOTModule.DPOT_open
+  nameWithType: IDPOTModule.DPOT_open
+- uid: WPC.Module.IDPOTModule.DPOT_readByChannel(System.Int32,System.Int32,System.Int32)
+  name: DPOT_readByChannel(Int32, Int32, Int32)
+  href: api/WPC.Module.IDPOTModule.html#WPC_Module_IDPOTModule_DPOT_readByChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IDPOTModule.DPOT_readByChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IDPOTModule.DPOT_readByChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: IDPOTModule.DPOT_readByChannel(Int32, Int32, Int32)
+- uid: WPC.Module.IDPOTModule.DPOT_readByChannel*
+  name: DPOT_readByChannel
+  href: api/WPC.Module.IDPOTModule.html#WPC_Module_IDPOTModule_DPOT_readByChannel_
+  commentId: Overload:WPC.Module.IDPOTModule.DPOT_readByChannel
+  isSpec: "True"
+  fullName: WPC.Module.IDPOTModule.DPOT_readByChannel
+  nameWithType: IDPOTModule.DPOT_readByChannel
+- uid: WPC.Module.IDPOTModule.DPOT_writeAllChannel(System.Int32,List{System.Single},System.Int32)
+  name: DPOT_writeAllChannel(Int32, List<Single>, Int32)
+  href: api/WPC.Module.IDPOTModule.html#WPC_Module_IDPOTModule_DPOT_writeAllChannel_System_Int32_List_System_Single__System_Int32_
+  commentId: M:WPC.Module.IDPOTModule.DPOT_writeAllChannel(System.Int32,List{System.Single},System.Int32)
+  name.vb: DPOT_writeAllChannel(Int32, List(Of Single), Int32)
+  fullName: WPC.Module.IDPOTModule.DPOT_writeAllChannel(System.Int32, List<System.Single>, System.Int32)
+  fullName.vb: WPC.Module.IDPOTModule.DPOT_writeAllChannel(System.Int32, List(Of System.Single), System.Int32)
+  nameWithType: IDPOTModule.DPOT_writeAllChannel(Int32, List<Single>, Int32)
+  nameWithType.vb: IDPOTModule.DPOT_writeAllChannel(Int32, List(Of Single), Int32)
+- uid: WPC.Module.IDPOTModule.DPOT_writeAllChannel*
+  name: DPOT_writeAllChannel
+  href: api/WPC.Module.IDPOTModule.html#WPC_Module_IDPOTModule_DPOT_writeAllChannel_
+  commentId: Overload:WPC.Module.IDPOTModule.DPOT_writeAllChannel
+  isSpec: "True"
+  fullName: WPC.Module.IDPOTModule.DPOT_writeAllChannel
+  nameWithType: IDPOTModule.DPOT_writeAllChannel
 - uid: WPC.Module.II2CModule
   name: II2CModule
   href: api/WPC.Module.II2CModule.html
@@ -2050,12 +2111,12 @@ references:
   commentId: T:WPC.Module.IRelayModule
   fullName: WPC.Module.IRelayModule
   nameWithType: IRelayModule
-- uid: WPC.Module.IRelayModule.Relay_close(System.Int32)
-  name: Relay_close(Int32)
-  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_close_System_Int32_
-  commentId: M:WPC.Module.IRelayModule.Relay_close(System.Int32)
-  fullName: WPC.Module.IRelayModule.Relay_close(System.Int32)
-  nameWithType: IRelayModule.Relay_close(Int32)
+- uid: WPC.Module.IRelayModule.Relay_close(System.Int32,System.Int32)
+  name: Relay_close(Int32, Int32)
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_close_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IRelayModule.Relay_close(System.Int32,System.Int32)
+  fullName: WPC.Module.IRelayModule.Relay_close(System.Int32, System.Int32)
+  nameWithType: IRelayModule.Relay_close(Int32, Int32)
 - uid: WPC.Module.IRelayModule.Relay_close*
   name: Relay_close
   href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_close_
@@ -2063,12 +2124,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IRelayModule.Relay_close
   nameWithType: IRelayModule.Relay_close
-- uid: WPC.Module.IRelayModule.Relay_open(System.Int32)
-  name: Relay_open(Int32)
-  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_open_System_Int32_
-  commentId: M:WPC.Module.IRelayModule.Relay_open(System.Int32)
-  fullName: WPC.Module.IRelayModule.Relay_open(System.Int32)
-  nameWithType: IRelayModule.Relay_open(Int32)
+- uid: WPC.Module.IRelayModule.Relay_open(System.Int32,System.Int32)
+  name: Relay_open(Int32, Int32)
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_open_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IRelayModule.Relay_open(System.Int32,System.Int32)
+  fullName: WPC.Module.IRelayModule.Relay_open(System.Int32, System.Int32)
+  nameWithType: IRelayModule.Relay_open(Int32, Int32)
 - uid: WPC.Module.IRelayModule.Relay_open*
   name: Relay_open
   href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_open_
@@ -2076,12 +2137,12 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IRelayModule.Relay_open
   nameWithType: IRelayModule.Relay_open
-- uid: WPC.Module.IRelayModule.Relay_read(System.Int32,System.Int32)
-  name: Relay_read(Int32, Int32)
-  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_read_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IRelayModule.Relay_read(System.Int32,System.Int32)
-  fullName: WPC.Module.IRelayModule.Relay_read(System.Int32, System.Int32)
-  nameWithType: IRelayModule.Relay_read(Int32, Int32)
+- uid: WPC.Module.IRelayModule.Relay_read(System.Int32,System.Int32,System.Int32)
+  name: Relay_read(Int32, Int32, Int32)
+  href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_read_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IRelayModule.Relay_read(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IRelayModule.Relay_read(System.Int32, System.Int32, System.Int32)
+  nameWithType: IRelayModule.Relay_read(Int32, Int32, Int32)
 - uid: WPC.Module.IRelayModule.Relay_read*
   name: Relay_read
   href: api/WPC.Module.IRelayModule.html#WPC_Module_IRelayModule_Relay_read_
@@ -2237,19 +2298,6 @@ references:
   commentId: T:WPC.Module.ISystemAnalogModule
   fullName: WPC.Module.ISystemAnalogModule
   nameWithType: ISystemAnalogModule
-- uid: WPC.Module.ISystemAnalogModule.Wifi_readAcceleration(System.Int32)
-  name: Wifi_readAcceleration(Int32)
-  href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readAcceleration_System_Int32_
-  commentId: M:WPC.Module.ISystemAnalogModule.Wifi_readAcceleration(System.Int32)
-  fullName: WPC.Module.ISystemAnalogModule.Wifi_readAcceleration(System.Int32)
-  nameWithType: ISystemAnalogModule.Wifi_readAcceleration(Int32)
-- uid: WPC.Module.ISystemAnalogModule.Wifi_readAcceleration*
-  name: Wifi_readAcceleration
-  href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readAcceleration_
-  commentId: Overload:WPC.Module.ISystemAnalogModule.Wifi_readAcceleration
-  isSpec: "True"
-  fullName: WPC.Module.ISystemAnalogModule.Wifi_readAcceleration
-  nameWithType: ISystemAnalogModule.Wifi_readAcceleration
 - uid: WPC.Module.ISystemAnalogModule.Wifi_readBattery(System.Int32)
   name: Wifi_readBattery(Int32)
   href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readBattery_System_Int32_
@@ -2263,19 +2311,6 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ISystemAnalogModule.Wifi_readBattery
   nameWithType: ISystemAnalogModule.Wifi_readBattery
-- uid: WPC.Module.ISystemAnalogModule.Wifi_readThermo(System.Int32)
-  name: Wifi_readThermo(Int32)
-  href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readThermo_System_Int32_
-  commentId: M:WPC.Module.ISystemAnalogModule.Wifi_readThermo(System.Int32)
-  fullName: WPC.Module.ISystemAnalogModule.Wifi_readThermo(System.Int32)
-  nameWithType: ISystemAnalogModule.Wifi_readThermo(Int32)
-- uid: WPC.Module.ISystemAnalogModule.Wifi_readThermo*
-  name: Wifi_readThermo
-  href: api/WPC.Module.ISystemAnalogModule.html#WPC_Module_ISystemAnalogModule_Wifi_readThermo_
-  commentId: Overload:WPC.Module.ISystemAnalogModule.Wifi_readThermo
-  isSpec: "True"
-  fullName: WPC.Module.ISystemAnalogModule.Wifi_readThermo
-  nameWithType: ISystemAnalogModule.Wifi_readThermo
 - uid: WPC.Module.ISystemModule
   name: ISystemModule
   href: api/WPC.Module.ISystemModule.html
@@ -2347,19 +2382,6 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ISystemModule.Sys_reboot
   nameWithType: ISystemModule.Sys_reboot
-- uid: WPC.Module.ISystemModule.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Module.ISystemModule.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Module.ISystemModule.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: ISystemModule.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Module.ISystemModule.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Module.ISystemModule.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Module.ISystemModule.Sys_rebootOnBootloader
-  nameWithType: ISystemModule.Sys_rebootOnBootloader
 - uid: WPC.Module.ISystemModule.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Module.ISystemModule.html#WPC_Module_ISystemModule_Sys_setAIOMode_System_Int32_System_Int32_
@@ -2522,19 +2544,6 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IThermalModule.Thermal_readSensor
   nameWithType: IThermalModule.Thermal_readSensor
-- uid: WPC.Module.IThermalModule.Thermal_setType(System.Int32,System.Int32,System.Int32,System.Int32)
-  name: Thermal_setType(Int32, Int32, Int32, Int32)
-  href: api/WPC.Module.IThermalModule.html#WPC_Module_IThermalModule_Thermal_setType_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IThermalModule.Thermal_setType(System.Int32,System.Int32,System.Int32,System.Int32)
-  fullName: WPC.Module.IThermalModule.Thermal_setType(System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: IThermalModule.Thermal_setType(Int32, Int32, Int32, Int32)
-- uid: WPC.Module.IThermalModule.Thermal_setType*
-  name: Thermal_setType
-  href: api/WPC.Module.IThermalModule.html#WPC_Module_IThermalModule_Thermal_setType_
-  commentId: Overload:WPC.Module.IThermalModule.Thermal_setType
-  isSpec: "True"
-  fullName: WPC.Module.IThermalModule.Thermal_setType
-  nameWithType: IThermalModule.Thermal_setType
 - uid: WPC.Module.IThermocoupleModule
   name: IThermocoupleModule
   href: api/WPC.Module.IThermocoupleModule.html
@@ -2554,6 +2563,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IThermocoupleModule.Thermal_setOverSampling
   nameWithType: IThermocoupleModule.Thermal_setOverSampling
+- uid: WPC.Module.IThermocoupleModule.Thermal_setType(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Thermal_setType(Int32, Int32, Int32, Int32)
+  href: api/WPC.Module.IThermocoupleModule.html#WPC_Module_IThermocoupleModule_Thermal_setType_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IThermocoupleModule.Thermal_setType(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IThermocoupleModule.Thermal_setType(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: IThermocoupleModule.Thermal_setType(Int32, Int32, Int32, Int32)
+- uid: WPC.Module.IThermocoupleModule.Thermal_setType*
+  name: Thermal_setType
+  href: api/WPC.Module.IThermocoupleModule.html#WPC_Module_IThermocoupleModule_Thermal_setType_
+  commentId: Overload:WPC.Module.IThermocoupleModule.Thermal_setType
+  isSpec: "True"
+  fullName: WPC.Module.IThermocoupleModule.Thermal_setType
+  nameWithType: IThermocoupleModule.Thermal_setType
 - uid: WPC.Module.ITMC5240Module
   name: ITMC5240Module
   href: api/WPC.Module.ITMC5240Module.html
@@ -2852,19 +2874,6 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IUARTModule.UART_setParity
   nameWithType: IUARTModule.UART_setParity
-- uid: WPC.Module.IUARTModule.UART_stopReading(System.Int32,System.Int32)
-  name: UART_stopReading(Int32, Int32)
-  href: api/WPC.Module.IUARTModule.html#WPC_Module_IUARTModule_UART_stopReading_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IUARTModule.UART_stopReading(System.Int32,System.Int32)
-  fullName: WPC.Module.IUARTModule.UART_stopReading(System.Int32, System.Int32)
-  nameWithType: IUARTModule.UART_stopReading(Int32, Int32)
-- uid: WPC.Module.IUARTModule.UART_stopReading*
-  name: UART_stopReading
-  href: api/WPC.Module.IUARTModule.html#WPC_Module_IUARTModule_UART_stopReading_
-  commentId: Overload:WPC.Module.IUARTModule.UART_stopReading
-  isSpec: "True"
-  fullName: WPC.Module.IUARTModule.UART_stopReading
-  nameWithType: IUARTModule.UART_stopReading
 - uid: WPC.Module.IUARTModule.UART_write(System.Int32,System.String,System.Int32)
   name: UART_write(Int32, String, Int32)
   href: api/WPC.Module.IUARTModule.html#WPC_Module_IUARTModule_UART_write_System_Int32_System_String_System_Int32_
@@ -2884,6 +2893,19 @@ references:
   commentId: T:WPC.Module.IWifiModule
   fullName: WPC.Module.IWifiModule
   nameWithType: IWifiModule
+- uid: WPC.Module.IWifiModule.Wifi_getBandwidth(System.Int32)
+  name: Wifi_getBandwidth(Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getBandwidth_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_getBandwidth(System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_getBandwidth(System.Int32)
+  nameWithType: IWifiModule.Wifi_getBandwidth(Int32)
+- uid: WPC.Module.IWifiModule.Wifi_getBandwidth*
+  name: Wifi_getBandwidth
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getBandwidth_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_getBandwidth
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_getBandwidth
+  nameWithType: IWifiModule.Wifi_getBandwidth
 - uid: WPC.Module.IWifiModule.Wifi_getChargeStatus(System.Int32)
   name: Wifi_getChargeStatus(Int32)
   href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getChargeStatus_System_Int32_
@@ -2897,6 +2919,19 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IWifiModule.Wifi_getChargeStatus
   nameWithType: IWifiModule.Wifi_getChargeStatus
+- uid: WPC.Module.IWifiModule.Wifi_getConfiguration(System.Int32)
+  name: Wifi_getConfiguration(Int32)
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getConfiguration_System_Int32_
+  commentId: M:WPC.Module.IWifiModule.Wifi_getConfiguration(System.Int32)
+  fullName: WPC.Module.IWifiModule.Wifi_getConfiguration(System.Int32)
+  nameWithType: IWifiModule.Wifi_getConfiguration(Int32)
+- uid: WPC.Module.IWifiModule.Wifi_getConfiguration*
+  name: Wifi_getConfiguration
+  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getConfiguration_
+  commentId: Overload:WPC.Module.IWifiModule.Wifi_getConfiguration
+  isSpec: "True"
+  fullName: WPC.Module.IWifiModule.Wifi_getConfiguration
+  nameWithType: IWifiModule.Wifi_getConfiguration
 - uid: WPC.Module.IWifiModule.Wifi_getPowerGoodStatus(System.Int32)
   name: Wifi_getPowerGoodStatus(Int32)
   href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getPowerGoodStatus_System_Int32_
@@ -2910,32 +2945,6 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IWifiModule.Wifi_getPowerGoodStatus
   nameWithType: IWifiModule.Wifi_getPowerGoodStatus
-- uid: WPC.Module.IWifiModule.Wifi_getWifiBandwidth(System.Int32)
-  name: Wifi_getWifiBandwidth(Int32)
-  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getWifiBandwidth_System_Int32_
-  commentId: M:WPC.Module.IWifiModule.Wifi_getWifiBandwidth(System.Int32)
-  fullName: WPC.Module.IWifiModule.Wifi_getWifiBandwidth(System.Int32)
-  nameWithType: IWifiModule.Wifi_getWifiBandwidth(Int32)
-- uid: WPC.Module.IWifiModule.Wifi_getWifiBandwidth*
-  name: Wifi_getWifiBandwidth
-  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getWifiBandwidth_
-  commentId: Overload:WPC.Module.IWifiModule.Wifi_getWifiBandwidth
-  isSpec: "True"
-  fullName: WPC.Module.IWifiModule.Wifi_getWifiBandwidth
-  nameWithType: IWifiModule.Wifi_getWifiBandwidth
-- uid: WPC.Module.IWifiModule.Wifi_getWifiConfiguration(System.Int32)
-  name: Wifi_getWifiConfiguration(Int32)
-  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getWifiConfiguration_System_Int32_
-  commentId: M:WPC.Module.IWifiModule.Wifi_getWifiConfiguration(System.Int32)
-  fullName: WPC.Module.IWifiModule.Wifi_getWifiConfiguration(System.Int32)
-  nameWithType: IWifiModule.Wifi_getWifiConfiguration(Int32)
-- uid: WPC.Module.IWifiModule.Wifi_getWifiConfiguration*
-  name: Wifi_getWifiConfiguration
-  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_getWifiConfiguration_
-  commentId: Overload:WPC.Module.IWifiModule.Wifi_getWifiConfiguration
-  isSpec: "True"
-  fullName: WPC.Module.IWifiModule.Wifi_getWifiConfiguration
-  nameWithType: IWifiModule.Wifi_getWifiConfiguration
 - uid: WPC.Module.IWifiModule.Wifi_readRSSI(System.Int32)
   name: Wifi_readRSSI(Int32)
   href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_readRSSI_System_Int32_
@@ -3001,19 +3010,6 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IWifiModule.Wifi_setRedLED
   nameWithType: IWifiModule.Wifi_setRedLED
-- uid: WPC.Module.IWifiModule.Wifi_setWifiBandWidth(System.Int32,System.Int32)
-  name: Wifi_setWifiBandWidth(Int32, Int32)
-  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setWifiBandWidth_System_Int32_System_Int32_
-  commentId: M:WPC.Module.IWifiModule.Wifi_setWifiBandWidth(System.Int32,System.Int32)
-  fullName: WPC.Module.IWifiModule.Wifi_setWifiBandWidth(System.Int32, System.Int32)
-  nameWithType: IWifiModule.Wifi_setWifiBandWidth(Int32, Int32)
-- uid: WPC.Module.IWifiModule.Wifi_setWifiBandWidth*
-  name: Wifi_setWifiBandWidth
-  href: api/WPC.Module.IWifiModule.html#WPC_Module_IWifiModule_Wifi_setWifiBandWidth_
-  commentId: Overload:WPC.Module.IWifiModule.Wifi_setWifiBandWidth
-  isSpec: "True"
-  fullName: WPC.Module.IWifiModule.Wifi_setWifiBandWidth
-  nameWithType: IWifiModule.Wifi_setWifiBandWidth
 - uid: WPC.Product
   name: WPC.Product
   href: api/WPC.Product.html
@@ -3474,19 +3470,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EDriveST.Sys_reboot
   nameWithType: EDriveST.Sys_reboot
-- uid: WPC.Product.EDriveST.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EDriveST.html#WPC_Product_EDriveST_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EDriveST.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EDriveST.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EDriveST.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EDriveST.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EDriveST.html#WPC_Product_EDriveST_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EDriveST.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EDriveST.Sys_rebootOnBootloader
-  nameWithType: EDriveST.Sys_rebootOnBootloader
 - uid: WPC.Product.EDriveST.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EDriveST.html#WPC_Product_EDriveST_Sys_setAIOMode_System_Int32_System_Int32_
@@ -4427,19 +4410,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EMotion.Sys_reboot
   nameWithType: EMotion.Sys_reboot
-- uid: WPC.Product.EMotion.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EMotion.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EMotion.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EMotion.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EMotion.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EMotion.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EMotion.Sys_rebootOnBootloader
-  nameWithType: EMotion.Sys_rebootOnBootloader
 - uid: WPC.Product.EMotion.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EMotion.html#WPC_Product_EMotion_Sys_setAIOMode_System_Int32_System_Int32_
@@ -4925,19 +4895,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.Sys_reboot
   nameWithType: EthanA.Sys_reboot
-- uid: WPC.Product.EthanA.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EthanA.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EthanA.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EthanA.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EthanA.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EthanA.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EthanA.Sys_rebootOnBootloader
-  nameWithType: EthanA.Sys_rebootOnBootloader
 - uid: WPC.Product.EthanA.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_setAIOMode_System_Int32_System_Int32_
@@ -5574,19 +5531,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanD.Sys_reboot
   nameWithType: EthanD.Sys_reboot
-- uid: WPC.Product.EthanD.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EthanD.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EthanD.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EthanD.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EthanD.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EthanD.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EthanD.Sys_rebootOnBootloader
-  nameWithType: EthanD.Sys_rebootOnBootloader
 - uid: WPC.Product.EthanD.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EthanD.html#WPC_Product_EthanD_Sys_setAIOMode_System_Int32_System_Int32_
@@ -6145,19 +6089,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanEXD.Sys_reboot
   nameWithType: EthanEXD.Sys_reboot
-- uid: WPC.Product.EthanEXD.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EthanEXD.html#WPC_Product_EthanEXD_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EthanEXD.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EthanEXD.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EthanEXD.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EthanEXD.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EthanEXD.html#WPC_Product_EthanEXD_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EthanEXD.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EthanEXD.Sys_rebootOnBootloader
-  nameWithType: EthanEXD.Sys_rebootOnBootloader
 - uid: WPC.Product.EthanEXD.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EthanEXD.html#WPC_Product_EthanEXD_Sys_setAIOMode_System_Int32_System_Int32_
@@ -6476,19 +6407,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanI.Sys_reboot
   nameWithType: EthanI.Sys_reboot
-- uid: WPC.Product.EthanI.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EthanI.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EthanI.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EthanI.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EthanI.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EthanI.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EthanI.Sys_rebootOnBootloader
-  nameWithType: EthanI.Sys_rebootOnBootloader
 - uid: WPC.Product.EthanI.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EthanI.html#WPC_Product_EthanI_Sys_setAIOMode_System_Int32_System_Int32_
@@ -6807,19 +6725,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanIA.Sys_reboot
   nameWithType: EthanIA.Sys_reboot
-- uid: WPC.Product.EthanIA.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EthanIA.html#WPC_Product_EthanIA_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EthanIA.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EthanIA.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EthanIA.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EthanIA.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EthanIA.html#WPC_Product_EthanIA_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EthanIA.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EthanIA.Sys_rebootOnBootloader
-  nameWithType: EthanIA.Sys_rebootOnBootloader
 - uid: WPC.Product.EthanIA.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EthanIA.html#WPC_Product_EthanIA_Sys_setAIOMode_System_Int32_System_Int32_
@@ -7274,12 +7179,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.Logger_writeValue
   nameWithType: EthanL.Logger_writeValue
-- uid: WPC.Product.EthanL.Relay_close(System.Int32)
-  name: Relay_close(Int32)
-  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_close_System_Int32_
-  commentId: M:WPC.Product.EthanL.Relay_close(System.Int32)
-  fullName: WPC.Product.EthanL.Relay_close(System.Int32)
-  nameWithType: EthanL.Relay_close(Int32)
+- uid: WPC.Product.EthanL.Relay_close(System.Int32,System.Int32)
+  name: Relay_close(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Relay_close(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Relay_close(System.Int32, System.Int32)
+  nameWithType: EthanL.Relay_close(Int32, Int32)
 - uid: WPC.Product.EthanL.Relay_close*
   name: Relay_close
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_close_
@@ -7287,12 +7192,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.Relay_close
   nameWithType: EthanL.Relay_close
-- uid: WPC.Product.EthanL.Relay_open(System.Int32)
-  name: Relay_open(Int32)
-  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_open_System_Int32_
-  commentId: M:WPC.Product.EthanL.Relay_open(System.Int32)
-  fullName: WPC.Product.EthanL.Relay_open(System.Int32)
-  nameWithType: EthanL.Relay_open(Int32)
+- uid: WPC.Product.EthanL.Relay_open(System.Int32,System.Int32)
+  name: Relay_open(Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Relay_open(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Relay_open(System.Int32, System.Int32)
+  nameWithType: EthanL.Relay_open(Int32, Int32)
 - uid: WPC.Product.EthanL.Relay_open*
   name: Relay_open
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_open_
@@ -7300,12 +7205,12 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.Relay_open
   nameWithType: EthanL.Relay_open
-- uid: WPC.Product.EthanL.Relay_read(System.Int32,System.Int32)
-  name: Relay_read(Int32, Int32)
-  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_read_System_Int32_System_Int32_
-  commentId: M:WPC.Product.EthanL.Relay_read(System.Int32,System.Int32)
-  fullName: WPC.Product.EthanL.Relay_read(System.Int32, System.Int32)
-  nameWithType: EthanL.Relay_read(Int32, Int32)
+- uid: WPC.Product.EthanL.Relay_read(System.Int32,System.Int32,System.Int32)
+  name: Relay_read(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_read_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanL.Relay_read(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanL.Relay_read(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanL.Relay_read(Int32, Int32, Int32)
 - uid: WPC.Product.EthanL.Relay_read*
   name: Relay_read
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Relay_read_
@@ -7417,19 +7322,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanL.Sys_reboot
   nameWithType: EthanL.Sys_reboot
-- uid: WPC.Product.EthanL.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EthanL.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EthanL.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EthanL.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EthanL.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EthanL.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EthanL.Sys_rebootOnBootloader
-  nameWithType: EthanL.Sys_rebootOnBootloader
 - uid: WPC.Product.EthanL.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EthanL.html#WPC_Product_EthanL_Sys_setAIOMode_System_Int32_System_Int32_
@@ -7957,19 +7849,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanO.Sys_reboot
   nameWithType: EthanO.Sys_reboot
-- uid: WPC.Product.EthanO.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EthanO.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EthanO.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EthanO.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EthanO.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EthanO.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EthanO.Sys_rebootOnBootloader
-  nameWithType: EthanO.Sys_rebootOnBootloader
 - uid: WPC.Product.EthanO.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EthanO.html#WPC_Product_EthanO_Sys_setAIOMode_System_Int32_System_Int32_
@@ -8087,6 +7966,400 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanO.Sys_setSwitchMode
   nameWithType: EthanO.Sys_setSwitchMode
+- uid: WPC.Product.EthanP
+  name: EthanP
+  href: api/WPC.Product.EthanP.html
+  commentId: T:WPC.Product.EthanP
+  fullName: WPC.Product.EthanP
+  nameWithType: EthanP
+- uid: WPC.Product.EthanP.#ctor
+  name: EthanP()
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP__ctor
+  commentId: M:WPC.Product.EthanP.#ctor
+  fullName: WPC.Product.EthanP.EthanP()
+  nameWithType: EthanP.EthanP()
+- uid: WPC.Product.EthanP.#ctor*
+  name: EthanP
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP__ctor_
+  commentId: Overload:WPC.Product.EthanP.#ctor
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.EthanP
+  nameWithType: EthanP.EthanP
+- uid: WPC.Product.EthanP.close
+  name: close()
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_close
+  commentId: M:WPC.Product.EthanP.close
+  fullName: WPC.Product.EthanP.close()
+  nameWithType: EthanP.close()
+- uid: WPC.Product.EthanP.close*
+  name: close
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_close_
+  commentId: Overload:WPC.Product.EthanP.close
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.close
+  nameWithType: EthanP.close
+- uid: WPC.Product.EthanP.connect(System.String)
+  name: connect(String)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_connect_System_String_
+  commentId: M:WPC.Product.EthanP.connect(System.String)
+  fullName: WPC.Product.EthanP.connect(System.String)
+  nameWithType: EthanP.connect(String)
+- uid: WPC.Product.EthanP.connect*
+  name: connect
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_connect_
+  commentId: Overload:WPC.Product.EthanP.connect
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.connect
+  nameWithType: EthanP.connect
+- uid: WPC.Product.EthanP.disconnect
+  name: disconnect()
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_disconnect
+  commentId: M:WPC.Product.EthanP.disconnect
+  fullName: WPC.Product.EthanP.disconnect()
+  nameWithType: EthanP.disconnect()
+- uid: WPC.Product.EthanP.disconnect*
+  name: disconnect
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_disconnect_
+  commentId: Overload:WPC.Product.EthanP.disconnect
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.disconnect
+  nameWithType: EthanP.disconnect
+- uid: WPC.Product.EthanP.DPOT_close(System.Int32,System.Int32)
+  name: DPOT_close(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_DPOT_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.DPOT_close(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.DPOT_close(System.Int32, System.Int32)
+  nameWithType: EthanP.DPOT_close(Int32, Int32)
+- uid: WPC.Product.EthanP.DPOT_close*
+  name: DPOT_close
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_DPOT_close_
+  commentId: Overload:WPC.Product.EthanP.DPOT_close
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.DPOT_close
+  nameWithType: EthanP.DPOT_close
+- uid: WPC.Product.EthanP.DPOT_open(System.Int32,System.Int32)
+  name: DPOT_open(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_DPOT_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.DPOT_open(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.DPOT_open(System.Int32, System.Int32)
+  nameWithType: EthanP.DPOT_open(Int32, Int32)
+- uid: WPC.Product.EthanP.DPOT_open*
+  name: DPOT_open
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_DPOT_open_
+  commentId: Overload:WPC.Product.EthanP.DPOT_open
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.DPOT_open
+  nameWithType: EthanP.DPOT_open
+- uid: WPC.Product.EthanP.DPOT_readByChannel(System.Int32,System.Int32,System.Int32)
+  name: DPOT_readByChannel(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_DPOT_readByChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.DPOT_readByChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.DPOT_readByChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanP.DPOT_readByChannel(Int32, Int32, Int32)
+- uid: WPC.Product.EthanP.DPOT_readByChannel*
+  name: DPOT_readByChannel
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_DPOT_readByChannel_
+  commentId: Overload:WPC.Product.EthanP.DPOT_readByChannel
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.DPOT_readByChannel
+  nameWithType: EthanP.DPOT_readByChannel
+- uid: WPC.Product.EthanP.DPOT_writeAllChannel(System.Int32,List{System.Single},System.Int32)
+  name: DPOT_writeAllChannel(Int32, List<Single>, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_DPOT_writeAllChannel_System_Int32_List_System_Single__System_Int32_
+  commentId: M:WPC.Product.EthanP.DPOT_writeAllChannel(System.Int32,List{System.Single},System.Int32)
+  name.vb: DPOT_writeAllChannel(Int32, List(Of Single), Int32)
+  fullName: WPC.Product.EthanP.DPOT_writeAllChannel(System.Int32, List<System.Single>, System.Int32)
+  fullName.vb: WPC.Product.EthanP.DPOT_writeAllChannel(System.Int32, List(Of System.Single), System.Int32)
+  nameWithType: EthanP.DPOT_writeAllChannel(Int32, List<Single>, Int32)
+  nameWithType.vb: EthanP.DPOT_writeAllChannel(Int32, List(Of Single), Int32)
+- uid: WPC.Product.EthanP.DPOT_writeAllChannel*
+  name: DPOT_writeAllChannel
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_DPOT_writeAllChannel_
+  commentId: Overload:WPC.Product.EthanP.DPOT_writeAllChannel
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.DPOT_writeAllChannel
+  nameWithType: EthanP.DPOT_writeAllChannel
+- uid: WPC.Product.EthanP.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Logger_openFile_System_String_
+  commentId: M:WPC.Product.EthanP.Logger_openFile(System.String)
+  fullName: WPC.Product.EthanP.Logger_openFile(System.String)
+  nameWithType: EthanP.Logger_openFile(String)
+- uid: WPC.Product.EthanP.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Logger_openFile_
+  commentId: Overload:WPC.Product.EthanP.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Logger_openFile
+  nameWithType: EthanP.Logger_openFile
+- uid: WPC.Product.EthanP.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.EthanP.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.EthanP.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.EthanP.Logger_writeList(List(Of System.Double))
+  nameWithType: EthanP.Logger_writeList(List<Double>)
+  nameWithType.vb: EthanP.Logger_writeList(List(Of Double))
+- uid: WPC.Product.EthanP.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.EthanP.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.EthanP.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.EthanP.Logger_writeList(List(Of System.Int32))
+  nameWithType: EthanP.Logger_writeList(List<Int32>)
+  nameWithType.vb: EthanP.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.EthanP.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.EthanP.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.EthanP.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.EthanP.Logger_writeList(List(Of System.Single))
+  nameWithType: EthanP.Logger_writeList(List<Single>)
+  nameWithType.vb: EthanP.Logger_writeList(List(Of Single))
+- uid: WPC.Product.EthanP.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Logger_writeList_
+  commentId: Overload:WPC.Product.EthanP.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Logger_writeList
+  nameWithType: EthanP.Logger_writeList
+- uid: WPC.Product.EthanP.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.EthanP.Logger_writeValue(System.String)
+  fullName: WPC.Product.EthanP.Logger_writeValue(System.String)
+  nameWithType: EthanP.Logger_writeValue(String)
+- uid: WPC.Product.EthanP.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Logger_writeValue_
+  commentId: Overload:WPC.Product.EthanP.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Logger_writeValue
+  nameWithType: EthanP.Logger_writeValue
+- uid: WPC.Product.EthanP.Sys_getDriverInfo(System.Int32)
+  name: Sys_getDriverInfo(Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getDriverInfo_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_getDriverInfo(System.Int32)
+  fullName: WPC.Product.EthanP.Sys_getDriverInfo(System.Int32)
+  nameWithType: EthanP.Sys_getDriverInfo(Int32)
+- uid: WPC.Product.EthanP.Sys_getDriverInfo*
+  name: Sys_getDriverInfo
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getDriverInfo_
+  commentId: Overload:WPC.Product.EthanP.Sys_getDriverInfo
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_getDriverInfo
+  nameWithType: EthanP.Sys_getDriverInfo
+- uid: WPC.Product.EthanP.Sys_getGateway(System.Int32)
+  name: Sys_getGateway(Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getGateway_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_getGateway(System.Int32)
+  fullName: WPC.Product.EthanP.Sys_getGateway(System.Int32)
+  nameWithType: EthanP.Sys_getGateway(Int32)
+- uid: WPC.Product.EthanP.Sys_getGateway*
+  name: Sys_getGateway
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getGateway_
+  commentId: Overload:WPC.Product.EthanP.Sys_getGateway
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_getGateway
+  nameWithType: EthanP.Sys_getGateway
+- uid: WPC.Product.EthanP.Sys_getIPAddrAndSubmask(System.Int32)
+  name: Sys_getIPAddrAndSubmask(Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getIPAddrAndSubmask_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_getIPAddrAndSubmask(System.Int32)
+  fullName: WPC.Product.EthanP.Sys_getIPAddrAndSubmask(System.Int32)
+  nameWithType: EthanP.Sys_getIPAddrAndSubmask(Int32)
+- uid: WPC.Product.EthanP.Sys_getIPAddrAndSubmask*
+  name: Sys_getIPAddrAndSubmask
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EthanP.Sys_getIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_getIPAddrAndSubmask
+  nameWithType: EthanP.Sys_getIPAddrAndSubmask
+- uid: WPC.Product.EthanP.Sys_getMACAddr(System.Int32)
+  name: Sys_getMACAddr(Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getMACAddr_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_getMACAddr(System.Int32)
+  fullName: WPC.Product.EthanP.Sys_getMACAddr(System.Int32)
+  nameWithType: EthanP.Sys_getMACAddr(Int32)
+- uid: WPC.Product.EthanP.Sys_getMACAddr*
+  name: Sys_getMACAddr
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getMACAddr_
+  commentId: Overload:WPC.Product.EthanP.Sys_getMACAddr
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_getMACAddr
+  nameWithType: EthanP.Sys_getMACAddr
+- uid: WPC.Product.EthanP.Sys_getMode(System.Int32,System.Int32)
+  name: Sys_getMode(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_getMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_getMode(System.Int32, System.Int32)
+  nameWithType: EthanP.Sys_getMode(Int32, Int32)
+- uid: WPC.Product.EthanP.Sys_getMode*
+  name: Sys_getMode
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getMode_
+  commentId: Overload:WPC.Product.EthanP.Sys_getMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_getMode
+  nameWithType: EthanP.Sys_getMode
+- uid: WPC.Product.EthanP.Sys_getRTC(System.Int32)
+  name: Sys_getRTC(Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getRTC_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_getRTC(System.Int32)
+  fullName: WPC.Product.EthanP.Sys_getRTC(System.Int32)
+  nameWithType: EthanP.Sys_getRTC(Int32)
+- uid: WPC.Product.EthanP.Sys_getRTC*
+  name: Sys_getRTC
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getRTC_
+  commentId: Overload:WPC.Product.EthanP.Sys_getRTC
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_getRTC
+  nameWithType: EthanP.Sys_getRTC
+- uid: WPC.Product.EthanP.Sys_getSerialNumber(System.Int32)
+  name: Sys_getSerialNumber(Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getSerialNumber_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_getSerialNumber(System.Int32)
+  fullName: WPC.Product.EthanP.Sys_getSerialNumber(System.Int32)
+  nameWithType: EthanP.Sys_getSerialNumber(Int32)
+- uid: WPC.Product.EthanP.Sys_getSerialNumber*
+  name: Sys_getSerialNumber
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_getSerialNumber_
+  commentId: Overload:WPC.Product.EthanP.Sys_getSerialNumber
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_getSerialNumber
+  nameWithType: EthanP.Sys_getSerialNumber
+- uid: WPC.Product.EthanP.Sys_reboot(System.Int32)
+  name: Sys_reboot(Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_reboot_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_reboot(System.Int32)
+  fullName: WPC.Product.EthanP.Sys_reboot(System.Int32)
+  nameWithType: EthanP.Sys_reboot(Int32)
+- uid: WPC.Product.EthanP.Sys_reboot*
+  name: Sys_reboot
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_reboot_
+  commentId: Overload:WPC.Product.EthanP.Sys_reboot
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_reboot
+  nameWithType: EthanP.Sys_reboot
+- uid: WPC.Product.EthanP.Sys_setAIOMode(System.Int32,System.Int32)
+  name: Sys_setAIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setAIOMode(System.Int32, System.Int32)
+  nameWithType: EthanP.Sys_setAIOMode(Int32, Int32)
+- uid: WPC.Product.EthanP.Sys_setAIOMode*
+  name: Sys_setAIOMode
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setAIOMode_
+  commentId: Overload:WPC.Product.EthanP.Sys_setAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setAIOMode
+  nameWithType: EthanP.Sys_setAIOMode
+- uid: WPC.Product.EthanP.Sys_setDIMode(System.Int32,System.Int32)
+  name: Sys_setDIMode(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setDIMode(System.Int32, System.Int32)
+  nameWithType: EthanP.Sys_setDIMode(Int32, Int32)
+- uid: WPC.Product.EthanP.Sys_setDIMode*
+  name: Sys_setDIMode
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setDIMode_
+  commentId: Overload:WPC.Product.EthanP.Sys_setDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setDIMode
+  nameWithType: EthanP.Sys_setDIMode
+- uid: WPC.Product.EthanP.Sys_setDIOMode(System.Int32,System.Int32)
+  name: Sys_setDIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setDIOMode(System.Int32, System.Int32)
+  nameWithType: EthanP.Sys_setDIOMode(Int32, Int32)
+- uid: WPC.Product.EthanP.Sys_setDIOMode*
+  name: Sys_setDIOMode
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setDIOMode_
+  commentId: Overload:WPC.Product.EthanP.Sys_setDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setDIOMode
+  nameWithType: EthanP.Sys_setDIOMode
+- uid: WPC.Product.EthanP.Sys_setDOMode(System.Int32,System.Int32)
+  name: Sys_setDOMode(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setDOMode(System.Int32, System.Int32)
+  nameWithType: EthanP.Sys_setDOMode(Int32, Int32)
+- uid: WPC.Product.EthanP.Sys_setDOMode*
+  name: Sys_setDOMode
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setDOMode_
+  commentId: Overload:WPC.Product.EthanP.Sys_setDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setDOMode
+  nameWithType: EthanP.Sys_setDOMode
+- uid: WPC.Product.EthanP.Sys_setIdleMode(System.Int32,System.Int32)
+  name: Sys_setIdleMode(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setIdleMode(System.Int32, System.Int32)
+  nameWithType: EthanP.Sys_setIdleMode(Int32, Int32)
+- uid: WPC.Product.EthanP.Sys_setIdleMode*
+  name: Sys_setIdleMode
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setIdleMode_
+  commentId: Overload:WPC.Product.EthanP.Sys_setIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setIdleMode
+  nameWithType: EthanP.Sys_setIdleMode
+- uid: WPC.Product.EthanP.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  name: Sys_setIPAddrAndSubmask(String, String, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setIPAddrAndSubmask_System_String_System_String_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setIPAddrAndSubmask(System.String, System.String, System.Int32)
+  nameWithType: EthanP.Sys_setIPAddrAndSubmask(String, String, Int32)
+- uid: WPC.Product.EthanP.Sys_setIPAddrAndSubmask*
+  name: Sys_setIPAddrAndSubmask
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EthanP.Sys_setIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setIPAddrAndSubmask
+  nameWithType: EthanP.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EthanP.Sys_setMotionMode(System.Int32,System.Int32)
+  name: Sys_setMotionMode(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setMotionMode(System.Int32, System.Int32)
+  nameWithType: EthanP.Sys_setMotionMode(Int32, Int32)
+- uid: WPC.Product.EthanP.Sys_setMotionMode*
+  name: Sys_setMotionMode
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setMotionMode_
+  commentId: Overload:WPC.Product.EthanP.Sys_setMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setMotionMode
+  nameWithType: EthanP.Sys_setMotionMode
+- uid: WPC.Product.EthanP.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setRTC(System.Int32, System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: EthanP.Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Product.EthanP.Sys_setRTC*
+  name: Sys_setRTC
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setRTC_
+  commentId: Overload:WPC.Product.EthanP.Sys_setRTC
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setRTC
+  nameWithType: EthanP.Sys_setRTC
+- uid: WPC.Product.EthanP.Sys_setSwitchMode(System.Int32,System.Int32)
+  name: Sys_setSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanP.Sys_setSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanP.Sys_setSwitchMode(System.Int32, System.Int32)
+  nameWithType: EthanP.Sys_setSwitchMode(Int32, Int32)
+- uid: WPC.Product.EthanP.Sys_setSwitchMode*
+  name: Sys_setSwitchMode
+  href: api/WPC.Product.EthanP.html#WPC_Product_EthanP_Sys_setSwitchMode_
+  commentId: Overload:WPC.Product.EthanP.Sys_setSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanP.Sys_setSwitchMode
+  nameWithType: EthanP.Sys_setSwitchMode
 - uid: WPC.Product.EthanT
   name: EthanT
   href: api/WPC.Product.EthanT.html
@@ -8309,19 +8582,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanT.Sys_reboot
   nameWithType: EthanT.Sys_reboot
-- uid: WPC.Product.EthanT.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.EthanT.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.EthanT.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: EthanT.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.EthanT.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.EthanT.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.EthanT.Sys_rebootOnBootloader
-  nameWithType: EthanT.Sys_rebootOnBootloader
 - uid: WPC.Product.EthanT.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.EthanT.html#WPC_Product_EthanT_Sys_setAIOMode_System_Int32_System_Int32_
@@ -9292,19 +9552,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.STEM.Sys_reboot
   nameWithType: STEM.Sys_reboot
-- uid: WPC.Product.STEM.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.STEM.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.STEM.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: STEM.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.STEM.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.STEM.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.STEM.Sys_rebootOnBootloader
-  nameWithType: STEM.Sys_rebootOnBootloader
 - uid: WPC.Product.STEM.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.STEM.html#WPC_Product_STEM_Sys_setAIOMode_System_Int32_System_Int32_
@@ -10343,19 +10590,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.Sys_reboot
   nameWithType: USBDAQF1AD.Sys_reboot
-- uid: WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: USBDAQF1AD.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader
-  nameWithType: USBDAQF1AD.Sys_rebootOnBootloader
 - uid: WPC.Product.USBDAQF1AD.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Sys_setAIOMode_System_Int32_System_Int32_
@@ -10564,19 +10798,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.UART_setParity
   nameWithType: USBDAQF1AD.UART_setParity
-- uid: WPC.Product.USBDAQF1AD.UART_stopReading(System.Int32,System.Int32)
-  name: UART_stopReading(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_UART_stopReading_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AD.UART_stopReading(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AD.UART_stopReading(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AD.UART_stopReading(Int32, Int32)
-- uid: WPC.Product.USBDAQF1AD.UART_stopReading*
-  name: UART_stopReading
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_UART_stopReading_
-  commentId: Overload:WPC.Product.USBDAQF1AD.UART_stopReading
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AD.UART_stopReading
-  nameWithType: USBDAQF1AD.UART_stopReading
 - uid: WPC.Product.USBDAQF1AD.UART_write(System.Int32,System.String,System.Int32)
   name: UART_write(Int32, String, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_UART_write_System_Int32_System_String_System_Int32_
@@ -11563,19 +11784,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.Sys_reboot
   nameWithType: USBDAQF1AOD.Sys_reboot
-- uid: WPC.Product.USBDAQF1AOD.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AOD.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.USBDAQF1AOD.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: USBDAQF1AOD.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.USBDAQF1AOD.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.USBDAQF1AOD.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AOD.Sys_rebootOnBootloader
-  nameWithType: USBDAQF1AOD.Sys_rebootOnBootloader
 - uid: WPC.Product.USBDAQF1AOD.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Sys_setAIOMode_System_Int32_System_Int32_
@@ -11784,19 +11992,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.UART_setParity
   nameWithType: USBDAQF1AOD.UART_setParity
-- uid: WPC.Product.USBDAQF1AOD.UART_stopReading(System.Int32,System.Int32)
-  name: UART_stopReading(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_UART_stopReading_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AOD.UART_stopReading(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AOD.UART_stopReading(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AOD.UART_stopReading(Int32, Int32)
-- uid: WPC.Product.USBDAQF1AOD.UART_stopReading*
-  name: UART_stopReading
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_UART_stopReading_
-  commentId: Overload:WPC.Product.USBDAQF1AOD.UART_stopReading
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AOD.UART_stopReading
-  nameWithType: USBDAQF1AOD.UART_stopReading
 - uid: WPC.Product.USBDAQF1AOD.UART_write(System.Int32,System.String,System.Int32)
   name: UART_write(Int32, String, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_UART_write_System_Int32_System_String_System_Int32_
@@ -12705,19 +12900,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.Sys_reboot
   nameWithType: USBDAQF1CD.Sys_reboot
-- uid: WPC.Product.USBDAQF1CD.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1CD.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.USBDAQF1CD.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: USBDAQF1CD.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.USBDAQF1CD.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.USBDAQF1CD.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1CD.Sys_rebootOnBootloader
-  nameWithType: USBDAQF1CD.Sys_rebootOnBootloader
 - uid: WPC.Product.USBDAQF1CD.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Sys_setAIOMode_System_Int32_System_Int32_
@@ -12926,19 +13108,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.UART_setParity
   nameWithType: USBDAQF1CD.UART_setParity
-- uid: WPC.Product.USBDAQF1CD.UART_stopReading(System.Int32,System.Int32)
-  name: UART_stopReading(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_UART_stopReading_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1CD.UART_stopReading(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1CD.UART_stopReading(System.Int32, System.Int32)
-  nameWithType: USBDAQF1CD.UART_stopReading(Int32, Int32)
-- uid: WPC.Product.USBDAQF1CD.UART_stopReading*
-  name: UART_stopReading
-  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_UART_stopReading_
-  commentId: Overload:WPC.Product.USBDAQF1CD.UART_stopReading
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1CD.UART_stopReading
-  nameWithType: USBDAQF1CD.UART_stopReading
 - uid: WPC.Product.USBDAQF1CD.UART_write(System.Int32,System.String,System.Int32)
   name: UART_write(Int32, String, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_UART_write_System_Int32_System_String_System_Int32_
@@ -13727,19 +13896,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.Sys_reboot
   nameWithType: USBDAQF1D.Sys_reboot
-- uid: WPC.Product.USBDAQF1D.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1D.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.USBDAQF1D.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: USBDAQF1D.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.USBDAQF1D.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.USBDAQF1D.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1D.Sys_rebootOnBootloader
-  nameWithType: USBDAQF1D.Sys_rebootOnBootloader
 - uid: WPC.Product.USBDAQF1D.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Sys_setAIOMode_System_Int32_System_Int32_
@@ -13948,19 +14104,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.UART_setParity
   nameWithType: USBDAQF1D.UART_setParity
-- uid: WPC.Product.USBDAQF1D.UART_stopReading(System.Int32,System.Int32)
-  name: UART_stopReading(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_UART_stopReading_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1D.UART_stopReading(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1D.UART_stopReading(System.Int32, System.Int32)
-  nameWithType: USBDAQF1D.UART_stopReading(Int32, Int32)
-- uid: WPC.Product.USBDAQF1D.UART_stopReading*
-  name: UART_stopReading
-  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_UART_stopReading_
-  commentId: Overload:WPC.Product.USBDAQF1D.UART_stopReading
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1D.UART_stopReading
-  nameWithType: USBDAQF1D.UART_stopReading
 - uid: WPC.Product.USBDAQF1D.UART_write(System.Int32,System.String,System.Int32)
   name: UART_write(Int32, String, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_UART_write_System_Int32_System_String_System_Int32_
@@ -14519,19 +14662,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.Sys_reboot
   nameWithType: USBDAQF1DSNK.Sys_reboot
-- uid: WPC.Product.USBDAQF1DSNK.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1DSNK.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.USBDAQF1DSNK.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: USBDAQF1DSNK.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.USBDAQF1DSNK.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.USBDAQF1DSNK.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1DSNK.Sys_rebootOnBootloader
-  nameWithType: USBDAQF1DSNK.Sys_rebootOnBootloader
 - uid: WPC.Product.USBDAQF1DSNK.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Sys_setAIOMode_System_Int32_System_Int32_
@@ -15411,19 +15541,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.Sys_reboot
   nameWithType: USBDAQF1RD.Sys_reboot
-- uid: WPC.Product.USBDAQF1RD.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1RD.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.USBDAQF1RD.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: USBDAQF1RD.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.USBDAQF1RD.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.USBDAQF1RD.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1RD.Sys_rebootOnBootloader
-  nameWithType: USBDAQF1RD.Sys_rebootOnBootloader
 - uid: WPC.Product.USBDAQF1RD.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Sys_setAIOMode_System_Int32_System_Int32_
@@ -15697,19 +15814,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.UART_setParity
   nameWithType: USBDAQF1RD.UART_setParity
-- uid: WPC.Product.USBDAQF1RD.UART_stopReading(System.Int32,System.Int32)
-  name: UART_stopReading(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_UART_stopReading_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1RD.UART_stopReading(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1RD.UART_stopReading(System.Int32, System.Int32)
-  nameWithType: USBDAQF1RD.UART_stopReading(Int32, Int32)
-- uid: WPC.Product.USBDAQF1RD.UART_stopReading*
-  name: UART_stopReading
-  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_UART_stopReading_
-  commentId: Overload:WPC.Product.USBDAQF1RD.UART_stopReading
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1RD.UART_stopReading
-  nameWithType: USBDAQF1RD.UART_stopReading
 - uid: WPC.Product.USBDAQF1RD.UART_write(System.Int32,System.String,System.Int32)
   name: UART_write(Int32, String, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_UART_write_System_Int32_System_String_System_Int32_
@@ -16498,19 +16602,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.Sys_reboot
   nameWithType: USBDAQF1TD.Sys_reboot
-- uid: WPC.Product.USBDAQF1TD.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1TD.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.USBDAQF1TD.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: USBDAQF1TD.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.USBDAQF1TD.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.USBDAQF1TD.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1TD.Sys_rebootOnBootloader
-  nameWithType: USBDAQF1TD.Sys_rebootOnBootloader
 - uid: WPC.Product.USBDAQF1TD.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Sys_setAIOMode_System_Int32_System_Int32_
@@ -16797,19 +16888,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.UART_setParity
   nameWithType: USBDAQF1TD.UART_setParity
-- uid: WPC.Product.USBDAQF1TD.UART_stopReading(System.Int32,System.Int32)
-  name: UART_stopReading(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_UART_stopReading_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1TD.UART_stopReading(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1TD.UART_stopReading(System.Int32, System.Int32)
-  nameWithType: USBDAQF1TD.UART_stopReading(Int32, Int32)
-- uid: WPC.Product.USBDAQF1TD.UART_stopReading*
-  name: UART_stopReading
-  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_UART_stopReading_
-  commentId: Overload:WPC.Product.USBDAQF1TD.UART_stopReading
-  isSpec: "True"
-  fullName: WPC.Product.USBDAQF1TD.UART_stopReading
-  nameWithType: USBDAQF1TD.UART_stopReading
 - uid: WPC.Product.USBDAQF1TD.UART_write(System.Int32,System.String,System.Int32)
   name: UART_write(Int32, String, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_UART_write_System_Int32_System_String_System_Int32_
@@ -17191,19 +17269,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Sys_reboot
   nameWithType: WifiDAQE3A.Sys_reboot
-- uid: WPC.Product.WifiDAQE3A.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: WifiDAQE3A.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.WifiDAQE3A.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.WifiDAQE3A.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.Sys_rebootOnBootloader
-  nameWithType: WifiDAQE3A.Sys_rebootOnBootloader
 - uid: WPC.Product.WifiDAQE3A.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Sys_setAIOMode_System_Int32_System_Int32_
@@ -17321,6 +17386,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Sys_setSwitchMode
   nameWithType: WifiDAQE3A.Sys_setSwitchMode
+- uid: WPC.Product.WifiDAQE3A.Wifi_getBandwidth(System.Int32)
+  name: Wifi_getBandwidth(Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getBandwidth_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_getBandwidth(System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_getBandwidth(System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_getBandwidth(Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_getBandwidth*
+  name: Wifi_getBandwidth
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getBandwidth_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_getBandwidth
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_getBandwidth
+  nameWithType: WifiDAQE3A.Wifi_getBandwidth
 - uid: WPC.Product.WifiDAQE3A.Wifi_getChargeStatus(System.Int32)
   name: Wifi_getChargeStatus(Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getChargeStatus_System_Int32_
@@ -17334,6 +17412,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Wifi_getChargeStatus
   nameWithType: WifiDAQE3A.Wifi_getChargeStatus
+- uid: WPC.Product.WifiDAQE3A.Wifi_getConfiguration(System.Int32)
+  name: Wifi_getConfiguration(Int32)
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getConfiguration_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3A.Wifi_getConfiguration(System.Int32)
+  fullName: WPC.Product.WifiDAQE3A.Wifi_getConfiguration(System.Int32)
+  nameWithType: WifiDAQE3A.Wifi_getConfiguration(Int32)
+- uid: WPC.Product.WifiDAQE3A.Wifi_getConfiguration*
+  name: Wifi_getConfiguration
+  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getConfiguration_
+  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_getConfiguration
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3A.Wifi_getConfiguration
+  nameWithType: WifiDAQE3A.Wifi_getConfiguration
 - uid: WPC.Product.WifiDAQE3A.Wifi_getPowerGoodStatus(System.Int32)
   name: Wifi_getPowerGoodStatus(Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getPowerGoodStatus_System_Int32_
@@ -17347,45 +17438,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Wifi_getPowerGoodStatus
   nameWithType: WifiDAQE3A.Wifi_getPowerGoodStatus
-- uid: WPC.Product.WifiDAQE3A.Wifi_getWifiBandwidth(System.Int32)
-  name: Wifi_getWifiBandwidth(Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getWifiBandwidth_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.Wifi_getWifiBandwidth(System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.Wifi_getWifiBandwidth(System.Int32)
-  nameWithType: WifiDAQE3A.Wifi_getWifiBandwidth(Int32)
-- uid: WPC.Product.WifiDAQE3A.Wifi_getWifiBandwidth*
-  name: Wifi_getWifiBandwidth
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getWifiBandwidth_
-  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_getWifiBandwidth
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.Wifi_getWifiBandwidth
-  nameWithType: WifiDAQE3A.Wifi_getWifiBandwidth
-- uid: WPC.Product.WifiDAQE3A.Wifi_getWifiConfiguration(System.Int32)
-  name: Wifi_getWifiConfiguration(Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getWifiConfiguration_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.Wifi_getWifiConfiguration(System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.Wifi_getWifiConfiguration(System.Int32)
-  nameWithType: WifiDAQE3A.Wifi_getWifiConfiguration(Int32)
-- uid: WPC.Product.WifiDAQE3A.Wifi_getWifiConfiguration*
-  name: Wifi_getWifiConfiguration
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_getWifiConfiguration_
-  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_getWifiConfiguration
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.Wifi_getWifiConfiguration
-  nameWithType: WifiDAQE3A.Wifi_getWifiConfiguration
-- uid: WPC.Product.WifiDAQE3A.Wifi_readAcceleration(System.Int32)
-  name: Wifi_readAcceleration(Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readAcceleration_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.Wifi_readAcceleration(System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.Wifi_readAcceleration(System.Int32)
-  nameWithType: WifiDAQE3A.Wifi_readAcceleration(Int32)
-- uid: WPC.Product.WifiDAQE3A.Wifi_readAcceleration*
-  name: Wifi_readAcceleration
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readAcceleration_
-  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_readAcceleration
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.Wifi_readAcceleration
-  nameWithType: WifiDAQE3A.Wifi_readAcceleration
 - uid: WPC.Product.WifiDAQE3A.Wifi_readBattery(System.Int32)
   name: Wifi_readBattery(Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readBattery_System_Int32_
@@ -17412,19 +17464,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Wifi_readRSSI
   nameWithType: WifiDAQE3A.Wifi_readRSSI
-- uid: WPC.Product.WifiDAQE3A.Wifi_readThermo(System.Int32)
-  name: Wifi_readThermo(Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readThermo_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.Wifi_readThermo(System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.Wifi_readThermo(System.Int32)
-  nameWithType: WifiDAQE3A.Wifi_readThermo(Int32)
-- uid: WPC.Product.WifiDAQE3A.Wifi_readThermo*
-  name: Wifi_readThermo
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_readThermo_
-  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_readThermo
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.Wifi_readThermo
-  nameWithType: WifiDAQE3A.Wifi_readThermo
 - uid: WPC.Product.WifiDAQE3A.Wifi_resetLED(System.Int32)
   name: Wifi_resetLED(Int32)
   href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_resetLED_System_Int32_
@@ -17477,19 +17516,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3A.Wifi_setRedLED
   nameWithType: WifiDAQE3A.Wifi_setRedLED
-- uid: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
-  name: Wifi_setWifiBandWidth(Int32, Int32)
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setWifiBandWidth_System_Int32_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
-  fullName: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth(System.Int32, System.Int32)
-  nameWithType: WifiDAQE3A.Wifi_setWifiBandWidth(Int32, Int32)
-- uid: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth*
-  name: Wifi_setWifiBandWidth
-  href: api/WPC.Product.WifiDAQE3A.html#WPC_Product_WifiDAQE3A_Wifi_setWifiBandWidth_
-  commentId: Overload:WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3A.Wifi_setWifiBandWidth
-  nameWithType: WifiDAQE3A.Wifi_setWifiBandWidth
 - uid: WPC.Product.WifiDAQE3AH
   name: WifiDAQE3AH
   href: api/WPC.Product.WifiDAQE3AH.html
@@ -17975,19 +18001,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3AH.Sys_reboot
   nameWithType: WifiDAQE3AH.Sys_reboot
-- uid: WPC.Product.WifiDAQE3AH.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3AH.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.WifiDAQE3AH.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: WifiDAQE3AH.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.WifiDAQE3AH.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.WifiDAQE3AH.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3AH.Sys_rebootOnBootloader
-  nameWithType: WifiDAQE3AH.Sys_rebootOnBootloader
 - uid: WPC.Product.WifiDAQE3AH.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Sys_setAIOMode_System_Int32_System_Int32_
@@ -18105,6 +18118,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3AH.Sys_setSwitchMode
   nameWithType: WifiDAQE3AH.Sys_setSwitchMode
+- uid: WPC.Product.WifiDAQE3AH.Wifi_getBandwidth(System.Int32)
+  name: Wifi_getBandwidth(Int32)
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getBandwidth_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3AH.Wifi_getBandwidth(System.Int32)
+  fullName: WPC.Product.WifiDAQE3AH.Wifi_getBandwidth(System.Int32)
+  nameWithType: WifiDAQE3AH.Wifi_getBandwidth(Int32)
+- uid: WPC.Product.WifiDAQE3AH.Wifi_getBandwidth*
+  name: Wifi_getBandwidth
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getBandwidth_
+  commentId: Overload:WPC.Product.WifiDAQE3AH.Wifi_getBandwidth
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3AH.Wifi_getBandwidth
+  nameWithType: WifiDAQE3AH.Wifi_getBandwidth
 - uid: WPC.Product.WifiDAQE3AH.Wifi_getChargeStatus(System.Int32)
   name: Wifi_getChargeStatus(Int32)
   href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getChargeStatus_System_Int32_
@@ -18118,6 +18144,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3AH.Wifi_getChargeStatus
   nameWithType: WifiDAQE3AH.Wifi_getChargeStatus
+- uid: WPC.Product.WifiDAQE3AH.Wifi_getConfiguration(System.Int32)
+  name: Wifi_getConfiguration(Int32)
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getConfiguration_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3AH.Wifi_getConfiguration(System.Int32)
+  fullName: WPC.Product.WifiDAQE3AH.Wifi_getConfiguration(System.Int32)
+  nameWithType: WifiDAQE3AH.Wifi_getConfiguration(Int32)
+- uid: WPC.Product.WifiDAQE3AH.Wifi_getConfiguration*
+  name: Wifi_getConfiguration
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getConfiguration_
+  commentId: Overload:WPC.Product.WifiDAQE3AH.Wifi_getConfiguration
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3AH.Wifi_getConfiguration
+  nameWithType: WifiDAQE3AH.Wifi_getConfiguration
 - uid: WPC.Product.WifiDAQE3AH.Wifi_getPowerGoodStatus(System.Int32)
   name: Wifi_getPowerGoodStatus(Int32)
   href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getPowerGoodStatus_System_Int32_
@@ -18131,45 +18170,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3AH.Wifi_getPowerGoodStatus
   nameWithType: WifiDAQE3AH.Wifi_getPowerGoodStatus
-- uid: WPC.Product.WifiDAQE3AH.Wifi_getWifiBandwidth(System.Int32)
-  name: Wifi_getWifiBandwidth(Int32)
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getWifiBandwidth_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3AH.Wifi_getWifiBandwidth(System.Int32)
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_getWifiBandwidth(System.Int32)
-  nameWithType: WifiDAQE3AH.Wifi_getWifiBandwidth(Int32)
-- uid: WPC.Product.WifiDAQE3AH.Wifi_getWifiBandwidth*
-  name: Wifi_getWifiBandwidth
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getWifiBandwidth_
-  commentId: Overload:WPC.Product.WifiDAQE3AH.Wifi_getWifiBandwidth
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_getWifiBandwidth
-  nameWithType: WifiDAQE3AH.Wifi_getWifiBandwidth
-- uid: WPC.Product.WifiDAQE3AH.Wifi_getWifiConfiguration(System.Int32)
-  name: Wifi_getWifiConfiguration(Int32)
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getWifiConfiguration_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3AH.Wifi_getWifiConfiguration(System.Int32)
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_getWifiConfiguration(System.Int32)
-  nameWithType: WifiDAQE3AH.Wifi_getWifiConfiguration(Int32)
-- uid: WPC.Product.WifiDAQE3AH.Wifi_getWifiConfiguration*
-  name: Wifi_getWifiConfiguration
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_getWifiConfiguration_
-  commentId: Overload:WPC.Product.WifiDAQE3AH.Wifi_getWifiConfiguration
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_getWifiConfiguration
-  nameWithType: WifiDAQE3AH.Wifi_getWifiConfiguration
-- uid: WPC.Product.WifiDAQE3AH.Wifi_readAcceleration(System.Int32)
-  name: Wifi_readAcceleration(Int32)
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_readAcceleration_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3AH.Wifi_readAcceleration(System.Int32)
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_readAcceleration(System.Int32)
-  nameWithType: WifiDAQE3AH.Wifi_readAcceleration(Int32)
-- uid: WPC.Product.WifiDAQE3AH.Wifi_readAcceleration*
-  name: Wifi_readAcceleration
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_readAcceleration_
-  commentId: Overload:WPC.Product.WifiDAQE3AH.Wifi_readAcceleration
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_readAcceleration
-  nameWithType: WifiDAQE3AH.Wifi_readAcceleration
 - uid: WPC.Product.WifiDAQE3AH.Wifi_readBattery(System.Int32)
   name: Wifi_readBattery(Int32)
   href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_readBattery_System_Int32_
@@ -18196,19 +18196,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3AH.Wifi_readRSSI
   nameWithType: WifiDAQE3AH.Wifi_readRSSI
-- uid: WPC.Product.WifiDAQE3AH.Wifi_readThermo(System.Int32)
-  name: Wifi_readThermo(Int32)
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_readThermo_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3AH.Wifi_readThermo(System.Int32)
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_readThermo(System.Int32)
-  nameWithType: WifiDAQE3AH.Wifi_readThermo(Int32)
-- uid: WPC.Product.WifiDAQE3AH.Wifi_readThermo*
-  name: Wifi_readThermo
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_readThermo_
-  commentId: Overload:WPC.Product.WifiDAQE3AH.Wifi_readThermo
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_readThermo
-  nameWithType: WifiDAQE3AH.Wifi_readThermo
 - uid: WPC.Product.WifiDAQE3AH.Wifi_resetLED(System.Int32)
   name: Wifi_resetLED(Int32)
   href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_resetLED_System_Int32_
@@ -18261,19 +18248,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3AH.Wifi_setRedLED
   nameWithType: WifiDAQE3AH.Wifi_setRedLED
-- uid: WPC.Product.WifiDAQE3AH.Wifi_setWifiBandWidth(System.Int32,System.Int32)
-  name: Wifi_setWifiBandWidth(Int32, Int32)
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_setWifiBandWidth_System_Int32_System_Int32_
-  commentId: M:WPC.Product.WifiDAQE3AH.Wifi_setWifiBandWidth(System.Int32,System.Int32)
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_setWifiBandWidth(System.Int32, System.Int32)
-  nameWithType: WifiDAQE3AH.Wifi_setWifiBandWidth(Int32, Int32)
-- uid: WPC.Product.WifiDAQE3AH.Wifi_setWifiBandWidth*
-  name: Wifi_setWifiBandWidth
-  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Wifi_setWifiBandWidth_
-  commentId: Overload:WPC.Product.WifiDAQE3AH.Wifi_setWifiBandWidth
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQE3AH.Wifi_setWifiBandWidth
-  nameWithType: WifiDAQE3AH.Wifi_setWifiBandWidth
 - uid: WPC.Product.WifiDAQF4A
   name: WifiDAQF4A
   href: api/WPC.Product.WifiDAQF4A.html
@@ -18642,19 +18616,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Sys_reboot
   nameWithType: WifiDAQF4A.Sys_reboot
-- uid: WPC.Product.WifiDAQF4A.Sys_rebootOnBootloader(System.Int32)
-  name: Sys_rebootOnBootloader(Int32)
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Sys_rebootOnBootloader_System_Int32_
-  commentId: M:WPC.Product.WifiDAQF4A.Sys_rebootOnBootloader(System.Int32)
-  fullName: WPC.Product.WifiDAQF4A.Sys_rebootOnBootloader(System.Int32)
-  nameWithType: WifiDAQF4A.Sys_rebootOnBootloader(Int32)
-- uid: WPC.Product.WifiDAQF4A.Sys_rebootOnBootloader*
-  name: Sys_rebootOnBootloader
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Sys_rebootOnBootloader_
-  commentId: Overload:WPC.Product.WifiDAQF4A.Sys_rebootOnBootloader
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQF4A.Sys_rebootOnBootloader
-  nameWithType: WifiDAQF4A.Sys_rebootOnBootloader
 - uid: WPC.Product.WifiDAQF4A.Sys_setAIOMode(System.Int32,System.Int32)
   name: Sys_setAIOMode(Int32, Int32)
   href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Sys_setAIOMode_System_Int32_System_Int32_
@@ -18772,6 +18733,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Sys_setSwitchMode
   nameWithType: WifiDAQF4A.Sys_setSwitchMode
+- uid: WPC.Product.WifiDAQF4A.Wifi_getBandwidth(System.Int32)
+  name: Wifi_getBandwidth(Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getBandwidth_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_getBandwidth(System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_getBandwidth(System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_getBandwidth(Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_getBandwidth*
+  name: Wifi_getBandwidth
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getBandwidth_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_getBandwidth
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_getBandwidth
+  nameWithType: WifiDAQF4A.Wifi_getBandwidth
 - uid: WPC.Product.WifiDAQF4A.Wifi_getChargeStatus(System.Int32)
   name: Wifi_getChargeStatus(Int32)
   href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getChargeStatus_System_Int32_
@@ -18785,6 +18759,19 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Wifi_getChargeStatus
   nameWithType: WifiDAQF4A.Wifi_getChargeStatus
+- uid: WPC.Product.WifiDAQF4A.Wifi_getConfiguration(System.Int32)
+  name: Wifi_getConfiguration(Int32)
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getConfiguration_System_Int32_
+  commentId: M:WPC.Product.WifiDAQF4A.Wifi_getConfiguration(System.Int32)
+  fullName: WPC.Product.WifiDAQF4A.Wifi_getConfiguration(System.Int32)
+  nameWithType: WifiDAQF4A.Wifi_getConfiguration(Int32)
+- uid: WPC.Product.WifiDAQF4A.Wifi_getConfiguration*
+  name: Wifi_getConfiguration
+  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getConfiguration_
+  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_getConfiguration
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQF4A.Wifi_getConfiguration
+  nameWithType: WifiDAQF4A.Wifi_getConfiguration
 - uid: WPC.Product.WifiDAQF4A.Wifi_getPowerGoodStatus(System.Int32)
   name: Wifi_getPowerGoodStatus(Int32)
   href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getPowerGoodStatus_System_Int32_
@@ -18798,45 +18785,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Wifi_getPowerGoodStatus
   nameWithType: WifiDAQF4A.Wifi_getPowerGoodStatus
-- uid: WPC.Product.WifiDAQF4A.Wifi_getWifiBandwidth(System.Int32)
-  name: Wifi_getWifiBandwidth(Int32)
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getWifiBandwidth_System_Int32_
-  commentId: M:WPC.Product.WifiDAQF4A.Wifi_getWifiBandwidth(System.Int32)
-  fullName: WPC.Product.WifiDAQF4A.Wifi_getWifiBandwidth(System.Int32)
-  nameWithType: WifiDAQF4A.Wifi_getWifiBandwidth(Int32)
-- uid: WPC.Product.WifiDAQF4A.Wifi_getWifiBandwidth*
-  name: Wifi_getWifiBandwidth
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getWifiBandwidth_
-  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_getWifiBandwidth
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQF4A.Wifi_getWifiBandwidth
-  nameWithType: WifiDAQF4A.Wifi_getWifiBandwidth
-- uid: WPC.Product.WifiDAQF4A.Wifi_getWifiConfiguration(System.Int32)
-  name: Wifi_getWifiConfiguration(Int32)
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getWifiConfiguration_System_Int32_
-  commentId: M:WPC.Product.WifiDAQF4A.Wifi_getWifiConfiguration(System.Int32)
-  fullName: WPC.Product.WifiDAQF4A.Wifi_getWifiConfiguration(System.Int32)
-  nameWithType: WifiDAQF4A.Wifi_getWifiConfiguration(Int32)
-- uid: WPC.Product.WifiDAQF4A.Wifi_getWifiConfiguration*
-  name: Wifi_getWifiConfiguration
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_getWifiConfiguration_
-  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_getWifiConfiguration
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQF4A.Wifi_getWifiConfiguration
-  nameWithType: WifiDAQF4A.Wifi_getWifiConfiguration
-- uid: WPC.Product.WifiDAQF4A.Wifi_readAcceleration(System.Int32)
-  name: Wifi_readAcceleration(Int32)
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_readAcceleration_System_Int32_
-  commentId: M:WPC.Product.WifiDAQF4A.Wifi_readAcceleration(System.Int32)
-  fullName: WPC.Product.WifiDAQF4A.Wifi_readAcceleration(System.Int32)
-  nameWithType: WifiDAQF4A.Wifi_readAcceleration(Int32)
-- uid: WPC.Product.WifiDAQF4A.Wifi_readAcceleration*
-  name: Wifi_readAcceleration
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_readAcceleration_
-  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_readAcceleration
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQF4A.Wifi_readAcceleration
-  nameWithType: WifiDAQF4A.Wifi_readAcceleration
 - uid: WPC.Product.WifiDAQF4A.Wifi_readBattery(System.Int32)
   name: Wifi_readBattery(Int32)
   href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_readBattery_System_Int32_
@@ -18863,19 +18811,6 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Wifi_readRSSI
   nameWithType: WifiDAQF4A.Wifi_readRSSI
-- uid: WPC.Product.WifiDAQF4A.Wifi_readThermo(System.Int32)
-  name: Wifi_readThermo(Int32)
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_readThermo_System_Int32_
-  commentId: M:WPC.Product.WifiDAQF4A.Wifi_readThermo(System.Int32)
-  fullName: WPC.Product.WifiDAQF4A.Wifi_readThermo(System.Int32)
-  nameWithType: WifiDAQF4A.Wifi_readThermo(Int32)
-- uid: WPC.Product.WifiDAQF4A.Wifi_readThermo*
-  name: Wifi_readThermo
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_readThermo_
-  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_readThermo
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQF4A.Wifi_readThermo
-  nameWithType: WifiDAQF4A.Wifi_readThermo
 - uid: WPC.Product.WifiDAQF4A.Wifi_resetLED(System.Int32)
   name: Wifi_resetLED(Int32)
   href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_resetLED_System_Int32_
@@ -18928,16 +18863,3 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQF4A.Wifi_setRedLED
   nameWithType: WifiDAQF4A.Wifi_setRedLED
-- uid: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
-  name: Wifi_setWifiBandWidth(Int32, Int32)
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setWifiBandWidth_System_Int32_System_Int32_
-  commentId: M:WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth(System.Int32,System.Int32)
-  fullName: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth(System.Int32, System.Int32)
-  nameWithType: WifiDAQF4A.Wifi_setWifiBandWidth(Int32, Int32)
-- uid: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth*
-  name: Wifi_setWifiBandWidth
-  href: api/WPC.Product.WifiDAQF4A.html#WPC_Product_WifiDAQF4A_Wifi_setWifiBandWidth_
-  commentId: Overload:WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth
-  isSpec: "True"
-  fullName: WPC.Product.WifiDAQF4A.Wifi_setWifiBandWidth
-  nameWithType: WifiDAQF4A.Wifi_setWifiBandWidth

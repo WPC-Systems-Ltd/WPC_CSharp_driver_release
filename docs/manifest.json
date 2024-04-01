@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IAHRSModule.html",
-          "hash": "w9de2eGDfPUaxeyPwF3DkAenzaXhHw6cxNHyr6R9V2A="
+          "hash": "Pn+TOBP1UGzuflhnSfW6aoz2g0HLKHrVAY7brDR7MT4="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IAI24BitModule.html",
-          "hash": "7NQ4gstNHZrcHSVzXJVtrSiPbRfJ62CnYH4KjR8sNqE="
+          "hash": "OwNPeEvxcJrQ4KtHNXz0hc85Bo8q0jmHEGkPtoEejQI="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IAIModule.html",
-          "hash": "rmwohqTCIcyXbzYS5YnAYeIFiYDuTEv6fXA3xcKoavk="
+          "hash": "GunFLW5rweRhAB2P+jXlDAzhecEbQgtF7SFru9ykE3E="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IAOModule.html",
-          "hash": "04/HepsCZSiNp0yF8lBDbTE+jWqJt0dP6JiwK2vilHY="
+          "hash": "CVrz+c9+mdH6OUUHd7Orn1iIb5FPbgtTkGIrfeUc6v8="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IBroadcastModule.html",
-          "hash": "5b8mzQLj94H7EBJjfon6bym3hHsnJnHsaIpAc+mQd9M="
+          "hash": "cBgU2tVQD20w1QMkstvXZn54dwaK5PmVFtbNsMaKgJU="
         }
       },
       "is_incremental": true,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ICANModule.html",
-          "hash": "idNk7LSIwVfEQ7g/X9/ZSDw3svkZlM9j9Ng75RDZUYo="
+          "hash": "Qhx2XWS8MlQbl9svc/D4bYF9EzNB8UfaywFhZEAxDj0="
         }
       },
       "is_incremental": true,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ICounterModule.html",
-          "hash": "kHDI8hZ9HygldaEo+2/sYt+8kQKI9KgAQcDbeWCsMvo="
+          "hash": "Vz+HQYYwsOyutiutWBgblMbkcCJzlkh4BKfqJsGq1Yo="
         }
       },
       "is_incremental": true,
@@ -141,7 +141,19 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IDIOModule.html",
-          "hash": "dHlAQR1J9NPJw7yNO+/LU5Q/1LI22H5r19+lwm6hv44="
+          "hash": "sblL355FgThCmMh91hK4rBldjoyP82srpe8Xa9Jv6w4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Module.IDPOTModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Module.IDPOTModule.html",
+          "hash": "6hR0Uc4iYFm7m1l7tQ5/XWAEYSp7UopsTs2pzhTzOHg="
         }
       },
       "is_incremental": true,
@@ -165,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.II2CModule.html",
-          "hash": "7JXNuumsFk+2Md/J2imAb9ecXvW60nCyYA7MBM8W0UA="
+          "hash": "o/KwPJ/VNCry8+pfE+r8LbeXnrJ0S/3CgdXCWL18JKs="
         }
       },
       "is_incremental": true,
@@ -177,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IMotionModule.html",
-          "hash": "Q7RUoJlrR7c2r6bfKoFusot89i3cImkFyud7+NwfgZs="
+          "hash": "in0Jfmp5Wc+aZu2Tdtre42nWZ3yRy7YNsn8vCI7SaBQ="
         }
       },
       "is_incremental": true,
@@ -189,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.INetworkModule.html",
-          "hash": "AYLBXEFoibJnb/5mh9yUavyatNaZpzjW+pM1rciCyAo="
+          "hash": "MRhwcrxlzIYy7w4jaTUiwlFCYlNFCnucLhXi2o4Phww="
         }
       },
       "is_incremental": true,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IPWMModule.html",
-          "hash": "UNX3O7+a3sZiDKsjf5JqK5t5RN+6PYfiMatPCMBAGmo="
+          "hash": "7rpXy8salKxwXor1bTWY91SGj6nf3TELMLJ77lbVSqA="
         }
       },
       "is_incremental": true,
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IRelayModule.html",
-          "hash": "QExbw0ES2N8GEeBTYjxOYnPdd/ufCR472qF/Pbo+IPw="
+          "hash": "kvteDxF5JhvHv893aSe+dBctnBBYERpLXuZ2UUzhMPc="
         }
       },
       "is_incremental": true,
@@ -225,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ISPIModule.html",
-          "hash": "kKWtUv5jM2o0+/XG+X4XXhhE4C7/96TgtX9qbkuBG2M="
+          "hash": "4qsvAttkPq1C2rk2c35rU5mMgpTpsBvv7ybLQ8Az42w="
         }
       },
       "is_incremental": true,
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ISystemAnalogModule.html",
-          "hash": "lzQ3z10ctg/DRCulqGFxsdu6Gef8sh8Vr+1o5ctb24E="
+          "hash": "C0X6vTrROXN4g/9CoQ60CtYTwVHkIC4WLV5f+tZ9Erk="
         }
       },
       "is_incremental": true,
@@ -249,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ISystemModule.html",
-          "hash": "gSz8d1MeLwbMlScdAtKGcp2Rov+Nl8QXFIutoO8nI08="
+          "hash": "Iyv8faJz6y9iss5z8LwC7GlOF5lb3RxRMIogl5CKJjQ="
         }
       },
       "is_incremental": true,
@@ -261,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.ITMC5240Module.html",
-          "hash": "VrXFb1JC3Q1IgDkbEfo1sql2HhC6qy5aN6ftQpEIyFk="
+          "hash": "W4fwlr2LEUY/b3l5onnBdASBnwMZDSao2g5dnPmy774="
         }
       },
       "is_incremental": true,
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IThermalModule.html",
-          "hash": "gfzJHMK1LjpZlWDVOKdxGL5cZBU98l9FRvVL30/22wA="
+          "hash": "470VB8cJZy1XeL/RPE7HqBLsdM+cVeqn2catIkkoCts="
         }
       },
       "is_incremental": true,
@@ -285,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IThermocoupleModule.html",
-          "hash": "/PTQxYkrCOTyn+oXEOCQ8Pv5ko+IyrYcC5VU3CGqnqo="
+          "hash": "tQs6mdTse148e0jEYubxQS5J4BQE1otlCBCDewt+Wmo="
         }
       },
       "is_incremental": true,
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IUARTModule.html",
-          "hash": "x4vj203q+Qxhh8TCX2DBPDOEjXTM903wyCebNtOcwMU="
+          "hash": "mmlXOy/r671Y9i+UfquhAbfpancqeA6SwJPH329WDuI="
         }
       },
       "is_incremental": true,
@@ -309,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.IWifiModule.html",
-          "hash": "T64T1ZXASW7smDzWlsuyMH/DQTXaezQ46X2EAZ2l5OY="
+          "hash": "Oivfe6X12AxF4n2bIVKVPRmNTFDR9T/pQAIeQT5+3wY="
         }
       },
       "is_incremental": true,
@@ -321,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Module.html",
-          "hash": "jg9EdNIMJvv5NCpXgY3SY5wOXIkod7MRlx7e4+Ojo3M="
+          "hash": "AOw2P2TYipm+p4lT9X32dsciu1lgeBIGX7pSSBAKp0I="
         }
       },
       "is_incremental": true,
@@ -333,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.DeviceFinder.html",
-          "hash": "ber3gnCeXnyy1Jq9is2l32op3HnUNCWf7u643LM8Dvk="
+          "hash": "YXf6vyUQp/1FPixttRdgV9wOasgwMeECiGXtspg+k4c="
         }
       },
       "is_incremental": true,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EDriveST.html",
-          "hash": "SDPApPuh0ce0TgN7dLQ54c4s6fhnp/ImmZuu80Wo6Cg="
+          "hash": "7e3iY3r1D8EeNSbpAuduuiUxQFK3VLiaGCiJajX2ZKc="
         }
       },
       "is_incremental": true,
@@ -357,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EMotion.html",
-          "hash": "vG4V/Dw89hJHYIxAad+GBLCbHzdFiP2Y4iMoIBv5CRc="
+          "hash": "LysZD1gn2cuGgYAR6JKC7m/haxc3ej1ucal3pxtRwhs="
         }
       },
       "is_incremental": true,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanA.html",
-          "hash": "4rUYmGNXN1WZ8EuqZoCvmJKgCO3NECUZEJDgWLDXi7M="
+          "hash": "b3hfYs1YUVIL7jX3Svpe5EZAho5VaUOu0GmQaVpbbSQ="
         }
       },
       "is_incremental": true,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanD.html",
-          "hash": "Dl/96s9utxz5cuB7bt2YfMXdP+hJCTwyJus0HK0G0Uc="
+          "hash": "3FH8KNYtuYsG+mcBb7qq0U/jKe7s5bvirkuGMhn5fzk="
         }
       },
       "is_incremental": true,
@@ -393,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanEXD.html",
-          "hash": "sw4nt0sTBfWKLPxCEKagQBLqq5VPmt6B+ySH7HRnC5A="
+          "hash": "vFqblxaSUQe0mhml39cykyFOIe241WBdK5kqounog6w="
         }
       },
       "is_incremental": true,
@@ -405,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanI.html",
-          "hash": "TDDGyUP9566CNbs5U5T3hoiKqkc3CdTSGmbVnIWfLrY="
+          "hash": "TQlWIkA4jjsKt1jzCZpJtgd9LNRZA6K6RHYPVMb36+Y="
         }
       },
       "is_incremental": true,
@@ -417,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanIA.html",
-          "hash": "rIAwMSFvcL8c9l8g0M1dGd7r70TJQ4RwIgcbBgJJ+1o="
+          "hash": "YCsZ3jtzUHLyz10CftDyGg3fNB3ox6Yqny1HhPmRvck="
         }
       },
       "is_incremental": true,
@@ -429,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanL.html",
-          "hash": "TSYTdxh/07NKR4qdWMViKcWo/578xEqvOkLwfUqVAvo="
+          "hash": "CtXtkzOvSR/k2shpMR9/lZHwKMuze67xs0MxqcV5osU="
         }
       },
       "is_incremental": true,
@@ -441,7 +453,19 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanO.html",
-          "hash": "uL6lcBKsaWTBtHaa2z6mObfd5ANpKcjzbMGbyA8e4aQ="
+          "hash": "MhqkACgIy8QiMco2oIj0BQjWWVBB9pKFbgEU5IRzVXU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WPC.Product.EthanP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WPC.Product.EthanP.html",
+          "hash": "N8eS8TRSugZeTT6JwLKEsPif4iRT8JFgN4XRWzfQ2As="
         }
       },
       "is_incremental": true,
@@ -453,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.EthanT.html",
-          "hash": "oSrTQJ0epT1ECkb2XZ97klqw/AXlZMu3xlZhwlLsnPs="
+          "hash": "rz3vHuFAKIEU4Z80+mJQdwacQ7+V5G12lg4awslv63w="
         }
       },
       "is_incremental": true,
@@ -465,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.STEM.html",
-          "hash": "Iujc6Fh1+U6fKbAO9vneVm5gaMaZTYenjqqNOdPXaTk="
+          "hash": "BvijyOmNPJeIN7e/5UBApsdkP17oiM0ji3ad2xQJTrM="
         }
       },
       "is_incremental": true,
@@ -477,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AD.html",
-          "hash": "mQTZYboukeAEQYhPQclMUdWLVX6kd5Mndp6TPNHDZig="
+          "hash": "fCTfhubYBYZ9A8Eql8wZJfUGRIM1ZeMYk6viOY/ddPc="
         }
       },
       "is_incremental": true,
@@ -489,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1AOD.html",
-          "hash": "/mJnDvG7piKEOhZ4r6jfRpUjbeL76lQsToYZvsvc4fY="
+          "hash": "Iz6Pmvp+MqHvK5JJ3zHSWC0Ktre/wFS60hQ3CX36RoE="
         }
       },
       "is_incremental": true,
@@ -501,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1CD.html",
-          "hash": "hNVeKyAFHMUeL+Jjy4fNRJgLDSsvm2t63t4C0ypbLyc="
+          "hash": "U89QEBNMM7NLq6eDjEakGXbn4MNsmz0LHOOJdIK/DNY="
         }
       },
       "is_incremental": true,
@@ -513,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1D.html",
-          "hash": "tFT/g/kj7H3vm5+rj1ZpKrLSXwoueM0wnvsvyl0UFuU="
+          "hash": "qHGc0m4jAzZinno0uNFikNGx+k9XmkPMEsCRh7BZ/6A="
         }
       },
       "is_incremental": true,
@@ -525,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1DSNK.html",
-          "hash": "dCJEB9NstABiRpALjPGWj6PmV0lVDI/jadvWklQDRbk="
+          "hash": "S3AxfBcRG8DEQKK8QcOtzVpxpjEL5AfhWaUCLA5GpJs="
         }
       },
       "is_incremental": true,
@@ -537,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1RD.html",
-          "hash": "75GyTc76kxu6Lih8yQFWn3kDAbrAakvLw5HT0b6lUSk="
+          "hash": "ejHgfQCvy2owe+gm4TUcjzgD9iaSfsKfs1FDuaKM8+U="
         }
       },
       "is_incremental": true,
@@ -549,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.USBDAQF1TD.html",
-          "hash": "mzSP4EZ0rqTQWMlLXjSg8rm2PEmTBRvZDWUw5TL3XHY="
+          "hash": "XtOQeNB3h4F4HwEnzR4CCoR2MecjrcGFq/C/JyGIwLk="
         }
       },
       "is_incremental": true,
@@ -561,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.WifiDAQE3A.html",
-          "hash": "Jb/XiPZXHpmZogoZfy1vmg+r5SYZBQ7FeIfw98xAaKw="
+          "hash": "2RlxEYCjWxsTmyRSkQGgXpMgKCrljO7+ga2prR41ZrU="
         }
       },
       "is_incremental": true,
@@ -573,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.WifiDAQE3AH.html",
-          "hash": "oDEKUrn3nlo5WSB3zZnKpOhuG3LmVf6o+Tr05Blvkog="
+          "hash": "byXTOK58Cxmo7g1FjxCQDsNy/Nc8OuMOVoeDBiT++Zg="
         }
       },
       "is_incremental": true,
@@ -585,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.WifiDAQF4A.html",
-          "hash": "Ra9AfNYK9/+qWv7Tq816ibEEbeDf1vK/JIA1E5t7ILU="
+          "hash": "uTsT2O/Il4O1SzMA3aKxc+Lh33xTmsAofu8uDftZU9U="
         }
       },
       "is_incremental": true,
@@ -597,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WPC.Product.html",
-          "hash": "TQlahMDcBHRMydkeZ7wosavh94iuqCS6U+LwuCHO5K8="
+          "hash": "RG3HPgZzryxtOR4mhBbAxHkPyp+7o+PNpC3303pCBdM="
         }
       },
       "is_incremental": true,
@@ -621,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HNfaTITeI1jsUMumkSxBZQdNp59wdOqnVL2DnzxZsTs="
+          "hash": "VcLmwxsFlvT92lWiMV0ZHlcn+YnZOSrs4wZIyBhX9BE="
         }
       },
       "is_incremental": false,
@@ -645,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/feature_product.html",
-          "hash": "Lfh0VHiPsQGD1+fzIqcW2j41tXIjS+ERnwbtWt5OKh0="
+          "hash": "4SM8wHpZdpH46NWT27KUdvWilvhlY/fJtLN60ZMa4dE="
         }
       },
       "is_incremental": true,
@@ -660,7 +684,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/pinout_product.html",
-          "hash": "sj8e+WAJhNPmDDQrTMJrJPpD9GFcOoHc0IqUJh6gXrA="
+          "hash": "E1UL8uoTG1FVY+nxOvgP9g0xLFJSONrZ0M2Kz7ARsK0="
         }
       },
       "is_incremental": true,
@@ -684,7 +708,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_errorcode.html",
-          "hash": "EtzuElcshAWw7/2pfY2mDogP+hfJV+jId0KKU7+ud04="
+          "hash": "az6SngUGePXJxRbMUzlxb/E9L2ZfjJyPCAtHH3WKZNc="
         }
       },
       "is_incremental": true,
@@ -696,7 +720,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_port.html",
-          "hash": "SyRuiVYlD2Azww49x9UDOuFEPN3+gcDKQ4wnVV0LKuw="
+          "hash": "PveFrFNulh5b2hX3i04Xc4wP/Ae1+GvjADrjvyL6ZPE="
         }
       },
       "is_incremental": true,
@@ -744,7 +768,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EDrive_ST/EDrive_ST_Drive.html",
-          "hash": "pVc0sQQV9yCuCcgoZvOSDUATnFmXZWVM1jDRq6uxr0I="
+          "hash": "4sqsgPyN8tgznI78AQ4QnBUQuefY7VME617smnYN+h8="
         }
       },
       "is_incremental": true,
@@ -756,7 +780,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EDrive_ST/EDrive_ST_System_ETH.html",
-          "hash": "SgULw7FM9eiR1146Fbr7F8+mVUeB2E5UcwoGJ8v7FpY="
+          "hash": "/zLh8uNe3+sGCY2mJbsBX1L3KrvqwWc/2g9pTEMDG9w="
         }
       },
       "is_incremental": true,
@@ -768,7 +792,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EMotion/EMotion_Motion.html",
-          "hash": "uffXDgJuzgaEyNRTPXkgYReemrb6IoiUD/YhMriC2m0="
+          "hash": "rYHGl+1ma6Fvd7HsWJ4uvj71D1zfl4vBa5qsueoeGmA="
         }
       },
       "is_incremental": true,
@@ -780,7 +804,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EMotion/EMotion_System_ETH.html",
-          "hash": "bl/X0CerC6Ir8mC3BvHxsLNqk0qKKGhXlDRYcH/jeiQ="
+          "hash": "zLMrxNaL8hQ7FavEpzHsnySOmHN0TJEZxPmfoQ1PzOI="
         }
       },
       "is_incremental": true,
@@ -792,7 +816,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanA/EthanA_AI.html",
-          "hash": "1z+fKPt0WgJgTlMEw9dh9eCuhf6O64JrHvZ45Fv3qj0="
+          "hash": "j89RNzQfLHDpRf7aqSACU7kswbStsnOlvLbu31LoloY="
         }
       },
       "is_incremental": true,
@@ -804,7 +828,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanA/EthanA_System_ETH.html",
-          "hash": "xboe3/3zq9i+GhPMDCx7MCbB3OTQ+G27INhN7Pb7mH0="
+          "hash": "q4/Ma2E7F97Mswhw4+kOz4OLh1kENXZyZ3jBfVw4PDA="
         }
       },
       "is_incremental": true,
@@ -816,7 +840,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanD/EthanD_DIO.html",
-          "hash": "wRpakIppPGhEqGJzSWXhZMxR1fZCDi2/tv0aRqXN9Js="
+          "hash": "REwW+kxl1DOVrBHy1CkqpKJiUyhLEEDp+anUKPhIzjU="
         }
       },
       "is_incremental": true,
@@ -828,7 +852,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanD/EthanD_PWM.html",
-          "hash": "GNHUIJoAxTJTMaDZosJLrpr4dqeIPIuGQkn5srHFHWM="
+          "hash": "vZusn7aIVQ6nVKsBs17Z379oRwUioIxf7DBvOJUhGqo="
         }
       },
       "is_incremental": true,
@@ -840,7 +864,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanD/EthanD_System_ETH.html",
-          "hash": "lUx7f6zr5Yz2lTVLPHn/dYIhGcTJ+Wew8vaT81Fcy5U="
+          "hash": "uJMZrk+DDQRgtC9kcAarPgLroaQwwhwUsWPvj5YJwYo="
         }
       },
       "is_incremental": true,
@@ -852,7 +876,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanEXD/EthanEXD_DIO.html",
-          "hash": "b3q0v639qCnJtDaJZAyjSoDgWU5Ch+DFp4LNqyN4V8E="
+          "hash": "qFd1vQu1I7qsGpGAFZSa+z3q+F5sK+D8IU4qdQgN3IA="
         }
       },
       "is_incremental": true,
@@ -864,7 +888,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanEXD/EthanEXD_System_ETH.html",
-          "hash": "1KQi0o1S7TRqDivwm5f+VK200+WOAbt02Fzk3XB3BwE="
+          "hash": "fYkKCIN+Wg/8kvc1SEuwm5OWpPKu6SS18HxNcx8Cnlc="
         }
       },
       "is_incremental": true,
@@ -876,7 +900,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanI/EthanI_AI24.html",
-          "hash": "yZFUIO4kGn8o1hb/RRnL20e8Gu57be9fZVTRBZkzkac="
+          "hash": "R9m0oGcn7defUwciOtKO1sttQrQ/xonYjbxnaeEOQZg="
         }
       },
       "is_incremental": true,
@@ -888,7 +912,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanI/EthanI_System_ETH.html",
-          "hash": "Y5AgmcVa68IfKYVDZiRKT/qZKttXSrpQzUx8pLI1EFQ="
+          "hash": "sspoXm1fTUsz5in2DZ/43ALE8QnriU+OgIrOUerMMqk="
         }
       },
       "is_incremental": true,
@@ -900,7 +924,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanIA/EthanIA_AI24.html",
-          "hash": "OpspY6pgry/uW1wbCeNAYxi8V44h9OpD6szoRfloMqw="
+          "hash": "8kf0ba3dh7WM05jOzl5XneNazxmuXARLl7QuD1nojBs="
         }
       },
       "is_incremental": true,
@@ -912,7 +936,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanIA/EthanIA_System_ETH.html",
-          "hash": "O6r/gbkB41AJZeMYLLqFcjcxh79a5xISsDJfVydCpFM="
+          "hash": "Cwh8ocdTpljRK4TOUO2yEcbI+MCzCNK/3bPOZ8SbWuk="
         }
       },
       "is_incremental": true,
@@ -924,7 +948,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanL/EthanL_Relay.html",
-          "hash": "6sAjdIpjJ7Eh2Ng3amiAngH7hCrQJHPJKuXKLYfdFrs="
+          "hash": "2cjbJHxOkQtnPjfl0FeV7SbgD3tf9kOKwrYtf0JOkt8="
         }
       },
       "is_incremental": true,
@@ -936,7 +960,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanL/EthanL_System_ETH.html",
-          "hash": "TwVUP0ufh2xZZc1vY7R07dr0bE5QfZOElp6p5Y3RP70="
+          "hash": "I3pbFdip332tOEpd9lI/s+iPob/oaN/EDGfT6+sRYvM="
         }
       },
       "is_incremental": true,
@@ -948,7 +972,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanO/EthanO_AO.html",
-          "hash": "GkMJ7z2eVQYnEWzTudhPdveMF9Gq5uKjh5LX01DBWk4="
+          "hash": "CvQJLEr2Y8l/LAvg1/R2V77g6zzjtQlgC2KE3o/bjD0="
         }
       },
       "is_incremental": true,
@@ -960,7 +984,31 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanO/EthanO_System_ETH.html",
-          "hash": "Hol8pgrHQQWyOXGAZOGehZ1Lfu0SJfpynohe89Igs/c="
+          "hash": "7NC2KfnWgPUY7VQvnH1hWP++jFjyefEZUsRcH7iOYCs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/EthanP/EthanP_DPOT.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/EthanP/EthanP_DPOT.html",
+          "hash": "SJl6wlRa1JoTW8wKHmLp0pSayeghIyoaRmPJeKUyhFU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_md/EthanP/EthanP_System_ETH.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_md/EthanP/EthanP_System_ETH.html",
+          "hash": "QHskms8XRAvf4u2g3TsVxm1/5Udhomfx4H9VYZ1W/6k="
         }
       },
       "is_incremental": true,
@@ -972,7 +1020,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanT/EthanT_System_ETH.html",
-          "hash": "1qS2lzgZea2eEibI7WHNdMxp/YmHEfJRchayDM0+qVk="
+          "hash": "vX+XfyS5RjkRw+ZTgGRSj6gQhb9ntJE1MIUfEEe3CcI="
         }
       },
       "is_incremental": true,
@@ -984,7 +1032,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/EthanT/EthanT_Temperature_TC.html",
-          "hash": "nmgT/Bimt65lU391bcSw4fPRzY+PCgOprHw9kswPe6o="
+          "hash": "WNPx09Yp1Hvq5hMkc+4BnTUM5DslAcwf/4k0BS5aXH4="
         }
       },
       "is_incremental": true,
@@ -996,7 +1044,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/STEM/STEM_AI.html",
-          "hash": "m+bn3xD6ASKtj+PPff/IzHiEPY3jgMVmXXGVL4jmgsw="
+          "hash": "Ow2AvnRNmuq0k8HPMrEDcGtwdbwGyJSE1H6xfUf0l3c="
         }
       },
       "is_incremental": true,
@@ -1008,7 +1056,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/STEM/STEM_AIO.html",
-          "hash": "8Ba9V7dWcG5QOqSbJeoekkFn00FyHvRlABca68JVPrU="
+          "hash": "uAJ4SxjlwzSf92hmkCesySoHbyH11uF7IUPEKwfG8XE="
         }
       },
       "is_incremental": true,
@@ -1020,7 +1068,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/STEM/STEM_AO.html",
-          "hash": "/ud2Uf4N4549zkuUJycIRQVeLQoQ1pvqWnIsijmqqF0="
+          "hash": "t7l1rZHF1xm/VSgeX9jJY9o4gF0YW/Y0qgQRI9Fu9w8="
         }
       },
       "is_incremental": true,
@@ -1032,7 +1080,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/STEM/STEM_DIO.html",
-          "hash": "ln3LkNog2rhSDL0uWjIA6FydxwsXy+IPsszmXC1iXvQ="
+          "hash": "Zh03Q0KTel93VMi8cALpnql8TNxDUVhcwGqk4VVf11Q="
         }
       },
       "is_incremental": true,
@@ -1044,7 +1092,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/STEM/STEM_System_ETH.html",
-          "hash": "Y8TPxJLz62WvnM1uG2qizV7+rrstZPp2G9Q09g6FvzU="
+          "hash": "9ZVDh6YWTW31vxoNGFAbiPPREKGQrtS2rpnhoDBD13g="
         }
       },
       "is_incremental": true,
@@ -1056,7 +1104,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_AI.html",
-          "hash": "XSqKR+bceoJB3nUKBQx3XRfmdn6bjw5eea6PsBV6SoQ="
+          "hash": "8YN82siaOcghiLmL1a+tgHDILmIaotpfTFP2JJjtrPE="
         }
       },
       "is_incremental": true,
@@ -1068,7 +1116,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_Counter.html",
-          "hash": "UuFkY1c4ohf4Hd33IaLXrmInAoOkRKMANkiaMsURokQ="
+          "hash": "9jtZHXQrsfoAx+VahrzhCBjvdGOeteZAtc0h9ksBH1Y="
         }
       },
       "is_incremental": true,
@@ -1080,7 +1128,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_DIO.html",
-          "hash": "pYEYBgDer9+ppV4wMCRxOlatNuYnPwxjIAqyB6CT7cM="
+          "hash": "m8+k3aXp/lUq6aHUXJUJQZBvN/j1Nzpnu2rSCIKvPH4="
         }
       },
       "is_incremental": true,
@@ -1104,7 +1152,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_PWM.html",
-          "hash": "jxq0Rfbg/ouD2ahrPxNL4j3Xmg42CG8V+UtGeEB2eZk="
+          "hash": "Ns5XnTkVXkWn5Por1xV6WDsZXxlcUW1F+kdWng8gLXo="
         }
       },
       "is_incremental": true,
@@ -1116,7 +1164,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_SPI.html",
-          "hash": "o9//fWaFux0sub9kyo0FbA+o3d7vol2JaLsCovlBZ8I="
+          "hash": "UfqHcXNzzKtZ9ThhbkY3QRAwZvyWkjIZWts2UUSrhrU="
         }
       },
       "is_incremental": true,
@@ -1128,7 +1176,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_System_USB.html",
-          "hash": "Gbx6GWS8MIpOFSbKvMITZ36GIsACpKktgPgJHL6db9I="
+          "hash": "73CQRoug8tmGJgg+T7nUyXJOmmx4NoVqq78D87mLWXo="
         }
       },
       "is_incremental": true,
@@ -1140,7 +1188,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AD/USBDAQF1AD_UART.html",
-          "hash": "1lNOM4Qlh4PNipzjEcF06J/qSdQJnm5MIZYzoIaF4f4="
+          "hash": "HSGSRFdEf0w8yiQjwj5mEUmRmu9MGOYzzVxDOduLKYs="
         }
       },
       "is_incremental": true,
@@ -1152,7 +1200,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_AI.html",
-          "hash": "UlzU+J9v/fcdPnukWG76wDG2a2Rnw9koi4DpC18OxIY="
+          "hash": "BfzSJwpXsVvgwZCOcFNk8sPFgR9RM6n0WvwzTqfj7NU="
         }
       },
       "is_incremental": true,
@@ -1164,7 +1212,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_AIO.html",
-          "hash": "3K63Uroph8N2I26/h6YxBhX8/jXua5D0Q17quxih/ts="
+          "hash": "6pTQMJNDx0ECVJga89HgGBmA6HiiX3U2y1w6UAiBBxI="
         }
       },
       "is_incremental": true,
@@ -1176,7 +1224,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_AO.html",
-          "hash": "yAcsVTWN85dzDFfSqARIHboEHHsmwgX+tXlQFmN8Pms="
+          "hash": "I+uWvKQ3SImeAOUBKjws2LTszWT01vSNXmEYBAMkjcM="
         }
       },
       "is_incremental": true,
@@ -1188,7 +1236,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_Counter.html",
-          "hash": "J3dCvIhByMSZBlYTwUL4dRf1yj+cKw+jzDF+U2/yM7k="
+          "hash": "PisH/K4NoKmIM2Sn3XFw2U/xQMMHMpl/sKgVtjLjBjc="
         }
       },
       "is_incremental": true,
@@ -1200,7 +1248,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_DIO.html",
-          "hash": "22d1kwbI8Czhnavb1OImFnUWvOflxi9frTo2gTHnqbM="
+          "hash": "RmoswVSg6BAs3FJIAFgEBs5py2JZzqzszD1040jAU6A="
         }
       },
       "is_incremental": true,
@@ -1224,7 +1272,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_PWM.html",
-          "hash": "hnc28cSK8JR4RdPrdS87U6QlNMq8+BLpW5UCn4GUPaA="
+          "hash": "IkIp/D/TKpZWP+vjT1ghbsnyfXtMHCG3UIA2QusLXwI="
         }
       },
       "is_incremental": true,
@@ -1236,7 +1284,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_System_USB.html",
-          "hash": "B3z1MPK2w3ygN9OVGLP7+PK3FAmuWNMJPaClQyzR6KU="
+          "hash": "OJ4IAPmM8KCVg414G+0mYxh58Nj2S/j4FXsN2B0gVps="
         }
       },
       "is_incremental": true,
@@ -1248,7 +1296,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1AOD/USBDAQF1AOD_UART.html",
-          "hash": "ytmkiOVTdj56FhHtZqx0wNFWR2bQ8r0MpHkjZRT2R1I="
+          "hash": "Nu4QbGJ89RZh2EHS0uHA9MQ2giBrYzcT/q5oYC6JNTQ="
         }
       },
       "is_incremental": true,
@@ -1260,7 +1308,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_CAN.html",
-          "hash": "ywrMYvCzyT1mz/wxNdNNitPnlQUi8vwq+Ys/nyKH7VU="
+          "hash": "BQg3zLWGl1kyr7Qr91c1haryci3HkmRCBH9m7XA27dg="
         }
       },
       "is_incremental": true,
@@ -1272,7 +1320,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_Counter.html",
-          "hash": "tS+lAX9OUP6Q93/WNLkAuYc+XS1HwXtIfWJG/cBAPLw="
+          "hash": "7Lq1lXDeGX06/3TFoy30yAhoF56e0Qj2ZJ3VbY1Yp0E="
         }
       },
       "is_incremental": true,
@@ -1284,7 +1332,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_DIO.html",
-          "hash": "2uB8X6ppn0+zaE4QZ4Onu9JPhgcB/WfNypgnBOLvQ9g="
+          "hash": "bESJ3YKdjRnXyNUoDP2mq1m5xSqW2tN2o2/qsl3Jhas="
         }
       },
       "is_incremental": true,
@@ -1308,7 +1356,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_PWM.html",
-          "hash": "mT5w0jfMwNDfuzMBsSY1sWtWef5Fosvk3aPwhOyZi84="
+          "hash": "ZfoIqxeXHKzMmsIE0dQuE9q+Pty8XIYu3FsO2LuK4Tk="
         }
       },
       "is_incremental": true,
@@ -1320,7 +1368,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_SPI.html",
-          "hash": "cDwzKso3HdlE9D7E68vrRClBw0DsPstMzl00OTsBcCg="
+          "hash": "xx8SIGRJWSHCPFx8XKaovG5f/hRH8teYlwJZH1Z7EfU="
         }
       },
       "is_incremental": true,
@@ -1332,7 +1380,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_System_USB.html",
-          "hash": "lqPBO+keqV8IzLkxelgQ8hcqHSHA/AqrbV/RuS4aFg0="
+          "hash": "CvOOuR13ix+FXSf/RsuiLc0ZpxUo5I3CaEftSKoqaAc="
         }
       },
       "is_incremental": true,
@@ -1344,7 +1392,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1CD/USBDAQF1CD_UART.html",
-          "hash": "J852C1fVLJLJXejqp3LE4FrkAYaC/GnFJ8nZKNMrt1U="
+          "hash": "SMuXzzslnmRO4Cc9wWNI5IBkE4q75PilyNmBsYDEQjw="
         }
       },
       "is_incremental": true,
@@ -1356,7 +1404,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_Counter.html",
-          "hash": "XV0qifZqJUOTeOniNFxf1qwoHvJbNWZG/xTeJSCs8rw="
+          "hash": "4zP6GfxRpLbPg1Y9OU/0cvnAbiqIO1UD1/FEVVDRud0="
         }
       },
       "is_incremental": true,
@@ -1368,7 +1416,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_DIO.html",
-          "hash": "two0Rjvuhylet/RAUHbeMzC/VEdeN+rZF+kwRHEIy2U="
+          "hash": "gOH4VEOdNgwbgYfc+GRJoLGWaHoFWBHf6JLi2n/lApw="
         }
       },
       "is_incremental": true,
@@ -1392,7 +1440,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_PWM.html",
-          "hash": "BkObY8fv9SHqyyQhQdYi5Eag2yj/5udFnEMC/6FkLRM="
+          "hash": "3DdeSZCridjFuArz4cnovvmvQUbqS7WjIuUSPPrKvwk="
         }
       },
       "is_incremental": true,
@@ -1404,7 +1452,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_SPI.html",
-          "hash": "xgsvArJ2xfKDKGsRAy6bBE1FKZGe57RT83RnW061ysM="
+          "hash": "bON6FeHVHniXTwSZGIbFpicYhi95AFOsAn0A5lY6pHE="
         }
       },
       "is_incremental": true,
@@ -1416,7 +1464,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_System_USB.html",
-          "hash": "Xcrk2gbU0dSvtZjCy2XS37vnRfYI0L4MP8W0ctcWgbM="
+          "hash": "5YQ0bUPhjUSCr/FjM+V51lGpi20F+4RKrD6hq8R3D+M="
         }
       },
       "is_incremental": true,
@@ -1428,7 +1476,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1D/USBDAQF1D_UART.html",
-          "hash": "TpZH7xjSPO5vK1pA1WiI7ovs02v/YOC/Gqo+yxST18w="
+          "hash": "xGNiaJO2UF5i0sQhUmRZxtaxWDHexuf9wdQnDMA6fdA="
         }
       },
       "is_incremental": true,
@@ -1440,7 +1488,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_Counter.html",
-          "hash": "qsFYMe7IlUH8gUy/lr5ez9IA5WtVgH5GcYVWyBrSls8="
+          "hash": "M8RF63CDn7QuZC1K/AEbmKcRCTmydliZNKE6+QNcco4="
         }
       },
       "is_incremental": true,
@@ -1452,7 +1500,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_DIO.html",
-          "hash": "u2Atzrzl5fjv3esmzmqJ1g6CRqxObHZ/7vwEO17W5Hk="
+          "hash": "cGegPDLQ9SV3dFXlGhW1RaZUYR09shdrHYkMP6Emvmw="
         }
       },
       "is_incremental": true,
@@ -1464,7 +1512,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_PWM.html",
-          "hash": "07CW2KqTo4psa7D2bswX7NYRn8Ni5rSYa6clzTcYodw="
+          "hash": "8GrfM28nQqrMe+xM+xCi0++mK7YgzrUuS79n5WDFeMM="
         }
       },
       "is_incremental": true,
@@ -1476,7 +1524,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1DSNK/USBDAQF1DSNK_System_USB.html",
-          "hash": "FoHBFG7Qx0iwwS2MBwz7Ygk5V5buxd+dx6UUiWBqKoY="
+          "hash": "XfrD6+235KnrOEWIoeE9MtQDYAoWjCozQNJywtHXYL4="
         }
       },
       "is_incremental": true,
@@ -1488,7 +1536,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_Counter.html",
-          "hash": "nsyLHoXvLXj5Q2kVcF+jMXrgTb7ge1U8fHSUKCw4bpA="
+          "hash": "jBG/ylHDiD5azCQIPX5DZ9BaQxg9EVm7fcZv8FHkYFI="
         }
       },
       "is_incremental": true,
@@ -1500,7 +1548,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_DIO.html",
-          "hash": "U6WTsN/WGZoA7KYT9rQ6CASIjCkiqfJbutxlySrZ3gk="
+          "hash": "G/Inj82tlRfzZ/4wUljgj076oOAb5FkUgd+bcQxfl6w="
         }
       },
       "is_incremental": true,
@@ -1524,7 +1572,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_PWM.html",
-          "hash": "hYQNdaqk7vJGPDI1tJlTfoA9Hy6rRxprVF2NiyNCF0w="
+          "hash": "e183rulREHv8d+rp/2M1jFYR5lOofbEarMxw1i/OKyo="
         }
       },
       "is_incremental": true,
@@ -1536,7 +1584,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_SPI.html",
-          "hash": "mhJMK8u77DHeljsRxQ9azChv/SbDnh2Zm7Zbb8UBZkE="
+          "hash": "GlSnQINGMWCpaQYhhmVEgnTrrWi4LUvUQFcEhEMS25Y="
         }
       },
       "is_incremental": true,
@@ -1548,7 +1596,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_System_USB.html",
-          "hash": "75S36X8CM0mKAwMaz5j8od6htbcINWMkC5J34eY4qng="
+          "hash": "11RnTHcM7RIJFaT2We0eLHbnCJsXH8ylAPOXTMTCIoQ="
         }
       },
       "is_incremental": true,
@@ -1560,7 +1608,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_Temperature_RTD.html",
-          "hash": "C/uibsBishTjbJxUOn5Q/BFYy4YWFnojdAE/6YbG1Bg="
+          "hash": "8YDvlsAIa01hEQfWttD/n5n5Xus2yY9YMFhgYihXyv0="
         }
       },
       "is_incremental": true,
@@ -1572,7 +1620,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1RD/USBDAQF1RD_UART.html",
-          "hash": "MdDN2XuPpNqWKV2gNJ4JFHdO3mZU2/kL1mb5U0+bELg="
+          "hash": "wG1s0gDzSjknCisVmXX7iw6pqa2rLoSYrr5H9oqdxY8="
         }
       },
       "is_incremental": true,
@@ -1584,7 +1632,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_Counter.html",
-          "hash": "PFLUbxRbh2dXHGOGjbCGAiLRLpIf35OV1XyGz/XPRPE="
+          "hash": "UrFBegkf/c4Ft/4k5V2FSGIQpBXvASMJYkOERtJloog="
         }
       },
       "is_incremental": true,
@@ -1596,7 +1644,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_DIO.html",
-          "hash": "t/K5WcJQQuUeX+jw4hypZUJM+u7X8Hru0Ad84A7rrmc="
+          "hash": "ZiIW5z+TOdfNvEOuKm5Oh0Uhn1uIjkqGyvTnlwTZa3E="
         }
       },
       "is_incremental": true,
@@ -1620,7 +1668,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_PWM.html",
-          "hash": "xGx8WB4j5W45JASDsoHJVjO1QBJ20VvuRlVap/8v+lU="
+          "hash": "b39sfZSlGSfMHzjYzIBwHri5rNpO17lWdVPJy8ytg5s="
         }
       },
       "is_incremental": true,
@@ -1632,7 +1680,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_SPI.html",
-          "hash": "2n84t3PAfd6QY77hG5QlYjix0gcd8urjbOdJShUympE="
+          "hash": "rscRF1W5P5l9pUg0oDUX1x/05P3qbwKj1rDhp0XxL3Q="
         }
       },
       "is_incremental": true,
@@ -1644,7 +1692,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_System_USB.html",
-          "hash": "zO8usxEnEXAkSfXKja1eVa0tsxCUwuT98ggMV7tgok4="
+          "hash": "zTlhsfdBziZpSLlv0peW/iV3D6Wr+iYQCGEKXYUuk+8="
         }
       },
       "is_incremental": true,
@@ -1656,7 +1704,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_Temperature_TC.html",
-          "hash": "V1pLfyCNiac/FtRWmH0rbejUq5sqwf7ZrueVLsO4NFQ="
+          "hash": "GFeAhzdNFjyqYk5jzSwfvZ8roecv+vL5nEGpxv/r4Gs="
         }
       },
       "is_incremental": true,
@@ -1668,7 +1716,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/USBDAQF1TD/USBDAQF1TD_UART.html",
-          "hash": "aA6A3q3UuR7RS/f3D6YMvdknrbIOMIml+eR8i7sTmGU="
+          "hash": "JZnPVOQ0wuqGZNFwerGkeC4pwaqti19QWxpM4+SFA38="
         }
       },
       "is_incremental": true,
@@ -1680,7 +1728,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQE3A/WifiDAQE3A_AI.html",
-          "hash": "P+ms7Jfk8otb7ASpnc33reDsm7F6t2OBxYrLG/PubAU="
+          "hash": "0XEjtKmdQQ1rOjHQvfxWyh8TPVQPovFyZogZAjj6vqw="
         }
       },
       "is_incremental": true,
@@ -1692,7 +1740,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQE3A/WifiDAQE3A_System_Wifi.html",
-          "hash": "xM3ICsUlAE5DRUaM6eDneXa03aWYToKLWidJHboLb2A="
+          "hash": "FvdiXXx01U5fnQsLyAj3YGea86yJ/qxPLbYnTqQjmx0="
         }
       },
       "is_incremental": true,
@@ -1704,7 +1752,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQE3AH/WifiDAQE3AH_AHRS.html",
-          "hash": "rLm5pJ/v/GfuMvBPiNQHH+2HqUuQjAniuWbXfs7icN8="
+          "hash": "gxML/2+HZALXUw+KMW61K1gBthGYrKSC7KPwF1r2oMM="
         }
       },
       "is_incremental": true,
@@ -1716,7 +1764,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQE3AH/WifiDAQE3AH_AI.html",
-          "hash": "WYOMwWSlfmc1QOF5jyEPRSOjR/Y6nL3OxeFAc6Xx2D4="
+          "hash": "raMblZB2DIUgvY6VOo1JzLWC9d5zgQxw1j8VAvKs//w="
         }
       },
       "is_incremental": true,
@@ -1728,7 +1776,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQE3AH/WifiDAQE3AH_System_Wifi.html",
-          "hash": "alQpjntcJag+Y/TkdAxOzzu9t/U7C7Q3bwNe5uvSQC0="
+          "hash": "iMwnVQVQsnYEBmDwDnGKaWlfQZ4G5w3Q6kMXoN9Fp4I="
         }
       },
       "is_incremental": true,
@@ -1740,7 +1788,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQF4A/WifiDAQF4A_AI.html",
-          "hash": "Uymf4p+cRFA/MgrccboiV3Y6sazoHY2oOMS2LiYTBM4="
+          "hash": "UVdm+IL43ZlbDqOUJrjw/R/a3L4fyvxA0ra7BMDOAe4="
         }
       },
       "is_incremental": true,
@@ -1752,7 +1800,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/example_md/WifiDAQF4A/WifiDAQF4A_System_Wifi.html",
-          "hash": "HMD5Kt0Hld+N7wJLZOKvcHCX2irmrJyC9hI99rrH2Nk="
+          "hash": "cB167Jqh2xxeNP7JH+u6+Y3+tz2ePleA/LEhN9sU+Y0="
         }
       },
       "is_incremental": true,
@@ -1767,7 +1815,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "YN/axBgzBUA2CtvX+LVsTGaPp8c4Z4lDn3CUXVEUiOg="
+          "hash": "rf1nR8NM1fY1OWNdDr5cePDZ5c90r5VNTnJpBaigavA="
         }
       },
       "is_incremental": false,
@@ -1874,6 +1922,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Pinouts/pinout-EthanP.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Pinouts/pinout-EthanP.JPG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/Pinouts/pinout-EthanT.JPG",
       "output": {
         "resource": {
@@ -1896,10 +1955,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQF1AD.jpg",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1AD.JPG",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQF1AD.jpg"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1AD.JPG"
         }
       },
       "is_incremental": false,
@@ -2098,6 +2157,17 @@
       "output": {
         "resource": {
           "relative_path": "images/Products/product-EthanO.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Products/product-EthanP.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Products/product-EthanP.jpg"
         }
       },
       "is_incremental": false,
@@ -2315,14 +2385,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 95,
-          "skipped_file_count": 95
+          "total_file_count": 97,
+          "skipped_file_count": 97
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 50,
-          "skipped_file_count": 50
+          "total_file_count": 52,
+          "skipped_file_count": 52
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

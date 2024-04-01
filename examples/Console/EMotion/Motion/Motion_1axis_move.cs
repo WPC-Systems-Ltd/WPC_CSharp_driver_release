@@ -46,41 +46,41 @@ class EMotion_1axis_move
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"Motion_open in port {port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}, status: {err}");
 
             /*
             // Motion open configuration file
             err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
-            Console.WriteLine($"Motion_openCfgFile: {err}");
+            Console.WriteLine($"Motion_openCfgFile, status: {err}");
 
             // Motion load configuration file
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile: {err}");
+            Console.WriteLine($"Motion_loadCfgFile, status: {err}");
             */
 
             // Motion configure
             err = dev.Motion_cfgAxis(port, axis, Const.MOT_TWO_PULSE, Const.MOT_DIR_CW, Const.MOT_DIR_CW, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"Motion_cfgAxis in axis{axis}: {err}");
+            Console.WriteLine($"Motion_cfgAxis in axis{axis}, status: {err}");
 
             err = dev.Motion_cfgLimit(port, axis, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"Motion_cfgLimit in axis{axis}: {err}");
+            Console.WriteLine($"Motion_cfgLimit in axis{axis}, status: {err}");
 
             err = dev.Motion_cfgHome(port, axis, Const.MOT_FALSE, Const.MOT_ACTIVE_LOW, timeout);
-            Console.WriteLine($"Motion_cfgHome in axis{axis}: {err}");
+            Console.WriteLine($"Motion_cfgHome in axis{axis}, status: {err}");
 
             err = dev.Motion_cfgAxisMove(port, axis, Const.MOT_RELATIVE_POSITION, target_posi:5000, velo:10000, accel:100000, decel:100000, timeout:timeout);
-            Console.WriteLine($"Motion_cfgAxisMove in axis{axis}: {err}");
+            Console.WriteLine($"Motion_cfgAxisMove in axis{axis}, status: {err}");
 
             err = dev.Motion_rstEncoderPosi(port, axis, encoder_posi:0, timeout:timeout);
-            Console.WriteLine($"Motion_rstEncoderPosi in axis{axis}: {err}");
+            Console.WriteLine($"Motion_rstEncoderPosi in axis{axis}, status: {err}");
 
             // Servo on
             err = dev.Motion_enableServoOn(port, axis, timeout);
-            Console.WriteLine($"Motion_enableServoOn in axis{axis}: {err}");
+            Console.WriteLine($"Motion_enableServoOn in axis{axis}, status: {err}");
 
             // Motion start
             err = dev.Motion_startSingleAxisMove(port, axis, timeout);
-            Console.WriteLine($"Motion_startSingleAxisMove in axis{axis}: {err}");
+            Console.WriteLine($"Motion_startSingleAxisMove in axis{axis}, status: {err}");
 
             int move_status = 0;
             while (move_status == 0)
@@ -93,15 +93,15 @@ class EMotion_1axis_move
 
             // Motion stop
             err = dev.Motion_stop(port, axis, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($"Motion_stop in axis{axis}: {err}");
+            Console.WriteLine($"Motion_stop in axis{axis}, status: {err}");
 
             // Servo off
             err = dev.Motion_enableServoOff(port, axis, timeout);
-            Console.WriteLine($"Motion_enableServoOff in axis{axis}: {err}");
+            Console.WriteLine($"Motion_enableServoOff in axis{axis}, status: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"Motion_close in port {port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

@@ -158,7 +158,7 @@ class STEM_AIO_all_channels_loopback
             // If the slot mode is not set to &quot;AIO&quot;, set the slot mode to &quot;AIO&quot;
             if (slot_mode != &quot;AIO&quot;){
                 err = dev.Sys_setAIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setAIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setAIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -167,15 +167,15 @@ class STEM_AIO_all_channels_loopback
 
             // Open AI
             err = dev.AI_open(slot, timeout);
-            Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_open in slot {slot}, status: {err}&quot;);
 
             // Enable CS
             err = dev.AI_enableCS(slot, new List&lt;int&gt; {0, 1}, timeout);
-            Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_enableCS in slot {slot}, status: {err}&quot;);
 
             // Open AO
             err = dev.AO_open(slot, timeout);
-            Console.WriteLine($&quot;AO_open in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AO_open in slot {slot}, status: {err}&quot;);
 
             // Read data acquisition acquisition
             List&lt;double&gt; ai_list = dev.AI_readOnDemand(slot, timeout);
@@ -185,7 +185,7 @@ class STEM_AIO_all_channels_loopback
 
             // Write AO value simultaneously
             err = dev.AO_writeAllChannels(slot, ao_value_list, timeout);
-            Console.WriteLine($&quot;AO_writeAllChannels in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AO_writeAllChannels in slot {slot}, status: {err}&quot;);
 
             // Read data acquisition acquisition
             ai_list = dev.AI_readOnDemand(slot, timeout);
@@ -195,11 +195,11 @@ class STEM_AIO_all_channels_loopback
 
             // Close AI
             err = dev.AI_close(slot, timeout);
-            Console.WriteLine($&quot;AI_close in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_close in slot {slot}, status: {err}&quot;);
 
             // Close AO
             err = dev.AO_close(slot, timeout);
-            Console.WriteLine($&quot;AO_close in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AO_close in slot {slot}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -292,7 +292,7 @@ class STEM_AIO_one_channel_loopback
             // If the slot mode is not set to &quot;AIO&quot;, set the slot mode to &quot;AIO&quot;
             if (slot_mode != &quot;AIO&quot;){
                 err = dev.Sys_setAIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setAIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setAIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -301,15 +301,15 @@ class STEM_AIO_one_channel_loopback
 
             // Open AI
             err = dev.AI_open(slot, timeout);
-            Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_open in slot {slot}, status: {err}&quot;);
 
             // Enable CS
             err = dev.AI_enableCS(slot, new List&lt;int&gt; {0, 1}, timeout);
-            Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_enableCS in slot {slot}, status: {err}&quot;);
 
             // Open AO
             err = dev.AO_open(slot, timeout);
-            Console.WriteLine($&quot;AO_open in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AO_open in slot {slot}, status: {err}&quot;);
 
             // Read data acquisition
             List&lt;double&gt; ai_list = dev.AI_readOnDemand(slot, timeout);
@@ -319,19 +319,19 @@ class STEM_AIO_one_channel_loopback
 
             // Write AO vaule in channel 0
             err = dev.AO_writeOneChannel(slot, 0, ao_value_list[0], timeout);
-            Console.WriteLine($&quot;In slot {slot} channel 0, the AO value is {ao_value_list[0]}: {err}&quot;);
+            Console.WriteLine($&quot;In slot {slot} channel 0, the AO value is {ao_value_list[0]}, status: {err}&quot;);
 
             // Write AO vaule in channel 1
             err = dev.AO_writeOneChannel(slot, 1, ao_value_list[1], timeout);
-            Console.WriteLine($&quot;In slot {slot} channel 1, the AO value is {ao_value_list[1]}: {err}&quot;);
+            Console.WriteLine($&quot;In slot {slot} channel 1, the AO value is {ao_value_list[1]}, status: {err}&quot;);
 
             // Write AO vaule in channel 2
             err = dev.AO_writeOneChannel(slot, 2, ao_value_list[2], timeout);
-            Console.WriteLine($&quot;In slot {slot} channel 2, the AO value is {ao_value_list[2]}: {err}&quot;);
+            Console.WriteLine($&quot;In slot {slot} channel 2, the AO value is {ao_value_list[2]}, status: {err}&quot;);
 
             // Write AO vaule in channel 3
             err = dev.AO_writeOneChannel(slot, 3, ao_value_list[3], timeout);
-            Console.WriteLine($&quot;In slot {slot} channel 3, the AO value is {ao_value_list[3]}: {err}&quot;);
+            Console.WriteLine($&quot;In slot {slot} channel 3, the AO value is {ao_value_list[3]}, status: {err}&quot;);
 
             // Read data acquisition
             ai_list = dev.AI_readOnDemand(slot, timeout);
@@ -341,11 +341,11 @@ class STEM_AIO_one_channel_loopback
 
             // Close AI
             err = dev.AI_close(slot, timeout);
-            Console.WriteLine($&quot;AI_close in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_close in slot {slot}, status: {err}&quot;);
 
             // Close AO
             err = dev.AO_close(slot, timeout);
-            Console.WriteLine($&quot;AO_close in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AO_close in slot {slot}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -439,7 +439,7 @@ class STEM_AO_output_while_AI_streaming
             // If the slot mode is not set to &quot;AIO&quot;, set the slot mode to &quot;AIO&quot;
             if (slot_mode != &quot;AIO&quot;){
                 err = dev.Sys_setAIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setAIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setAIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -448,23 +448,23 @@ class STEM_AO_output_while_AI_streaming
 
             // Open AI
             err = dev.AI_open(slot, timeout);
-            Console.WriteLine($&quot;AI_open in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_open in slot {slot}, status: {err}&quot;);
 
             // Enable CS
             err = dev.AI_enableCS(slot, chip_select, timeout);
-            Console.WriteLine($&quot;AI_enableCS in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_enableCS in slot {slot}, status: {err}&quot;);
 
             // Set AI acquisition mode to continuous mode
             err = dev.AI_setMode(slot, mode, timeout);
-            Console.WriteLine($&quot;AI_setMode {mode} in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_setMode {mode} in slot {slot}, status: {err}&quot;);
 
             // Set AI sampling rate
             err = dev.AI_setSamplingRate(slot, sampling_rate, timeout);
-            Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_setSamplingRate {sampling_rate} in slot {slot}, status: {err}&quot;);
 
             // Start AI
             err = dev.AI_start(slot, timeout);
-            Console.WriteLine($&quot;AI_start in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_start in slot {slot}, status: {err}&quot;);
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
@@ -488,7 +488,7 @@ class STEM_AO_output_while_AI_streaming
 
                     // Write AO vaule in channel 0
                     err = dev.AO_writeOneChannel(slot, 0, ao_value_list[random_num], timeout);
-                    Console.WriteLine($&quot;In slot {slot} channel 0, the AO value is {ao_value_list[random_num]}: {err}&quot;);
+                    Console.WriteLine($&quot;In slot {slot} channel 0, the AO value is {ao_value_list[random_num]}, status: {err}&quot;);
                 }
             }
         }
@@ -500,15 +500,15 @@ class STEM_AO_output_while_AI_streaming
         {
             // Stop AI
             err = dev.AI_stop(slot, timeout);
-            Console.WriteLine($&quot;AI_stop in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_stop in slot {slot}, status: {err}&quot;);
 
             // Close AI
             err = dev.AI_close(slot, timeout);
-            Console.WriteLine($&quot;AI_close in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AI_close in slot {slot}, status: {err}&quot;);
 
             // Close AO
             err = dev.AO_close(slot, timeout);
-            Console.WriteLine($&quot;AO_close in slot {slot}: {err}&quot;);
+            Console.WriteLine($&quot;AO_close in slot {slot}, status: {err}&quot;);
         }
 
         // Disconnect device

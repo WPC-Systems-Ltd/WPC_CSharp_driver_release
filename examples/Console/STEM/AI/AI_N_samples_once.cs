@@ -78,7 +78,7 @@ class STEM_AI_N_samples_once
             // If the slot mode is not set to "AIO", set the slot mode to "AIO"
             if (slot_mode != "AIO"){
                 err = dev.Sys_setAIOMode(slot, timeout);
-                Console.WriteLine($"Sys_setAIOMode: {err}");
+                Console.WriteLine($"Sys_setAIOMode in slot {slot}, status: {err}");
             }
 
             // Get slot mode
@@ -87,34 +87,34 @@ class STEM_AI_N_samples_once
 
             // Open AI
             err = dev.AI_open(slot, timeout);
-            Console.WriteLine($"AI_open in slot {slot}: {err}");
+            Console.WriteLine($"AI_open in slot {slot}, status: {err}");
 
             // Enable CS
             err = dev.AI_enableCS(slot, chip_select, timeout);
-            Console.WriteLine($"AI_enableCS in slot {slot}: {err}");
+            Console.WriteLine($"AI_enableCS in slot {slot}, status: {err}");
 
             // Set AI acquisition mode to N-sample mode
             err = dev.AI_setMode(slot, mode, timeout);
-            Console.WriteLine($"AI_setMode {mode} in slot {slot}: {err}");
+            Console.WriteLine($"AI_setMode {mode} in slot {slot}, status: {err}");
 
             // Set AI sampling rate
             err = dev.AI_setSamplingRate(slot, sampling_rate, timeout);
-            Console.WriteLine($"AI_setNumSamples {sampling_rate} in slot {slot}: {err}");
+            Console.WriteLine($"AI_setSamplingRate {sampling_rate} in slot {slot}, status: {err}");
 
             // Set AI # of samples
             err = dev.AI_setNumSamples(slot, samples, timeout);
-            Console.WriteLine($"AI_setNumSamples {samples} in slot {slot}: {err}");
+            Console.WriteLine($"AI_setNumSamples {samples} in slot {slot}, status: {err}");
 
             // Start AI
             err = dev.AI_start(slot, timeout);
-            Console.WriteLine($"AI_start in slot {slot}: {err}");
+            Console.WriteLine($"AI_start in slot {slot}, status: {err}");
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Read data acquisition
             List<List<double>> ai_2Dlist = dev.AI_readStreaming(slot, read_points, read_delay);
-            Console.WriteLine($"number of samples = {ai_2Dlist.Count}");
+            Console.WriteLine($"Number of samples = {ai_2Dlist.Count}");
 
             bool ok = true;
             foreach (List<double> ai_list in ai_2Dlist)
@@ -132,11 +132,11 @@ class STEM_AI_N_samples_once
 
             // Stop AI
             err = dev.AI_stop(slot, timeout);
-            Console.WriteLine($"AI_stop in slot {slot}: {err}");
+            Console.WriteLine($"AI_stop in slot {slot}, status: {err}");
 
             // Close AI
             err = dev.AI_close(slot, timeout);
-            Console.WriteLine($"AI_close in slot {slot}: {err}");
+            Console.WriteLine($"AI_close in slot {slot}, status: {err}");
         }
         catch (Exception ex)
         {

@@ -49,38 +49,38 @@ class EDriveST_Drive_velocity_move
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"Motion_open: {err}");
+            Console.WriteLine($"Motion_open, status: {err}");
 
             // Motion configure
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($"Motion_cfgLimit: {err}");
+            Console.WriteLine($"Motion_cfgLimit, status: {err}");
 
             // Motion reset
             err = dev.Motion_rstEncoderPosi(port, timeout);
-            Console.WriteLine($"Motion_rstEncoderPosi: {err}");
+            Console.WriteLine($"Motion_resetEncoderPosi, status: {err}");
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($"Motion_enableServoOn {err}");
+            Console.WriteLine($"Motion_enableServoOn, status: {err}");
 
             // Motion start
             err = dev.Motion_startVelocticyMove(port, speed, Const.MOT_POINT_TO_FORWARD, acceleration, deceleration, timeout);
-            Console.WriteLine($"Motion_startVelocticyMove {err}");
+            Console.WriteLine($"Motion_startVelocticyMove, status: {err}");
 
             // Wait for moving
             Thread.Sleep(3000); // delay [ms]
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($"Motion_stopProcess: {err}");
+            Console.WriteLine($"Motion_stopProcess, status: {err}");
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($"Motion_enableServoOff: {err}");
+            Console.WriteLine($"Motion_enableServoOff, status: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"Motion_close: {err}");
+            Console.WriteLine($"Motion_close, status: {err}");
         }
         catch (Exception ex)
         {

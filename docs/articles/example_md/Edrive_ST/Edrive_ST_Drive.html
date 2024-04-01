@@ -148,23 +148,23 @@ class EDriveST_Drive_find_home
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+            Console.WriteLine($&quot;Motion_open, status: {err}&quot;);
 
             // Motion configure
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
+            Console.WriteLine($&quot;Motion_cfgLimit, status: {err}&quot;);
 
             // Motion reset
             err = dev.Motion_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
+            Console.WriteLine($&quot;Motion_resetEncoderPosi, status: {err}&quot;);
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOn, status: {err}&quot;);
 
             // Motion find home
             err = dev.Motion_startFindHome(port, searching_speed, approaching_speed, acceleration, Const.MOT_POINT_TO_FORWARD, Const.MOT_POINT_TO_FORWARD, offset, Const.MOT_FALSE, timeout);
-            Console.WriteLine($&quot;Motion_startFindHome {err}&quot;);
+            Console.WriteLine($&quot;Motion_startFindHome, status: {err}&quot;);
 
             int status = 1;
             while (status != 0) {
@@ -182,15 +182,15 @@ class EDriveST_Drive_find_home
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+            Console.WriteLine($&quot;Motion_stopProcess, status: {err}&quot;);
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOff, status: {err}&quot;);
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+            Console.WriteLine($&quot;Motion_close, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -258,23 +258,23 @@ class EDriveST_Drive_find_limit
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+            Console.WriteLine($&quot;Motion_open, status: {err}&quot;);
 
             // Motion config
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($&quot;Motion_cfgLimit {err}&quot;);
+            Console.WriteLine($&quot;Motion_cfgLimit, status: {err}&quot;);
 
             // Motion reset
             err = dev.Motion_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi {err}&quot;);
+            Console.WriteLine($&quot;Motion_resetEncoderPosi, status: {err}&quot;);
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOn, status: {err}&quot;);
 
             // Motion find limit
             err = dev.Motion_startFindLimit(port, Const.MOT_FORWARD, searching_speed, approaching_speed, acceleration, offset, Const.MOT_FALSE, timeout);
-            Console.WriteLine($&quot;Motion_startFindLimit {err}&quot;);
+            Console.WriteLine($&quot;Motion_startFindLimit, status: {err}&quot;);
 
             int status = 1;
             while (status != 0) {
@@ -292,15 +292,15 @@ class EDriveST_Drive_find_limit
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+            Console.WriteLine($&quot;Motion_stopProcess, status: {err}&quot;);
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOff, status: {err}&quot;);
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+            Console.WriteLine($&quot;Motion_close, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -370,23 +370,23 @@ class EDriveST_Drive_position_blending
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+            Console.WriteLine($&quot;Motion_open, status: {err}&quot;);
 
             // Motion configure
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
+            Console.WriteLine($&quot;Motion_cfgLimit, status: {err}&quot;);
 
             // Motion reset
             err = dev.Motion_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
+            Console.WriteLine($&quot;Motion_resetEncoderPosi, status: {err}&quot;);
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOn, status: {err}&quot;);
 
             // Motion start
             err = dev.Motion_startPositionMove(port, position, speed, acceleration, deceleration, Const.MOT_RELATIVE_POSITION, timeout);
-            Console.WriteLine($&quot;Motion_startPositionMove {err}&quot;);
+            Console.WriteLine($&quot;Motion_startPositionMove, status: {err}&quot;);
 
             int status = 1;
             while (status != 0) {
@@ -398,7 +398,7 @@ class EDriveST_Drive_position_blending
 
             // Motion start
             err = dev.Motion_startPositionMove(port, position1, speed, acceleration, deceleration, Const.MOT_RELATIVE_POSITION, timeout);
-            Console.WriteLine($&quot;Motion_startPositionMove {err}&quot;);
+            Console.WriteLine($&quot;Motion_startPositionMove, status: {err}&quot;);
 
             status = 1;
             while (status != 0) {
@@ -410,7 +410,7 @@ class EDriveST_Drive_position_blending
 
             // Motion start
             err = dev.Motion_startPositionMove(port, position2, speed, acceleration, deceleration, Const.MOT_RELATIVE_POSITION, timeout);
-            Console.WriteLine($&quot;Motion_startPositionMove {err}&quot;);
+            Console.WriteLine($&quot;Motion_startPositionMove, status: {err}&quot;);
 
             status = 1;
             while (status != 0) {
@@ -422,15 +422,15 @@ class EDriveST_Drive_position_blending
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+            Console.WriteLine($&quot;Motion_stopProcess, status: {err}&quot;);
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOff, status: {err}&quot;);
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+            Console.WriteLine($&quot;Motion_close, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -498,23 +498,23 @@ class EDriveST_Drive_position_move
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+            Console.WriteLine($&quot;Motion_open, status: {err}&quot;);
 
             // Motion configure
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
+            Console.WriteLine($&quot;Motion_cfgLimit, status: {err}&quot;);
 
             // Motion reset
             err = dev.Motion_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
+            Console.WriteLine($&quot;Motion_resetEncoderPosi, status: {err}&quot;);
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOn, status: {err}&quot;);
 
             // Motion start
             err = dev.Motion_startPositionMove(port, position, speed, acceleration, deceleration, Const.MOT_RELATIVE_POSITION, timeout);
-            Console.WriteLine($&quot;Motion_startPositionMove {err}&quot;);
+            Console.WriteLine($&quot;Motion_startPositionMove, status: {err}&quot;);
 
             int status = 1;
             while (status != 0) {
@@ -526,15 +526,15 @@ class EDriveST_Drive_position_move
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+            Console.WriteLine($&quot;Motion_stopProcess, status: {err}&quot;);
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOff, status: {err}&quot;);
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+            Console.WriteLine($&quot;Motion_close, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -602,34 +602,34 @@ class EDriveST_Drive_scan_move
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+            Console.WriteLine($&quot;Motion_open, status: {err}&quot;);
 
             // Motion configure
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
+            Console.WriteLine($&quot;Motion_cfgLimit, status: {err}&quot;);
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOn, status: {err}&quot;);
 
             // Motion start scanning
             err = dev.Motion_startScanMove(port, position_0, position_1, speed, acceleration, timeout);
-            Console.WriteLine($&quot;Motion_startScanMove {err}&quot;);
+            Console.WriteLine($&quot;Motion_startScanMove, status: {err}&quot;);
 
             // Wait for moving
             Thread.Sleep(10000); // delay [ms]
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+            Console.WriteLine($&quot;Motion_stopProcess, status: {err}&quot;);
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOff, status: {err}&quot;);
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+            Console.WriteLine($&quot;Motion_close, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -693,23 +693,23 @@ class EDriveST_Drive_servo_on
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+            Console.WriteLine($&quot;Motion_open, status: {err}&quot;);
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOn, status: {err}&quot;);
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+            Console.WriteLine($&quot;Motion_stopProcess, status: {err}&quot;);
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOff, status: {err}&quot;);
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+            Console.WriteLine($&quot;Motion_close, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -776,23 +776,23 @@ class EDriveST_Drive_velocity_blending_acceleration
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+            Console.WriteLine($&quot;Motion_open, status: {err}&quot;);
 
             // Motion configure
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
+            Console.WriteLine($&quot;Motion_cfgLimit, status: {err}&quot;);
 
             // Motion reset
             err = dev.Motion_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
+            Console.WriteLine($&quot;Motion_resetEncoderPosi, status: {err}&quot;);
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOn, status: {err}&quot;);
 
             // Motion start
             err = dev.Motion_startVelocticyMove(port, speed, Const.MOT_POINT_TO_FORWARD, acceleration, deceleration, timeout);
-            Console.WriteLine($&quot;Motion_startVelocticyMove {err}&quot;);
+            Console.WriteLine($&quot;Motion_startVelocticyMove, status: {err}&quot;);
 
             // Wait for moving
             Thread.Sleep(3000); // delay [ms]
@@ -803,22 +803,22 @@ class EDriveST_Drive_velocity_blending_acceleration
             int new_deceleration = 10000;
 
             err = dev.Motion_startVelocticyMove(port, new_speed, Const.MOT_POINT_TO_REVERSE, new_acceleration, new_deceleration, timeout);
-            Console.WriteLine($&quot;Motion_startVelocticyMove {err}&quot;);
+            Console.WriteLine($&quot;Motion_startVelocticyMove, status: {err}&quot;);
 
             // Wait for moving
             Thread.Sleep(3000); // delay [ms]
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+            Console.WriteLine($&quot;Motion_stopProcess, status: {err}&quot;);
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOff, status: {err}&quot;);
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+            Console.WriteLine($&quot;Motion_close, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -885,38 +885,38 @@ class EDriveST_Drive_velocity_move
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($&quot;Motion_open: {err}&quot;);
+            Console.WriteLine($&quot;Motion_open, status: {err}&quot;);
 
             // Motion configure
             err = dev.Motion_cfgLimit(port, Const.MOT_TRUE, Const.MOT_TRUE, Const.MOT_ACTIVE_HIGH, timeout);
-            Console.WriteLine($&quot;Motion_cfgLimit: {err}&quot;);
+            Console.WriteLine($&quot;Motion_cfgLimit, status: {err}&quot;);
 
             // Motion reset
             err = dev.Motion_rstEncoderPosi(port, timeout);
-            Console.WriteLine($&quot;Motion_rstEncoderPosi: {err}&quot;);
+            Console.WriteLine($&quot;Motion_resetEncoderPosi, status: {err}&quot;);
 
             // Motion servo on
             err = dev.Motion_enableServoOn(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOn {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOn, status: {err}&quot;);
 
             // Motion start
             err = dev.Motion_startVelocticyMove(port, speed, Const.MOT_POINT_TO_FORWARD, acceleration, deceleration, timeout);
-            Console.WriteLine($&quot;Motion_startVelocticyMove {err}&quot;);
+            Console.WriteLine($&quot;Motion_startVelocticyMove, status: {err}&quot;);
 
             // Wait for moving
             Thread.Sleep(3000); // delay [ms]
 
             // Motion stop
             err = dev.Motion_stopProcess(port, timeout);
-            Console.WriteLine($&quot;Motion_stopProcess: {err}&quot;);
+            Console.WriteLine($&quot;Motion_stopProcess, status: {err}&quot;);
 
             // Motion Servo off
             err = dev.Motion_enableServoOff(port, timeout);
-            Console.WriteLine($&quot;Motion_enableServoOff: {err}&quot;);
+            Console.WriteLine($&quot;Motion_enableServoOff, status: {err}&quot;);
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($&quot;Motion_close: {err}&quot;);
+            Console.WriteLine($&quot;Motion_close, status: {err}&quot;);
         }
         catch (Exception ex)
         {

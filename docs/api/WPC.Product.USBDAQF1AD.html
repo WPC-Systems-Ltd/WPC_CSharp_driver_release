@@ -162,7 +162,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -186,8 +186,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_AI_enableChannel_" data-uid="WPC.Product.USBDAQF1AD.AI_enableChannel*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_AI_enableChannel_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.AI_enableChannel(System.Int32,System.Int32,System.Int32)">AI_enableChannel(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI channel.<br>
-This API is only effective for USBDAQF1AD and USBDAQF1AOD.</p>
+  <div class="markdown level1 summary"><p>Set AI channel on a given port.<br>
+This API is only effective for <code>USBDAQF1AD</code> and <code>USBDAQF1AOD</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -213,13 +213,14 @@ This API is only effective for USBDAQF1AD and USBDAQF1AOD.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">channel</span></td>
-        <td><p>The number of channels that you want to enable.<br>If this parameter is set to 4, it means the AI channel is open from channel 0 to 3.</p>
+        <td><p>The number of channels that you want to enable.<br>
+If this parameter is set to 4, it means the AI channel is open from channel 0 to 3.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -244,7 +245,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   <a id="WPC_Product_USBDAQF1AD_AI_enableCS_" data-uid="WPC.Product.USBDAQF1AD.AI_enableCS*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_AI_enableCS_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.AI_enableCS(System.Int32,List{System.Int32},System.Int32)">AI_enableCS(Int32, List&lt;Int32&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Set AI chip selection on a given slot.<br>
-This API is only effective for STEM.</p>
+This API is only effective for <code>STEM</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -270,12 +271,13 @@ This API is only effective for STEM.</p>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">chip_select</span></td>
-        <td></td>
+        <td><p>Chip-number.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -325,7 +327,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -349,8 +351,8 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_AI_readOnDemand_" data-uid="WPC.Product.USBDAQF1AD.AI_readOnDemand*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_AI_readOnDemand_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.AI_readOnDemand(System.Int32,System.Int32)">AI_readOnDemand(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read one sample from a given AI port.<br>
-This should only be used in the &quot;on demand&quot; mode.</p>
+  <div class="markdown level1 summary"><p>Read one sample from a given port.<br>
+This should only be used in the <code>on demand</code> mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -376,7 +378,7 @@ This should only be used in the &quot;on demand&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -428,13 +430,16 @@ Users should call this function to retrieve them from the queue.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">num_samples</span></td>
-        <td><p>Number of samples to get out from the queue.<br> A sample is a list of values measured simultaneously from different channels.<br> If there are fewer samples than the expected number, the function will return all available ones after <code>delay</code> seconds expire.</p>
+        <td><p>Number of samples to get out from the queue.<br>
+A sample is a list of values measured simultaneously from different channels.<br>
+If there are fewer samples than the expected number, the function will return all available ones after <code>delay</code> seconds expire.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">delay</span></td>
-        <td><p>Time in seconds to wait for the indicated amount of data to arrive.<br> This becomes ineffective if there are already <code>num_samples</code> samples in the queue.</p>
+        <td><p>Time in seconds to wait for the indicated amount of data to arrive.<br>
+This becomes ineffective if there are already <code>num_samples</code> samples in the queue.</p>
 </td>
       </tr>
     </tbody>
@@ -461,7 +466,7 @@ For each <code>i</code>, <code>len(sample_list[i])</code> should be equal to the
   </table>
   <a id="WPC_Product_USBDAQF1AD_AI_setMode_" data-uid="WPC.Product.USBDAQF1AD.AI_setMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_AI_setMode_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.AI_setMode(System.Int32,System.Int32,System.Int32)">AI_setMode(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI acquisition mode.</p>
+  <div class="markdown level1 summary"><p>Set AI acquisition mode on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -487,13 +492,17 @@ For each <code>i</code>, <code>len(sample_list[i])</code> should be equal to the
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Acquisition mode.<br> 0: on demand, 1: N-samples, 2: continuous.<br> Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
+        <td><p>Acquisition mode.<br>
+0: on demand.<br>
+1: N-samples.<br>
+2: continuous.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -517,7 +526,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_AI_setNumSamples_" data-uid="WPC.Product.USBDAQF1AD.AI_setNumSamples*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_AI_setNumSamples_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.AI_setNumSamples(System.Int32,System.Int32,System.Int32)">AI_setNumSamples(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set number of AI samples to acquire.<br>
+  <div class="markdown level1 summary"><p>Set number of AI samples to acquire on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -549,7 +558,7 @@ This parameter is only effective for the &quot;N-samples&quot; mode.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -573,7 +582,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_AI_setSamplingRate_" data-uid="WPC.Product.USBDAQF1AD.AI_setSamplingRate*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_AI_setSamplingRate_System_Int32_System_Double_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.AI_setSamplingRate(System.Int32,System.Double,System.Int32)">AI_setSamplingRate(Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set AI sampling rate.<br>
+  <div class="markdown level1 summary"><p>Set AI sampling rate on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -606,7 +615,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -630,7 +639,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_AI_start_" data-uid="WPC.Product.USBDAQF1AD.AI_start*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_AI_start_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.AI_start(System.Int32,System.Int32)">AI_start(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Start streaming acquisition on a given AI port.<br>
+  <div class="markdown level1 summary"><p>Start streaming acquisition on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -657,7 +666,7 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -681,7 +690,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_AI_stop_" data-uid="WPC.Product.USBDAQF1AD.AI_stop*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_AI_stop_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.AI_stop(System.Int32,System.Int32)">AI_stop(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Stop streaming acquisition on a given AI port.<br>
+  <div class="markdown level1 summary"><p>Stop streaming acquisition on a given port.<br>
 This parameter is only effective for the &quot;N-samples&quot; and &quot;continuous&quot; modes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -708,7 +717,8 @@ This parameter is only effective for the &quot;N-samples&quot; and &quot;continu
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -783,7 +793,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Counter_close_" data-uid="WPC.Product.USBDAQF1AD.Counter_close*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Counter_close_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Counter_close(System.Int32,System.Int32)">Counter_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close counter channel.</p>
+  <div class="markdown level1 summary"><p>Close counting on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -809,7 +819,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -833,7 +843,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Counter_open_" data-uid="WPC.Product.USBDAQF1AD.Counter_open*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Counter_open_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Counter_open(System.Int32,System.Int32)">Counter_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open counter channel.</p>
+  <div class="markdown level1 summary"><p>Open counter on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -859,7 +869,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -883,7 +893,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Counter_read_" data-uid="WPC.Product.USBDAQF1AD.Counter_read*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Counter_read_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Counter_read(System.Int32,System.Int32)">Counter_read(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read counter channel's countering result.</p>
+  <div class="markdown level1 summary"><p>Read countering result on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -909,7 +919,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -932,7 +942,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Counter_start_" data-uid="WPC.Product.USBDAQF1AD.Counter_start*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Counter_start_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Counter_start(System.Int32,System.Int32)">Counter_start(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Start counter channel counting.</p>
+  <div class="markdown level1 summary"><p>Start counting on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -958,7 +968,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -982,7 +992,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Counter_stop_" data-uid="WPC.Product.USBDAQF1AD.Counter_stop*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Counter_stop_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Counter_stop(System.Int32,System.Int32)">Counter_stop(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Stop counter channel counting.</p>
+  <div class="markdown level1 summary"><p>Stop counting on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1008,7 +1018,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1032,7 +1042,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DI_closePins_" data-uid="WPC.Product.USBDAQF1AD.DI_closePins*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DI_closePins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DI_closePins(System.Int32,List{System.Int32},System.Int32)">DI_closePins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close specific pin to digital intput.</p>
+  <div class="markdown level1 summary"><p>Close the specific pin to digital intput.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1058,13 +1068,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to close.<br> For example, you want to close pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to close.<br>
+For example, you want to close pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1088,7 +1100,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DI_closePort_" data-uid="WPC.Product.USBDAQF1AD.DI_closePort*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DI_closePort_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DI_closePort(System.Int32,System.Int32)">DI_closePort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close all pins in specific port with digital input.</p>
+  <div class="markdown level1 summary"><p>Close all pins in the specific port to digital input.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1114,7 +1126,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1138,7 +1150,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DI_openPins_" data-uid="WPC.Product.USBDAQF1AD.DI_openPins*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DI_openPins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DI_openPins(System.Int32,List{System.Int32},System.Int32)">DI_openPins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open specific pin to digital intput.</p>
+  <div class="markdown level1 summary"><p>Open the specific pin to digital intput.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1164,15 +1176,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to set to digital intput.
-For example, you want to open pin 0, pin 1 and pin 5.
-pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1196,7 +1208,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DI_openPort_" data-uid="WPC.Product.USBDAQF1AD.DI_openPort*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DI_openPort_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DI_openPort(System.Int32,System.Int32)">DI_openPort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open all pins in specific port with digital input.</p>
+  <div class="markdown level1 summary"><p>Open all pins in specific port to digital input.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1222,7 +1234,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1246,7 +1258,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DI_readPins_" data-uid="WPC.Product.USBDAQF1AD.DI_readPins*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DI_readPins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DI_readPins(System.Int32,List{System.Int32},System.Int32)">DI_readPins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read digital pin state in specific pin.</p>
+  <div class="markdown level1 summary"><p>Read the specefic pin state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1272,13 +1284,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to read.<br> For example, you want to read pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to close.<br>
+For example, you want to close pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1301,7 +1315,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DI_readPort_" data-uid="WPC.Product.USBDAQF1AD.DI_readPort*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DI_readPort_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DI_readPort(System.Int32,System.Int32)">DI_readPort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read all digital pins state in specific port.</p>
+  <div class="markdown level1 summary"><p>Read all pins state in the specific port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1327,7 +1341,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1420,7 +1434,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DO_closePins_" data-uid="WPC.Product.USBDAQF1AD.DO_closePins*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DO_closePins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DO_closePins(System.Int32,List{System.Int32},System.Int32)">DO_closePins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close specific pin with digital output.</p>
+  <div class="markdown level1 summary"><p>Close the specific pin to digital output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1446,13 +1460,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to close.<br> For example, you want to close pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1502,7 +1518,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1526,7 +1542,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DO_openPins_" data-uid="WPC.Product.USBDAQF1AD.DO_openPins*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DO_openPins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DO_openPins(System.Int32,List{System.Int32},System.Int32)">DO_openPins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open specific pin to digital output.</p>
+  <div class="markdown level1 summary"><p>Open the specific pin to digital output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1552,13 +1568,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to set to digital output.<br> For example, you want to open pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1582,7 +1600,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DO_openPort_" data-uid="WPC.Product.USBDAQF1AD.DO_openPort*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DO_openPort_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DO_openPort(System.Int32,System.Int32)">DO_openPort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open all pins in specific port with digital output.</p>
+  <div class="markdown level1 summary"><p>Open all pins in the specific port to digital output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1608,7 +1626,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1632,7 +1650,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DO_togglePins_" data-uid="WPC.Product.USBDAQF1AD.DO_togglePins*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DO_togglePins_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DO_togglePins(System.Int32,List{System.Int32},System.Int32)">DO_togglePins(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Toggle digital pin state in specific pin.</p>
+  <div class="markdown level1 summary"><p>Toggle the specific pin.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1658,13 +1676,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to set to digital intput.<br> For example, you want to open pin 0, pin 1 and pin 5.<br> pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1680,14 +1700,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>Get status about pin state.</p>
+        <td><p>The list of pins state.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_USBDAQF1AD_DO_togglePort_" data-uid="WPC.Product.USBDAQF1AD.DO_togglePort*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DO_togglePort_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DO_togglePort(System.Int32,System.Int32)">DO_togglePort(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Toggle all digital pins state in specific port.</p>
+  <div class="markdown level1 summary"><p>Toggle all pins in the specific port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1713,7 +1733,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1729,14 +1749,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>Get status about pin state.</p>
+        <td><p>The list of pins state.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_USBDAQF1AD_DO_writePins_" data-uid="WPC.Product.USBDAQF1AD.DO_writePins*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DO_writePins_System_Int32_List_System_Int32__List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DO_writePins(System.Int32,List{System.Int32},List{System.Int32},System.Int32)">DO_writePins(Int32, List&lt;Int32&gt;, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open specific pin to digital output.</p>
+  <div class="markdown level1 summary"><p>Write high or low value to the specific pin.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1762,21 +1782,23 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">pin_index</span></td>
-        <td><p>Pin number you want to set.<br> For example, you want to open pin 0, pin 1 and pin 5.<br>pin_index = [0,1,5].</p>
+        <td><p>Pin number you want to set.<br>
+For example, you want to set pin 0, pin 1 and pin 5.<br>
+pin_index will be [0, 1, 5].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">value</span></td>
-        <td><p>Pin number you want to set high(1) or low(0).
-For example, set pin 0 and pin 1 to high, and pin 5 to low.
-value = [1,1,0].</p>
+        <td><p>Pin number you want to set high(1) or low(0).<br>
+For example, set pin 0 and pin 1 to high, and pin 5 to low.<br>
+value will be [1, 1, 0].<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1800,7 +1822,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_DO_writePort_" data-uid="WPC.Product.USBDAQF1AD.DO_writePort*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_DO_writePort_System_Int32_List_System_Int32__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.DO_writePort(System.Int32,List{System.Int32},System.Int32)">DO_writePort(Int32, List&lt;Int32&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write all pins state in specific port with digital output.</p>
+  <div class="markdown level1 summary"><p>Write high or low value to all pins in the specefic port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1826,13 +1848,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">value</span></td>
-        <td><p>Pin number you want to set digital high(1) or low(0).<br>For example, you want to write pin 0 and pin 2 to high, others to low.<br> [0,0,0,0,0,1,0,1] in LSB.</p>
+        <td><p>Pin number you want to set high(1) or low(0).<br>
+For example, set pin 0 and pin 2 to high<br>
+value will be [1, 0, 1, 0, 0, 0, 0, 0] in LSB.<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1856,7 +1880,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_I2C_close_" data-uid="WPC.Product.USBDAQF1AD.I2C_close*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_I2C_close_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.I2C_close(System.Int32,System.Int32)">I2C_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close I2C port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close I2C on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1882,7 +1906,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1906,7 +1930,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_I2C_open_" data-uid="WPC.Product.USBDAQF1AD.I2C_open*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_I2C_open_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.I2C_open(System.Int32,System.Int32)">I2C_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open I2C port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open I2C on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1932,7 +1956,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -1956,7 +1980,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_I2C_read_" data-uid="WPC.Product.USBDAQF1AD.I2C_read*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_I2C_read_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.I2C_read(System.Int32,System.Int32,System.Int32,System.Int32)">I2C_read(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read data acquisition from read address.</p>
+  <div class="markdown level1 summary"><p>Read data from the address via I2C.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1994,7 +2018,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2018,7 +2042,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_I2C_reset_" data-uid="WPC.Product.USBDAQF1AD.I2C_reset*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_I2C_reset_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.I2C_reset(System.Int32,System.Int32)">I2C_reset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Reset I2C to default settings.</p>
+  <div class="markdown level1 summary"><p>Reset I2C to the default setting on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2044,7 +2068,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2068,7 +2092,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_I2C_setAddressSize_" data-uid="WPC.Product.USBDAQF1AD.I2C_setAddressSize*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_I2C_setAddressSize_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.I2C_setAddressSize(System.Int32,System.Int32,System.Int32)">I2C_setAddressSize(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the frequency mode of the desired communication clock.</p>
+  <div class="markdown level1 summary"><p>Set I2C address size on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2094,13 +2118,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer I2C_Address_Size in WPC_basic.cs</p>
+        <td><p>0: 7-bit address.<br>
+1: 10-bit address.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2124,7 +2150,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_I2C_setClockRate_" data-uid="WPC.Product.USBDAQF1AD.I2C_setClockRate*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_I2C_setClockRate_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.I2C_setClockRate(System.Int32,System.Int32,System.Int32)">I2C_setClockRate(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the frequency mode of the desired communication clock.</p>
+  <div class="markdown level1 summary"><p>Set I2C clock on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2150,13 +2176,17 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">frequency</span></td>
-        <td><p>Please refer I2C_Frequency in WPC_basic.cs</p>
+        <td><p>0: standard (100000).<br>
+1: fast (400000).<br>
+2: fast Plus (1000000).<br>
+3: high speed (3400000).<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2180,7 +2210,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_I2C_write_" data-uid="WPC.Product.USBDAQF1AD.I2C_write*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_I2C_write_System_Int32_System_Int32_List_System_Byte__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.I2C_write(System.Int32,System.Int32,List{System.Byte},System.Int32)">I2C_write(Int32, Int32, List&lt;Byte&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write data to write address.</p>
+  <div class="markdown level1 summary"><p>Write data to the address via I2C.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2218,7 +2248,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2442,7 +2472,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_PWM_close_" data-uid="WPC.Product.USBDAQF1AD.PWM_close*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_PWM_close_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.PWM_close(System.Int32,System.Int32)">PWM_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close PWM channel.</p>
+  <div class="markdown level1 summary"><p>Close PWM on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2468,7 +2498,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2492,7 +2522,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_PWM_open_" data-uid="WPC.Product.USBDAQF1AD.PWM_open*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_PWM_open_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.PWM_open(System.Int32,System.Int32)">PWM_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open PWM channel.</p>
+  <div class="markdown level1 summary"><p>Open PWM on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2518,7 +2548,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2542,7 +2572,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_PWM_setDutyCycle_" data-uid="WPC.Product.USBDAQF1AD.PWM_setDutyCycle*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_PWM_setDutyCycle_System_Int32_System_Double_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.PWM_setDutyCycle(System.Int32,System.Double,System.Int32)">PWM_setDutyCycle(Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set duty cycle on PWM channel.</p>
+  <div class="markdown level1 summary"><p>Set PWM duty cycle on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2574,7 +2604,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2598,7 +2628,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_PWM_setFrequency_" data-uid="WPC.Product.USBDAQF1AD.PWM_setFrequency*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_PWM_setFrequency_System_Int32_System_Double_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.PWM_setFrequency(System.Int32,System.Double,System.Int32)">PWM_setFrequency(Int32, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set frequency on PWM channel.</p>
+  <div class="markdown level1 summary"><p>Set PWM frequency on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2630,7 +2660,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2654,7 +2684,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_PWM_start_" data-uid="WPC.Product.USBDAQF1AD.PWM_start*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_PWM_start_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.PWM_start(System.Int32,System.Int32)">PWM_start(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Start PWM generation.</p>
+  <div class="markdown level1 summary"><p>Start PWM generation on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2680,7 +2710,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2704,7 +2734,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_PWM_stop_" data-uid="WPC.Product.USBDAQF1AD.PWM_stop*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_PWM_stop_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.PWM_stop(System.Int32,System.Int32)">PWM_stop(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Stop PWM generation.</p>
+  <div class="markdown level1 summary"><p>Stop PWM generation on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2730,7 +2760,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2754,7 +2784,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_close_" data-uid="WPC.Product.USBDAQF1AD.SPI_close*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_close_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_close(System.Int32,System.Int32)">SPI_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close SPI port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close SPI on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2780,7 +2810,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2804,7 +2834,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_open_" data-uid="WPC.Product.USBDAQF1AD.SPI_open*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_open_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_open(System.Int32,System.Int32)">SPI_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open SPI port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open SPI on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2830,7 +2860,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2854,7 +2884,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_read_" data-uid="WPC.Product.USBDAQF1AD.SPI_read*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_read_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_read(System.Int32,System.Int32,System.Int32)">SPI_read(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read data acquisition from SPI port.</p>
+  <div class="markdown level1 summary"><p>Read data acquisition via SPI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2886,7 +2916,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2902,14 +2932,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>The received data.</p>
+        <td><p>The list of received data.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_readAndWrite_" data-uid="WPC.Product.USBDAQF1AD.SPI_readAndWrite*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_readAndWrite_System_Int32_List_System_Byte__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_readAndWrite(System.Int32,List{System.Byte},System.Int32)">SPI_readAndWrite(Int32, List&lt;Byte&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write and read data simultaneously to SPI port.</p>
+  <div class="markdown level1 summary"><p>Write and read data via SPI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2941,7 +2971,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -2957,14 +2987,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>The received data.</p>
+        <td><p>The list of received data.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_reset_" data-uid="WPC.Product.USBDAQF1AD.SPI_reset*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_reset_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_reset(System.Int32,System.Int32)">SPI_reset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Reset SPI to default settings.</p>
+  <div class="markdown level1 summary"><p>Reset SPI to the default setting on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2990,7 +3020,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3014,7 +3044,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_setDataSize_" data-uid="WPC.Product.USBDAQF1AD.SPI_setDataSize*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_setDataSize_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_setDataSize(System.Int32,System.Int32,System.Int32)">SPI_setDataSize(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set data frame format.</p>
+  <div class="markdown level1 summary"><p>Set data frame format on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3040,13 +3070,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer SPI_Data_Size in WPC_basic.cs</p>
+        <td><p>0: 8-bit address.<br>
+1: 16-bit address.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3070,7 +3102,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_setFirstBit_" data-uid="WPC.Product.USBDAQF1AD.SPI_setFirstBit*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_setFirstBit_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_setFirstBit(System.Int32,System.Int32,System.Int32)">SPI_setFirstBit(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set LSB first or MSB first.</p>
+  <div class="markdown level1 summary"><p>Set SPI first bit on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3096,13 +3128,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer SPI_First_Bit in WPC_basic.cs</p>
+        <td><p>0: MSB first.<br>
+1: LSB first.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3126,7 +3160,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_setMode_" data-uid="WPC.Product.USBDAQF1AD.SPI_setMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_setMode_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_setMode(System.Int32,System.Int32,System.Int32)">SPI_setMode(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set clock phase and clock polarity.</p>
+  <div class="markdown level1 summary"><p>Set clock phase and polarity with mode on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3152,13 +3186,17 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer SPI_Mode in WPC_basic.cs</p>
+        <td><p>0: CPOL= 0, CPHA= 0.<br>
+1: CPOL= 0, CPHA= 1.<br>
+2: CPOL= 1, CPHA= 0.<br>
+3: CPOL= 1, CPHA= 1.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3182,7 +3220,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_setPrescaler_" data-uid="WPC.Product.USBDAQF1AD.SPI_setPrescaler*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_setPrescaler_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_setPrescaler(System.Int32,System.Int32,System.Int32)">SPI_setPrescaler(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the maximum speed of SPI communication.</p>
+  <div class="markdown level1 summary"><p>Set SPI prescaler on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3208,13 +3246,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">prescaler</span></td>
-        <td><p>Please refer SPI_Prescaler in WPC_basic.cs</p>
+        <td><p>2, 4, 8, 16, 32, 64, 128, 256.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3238,7 +3277,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_SPI_write_" data-uid="WPC.Product.USBDAQF1AD.SPI_write*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_SPI_write_System_Int32_List_System_Byte__System_Int32_" data-uid="WPC.Product.USBDAQF1AD.SPI_write(System.Int32,List{System.Byte},System.Int32)">SPI_write(Int32, List&lt;Byte&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write data to SPI port.</p>
+  <div class="markdown level1 summary"><p>Write data via SPI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3264,13 +3303,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">data_to_write</span></td>
-        <td><p>Data to be transferred.</p>
+        <td><p>The list of data to be transferred.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3314,7 +3353,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3337,7 +3376,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_getMode_" data-uid="WPC.Product.USBDAQF1AD.Sys_getMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_getMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_getMode(System.Int32,System.Int32)">Sys_getMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Get the mode of the slot from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get the mode from a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3363,7 +3402,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3386,7 +3425,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_getRTC_" data-uid="WPC.Product.USBDAQF1AD.Sys_getRTC*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_getRTC_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_getRTC(System.Int32)">Sys_getRTC(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get date and time to connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get RTC date and time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3406,7 +3445,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3429,7 +3468,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_getSerialNumber_" data-uid="WPC.Product.USBDAQF1AD.Sys_getSerialNumber*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_getSerialNumber_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_getSerialNumber(System.Int32)">Sys_getSerialNumber(Int32)</h4>
-  <div class="markdown level1 summary"><p>Get serial number from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Get serial number.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3449,7 +3488,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3472,7 +3511,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_reboot_" data-uid="WPC.Product.USBDAQF1AD.Sys_reboot*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_reboot_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_reboot(System.Int32)">Sys_reboot(Int32)</h4>
-  <div class="markdown level1 summary"><p>Reboot from the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Reboot the device.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3492,51 +3531,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_USBDAQF1AD_Sys_rebootOnBootloader_" data-uid="WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader*"></a>
-  <h4 id="WPC_Product_USBDAQF1AD_Sys_rebootOnBootloader_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_rebootOnBootloader(System.Int32)">Sys_rebootOnBootloader(Int32)</h4>
-  <div class="markdown level1 summary"><p>Reboot on bootloader from the connected WPC device.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Sys_rebootOnBootloader(int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3560,7 +3555,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_setAIOMode_" data-uid="WPC.Product.USBDAQF1AD.Sys_setAIOMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_setAIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_setAIOMode(System.Int32,System.Int32)">Sys_setAIOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the AIO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the AIO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3586,7 +3581,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3610,7 +3605,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_setDIMode_" data-uid="WPC.Product.USBDAQF1AD.Sys_setDIMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_setDIMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_setDIMode(System.Int32,System.Int32)">Sys_setDIMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DI state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DI state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3636,7 +3631,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3660,7 +3655,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_setDIOMode_" data-uid="WPC.Product.USBDAQF1AD.Sys_setDIOMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_setDIOMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_setDIOMode(System.Int32,System.Int32)">Sys_setDIOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DIO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DIO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3686,7 +3681,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3710,7 +3705,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_setDOMode_" data-uid="WPC.Product.USBDAQF1AD.Sys_setDOMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_setDOMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_setDOMode(System.Int32,System.Int32)">Sys_setDOMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the DO state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the DO state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3736,7 +3731,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3760,7 +3755,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_setIdleMode_" data-uid="WPC.Product.USBDAQF1AD.Sys_setIdleMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_setIdleMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_setIdleMode(System.Int32,System.Int32)">Sys_setIdleMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the IDLE state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the IDLE state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3786,7 +3781,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3810,7 +3805,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_setMotionMode_" data-uid="WPC.Product.USBDAQF1AD.Sys_setMotionMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_setMotionMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_setMotionMode(System.Int32,System.Int32)">Sys_setMotionMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the motion state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the motion state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3836,7 +3831,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3860,7 +3855,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_setRTC_" data-uid="WPC.Product.USBDAQF1AD.Sys_setRTC*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)">Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set date and time to connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set RTC date and time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3916,7 +3911,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3940,7 +3935,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_Sys_setSwitchMode_" data-uid="WPC.Product.USBDAQF1AD.Sys_setSwitchMode*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_Sys_setSwitchMode_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.Sys_setSwitchMode(System.Int32,System.Int32)">Sys_setSwitchMode(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the switch state for the slot in the connected WPC device.</p>
+  <div class="markdown level1 summary"><p>Set the switch state on a given slot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3966,7 +3961,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -3990,7 +3985,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_close_" data-uid="WPC.Product.USBDAQF1AD.UART_close*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_close_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_close(System.Int32,System.Int32)">UART_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close UART port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close UART on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4016,7 +4011,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -4040,7 +4035,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_open_" data-uid="WPC.Product.USBDAQF1AD.UART_open*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_open_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_open(System.Int32,System.Int32)">UART_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open UART port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open UART on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4066,7 +4061,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -4090,7 +4085,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_read_" data-uid="WPC.Product.USBDAQF1AD.UART_read*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_read_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_read(System.Int32,System.Int32,System.Int32)">UART_read(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read data acquisition from UART port.</p>
+  <div class="markdown level1 summary"><p>Read data via UART.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4122,7 +4117,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">delay</span></td>
-        <td><p>Time delay before getting data.</p>
+        <td><p>Time in milliseconds to wait for the indicated amount of data to arrive.</p>
 </td>
       </tr>
     </tbody>
@@ -4138,14 +4133,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>The list of UART received data.</p>
+        <td><p>The list of received data.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_reset_" data-uid="WPC.Product.USBDAQF1AD.UART_reset*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_reset_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_reset(System.Int32,System.Int32)">UART_reset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Reset UART to default settings.</p>
+  <div class="markdown level1 summary"><p>Reset UART to the default setting on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4171,7 +4166,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -4195,7 +4190,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_setBaudRate_" data-uid="WPC.Product.USBDAQF1AD.UART_setBaudRate*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_setBaudRate_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_setBaudRate(System.Int32,System.Int32,System.Int32)">UART_setBaudRate(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the data rate in bits per second.</p>
+  <div class="markdown level1 summary"><p>Set UART baudrate on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4227,7 +4222,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -4251,7 +4246,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_setDataBit_" data-uid="WPC.Product.USBDAQF1AD.UART_setDataBit*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_setDataBit_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_setDataBit(System.Int32,System.Int32,System.Int32)">UART_setDataBit(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set data size in mode.</p>
+  <div class="markdown level1 summary"><p>Set UART data size on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4277,13 +4272,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer UART_Data_Size in WPC_basic.cs</p>
+        <td><p>0: 8-bit data.<br>
+1: 9-bit data.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -4307,7 +4304,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_setNumStopBit_" data-uid="WPC.Product.USBDAQF1AD.UART_setNumStopBit*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_setNumStopBit_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_setNumStopBit(System.Int32,System.Int32,System.Int32)">UART_setNumStopBit(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set number of stop bits in mode.</p>
+  <div class="markdown level1 summary"><p>Set UART stop bits on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4333,13 +4330,17 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer UART_Stop_Bit in WPC_basic.cs</p>
+        <td><p>0: 1 bit.<br>
+1: 0.5 bits.<br>
+2: 2 bits.<br>
+3: 1.5 bits.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -4363,7 +4364,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_setParity_" data-uid="WPC.Product.USBDAQF1AD.UART_setParity*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_setParity_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_setParity(System.Int32,System.Int32,System.Int32)">UART_setParity(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set parity in mode.</p>
+  <div class="markdown level1 summary"><p>Set UART parity on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4389,63 +4390,16 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer UART_Parity in WPC_basic.cs</p>
+        <td><p>0: none.<br>
+1: reserved.<br>
+2: even parity.<br>
+3: odd parity.<br></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
-See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="WPC_Product_USBDAQF1AD_UART_stopReading_" data-uid="WPC.Product.USBDAQF1AD.UART_stopReading*"></a>
-  <h4 id="WPC_Product_USBDAQF1AD_UART_stopReading_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_stopReading(System.Int32,System.Int32)">UART_stopReading(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Stop reading a stream via UART.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int UART_stopReading(int port, int timeout = default(int))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">port</span></td>
-        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -4469,7 +4423,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Product_USBDAQF1AD_UART_write_" data-uid="WPC.Product.USBDAQF1AD.UART_write*"></a>
   <h4 id="WPC_Product_USBDAQF1AD_UART_write_System_Int32_System_String_System_Int32_" data-uid="WPC.Product.USBDAQF1AD.UART_write(System.Int32,System.String,System.Int32)">UART_write(Int32, String, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write data to UART port.</p>
+  <div class="markdown level1 summary"><p>Write data via UART.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4501,7 +4455,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>

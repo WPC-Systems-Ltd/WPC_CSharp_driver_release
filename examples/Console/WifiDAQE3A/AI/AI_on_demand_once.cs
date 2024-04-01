@@ -55,12 +55,12 @@ class WifiDAQE3A_AI_on_demand_once
 
             // Open AI
             err = dev.AI_open(port, timeout);
-            Console.WriteLine($"AI_open in port {port}: {err}");
+            Console.WriteLine($"AI_open in port {port}, status: {err}");
             
 
             // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout);
-            Console.WriteLine($"AI_setMode {mode}: {err}");
+            Console.WriteLine($"AI_setMode {mode} in port {port}, status: {err}");
 
             // Read data acquisition acquisition
             List<double> ai_list = dev.AI_readOnDemand(port, timeout);
@@ -70,7 +70,7 @@ class WifiDAQE3A_AI_on_demand_once
 
             // Close AI
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($"AI_close in port {port}: {err}");
+            Console.WriteLine($"AI_close in port {port}, status: {err}");
 
         }
         catch (Exception ex)

@@ -70,7 +70,7 @@ class STEM_DO_write_pins
             // If the slot mode is not set to "DIO", set the slot mode to "DIO"
             if (slot_mode != "DIO"){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($"Sys_setDIOMode: {err}");
+                Console.WriteLine($"Sys_setDIOMode in slot {slot}, status: {err}");
             }
 
             // Get slot mode
@@ -92,7 +92,7 @@ class STEM_DO_write_pins
 
             // Write pins to high or low
             err = dev.DO_writePins(DO_port, pinindex, DO_value, timeout);
-            Console.WriteLine($"DO_writePins in DO_port{DO_port}: {err}");
+            Console.WriteLine($"DO_writePins in port {DO_port}, status: {err}");
         }
         catch (Exception ex)
         {

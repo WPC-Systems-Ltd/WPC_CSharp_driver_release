@@ -38,6 +38,7 @@ class EthanL_Relay_set_channel
         {
             // Parameters setting
             int err;
+            int port = 0;
             int DO_port = 0;
             int timeout = 3000; // ms
 
@@ -46,9 +47,9 @@ class EthanL_Relay_set_channel
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open Relay open
-            err = dev.Relay_open(timeout);
-            Console.WriteLine($"Relay_open: {err}");
+            // Open relay
+            err = dev.Relay_open(port, timeout);
+            Console.WriteLine($"Relay_open in port {port}, status: {err}");
 
             // Toggle digital state for 10 times. Each times delay for 0.5 second
             for (int i=0; i<10; i++)
@@ -61,13 +62,15 @@ class EthanL_Relay_set_channel
                 {
                     err = dev.DO_writePort(DO_port, new List<int> { 1, 1, 1, 1, 1, 1 }, timeout);
                 }
-                Console.WriteLine($"DO_writePort in port {DO_port}: {err}");
+                Console.WriteLine($"DO_writePort in port {DO_port}, status: {err}");
 
                 // Wait
                 Thread.Sleep(500); // delay [ms]
             }
-            err = dev.Relay_close(timeout);
-            Console.WriteLine($"Relay_close: {err}");
+
+            // Close relay
+            err = dev.Relay_close(port, timeout);
+            Console.WriteLine($"Relay_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

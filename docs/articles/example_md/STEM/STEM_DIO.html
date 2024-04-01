@@ -165,7 +165,7 @@ class STEM_DIO_loopback_pins
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setDIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -187,7 +187,7 @@ class STEM_DIO_loopback_pins
 
             // Write pins to high or low
             err = dev.DO_writePins(DO_port, DO_pins, DO_value, timeout);
-            Console.WriteLine($&quot;writePins: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePins in {DO_port}, status: {err}&quot;);
 
             // Read pins state
             List&lt;int&gt; state = dev.DI_readPins(DI_port, DI_pins, timeout);
@@ -281,7 +281,7 @@ class STEM_DIO_loopback_port
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setDIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -303,7 +303,7 @@ class STEM_DIO_loopback_port
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, DO_value, timeout);
-            Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}, status: {err}&quot;);
 
             // Read DI port state
             List&lt;int&gt; state = dev.DI_readPort(DI_port, timeout);
@@ -394,7 +394,7 @@ class STEM_DO_blinky_pins
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setDIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -414,12 +414,12 @@ class STEM_DO_blinky_pins
             Console.WriteLine($&quot;state_list&quot;);
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
-            // Toggle digital state for 10 times. Each times delay for 0.5 second
+            // Toggle digital state for 10 times. Each times delay for 500 ms
             for (int i=0; i&lt;10; i++)
             {
                 List&lt;byte&gt; state = dev.DO_togglePins(DO_port, pinindex, timeout);
                 Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
-                // Wait for 0.5 second to see led status
+                // Wait for 500 ms to see led status
                 Thread.Sleep(500); // delay [ms]
             }
         }
@@ -507,7 +507,7 @@ class STEM_DO_blinky_port
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setDIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -527,13 +527,13 @@ class STEM_DO_blinky_port
             Console.WriteLine($&quot;state_list&quot;);
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, pinstate_list[2])));
 
-            // Toggle digital state for 10 times. Each times delay for 0.5 second
+            // Toggle digital state for 10 times. Each times delay for 500 ms
             for (int i=0; i&lt;10; i++)
             {
                 List&lt;byte&gt; state = dev.DO_togglePort(DO_port, timeout);
                 Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, state)));
 
-                // Wait for 0.5 second to see led status
+                // Wait for 500 ms to see led status
                 Thread.Sleep(500); // delay [ms]
             }
         }
@@ -623,7 +623,7 @@ class STEM_DO_write_pins
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setDIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -645,7 +645,7 @@ class STEM_DO_write_pins
 
             // Write pins to high or low
             err = dev.DO_writePins(DO_port, pinindex, DO_value, timeout);
-            Console.WriteLine($&quot;DO_writePins in DO_port{DO_port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePins in port {DO_port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -732,7 +732,7 @@ class STEM_DO_write_port
             // If the slot mode is not set to &quot;DIO&quot;, set the slot mode to &quot;DIO&quot;
             if (slot_mode != &quot;DIO&quot;){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($&quot;Sys_setDIOMode: {err}&quot;);
+                Console.WriteLine($&quot;Sys_setDIOMode in slot {slot}, status: {err}&quot;);
             }
 
             // Get slot mode
@@ -754,7 +754,7 @@ class STEM_DO_write_port
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, DO_value, timeout);
-            Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}: {err}&quot;);
+            Console.WriteLine($&quot;DO_writePort in DO_port {DO_port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {

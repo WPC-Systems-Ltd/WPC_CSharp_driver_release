@@ -50,13 +50,9 @@ class WifiDAQF4A_get_WifiDAQ_status
 
             int battery = dev.Wifi_readBattery(timeout);
 
-            float thermo = dev.Wifi_readThermo(timeout);
-
             Console.WriteLine($"RSSI: {rssi} dBm");
 
             Console.WriteLine($"Battery: {battery} mV");
-
-            Console.WriteLine($"Thermo: {thermo} °C");
         }
         catch (Exception ex)
         {

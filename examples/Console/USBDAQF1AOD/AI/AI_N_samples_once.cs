@@ -59,34 +59,34 @@ class USBDAQF1AOD_AI_N_samples_once
 
             // Open AI
             err = dev.AI_open(port, timeout);
-            Console.WriteLine($"AI_open in port {port}: {err}");
+            Console.WriteLine($"AI_open in port {port}, status: {err}");
             
             // Set AI channel
             err = dev.AI_enableChannel(port, channel, timeout);
-            Console.WriteLine($"AI_enableChannel in port {port}: {err}");
+            Console.WriteLine($"AI_enableChannel in port {port}, status: {err}");
 
             // Set AI acquisition mode to N-sample mode
             err = dev.AI_setMode(port, mode, timeout);
-            Console.WriteLine($"AI_setMode {mode} in port {port}: {err}");
+            Console.WriteLine($"AI_setMode {mode} in port {port}, status: {err}");
 
             // Set AI sampling rate
             err = dev.AI_setSamplingRate(port, sampling_rate, timeout);
-            Console.WriteLine($"AI_setNumSamples {sampling_rate} in port {port}: {err}");
+            Console.WriteLine($"AI_setSamplingRate {sampling_rate} in port {port}, status: {err}");
 
             // Set AI # of samples
             err = dev.AI_setNumSamples(port, samples, timeout);
-            Console.WriteLine($"AI_setNumSamples {samples} in port {port}: {err}");
+            Console.WriteLine($"AI_setNumSamples {samples} in port {port}, status: {err}");
 
             // Start AI
             err = dev.AI_start(port, timeout);
-            Console.WriteLine($"AI_start in port {port}: {err}");
+            Console.WriteLine($"AI_start in port {port}, status: {err}");
 
             // Wait a while for data acquisition
             Thread.Sleep(1000); // delay [ms]
 
             // Read data acquisition
             List<List<double>> ai_2Dlist = dev.AI_readStreaming(port, read_points, read_delay);
-            Console.WriteLine($"number of samples = {ai_2Dlist.Count}");
+            Console.WriteLine($"Number of samples = {ai_2Dlist.Count}");
 
             bool ok = true;
             foreach (List<double> ai_list in ai_2Dlist)
@@ -104,11 +104,11 @@ class USBDAQF1AOD_AI_N_samples_once
 
             // Stop AI
             err = dev.AI_stop(port, timeout);
-            Console.WriteLine($"AI_stop in port {port}: {err}");
+            Console.WriteLine($"AI_stop in port {port}, status: {err}");
 
             // Close AI
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($"AI_close in port {port}: {err}");
+            Console.WriteLine($"AI_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

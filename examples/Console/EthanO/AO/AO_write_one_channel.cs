@@ -52,27 +52,27 @@ class EthanO_AO_write_one_channel
 
             // Open AO
             err = dev.AO_open(port, timeout);
-            Console.WriteLine($"AO_open in port {port}: {err}");
+            Console.WriteLine($"AO_open in port {port}, status: {err}");
 
             // Write AO vaule in channel 0
             err = dev.AO_writeOneChannel(port, 0, ao_value_list[0], timeout);
-            Console.WriteLine($"In port {port} channel 0, the AO value is {ao_value_list[0]}: {err}");
+            Console.WriteLine($"In port {port} channel 0, the AO value is {ao_value_list[0]}, status: {err}");
 
             // Write AO vaule in channel 1
             err = dev.AO_writeOneChannel(port, 1, ao_value_list[1], timeout);
-            Console.WriteLine($"In port {port} channel 1, the AO value is {ao_value_list[1]}: {err}");
+            Console.WriteLine($"In port {port} channel 1, the AO value is {ao_value_list[1]}, status: {err}");
 
             // Write AO vaule in channel 2
             err = dev.AO_writeOneChannel(port, 2, ao_value_list[2], timeout);
-            Console.WriteLine($"In port {port} channel 2, the AO value is {ao_value_list[2]}: {err}");
+            Console.WriteLine($"In port {port} channel 2 the AO value is {ao_value_list[2]}, status: {err}");
 
             // Write AO vaule in channel 3
             err = dev.AO_writeOneChannel(port, 3, ao_value_list[3], timeout);
-            Console.WriteLine($"In port {port} channel 3, the AO value is {ao_value_list[3]}: {err}");
+            Console.WriteLine($"In port {port} channel 3 the AO value is {ao_value_list[3]}, status: {err}");
 
             // Close AO
             err = dev.AO_close(port, timeout);
-            Console.WriteLine($"AO_close in port {port}: {err}");
+            Console.WriteLine($"AO_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

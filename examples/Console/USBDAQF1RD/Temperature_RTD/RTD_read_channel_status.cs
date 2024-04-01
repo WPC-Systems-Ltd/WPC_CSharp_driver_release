@@ -57,7 +57,7 @@ class USBDAQF1RD_RTD_read_channel_status
 
             // Open RTD port
             err = dev.Thermal_open(port, timeout);
-            Console.WriteLine($"Thermal_open in port {port}: {err}");
+            Console.WriteLine($"Thermal_open in port {port}, status: {err}");
 
             // Set RTD port and get status in channel 0
             status = dev.Thermal_getStatus(port, ch0, timeout);
@@ -69,7 +69,7 @@ class USBDAQF1RD_RTD_read_channel_status
 
             // Close RTD port
             err = dev.Thermal_close(port, timeout);
-            Console.WriteLine($"Thermal_close in port {port}: {err}");
+            Console.WriteLine($"Thermal_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

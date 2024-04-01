@@ -50,6 +50,7 @@ Error code,Error message
 -8102,The PWM channel is not available.
 -8103,The counter channel is not available.
 -8104,The relay counter index error is not valid or is not recognized.
+-8105,The relay port is not available or is already occupied by another process.
 -8200,The AI channel is not available.
 -8201,The AI port is not available or is already occupied by another process.
 -8202,The AI chip is not valid or is not recognized.
@@ -62,6 +63,7 @@ Error code,Error message
 -8304,The AO form is not valid or is not recognized.
 -8305,The AO sampling rate is not valid or is not recognized.
 -8400,The AHRS port is not available or is already occupied by another process.
+-8401,The AHRS mode is not available.
 -8500,The thermal port is not available or is already occupied by another process.
 -8501,The thermal channel is not available.
 -8502,The thermal filter mode is not valid or is not recognized.
@@ -102,3 +104,5 @@ Error code,Error message
 -9112,The motion operation mode is not valid or is not recognized.
 -9113,The motion acceleration mode is not valid or is not recognized.
 -9200,The STEM slot is not available or is already occupied by another process.
+-9300,The DPOT port is not available or is already occupied by another process.
+-9301,The DPOT channel is not available.

@@ -45,19 +45,19 @@ class EMotion_load_configuration_file
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"Motion_open in port {port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}, status: {err}");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
-            Console.WriteLine($"Motion_openCfgFile: {err}");
+            Console.WriteLine($"Motion_openCfgFile, status: {err}");
 
             // Motion load configuration file
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile: {err}");
+            Console.WriteLine($"Motion_loadCfgFile, status: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"Motion_close in port {port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

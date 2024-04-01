@@ -46,7 +46,7 @@ class EthanD_DIO_loopback_pins
             int DO_port = 0; // Depend on your device
             int DI_port = 1;
             List<int> DO_pins = new List<int> {0, 1, 2, 3};
-            List<int> DI_pins = new List<int> {4, 5, 6, 7};
+            List<int> DI_pins = new List<int> {0, 1, 2, 3};
             List<int> DO_value = new List<int> {0, 1, 0, 1};
             int timeout = 3000; // ms
 
@@ -57,15 +57,15 @@ class EthanD_DIO_loopback_pins
 
             // Open pins with digital output
             err = dev.DO_openPins(DO_port, DO_pins, timeout);
-            Console.WriteLine($"DO_openPins in DO_port {DO_port}: {err}");
+            Console.WriteLine($"DO_openPins in DO_port {DO_port}, status: {err}");
 
             // Open pins with digital iutput
             err = dev.DI_openPins(DI_port, DI_pins, timeout);
-            Console.WriteLine($"DI_openPins in DI_port {DI_port}: {err}");
+            Console.WriteLine($"DI_openPins in DI_port {DI_port}, status: {err}");
 
             // Write pins to high or low
             err = dev.DO_writePins(DO_port, DO_pins, DO_value, timeout);
-            Console.WriteLine($"writePins: {err}");
+            Console.WriteLine($"DO_writePins in {DO_port}, status: {err}");
 
             // Read pins state
             List<int> pin_s = dev.DI_readPins(DI_port, DI_pins, timeout);
@@ -73,11 +73,11 @@ class EthanD_DIO_loopback_pins
 
             // Close pins with digital output
             err = dev.DO_closePins(DO_port, DO_pins, timeout);
-            Console.WriteLine($"DO_closePins in DO_port {DO_port}: {err}");
+            Console.WriteLine($"DO_closePins in DO_port {DO_port}, status: {err}");
 
             // Close pins with digital input
             err = dev.DI_closePins(DI_port, DI_pins, timeout);
-            Console.WriteLine($"DI_closePins in DI_port {DI_port}: {err}");
+            Console.WriteLine($"DI_closePins in DI_port {DI_port}, status: {err}");
         }
         catch (Exception ex)
         {

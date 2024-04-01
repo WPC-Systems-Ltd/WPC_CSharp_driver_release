@@ -57,15 +57,15 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 
             // Open AI
             err = dev.AI_open(port, timeout);
-            Console.WriteLine($"AI_open in port {port}: {err}");
+            Console.WriteLine($"AI_open in port {port}, status: {err}");
             
             // Set AI channel
             err = dev.AI_enableChannel(port, channel, timeout);
-            Console.WriteLine($"AI_enableChannel in port {port}: {err}");
+            Console.WriteLine($"AI_enableChannel in port {port}, status: {err}");
 
             // Open AO
             err = dev.AO_open(port, timeout);
-            Console.WriteLine($"AO_open in port {port}: {err}");
+            Console.WriteLine($"AO_open in port {port}, status: {err}");
 
             // Read data acquisition acquisition
             List<double> ai_list = dev.AI_readOnDemand(port, timeout);
@@ -75,7 +75,7 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 
             // Write AO value simultaneously
             err = dev.AO_writeAllChannels(port, ao_value_list, timeout);
-            Console.WriteLine($"AO_writeAllChannels in port {port}: {err}");
+            Console.WriteLine($"AO_writeAllChannels in port {port}, status: {err}");
 
             // Read data acquisition acquisition
             ai_list = dev.AI_readOnDemand(port, timeout);
@@ -85,11 +85,11 @@ class USBDAQF1AOD_AIO_all_channels_loopback
 
             // Close AI
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($"AI_close in port {port}: {err}");
+            Console.WriteLine($"AI_close in port {port}, status: {err}");
 
             // Close AO
             err = dev.AO_close(port, timeout);
-            Console.WriteLine($"AO_close in port {port}: {err}");
+            Console.WriteLine($"AO_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

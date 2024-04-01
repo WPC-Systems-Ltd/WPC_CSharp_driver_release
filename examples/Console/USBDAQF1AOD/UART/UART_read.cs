@@ -54,25 +54,25 @@ class USBDAQF1AOD_UART_read
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open UART port
+            // Open UART
             err = dev.UART_open(port, timeout);
-            Console.WriteLine($"UART_open in port {port}: {err}");
+            Console.WriteLine($"UART_open in port {port}, status: {err}");;
 
             // Set UART port and set baudrate to 9600
             err = dev.UART_setBaudRate(port, baudrate, timeout);
-            Console.WriteLine($"UART_setBaudRate in port {port}: {err}");
+            Console.WriteLine($"UART_setBaudRate in port {port}, status: {err}");
 
             // Set UART port and set data bit to 8-bit data
             err = dev.UART_setDataBit(port, Const.UART_DATA_SIZE_8_BITS, timeout);
-            Console.WriteLine($"UART_setDataBit in port {port}: {err}");
+            Console.WriteLine($"UART_setDataBit in port {port}, status: {err}");
 
             // Set UART port and set parity to None
             err = dev.UART_setParity(port, Const.UART_PARITY_NONE, timeout);
-            Console.WriteLine($"UART_setParity in port {port}: {err}");
+            Console.WriteLine($"UART_setParity in port {port}, status: {err}");
 
             // Set UART port and set stop bit to to 1 bit
             err = dev.UART_setNumStopBit(port, Const.UART_STOP_BIT_1, timeout);
-            Console.WriteLine($"UART_setNumStopBit in port {port}: {err}");
+            Console.WriteLine($"UART_setNumStopBit in port {port}, status: {err}");
 
             // Print information
             Console.WriteLine("Wait for 10 seconds to receive data from other devices");
@@ -84,9 +84,9 @@ class USBDAQF1AOD_UART_read
             List<byte> data = dev.UART_read(port, 20, read_delay);
             WPC_utilities.printByteList(data);
 
-            // Close UART port
+            // Close UART
             err = dev.UART_close(port, timeout);
-            Console.WriteLine($"UART_close in port {port}: {err}");
+            Console.WriteLine($"UART_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

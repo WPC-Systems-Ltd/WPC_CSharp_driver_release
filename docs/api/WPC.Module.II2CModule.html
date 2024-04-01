@@ -85,7 +85,7 @@
   </h3>
   <a id="WPC_Module_II2CModule_I2C_close_" data-uid="WPC.Module.II2CModule.I2C_close*"></a>
   <h4 id="WPC_Module_II2CModule_I2C_close_System_Int32_System_Int32_" data-uid="WPC.Module.II2CModule.I2C_close(System.Int32,System.Int32)">I2C_close(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Close I2C port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Close I2C on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -111,7 +111,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -135,7 +135,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_II2CModule_I2C_open_" data-uid="WPC.Module.II2CModule.I2C_open*"></a>
   <h4 id="WPC_Module_II2CModule_I2C_open_System_Int32_System_Int32_" data-uid="WPC.Module.II2CModule.I2C_open(System.Int32,System.Int32)">I2C_open(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Open I2C port on WPC DAQ device.</p>
+  <div class="markdown level1 summary"><p>Open I2C on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,7 +161,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -185,7 +185,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_II2CModule_I2C_read_" data-uid="WPC.Module.II2CModule.I2C_read*"></a>
   <h4 id="WPC_Module_II2CModule_I2C_read_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.II2CModule.I2C_read(System.Int32,System.Int32,System.Int32,System.Int32)">I2C_read(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read data acquisition from read address.</p>
+  <div class="markdown level1 summary"><p>Read data from the address via I2C.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -223,7 +223,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -247,7 +247,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_II2CModule_I2C_reset_" data-uid="WPC.Module.II2CModule.I2C_reset*"></a>
   <h4 id="WPC_Module_II2CModule_I2C_reset_System_Int32_System_Int32_" data-uid="WPC.Module.II2CModule.I2C_reset(System.Int32,System.Int32)">I2C_reset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Reset I2C to default settings.</p>
+  <div class="markdown level1 summary"><p>Reset I2C to the default setting on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -273,7 +273,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -297,7 +297,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_II2CModule_I2C_setAddressSize_" data-uid="WPC.Module.II2CModule.I2C_setAddressSize*"></a>
   <h4 id="WPC_Module_II2CModule_I2C_setAddressSize_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.II2CModule.I2C_setAddressSize(System.Int32,System.Int32,System.Int32)">I2C_setAddressSize(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the frequency mode of the desired communication clock.</p>
+  <div class="markdown level1 summary"><p>Set I2C address size on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -323,13 +323,15 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">mode</span></td>
-        <td><p>Please refer I2C_Address_Size in WPC_basic.cs</p>
+        <td><p>0: 7-bit address.<br>
+1: 10-bit address.<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -353,7 +355,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_II2CModule_I2C_setClockRate_" data-uid="WPC.Module.II2CModule.I2C_setClockRate*"></a>
   <h4 id="WPC_Module_II2CModule_I2C_setClockRate_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.II2CModule.I2C_setClockRate(System.Int32,System.Int32,System.Int32)">I2C_setClockRate(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Set the frequency mode of the desired communication clock.</p>
+  <div class="markdown level1 summary"><p>Set I2C clock on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -379,13 +381,17 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">frequency</span></td>
-        <td><p>Please refer I2C_Frequency in WPC_basic.cs</p>
+        <td><p>0: standard (100000).<br>
+1: fast (400000).<br>
+2: fast Plus (1000000).<br>
+3: high speed (3400000).<br>
+Please see <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_setting.html">here</a> to use parameter.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -409,7 +415,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </table>
   <a id="WPC_Module_II2CModule_I2C_write_" data-uid="WPC.Module.II2CModule.I2C_write*"></a>
   <h4 id="WPC_Module_II2CModule_I2C_write_System_Int32_System_Int32_List_System_Byte__System_Int32_" data-uid="WPC.Module.II2CModule.I2C_write(System.Int32,System.Int32,List{System.Byte},System.Int32)">I2C_write(Int32, Int32, List&lt;Byte&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Write data to write address.</p>
+  <div class="markdown level1 summary"><p>Write data to the address via I2C.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -447,7 +453,7 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>

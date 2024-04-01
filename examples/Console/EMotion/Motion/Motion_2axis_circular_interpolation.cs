@@ -51,29 +51,29 @@ class EMotion_2axis_circular_interpolation
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"Motion_open in port {port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}, status: {err}");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
-            Console.WriteLine($"Motion_openCfgFile: {err}");
+            Console.WriteLine($"Motion_openCfgFile, status: {err}");
 
             // Motion load configuration file
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile: {err}");
+            Console.WriteLine($"Motion_loadCfgFile, status: {err}");
 
             // Motion configure
             err = dev.Motion_cfgCircularInterpo(port, axis_0, axis_1, center_point_x, center_point_y, finish_point_x, finish_point_y, Const.MOT_DIR_CW, speed:1000, accel:10000, decel:10000, timeout:timeout);
-            Console.WriteLine($"Motion_cfgCircularInterpo in axis{axis_0} and {axis_1}: {err}");
+            Console.WriteLine($"Motion_cfgCircularInterpo in port {port}, status: {err}");
 
             for (int i=0; i<4; i++)
             {
                 err = dev.Motion_enableServoOn(port, i, timeout);
-                Console.WriteLine($"Motion_enableServoOn in axis{i}: {err}");
+                Console.WriteLine($"Motion_enableServoOn in axis{i}, status: {err}");
             }
 
             // Motion start
             err = dev.Motion_startCircularInterpo(port, timeout);
-            Console.WriteLine($"Motion_startCircularInterpo in port {port}: {err}");
+            Console.WriteLine($"Motion_startCircularInterpo in port{port}, status: {err}");
 
             int move_status = 0;
             while (move_status == 0)
@@ -89,15 +89,15 @@ class EMotion_2axis_circular_interpolation
             {
                 // Motion stop
                 err = dev.Motion_stop(port, i, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-                Console.WriteLine($"Motion_stop in axis{i}: {err}");
+                Console.WriteLine($"Motion_stop in axis{i}, status: {err}");
 
                 err = dev.Motion_enableServoOff(port, i, timeout);
-                Console.WriteLine($"Motion_enableServoOff in axis{i}: {err}");
+                Console.WriteLine($"Motion_enableServoOff in axis{i}, status: {err}");
             }
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"Motion_close in port {port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

@@ -55,15 +55,15 @@ class USBDAQF1AD_AI_on_demand_in_loop
 
             // Open AI
             err = dev.AI_open(port, timeout);
-            Console.WriteLine($"AI_open in port {port}: {err}");
+            Console.WriteLine($"AI_open in port {port}, status: {err}");
             
             // Set AI channel
             err = dev.AI_enableChannel(port, channel, timeout);
-            Console.WriteLine($"AI_enableChannel in port {port}: {err}");
+            Console.WriteLine($"AI_enableChannel in port {port}, status: {err}");
 
             // Set AI acquisition mode to on demand
             err = dev.AI_setMode(port, mode, timeout);
-            Console.WriteLine($"AI_setMode {mode}: {err}");
+            Console.WriteLine($"AI_setMode {mode} in port {port}, status: {err}");
 
             // Read AI data with 5 times
             for (int i=0; i<5; i++)
@@ -75,7 +75,7 @@ class USBDAQF1AD_AI_on_demand_in_loop
 
             // Close AI
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($"AI_close in port {port}: {err}");
+            Console.WriteLine($"AI_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

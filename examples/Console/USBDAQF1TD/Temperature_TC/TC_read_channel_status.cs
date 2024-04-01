@@ -55,7 +55,7 @@ class USBDAQF1TD_TC_read_channel_status
             Console.WriteLine($"Model name: {driver_info[0]}");
             Console.WriteLine($"Firmware version: {driver_info.Last()}");
 
-            // Open thermo port
+            // Open thermo
             err = dev.Thermal_open(port, timeout);
             Console.WriteLine($"Thermal_open: {err}");
 
@@ -67,7 +67,7 @@ class USBDAQF1TD_TC_read_channel_status
             status = dev.Thermal_getStatus(port, channel_1, timeout);
             Console.WriteLine($"Thermal_getStatus in channel 1: {status}");
 
-            // Close thermo port
+            // Close thermo
             err = dev.Thermal_close(port, timeout);
             Console.WriteLine($"Thermal_close: {err}");
         }

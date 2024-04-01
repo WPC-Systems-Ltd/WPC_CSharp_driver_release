@@ -84,13 +84,13 @@
   <h3 id="methods">Methods
   </h3>
   <a id="WPC_Module_IRelayModule_Relay_close_" data-uid="WPC.Module.IRelayModule.Relay_close*"></a>
-  <h4 id="WPC_Module_IRelayModule_Relay_close_System_Int32_" data-uid="WPC.Module.IRelayModule.Relay_close(System.Int32)">Relay_close(Int32)</h4>
-  <div class="markdown level1 summary"><p>Close relay module.</p>
+  <h4 id="WPC_Module_IRelayModule_Relay_close_System_Int32_System_Int32_" data-uid="WPC.Module.IRelayModule.Relay_close(System.Int32,System.Int32)">Relay_close(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Close relay module on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Relay_close(int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Relay_close(int port, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -104,8 +104,14 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -128,13 +134,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <a id="WPC_Module_IRelayModule_Relay_open_" data-uid="WPC.Module.IRelayModule.Relay_open*"></a>
-  <h4 id="WPC_Module_IRelayModule_Relay_open_System_Int32_" data-uid="WPC.Module.IRelayModule.Relay_open(System.Int32)">Relay_open(Int32)</h4>
-  <div class="markdown level1 summary"><p>Open relay module.</p>
+  <h4 id="WPC_Module_IRelayModule_Relay_open_System_Int32_System_Int32_" data-uid="WPC.Module.IRelayModule.Relay_open(System.Int32,System.Int32)">Relay_open(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Open relay module on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Relay_open(int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">int Relay_open(int port, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,8 +154,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>
@@ -172,13 +184,13 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </tbody>
   </table>
   <a id="WPC_Module_IRelayModule_Relay_read_" data-uid="WPC.Module.IRelayModule.Relay_read*"></a>
-  <h4 id="WPC_Module_IRelayModule_Relay_read_System_Int32_System_Int32_" data-uid="WPC.Module.IRelayModule.Relay_read(System.Int32,System.Int32)">Relay_read(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read relay counters.</p>
+  <h4 id="WPC_Module_IRelayModule_Relay_read_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.IRelayModule.Relay_read(System.Int32,System.Int32,System.Int32)">Relay_read(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read relay counters on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;int&gt; Relay_read(int index, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;int&gt; Relay_read(int port, int index, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,14 +204,21 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_port.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td><p>If index is -1, it represents read all relay counters.</p>
+        <td><p>The index could be set from 0 to 5.<br>
+If the index is -1, it reads all relay counters.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td><p>Specify an additional waiting time (ms) to set or get data.</p>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
 </td>
       </tr>
     </tbody>

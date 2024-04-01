@@ -56,23 +56,23 @@ class EthanT_TC_read_channel_data_with_logger
             // Write header into CSV file
             var header = $"Thermo CH1";
             err = dev.Logger_writeValue(header);
-            Console.WriteLine($"Logger_writeValue: {err}");
+            Console.WriteLine($"Logger_writeValue, status: {err}");
 
             // Open file with CSV file
             err = dev.Logger_openFile("WPC_tester_EthanT_TC.csv");
-            Console.WriteLine($"Logger_openFile: {err}");
+            Console.WriteLine($"Logger_openFile, status: {err}");
 
-            // Open thermo port
+            // Open thermo
             err = dev.Thermal_open(port, timeout);
-            Console.WriteLine($"Thermal_open in port {port}: {err}");
+            Console.WriteLine($"Thermal_open in port {port}, status: {err}");
 
             // Set thermo port and set K type in channel 1
             err = dev.Thermal_setOverSampling(port, ch, Const.THERMAL_OVERSAMPLING_NONE, timeout);
-            Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port {port}: {err}");
+            Console.WriteLine($"Thermal_setOverSampling in channel {ch} in port {port}, status: {err}");
 
             // Set thermo port and set K type in channel 1
             err = dev.Thermal_setType(port, ch, Const.THERMAL_COUPLE_TYPE_K, timeout);
-            Console.WriteLine($"Thermal_setType in channel {ch} in port {port}: {err}");
+            Console.WriteLine($"Thermal_setType in channel {ch} in port {port}, status: {err}");
 
             // Wait for at least 500 ms after setting type or oversampling
             Thread.Sleep(500); // delay [ms]
@@ -84,11 +84,11 @@ class EthanT_TC_read_channel_data_with_logger
             // Write data into CSV file
             var data = $"{data1}";
             err = dev.Logger_writeValue(data);
-            Console.WriteLine($"Logger_writeValue: {err}");
+            Console.WriteLine($"Logger_writeValue, status: {err}");
 
-            // Close thermo port
+            // Close thermo
             err = dev.Thermal_close(port, timeout);
-            Console.WriteLine($"Thermal_close in port {port}: {err}");
+            Console.WriteLine($"Thermal_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

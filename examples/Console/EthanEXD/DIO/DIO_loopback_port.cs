@@ -55,15 +55,15 @@ class EthanEXD_DIO_loopback_port
 
             // Open DO port with digital output
             err = dev.DO_openPort(DO_port, timeout);
-            Console.WriteLine($"DO_openPort in DO_port {DO_port}: {err}");
+            Console.WriteLine($"DO_openPort in DO_port {DO_port}, status: {err}");
 
             // Open DI port with digital input
             err = dev.DI_openPort(DI_port, timeout);
-            Console.WriteLine($"DO_openPort in DI_port {DI_port}: {err}");
+            Console.WriteLine($"DI_openPort in DI_port {DI_port}, status: {err}");
 
             // Write DO port to high or low
             err = dev.DO_writePort(DO_port, DO_value, timeout);
-            Console.WriteLine($"DO_writePort in DO_port {DO_port}: {err}");
+            Console.WriteLine($"DO_writePort in DO_port {DO_port}, status: {err}");
 
             // Read DI port state
             List<int> state = dev.DI_readPort(DI_port, timeout);
@@ -71,11 +71,11 @@ class EthanEXD_DIO_loopback_port
 
             // Close DO port with digital output
             err = dev.DO_closePort(DO_port, timeout);
-            Console.WriteLine($"DO_closePort in DO_port {DO_port}: {err}");
+            Console.WriteLine($"DO_closePort in DO_port {DO_port}, status: {err}");
 
             // Close DI port with digital input
             err = dev.DI_closePort(DI_port, timeout);
-            Console.WriteLine($"DI_closePort in DI_port {DI_port}: {err}");
+            Console.WriteLine($"DI_closePort in DI_port {DI_port}, status: {err}");
         }
         catch (Exception ex)
         {

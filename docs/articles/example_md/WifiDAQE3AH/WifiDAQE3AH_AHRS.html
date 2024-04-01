@@ -139,11 +139,11 @@ class WifiDAQE3AH_AHRS_getOrientation
 
             // Open AHRS and update rate is 333 HZ
             err = dev.AHRS_open(port, timeout);
-            Console.WriteLine($&quot;AHRS_open in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_open in port {port}, status: {err}&quot;);
 
             // Start AHRS
             err = dev.AHRS_start(port, timeout);
-            Console.WriteLine($&quot;AHRS_start in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_start in port {port}, status: {err}&quot;);
 
             // Get three axis orientation
             int counter = 0;
@@ -156,11 +156,11 @@ class WifiDAQE3AH_AHRS_getOrientation
 
             // Stop AHRS
             err = dev.AHRS_stop(port, timeout);
-            Console.WriteLine($&quot;AHRS_stop in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_stop in port {port}, status: {err}&quot;);
 
             // Close AHRS
             err = dev.AHRS_close(port, timeout);
-            Console.WriteLine($&quot;AHRS_close in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_close in port {port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -231,11 +231,11 @@ class WifiDAQE3AH_AHRS_getAngularVelocity
 
             // Open AHRS and update rate is 333 HZ
             err = dev.AHRS_open(port, timeout);
-            Console.WriteLine($&quot;AHRS_open in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_open in port {port}, status: {err}&quot;);
 
             // Start AHRS
             err = dev.AHRS_start(port, timeout);
-            Console.WriteLine($&quot;AHRS_start in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_start in port {port}, status: {err}&quot;);
 
             // Get three axis angular velocity
             int counter = 0;
@@ -248,11 +248,11 @@ class WifiDAQE3AH_AHRS_getAngularVelocity
 
             // Stop AHRS
             err = dev.AHRS_stop(port, timeout);
-            Console.WriteLine($&quot;AHRS_stop in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_stop in port {port}, status: {err}&quot;);
 
             // Close AHRS
             err = dev.AHRS_close(port, timeout);
-            Console.WriteLine($&quot;AHRS_close in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_close in port {port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -323,11 +323,11 @@ class WifiDAQE3AH_AHRS_getAcceleration
 
             // Open AHRS and update rate is 333 HZ
             err = dev.AHRS_open(port, timeout);
-            Console.WriteLine($&quot;AHRS_open in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_open in port {port}, status: {err}&quot;);
 
             // Start AHRS
             err = dev.AHRS_start(port, timeout);
-            Console.WriteLine($&quot;AHRS_start in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_start in port {port}, status: {err}&quot;);
 
             // Get three axis acceleration
             int counter = 0;
@@ -340,11 +340,11 @@ class WifiDAQE3AH_AHRS_getAcceleration
 
             // Stop AHRS
             err = dev.AHRS_stop(port, timeout);
-            Console.WriteLine($&quot;AHRS_stop in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_stop in port {port}, status: {err}&quot;);
 
             // Close AHRS
             err = dev.AHRS_close(port, timeout);
-            Console.WriteLine($&quot;AHRS_close in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_close in port {port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {
@@ -415,11 +415,11 @@ class WifiDAQE3AH_AHRS_getEstimation
 
             // Open AHRS and update rate is 333 HZ
             err = dev.AHRS_open(port, timeout);
-            Console.WriteLine($&quot;AHRS_open in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_open in port {port}, status: {err}&quot;);
 
             // Start AHRS
             err = dev.AHRS_start(port, timeout);
-            Console.WriteLine($&quot;AHRS_start in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_start in port {port}, status: {err}&quot;);
 
             // Get three axis data by mode
             int counter = 0;
@@ -432,11 +432,11 @@ class WifiDAQE3AH_AHRS_getEstimation
 
             // Stop AHRS
             err = dev.AHRS_stop(port, timeout);
-            Console.WriteLine($&quot;AHRS_stop in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_stop in port {port}, status: {err}&quot;);
 
             // Close AHRS
             err = dev.AHRS_close(port, timeout);
-            Console.WriteLine($&quot;AHRS_close in port {port}: {err}&quot;);
+            Console.WriteLine($&quot;AHRS_close in port {port}, status: {err}&quot;);
         }
         catch (Exception ex)
         {

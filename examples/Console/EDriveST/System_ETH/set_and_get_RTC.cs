@@ -45,7 +45,7 @@ class EDriveST_set_and_get_RTC
 
             // Set RTC
             int err = dev.Sys_setRTC(2023, 5, 8, 15, 8, 7, timeout);
-            Console.WriteLine($"Sys_setRTC: {err}");
+            Console.WriteLine($"Set RTC to 2023-05-08, 15:08:07 , status: {err}");
 
             for(int i=0; i<10; i++){
                 string rtc_time = dev.Sys_getRTC(timeout);

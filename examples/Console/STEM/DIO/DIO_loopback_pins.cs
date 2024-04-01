@@ -73,7 +73,7 @@ class STEM_DIO_loopback_pins
             // If the slot mode is not set to "DIO", set the slot mode to "DIO"
             if (slot_mode != "DIO"){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($"Sys_setDIOMode: {err}");
+                Console.WriteLine($"Sys_setDIOMode in slot {slot}, status: {err}");
             }
 
             // Get slot mode
@@ -95,7 +95,7 @@ class STEM_DIO_loopback_pins
 
             // Write pins to high or low
             err = dev.DO_writePins(DO_port, DO_pins, DO_value, timeout);
-            Console.WriteLine($"writePins: {err}");
+            Console.WriteLine($"DO_writePins in {DO_port}, status: {err}");
 
             // Read pins state
             List<int> state = dev.DI_readPins(DI_port, DI_pins, timeout);

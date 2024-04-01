@@ -48,7 +48,7 @@ class EthanI_AI_on_demand_once
 
             // Open AI
             err = dev.AI_open(port, timeout);
-            Console.WriteLine($"AI_open in port {port}: {err}");
+            Console.WriteLine($"AI_open in port {port}, status: {err}");
 
             // Read data acquisition acquisition
             List<float> sample = dev.AI_readOnDemand(port, timeout);
@@ -58,7 +58,7 @@ class EthanI_AI_on_demand_once
 
             // Close AI
             err = dev.AI_close(port, timeout);
-            Console.WriteLine($"AI_close in port {port}: {err}");
+            Console.WriteLine($"AI_close in port {port}, status: {err}");
 
         }
         catch (Exception ex)

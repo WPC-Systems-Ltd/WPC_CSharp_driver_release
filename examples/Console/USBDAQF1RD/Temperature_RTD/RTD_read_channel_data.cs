@@ -57,10 +57,10 @@ class USBDAQF1RD_RTD_read_channel_data
 
             // Open RTD port
             err = dev.Thermal_open(port, timeout);
-            Console.WriteLine($"Thermal_open in port {port}: {err}");
+            Console.WriteLine($"Thermal_open in port {port}, status: {err}");
 
-            // Wait for at least 250 ms after setting type or oversampling
-            Thread.Sleep(250); // delay [ms]
+            // Wait for at least 100 ms
+            Thread.Sleep(100); // delay [ms]
 
             // Set RTD port and read RTD in channel 0
             data = dev.Thermal_readSensor(port, ch0, timeout);
@@ -72,7 +72,7 @@ class USBDAQF1RD_RTD_read_channel_data
 
             // Close RTD port
             err = dev.Thermal_close(port, timeout);
-            Console.WriteLine($"Thermal_close in port {port}: {err}");
+            Console.WriteLine($"Thermal_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

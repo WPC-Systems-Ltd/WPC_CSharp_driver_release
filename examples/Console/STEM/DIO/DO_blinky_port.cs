@@ -68,7 +68,7 @@ class STEM_DO_blinky_port
             // If the slot mode is not set to "DIO", set the slot mode to "DIO"
             if (slot_mode != "DIO"){
                 err = dev.Sys_setDIOMode(slot, timeout);
-                Console.WriteLine($"Sys_setDIOMode: {err}");
+                Console.WriteLine($"Sys_setDIOMode in slot {slot}, status: {err}");
             }
 
             // Get slot mode
@@ -88,13 +88,13 @@ class STEM_DO_blinky_port
             Console.WriteLine($"state_list");
             Console.WriteLine(string.Format("[{0}]", string.Join(", ", pinstate_list[2])));
 
-            // Toggle digital state for 10 times. Each times delay for 0.5 second
+            // Toggle digital state for 10 times. Each times delay for 500 ms
             for (int i=0; i<10; i++)
             {
                 List<byte> state = dev.DO_togglePort(DO_port, timeout);
                 Console.WriteLine(string.Format("[{0}]", string.Join(", ", state)));
 
-                // Wait for 0.5 second to see led status
+                // Wait for 500 ms to see led status
                 Thread.Sleep(500); // delay [ms]
             }
         }

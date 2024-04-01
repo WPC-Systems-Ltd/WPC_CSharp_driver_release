@@ -55,24 +55,24 @@ class EMotion_3axis_helical_interpolation
 
             // Motion open
             err = dev.Motion_open(port, timeout);
-            Console.WriteLine($"Motion_open in port {port}: {err}");
+            Console.WriteLine($"Motion_open in port {port}, status: {err}");
 
             // Motion open configuration file
             err = dev.Motion_openCfgFile(file_name:@"C:\Users\user\Desktop\3AxisStage_2P.ini");
-            Console.WriteLine($"Motion_openCfgFile: {err}");
+            Console.WriteLine($"Motion_openCfgFile, status: {err}");
 
             // Motion load configuration file
             err = dev.Motion_loadCfgFile();
-            Console.WriteLine($"Motion_loadCfgFile: {err}");
+            Console.WriteLine($"Motion_loadCfgFile, status: {err}");
 
             // Motion configure
             err = dev.Motion_cfgHelicalInterpo(port, center_x, center_y, finish_x, finish_y, Const.MOT_FALSE, pitch_axis3, Const.MOT_FALSE, pitch_axis4,
             rotation_num, speed, Const.MOT_DIR_CW, cal_timeout, timeout);
-            Console.WriteLine($"Motion_cfgHelicalInterpo in port {port}: {err}");
+            Console.WriteLine($"Motion_cfgHelicalInterpo in port {port}, status: {err}");
 
             // Motion start
             err = dev.Motion_startHelicalInterpo(port, timeout);
-            Console.WriteLine($"Motion_startHelicalInterpo in port {port}: {err}");
+            Console.WriteLine($"Motion_startHelicalInterpo in port {port}, status: {err}");
 
             int move_status = 0;
             while (move_status == 0)
@@ -83,11 +83,11 @@ class EMotion_3axis_helical_interpolation
 
             // Motion stop
             err = dev.Motion_stop(port, axis, Const.MOT_STOP_TYPE_DECELERATION, timeout);
-            Console.WriteLine($"Motion_stop in axis{axis}: {err}");
+            Console.WriteLine($"Motion_stop in axis{axis}, status: {err}");
 
             // Motion close
             err = dev.Motion_close(port, timeout);
-            Console.WriteLine($"Motion_close in port {port}: {err}");
+            Console.WriteLine($"Motion_close in port {port}, status: {err}");
         }
         catch (Exception ex)
         {

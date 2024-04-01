@@ -59,7 +59,7 @@ class STEM_AO_write_one_channel
             // If the slot mode is not set to "AIO", set the slot mode to "AIO"
             if (slot_mode != "AIO"){
                 err = dev.Sys_setAIOMode(slot, timeout);
-                Console.WriteLine($"Sys_setAIOMode: {err}");
+                Console.WriteLine($"Sys_setAIOMode in slot {slot}, status: {err}");
             }
 
             // Get slot mode
@@ -68,27 +68,27 @@ class STEM_AO_write_one_channel
 
             // Open AO
             err = dev.AO_open(slot, timeout);
-            Console.WriteLine($"AO_open in slot {slot}: {err}");
+            Console.WriteLine($"AO_open in slot {slot}, status: {err}");
 
             // Write AO vaule in channel 0
             err = dev.AO_writeOneChannel(slot, 0, ao_value_list[0], timeout);
-            Console.WriteLine($"In slot {slot} channel 0, the AO value is {ao_value_list[0]}: {err}");
+            Console.WriteLine($"In slot {slot} channel 0, the AO value is {ao_value_list[0]}, status: {err}");
 
             // Write AO vaule in channel 1
             err = dev.AO_writeOneChannel(slot, 1, ao_value_list[1], timeout);
-            Console.WriteLine($"In slot {slot} channel 1, the AO value is {ao_value_list[1]}: {err}");
+            Console.WriteLine($"In slot {slot} channel 1, the AO value is {ao_value_list[1]}, status: {err}");
 
             // Write AO vaule in channel 2
             err = dev.AO_writeOneChannel(slot, 2, ao_value_list[2], timeout);
-            Console.WriteLine($"In slot {slot} channel 2, the AO value is {ao_value_list[2]}: {err}");
+            Console.WriteLine($"In slot {slot} channel 2, the AO value is {ao_value_list[2]}, status: {err}");
 
             // Write AO vaule in channel 3
             err = dev.AO_writeOneChannel(slot, 3, ao_value_list[3], timeout);
-            Console.WriteLine($"In slot {slot} channel 3, the AO value is {ao_value_list[3]}: {err}");
+            Console.WriteLine($"In slot {slot} channel 3, the AO value is {ao_value_list[3]}, status: {err}");
 
             // Close AO
             err = dev.AO_close(slot, timeout);
-            Console.WriteLine($"AO_close in slot {slot}: {err}");
+            Console.WriteLine($"AO_close in slot {slot}, status: {err}");
         }
         catch (Exception ex)
         {
