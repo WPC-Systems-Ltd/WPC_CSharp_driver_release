@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/feature_product.html",
-          "hash": "4SM8wHpZdpH46NWT27KUdvWilvhlY/fJtLN60ZMa4dE="
+          "hash": "LTNJK+lrzPDCePxsuszeMFXhkEbMu46uHqKXuF0MgvM="
         }
       },
       "is_incremental": true,
@@ -684,7 +684,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/pinout_product.html",
-          "hash": "E1UL8uoTG1FVY+nxOvgP9g0xLFJSONrZ0M2Kz7ARsK0="
+          "hash": "TDELA/K+P4W7IKpM3JCE3rw7dla7c77xhU0a0wKfxAE="
         }
       },
       "is_incremental": true,
@@ -720,7 +720,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_port.html",
-          "hash": "PveFrFNulh5b2hX3i04Xc4wP/Ae1+GvjADrjvyL6ZPE="
+          "hash": "oH/LXQY8RjOWYM3HJEzgG4XvZQxWTeZbkopYYPG+p+M="
         }
       },
       "is_incremental": true,
@@ -732,7 +732,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/appendix/table_samplingRate.html",
-          "hash": "JU5fUKZm6SEUnSah10W0F9D+efXjPBRQ6BbcHU6qhcY="
+          "hash": "mWKPvWoKsz9EWM20O0zct8gVlK+j2pNalQtmmL6KyTo="
         }
       },
       "is_incremental": true,
@@ -1856,6 +1856,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Pinouts/pinout-EthanA2.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Pinouts/pinout-EthanA2.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/Pinouts/pinout-EthanD.JPG",
       "output": {
         "resource": {
@@ -1955,10 +1966,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/Pinouts/pinout-USBDAQF1AD.JPG",
+      "source_relative_path": "images/Pinouts/pinout-USBDAQF1AD.jpg",
       "output": {
         "resource": {
-          "relative_path": "images/Pinouts/pinout-USBDAQF1AD.JPG"
+          "relative_path": "images/Pinouts/pinout-USBDAQF1AD.jpg"
         }
       },
       "is_incremental": false,
@@ -2054,6 +2065,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Pinouts/pinout-WifiDAQE3AOD.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Pinouts/pinout-WifiDAQE3AOD.JPG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/Pinouts/pinout-WifiDAQF4A.JPG",
       "output": {
         "resource": {
@@ -2091,6 +2113,17 @@
       "output": {
         "resource": {
           "relative_path": "images/Products/product-EthanA.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Products/product-EthanA2.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Products/product-EthanA2.jpg"
         }
       },
       "is_incremental": false,
@@ -2289,6 +2322,17 @@
       "output": {
         "resource": {
           "relative_path": "images/Products/product-WIFIDAQE3AH.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Products/product-WIFIDAQE3AOD.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Products/product-WIFIDAQE3AOD.jpg"
         }
       },
       "is_incremental": false,
