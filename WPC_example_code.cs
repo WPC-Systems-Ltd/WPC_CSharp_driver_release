@@ -110,6 +110,17 @@ public class WPC_example_code
         Console.WriteLine("Run AI_on_demand_once.cs, please input 126");
 
     }
+
+    static void showRTCAIMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For RTC AI ");
+        Console.WriteLine("------");
+        Console.WriteLine("Run RTC_trigger_AI_continuous.cs, please input 127");
+        Console.WriteLine("Run RTC_trigger_AI_N_samples.cs, please input 128");
+        Console.WriteLine("Run RTC_trigger_AI_on_demand.cs, please input 129");
+    }
+
     #endregion
 
     #region AIOMessage
@@ -299,6 +310,18 @@ public class WPC_example_code
     }
     #endregion
 
+
+    #region EncoderMessage
+    static void showEncoderMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For encoder");
+        Console.WriteLine("--------");
+        Console.WriteLine("Run Encoder_read.cs, please input 510");
+    }
+    #endregion
+
+
     #region AHRSMessage
     static void showAHRSMessage()
     {
@@ -309,6 +332,18 @@ public class WPC_example_code
         Console.WriteLine("Run AHRS_getAngularVelocity.cs, please input 601");
         Console.WriteLine("Run AHRS_getAcceleration.cs, please input 602");
         Console.WriteLine("Run AHRS_getEstimation.cs, please input 603");
+
+    }
+    #endregion
+
+    #region SDMessage
+    static void showSDMessage()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("For SD");
+        Console.WriteLine("--------");
+        Console.WriteLine("Run SD_read.cs, please input 610");
+        Console.WriteLine("Run SD_read.cs, please input 611");
 
     }
     #endregion
@@ -368,6 +403,7 @@ public class WPC_example_code
                 Console.WriteLine("Get 10, show EthanA series example code");
                 showSysETHMessage();
                 showAIMessage();
+                showRTCAIMessage();
                 break;
 
             case 11:
@@ -429,6 +465,7 @@ public class WPC_example_code
                 showUARTMessage();
                 showPWMMessage();
                 showCounterMessage();
+                showEncoderMessage();
                 break;
 
             case 21:
@@ -442,6 +479,7 @@ public class WPC_example_code
                 showUARTMessage();
                 showPWMMessage();
                 showCounterMessage();
+                showEncoderMessage();
                 break;
 
             case 22:
@@ -454,6 +492,7 @@ public class WPC_example_code
                 showCANMessage();
                 showPWMMessage();
                 showCounterMessage();
+                showEncoderMessage();
                 break;
 
             case 23:
@@ -465,6 +504,7 @@ public class WPC_example_code
                 showUARTMessage();
                 showPWMMessage();
                 showCounterMessage();
+                showEncoderMessage();
                 break;
 
             case 24:
@@ -473,6 +513,7 @@ public class WPC_example_code
                 showDIOMessage();
                 showPWMMessage();
                 showCounterMessage();
+                showEncoderMessage();
                 break;
 
             case 25:
@@ -485,6 +526,7 @@ public class WPC_example_code
                 showRTDMessage();
                 showPWMMessage();
                 showCounterMessage();
+                showEncoderMessage();
                 break;
 
             case 26:
@@ -497,6 +539,7 @@ public class WPC_example_code
                 showTCMessage();
                 showPWMMessage();
                 showCounterMessage();
+                showEncoderMessage();
                 break;
 
             case 30:
@@ -510,6 +553,8 @@ public class WPC_example_code
                 showSysWifiMessage();
                 showAIMessage();
                 showAHRSMessage();
+                showSDMessage();
+
                 break;
 
             case 32:
@@ -817,7 +862,22 @@ public class WPC_example_code
                     case 126:
                         EthanA_AI_on_demand_once.Main();
                         break;
+
                     #endregion
+
+                    #region EthanA_RTC_AI
+                    case 127:
+                        EthanA_RTC_trigger_AI_continuous.Main();
+                        break;
+                    case 128:
+                        EthanA_RTC_trigger_AI_N_samples.Main();
+                        break;
+                    case 129:
+                        EthanA_RTC_trigger_AI_on_demand.Main();
+                        break;
+
+                    #endregion
+
 
                     default:
                         break;
@@ -1205,6 +1265,12 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1AD_Encoder
+                    case 510:
+                        USBDAQF1AD_Encoder_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -1318,6 +1384,12 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1AOD_Encoder
+                    case 510:
+                        USBDAQF1AOD_Encoder_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -1404,6 +1476,12 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1CD_Encoder
+                    case 510:
+                        USBDAQF1CD_Encoder_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -1481,6 +1559,12 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1D_Encoder
+                    case 510:
+                        USBDAQF1D_Encoder_read.Main();
+                        break;
+                    #endregion
+
                     default:
                         break;
                 }
@@ -1534,6 +1618,11 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1DSNK_Encoder
+                    case 510:
+                        USBDAQF1DSNK_Encoder_read.Main();
+                        break;
+                    #endregion
                     default:
                         break;
                 }
@@ -1623,6 +1712,11 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1RD_Encoder
+                    case 510:
+                        USBDAQF1RD_Encoder_read.Main();
+                        break;
+                    #endregion
                     default:
                         break;
                 }
@@ -1712,6 +1806,11 @@ public class WPC_example_code
                         break;
                     #endregion
 
+                    #region USBDAQF1TD_Encoder
+                    case 510:
+                        USBDAQF1TD_Encoder_read.Main();
+                        break;
+                    #endregion
                     default:
                         break;
                 }
@@ -1826,6 +1925,15 @@ public class WPC_example_code
                         break;
                     case 603:
                         WifiDAQE3AH_AHRS_getEstimation.Main();
+                        break;
+                    #endregion
+
+                    #region
+                    case 610:
+                        WifiDAQE3AH_SD_read.Main();
+                        break;
+                    case 611:
+                        WifiDAQE3AH_SD_write.Main();
                         break;
                     #endregion
 

@@ -92,6 +92,7 @@
     <div><a class="xref" href="WPC.Module.IThermocoupleModule.html">IThermocoupleModule</a></div>
     <div><a class="xref" href="WPC.Module.IPWMModule.html">IPWMModule</a></div>
     <div><a class="xref" href="WPC.Module.ICounterModule.html">ICounterModule</a></div>
+    <div><a class="xref" href="WPC.Module.IEncoderModule.html">IEncoderModule</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -121,7 +122,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="WPC_Product_USBDAQF1TD_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class USBDAQF1TD : IUSBDevice, ISystemModule, IDIOModule, IUARTModule, II2CModule, ISPIModule, IThermalModule, IThermocoupleModule, IPWMModule, ICounterModule</code></pre>
+    <pre><code class="lang-csharp hljs">public class USBDAQF1TD : IUSBDevice, ISystemModule, IDIOModule, IUARTModule, II2CModule, ISPIModule, IThermalModule, IThermocoupleModule, IPWMModule, ICounterModule, IEncoderModule</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -287,14 +288,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Product_USBDAQF1TD_Counter_read_" data-uid="WPC.Product.USBDAQF1TD.Counter_read*"></a>
-  <h4 id="WPC_Product_USBDAQF1TD_Counter_read_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Counter_read(System.Int32,System.Int32)">Counter_read(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read countering result on the specific channel.</p>
+  <a id="WPC_Product_USBDAQF1TD_Counter_readFrequency_" data-uid="WPC.Product.USBDAQF1TD.Counter_readFrequency*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Counter_readFrequency_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Counter_readFrequency(System.Int32,System.Int32)">Counter_readFrequency(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the value of counter frequency on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Counter_read(int channel, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">public float Counter_readFrequency(int channel, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,8 +331,219 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>Counter position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Counter_readPosition_" data-uid="WPC.Product.USBDAQF1TD.Counter_readPosition*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Counter_readPosition_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Counter_readPosition(System.Int32,System.Int32)">Counter_readPosition(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the value of counter position on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Counter_readPosition(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The result of counter.</p>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><p>Counter frequency.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Counter_setEdge_" data-uid="WPC.Product.USBDAQF1TD.Counter_setEdge*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Counter_setEdge_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Counter_setEdge(System.Int32,System.Int32,System.Int32)">Counter_setEdge(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Counter_setEdge(int channel, int edge, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Counter_setFreqWindow_" data-uid="WPC.Product.USBDAQF1TD.Counter_setFreqWindow*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)">Counter_setFreqWindow(Int32, Single, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set moving window size on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Counter_setFreqWindow(int channel, float window_size, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">window_size</span></td>
+        <td><p>Moving window size. Default value is 100ms, and the minimum value is 20 ms.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Counter_setPosition_" data-uid="WPC.Product.USBDAQF1TD.Counter_setPosition*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Counter_setPosition_System_Int32_System_UInt64_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)">Counter_setPosition(Int32, UInt64, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set counter position on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Counter_setPosition(int channel, ulong position, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The counter position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
@@ -1247,6 +1459,511 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
         <td><p>Pin number you want to set high(1) or low(0).<br>
 For example, set pin 0 and pin 2 to high<br>
 value will be [1, 0, 1, 0, 0, 0, 0, 0] in LSB.<br></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_close_" data-uid="WPC.Product.USBDAQF1TD.Encoder_close*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_close_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_close(System.Int32,System.Int32)">Encoder_close(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Close encoder on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Encoder_close(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_getDirection_" data-uid="WPC.Product.USBDAQF1TD.Encoder_getDirection*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_getDirection_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_getDirection(System.Int32,System.Int32)">Encoder_getDirection(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Encoder_getDirection(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_open_" data-uid="WPC.Product.USBDAQF1TD.Encoder_open*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_open_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_open(System.Int32,System.Int32)">Encoder_open(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Open encoder on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Encoder_open(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_readFrequency_" data-uid="WPC.Product.USBDAQF1TD.Encoder_readFrequency*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_readFrequency_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_readFrequency(System.Int32,System.Int32)">Encoder_readFrequency(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the value of encoder frequency on the specific channel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Encoder_readFrequency(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>Encoder frequency.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_readPosition_" data-uid="WPC.Product.USBDAQF1TD.Encoder_readPosition*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_readPosition_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_readPosition(System.Int32,System.Int32)">Encoder_readPosition(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the value of encoder position on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Encoder_readPosition(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>Encoder position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_setDirection_" data-uid="WPC.Product.USBDAQF1TD.Encoder_setDirection*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_setDirection_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)">Encoder_setDirection(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Encoder_setDirection(int channel, int direction, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_setFreqWindow_" data-uid="WPC.Product.USBDAQF1TD.Encoder_setFreqWindow*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)">Encoder_setFreqWindow(Int32, Single, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set moving window size on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Encoder_setFreqWindow(int channel, float window_size, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">window_size</span></td>
+        <td><p>Moving window size. Default value is 100ms, and the minimum value is 20 ms.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_setPosition_" data-uid="WPC.Product.USBDAQF1TD.Encoder_setPosition*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_setPosition_System_Int32_System_Int64_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)">Encoder_setPosition(Int32, Int64, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set encoder position value on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Encoder_setPosition(int channel, long counter_vlaue, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">counter_vlaue</span></td>
+        <td><p>The encoder counter value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_start_" data-uid="WPC.Product.USBDAQF1TD.Encoder_start*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_start_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_start(System.Int32,System.Int32)">Encoder_start(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Start reading encoder on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Encoder_start(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_USBDAQF1TD_Encoder_stop_" data-uid="WPC.Product.USBDAQF1TD.Encoder_stop*"></a>
+  <h4 id="WPC_Product_USBDAQF1TD_Encoder_stop_System_Int32_System_Int32_" data-uid="WPC.Product.USBDAQF1TD.Encoder_stop(System.Int32,System.Int32)">Encoder_stop(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Stop reading encoder on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Encoder_stop(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
 </td>
       </tr>
       <tr>
@@ -4257,6 +4974,9 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </div>
   <div>
       <a class="xref" href="WPC.Module.ICounterModule.html">ICounterModule</a>
+  </div>
+  <div>
+      <a class="xref" href="WPC.Module.IEncoderModule.html">IEncoderModule</a>
   </div>
 </article>
           </div>
