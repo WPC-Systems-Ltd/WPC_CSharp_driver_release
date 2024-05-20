@@ -1,6 +1,17 @@
 WPC CSharp driver release changelog
 ===================================
 
+v0.2.23 Date: 2024/05/20, Developer: Chunglee_people
+---------------------------------------------------
+### Added
+- New product: EthanA2
+- Add SDCard, RTC_AI, encoder, counter function
+- exmaple code: RTC_trigger_AI_continuous.cs, RTC_trigger_AI_N_samples,cs, RTC_trigger_AI_on_demand.cs, Encoder_read.cs, SD_read, SD_write
+
+### Changed
+- All product pinout with encoder feature
+- error code table
+
 v0.2.18 Date: 2024/04/01, Developer: Chunglee_people
 ---------------------------------------------------
 ### Added
