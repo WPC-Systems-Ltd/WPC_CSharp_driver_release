@@ -128,9 +128,7 @@ class EthanIA_AI_on_demand_once
             Console.WriteLine($&quot;AI_open in port {port}, status: {err}&quot;);
 
             // Read data acquisition acquisition
-            List&lt;float&gt; sample = dev.AI_readOnDemand(port, timeout);
-
-            // Print data
+            List&lt;double&gt; sample = dev.AI_readOnDemand(port, timeout);
             Console.WriteLine(string.Format(&quot;[{0}]&quot;, string.Join(&quot;, &quot;, sample)));
 
             // Close AI
