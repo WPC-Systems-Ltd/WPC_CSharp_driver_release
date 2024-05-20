@@ -90,6 +90,7 @@
     <div><a class="xref" href="WPC.Module.ISystemAnalogModule.html">ISystemAnalogModule</a></div>
     <div><a class="xref" href="WPC.Module.IWifiModule.html">IWifiModule</a></div>
     <div><a class="xref" href="WPC.Module.IDataloggerModule.html">IDataloggerModule</a></div>
+    <div><a class="xref" href="WPC.Module.ISDCardModule.html">ISDCardModule</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -119,7 +120,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="WPC_Product_WifiDAQE3AH_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WifiDAQE3AH : INetworkDevice, IAIModule, IAHRSModule, INetworkModule, ISystemModule, ISystemAnalogModule, IWifiModule, IDataloggerModule</code></pre>
+    <pre><code class="lang-csharp hljs">public class WifiDAQE3AH : INetworkDevice, IAIModule, IAHRSModule, INetworkModule, ISystemModule, ISystemAnalogModule, IWifiModule, IDataloggerModule, ISDCardModule</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -1450,6 +1451,226 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
+  <a id="WPC_Product_WifiDAQE3AH_SD_closeFile_" data-uid="WPC.Product.WifiDAQE3AH.SD_closeFile*"></a>
+  <h4 id="WPC_Product_WifiDAQE3AH_SD_closeFile_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.SD_closeFile(System.Int32)">SD_closeFile(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SD_closeFile(int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3AH_SD_getStorage_" data-uid="WPC.Product.WifiDAQE3AH.SD_getStorage*"></a>
+  <h4 id="WPC_Product_WifiDAQE3AH_SD_getStorage_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.SD_getStorage(System.Int32)">SD_getStorage(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint SD_getStorage(int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3AH_SD_openFile_" data-uid="WPC.Product.WifiDAQE3AH.SD_openFile*"></a>
+  <h4 id="WPC_Product_WifiDAQE3AH_SD_openFile_System_String_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.SD_openFile(System.String,System.Int32,System.Int32)">SD_openFile(String, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SD_openFile(string filename, int mode, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3AH_SD_readFile_" data-uid="WPC.Product.WifiDAQE3AH.SD_readFile*"></a>
+  <h4 id="WPC_Product_WifiDAQE3AH_SD_readFile_System_Int32_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.SD_readFile(System.Int32,System.Int32)">SD_readFile(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SD_readFile(int byte_to_read, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">byte_to_read</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Product_WifiDAQE3AH_SD_writeFile_" data-uid="WPC.Product.WifiDAQE3AH.SD_writeFile*"></a>
+  <h4 id="WPC_Product_WifiDAQE3AH_SD_writeFile_System_String_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.SD_writeFile(System.String,System.Int32)">SD_writeFile(String, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SD_writeFile(string write_data, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">write_data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="WPC_Product_WifiDAQE3AH_Sys_getDriverInfo_" data-uid="WPC.Product.WifiDAQE3AH.Sys_getDriverInfo*"></a>
   <h4 id="WPC_Product_WifiDAQE3AH_Sys_getDriverInfo_System_Int32_" data-uid="WPC.Product.WifiDAQE3AH.Sys_getDriverInfo(System.Int32)">Sys_getDriverInfo(Int32)</h4>
   <div class="markdown level1 summary"><p>Get device firmware information.</p>
@@ -2766,6 +2987,9 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
   </div>
   <div>
       <a class="xref" href="WPC.Module.IDataloggerModule.html">IDataloggerModule</a>
+  </div>
+  <div>
+      <a class="xref" href="WPC.Module.ISDCardModule.html">ISDCardModule</a>
   </div>
 </article>
           </div>

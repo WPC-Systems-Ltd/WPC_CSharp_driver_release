@@ -878,19 +878,71 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ICounterModule.Counter_open
   nameWithType: ICounterModule.Counter_open
-- uid: WPC.Module.ICounterModule.Counter_read(System.Int32,System.Int32)
-  name: Counter_read(Int32, Int32)
-  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_read_System_Int32_System_Int32_
-  commentId: M:WPC.Module.ICounterModule.Counter_read(System.Int32,System.Int32)
-  fullName: WPC.Module.ICounterModule.Counter_read(System.Int32, System.Int32)
-  nameWithType: ICounterModule.Counter_read(Int32, Int32)
-- uid: WPC.Module.ICounterModule.Counter_read*
-  name: Counter_read
-  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_read_
-  commentId: Overload:WPC.Module.ICounterModule.Counter_read
+- uid: WPC.Module.ICounterModule.Counter_readFrequency(System.Int32,System.Int32)
+  name: Counter_readFrequency(Int32, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_readFrequency(System.Int32, System.Int32)
+  nameWithType: ICounterModule.Counter_readFrequency(Int32, Int32)
+- uid: WPC.Module.ICounterModule.Counter_readFrequency*
+  name: Counter_readFrequency
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_readFrequency_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_readFrequency
   isSpec: "True"
-  fullName: WPC.Module.ICounterModule.Counter_read
-  nameWithType: ICounterModule.Counter_read
+  fullName: WPC.Module.ICounterModule.Counter_readFrequency
+  nameWithType: ICounterModule.Counter_readFrequency
+- uid: WPC.Module.ICounterModule.Counter_readPosition(System.Int32,System.Int32)
+  name: Counter_readPosition(Int32, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_readPosition(System.Int32, System.Int32)
+  nameWithType: ICounterModule.Counter_readPosition(Int32, Int32)
+- uid: WPC.Module.ICounterModule.Counter_readPosition*
+  name: Counter_readPosition
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_readPosition_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_readPosition
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_readPosition
+  nameWithType: ICounterModule.Counter_readPosition
+- uid: WPC.Module.ICounterModule.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  name: Counter_setEdge(Int32, Int32, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_setEdge_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_setEdge(System.Int32, System.Int32, System.Int32)
+  nameWithType: ICounterModule.Counter_setEdge(Int32, Int32, Int32)
+- uid: WPC.Module.ICounterModule.Counter_setEdge*
+  name: Counter_setEdge
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_setEdge_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_setEdge
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_setEdge
+  nameWithType: ICounterModule.Counter_setEdge
+- uid: WPC.Module.ICounterModule.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Counter_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: ICounterModule.Counter_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Module.ICounterModule.Counter_setFreqWindow*
+  name: Counter_setFreqWindow
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_setFreqWindow_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_setFreqWindow
+  nameWithType: ICounterModule.Counter_setFreqWindow
+- uid: WPC.Module.ICounterModule.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  name: Counter_setPosition(Int32, UInt64, Int32)
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_setPosition_System_Int32_System_UInt64_System_Int32_
+  commentId: M:WPC.Module.ICounterModule.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  fullName: WPC.Module.ICounterModule.Counter_setPosition(System.Int32, System.UInt64, System.Int32)
+  nameWithType: ICounterModule.Counter_setPosition(Int32, UInt64, Int32)
+- uid: WPC.Module.ICounterModule.Counter_setPosition*
+  name: Counter_setPosition
+  href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_setPosition_
+  commentId: Overload:WPC.Module.ICounterModule.Counter_setPosition
+  isSpec: "True"
+  fullName: WPC.Module.ICounterModule.Counter_setPosition
+  nameWithType: ICounterModule.Counter_setPosition
 - uid: WPC.Module.ICounterModule.Counter_start(System.Int32,System.Int32)
   name: Counter_start(Int32, Int32)
   href: api/WPC.Module.ICounterModule.html#WPC_Module_ICounterModule_Counter_start_System_Int32_System_Int32_
@@ -1269,6 +1321,142 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IDPOTModule.DPOT_writeAllChannel
   nameWithType: IDPOTModule.DPOT_writeAllChannel
+- uid: WPC.Module.IEncoderModule
+  name: IEncoderModule
+  href: api/WPC.Module.IEncoderModule.html
+  commentId: T:WPC.Module.IEncoderModule
+  fullName: WPC.Module.IEncoderModule
+  nameWithType: IEncoderModule
+- uid: WPC.Module.IEncoderModule.Encoder_close(System.Int32,System.Int32)
+  name: Encoder_close(Int32, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_close_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_close(System.Int32,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_close(System.Int32, System.Int32)
+  nameWithType: IEncoderModule.Encoder_close(Int32, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_close*
+  name: Encoder_close
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_close_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_close
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_close
+  nameWithType: IEncoderModule.Encoder_close
+- uid: WPC.Module.IEncoderModule.Encoder_getDirection(System.Int32,System.Int32)
+  name: Encoder_getDirection(Int32, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_getDirection_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_getDirection(System.Int32,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_getDirection(System.Int32, System.Int32)
+  nameWithType: IEncoderModule.Encoder_getDirection(Int32, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_getDirection*
+  name: Encoder_getDirection
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_getDirection_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_getDirection
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_getDirection
+  nameWithType: IEncoderModule.Encoder_getDirection
+- uid: WPC.Module.IEncoderModule.Encoder_open(System.Int32,System.Int32)
+  name: Encoder_open(Int32, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_open_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_open(System.Int32,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_open(System.Int32, System.Int32)
+  nameWithType: IEncoderModule.Encoder_open(Int32, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_open*
+  name: Encoder_open
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_open_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_open
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_open
+  nameWithType: IEncoderModule.Encoder_open
+- uid: WPC.Module.IEncoderModule.Encoder_readFrequency(System.Int32,System.Int32)
+  name: Encoder_readFrequency(Int32, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_readFrequency(System.Int32, System.Int32)
+  nameWithType: IEncoderModule.Encoder_readFrequency(Int32, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_readFrequency*
+  name: Encoder_readFrequency
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_readFrequency_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_readFrequency
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_readFrequency
+  nameWithType: IEncoderModule.Encoder_readFrequency
+- uid: WPC.Module.IEncoderModule.Encoder_readPosition(System.Int32,System.Int32)
+  name: Encoder_readPosition(Int32, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_readPosition(System.Int32, System.Int32)
+  nameWithType: IEncoderModule.Encoder_readPosition(Int32, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_readPosition*
+  name: Encoder_readPosition
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_readPosition_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_readPosition
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_readPosition
+  nameWithType: IEncoderModule.Encoder_readPosition
+- uid: WPC.Module.IEncoderModule.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  name: Encoder_setDirection(Int32, Int32, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_setDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_setDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: IEncoderModule.Encoder_setDirection(Int32, Int32, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_setDirection*
+  name: Encoder_setDirection
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_setDirection_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_setDirection
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_setDirection
+  nameWithType: IEncoderModule.Encoder_setDirection
+- uid: WPC.Module.IEncoderModule.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Encoder_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: IEncoderModule.Encoder_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_setFreqWindow*
+  name: Encoder_setFreqWindow
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_setFreqWindow_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_setFreqWindow
+  nameWithType: IEncoderModule.Encoder_setFreqWindow
+- uid: WPC.Module.IEncoderModule.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  name: Encoder_setPosition(Int32, Int64, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_setPosition_System_Int32_System_Int64_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_setPosition(System.Int32, System.Int64, System.Int32)
+  nameWithType: IEncoderModule.Encoder_setPosition(Int32, Int64, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_setPosition*
+  name: Encoder_setPosition
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_setPosition_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_setPosition
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_setPosition
+  nameWithType: IEncoderModule.Encoder_setPosition
+- uid: WPC.Module.IEncoderModule.Encoder_start(System.Int32,System.Int32)
+  name: Encoder_start(Int32, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_start_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_start(System.Int32,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_start(System.Int32, System.Int32)
+  nameWithType: IEncoderModule.Encoder_start(Int32, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_start*
+  name: Encoder_start
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_start_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_start
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_start
+  nameWithType: IEncoderModule.Encoder_start
+- uid: WPC.Module.IEncoderModule.Encoder_stop(System.Int32,System.Int32)
+  name: Encoder_stop(Int32, Int32)
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Module.IEncoderModule.Encoder_stop(System.Int32,System.Int32)
+  fullName: WPC.Module.IEncoderModule.Encoder_stop(System.Int32, System.Int32)
+  nameWithType: IEncoderModule.Encoder_stop(Int32, Int32)
+- uid: WPC.Module.IEncoderModule.Encoder_stop*
+  name: Encoder_stop
+  href: api/WPC.Module.IEncoderModule.html#WPC_Module_IEncoderModule_Encoder_stop_
+  commentId: Overload:WPC.Module.IEncoderModule.Encoder_stop
+  isSpec: "True"
+  fullName: WPC.Module.IEncoderModule.Encoder_stop
+  nameWithType: IEncoderModule.Encoder_stop
 - uid: WPC.Module.II2CModule
   name: II2CModule
   href: api/WPC.Module.II2CModule.html
@@ -2150,6 +2338,77 @@ references:
   isSpec: "True"
   fullName: WPC.Module.IRelayModule.Relay_read
   nameWithType: IRelayModule.Relay_read
+- uid: WPC.Module.ISDCardModule
+  name: ISDCardModule
+  href: api/WPC.Module.ISDCardModule.html
+  commentId: T:WPC.Module.ISDCardModule
+  fullName: WPC.Module.ISDCardModule
+  nameWithType: ISDCardModule
+- uid: WPC.Module.ISDCardModule.SD_closeFile(System.Int32)
+  name: SD_closeFile(Int32)
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_closeFile_System_Int32_
+  commentId: M:WPC.Module.ISDCardModule.SD_closeFile(System.Int32)
+  fullName: WPC.Module.ISDCardModule.SD_closeFile(System.Int32)
+  nameWithType: ISDCardModule.SD_closeFile(Int32)
+- uid: WPC.Module.ISDCardModule.SD_closeFile*
+  name: SD_closeFile
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_closeFile_
+  commentId: Overload:WPC.Module.ISDCardModule.SD_closeFile
+  isSpec: "True"
+  fullName: WPC.Module.ISDCardModule.SD_closeFile
+  nameWithType: ISDCardModule.SD_closeFile
+- uid: WPC.Module.ISDCardModule.SD_getStorage(System.Int32)
+  name: SD_getStorage(Int32)
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_getStorage_System_Int32_
+  commentId: M:WPC.Module.ISDCardModule.SD_getStorage(System.Int32)
+  fullName: WPC.Module.ISDCardModule.SD_getStorage(System.Int32)
+  nameWithType: ISDCardModule.SD_getStorage(Int32)
+- uid: WPC.Module.ISDCardModule.SD_getStorage*
+  name: SD_getStorage
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_getStorage_
+  commentId: Overload:WPC.Module.ISDCardModule.SD_getStorage
+  isSpec: "True"
+  fullName: WPC.Module.ISDCardModule.SD_getStorage
+  nameWithType: ISDCardModule.SD_getStorage
+- uid: WPC.Module.ISDCardModule.SD_openFile(System.String,System.Int32,System.Int32)
+  name: SD_openFile(String, Int32, Int32)
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_openFile_System_String_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISDCardModule.SD_openFile(System.String,System.Int32,System.Int32)
+  fullName: WPC.Module.ISDCardModule.SD_openFile(System.String, System.Int32, System.Int32)
+  nameWithType: ISDCardModule.SD_openFile(String, Int32, Int32)
+- uid: WPC.Module.ISDCardModule.SD_openFile*
+  name: SD_openFile
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_openFile_
+  commentId: Overload:WPC.Module.ISDCardModule.SD_openFile
+  isSpec: "True"
+  fullName: WPC.Module.ISDCardModule.SD_openFile
+  nameWithType: ISDCardModule.SD_openFile
+- uid: WPC.Module.ISDCardModule.SD_readFile(System.Int32,System.Int32)
+  name: SD_readFile(Int32, Int32)
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_readFile_System_Int32_System_Int32_
+  commentId: M:WPC.Module.ISDCardModule.SD_readFile(System.Int32,System.Int32)
+  fullName: WPC.Module.ISDCardModule.SD_readFile(System.Int32, System.Int32)
+  nameWithType: ISDCardModule.SD_readFile(Int32, Int32)
+- uid: WPC.Module.ISDCardModule.SD_readFile*
+  name: SD_readFile
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_readFile_
+  commentId: Overload:WPC.Module.ISDCardModule.SD_readFile
+  isSpec: "True"
+  fullName: WPC.Module.ISDCardModule.SD_readFile
+  nameWithType: ISDCardModule.SD_readFile
+- uid: WPC.Module.ISDCardModule.SD_writeFile(System.String,System.Int32)
+  name: SD_writeFile(String, Int32)
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_writeFile_System_String_System_Int32_
+  commentId: M:WPC.Module.ISDCardModule.SD_writeFile(System.String,System.Int32)
+  fullName: WPC.Module.ISDCardModule.SD_writeFile(System.String, System.Int32)
+  nameWithType: ISDCardModule.SD_writeFile(String, Int32)
+- uid: WPC.Module.ISDCardModule.SD_writeFile*
+  name: SD_writeFile
+  href: api/WPC.Module.ISDCardModule.html#WPC_Module_ISDCardModule_SD_writeFile_
+  commentId: Overload:WPC.Module.ISDCardModule.SD_writeFile
+  isSpec: "True"
+  fullName: WPC.Module.ISDCardModule.SD_writeFile
+  nameWithType: ISDCardModule.SD_writeFile
 - uid: WPC.Module.ISPIModule
   name: ISPIModule
   href: api/WPC.Module.ISPIModule.html
@@ -2486,6 +2745,38 @@ references:
   isSpec: "True"
   fullName: WPC.Module.ISystemModule.Sys_setSwitchMode
   nameWithType: ISystemModule.Sys_setSwitchMode
+- uid: WPC.Module.ISystemRTCModule
+  name: ISystemRTCModule
+  href: api/WPC.Module.ISystemRTCModule.html
+  commentId: T:WPC.Module.ISystemRTCModule
+  fullName: WPC.Module.ISystemRTCModule
+  nameWithType: ISystemRTCModule
+- uid: WPC.Module.ISystemRTCModule.Sys_startRTCAlarm(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_startRTCAlarm(Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Module.ISystemRTCModule.html#WPC_Module_ISystemRTCModule_Sys_startRTCAlarm_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Module.ISystemRTCModule.Sys_startRTCAlarm(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Module.ISystemRTCModule.Sys_startRTCAlarm(System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: ISystemRTCModule.Sys_startRTCAlarm(Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Module.ISystemRTCModule.Sys_startRTCAlarm*
+  name: Sys_startRTCAlarm
+  href: api/WPC.Module.ISystemRTCModule.html#WPC_Module_ISystemRTCModule_Sys_startRTCAlarm_
+  commentId: Overload:WPC.Module.ISystemRTCModule.Sys_startRTCAlarm
+  isSpec: "True"
+  fullName: WPC.Module.ISystemRTCModule.Sys_startRTCAlarm
+  nameWithType: ISystemRTCModule.Sys_startRTCAlarm
+- uid: WPC.Module.ISystemRTCModule.Sys_stopRTCAlarm(System.Int32)
+  name: Sys_stopRTCAlarm(Int32)
+  href: api/WPC.Module.ISystemRTCModule.html#WPC_Module_ISystemRTCModule_Sys_stopRTCAlarm_System_Int32_
+  commentId: M:WPC.Module.ISystemRTCModule.Sys_stopRTCAlarm(System.Int32)
+  fullName: WPC.Module.ISystemRTCModule.Sys_stopRTCAlarm(System.Int32)
+  nameWithType: ISystemRTCModule.Sys_stopRTCAlarm(Int32)
+- uid: WPC.Module.ISystemRTCModule.Sys_stopRTCAlarm*
+  name: Sys_stopRTCAlarm
+  href: api/WPC.Module.ISystemRTCModule.html#WPC_Module_ISystemRTCModule_Sys_stopRTCAlarm_
+  commentId: Overload:WPC.Module.ISystemRTCModule.Sys_stopRTCAlarm
+  isSpec: "True"
+  fullName: WPC.Module.ISystemRTCModule.Sys_stopRTCAlarm
+  nameWithType: ISystemRTCModule.Sys_stopRTCAlarm
 - uid: WPC.Module.IThermalModule
   name: IThermalModule
   href: api/WPC.Module.IThermalModule.html
@@ -5012,6 +5303,517 @@ references:
   isSpec: "True"
   fullName: WPC.Product.EthanA.Sys_setSwitchMode
   nameWithType: EthanA.Sys_setSwitchMode
+- uid: WPC.Product.EthanA.Sys_startRTCAlarm(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_startRTCAlarm(Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_startRTCAlarm_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_startRTCAlarm(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Product.EthanA.Sys_startRTCAlarm(System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: EthanA.Sys_startRTCAlarm(Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Product.EthanA.Sys_startRTCAlarm*
+  name: Sys_startRTCAlarm
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_startRTCAlarm_
+  commentId: Overload:WPC.Product.EthanA.Sys_startRTCAlarm
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_startRTCAlarm
+  nameWithType: EthanA.Sys_startRTCAlarm
+- uid: WPC.Product.EthanA.Sys_stopRTCAlarm(System.Int32)
+  name: Sys_stopRTCAlarm(Int32)
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_stopRTCAlarm_System_Int32_
+  commentId: M:WPC.Product.EthanA.Sys_stopRTCAlarm(System.Int32)
+  fullName: WPC.Product.EthanA.Sys_stopRTCAlarm(System.Int32)
+  nameWithType: EthanA.Sys_stopRTCAlarm(Int32)
+- uid: WPC.Product.EthanA.Sys_stopRTCAlarm*
+  name: Sys_stopRTCAlarm
+  href: api/WPC.Product.EthanA.html#WPC_Product_EthanA_Sys_stopRTCAlarm_
+  commentId: Overload:WPC.Product.EthanA.Sys_stopRTCAlarm
+  isSpec: "True"
+  fullName: WPC.Product.EthanA.Sys_stopRTCAlarm
+  nameWithType: EthanA.Sys_stopRTCAlarm
+- uid: WPC.Product.EthanA2
+  name: EthanA2
+  href: api/WPC.Product.EthanA2.html
+  commentId: T:WPC.Product.EthanA2
+  fullName: WPC.Product.EthanA2
+  nameWithType: EthanA2
+- uid: WPC.Product.EthanA2.#ctor
+  name: EthanA2()
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2__ctor
+  commentId: M:WPC.Product.EthanA2.#ctor
+  fullName: WPC.Product.EthanA2.EthanA2()
+  nameWithType: EthanA2.EthanA2()
+- uid: WPC.Product.EthanA2.#ctor*
+  name: EthanA2
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2__ctor_
+  commentId: Overload:WPC.Product.EthanA2.#ctor
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.EthanA2
+  nameWithType: EthanA2.EthanA2
+- uid: WPC.Product.EthanA2.AI_close(System.Int32,System.Int32)
+  name: AI_close(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_close(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_close(System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_close(Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_close*
+  name: AI_close
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_close_
+  commentId: Overload:WPC.Product.EthanA2.AI_close
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_close
+  nameWithType: EthanA2.AI_close
+- uid: WPC.Product.EthanA2.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  name: AI_enableChannel(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_enableChannel_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_enableChannel(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_enableChannel(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_enableChannel(Int32, Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_enableChannel*
+  name: AI_enableChannel
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_enableChannel_
+  commentId: Overload:WPC.Product.EthanA2.AI_enableChannel
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_enableChannel
+  nameWithType: EthanA2.AI_enableChannel
+- uid: WPC.Product.EthanA2.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name: AI_enableCS(Int32, List<Int32>, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_enableCS_System_Int32_List_System_Int32__System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_enableCS(System.Int32,List{System.Int32},System.Int32)
+  name.vb: AI_enableCS(Int32, List(Of Int32), Int32)
+  fullName: WPC.Product.EthanA2.AI_enableCS(System.Int32, List<System.Int32>, System.Int32)
+  fullName.vb: WPC.Product.EthanA2.AI_enableCS(System.Int32, List(Of System.Int32), System.Int32)
+  nameWithType: EthanA2.AI_enableCS(Int32, List<Int32>, Int32)
+  nameWithType.vb: EthanA2.AI_enableCS(Int32, List(Of Int32), Int32)
+- uid: WPC.Product.EthanA2.AI_enableCS*
+  name: AI_enableCS
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_enableCS_
+  commentId: Overload:WPC.Product.EthanA2.AI_enableCS
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_enableCS
+  nameWithType: EthanA2.AI_enableCS
+- uid: WPC.Product.EthanA2.AI_open(System.Int32,System.Int32)
+  name: AI_open(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_open(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_open(System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_open(Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_open*
+  name: AI_open
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_open_
+  commentId: Overload:WPC.Product.EthanA2.AI_open
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_open
+  nameWithType: EthanA2.AI_open
+- uid: WPC.Product.EthanA2.AI_readOnDemand(System.Int32,System.Int32)
+  name: AI_readOnDemand(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_readOnDemand_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_readOnDemand(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_readOnDemand(System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_readOnDemand(Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_readOnDemand*
+  name: AI_readOnDemand
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_readOnDemand_
+  commentId: Overload:WPC.Product.EthanA2.AI_readOnDemand
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_readOnDemand
+  nameWithType: EthanA2.AI_readOnDemand
+- uid: WPC.Product.EthanA2.AI_readStreaming(System.Int32,System.Int32,System.Int32)
+  name: AI_readStreaming(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_readStreaming_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_readStreaming(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_readStreaming(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_readStreaming(Int32, Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_readStreaming*
+  name: AI_readStreaming
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_readStreaming_
+  commentId: Overload:WPC.Product.EthanA2.AI_readStreaming
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_readStreaming
+  nameWithType: EthanA2.AI_readStreaming
+- uid: WPC.Product.EthanA2.AI_setMode(System.Int32,System.Int32,System.Int32)
+  name: AI_setMode(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_setMode_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_setMode(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_setMode(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_setMode(Int32, Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_setMode*
+  name: AI_setMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_setMode_
+  commentId: Overload:WPC.Product.EthanA2.AI_setMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_setMode
+  nameWithType: EthanA2.AI_setMode
+- uid: WPC.Product.EthanA2.AI_setNumSamples(System.Int32,System.Int32,System.Int32)
+  name: AI_setNumSamples(Int32, Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_setNumSamples_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_setNumSamples(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_setNumSamples(System.Int32, System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_setNumSamples(Int32, Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_setNumSamples*
+  name: AI_setNumSamples
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_setNumSamples_
+  commentId: Overload:WPC.Product.EthanA2.AI_setNumSamples
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_setNumSamples
+  nameWithType: EthanA2.AI_setNumSamples
+- uid: WPC.Product.EthanA2.AI_setSamplingRate(System.Int32,System.Double,System.Int32)
+  name: AI_setSamplingRate(Int32, Double, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_setSamplingRate_System_Int32_System_Double_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_setSamplingRate(System.Int32,System.Double,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_setSamplingRate(System.Int32, System.Double, System.Int32)
+  nameWithType: EthanA2.AI_setSamplingRate(Int32, Double, Int32)
+- uid: WPC.Product.EthanA2.AI_setSamplingRate*
+  name: AI_setSamplingRate
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_setSamplingRate_
+  commentId: Overload:WPC.Product.EthanA2.AI_setSamplingRate
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_setSamplingRate
+  nameWithType: EthanA2.AI_setSamplingRate
+- uid: WPC.Product.EthanA2.AI_start(System.Int32,System.Int32)
+  name: AI_start(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_start(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_start(System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_start(Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_start*
+  name: AI_start
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_start_
+  commentId: Overload:WPC.Product.EthanA2.AI_start
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_start
+  nameWithType: EthanA2.AI_start
+- uid: WPC.Product.EthanA2.AI_stop(System.Int32,System.Int32)
+  name: AI_stop(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.AI_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.AI_stop(System.Int32, System.Int32)
+  nameWithType: EthanA2.AI_stop(Int32, Int32)
+- uid: WPC.Product.EthanA2.AI_stop*
+  name: AI_stop
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_AI_stop_
+  commentId: Overload:WPC.Product.EthanA2.AI_stop
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.AI_stop
+  nameWithType: EthanA2.AI_stop
+- uid: WPC.Product.EthanA2.close
+  name: close()
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_close
+  commentId: M:WPC.Product.EthanA2.close
+  fullName: WPC.Product.EthanA2.close()
+  nameWithType: EthanA2.close()
+- uid: WPC.Product.EthanA2.close*
+  name: close
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_close_
+  commentId: Overload:WPC.Product.EthanA2.close
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.close
+  nameWithType: EthanA2.close
+- uid: WPC.Product.EthanA2.connect(System.String)
+  name: connect(String)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_connect_System_String_
+  commentId: M:WPC.Product.EthanA2.connect(System.String)
+  fullName: WPC.Product.EthanA2.connect(System.String)
+  nameWithType: EthanA2.connect(String)
+- uid: WPC.Product.EthanA2.connect*
+  name: connect
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_connect_
+  commentId: Overload:WPC.Product.EthanA2.connect
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.connect
+  nameWithType: EthanA2.connect
+- uid: WPC.Product.EthanA2.disconnect
+  name: disconnect()
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_disconnect
+  commentId: M:WPC.Product.EthanA2.disconnect
+  fullName: WPC.Product.EthanA2.disconnect()
+  nameWithType: EthanA2.disconnect()
+- uid: WPC.Product.EthanA2.disconnect*
+  name: disconnect
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_disconnect_
+  commentId: Overload:WPC.Product.EthanA2.disconnect
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.disconnect
+  nameWithType: EthanA2.disconnect
+- uid: WPC.Product.EthanA2.Logger_openFile(System.String)
+  name: Logger_openFile(String)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Logger_openFile_System_String_
+  commentId: M:WPC.Product.EthanA2.Logger_openFile(System.String)
+  fullName: WPC.Product.EthanA2.Logger_openFile(System.String)
+  nameWithType: EthanA2.Logger_openFile(String)
+- uid: WPC.Product.EthanA2.Logger_openFile*
+  name: Logger_openFile
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Logger_openFile_
+  commentId: Overload:WPC.Product.EthanA2.Logger_openFile
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Logger_openFile
+  nameWithType: EthanA2.Logger_openFile
+- uid: WPC.Product.EthanA2.Logger_writeList(List{System.Double})
+  name: Logger_writeList(List<Double>)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Logger_writeList_List_System_Double__
+  commentId: M:WPC.Product.EthanA2.Logger_writeList(List{System.Double})
+  name.vb: Logger_writeList(List(Of Double))
+  fullName: WPC.Product.EthanA2.Logger_writeList(List<System.Double>)
+  fullName.vb: WPC.Product.EthanA2.Logger_writeList(List(Of System.Double))
+  nameWithType: EthanA2.Logger_writeList(List<Double>)
+  nameWithType.vb: EthanA2.Logger_writeList(List(Of Double))
+- uid: WPC.Product.EthanA2.Logger_writeList(List{System.Int32})
+  name: Logger_writeList(List<Int32>)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Logger_writeList_List_System_Int32__
+  commentId: M:WPC.Product.EthanA2.Logger_writeList(List{System.Int32})
+  name.vb: Logger_writeList(List(Of Int32))
+  fullName: WPC.Product.EthanA2.Logger_writeList(List<System.Int32>)
+  fullName.vb: WPC.Product.EthanA2.Logger_writeList(List(Of System.Int32))
+  nameWithType: EthanA2.Logger_writeList(List<Int32>)
+  nameWithType.vb: EthanA2.Logger_writeList(List(Of Int32))
+- uid: WPC.Product.EthanA2.Logger_writeList(List{System.Single})
+  name: Logger_writeList(List<Single>)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Logger_writeList_List_System_Single__
+  commentId: M:WPC.Product.EthanA2.Logger_writeList(List{System.Single})
+  name.vb: Logger_writeList(List(Of Single))
+  fullName: WPC.Product.EthanA2.Logger_writeList(List<System.Single>)
+  fullName.vb: WPC.Product.EthanA2.Logger_writeList(List(Of System.Single))
+  nameWithType: EthanA2.Logger_writeList(List<Single>)
+  nameWithType.vb: EthanA2.Logger_writeList(List(Of Single))
+- uid: WPC.Product.EthanA2.Logger_writeList*
+  name: Logger_writeList
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Logger_writeList_
+  commentId: Overload:WPC.Product.EthanA2.Logger_writeList
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Logger_writeList
+  nameWithType: EthanA2.Logger_writeList
+- uid: WPC.Product.EthanA2.Logger_writeValue(System.String)
+  name: Logger_writeValue(String)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Logger_writeValue_System_String_
+  commentId: M:WPC.Product.EthanA2.Logger_writeValue(System.String)
+  fullName: WPC.Product.EthanA2.Logger_writeValue(System.String)
+  nameWithType: EthanA2.Logger_writeValue(String)
+- uid: WPC.Product.EthanA2.Logger_writeValue*
+  name: Logger_writeValue
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Logger_writeValue_
+  commentId: Overload:WPC.Product.EthanA2.Logger_writeValue
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Logger_writeValue
+  nameWithType: EthanA2.Logger_writeValue
+- uid: WPC.Product.EthanA2.Sys_getDriverInfo(System.Int32)
+  name: Sys_getDriverInfo(Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getDriverInfo_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_getDriverInfo(System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_getDriverInfo(System.Int32)
+  nameWithType: EthanA2.Sys_getDriverInfo(Int32)
+- uid: WPC.Product.EthanA2.Sys_getDriverInfo*
+  name: Sys_getDriverInfo
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getDriverInfo_
+  commentId: Overload:WPC.Product.EthanA2.Sys_getDriverInfo
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_getDriverInfo
+  nameWithType: EthanA2.Sys_getDriverInfo
+- uid: WPC.Product.EthanA2.Sys_getGateway(System.Int32)
+  name: Sys_getGateway(Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getGateway_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_getGateway(System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_getGateway(System.Int32)
+  nameWithType: EthanA2.Sys_getGateway(Int32)
+- uid: WPC.Product.EthanA2.Sys_getGateway*
+  name: Sys_getGateway
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getGateway_
+  commentId: Overload:WPC.Product.EthanA2.Sys_getGateway
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_getGateway
+  nameWithType: EthanA2.Sys_getGateway
+- uid: WPC.Product.EthanA2.Sys_getIPAddrAndSubmask(System.Int32)
+  name: Sys_getIPAddrAndSubmask(Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getIPAddrAndSubmask_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_getIPAddrAndSubmask(System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_getIPAddrAndSubmask(System.Int32)
+  nameWithType: EthanA2.Sys_getIPAddrAndSubmask(Int32)
+- uid: WPC.Product.EthanA2.Sys_getIPAddrAndSubmask*
+  name: Sys_getIPAddrAndSubmask
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EthanA2.Sys_getIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_getIPAddrAndSubmask
+  nameWithType: EthanA2.Sys_getIPAddrAndSubmask
+- uid: WPC.Product.EthanA2.Sys_getMACAddr(System.Int32)
+  name: Sys_getMACAddr(Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getMACAddr_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_getMACAddr(System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_getMACAddr(System.Int32)
+  nameWithType: EthanA2.Sys_getMACAddr(Int32)
+- uid: WPC.Product.EthanA2.Sys_getMACAddr*
+  name: Sys_getMACAddr
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getMACAddr_
+  commentId: Overload:WPC.Product.EthanA2.Sys_getMACAddr
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_getMACAddr
+  nameWithType: EthanA2.Sys_getMACAddr
+- uid: WPC.Product.EthanA2.Sys_getMode(System.Int32,System.Int32)
+  name: Sys_getMode(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_getMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_getMode(System.Int32, System.Int32)
+  nameWithType: EthanA2.Sys_getMode(Int32, Int32)
+- uid: WPC.Product.EthanA2.Sys_getMode*
+  name: Sys_getMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getMode_
+  commentId: Overload:WPC.Product.EthanA2.Sys_getMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_getMode
+  nameWithType: EthanA2.Sys_getMode
+- uid: WPC.Product.EthanA2.Sys_getRTC(System.Int32)
+  name: Sys_getRTC(Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getRTC_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_getRTC(System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_getRTC(System.Int32)
+  nameWithType: EthanA2.Sys_getRTC(Int32)
+- uid: WPC.Product.EthanA2.Sys_getRTC*
+  name: Sys_getRTC
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getRTC_
+  commentId: Overload:WPC.Product.EthanA2.Sys_getRTC
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_getRTC
+  nameWithType: EthanA2.Sys_getRTC
+- uid: WPC.Product.EthanA2.Sys_getSerialNumber(System.Int32)
+  name: Sys_getSerialNumber(Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getSerialNumber_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_getSerialNumber(System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_getSerialNumber(System.Int32)
+  nameWithType: EthanA2.Sys_getSerialNumber(Int32)
+- uid: WPC.Product.EthanA2.Sys_getSerialNumber*
+  name: Sys_getSerialNumber
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_getSerialNumber_
+  commentId: Overload:WPC.Product.EthanA2.Sys_getSerialNumber
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_getSerialNumber
+  nameWithType: EthanA2.Sys_getSerialNumber
+- uid: WPC.Product.EthanA2.Sys_reboot(System.Int32)
+  name: Sys_reboot(Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_reboot_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_reboot(System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_reboot(System.Int32)
+  nameWithType: EthanA2.Sys_reboot(Int32)
+- uid: WPC.Product.EthanA2.Sys_reboot*
+  name: Sys_reboot
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_reboot_
+  commentId: Overload:WPC.Product.EthanA2.Sys_reboot
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_reboot
+  nameWithType: EthanA2.Sys_reboot
+- uid: WPC.Product.EthanA2.Sys_setAIOMode(System.Int32,System.Int32)
+  name: Sys_setAIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setAIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setAIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setAIOMode(System.Int32, System.Int32)
+  nameWithType: EthanA2.Sys_setAIOMode(Int32, Int32)
+- uid: WPC.Product.EthanA2.Sys_setAIOMode*
+  name: Sys_setAIOMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setAIOMode_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setAIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setAIOMode
+  nameWithType: EthanA2.Sys_setAIOMode
+- uid: WPC.Product.EthanA2.Sys_setDIMode(System.Int32,System.Int32)
+  name: Sys_setDIMode(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setDIMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setDIMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setDIMode(System.Int32, System.Int32)
+  nameWithType: EthanA2.Sys_setDIMode(Int32, Int32)
+- uid: WPC.Product.EthanA2.Sys_setDIMode*
+  name: Sys_setDIMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setDIMode_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setDIMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setDIMode
+  nameWithType: EthanA2.Sys_setDIMode
+- uid: WPC.Product.EthanA2.Sys_setDIOMode(System.Int32,System.Int32)
+  name: Sys_setDIOMode(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setDIOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setDIOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setDIOMode(System.Int32, System.Int32)
+  nameWithType: EthanA2.Sys_setDIOMode(Int32, Int32)
+- uid: WPC.Product.EthanA2.Sys_setDIOMode*
+  name: Sys_setDIOMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setDIOMode_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setDIOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setDIOMode
+  nameWithType: EthanA2.Sys_setDIOMode
+- uid: WPC.Product.EthanA2.Sys_setDOMode(System.Int32,System.Int32)
+  name: Sys_setDOMode(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setDOMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setDOMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setDOMode(System.Int32, System.Int32)
+  nameWithType: EthanA2.Sys_setDOMode(Int32, Int32)
+- uid: WPC.Product.EthanA2.Sys_setDOMode*
+  name: Sys_setDOMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setDOMode_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setDOMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setDOMode
+  nameWithType: EthanA2.Sys_setDOMode
+- uid: WPC.Product.EthanA2.Sys_setIdleMode(System.Int32,System.Int32)
+  name: Sys_setIdleMode(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setIdleMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setIdleMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setIdleMode(System.Int32, System.Int32)
+  nameWithType: EthanA2.Sys_setIdleMode(Int32, Int32)
+- uid: WPC.Product.EthanA2.Sys_setIdleMode*
+  name: Sys_setIdleMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setIdleMode_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setIdleMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setIdleMode
+  nameWithType: EthanA2.Sys_setIdleMode
+- uid: WPC.Product.EthanA2.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  name: Sys_setIPAddrAndSubmask(String, String, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setIPAddrAndSubmask_System_String_System_String_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setIPAddrAndSubmask(System.String,System.String,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setIPAddrAndSubmask(System.String, System.String, System.Int32)
+  nameWithType: EthanA2.Sys_setIPAddrAndSubmask(String, String, Int32)
+- uid: WPC.Product.EthanA2.Sys_setIPAddrAndSubmask*
+  name: Sys_setIPAddrAndSubmask
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setIPAddrAndSubmask_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setIPAddrAndSubmask
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setIPAddrAndSubmask
+  nameWithType: EthanA2.Sys_setIPAddrAndSubmask
+- uid: WPC.Product.EthanA2.Sys_setMotionMode(System.Int32,System.Int32)
+  name: Sys_setMotionMode(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setMotionMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setMotionMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setMotionMode(System.Int32, System.Int32)
+  nameWithType: EthanA2.Sys_setMotionMode(Int32, Int32)
+- uid: WPC.Product.EthanA2.Sys_setMotionMode*
+  name: Sys_setMotionMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setMotionMode_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setMotionMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setMotionMode
+  nameWithType: EthanA2.Sys_setMotionMode
+- uid: WPC.Product.EthanA2.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  name: Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setRTC_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setRTC(System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setRTC(System.Int32, System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Int32)
+  nameWithType: EthanA2.Sys_setRTC(Int32, Byte, Byte, Byte, Byte, Byte, Int32)
+- uid: WPC.Product.EthanA2.Sys_setRTC*
+  name: Sys_setRTC
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setRTC_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setRTC
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setRTC
+  nameWithType: EthanA2.Sys_setRTC
+- uid: WPC.Product.EthanA2.Sys_setSwitchMode(System.Int32,System.Int32)
+  name: Sys_setSwitchMode(Int32, Int32)
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setSwitchMode_System_Int32_System_Int32_
+  commentId: M:WPC.Product.EthanA2.Sys_setSwitchMode(System.Int32,System.Int32)
+  fullName: WPC.Product.EthanA2.Sys_setSwitchMode(System.Int32, System.Int32)
+  nameWithType: EthanA2.Sys_setSwitchMode(Int32, Int32)
+- uid: WPC.Product.EthanA2.Sys_setSwitchMode*
+  name: Sys_setSwitchMode
+  href: api/WPC.Product.EthanA2.html#WPC_Product_EthanA2_Sys_setSwitchMode_
+  commentId: Overload:WPC.Product.EthanA2.Sys_setSwitchMode
+  isSpec: "True"
+  fullName: WPC.Product.EthanA2.Sys_setSwitchMode
+  nameWithType: EthanA2.Sys_setSwitchMode
 - uid: WPC.Product.EthanD
   name: EthanD
   href: api/WPC.Product.EthanD.html
@@ -9886,19 +10688,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.Counter_open
   nameWithType: USBDAQF1AD.Counter_open
-- uid: WPC.Product.USBDAQF1AD.Counter_read(System.Int32,System.Int32)
-  name: Counter_read(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_read_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AD.Counter_read(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AD.Counter_read(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AD.Counter_read(Int32, Int32)
-- uid: WPC.Product.USBDAQF1AD.Counter_read*
-  name: Counter_read
-  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_read_
-  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_read
+- uid: WPC.Product.USBDAQF1AD.Counter_readFrequency(System.Int32,System.Int32)
+  name: Counter_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_readFrequency*
+  name: Counter_readFrequency
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_readFrequency
   isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AD.Counter_read
-  nameWithType: USBDAQF1AD.Counter_read
+  fullName: WPC.Product.USBDAQF1AD.Counter_readFrequency
+  nameWithType: USBDAQF1AD.Counter_readFrequency
+- uid: WPC.Product.USBDAQF1AD.Counter_readPosition(System.Int32,System.Int32)
+  name: Counter_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_readPosition*
+  name: Counter_readPosition
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_readPosition
+  nameWithType: USBDAQF1AD.Counter_readPosition
+- uid: WPC.Product.USBDAQF1AD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  name: Counter_setEdge(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_setEdge_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_setEdge(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_setEdge(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_setEdge*
+  name: Counter_setEdge
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_setEdge_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_setEdge
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_setEdge
+  nameWithType: USBDAQF1AD.Counter_setEdge
+- uid: WPC.Product.USBDAQF1AD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Counter_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_setFreqWindow*
+  name: Counter_setFreqWindow
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_setFreqWindow
+  nameWithType: USBDAQF1AD.Counter_setFreqWindow
+- uid: WPC.Product.USBDAQF1AD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  name: Counter_setPosition(Int32, UInt64, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_setPosition_System_Int32_System_UInt64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Counter_setPosition(System.Int32, System.UInt64, System.Int32)
+  nameWithType: USBDAQF1AD.Counter_setPosition(Int32, UInt64, Int32)
+- uid: WPC.Product.USBDAQF1AD.Counter_setPosition*
+  name: Counter_setPosition
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Counter_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Counter_setPosition
+  nameWithType: USBDAQF1AD.Counter_setPosition
 - uid: WPC.Product.USBDAQF1AD.Counter_start(System.Int32,System.Int32)
   name: Counter_start(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Counter_start_System_Int32_System_Int32_
@@ -10157,6 +11011,136 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AD.DO_writePort
   nameWithType: USBDAQF1AD.DO_writePort
+- uid: WPC.Product.USBDAQF1AD.Encoder_close(System.Int32,System.Int32)
+  name: Encoder_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_close*
+  name: Encoder_close
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_close_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_close
+  nameWithType: USBDAQF1AD.Encoder_close
+- uid: WPC.Product.USBDAQF1AD.Encoder_getDirection(System.Int32,System.Int32)
+  name: Encoder_getDirection(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_getDirection_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_getDirection(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_getDirection(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_getDirection(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_getDirection*
+  name: Encoder_getDirection
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_getDirection_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_getDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_getDirection
+  nameWithType: USBDAQF1AD.Encoder_getDirection
+- uid: WPC.Product.USBDAQF1AD.Encoder_open(System.Int32,System.Int32)
+  name: Encoder_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_open*
+  name: Encoder_open
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_open_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_open
+  nameWithType: USBDAQF1AD.Encoder_open
+- uid: WPC.Product.USBDAQF1AD.Encoder_readFrequency(System.Int32,System.Int32)
+  name: Encoder_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_readFrequency*
+  name: Encoder_readFrequency
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_readFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_readFrequency
+  nameWithType: USBDAQF1AD.Encoder_readFrequency
+- uid: WPC.Product.USBDAQF1AD.Encoder_readPosition(System.Int32,System.Int32)
+  name: Encoder_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_readPosition*
+  name: Encoder_readPosition
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_readPosition
+  nameWithType: USBDAQF1AD.Encoder_readPosition
+- uid: WPC.Product.USBDAQF1AD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  name: Encoder_setDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_setDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_setDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_setDirection(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_setDirection*
+  name: Encoder_setDirection
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_setDirection_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_setDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_setDirection
+  nameWithType: USBDAQF1AD.Encoder_setDirection
+- uid: WPC.Product.USBDAQF1AD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Encoder_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_setFreqWindow*
+  name: Encoder_setFreqWindow
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_setFreqWindow
+  nameWithType: USBDAQF1AD.Encoder_setFreqWindow
+- uid: WPC.Product.USBDAQF1AD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  name: Encoder_setPosition(Int32, Int64, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_setPosition_System_Int32_System_Int64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_setPosition(System.Int32, System.Int64, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_setPosition(Int32, Int64, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_setPosition*
+  name: Encoder_setPosition
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_setPosition
+  nameWithType: USBDAQF1AD.Encoder_setPosition
+- uid: WPC.Product.USBDAQF1AD.Encoder_start(System.Int32,System.Int32)
+  name: Encoder_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_start*
+  name: Encoder_start
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_start_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_start
+  nameWithType: USBDAQF1AD.Encoder_start
+- uid: WPC.Product.USBDAQF1AD.Encoder_stop(System.Int32,System.Int32)
+  name: Encoder_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AD.Encoder_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AD.Encoder_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AD.Encoder_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AD.Encoder_stop*
+  name: Encoder_stop
+  href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_Encoder_stop_
+  commentId: Overload:WPC.Product.USBDAQF1AD.Encoder_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AD.Encoder_stop
+  nameWithType: USBDAQF1AD.Encoder_stop
 - uid: WPC.Product.USBDAQF1AD.I2C_close(System.Int32,System.Int32)
   name: I2C_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AD.html#WPC_Product_USBDAQF1AD_I2C_close_System_Int32_System_Int32_
@@ -11216,19 +12200,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.Counter_open
   nameWithType: USBDAQF1AOD.Counter_open
-- uid: WPC.Product.USBDAQF1AOD.Counter_read(System.Int32,System.Int32)
-  name: Counter_read(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_read_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1AOD.Counter_read(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1AOD.Counter_read(System.Int32, System.Int32)
-  nameWithType: USBDAQF1AOD.Counter_read(Int32, Int32)
-- uid: WPC.Product.USBDAQF1AOD.Counter_read*
-  name: Counter_read
-  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_read_
-  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_read
+- uid: WPC.Product.USBDAQF1AOD.Counter_readFrequency(System.Int32,System.Int32)
+  name: Counter_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_readFrequency*
+  name: Counter_readFrequency
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_readFrequency
   isSpec: "True"
-  fullName: WPC.Product.USBDAQF1AOD.Counter_read
-  nameWithType: USBDAQF1AOD.Counter_read
+  fullName: WPC.Product.USBDAQF1AOD.Counter_readFrequency
+  nameWithType: USBDAQF1AOD.Counter_readFrequency
+- uid: WPC.Product.USBDAQF1AOD.Counter_readPosition(System.Int32,System.Int32)
+  name: Counter_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_readPosition*
+  name: Counter_readPosition
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_readPosition
+  nameWithType: USBDAQF1AOD.Counter_readPosition
+- uid: WPC.Product.USBDAQF1AOD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  name: Counter_setEdge(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_setEdge_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_setEdge(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_setEdge(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_setEdge*
+  name: Counter_setEdge
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_setEdge_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_setEdge
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_setEdge
+  nameWithType: USBDAQF1AOD.Counter_setEdge
+- uid: WPC.Product.USBDAQF1AOD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Counter_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_setFreqWindow*
+  name: Counter_setFreqWindow
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_setFreqWindow
+  nameWithType: USBDAQF1AOD.Counter_setFreqWindow
+- uid: WPC.Product.USBDAQF1AOD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  name: Counter_setPosition(Int32, UInt64, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_setPosition_System_Int32_System_UInt64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Counter_setPosition(System.Int32, System.UInt64, System.Int32)
+  nameWithType: USBDAQF1AOD.Counter_setPosition(Int32, UInt64, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Counter_setPosition*
+  name: Counter_setPosition
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Counter_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Counter_setPosition
+  nameWithType: USBDAQF1AOD.Counter_setPosition
 - uid: WPC.Product.USBDAQF1AOD.Counter_start(System.Int32,System.Int32)
   name: Counter_start(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Counter_start_System_Int32_System_Int32_
@@ -11487,6 +12523,136 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1AOD.DO_writePort
   nameWithType: USBDAQF1AOD.DO_writePort
+- uid: WPC.Product.USBDAQF1AOD.Encoder_close(System.Int32,System.Int32)
+  name: Encoder_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_close*
+  name: Encoder_close
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_close_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_close
+  nameWithType: USBDAQF1AOD.Encoder_close
+- uid: WPC.Product.USBDAQF1AOD.Encoder_getDirection(System.Int32,System.Int32)
+  name: Encoder_getDirection(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_getDirection_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_getDirection(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_getDirection(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_getDirection(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_getDirection*
+  name: Encoder_getDirection
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_getDirection_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_getDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_getDirection
+  nameWithType: USBDAQF1AOD.Encoder_getDirection
+- uid: WPC.Product.USBDAQF1AOD.Encoder_open(System.Int32,System.Int32)
+  name: Encoder_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_open*
+  name: Encoder_open
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_open_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_open
+  nameWithType: USBDAQF1AOD.Encoder_open
+- uid: WPC.Product.USBDAQF1AOD.Encoder_readFrequency(System.Int32,System.Int32)
+  name: Encoder_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_readFrequency*
+  name: Encoder_readFrequency
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_readFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_readFrequency
+  nameWithType: USBDAQF1AOD.Encoder_readFrequency
+- uid: WPC.Product.USBDAQF1AOD.Encoder_readPosition(System.Int32,System.Int32)
+  name: Encoder_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_readPosition*
+  name: Encoder_readPosition
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_readPosition
+  nameWithType: USBDAQF1AOD.Encoder_readPosition
+- uid: WPC.Product.USBDAQF1AOD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  name: Encoder_setDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_setDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_setDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_setDirection(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_setDirection*
+  name: Encoder_setDirection
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_setDirection_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_setDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_setDirection
+  nameWithType: USBDAQF1AOD.Encoder_setDirection
+- uid: WPC.Product.USBDAQF1AOD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Encoder_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_setFreqWindow*
+  name: Encoder_setFreqWindow
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_setFreqWindow
+  nameWithType: USBDAQF1AOD.Encoder_setFreqWindow
+- uid: WPC.Product.USBDAQF1AOD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  name: Encoder_setPosition(Int32, Int64, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_setPosition_System_Int32_System_Int64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_setPosition(System.Int32, System.Int64, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_setPosition(Int32, Int64, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_setPosition*
+  name: Encoder_setPosition
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_setPosition
+  nameWithType: USBDAQF1AOD.Encoder_setPosition
+- uid: WPC.Product.USBDAQF1AOD.Encoder_start(System.Int32,System.Int32)
+  name: Encoder_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_start*
+  name: Encoder_start
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_start_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_start
+  nameWithType: USBDAQF1AOD.Encoder_start
+- uid: WPC.Product.USBDAQF1AOD.Encoder_stop(System.Int32,System.Int32)
+  name: Encoder_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1AOD.Encoder_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1AOD.Encoder_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1AOD.Encoder_stop*
+  name: Encoder_stop
+  href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_Encoder_stop_
+  commentId: Overload:WPC.Product.USBDAQF1AOD.Encoder_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1AOD.Encoder_stop
+  nameWithType: USBDAQF1AOD.Encoder_stop
 - uid: WPC.Product.USBDAQF1AOD.I2C_close(System.Int32,System.Int32)
   name: I2C_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1AOD.html#WPC_Product_USBDAQF1AOD_I2C_close_System_Int32_System_Int32_
@@ -12196,19 +13362,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.Counter_open
   nameWithType: USBDAQF1CD.Counter_open
-- uid: WPC.Product.USBDAQF1CD.Counter_read(System.Int32,System.Int32)
-  name: Counter_read(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_read_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1CD.Counter_read(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1CD.Counter_read(System.Int32, System.Int32)
-  nameWithType: USBDAQF1CD.Counter_read(Int32, Int32)
-- uid: WPC.Product.USBDAQF1CD.Counter_read*
-  name: Counter_read
-  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_read_
-  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_read
+- uid: WPC.Product.USBDAQF1CD.Counter_readFrequency(System.Int32,System.Int32)
+  name: Counter_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_readFrequency*
+  name: Counter_readFrequency
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_readFrequency
   isSpec: "True"
-  fullName: WPC.Product.USBDAQF1CD.Counter_read
-  nameWithType: USBDAQF1CD.Counter_read
+  fullName: WPC.Product.USBDAQF1CD.Counter_readFrequency
+  nameWithType: USBDAQF1CD.Counter_readFrequency
+- uid: WPC.Product.USBDAQF1CD.Counter_readPosition(System.Int32,System.Int32)
+  name: Counter_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_readPosition*
+  name: Counter_readPosition
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_readPosition
+  nameWithType: USBDAQF1CD.Counter_readPosition
+- uid: WPC.Product.USBDAQF1CD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  name: Counter_setEdge(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_setEdge_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_setEdge(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_setEdge(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_setEdge*
+  name: Counter_setEdge
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_setEdge_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_setEdge
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_setEdge
+  nameWithType: USBDAQF1CD.Counter_setEdge
+- uid: WPC.Product.USBDAQF1CD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Counter_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_setFreqWindow*
+  name: Counter_setFreqWindow
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_setFreqWindow
+  nameWithType: USBDAQF1CD.Counter_setFreqWindow
+- uid: WPC.Product.USBDAQF1CD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  name: Counter_setPosition(Int32, UInt64, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_setPosition_System_Int32_System_UInt64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Counter_setPosition(System.Int32, System.UInt64, System.Int32)
+  nameWithType: USBDAQF1CD.Counter_setPosition(Int32, UInt64, Int32)
+- uid: WPC.Product.USBDAQF1CD.Counter_setPosition*
+  name: Counter_setPosition
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Counter_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Counter_setPosition
+  nameWithType: USBDAQF1CD.Counter_setPosition
 - uid: WPC.Product.USBDAQF1CD.Counter_start(System.Int32,System.Int32)
   name: Counter_start(Int32, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Counter_start_System_Int32_System_Int32_
@@ -12467,6 +13685,136 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1CD.DO_writePort
   nameWithType: USBDAQF1CD.DO_writePort
+- uid: WPC.Product.USBDAQF1CD.Encoder_close(System.Int32,System.Int32)
+  name: Encoder_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_close*
+  name: Encoder_close
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_close_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_close
+  nameWithType: USBDAQF1CD.Encoder_close
+- uid: WPC.Product.USBDAQF1CD.Encoder_getDirection(System.Int32,System.Int32)
+  name: Encoder_getDirection(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_getDirection_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_getDirection(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_getDirection(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_getDirection(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_getDirection*
+  name: Encoder_getDirection
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_getDirection_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_getDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_getDirection
+  nameWithType: USBDAQF1CD.Encoder_getDirection
+- uid: WPC.Product.USBDAQF1CD.Encoder_open(System.Int32,System.Int32)
+  name: Encoder_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_open*
+  name: Encoder_open
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_open_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_open
+  nameWithType: USBDAQF1CD.Encoder_open
+- uid: WPC.Product.USBDAQF1CD.Encoder_readFrequency(System.Int32,System.Int32)
+  name: Encoder_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_readFrequency*
+  name: Encoder_readFrequency
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_readFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_readFrequency
+  nameWithType: USBDAQF1CD.Encoder_readFrequency
+- uid: WPC.Product.USBDAQF1CD.Encoder_readPosition(System.Int32,System.Int32)
+  name: Encoder_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_readPosition*
+  name: Encoder_readPosition
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_readPosition
+  nameWithType: USBDAQF1CD.Encoder_readPosition
+- uid: WPC.Product.USBDAQF1CD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  name: Encoder_setDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_setDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_setDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_setDirection(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_setDirection*
+  name: Encoder_setDirection
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_setDirection_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_setDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_setDirection
+  nameWithType: USBDAQF1CD.Encoder_setDirection
+- uid: WPC.Product.USBDAQF1CD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Encoder_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_setFreqWindow*
+  name: Encoder_setFreqWindow
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_setFreqWindow
+  nameWithType: USBDAQF1CD.Encoder_setFreqWindow
+- uid: WPC.Product.USBDAQF1CD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  name: Encoder_setPosition(Int32, Int64, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_setPosition_System_Int32_System_Int64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_setPosition(System.Int32, System.Int64, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_setPosition(Int32, Int64, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_setPosition*
+  name: Encoder_setPosition
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_setPosition
+  nameWithType: USBDAQF1CD.Encoder_setPosition
+- uid: WPC.Product.USBDAQF1CD.Encoder_start(System.Int32,System.Int32)
+  name: Encoder_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_start*
+  name: Encoder_start
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_start_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_start
+  nameWithType: USBDAQF1CD.Encoder_start
+- uid: WPC.Product.USBDAQF1CD.Encoder_stop(System.Int32,System.Int32)
+  name: Encoder_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1CD.Encoder_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1CD.Encoder_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1CD.Encoder_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1CD.Encoder_stop*
+  name: Encoder_stop
+  href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_Encoder_stop_
+  commentId: Overload:WPC.Product.USBDAQF1CD.Encoder_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1CD.Encoder_stop
+  nameWithType: USBDAQF1CD.Encoder_stop
 - uid: WPC.Product.USBDAQF1CD.I2C_close(System.Int32,System.Int32)
   name: I2C_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1CD.html#WPC_Product_USBDAQF1CD_I2C_close_System_Int32_System_Int32_
@@ -13192,19 +14540,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.Counter_open
   nameWithType: USBDAQF1D.Counter_open
-- uid: WPC.Product.USBDAQF1D.Counter_read(System.Int32,System.Int32)
-  name: Counter_read(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_read_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1D.Counter_read(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1D.Counter_read(System.Int32, System.Int32)
-  nameWithType: USBDAQF1D.Counter_read(Int32, Int32)
-- uid: WPC.Product.USBDAQF1D.Counter_read*
-  name: Counter_read
-  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_read_
-  commentId: Overload:WPC.Product.USBDAQF1D.Counter_read
+- uid: WPC.Product.USBDAQF1D.Counter_readFrequency(System.Int32,System.Int32)
+  name: Counter_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Counter_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_readFrequency*
+  name: Counter_readFrequency
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_readFrequency
   isSpec: "True"
-  fullName: WPC.Product.USBDAQF1D.Counter_read
-  nameWithType: USBDAQF1D.Counter_read
+  fullName: WPC.Product.USBDAQF1D.Counter_readFrequency
+  nameWithType: USBDAQF1D.Counter_readFrequency
+- uid: WPC.Product.USBDAQF1D.Counter_readPosition(System.Int32,System.Int32)
+  name: Counter_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Counter_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_readPosition*
+  name: Counter_readPosition
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_readPosition
+  nameWithType: USBDAQF1D.Counter_readPosition
+- uid: WPC.Product.USBDAQF1D.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  name: Counter_setEdge(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_setEdge_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_setEdge(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Counter_setEdge(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_setEdge*
+  name: Counter_setEdge
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_setEdge_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_setEdge
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_setEdge
+  nameWithType: USBDAQF1D.Counter_setEdge
+- uid: WPC.Product.USBDAQF1D.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Counter_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1D.Counter_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_setFreqWindow*
+  name: Counter_setFreqWindow
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_setFreqWindow
+  nameWithType: USBDAQF1D.Counter_setFreqWindow
+- uid: WPC.Product.USBDAQF1D.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  name: Counter_setPosition(Int32, UInt64, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_setPosition_System_Int32_System_UInt64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Counter_setPosition(System.Int32, System.UInt64, System.Int32)
+  nameWithType: USBDAQF1D.Counter_setPosition(Int32, UInt64, Int32)
+- uid: WPC.Product.USBDAQF1D.Counter_setPosition*
+  name: Counter_setPosition
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1D.Counter_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Counter_setPosition
+  nameWithType: USBDAQF1D.Counter_setPosition
 - uid: WPC.Product.USBDAQF1D.Counter_start(System.Int32,System.Int32)
   name: Counter_start(Int32, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Counter_start_System_Int32_System_Int32_
@@ -13463,6 +14863,136 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1D.DO_writePort
   nameWithType: USBDAQF1D.DO_writePort
+- uid: WPC.Product.USBDAQF1D.Encoder_close(System.Int32,System.Int32)
+  name: Encoder_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_close*
+  name: Encoder_close
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_close_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_close
+  nameWithType: USBDAQF1D.Encoder_close
+- uid: WPC.Product.USBDAQF1D.Encoder_getDirection(System.Int32,System.Int32)
+  name: Encoder_getDirection(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_getDirection_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_getDirection(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_getDirection(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_getDirection(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_getDirection*
+  name: Encoder_getDirection
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_getDirection_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_getDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_getDirection
+  nameWithType: USBDAQF1D.Encoder_getDirection
+- uid: WPC.Product.USBDAQF1D.Encoder_open(System.Int32,System.Int32)
+  name: Encoder_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_open*
+  name: Encoder_open
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_open_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_open
+  nameWithType: USBDAQF1D.Encoder_open
+- uid: WPC.Product.USBDAQF1D.Encoder_readFrequency(System.Int32,System.Int32)
+  name: Encoder_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_readFrequency*
+  name: Encoder_readFrequency
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_readFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_readFrequency
+  nameWithType: USBDAQF1D.Encoder_readFrequency
+- uid: WPC.Product.USBDAQF1D.Encoder_readPosition(System.Int32,System.Int32)
+  name: Encoder_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_readPosition*
+  name: Encoder_readPosition
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_readPosition
+  nameWithType: USBDAQF1D.Encoder_readPosition
+- uid: WPC.Product.USBDAQF1D.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  name: Encoder_setDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_setDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_setDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_setDirection(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_setDirection*
+  name: Encoder_setDirection
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_setDirection_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_setDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_setDirection
+  nameWithType: USBDAQF1D.Encoder_setDirection
+- uid: WPC.Product.USBDAQF1D.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Encoder_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_setFreqWindow*
+  name: Encoder_setFreqWindow
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_setFreqWindow
+  nameWithType: USBDAQF1D.Encoder_setFreqWindow
+- uid: WPC.Product.USBDAQF1D.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  name: Encoder_setPosition(Int32, Int64, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_setPosition_System_Int32_System_Int64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_setPosition(System.Int32, System.Int64, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_setPosition(Int32, Int64, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_setPosition*
+  name: Encoder_setPosition
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_setPosition
+  nameWithType: USBDAQF1D.Encoder_setPosition
+- uid: WPC.Product.USBDAQF1D.Encoder_start(System.Int32,System.Int32)
+  name: Encoder_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_start*
+  name: Encoder_start
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_start_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_start
+  nameWithType: USBDAQF1D.Encoder_start
+- uid: WPC.Product.USBDAQF1D.Encoder_stop(System.Int32,System.Int32)
+  name: Encoder_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1D.Encoder_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1D.Encoder_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1D.Encoder_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1D.Encoder_stop*
+  name: Encoder_stop
+  href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_Encoder_stop_
+  commentId: Overload:WPC.Product.USBDAQF1D.Encoder_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1D.Encoder_stop
+  nameWithType: USBDAQF1D.Encoder_stop
 - uid: WPC.Product.USBDAQF1D.I2C_close(System.Int32,System.Int32)
   name: I2C_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1D.html#WPC_Product_USBDAQF1D_I2C_close_System_Int32_System_Int32_
@@ -14188,19 +15718,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.Counter_open
   nameWithType: USBDAQF1DSNK.Counter_open
-- uid: WPC.Product.USBDAQF1DSNK.Counter_read(System.Int32,System.Int32)
-  name: Counter_read(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_read_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_read(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1DSNK.Counter_read(System.Int32, System.Int32)
-  nameWithType: USBDAQF1DSNK.Counter_read(Int32, Int32)
-- uid: WPC.Product.USBDAQF1DSNK.Counter_read*
-  name: Counter_read
-  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_read_
-  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_read
+- uid: WPC.Product.USBDAQF1DSNK.Counter_readFrequency(System.Int32,System.Int32)
+  name: Counter_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_readFrequency*
+  name: Counter_readFrequency
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_readFrequency
   isSpec: "True"
-  fullName: WPC.Product.USBDAQF1DSNK.Counter_read
-  nameWithType: USBDAQF1DSNK.Counter_read
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_readFrequency
+  nameWithType: USBDAQF1DSNK.Counter_readFrequency
+- uid: WPC.Product.USBDAQF1DSNK.Counter_readPosition(System.Int32,System.Int32)
+  name: Counter_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_readPosition*
+  name: Counter_readPosition
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_readPosition
+  nameWithType: USBDAQF1DSNK.Counter_readPosition
+- uid: WPC.Product.USBDAQF1DSNK.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  name: Counter_setEdge(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_setEdge_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_setEdge(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_setEdge(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_setEdge*
+  name: Counter_setEdge
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_setEdge_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_setEdge
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_setEdge
+  nameWithType: USBDAQF1DSNK.Counter_setEdge
+- uid: WPC.Product.USBDAQF1DSNK.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Counter_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_setFreqWindow*
+  name: Counter_setFreqWindow
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_setFreqWindow
+  nameWithType: USBDAQF1DSNK.Counter_setFreqWindow
+- uid: WPC.Product.USBDAQF1DSNK.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  name: Counter_setPosition(Int32, UInt64, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_setPosition_System_Int32_System_UInt64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_setPosition(System.Int32, System.UInt64, System.Int32)
+  nameWithType: USBDAQF1DSNK.Counter_setPosition(Int32, UInt64, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Counter_setPosition*
+  name: Counter_setPosition
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Counter_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Counter_setPosition
+  nameWithType: USBDAQF1DSNK.Counter_setPosition
 - uid: WPC.Product.USBDAQF1DSNK.Counter_start(System.Int32,System.Int32)
   name: Counter_start(Int32, Int32)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Counter_start_System_Int32_System_Int32_
@@ -14459,6 +16041,136 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1DSNK.DO_writePort
   nameWithType: USBDAQF1DSNK.DO_writePort
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_close(System.Int32,System.Int32)
+  name: Encoder_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_close*
+  name: Encoder_close
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_close_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_close
+  nameWithType: USBDAQF1DSNK.Encoder_close
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_getDirection(System.Int32,System.Int32)
+  name: Encoder_getDirection(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_getDirection_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_getDirection(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_getDirection(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_getDirection(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_getDirection*
+  name: Encoder_getDirection
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_getDirection_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_getDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_getDirection
+  nameWithType: USBDAQF1DSNK.Encoder_getDirection
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_open(System.Int32,System.Int32)
+  name: Encoder_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_open*
+  name: Encoder_open
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_open_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_open
+  nameWithType: USBDAQF1DSNK.Encoder_open
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_readFrequency(System.Int32,System.Int32)
+  name: Encoder_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_readFrequency*
+  name: Encoder_readFrequency
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_readFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_readFrequency
+  nameWithType: USBDAQF1DSNK.Encoder_readFrequency
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_readPosition(System.Int32,System.Int32)
+  name: Encoder_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_readPosition*
+  name: Encoder_readPosition
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_readPosition
+  nameWithType: USBDAQF1DSNK.Encoder_readPosition
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  name: Encoder_setDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_setDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_setDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_setDirection(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_setDirection*
+  name: Encoder_setDirection
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_setDirection_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_setDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_setDirection
+  nameWithType: USBDAQF1DSNK.Encoder_setDirection
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Encoder_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_setFreqWindow*
+  name: Encoder_setFreqWindow
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_setFreqWindow
+  nameWithType: USBDAQF1DSNK.Encoder_setFreqWindow
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  name: Encoder_setPosition(Int32, Int64, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_setPosition_System_Int32_System_Int64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_setPosition(System.Int32, System.Int64, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_setPosition(Int32, Int64, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_setPosition*
+  name: Encoder_setPosition
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_setPosition
+  nameWithType: USBDAQF1DSNK.Encoder_setPosition
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_start(System.Int32,System.Int32)
+  name: Encoder_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_start*
+  name: Encoder_start
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_start_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_start
+  nameWithType: USBDAQF1DSNK.Encoder_start
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_stop(System.Int32,System.Int32)
+  name: Encoder_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1DSNK.Encoder_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1DSNK.Encoder_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1DSNK.Encoder_stop*
+  name: Encoder_stop
+  href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Encoder_stop_
+  commentId: Overload:WPC.Product.USBDAQF1DSNK.Encoder_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1DSNK.Encoder_stop
+  nameWithType: USBDAQF1DSNK.Encoder_stop
 - uid: WPC.Product.USBDAQF1DSNK.Logger_openFile(System.String)
   name: Logger_openFile(String)
   href: api/WPC.Product.USBDAQF1DSNK.html#WPC_Product_USBDAQF1DSNK_Logger_openFile_System_String_
@@ -14837,19 +16549,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.Counter_open
   nameWithType: USBDAQF1RD.Counter_open
-- uid: WPC.Product.USBDAQF1RD.Counter_read(System.Int32,System.Int32)
-  name: Counter_read(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_read_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1RD.Counter_read(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1RD.Counter_read(System.Int32, System.Int32)
-  nameWithType: USBDAQF1RD.Counter_read(Int32, Int32)
-- uid: WPC.Product.USBDAQF1RD.Counter_read*
-  name: Counter_read
-  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_read_
-  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_read
+- uid: WPC.Product.USBDAQF1RD.Counter_readFrequency(System.Int32,System.Int32)
+  name: Counter_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_readFrequency*
+  name: Counter_readFrequency
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_readFrequency
   isSpec: "True"
-  fullName: WPC.Product.USBDAQF1RD.Counter_read
-  nameWithType: USBDAQF1RD.Counter_read
+  fullName: WPC.Product.USBDAQF1RD.Counter_readFrequency
+  nameWithType: USBDAQF1RD.Counter_readFrequency
+- uid: WPC.Product.USBDAQF1RD.Counter_readPosition(System.Int32,System.Int32)
+  name: Counter_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_readPosition*
+  name: Counter_readPosition
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_readPosition
+  nameWithType: USBDAQF1RD.Counter_readPosition
+- uid: WPC.Product.USBDAQF1RD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  name: Counter_setEdge(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_setEdge_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_setEdge(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_setEdge(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_setEdge*
+  name: Counter_setEdge
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_setEdge_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_setEdge
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_setEdge
+  nameWithType: USBDAQF1RD.Counter_setEdge
+- uid: WPC.Product.USBDAQF1RD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Counter_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_setFreqWindow*
+  name: Counter_setFreqWindow
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_setFreqWindow
+  nameWithType: USBDAQF1RD.Counter_setFreqWindow
+- uid: WPC.Product.USBDAQF1RD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  name: Counter_setPosition(Int32, UInt64, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_setPosition_System_Int32_System_UInt64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Counter_setPosition(System.Int32, System.UInt64, System.Int32)
+  nameWithType: USBDAQF1RD.Counter_setPosition(Int32, UInt64, Int32)
+- uid: WPC.Product.USBDAQF1RD.Counter_setPosition*
+  name: Counter_setPosition
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Counter_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Counter_setPosition
+  nameWithType: USBDAQF1RD.Counter_setPosition
 - uid: WPC.Product.USBDAQF1RD.Counter_start(System.Int32,System.Int32)
   name: Counter_start(Int32, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Counter_start_System_Int32_System_Int32_
@@ -15108,6 +16872,136 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1RD.DO_writePort
   nameWithType: USBDAQF1RD.DO_writePort
+- uid: WPC.Product.USBDAQF1RD.Encoder_close(System.Int32,System.Int32)
+  name: Encoder_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_close*
+  name: Encoder_close
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_close_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_close
+  nameWithType: USBDAQF1RD.Encoder_close
+- uid: WPC.Product.USBDAQF1RD.Encoder_getDirection(System.Int32,System.Int32)
+  name: Encoder_getDirection(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_getDirection_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_getDirection(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_getDirection(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_getDirection(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_getDirection*
+  name: Encoder_getDirection
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_getDirection_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_getDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_getDirection
+  nameWithType: USBDAQF1RD.Encoder_getDirection
+- uid: WPC.Product.USBDAQF1RD.Encoder_open(System.Int32,System.Int32)
+  name: Encoder_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_open*
+  name: Encoder_open
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_open_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_open
+  nameWithType: USBDAQF1RD.Encoder_open
+- uid: WPC.Product.USBDAQF1RD.Encoder_readFrequency(System.Int32,System.Int32)
+  name: Encoder_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_readFrequency*
+  name: Encoder_readFrequency
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_readFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_readFrequency
+  nameWithType: USBDAQF1RD.Encoder_readFrequency
+- uid: WPC.Product.USBDAQF1RD.Encoder_readPosition(System.Int32,System.Int32)
+  name: Encoder_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_readPosition*
+  name: Encoder_readPosition
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_readPosition
+  nameWithType: USBDAQF1RD.Encoder_readPosition
+- uid: WPC.Product.USBDAQF1RD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  name: Encoder_setDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_setDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_setDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_setDirection(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_setDirection*
+  name: Encoder_setDirection
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_setDirection_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_setDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_setDirection
+  nameWithType: USBDAQF1RD.Encoder_setDirection
+- uid: WPC.Product.USBDAQF1RD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Encoder_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_setFreqWindow*
+  name: Encoder_setFreqWindow
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_setFreqWindow
+  nameWithType: USBDAQF1RD.Encoder_setFreqWindow
+- uid: WPC.Product.USBDAQF1RD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  name: Encoder_setPosition(Int32, Int64, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_setPosition_System_Int32_System_Int64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_setPosition(System.Int32, System.Int64, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_setPosition(Int32, Int64, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_setPosition*
+  name: Encoder_setPosition
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_setPosition
+  nameWithType: USBDAQF1RD.Encoder_setPosition
+- uid: WPC.Product.USBDAQF1RD.Encoder_start(System.Int32,System.Int32)
+  name: Encoder_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_start*
+  name: Encoder_start
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_start_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_start
+  nameWithType: USBDAQF1RD.Encoder_start
+- uid: WPC.Product.USBDAQF1RD.Encoder_stop(System.Int32,System.Int32)
+  name: Encoder_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1RD.Encoder_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1RD.Encoder_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1RD.Encoder_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1RD.Encoder_stop*
+  name: Encoder_stop
+  href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_Encoder_stop_
+  commentId: Overload:WPC.Product.USBDAQF1RD.Encoder_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1RD.Encoder_stop
+  nameWithType: USBDAQF1RD.Encoder_stop
 - uid: WPC.Product.USBDAQF1RD.I2C_close(System.Int32,System.Int32)
   name: I2C_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1RD.html#WPC_Product_USBDAQF1RD_I2C_close_System_Int32_System_Int32_
@@ -15898,19 +17792,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.Counter_open
   nameWithType: USBDAQF1TD.Counter_open
-- uid: WPC.Product.USBDAQF1TD.Counter_read(System.Int32,System.Int32)
-  name: Counter_read(Int32, Int32)
-  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_read_System_Int32_System_Int32_
-  commentId: M:WPC.Product.USBDAQF1TD.Counter_read(System.Int32,System.Int32)
-  fullName: WPC.Product.USBDAQF1TD.Counter_read(System.Int32, System.Int32)
-  nameWithType: USBDAQF1TD.Counter_read(Int32, Int32)
-- uid: WPC.Product.USBDAQF1TD.Counter_read*
-  name: Counter_read
-  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_read_
-  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_read
+- uid: WPC.Product.USBDAQF1TD.Counter_readFrequency(System.Int32,System.Int32)
+  name: Counter_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_readFrequency*
+  name: Counter_readFrequency
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_readFrequency
   isSpec: "True"
-  fullName: WPC.Product.USBDAQF1TD.Counter_read
-  nameWithType: USBDAQF1TD.Counter_read
+  fullName: WPC.Product.USBDAQF1TD.Counter_readFrequency
+  nameWithType: USBDAQF1TD.Counter_readFrequency
+- uid: WPC.Product.USBDAQF1TD.Counter_readPosition(System.Int32,System.Int32)
+  name: Counter_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_readPosition*
+  name: Counter_readPosition
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_readPosition
+  nameWithType: USBDAQF1TD.Counter_readPosition
+- uid: WPC.Product.USBDAQF1TD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  name: Counter_setEdge(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_setEdge_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_setEdge(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_setEdge(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_setEdge(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_setEdge*
+  name: Counter_setEdge
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_setEdge_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_setEdge
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_setEdge
+  nameWithType: USBDAQF1TD.Counter_setEdge
+- uid: WPC.Product.USBDAQF1TD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Counter_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_setFreqWindow*
+  name: Counter_setFreqWindow
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_setFreqWindow
+  nameWithType: USBDAQF1TD.Counter_setFreqWindow
+- uid: WPC.Product.USBDAQF1TD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  name: Counter_setPosition(Int32, UInt64, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_setPosition_System_Int32_System_UInt64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Counter_setPosition(System.Int32,System.UInt64,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Counter_setPosition(System.Int32, System.UInt64, System.Int32)
+  nameWithType: USBDAQF1TD.Counter_setPosition(Int32, UInt64, Int32)
+- uid: WPC.Product.USBDAQF1TD.Counter_setPosition*
+  name: Counter_setPosition
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Counter_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Counter_setPosition
+  nameWithType: USBDAQF1TD.Counter_setPosition
 - uid: WPC.Product.USBDAQF1TD.Counter_start(System.Int32,System.Int32)
   name: Counter_start(Int32, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Counter_start_System_Int32_System_Int32_
@@ -16169,6 +18115,136 @@ references:
   isSpec: "True"
   fullName: WPC.Product.USBDAQF1TD.DO_writePort
   nameWithType: USBDAQF1TD.DO_writePort
+- uid: WPC.Product.USBDAQF1TD.Encoder_close(System.Int32,System.Int32)
+  name: Encoder_close(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_close_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_close(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_close(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_close(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_close*
+  name: Encoder_close
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_close_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_close
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_close
+  nameWithType: USBDAQF1TD.Encoder_close
+- uid: WPC.Product.USBDAQF1TD.Encoder_getDirection(System.Int32,System.Int32)
+  name: Encoder_getDirection(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_getDirection_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_getDirection(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_getDirection(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_getDirection(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_getDirection*
+  name: Encoder_getDirection
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_getDirection_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_getDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_getDirection
+  nameWithType: USBDAQF1TD.Encoder_getDirection
+- uid: WPC.Product.USBDAQF1TD.Encoder_open(System.Int32,System.Int32)
+  name: Encoder_open(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_open_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_open(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_open(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_open(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_open*
+  name: Encoder_open
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_open_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_open
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_open
+  nameWithType: USBDAQF1TD.Encoder_open
+- uid: WPC.Product.USBDAQF1TD.Encoder_readFrequency(System.Int32,System.Int32)
+  name: Encoder_readFrequency(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_readFrequency_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_readFrequency(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_readFrequency(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_readFrequency(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_readFrequency*
+  name: Encoder_readFrequency
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_readFrequency_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_readFrequency
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_readFrequency
+  nameWithType: USBDAQF1TD.Encoder_readFrequency
+- uid: WPC.Product.USBDAQF1TD.Encoder_readPosition(System.Int32,System.Int32)
+  name: Encoder_readPosition(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_readPosition_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_readPosition(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_readPosition(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_readPosition(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_readPosition*
+  name: Encoder_readPosition
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_readPosition_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_readPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_readPosition
+  nameWithType: USBDAQF1TD.Encoder_readPosition
+- uid: WPC.Product.USBDAQF1TD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  name: Encoder_setDirection(Int32, Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_setDirection_System_Int32_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_setDirection(System.Int32,System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_setDirection(System.Int32, System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_setDirection(Int32, Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_setDirection*
+  name: Encoder_setDirection
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_setDirection_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_setDirection
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_setDirection
+  nameWithType: USBDAQF1TD.Encoder_setDirection
+- uid: WPC.Product.USBDAQF1TD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  name: Encoder_setFreqWindow(Int32, Single, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_setFreqWindow_System_Int32_System_Single_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_setFreqWindow(System.Int32,System.Single,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_setFreqWindow(System.Int32, System.Single, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_setFreqWindow(Int32, Single, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_setFreqWindow*
+  name: Encoder_setFreqWindow
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_setFreqWindow_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_setFreqWindow
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_setFreqWindow
+  nameWithType: USBDAQF1TD.Encoder_setFreqWindow
+- uid: WPC.Product.USBDAQF1TD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  name: Encoder_setPosition(Int32, Int64, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_setPosition_System_Int32_System_Int64_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_setPosition(System.Int32,System.Int64,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_setPosition(System.Int32, System.Int64, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_setPosition(Int32, Int64, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_setPosition*
+  name: Encoder_setPosition
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_setPosition_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_setPosition
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_setPosition
+  nameWithType: USBDAQF1TD.Encoder_setPosition
+- uid: WPC.Product.USBDAQF1TD.Encoder_start(System.Int32,System.Int32)
+  name: Encoder_start(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_start_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_start(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_start(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_start(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_start*
+  name: Encoder_start
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_start_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_start
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_start
+  nameWithType: USBDAQF1TD.Encoder_start
+- uid: WPC.Product.USBDAQF1TD.Encoder_stop(System.Int32,System.Int32)
+  name: Encoder_stop(Int32, Int32)
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_stop_System_Int32_System_Int32_
+  commentId: M:WPC.Product.USBDAQF1TD.Encoder_stop(System.Int32,System.Int32)
+  fullName: WPC.Product.USBDAQF1TD.Encoder_stop(System.Int32, System.Int32)
+  nameWithType: USBDAQF1TD.Encoder_stop(Int32, Int32)
+- uid: WPC.Product.USBDAQF1TD.Encoder_stop*
+  name: Encoder_stop
+  href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_Encoder_stop_
+  commentId: Overload:WPC.Product.USBDAQF1TD.Encoder_stop
+  isSpec: "True"
+  fullName: WPC.Product.USBDAQF1TD.Encoder_stop
+  nameWithType: USBDAQF1TD.Encoder_stop
 - uid: WPC.Product.USBDAQF1TD.I2C_close(System.Int32,System.Int32)
   name: I2C_close(Int32, Int32)
   href: api/WPC.Product.USBDAQF1TD.html#WPC_Product_USBDAQF1TD_I2C_close_System_Int32_System_Int32_
@@ -17897,6 +19973,71 @@ references:
   isSpec: "True"
   fullName: WPC.Product.WifiDAQE3AH.Logger_writeValue
   nameWithType: WifiDAQE3AH.Logger_writeValue
+- uid: WPC.Product.WifiDAQE3AH.SD_closeFile(System.Int32)
+  name: SD_closeFile(Int32)
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_closeFile_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3AH.SD_closeFile(System.Int32)
+  fullName: WPC.Product.WifiDAQE3AH.SD_closeFile(System.Int32)
+  nameWithType: WifiDAQE3AH.SD_closeFile(Int32)
+- uid: WPC.Product.WifiDAQE3AH.SD_closeFile*
+  name: SD_closeFile
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_closeFile_
+  commentId: Overload:WPC.Product.WifiDAQE3AH.SD_closeFile
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3AH.SD_closeFile
+  nameWithType: WifiDAQE3AH.SD_closeFile
+- uid: WPC.Product.WifiDAQE3AH.SD_getStorage(System.Int32)
+  name: SD_getStorage(Int32)
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_getStorage_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3AH.SD_getStorage(System.Int32)
+  fullName: WPC.Product.WifiDAQE3AH.SD_getStorage(System.Int32)
+  nameWithType: WifiDAQE3AH.SD_getStorage(Int32)
+- uid: WPC.Product.WifiDAQE3AH.SD_getStorage*
+  name: SD_getStorage
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_getStorage_
+  commentId: Overload:WPC.Product.WifiDAQE3AH.SD_getStorage
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3AH.SD_getStorage
+  nameWithType: WifiDAQE3AH.SD_getStorage
+- uid: WPC.Product.WifiDAQE3AH.SD_openFile(System.String,System.Int32,System.Int32)
+  name: SD_openFile(String, Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_openFile_System_String_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3AH.SD_openFile(System.String,System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3AH.SD_openFile(System.String, System.Int32, System.Int32)
+  nameWithType: WifiDAQE3AH.SD_openFile(String, Int32, Int32)
+- uid: WPC.Product.WifiDAQE3AH.SD_openFile*
+  name: SD_openFile
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_openFile_
+  commentId: Overload:WPC.Product.WifiDAQE3AH.SD_openFile
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3AH.SD_openFile
+  nameWithType: WifiDAQE3AH.SD_openFile
+- uid: WPC.Product.WifiDAQE3AH.SD_readFile(System.Int32,System.Int32)
+  name: SD_readFile(Int32, Int32)
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_readFile_System_Int32_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3AH.SD_readFile(System.Int32,System.Int32)
+  fullName: WPC.Product.WifiDAQE3AH.SD_readFile(System.Int32, System.Int32)
+  nameWithType: WifiDAQE3AH.SD_readFile(Int32, Int32)
+- uid: WPC.Product.WifiDAQE3AH.SD_readFile*
+  name: SD_readFile
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_readFile_
+  commentId: Overload:WPC.Product.WifiDAQE3AH.SD_readFile
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3AH.SD_readFile
+  nameWithType: WifiDAQE3AH.SD_readFile
+- uid: WPC.Product.WifiDAQE3AH.SD_writeFile(System.String,System.Int32)
+  name: SD_writeFile(String, Int32)
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_writeFile_System_String_System_Int32_
+  commentId: M:WPC.Product.WifiDAQE3AH.SD_writeFile(System.String,System.Int32)
+  fullName: WPC.Product.WifiDAQE3AH.SD_writeFile(System.String, System.Int32)
+  nameWithType: WifiDAQE3AH.SD_writeFile(String, Int32)
+- uid: WPC.Product.WifiDAQE3AH.SD_writeFile*
+  name: SD_writeFile
+  href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_SD_writeFile_
+  commentId: Overload:WPC.Product.WifiDAQE3AH.SD_writeFile
+  isSpec: "True"
+  fullName: WPC.Product.WifiDAQE3AH.SD_writeFile
+  nameWithType: WifiDAQE3AH.SD_writeFile
 - uid: WPC.Product.WifiDAQE3AH.Sys_getDriverInfo(System.Int32)
   name: Sys_getDriverInfo(Int32)
   href: api/WPC.Product.WifiDAQE3AH.html#WPC_Product_WifiDAQE3AH_Sys_getDriverInfo_System_Int32_

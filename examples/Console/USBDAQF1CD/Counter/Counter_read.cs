@@ -40,6 +40,9 @@ class USBDAQF1CD_Counter_read
             int err;
             int channel = 1;
             int timeout = 3000; // ms
+            ulong position = 0;
+            int edge = 0;  // 0: Falling edge, 1: Rising edge
+            float window_size = 100;
 
             // Get firmware model & version
             string[] driver_info = dev.Sys_getDriverInfo(timeout);
@@ -50,16 +53,27 @@ class USBDAQF1CD_Counter_read
             err = dev.Counter_open(channel, timeout);
             Console.WriteLine($"Counter_open in channel {channel}, status: {err}");
 
+            // Set counter edge
+            err = dev.Counter_setEdge(channel, edge, timeout);
+            Console.WriteLine($"Counter_setEdge in channel {channel}, status: {err}");
+
+            // Set counter position
+            err = dev.Counter_setPosition(channel, position, timeout);
+            Console.WriteLine($"Counter_setPosition in channel {channel}, status: {err}");
+
+            // Set counter frequency window size
+            err = dev.Counter_setFreqWindow(channel, window_size, timeout);
+            Console.WriteLine($"Counter_setFreqWindow in channel {channel}, status: {err}");
+
             // Start counter
             err = dev.Counter_start(channel, timeout);
             Console.WriteLine($"Counter_start in channel {channel}, status: {err}");
 
-            // Read counter
+            // Read counter position
             for (int i=0; i<10; i++)
             {
-                // Read data acquisition acquisition
-                int counter = dev.Counter_read(channel, timeout);
-                Console.WriteLine($"Read counter in channel {channel}: {counter}");
+                ulong posi = dev.Counter_readPosition(channel, timeout);
+                Console.WriteLine($"Read counter in channel {channel}: {posi}");
             }
 
             // Stop counter

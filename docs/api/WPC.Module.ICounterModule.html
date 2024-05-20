@@ -183,14 +183,14 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
       </tr>
     </tbody>
   </table>
-  <a id="WPC_Module_ICounterModule_Counter_read_" data-uid="WPC.Module.ICounterModule.Counter_read*"></a>
-  <h4 id="WPC_Module_ICounterModule_Counter_read_System_Int32_System_Int32_" data-uid="WPC.Module.ICounterModule.Counter_read(System.Int32,System.Int32)">Counter_read(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>Read countering result on the specific channel.</p>
+  <a id="WPC_Module_ICounterModule_Counter_readFrequency_" data-uid="WPC.Module.ICounterModule.Counter_readFrequency*"></a>
+  <h4 id="WPC_Module_ICounterModule_Counter_readFrequency_System_Int32_System_Int32_" data-uid="WPC.Module.ICounterModule.Counter_readFrequency(System.Int32,System.Int32)">Counter_readFrequency(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the value of counter frequency on the specific channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Counter_read(int channel, int timeout = default(int))</code></pre>
+    <pre><code class="lang-csharp hljs">float Counter_readFrequency(int channel, int timeout = default(int))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,8 +226,219 @@ See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/article
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>Counter position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_ICounterModule_Counter_readPosition_" data-uid="WPC.Module.ICounterModule.Counter_readPosition*"></a>
+  <h4 id="WPC_Module_ICounterModule_Counter_readPosition_System_Int32_System_Int32_" data-uid="WPC.Module.ICounterModule.Counter_readPosition(System.Int32,System.Int32)">Counter_readPosition(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Read the value of counter position on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong Counter_readPosition(int channel, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The result of counter.</p>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><p>Counter frequency.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_ICounterModule_Counter_setEdge_" data-uid="WPC.Module.ICounterModule.Counter_setEdge*"></a>
+  <h4 id="WPC_Module_ICounterModule_Counter_setEdge_System_Int32_System_Int32_System_Int32_" data-uid="WPC.Module.ICounterModule.Counter_setEdge(System.Int32,System.Int32,System.Int32)">Counter_setEdge(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Counter_setEdge(int channel, int edge, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_ICounterModule_Counter_setFreqWindow_" data-uid="WPC.Module.ICounterModule.Counter_setFreqWindow*"></a>
+  <h4 id="WPC_Module_ICounterModule_Counter_setFreqWindow_System_Int32_System_Single_System_Int32_" data-uid="WPC.Module.ICounterModule.Counter_setFreqWindow(System.Int32,System.Single,System.Int32)">Counter_setFreqWindow(Int32, Single, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set moving window size on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Counter_setFreqWindow(int channel, float window_size, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">window_size</span></td>
+        <td><p>Moving window size. Default value is 100ms, and the minimum value is 20 ms.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="WPC_Module_ICounterModule_Counter_setPosition_" data-uid="WPC.Module.ICounterModule.Counter_setPosition*"></a>
+  <h4 id="WPC_Module_ICounterModule_Counter_setPosition_System_Int32_System_UInt64_System_Int32_" data-uid="WPC.Module.ICounterModule.Counter_setPosition(System.Int32,System.UInt64,System.Int32)">Counter_setPosition(Int32, UInt64, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set counter position on the specific channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Counter_setPosition(int channel, ulong position, int timeout = default(int))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_channel.html">here</a> for available ports of different WPC devices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The counter position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Specify the time (ms) to wait before reporting a timeout error. The default is 3000 ms.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Return 0 if executed successfully; return error code otherwise.<br>
+See <a href="https://wpc-systems-ltd.github.io/WPC_CSharp_driver_release/articles/appendix/table_errorcode.html">here</a> for corresponding error messages.</p>
 </td>
       </tr>
     </tbody>
